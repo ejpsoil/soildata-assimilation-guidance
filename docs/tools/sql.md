@@ -1,0 +1,26 @@
+# Cookbook SQL & python
+
+This cookbook implements the GeoPackage Good Practice for Soil Data by converting a sample soil database to GeoPackage based on the INSPIRE Soil Model using SQL statements from a Python environment.
+
+REQUIREMENTS
+- basic understanding of python and sql concepts
+- running environment python, pip, virtualenv (or alternative)
+
+Setup a python environment
+
+```
+virtualenv soildata
+cd soildata
+. bin/activate
+```
+
+Clone the workshop environment and install python requirements
+
+```
+git clone 
+pip install -r requirements.txt
+```
+
+As a soil database we use the [SOTER database of Cuba](https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/f31ac19f-67a4-4f64-94cc-d4f063ea9add) which is available as Microsoft Access mdb as well as SQLite. 
+
+

@@ -132,37 +132,41 @@ Now click the blue arrow in the middle and select the `join` method.
 XML allows to embed a property or to reference the value of the property elsewhere. An example; both snippets below have the same meaning, the first is easier to read, the second is easier to handle by software (prevent duplication).
 
 ```xml
-<child name="Peter">
-    <inclass>
+<person role="student" name="Peter">
+    <memberOf>
         <class name="2B">
-            <hasteacher>
-                <teacher name="Cynthia">
-            </hasteacher>
+            <hasMember>
+                <person role="teacher" name="Cynthia">
+            </hasMember>
         </class>
-    <inclass>
-</child>
+    <memberOf>
+</person>
 ```
 
-and
+And
 
 ```xml
-<child name="Peter" gml:id="#child-peter">
-    <inclass xlinnk:href="#class-2b">
-</child>
-
-<class name="2B" gml:id="#class-2b">
-    <hasteacher xlink:href="#teacher-cynthia">
-    <haschild>
-        <child xlink:href="#child-peter">
-    </haschild>
-</class>
-
-<teacher gml:id="#teacher-cynthia" name="Cynthia"/>
+<person role="student" name="Peter" gml:id="#student-peter">
+    <memberOf xlink:href="#class-2b">
+</person>
+<person role="teacher" name="Cynthia" gml:id="#teacher-cynthia">
+    <memberOf xlink:href="#class-2b">
+</person>
+<class name="2B" gml:id="#class-2b"/>
 ```
 
-Both cases are supported and can be combined in Hale Studio, but you have to consider upfront which approach to use when. The first approach becomes quite complex if the levels of nesting increase.
+A good practice is to add reverse links to the second snippet:
 
-A suggestion from our side; define Soil, Profile and OM_Observation as root types and embed all other types.
+```xml
+<class name="2B" gml:id="#class-2b">
+    <hasMember xlink:href="#teacher-cynthia"/ >
+    <hasMember xlink:href="#student-peter" />
+</class>
+```
+
+Both approaches are supported and can be combined in Hale Studio, but you have to consider upfront which approach to use when. The first approach becomes quite complex if the levels of nesting increase.
+
+A suggestion from our side; define Plot, Profile, OM_Observation and Laboratory as root types and embed other types.
 
 
 ### Anytype in XSD

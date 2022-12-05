@@ -42,11 +42,11 @@ Run the query below, to create a new `OBSERVATIONS` table.
 
 In Access create a new `query` in `design view`. 
 
-![Query design](query-design-view.png)
+![Query design](img/query-design-view.png)
 
 Then open `SQL view`.
 
-![SQL view](sql-view.png)
+![SQL view](img/sql-view.png)
 
 Run the query, by clicking `Run` in the `Query design` toolbar.
 
@@ -112,7 +112,7 @@ Kate Lyndegaard from WeTransform published a nice overview of Hale Studio at htt
 - Load the INSPIRE Soil model as a target schema. Load the latest version of the model from https://inspire.ec.europa.eu/schemas/so/4.0/Soil.xsd (`from url` tab, click 
  `detect` after entering the url).
 
-![Load target](hale-load-target.png)
+![Load target](img/hale-load-target.png)
 
 
 ## Define harmonization rules
@@ -131,7 +131,7 @@ Now click the blue arrow in the middle and select the `join` method.
 
 XML allows to embed a property or to reference the value of the property elsewhere. An example; both snippets below have the same meaning, the first is easier to read, the second is easier to handle by software (prevent duplication).
 
-```
+```xml
 <child name="Peter">
     <inclass>
         <class name="2B">
@@ -145,7 +145,7 @@ XML allows to embed a property or to reference the value of the property elsewhe
 
 and
 
-```
+```xml
 <child name="Peter" gml:id="#child-peter">
     <inclass xlinnk:href="#class-2b">
 </child>
@@ -163,9 +163,6 @@ and
 Both cases are supported and can be combined in Hale Studio, but you have to consider upfront which approach to use when. The first approach becomes quite complex if the levels of nesting increase.
 
 A suggestion from our side; define Soil, Profile and OM_Observation as root types and embed all other types.
-
-
-
 
 
 ### Anytype in XSD
@@ -206,8 +203,6 @@ Hale Studio is not able to process `anytype` fields by default. Instead you have
         </core:list>
     </xsd:typeContentConfig>
 </complex-setting>
-```
-
 ```
 
 

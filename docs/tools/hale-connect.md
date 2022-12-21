@@ -1,8 +1,10 @@
 # Hale Connect
 
-A Software as a Service solution provided by [wetransform](https://wetransform.to) to provide view and download services with metadata for rich datasets, 
-such as those following the INSPIRE data models. Transformations are prepared in Hale Studio and effectuated in the Hale Connect platform.
+Hale Connect is a [Software as a Service](https://en.wikipedia.org/wiki/Software_as_a_service) solution provided by [wetransform](https://wetransform.to) to provide view and download services with metadata for rich datasets, such as those following the INSPIRE data models. Transformations are prepared in [Hale Studio](hale-studio.md) and effectuated in the Hale Connect Solution.
 
 The services are  optimised for ease of use and performance, due to the cloud native setup of the data services. A data space connector is in preparation.
 
 - Website: https://wetransform.to/haleconnect
+- Get started at https://help.wetransform.to/docs/getting-started/2018-04-28-quick-start 
+
+You can benefit from a 14-day free trial period when signing up for the platform.

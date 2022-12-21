@@ -1,0 +1,106 @@
+# forked from https://github.com/geonetwork/docker-geonetwork/blob/main/4.2.2/docker-compose.yml
+# License GPLv2 GeoNetwork-opensource.org
+
+version: '3.1'
+
+volumes:
+  geonetwork:
+  esdata:
+  pgdata:
+  pglog:
+  apachelog:
+  geoserver-data:
+
+
+networks:
+  gn-network:
+    driver: bridge
+
+services:
+
+  database:
+    image: postgis/postgis:11-2.5
+    environment:
+      POSTGRES_USER: geonetwork
+      POSTGRES_PASSWORD: geonetwork
+      POSTGRES_DB: geonetwork
+    command: [ "postgres",
+               "-c", "log_statement=all",
+               "-c", "logging_collector=true",
+               "-c", "log_file_mode=0644",
+               "-c", "log_directory=/var/log/postgresql",
+               "-c", "log_filename=postgresql.log" ]
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - pglog:/var/log/postgresql
+    networks:
+      - gn-network
+
+  geoserver:
+    image: docker.osgeo.org/geoserver:2.21.2
+    restart: always
+    ports:
+      - 8000:8080
+    volumes:
+        - geoserver-data:/opt/geoserver_data
+    environment:
+        GEOSERVER_DATA_DIR: /opt/geoserver_data
+        GEOSERVER_ADMIN_USER: admin
+        GEOSERVER_ADMIN_PASSWORD: geoserver
+    networks:
+      - gn-network
+
+  geonetwork:
+    image: geonetwork:4.2.2
+    restart: always
+    ports:
+      - 8001:8080
+    environment:
+      DATA_DIR: /catalogue-data
+
+      JAVA_OPTS: >
+        -Dorg.eclipse.jetty.annotations.AnnotationParser.LEVEL=OFF
+        -Djava.security.egd=file:/dev/./urandom -Djava.awt.headless=true
+        -Xms512M -Xss512M -Xmx2G -XX:+UseConcMarkSweepGC
+        -Dgeonetwork.resources.dir=/catalogue-data/resources
+        -Dgeonetwork.data.dir=/catalogue-data
+        -Dgeonetwork.codeList.dir=/var/lib/jetty/webapps/geonetwork/WEB-INF/data/config/codelist
+        -Dgeonetwork.schema.dir=/var/lib/jetty/webapps/geonetwork/WEB-INF/data/config/schema_plugins
+
+      ES_HOST: elasticsearch
+      ES_PROTOCOL: http
+      ES_PORT: 9200
+
+      GEONETWORK_DB_TYPE: postgres
+      GEONETWORK_DB_HOST: database
+      GEONETWORK_DB_PORT: 5432
+      GEONETWORK_DB_NAME: geonetwork
+      GEONETWORK_DB_USERNAME: geonetwork
+      GEONETWORK_DB_PASSWORD: geonetwork
+
+    volumes:
+      - geonetwork:/catalogue-data
+    depends_on:
+      - elasticsearch
+      - database
+    networks:
+      - gn-network
+
+  elasticsearch:
+    image: elasticsearch:7.11.1
+    ports:
+      - 9200:9200
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+      nofile:
+        soft: 65536
+        hard: 65536
+    environment:
+      ES_JAVA_OPTS: "-Xms1G -Xmx1G"
+      discovery.type: single-node
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+    networks:
+      - gn-network

@@ -45,6 +45,6 @@ GraphQL is an industry standard for queries on hierarchical data using modern ap
 | [GeoServer](tools/geoserver.md) | [GeoServer](https://geoserver.org) | OGC API is a community plugin of GeoServer, it publishes an alternative endpoint for the datasets published as WFS. |
 | [QGIS server](tools/qgis.md) | [QGIS](https://qgis.org) | QGIS Server includes the option to enable OGC API Features access to datasets published as WFS |
 | [Cookbook Semantic Web](https://doi.org/10.15454/YJLFZI/OGHA0V) | [Blazegraph](https://blazegraph.com/) / [Coby](https://forgemia.inra.fr/anaee-dev/coby) | INRAE prepared a linked data primer for semantic soil data
-| [Virtuoso](tools/virtuoso.md) | [Virtuoso](https://virtuoso.openlinksw.com/) | Triple store providing a SPARQL endpoint |
-| [d2r](tools/d2r.md) | [d2r server](http://d2rq.org/d2r-server) | SPARQL access to relational backend |
+| [Virtuoso & skosmos](tools/virtuoso.md) | [Virtuoso](https://virtuoso.openlinksw.com/) | Triple store providing a SPARQL endpoint |
+| [YARRRML](tools/yarrrml.md) | [yarrrml](https://rml.io/yarrrml) | Human readable declaritive mapping rules for semantic web |
 | [Postgraphile](tools/postgraphile.md) | [Postgraphile](https://www.graphile.org/postgraphile/) | Plugin offering graphile access to postgres databases |

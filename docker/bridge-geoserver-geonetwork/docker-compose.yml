@@ -36,7 +36,7 @@ services:
       - gn-network
 
   geoserver:
-    image: docker.osgeo.org/geoserver:2.21.2
+    image: kartoza/geoserver:2.22.0
     restart: always
     ports:
       - 8000:8080

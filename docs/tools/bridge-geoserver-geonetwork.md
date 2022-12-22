@@ -52,8 +52,10 @@ Open the dataset to be published. Configure the layer with relevant styling and 
 
 Open the publish window from the menu (or toolbar). 
 
-Select the layer to be published. A metadata editor will open in which you can configure some metadata. You can also import embedded metadata.
+Select the layer to be published. A metadata editor will open in which you can configure some metadata. You can also import embedded metadata (use the button with a downward arrow, top right).
 
 Select the target servers for the publisation and click the publish button.
 
-In the publiction result window, you can click preview (meta)data to evaluate if the publication was successfull
+When returning to the publish panel, you will notice an icon behind each layer indicating the publication status. You can now right click on the layer to preview the wms layer or the metadata.
+
+| Note that the styling options in QGIS and GeoServer are not a full match. Some styling transformations are applied which may impact the final result on GeoServer. A common caveat is the availability of certain fonts, used for labeling or icons, on the client and the server. Make sure all used fonts are available on the server as well. |

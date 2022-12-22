@@ -5,7 +5,6 @@ version: '3.1'
 
 volumes:
   geonetwork:
-  esdata:
   pgdata:
   pglog:
   apachelog:
@@ -51,26 +50,12 @@ services:
       - gn-network
 
   geonetwork:
-    image: geonetwork:4.2.2
+    image: geonetwork:3.12
     restart: always
     ports:
       - 8001:8080
     environment:
       DATA_DIR: /catalogue-data
-
-      JAVA_OPTS: >
-        -Dorg.eclipse.jetty.annotations.AnnotationParser.LEVEL=OFF
-        -Djava.security.egd=file:/dev/./urandom -Djava.awt.headless=true
-        -Xms512M -Xss512M -Xmx2G -XX:+UseConcMarkSweepGC
-        -Dgeonetwork.resources.dir=/catalogue-data/resources
-        -Dgeonetwork.data.dir=/catalogue-data
-        -Dgeonetwork.codeList.dir=/var/lib/jetty/webapps/geonetwork/WEB-INF/data/config/codelist
-        -Dgeonetwork.schema.dir=/var/lib/jetty/webapps/geonetwork/WEB-INF/data/config/schema_plugins
-
-      ES_HOST: elasticsearch
-      ES_PROTOCOL: http
-      ES_PORT: 9200
-
       GEONETWORK_DB_TYPE: postgres
       GEONETWORK_DB_HOST: database
       GEONETWORK_DB_PORT: 5432
@@ -81,26 +66,7 @@ services:
     volumes:
       - geonetwork:/catalogue-data
     depends_on:
-      - elasticsearch
       - database
     networks:
       - gn-network
 
-  elasticsearch:
-    image: elasticsearch:7.11.1
-    ports:
-      - 9200:9200
-    ulimits:
-      memlock:
-        soft: -1
-        hard: -1
-      nofile:
-        soft: 65536
-        hard: 65536
-    environment:
-      ES_JAVA_OPTS: "-Xms1G -Xmx1G"
-      discovery.type: single-node
-    volumes:
-      - esdata:/usr/share/elasticsearch/data
-    networks:
-      - gn-network

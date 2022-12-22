@@ -26,9 +26,9 @@ While reading the document you may realize; if INSPIRE offers so many options, t
 
 When selecting one of the available options, consider the following aspects:
 
-- The minimal implementation will have limitations for end users (for example having to download the full dataset, if they are only interested in a small section).
+- The minimal implementation will have limitations for end users (for example having to download the full dataset, if they are only interested in a small section). On the other hand, minimal implementations tend to be less complex in setup which makes understanding the implementation easier.
 - The traditional implementation has the most active users, so dedicated documentation and tooling is available with high Technical Readiness Level (TRL). However, the technology is based on conventions of almost 20 years ago, some conventions are outdated with current IT practices.
-- An experimental approach brings risks of incomplete documentation and tools. But it also gives opportunity to engage with the community to design the next iteration of INSPIRE.
+- An experimental approach brings the risk of incomplete documentation and tools. Also there is less evidence on conformance to the directive. But it also gives opportunity to use current technologies and engage with the community to design the next iteration of INSPIRE.
 
 Before selecting an option evaluate the following aspects in your organization.
 
@@ -36,6 +36,6 @@ Before selecting an option evaluate the following aspects in your organization.
 - Combine an implementation of INSPIRE with business cases that generate direct benefit for your organization or partners. For example, adoption of the open data directive, better documentation and reporting of service levels, improved archival of data, discoverability on search engines.
 - Assess the projected audience. Verify that the complexity and nature of the implementation matches with the expectations and capabilities of that audience.
 
-We recommend to start with a minimal implementation and validate it with the provided [compliance test tooling](https://inspire.ec.europa.eu/work-programme/validation-and-conformity-testing). From there, extend the implementation while continuing the tests with each iteration. In this scenario you are able to focus on the important aspects and prevent common caveats early on in the process.
+We recommend to start with a minimal implementation and validate it with the provided [compliance test tooling](https://inspire.ec.europa.eu/work-programme/validation-and-conformity-testing). From there, extend the implementation while continuing the tests with each iteration. In this scenario you are able to focus on the important aspects and prevent caveats early on in the process.
 
-For background reading on terminology and general principles described here (like data modelling, ontologies and the INSPIRE model), please see D6.1 chapter 3.
+For background reading on terminology and general principles described in this wiki (like data modelling, ontologies and the INSPIRE model), please see EJP Soil Deliverable 6.1 chapter 3.

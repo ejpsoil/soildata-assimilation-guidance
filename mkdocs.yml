@@ -6,7 +6,14 @@ site_url: https://ejpsoil.github.io/soildata-assimilation-guidance
 repo_url: https://github.com/ejpsoil/soildata-assimilation-guidance
 docs_dir: docs
 nav:
-    - Home: index.md
+    - Intro: index.md
+    - Identification and namespaces: identification.md
+    - Metadata and Discovery: metadata.md
+    - Data harmonization (vector): etl.md
+    - Code lists: codelists.md
+    - View services: view.md
+    - Download services: download.md
+    - Quality of service: QOS.md
 
 # use_directory_urls: true
 

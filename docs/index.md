@@ -1,4 +1,6 @@
-# **Introduction**
+# Introduction
+
+This WIKI is a collaborative effort to collect and describe hands-on good practices on data assimilation and dissimination in the [Soil](https://agrovoc.fao.org/browse/agrovoc/en/page/c_7156) domain, with a focus on Europe. The [INSPIRE](https://inspire.ec.europa.eu/) directive has been and is an important effort for standardisation in the environmental data domain, therefore this WIKI has a lot of links to INSPIRE sources. Because INSPIRE adopts industry standards, this WIKI does reference common standards from ISO, Open Geospatial Consortium, Global Soils Partnership, IANA and W3C, providing a global relevance.
 
 The INSPIRE [implementation rules](https://inspire.ec.europa.eu/inspire-implementing-rules/51763) (IR) present approaches to publish data on the web. There is a number of conventions, tools and practices available to publish data according to the rules. Initially, the JRC published a series of [technical guidelines](https://inspire.ec.europa.eu/inspire-technical-guidance/57753)n(TG). These days [good practice documents](https://inspire.ec.europa.eu/portfolio/good-practice-library) (GP) are prepared by the community and adopted by JRC. By following these guidelines or good practices, you are facilitated to be compliant to the INSPIRE rules according to agreed upon procedures. However, you can still publish data in alternative ways, but in that case you need to declare how you comply to the rules with your implementation.
 
@@ -18,7 +20,8 @@ The practices cover 7 topics.
 - [Download services](download.md)
 - [Quality of service](QOS.md)
 
-| _ **Disclaimer** : References to products are examples, we do not aim to provide a complete listing, neither endorse a specific service provider. Please consult any alternative software provider to what extent INSPIRE is supported in their products. In that scenario consider to contribute your experiences to this document._ |
+| Disclaimer: References to products are examples, we do not aim to provide a complete listing, neither endorse a specific service provider. Please consult any alternative software provider to what extent INSPIRE is supported in their products. In that scenario consider to contribute your experiences to this document. |
+| --- |
 
 ## Reading guide
 

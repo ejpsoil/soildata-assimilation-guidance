@@ -1,0 +1,35 @@
+
+# Workflow to build and deploy docs on GitHub Pages.
+# Author: Just van den Broecke - 2021
+#
+name: Docs Deploy ⚙️
+
+# Trigger only when services/docs subdir changed
+on:
+  push:
+    paths:
+      - '**'
+
+defaults:
+  run:
+    working-directory: /
+
+jobs:
+  build:
+    name: Build and Deploy Documentation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout ✅
+        uses: actions/checkout@v2
+
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install requirements 📦
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Deploy 📦
+        run: mkdocs gh-deploy --force -m 'Update website via GH Action'

@@ -7,7 +7,7 @@ repo_url: https://github.com/ejpsoil/soildata-assimilation-guidance
 docs_dir: docs
 nav:
     - Identification: identification.md
-    - Harmonization: etl.md
+    - harmonization: etl.md
     - Codelists: codelists.md
     - Discovery: metadata.md
     - View: view.md

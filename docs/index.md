@@ -1,10 +1,10 @@
 # Introduction
 
-This WIKI is a collaborative effort to collect and describe hands-on good practices on data assimilation and dissimination in the [Soil](https://agrovoc.fao.org/browse/agrovoc/en/page/c_7156) domain, with a focus on Europe. The [INSPIRE](https://inspire.ec.europa.eu/) directive has been and is an important effort for standardisation in the environmental data domain, therefore this WIKI has a lot of links to INSPIRE sources. Because INSPIRE adopts industry standards, this WIKI does reference common standards from ISO, Open Geospatial Consortium, Global Soils Partnership, IANA and W3C, giving it a global relevance.
+This WIKI is a collaborative effort to collect and describe hands-on good practices on data assimilation and dissemination in the [Soil](https://agrovoc.fao.org/browse/agrovoc/en/page/c_7156) domain, with a focus on Europe. The [INSPIRE](https://inspire.ec.europa.eu/) directive has been and is an important effort for standardisation in the environmental data domain, therefore this WIKI has a lot of links to INSPIRE sources. Because INSPIRE adopts industry standards, this WIKI does reference common standards from ISO, Open Geospatial Consortium, Global Soils Partnership, IANA and W3C, giving it a global relevance.
 
 For data assimilation 2 aspects are important
-- Data dissimination; the process of making data discoverable and available 
-- Data harmonisation; the process of adopting or transforming data to a common data model
+- Data dissemination; the process of making data discoverable and available 
+- Data harmonization; the process of adopting or transforming data to a common data model
 
 The INSPIRE [implementation rules](https://inspire.ec.europa.eu/inspire-implementing-rules/51763) (IR) present approaches to harmonise and publish data. There is a number of conventions, tools and practices available to faciliate this. Initially, the JRC published a series of [technical guidelines](https://inspire.ec.europa.eu/inspire-technical-guidance/57753) (TG). These days [good practice documents](https://inspire.ec.europa.eu/portfolio/good-practice-library) (GP) are prepared by the community and adopted by JRC. By following these guidelines or good practices, you are facilitated to be compliant to the INSPIRE rules according to agreed upon procedures. However, you can still publish data in alternative ways, but in that case you need to declare how you comply to the rules with your implementation.
 

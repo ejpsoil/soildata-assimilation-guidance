@@ -10,7 +10,7 @@ The adoption of INSPIRE code lists has three steps:
 
 Adoption of a dedicated codelist is relevant for example for Soil classification. Many of the national soil classification systems have much more detail than the [World Reference Base](https://inspire.ec.europa.eu/codelist/WRBSpecifierValue), as suggested to be used by the [TG Soil](https://inspire.ec.europa.eu/id/document/tg/so).
 
-| Please note that the harmonisation meant here is harmonisation of the description of the data, for example describing a soil observation of pH KCl with dilution 1:10 in the same way across Europe. The harmonisation of the data itself, for example transforming pH KCl values to pH H2O values, is a separate step and not described in this wiki. More information on that harmonisation can be found in D6.1 chapter 3.5 page 122. |
+| Please note that the harmonization meant here is harmonization of the description of the data, for example describing a soil observation of pH KCl with dilution 1:10 in the same way across Europe. The harmonization of the data itself, for example transforming pH KCl values to pH H2O values, is a separate step and not described in this wiki. More information on that harmonization can be found in D6.1 chapter 3.5 page 122. |
 | --- |
 
 The soil theme has a large number of code lists, ranging from soil type to ranges of grain size. Many code lists originate from the FAO soil classification and are published in the [INSPIRE registry](https://inspire.ec.europa.eu/registry/).

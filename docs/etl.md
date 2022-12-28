@@ -10,34 +10,35 @@ This document lists various implementation options for data harmonization
 
 ## Minimal
 
-The [good practice on GeoPackage](https://github.com/INSPIRE-MIF/gp-geopackage-encodings) describes a relational database format to persist harmonised data. GeoPackage is a standard by OGC building on the SQLite relational database. Since many soil data is persisted in the form of relational databases, the transformation to GeoPackage is relatively easy. The transformation process could for example be triggered by a series of database queries within a GIS Desktop client such as QGIS or Python scripts. 
-
-
+The [good practice on GeoPackage](https://github.com/INSPIRE-MIF/gp-geopackage-encodings) describes a relational database format to share harmonised data. [GeoPackage](https://www.geopackage.org/) is a standardised format for storing relational data by the Open Geospatial Consorium, building on the SQLite database specification. Becuase many soil data is stored in the form of relational databases, the transformation to GeoPackage is relatively easy. The transformation process could for example be triggered by a series of database queries within a GIS Desktop client such as QGIS, in Python scripts or an ETL tool such as Hale Studio or FME. 
 
 Pro's and Con's:
 
 - The GeoPackage format is easy to consume by average users.
-
-- To capture the hierarchical structre of the INSPIRE datamodels, a lot of tables are needed, resulting in a complex data-model. 
+- To capture the hierarchical structure of the INSPIRE datamodels, a lot of tables are needed, resulting in a complex data-model. 
 - The good practice is recent, so not a lot of community experience is available yet 
-- Users download the full dataset, no (filering) api's are defined for GeoPackages yet
+- Users download a full dataset, no (filering) api's are defined for GeoPackages yet
+
+| Cookbook | Software | Description |
+| --- | --- | --- |
+| [Glosis as a database](glosis-db.md) | - | Harmonise soil data using GeoPackage |
 
 ## Traditional
 
-Tools like Hale Studio and FME are typically used to configure a conversion from data in a relational data model to data in a UML based INSPIRE model. The output is a big GML file which can be published using a WFS server or Atom download service. Below table links to detailed pages on various relevant technologies.
+Tools like Hale Studio and FME are typically used to configure a conversion from data in a relational data model to data in a GML based INSPIRE model. The output is a big GML file which can be published using a WFS server or Atom download service. Below table links to detailed pages on various relevant technologies.
 
-| Product | Description |
-| --- | --- |
-| [FME](tools/fme.md) | Feature Manipulation Engine is a visually oriented data integration platform |
-| [Hale Studio](tools/hale.md) | Humboldt Alignment Editor Studio is a Desktop tool to author 'data alignments'. |
+| Cookbook | Software | Description |
+| --- | --- | --- |
+| [FME & INSPIRE](https://www.safe.com/integrate/inspire-gml/) | (FME)[https://www.safe.com/fme/] | Feature Manipulation Engine is a visually oriented data integration platform |
+| [Hale Studio](tools/hale.md) | [Hale Studio](https://wetransform.to/halestudio/) | Humboldt Alignment Editor Studio is a Desktop tool to author 'data alignments'. |
 
 Alternatively some server tools offer on the fly transformation as part of the download service, the data mapping is defined within the service configuration.
 
-| Product | Description |
+| Product | Software | Description |
 | --- | --- |
-| [GeoServer](tools/geoserver.md) | java based server implementation |
-| [deegree](tools/deegree.md) | java based server implementation |
-| [Xtraserver](tools/xtraserver.md) | java based server implementation, also distributed as ArcGIS for INSPIRE Classic |
+| [GeoServer](tools/geoserver.md) | [GeoServer](https://geoserver.org)) | Java based server implementation |
+| [deegree](tools/deegree.md) | Java based server implementation |
+| [Xtraserver](tools/xtraserver.md) | Java based server implementation, also distributed as ArcGIS for INSPIRE Classic |
 
 Pro's and Con's:
 

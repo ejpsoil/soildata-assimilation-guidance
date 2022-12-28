@@ -17,9 +17,11 @@ To facilitate users to use the INSPIRE identification to open the object in a we
 
 An example of such a routing rule in Apache webserver:
 
-**RewriteRule**
-"https://data.gouv.fr/inrae/collections/(.\*)/items/(.\*)$"
- "http://data.recover.inrae.fr:8081/geoserver/vulter/wfs?typeNames=$1&featureID=$2&request=GetFeature"
+``` 
+RewriteRule
+  "https://data.gouv.fr/inrae/collections/(.\*)/items/(.\*)$"
+  "http://data.recover.inrae.fr:8081/geoserver/vulter/wfs?typeNames=$1&featureID=$2&request=GetFeature"
+```
 
 ### Traditional
 

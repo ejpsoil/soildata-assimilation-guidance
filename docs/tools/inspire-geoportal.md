@@ -1,10 +1,37 @@
 # INSPIRE Geoportal
 
-All INSPIRE datasets harvested to a central repository
+The [INSPIRE Geoportal](https://inspire-geoportal.ec.europa.eu/) is the central European access point to the data provided by EU Member States and several EFTA countries under the INSPIRE Directive.
 
 - Website: https://inspire-geoportal.ec.europa.eu/
 - Github: https://github.com/INSPIRE-MIF/helpdesk-geoportal
 
-# Cookbook
+## Harvesting metadata
 
-In this cookbook we're exploring how metadata records can best be prepared so they are displayed optimally in the geoportal.
+`Harvest` is the process of copying metadata from a remote source (catalogue) to the european GeoPortal. 
+
+For each memberstate a contact point is assigned, which is responsible for registering the national endpoint(s) to be harvested by the geoportal. The national contact point also triggers the harvest and validates the result before publishing it. At the [harvest status page](
+https://inspire-geoportal.ec.europa.eu/harvesting_status.html). In case you're interested to have a resource harvested into the INSPIRE GeoPortal you best contact the national contact point to understand the INSPIRE practices in your country. A list of national contact points is available at https://inspire.ec.europa.eu/contact-points/57734. A quick look into the contents of the portal and the harvest status page indicates that countries have quite varying practices on accepting datasets in the geoportal.
+
+## Metadata Guidelines
+
+The [TG Metadata](https://inspire.ec.europa.eu/id/document/tg/metadata-iso19139) indicates that INSPIRE datasets and services are described using [ISO19139:2007](https://www.iso.org/standard/32557.html). [Discussion](https://inspire.ec.europa.eu/good-practice/geodcat-ap) is ongoing if the allowed encodings should be extended to include for example [DCAT](https://www.w3.org/TR/vocab-dcat-2/) (used by [European data portal](https://data.europa.eu/)) or [DataCite](https://schema.datacite.org/) (used by Zenodo, dataverse, etc). 
+
+## Describe datasets using iso19139:2007
+
+Various tools exist to support describing datasets using iso19139:2007.
+
+- GeoNetwork is a webbased application presenting forms and tools to assist in describing datasets.
+- ArcMap and QGIS include an embedded metadata editor, which is able to export to iso19139:2007 
+- pygeometa is a python library which exports ISO19139:2007 (and other metadata encodings) from a YML encoded format called `metadata control file` (mcf)
+
+## Validate records in the INSPIRE validator
+
+
+
+## Validate links in the Link Checker
+
+Operational links are an important aspect in metadata. It determines for example if a user is able to view or download a file after having discovered its metadata. The INSPIRE Geoportal applies some link checks while harvesting the metadata and adds the link check result as tags to the metadata. To optimize your links beforehand the GeoPortal offers the option to run the link checker on an arbitrary metadata record. The Link checker is available at https://inspire-geoportal.ec.europa.eu/linkagechecker.html.
+
+## Multilingual metadata
+
+Metadata harvested from a national catalogue is usually available in a local language only. To offer users a better user experience, the INSPIRE geoportal translates some key elements of the metadata to english. An automated service is used, which in some cases gives a unexpected translation result. For this reason we encourage you to use the multilingual options of ISO19139:2007 to provide the metadata at least in a local language and english.

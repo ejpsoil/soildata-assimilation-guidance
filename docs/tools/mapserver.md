@@ -107,13 +107,23 @@ map2img -m local.map -o test2.png
 
 The technical guidance provides quite detailed instructions on how to style the relavant soil layers. For example a SO.SoilBody.WRB is described with dedicated colors for each WRB Soil type.
 
-If many style rules are involved (or if your project already has styling) a tool like GeoCat Bridge is helpfull. On QGIS, with the GeoCat Bridge plugin installed, load a SoilBody dataset and assign some of the colors. In the web > bridge menu, activate the Style viewer panel. Notice the various tabs in the panel which represent the layer style in various technologies. The first tab contains Styled Layer Descriptor (SLD), the standardised styling format, used for example in GeoServer. The second tab present the mapfile syntax, you can copy the value into your mapfile (or let Bridge generate a full mapfile).
+| WRB RSG Code | WRB RSG Name | Colour RGB code | Colour HEX code |
+| --- | --- | --- | --- |
+| AC | Acrisol | (247, 152, 4) | #F79804 |
+| AB | Albeluvisol | (254, 194, 194) | #FEC2C2 |
+| AL | Alisol | (255, 255, 190) | #FFFFBE |
+| .. | .. | .. | .. |
+
+If many style rules are involved (or if your project already has styling) a tool like GeoCat Bridge is helpfull. Read more about GeoCat Bridge in the [Cookbook Bridge and GeoServer](bridge-geoserver-geonetwork.md). On QGIS, with the GeoCat Bridge plugin installed, load a SoilBody dataset and assign some of the colors. In the web > bridge menu, activate the Style viewer panel. Notice the various tabs in the panel which represent the layer style in various encodings. The first tab contains [Styled Layer Descriptor](https://www.ogc.org/standards/sld) (SLD), a standardised styling format, used for example in GeoServer. The second tab presents the mapfile syntax, you can copy the value into your mapfile (or let Bridge generate a full mapfile).
 
 ![Mapfile styler Geocat Bridge](img/bridge-mapfile-styler.png)
 
 ## Mapserver and WMTS
 
-Mapserver does not provide tile services (WMTS) itself, but is often combined with a separate tool, [mapcache](https://mapserver.org/mapcache/), which provides tile service on top of a MapServer instance. Tile services are generally better from a Quality of Service perspective, but less dynamic in update and styling options. An interesting option is to use the WMS option of Mapcache, which uses a cache of tiles as a source to provide WMS services.
+Mapserver does not provide tile services (WMTS) itself, but is often combined with a separate tool, [mapcache](https://mapserver.org/mapcache/), which provides tile service on top of a MapServer instance. Tile services are generally a safer option with respect to Quality of Service, but less dynamic in update and styling options. An interesting option is to use the WMS option of Mapcache, which uses a cache of tiles as a source to provide WMS services.
+
+Read more at:
 
 - Website: https://mapserver.org
+- Docker: https://hub.docker.com/r/camptocamp/mapserver
 - Support: https://geographika.net

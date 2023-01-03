@@ -29,21 +29,21 @@ Tools like Hale Studio and FME are typically used to configure a conversion from
 
 | Cookbook | Software | Description |
 | --- | --- | --- |
-| [FME & INSPIRE](https://www.safe.com/integrate/inspire-gml/) | (FME)[https://www.safe.com/fme/] | Feature Manipulation Engine is a visually oriented data integration platform |
+| [FME & INSPIRE](https://www.safe.com/integrate/inspire-gml/) | [FME](https://www.safe.com/fme/) | Feature Manipulation Engine is a visually oriented data integration platform |
 | [Hale Studio](tools/hale.md) | [Hale Studio](https://wetransform.to/halestudio/) | Humboldt Alignment Editor Studio is a Desktop tool to author 'data alignments'. |
 
 Alternatively some server tools offer on the fly transformation as part of the download service, the data mapping is defined within the service configuration.
 
 | Product | Software | Description |
-| --- | --- |
+| --- | --- | --- |
 | [GeoServer](tools/geoserver.md) | [GeoServer](https://geoserver.org)) | Java based server implementation |
-| [deegree](tools/deegree.md) | Java based server implementation |
-| [Xtraserver](tools/xtraserver.md) | Java based server implementation, also distributed as ArcGIS for INSPIRE Classic |
+| [deegree](tools/deegree.md) | [deegree](https://www.deegree.org) |  Java based server implementation |
+| [Xtraserver](tools/xtraserver.md) | [xtraserver](https://www.interactive-instruments.de/en/xtraserver/)  | Java based server implementation, also distributed as [ArcGIS for INSPIRE Classic](https://enterprise.arcgis.com/en/inspire/10.8/get-started/what-is-arcgis-for-inspire.htm) |
 
 Pro's and Con's:
 
 - The approach is well established, availability of documentation and validation tooling.
-- The model captures the richness of soil data well
+- The model captures the richness of soil data 
 
 - Environment is hard to set up and maintain and is resource intensive (memory and cpu)
 - GML is difficult to consume by average users
@@ -52,16 +52,17 @@ Pro's and Con's:
 
 Since the soil theme substantially depends on [Observations and Measurements](https://www.ogc.org/standards/om) (O&M), the use of [Sensor Observation Service](https://www.ogc.org/standards/sos) (SOS) as a download service is a proper alternative to WFS. Various tools offer SOS, or its follow-up, [SensorThings API](https://www.ogc.org/standards/sensorthings), directly on top of a relational database. Katharina Schleidt provides some interesting work on [setting up SensorThings API to provide INSPIRE data](http://www.datacove.eu/inspire/).
 
-| Product | Description |
-| --- | --- |
-| [52 north](https://52north.org/software/software-projects/sos/) | Java based open source SOS 2.0 implementation |
-| [Frost server](https://fraunhoferiosb.github.io/FROST-Server/) | Java based implementation of Sensorthings API |
-| [istSOS](http://istsos.org/) | Python based open source SOS 1.0 implementation |
+| Product | Software | Description |
+| --- | --- | --- |
+| [52North](tools/52north.md) | [52 north](https://52north.org/software/software-projects/sos/) | Java based SOS and STA implementation |
+| [Workshop API4INSPIRE](https://datacoveeu.github.io/API4INSPIRE/dissemination/Workshop-2020-11-19.html) | [Frost server](https://fraunhoferiosb.github.io/FROST-Server/) | Java based implementation of Sensorthings API |
+| [istSOS tutorial - Python notebook](https://sourceforge.net/projects/istsos/files/Tutorials/) | [istSOS](http://istsos.org/) | Python based open source SOS 1.0 implementation |
 
-Various groups prefer to work with semantic web technology over UML/XSD to publish environmental data. Various tools exist which expose relational models as sematic graph. INRAE provides an interesting cookbook on how to [publish soil data using semantic technology](https://doi.org/10.15454/YJLFZI).
+Various groups prefer to work with semantic web technology over UML/XSD to publish environmental data. Various tools exist which expose relational models as semantic graph.
 
-| Product | Description |
-| --- | --- |
-| [Ontop](https://ontop-vkg.org/) | Exposes the content of arbitrary relational databases as knowledge graphs |
-| [D2RQ](http://d2rq.org/) | Accessing relational databases as virtual, read-only RDF graphs |
-| [TopBraid](https://www.topquadrant.com/doc/7.1/scripting/importing.html) | Desktop tool to manage graphs and relational data imports |
+| Product | Software | Description |
+| --- | --- | --- |
+| [Publish data through semantic web](https://doi.org/10.15454/YJLFZI) | [Yed](https://www.yworks.com/products/yed) [Coby](https://forgemia.inra.fr/anaee-dev/coby) [BlazeGraph](https://blazegraph.com/) | Cookbook by INRAE on publishing soild data as RDF | 
+| [Tutorial](https://ontop-vkg.org/tutorial/) | [Ontop](https://ontop-vkg.org/) | Exposes the content of arbitrary relational databases as knowledge graphs |
+| [Cookbook](tools\yarrrml.md) | [YARRRML](https://rml.io/yarrrml/) | Relational to RDF mapping in YML |
+| [EDG Quick start guides](https://archive.topquadrant.com/doc/7.4/quick_start_guides/index.html) | [TopBraid EDG](https://www.topquadrant.com) | Desktop/SAAS solution to manage graphs including various [data imports](https://www.topquadrant.com/doc/7.4/scripting/importing.html) |

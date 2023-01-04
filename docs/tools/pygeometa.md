@@ -12,8 +12,6 @@ The inital step assumes a folder of data files on a network drive, sharepoint or
 
 For each data file in the folder we will create a `metadata control file` (mcf). [Mcf](https://geopython.github.io/pygeometa/reference/mcf/) is a convention from the [pygeometa](https://geopython.github.io/pygeometa) community. It is a [yaml](https://en.wikipedia.org/wiki/YAML) encoded subset of iso19139:2007. YAML is easy to read by humans and optimal for versioning.
 
-Idea of this approach is to manually capture as little metadata as needed for a file, auto derive as much as possible from the spatial file itself (format, extent, crs) and merge with higher level metadata to capture generic aspects (contact details, usage constraints, etc.)
-
 ```
 pip install pygeometa
 ```
@@ -21,6 +19,16 @@ pip install pygeometa
 ```
 pygeometa export 
 ```
+
+Idea of this approach is to manually capture as little metadata as needed for a file, auto derive as much as possible from the spatial file itself (format, extent, crs) and merge with higher level metadata to capture generic aspects (contact details, usage constraints, etc.)
+
+we've prepared a docker image including python scripts to work efficiently with pygeometa
+
+```
+docker run /isric/
+```
+
+
 
 Publish records on a WebDav location or publish them for example in pycsw
 

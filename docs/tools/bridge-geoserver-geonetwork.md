@@ -8,9 +8,9 @@ In this cookbook we use GeoCat Bridge to publish a View Service on a soil datase
 facilitate the complex process of data publication from 
 a well known desktop environment. An introductionary video is available at https://www.youtube.com/watch?v=f-sZCVnR9dc
 
-[GeoServer](geoserver.md) is a server application providing OGC services on various database backends.
+[GeoServer](geoserver.md) is a server application providing OGC services on various database backends. See the [relevant cookbook](geoserver.md) for a more detailed description.
 
-[GeoNetwork](geonetwork.md) is a server application providing a search interface and various api's on a collection of metadata records.
+[GeoNetwork](geonetwork.md) is a server application providing a search interface and various api's on a collection of metadata records. See the [relevant cookbook](geonetwork.md) for a more detailed description.
 
 ## Contents of the cookbook:
 

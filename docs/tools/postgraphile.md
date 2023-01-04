@@ -1,5 +1,7 @@
 # GraphQL with Postgraphile
 
+*Status: in progress*
+
 [GraphQL](https://graphql.org) is a defacto standard for self describing api's on hierarchical data. Graphql provides via its api specification capabilities to query datasets using filters, but also indicate which properties to be returned. The GraphQL website provides a [quick start on Graphql](https://graphql.org/graphql) based on NodeJS.
 
 GraphQL is currently not endorsed as an INSPIRE Good Practice, but it fits many aspects of an INSPIRE download service. GraphQL is a good fit to disseminate measurement and observation data from soil profiles.

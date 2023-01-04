@@ -1,7 +1,8 @@
 # Metadata and View Service with GeoCat Bridge, GeoNetwork and GeoServer
 
-In this cookbook we use GeoCat Bridge to publish a View Service on a soil dataset in GeoServer, combined with connected metadata in a GeoNetwork instance. 
+*Status: ready*
 
+In this cookbook we use GeoCat Bridge to publish a View Service on a soil dataset in GeoServer, combined with connected metadata in a GeoNetwork instance. 
 
 [GeoCat Bridge](https://www.geocat.net/bridge/) is a plugin for QGIS or ArcMap developed by GeoCat in Bennekom, the Netherlands. Its goal is to 
 facilitate the complex process of data publication from 

@@ -1,28 +1,28 @@
-# Cookbook Webdav Atom
+# Cookbook WebDav & Atom
 
-In the [technical Guidelines download services](https://inspire.ec.europa.eu/documents/technical-guidance-implementation-inspire-download-services) `INSPIRE atom services` are described to provide a light weight alternative to WFS and WCS, while fitting with all the aspects of a `webservice` as described in the implementing rules.
+*Status: ready*
 
-Some solutions like GeoNetwork and Hale Connect provide Atom services as part of their publication process. But it is also possible to place a number of Atom-xml files along side the downloadable resources in a web accessible folder or webdav. 
+In the [technical Guidelines download services](https://inspire.ec.europa.eu/documents/technical-guidance-implementation-inspire-download-services) `INSPIRE atom services` are described to provide a light weight alternative to WFS and WCS, while fitting with all the aspects of a `webservice` as described in the implementing rules. 
 
-This cookbook describes a minimal approach to set up a webdav to disseminate some datasets.
+This cookbook describes a minimal approach which is based on placing a number of Atom-xml files along side the downloadable resources in a web accessible folder or webdav. 
 
 ## WSGIDAV
 
-Various webdav implmentations exist; [apache webdav](https://httpd.apache.org/docs/2.4/mod/mod_dav.html), [NGINX DAV](https://nginx.org/en/docs/http/ngx_http_dav_module.html), [SFTPGO](https://github.com/drakkan/sftpgo), [wsgidav](https://wsgidav.readthedocs.io/). For this cookbook we'll use wsgidav, but others will work a similar way.
+Various webdav implmentations exist; [apache webdav](https://httpd.apache.org/docs/2.4/mod/mod_dav.html), [NGINX DAV](https://nginx.org/en/docs/http/ngx_http_dav_module.html), [SFTPGO](https://github.com/drakkan/sftpgo), [wsgidav](https://wsgidav.readthedocs.io/). For this cookbook we'll use wsgidav, but others will work in a similar way.
 
 WsgiDAV provides a docker image, with below statement you advertise the current folder via WebDAV.
 
 ```
-docker run --rm -it -p 8080:8080 -v $(PWD):/var/wsgidav-root mar10/wsgidav
+docker run --rm -it -p 8080:8080 -v ${PWD}:/var/wsgidav-root mar10/wsgidav
 ```
 
 Open http://localhost:8080 in your browser to see the file contents.
 
 ## ATOM files
 
-Stop the container (ctrl-C). Create a new folder and copy your dataset(s) of choice into it. Create a file service.atom and for each dataset a new text file with the same name, but the atom extension.
+Stop the container (ctrl-C). Create a new folder and copy your dataset(s) of choice into it. Create a file `service.atom.xml` and for each dataset a new text file with the same name, but the atom extension.
 
-Service.atom is the `service feed` (comparable to the capabilities operation in OWS). The service feed will contain details about the service and link to each of the dataset feeds. Populate the service feed with (replace relevant sections):
+service.atom.xml is the `service feed` (comparable to the capabilities operation in OWS). The service feed will contain details about the service and link to each of the dataset feeds. Populate the service feed with (replace relevant sections):
 
 ```xml
 <feed xmlns="http://www.w3.org/2005/Atom"
@@ -34,11 +34,11 @@ Service.atom is the `service feed` (comparable to the capabilities operation in 
  <!-- feed subtitle -->
  <subtitle>INSPIRE Download Service of Soil Properties data in Sahel region</subtitle>
  <!-- self-referencing link to this feed -->
- <link href="http://localhost:8080/service.atom" rel="self" type="application/atom+xml"  hreflang="en" title="This document"/>
+ <link href="http://localhost:8080/service.atom.xml" rel="self" type="application/atom+xml"  hreflang="en" title="This document"/>
  <!-- link to Open Search definition file for this servicen (not implemented) 
 <link rel="search" href="http://example.com/search/opensearchdescription.xml" type="application/opensearchdescription+xml" title="Open Search Description for XYZ download service"/> -->
  <!-- identifier -->
- <id>http://localhost:8080/service.atom</id>
+ <id>http://localhost:8080/service.atom.xml</id>
  <!-- rights, access restrictions -->
  <rights>Copyright (c) 2021, XYZ; all rights reserved</rights>
  <!-- date/time this feed was last updated -->
@@ -56,9 +56,9 @@ Service.atom is the `service feed` (comparable to the capabilities operation in 
     <!-- link to dataset metadata record -->
     <link href="http://example.com/metadata/abcISO19139.xml" rel="describedby" type="application/xml"/>
     <!-- link to "Dataset Feed" for pre-defined dataset -->
-    <link rel="alternate" href="http://localhost:8080/soilproperties_feed.atom" type="application/atom+xml"  hreflang="en" title="Feed containing the soil properties data"/>
+    <link rel="alternate" href="http://localhost:8080/soilproperties.atom.xml" type="application/atom+xml"  hreflang="en" title="Feed containing the soil properties data"/>
     <!-- identifier for "Dataset Feed" for pre-defined dataset -->
-    <id>http://localhost:8080/soilproperties_feed.atom</id>
+    <id>http://localhost:8080/soilproperties.atom.xml</id>
     <!-- rights, access info for pre-defined dataset -->
     <rights>Copyright (c) 2002-2021, XYZ; all rights reserved</rights>
     <!-- last date/time this entry was updated -->
@@ -75,7 +75,7 @@ Service.atom is the `service feed` (comparable to the capabilities operation in 
 
 Notice that we're not implementing the actual opensearch search functionality yet. You can leave the `opensearchdescription` line empty for now. There are some external options to provide the opensearch, the Technical Guidance document actually includes a PHP script to facilitate opensearch.
 
-Then for each dataset add a file `soilproperties_feed.atom`:
+Then for each dataset add a file `soilproperties.atom.xml`:
 
 ```xml
 <feed xmlns="http://www.w3.org/2005/Atom"
@@ -87,13 +87,13 @@ Then for each dataset add a file `soilproperties_feed.atom`:
     <!-- links to INSPIRE Spatial Object Type definitions for this predefined dataset -->
     <link href="https://inspire.ec.europa.eu/featureconcept/SoilProfile" rel="describedby" type="text/html"/>
     <!-- self-referencing link to this feed -->
-    <link href="http://localhost:8080/soilproperties_feed.atom" rel="self" 
+    <link href="http://localhost:8080/soilproperties.atom.xml" rel="self" 
     type="application/atom+xml"
     hreflang="en" title="This document"/>
     <!-- upward link to the corresponding download service feed -->
-    <link href="http://localhost:8080/service.atom" rel="up" type="application/atom+xml" hreflang="en" title="The parent service feed document"/>
+    <link href="http://localhost:8080/service.atom.xml" rel="up" type="application/atom+xml" hreflang="en" title="The parent service feed document"/>
     <!-- identifier -->
-    <id>http://localhost:8080/soilproperties_feed.atom</id>
+    <id>http://localhost:8080/soilproperties.atom.xml</id>
     <!-- rights, access restrictions -->
     <rights>Copyright (c) 2021, XYZ; all rights reserved</rights>
     <!-- date/time this feed was last updated -->
@@ -140,3 +140,10 @@ The docker container runs locally, so it can not be tested by the [INSPIRE Valid
 
 ![trigger the atom test](img/atom-test.png)
 
+## Read more
+
+An alternative Atom implementation exists in [GeoNetwork](https://geonetwork-opensource.org/). The approach is described at https://geonetwork-opensource.org/manuals/trunk/en/tutorials/inspire/download-atom.html and https://geonetwork-opensource.org/manuals/3.10.x/en/api/opensearch.html. GeoNetwork provides an internal and external mode, the external mode provides opensearch on a set of remote atom feeds. The internal mode generates the atom feeds from metadata records.
+
+[Hale Studio](http://halestudio.org) provides an option to [generate a Atom feed](http://help.halestudio.org/latest/index.jsp?topic=%2Feu.esdihumboldt.hale.doc.user%2Fhtml%2Freference%2Fexport%2Finspiregml_data.html&resultof%3D%2522%2561%2574%256f%256d%2522%2520) while exporting a dataset to GML. The Hale Connect platform offers a [Atom based service endpoint](https://help.wetransform.to/docs/references/data/2018-03-07-reference-data-download-services) for every dataset published.
+
+The [QGIS INSPIRE Atom plugin](https://plugins.qgis.org/plugins/inspireatomclient/) provides access to Atom services through QGIS.

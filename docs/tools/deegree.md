@@ -1,5 +1,7 @@
 # deegree
 
+*Status: contribution required*
+
 An open source java server implementation of WMS, WMTS, CSW, WCS, WFS, WPS.
 
 Start a deegree instance locally using the docker hub image as:

@@ -1,4 +1,6 @@
-# GeoServer
+# Appschema WFS in GeoServer
+
+*Status: contribution required*
 
 GeoServer is an open source java imlementation of WFS, WCS, WPS, WMS, CSW. Various OGC API endpoints are available via 
 a [OGCAPI community plugin](https://docs.geoserver.org/latest/en/user/community/ogc-api). WMTS is available via a default plugin called `GeoWebCache`.

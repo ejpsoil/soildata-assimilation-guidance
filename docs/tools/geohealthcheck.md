@@ -1,5 +1,7 @@
 # GeoHealthCheck
 
+*Status: ready*
+
 A tool to monitor availability of spatial services. The tool will query a list of configured spatial services at intervals and report on availability using charts. The tool can also send out notifications in case of disruptions.
 
 The tool can be compared to (and is often combined with) generic web availability tools such as Zabbix, Uptimerobot, Nagios. The generic tools are used to identify if the service is up, GeoHealthCheck will go a level deeper, identify which layers are available in a getcapabilities response and ask random maps to individual layers to identify if a service is properly running.

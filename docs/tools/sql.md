@@ -1,5 +1,7 @@
 # Cookbook SQL & python
 
+*Status: in progress*
+
 This cookbook implements the GeoPackage Good Practice for Soil Data by converting a sample soil database to GeoPackage based on the INSPIRE Soil Model using SQL statements from a Python environment.
 
 REQUIREMENTS

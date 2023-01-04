@@ -1,5 +1,7 @@
 # Mapserver
 
+*Status: ready*
+
 Mapserver, originally `UMN Mapserver`, is an open source server component which provides OWS services on a variety of data sources.
 Mapserver is commonly used to set up INSPIRE View Services. A detailed guidance on how to use Mapserver to set up INSPIRE View Services is available at https://mapserver.org/ogc/inspire.html.
 
@@ -121,7 +123,9 @@ If many style rules are involved (or if your project already has styling) a tool
 
 Mapserver does not provide tile services (WMTS) itself, but is often combined with a separate tool, [mapcache](https://mapserver.org/mapcache/), which provides tile service on top of a MapServer instance. Tile services are generally a safer option with respect to Quality of Service, but less dynamic in update and styling options. An interesting option is to use the WMS option of Mapcache, which uses a cache of tiles as a source to provide WMS services.
 
-Read more at:
+## Read more:
 
 - Website: https://mapserver.org
+- Github: https://github.com/MapServer/MapServer
 - Docker: https://hub.docker.com/r/camptocamp/mapserver
+- OSGeo: https://www.osgeo.org/projects/mapserver

@@ -1,5 +1,7 @@
 # YARRRML
 
+*Status: in progress*
+
 This cookbook provides a quickstart on using YARRRML to convert arbitrary soil data to RDF following the [glosis ontology](https://github.com/rapw3k/glosis) using a YARRRML approach. This work has initially been developed in the scope of the [Soils for Africa](https://www.soils4africa-h2020.eu/) project.
 
 [YARRRML](https://rml.io/yarrrml/) is a human readable text-based representation for declarative Linked Data generation rules. YARRRML is encoded in [YAML](https://en.wikipedia.org/wiki/YAML), a widely used data serialization language designed to be human-friendly. YARRRML is an initiative of the [RML.io](https://rml.io) community which provides a set of tools to generate knowledge graphs.
@@ -16,7 +18,7 @@ A basic point of entry is the YARRRML editor `Matey` available online at https:/
 - a section to display RDF output
 - a section to visualize exported RML.io rules from YARRRML
 
-YARRRML provides a Quickstart tutorial at https://rml.io/yarrrml/tutorial/getting-started to get acquainted with the interface and YARRRML encoding rules. I recommend to follow the tutorial if you want to proceed after the cookbook, for example with you own data.
+YARRRML provides a Quickstart tutorial at https://rml.io/yarrrml/tutorial/getting-started to get acquainted with the interface and YARRRML encoding rules. I recommend to follow the tutorial if you want to proceed after the cookbook, for example with your own data.
 
 ## Soil data
 
@@ -80,7 +82,7 @@ datedescribed,xcoord,ycoord,SSN,Upper_Depth_Val,Lower_Dept_Val,coSa,meSa,fiSa,vf
 
 In the second panel we're going to write our YARRRML rules. We start by defining the GLOSIS prefixes.
 
-```
+```yml
 prefixes:
  glosis_lh: "http://w3id.org/glosis/model/layerhorizon#"
  iso28258: "http://w3id.org/glosis/model/iso28258/2013#"
@@ -90,7 +92,7 @@ prefixes:
 
 Then continue with the mapping of horizons. Add the section below under the prefices section. Then click `Generate LD` and notice some RDF is shown representing our horizons in Turtle RDF.
 
-```
+```yml
 mappings:
   horizon:
     sources:
@@ -106,7 +108,7 @@ Notice how for each record in the csv a GL_Horizon entity is created with a uniq
 
 Next are the actual observations. Unfortunately our data does not provide any information on the procedures used to produce the measurement result. We start with mapping the Cation Exchange Capacity.
 
-```
+```yml
   observation:
     sources:
        - ['soil.csv~csv']

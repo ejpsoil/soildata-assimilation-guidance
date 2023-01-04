@@ -1,5 +1,7 @@
 # View services with QGIS server
 
+*Status: contributions required*
+
 QGIS started as a GIS desktop application. In recent years the community prepared a server edition of QGIS. The server provides WMS, WFS and since recently OGC API Features. 
 
 The advantage of using QGIS both as a desktop and server component is that the maps generated on the server will be exactly the same as those prepared on a desktop client.

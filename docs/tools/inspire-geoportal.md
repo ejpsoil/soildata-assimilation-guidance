@@ -1,5 +1,7 @@
 # INSPIRE Geoportal
 
+*Status: in progress*
+
 The [INSPIRE Geoportal](https://inspire-geoportal.ec.europa.eu/) is the central European access point to the data provided by EU Member States and several EFTA countries under the INSPIRE Directive.
 
 - Website: https://inspire-geoportal.ec.europa.eu/

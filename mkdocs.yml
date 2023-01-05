@@ -1,23 +1,26 @@
 site_name: Soil Data Assimilation Guidance
 site_description: "Cookbook for a masterclass on Soil Data Assimilation"
-site_author: EJP Soil
+site_author: Wageningen Environmental Research
 copyright: "&copy; 2022-2023 Wageningen Environmental Research"
 site_url: https://ejpsoil.github.io/soildata-assimilation-guidance
 repo_url: https://github.com/ejpsoil/soildata-assimilation-guidance
 docs_dir: docs
 nav:
     - Identification: identification.md
-    - harmonization: etl.md
-    - Codelists: codelists.md
+    - Harmonization: etl.md
+    - Code lists: codelists.md
     - Discovery: metadata.md
     - View: view.md
     - Download: download.md
     - QOS: QOS.md
 
-# use_directory_urls: true
-
 theme:
     name: material
+    logo: https://ejpsoil.eu/fileadmin/projects/ejpsoil/EJP_Soil_logo_cmyk-h100.png
+    favicon: https://cdn.au.dk/favicon.ico
+
+extra:
+  homepage: https://ejpsoil.eu/
 
 plugins:
     - search

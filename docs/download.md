@@ -19,7 +19,7 @@ Alternatively, products like [GeoNetwork](https://geonetwork-opensource.org/manu
 | Cookbook | Software | Description |
 | --- | --- | --- |
 | [Webdav](tools/webdav.md) | [Wsgidav](https://wsgidav.readthedocs.io) | Setting up atom service using webdav |
-| [GeoNetwork Atom](tools/geonetwork-atom.md) | [GeoNetwork](https://geonetwork-opensource.org) | Atom download service from GeoNetwork |
+| [GeoNetwork Atom](tools/geonetwork.md) | [GeoNetwork](https://geonetwork-opensource.org) | Atom download service from GeoNetwork |
 
 ### Traditional
 

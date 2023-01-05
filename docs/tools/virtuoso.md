@@ -16,15 +16,18 @@ For this recipe we assume the codelist to be published is available as a CSV. A 
 
 ## Load SKOS RDF to virtuoso
 
-We're using a docker compose orchestration to deploy virtuoso and skosmos locally. Copy the [compose file](../../docker/virtuoso-skosmos/docker-compose.yml) into an empty folder. Navigate to the folder with a shell and run
+We're using a docker compose orchestration to deploy virtuoso and skosmos locally. Copy the contents of the [virtuoso folder](https://github.com/ejpsoil/soildata-assimilation-guidance/blob/main/docker/virtuoso-skosmos) into an empty folder. Navigate to the folder with command line and run:
 
 ```
 docker compose up
 ```
 
+Load RDF data into Virtuoso ...
+
+
 ## Setup Skosmos
 
-
+The file [config-docker.ttl](https://github.com/ejpsoil/soildata-assimilation-guidance/blob/main/docker/virtuoso-skosmos/config-docker.ttl) contains the configuration of SKOSMOS. You have to indicate which elements to select from the triple store.
 
 ## Extending an existing codelist
 

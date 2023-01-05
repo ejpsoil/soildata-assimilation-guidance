@@ -27,7 +27,7 @@ Pro's and Con's:
 
 | Cookbook | Software | Description |
 | --- | --- | --- |
-| [Glosis as a database](glosis-db.md) | - | Harmonise soil data using GeoPackage |
+| [Glosis as a database](tools/glosis-db.md) | - | Harmonise soil data using GeoPackage |
 
 ## Traditional
 
@@ -36,7 +36,7 @@ Tools like Hale Studio and FME are typically used to configure a conversion from
 | Cookbook | Software | Description |
 | --- | --- | --- |
 | [FME & INSPIRE](https://www.safe.com/integrate/inspire-gml/) | [FME](https://www.safe.com/fme/) | Feature Manipulation Engine is a visually oriented data integration platform |
-| [Hale Studio](tools/hale.md) | [Hale Studio](https://wetransform.to/halestudio/) | Humboldt Alignment Editor Studio is a Desktop tool to author 'data alignments'. |
+| [Hale Studio](tools/hale-studio.md) | [Hale Studio](https://wetransform.to/halestudio/) | Humboldt Alignment Editor Studio is a Desktop tool to author 'data alignments'. |
 
 Alternatively some server tools offer on the fly transformation as part of the download service, the data mapping is defined within the service configuration.
 
@@ -70,5 +70,5 @@ Various groups prefer to work with semantic web technology over UML/XSD to publi
 | --- | --- | --- |
 | [Publish data through semantic web](https://doi.org/10.15454/YJLFZI) | [Yed](https://www.yworks.com/products/yed) [Coby](https://forgemia.inra.fr/anaee-dev/coby) [BlazeGraph](https://blazegraph.com/) | Cookbook by INRAE on publishing soild data as RDF | 
 | [Tutorial](https://ontop-vkg.org/tutorial/) | [Ontop](https://ontop-vkg.org/) | Exposes the content of arbitrary relational databases as knowledge graphs |
-| [Cookbook](tools\yarrrml.md) | [YARRRML](https://rml.io/yarrrml/) | Relational to RDF mapping in YML |
+| [YARRRML](tools/rml.md) | [RML mapper](https://rml.io/) | Relational to RDF mapping using RML.io |
 | [EDG Quick start guides](https://archive.topquadrant.com/doc/7.4/quick_start_guides/index.html) | [TopBraid EDG](https://www.topquadrant.com) | Desktop/SAAS solution to manage graphs including various [data imports](https://www.topquadrant.com/doc/7.4/scripting/importing.html) |

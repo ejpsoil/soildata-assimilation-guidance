@@ -1,5 +1,13 @@
-[RML.io](https://rml.io/#rules)
-======
+---
+title: RML.io
+summary: 
+authors:
+    - Louis de Sousa
+date: 2022-11-10
+---
+
+# [RML.io](https://rml.io/#rules)
+
 
 RML.io is a toolset for the generation of knowledge graphs. They automate
 the creation of RDF from diverse data sources, primarily unstructured tabular
@@ -10,8 +18,8 @@ RML.io has programmes to be used on-line and to be installed on computer systems
 for prototyping, whereas the latter are meant for actual transformations of
 large datasets.
 
-Install
--------
+## Install
+
 
 Using RML.io in your system requires two programmes, a parser for the YARRRML syntax
 (`yarrrml-parser`) and a
@@ -192,7 +200,7 @@ identified instead of layers?
 ### Measurements
 
 An example transformation for the measurements in the original dataset is
-available in the file [measurements.yarrrml](measurements.yarrrml). The extra
+available in the file [measurements.yarrrml](rml/measurements.yarrrml). The extra
 elements to address in this transformation are:
   - Instance of the respective Observation class;
   - Instance of the respective Result class;

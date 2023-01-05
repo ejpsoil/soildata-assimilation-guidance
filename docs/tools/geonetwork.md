@@ -2,7 +2,7 @@
 
 *Status: in progress*
 
-[GeoNetwork](https://geonetwork-opensource.org) is a catalogue for registering spatial datasets and services. GeoNetwork does support multiple [metadata models](https://github.com/metadata101) based on XML, but it is optimized for iso19139:2007 and iso19115-2:2018. This cookbook uses docker to run GeoNetwork locally. It will discuss aspects such as schema plugins, creating metadata records, set up codelists and harvest metadata.
+[GeoNetwork](https://geonetwork-opensource.org) is a catalogue for registering spatial datasets and services. GeoNetwork does support multiple [metadata models](https://github.com/metadata101) based on XML, but it is optimized for iso19139:2007 and iso19115-2:2018. This recipe uses [docker](../utils/docker.md) to run GeoNetwork locally. It will discuss aspects such as schema plugins, creating metadata records, set up codelists and harvest metadata.
 
 ## Schema plugins
 

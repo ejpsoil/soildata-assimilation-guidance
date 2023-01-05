@@ -2,7 +2,7 @@
 
 *Status: in progress*
 
-This cookbook provides a quickstart on using YARRRML to convert arbitrary soil data to RDF following the [glosis ontology](https://github.com/rapw3k/glosis) using a YARRRML approach. This work has initially been developed in the scope of the [Soils for Africa](https://www.soils4africa-h2020.eu/) project.
+This recipe provides a quickstart on using YARRRML to convert arbitrary soil data to RDF following the [glosis ontology](https://github.com/rapw3k/glosis) using a YARRRML approach. This work has initially been developed in the scope of the [Soils for Africa](https://www.soils4africa-h2020.eu/) project.
 
 [YARRRML](https://rml.io/yarrrml/) is a human readable text-based representation for declarative Linked Data generation rules. YARRRML is encoded in [YAML](https://en.wikipedia.org/wiki/YAML), a widely used data serialization language designed to be human-friendly. YARRRML is an initiative of the [RML.io](https://rml.io) community which provides a set of tools to generate knowledge graphs.
 
@@ -18,11 +18,11 @@ A basic point of entry is the YARRRML editor `Matey` available online at https:/
 - a section to display RDF output
 - a section to visualize exported RML.io rules from YARRRML
 
-YARRRML provides a Quickstart tutorial at https://rml.io/yarrrml/tutorial/getting-started to get acquainted with the interface and YARRRML encoding rules. I recommend to follow the tutorial if you want to proceed after the cookbook, for example with your own data.
+YARRRML provides a Quickstart tutorial at https://rml.io/yarrrml/tutorial/getting-started to get acquainted with the interface and YARRRML encoding rules. I recommend to follow the tutorial if you want to proceed after the recipe, for example with your own data.
 
 ## Soil data
 
-We start our cookbook with some typical soil sample analyses data from Africa. Soil samples at location (x_coord,ycoord) at depth (Upper_Depth_Val,Lower_Dept_Val) at a date (datedescribed, YYMM) with a list of observed properties (coSa,meSa,fiSa,vfiSa,coSi,...).
+We start our recipe with some typical soil sample analyses data from Africa. Soil samples at location (x_coord,ycoord) at depth (Upper_Depth_Val,Lower_Dept_Val) at a date (datedescribed, YYMM) with a list of observed properties (coSa,meSa,fiSa,vfiSa,coSi,...).
 
 Let's load some data into the first panel of Matey. Note that you can switch between data files with the pull down on the top-left of the panel. The pull down also offers the option to `create new source` or `load a remote source`. Create a new source and name it `soil.csv`. Copy the content below in the panel.
 

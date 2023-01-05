@@ -17,7 +17,7 @@ The View services relevant for INSPIRE Soil are described in [INSPIRE Data Speci
 
 ## The Mapserver Mapfile
 
-For this cookbook we'll prepare a WMS view service on a Soil Body dataset. For each Soil Body some derived soil properties of the top soil are available.
+For this recipe we'll prepare a WMS view service on a Soil Body dataset. For each Soil Body some derived soil properties of the top soil are available.
 
 Mapserver is configured using [map files](https://www.mapserver.org/mapfile/). These mapfiles contain metadata for each layer, connection details to the datasource and styling rules for the vizualisation. In a typical configuration a user 'calls' the mapserver executable via the web, while indicating the relevant mapfile. For example: 
 
@@ -73,7 +73,7 @@ END
 
 ## Mapserver via Docker
 
-Mapserver requires a number of dependencies, which may be hard to install on some systems, that's why this cookbook suggests to work with Docker containers which are prepared to run mapserver.
+Mapserver requires a number of dependencies, which may be hard to install on some systems, that's why this recipe suggests to work with Docker containers which are prepared to run mapserver.
 
 The [camp2camp mapserver image](https://hub.docker.com/r/camptocamp/mapserver) is a commonly used mapserver container image. While starting the container we provide a number of parameters so the container is able to locate the mapfile and the data files.
 
@@ -115,7 +115,7 @@ The technical guidance provides quite detailed instructions on how to style the 
 | AL | Alisol | (255, 255, 190) | #FFFFBE |
 | .. | .. | .. | .. |
 
-If many style rules are involved (or if your project already has styling) a tool like GeoCat Bridge is helpfull. Read more about GeoCat Bridge in the [Cookbook Bridge and GeoServer](bridge-geoserver-geonetwork.md). On QGIS, with the GeoCat Bridge plugin installed, load a SoilBody dataset and assign some of the colors. In the web > bridge menu, activate the Style viewer panel. Notice the various tabs in the panel which represent the layer style in various encodings. The first tab contains [Styled Layer Descriptor](https://www.ogc.org/standards/sld) (SLD), a standardised styling format, used for example in GeoServer. The second tab presents the mapfile syntax, you can copy the value into your mapfile (or let Bridge generate a full mapfile).
+If many style rules are involved (or if your project already has styling) a tool like GeoCat Bridge is helpfull. Read more about GeoCat Bridge in the [recipe Bridge and GeoServer](bridge-geoserver-geonetwork.md). On QGIS, with the GeoCat Bridge plugin installed, load a SoilBody dataset and assign some of the colors. In the web > bridge menu, activate the Style viewer panel. Notice the various tabs in the panel which represent the layer style in various encodings. The first tab contains [Styled Layer Descriptor](https://www.ogc.org/standards/sld) (SLD), a standardised styling format, used for example in GeoServer. The second tab presents the mapfile syntax, you can copy the value into your mapfile (or let Bridge generate a full mapfile).
 
 ![Mapfile styler Geocat Bridge](img/bridge-mapfile-styler.png)
 

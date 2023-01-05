@@ -2,7 +2,7 @@
 
 *status: draft*
 
-This cookbook presents a minimal approach for publishing a (extended) code list. 
+This recipe presents a minimal approach for publishing a (extended) code list. 
 
 The most rich and common format for code list storage is RDF (turtle, json-ld, or rdf/xml) using the SKOS ontology. It is the format used by for example Glosis to [publish its codelists](https://github.com/rapw3k/glosis/blob/master/glosis_cl.ttl). Tools like GeoNetwork are able to ingest codelists based on the SKOS ontology.
 

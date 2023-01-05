@@ -40,7 +40,7 @@ At Foss4G 2022 in Florence one of the maintainers of GeoServer, [GeoSolutions](h
 
 ## GeoServer as a View service
 
-GeoServer also provides options to publish view services (WMS or WMTS). Read more about this topic in the cookbook [GeoCat Bridge and GeoServer](bridge-geoserver-geonetwork.md).
+GeoServer also provides options to publish view services (WMS or WMTS). Read more about this topic in the recipe [GeoCat Bridge and GeoServer](bridge-geoserver-geonetwork.md).
 
 ## Read more
 

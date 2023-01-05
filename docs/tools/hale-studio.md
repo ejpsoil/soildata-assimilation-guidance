@@ -6,11 +6,11 @@ HALE Studio aims to enable users to set up a harmonization workflow on datasets 
 
 The open source software has been developed in the scope of a European Research project, HUMBOLDT (2006) and is currently maintained by a company called [WeTransform](https://wetransform.to) in Darmstad Germany. WeTransform hosts the Hale Studio [user guide](http://help.halestudio.org/latest) and a [user forum](https://discuss.wetransform.to). The Git repository for Hale Studio is at https://github.com/halestudio/hale.
 
-This cookbook has been developed in the scope of a Masterclass on data assimilation within the [EJP Soil project](https://ejpsoil.eu/) and builds on harmonization work performed in the scope of the [eDanube project](https://www.isric.org/projects/soil-and-terrain-database-danube-basin).
+This recipe has been developed in the scope of a Masterclass on data assimilation within the [EJP Soil project](https://ejpsoil.eu/) and builds on harmonization work performed in the scope of the [eDanube project](https://www.isric.org/projects/soil-and-terrain-database-danube-basin).
 
-In this cookbook we'll harmonize a SOTER database to the INSPIRE model. Read more about the INSPIRE Soil model in the relevant [technical guidelines](https://inspire.ec.europa.eu/id/document/tg/so). 
+In this recipe we'll harmonize a SOTER database to the INSPIRE model. Read more about the INSPIRE Soil model in the relevant [technical guidelines](https://inspire.ec.europa.eu/id/document/tg/so). 
 
-Contents of the cookbook
+Contents of the recipe
 
 - SOTER database
 - Proparing the data 
@@ -20,7 +20,7 @@ Contents of the cookbook
 
 ## SOTER Database
 
-For this cookbook we're going to use the SOTER database of Cuba. Download the zip file from https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/f31ac19f-67a4-4f64-94cc-d4f063ea9add. 
+For this recipe we're going to use the SOTER database of Cuba. Download the zip file from https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/f31ac19f-67a4-4f64-94cc-d4f063ea9add. 
 
 The [SOTER programme](https://www.isric.org/explore/soter) was initiated in 1986 by the Food and Agricultural Organization of the United Nations (FAO), the United Nations Environmental Programme and ISRIC, under the auspices of the International Soil Science Society. The aim of the programme was to develop a global SOTER database at scale 1:1 million that was supposed to be the successor of the FAO-UNESCO Soil Map of the World. A SOTER database with global coverage was never achieved, but SOTER databases were developed for various regions, countries and continents.
 
@@ -28,7 +28,7 @@ The picture below shows the database structure of a SOTER database. The database
 
 ![Soter schema](img/soter-schema.png)
 
-In this cookbook we're focussing on the `RepresentativeHorizonValues` table mostly, which contains observed properties for each horizon. 
+In this recipe we're focussing on the `RepresentativeHorizonValues` table mostly, which contains observed properties for each horizon. 
 
 ## Preparing the data
 
@@ -38,7 +38,7 @@ Notice that, like many other soil databases, the observed soil property values a
 
 A data transformation required for this step is challenging within Hale, but relatively easy within the database. So before starting up Hale we'll make an initial transformation within the database.
 
-The [SOTER zip file](https://files.isric.org/public/soter/CU-SOTER.zip) contains a SQLite as well as a Access version of the database. In this cookbook we'll work with Access, but you can also use the SQLite version, in that case install for example [SQLite browser](https://sqlitebrowser.org/) to interact with the database. Some of the queries may slightly vary between SQLite and Access.
+The [SOTER zip file](https://files.isric.org/public/soter/CU-SOTER.zip) contains a SQLite as well as a Access version of the database. In this recipe we'll work with Access, but you can also use the SQLite version, in that case install for example [SQLite browser](https://sqlitebrowser.org/) to interact with the database. Some of the queries may slightly vary between SQLite and Access.
 
 Run the query below, to create a new `OBSERVATIONS` table. 
 

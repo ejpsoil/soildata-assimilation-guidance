@@ -8,7 +8,7 @@ For data assimilation 2 aspects are important
 
 The INSPIRE [implementation rules](https://inspire.ec.europa.eu/inspire-implementing-rules/51763) (IR) present approaches to harmonise and publish data. There is a number of conventions, tools and practices available to faciliate this. Initially, the JRC published a series of [technical guidelines](https://inspire.ec.europa.eu/inspire-technical-guidance/57753) (TG). These days [good practice documents](https://inspire.ec.europa.eu/portfolio/good-practice-library) (GP) are prepared by the community and adopted by JRC. By following these guidelines or good practices, you are facilitated to be compliant to the INSPIRE rules according to agreed upon procedures. However, you can still publish data in alternative ways, but in that case you need to declare how you comply to the rules with your implementation.
 
-This wiki lists a series of options for publishing data according to the Technical Guidelines and/or the Good Practices dedicated to use cases from the Soil domain. For each option cookbooks on various technologies are provided. The practices are categorized at 3 levels:
+This wiki lists a series of options for publishing data according to the Technical Guidelines and/or the Good Practices dedicated to use cases from the Soil domain. For each option recipes on various technologies are provided. The practices are categorized at 3 levels:
 
 - Minimal, based on a minimal effort
 - Traditional, following initial technical guidelines

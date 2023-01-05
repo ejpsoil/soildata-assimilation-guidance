@@ -2,9 +2,9 @@
 
 *status: in progress*
 
-This cookbook presents a minimalistic, however integrated and standardised approach to metadata management. Each data file on the file system will be accompagnied by a minimal YML metadata file. Automated pipelines will pick up these metadata files and publish them as valid iso19139 (or other metadata models) documents.
+This recipe presents a minimalistic, however integrated and standardised approach to metadata management. Each data file on the file system will be accompagnied by a minimal YML metadata file. Automated pipelines will pick up these metadata files and publish them as valid iso19139 (or other metadata models) documents.
 
-The cookbook uses an incremental approach to extend the functionality of the data management system step by step.
+The recipe uses an incremental approach to extend the functionality of the data management system step by step.
 
 ## Quick start
 

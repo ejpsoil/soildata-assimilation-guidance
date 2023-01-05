@@ -5,7 +5,7 @@ prefixes:
  iso28258: http://w3id.org/glosis/model/iso28258/2013#
 
 mappings:
-  person:
+  profile:
     sources:
       - ['SoilData.csv~csv']
     s: wosis_prf:$(profile_id)

@@ -1,0 +1,50 @@
+prefixes:
+ wosis_lyr: http://wosis.isric.org/layer#
+ wosis_obs: http://wosis.isric.org/observation#
+ wosis_res: http://wosis.isric.org/result#
+ glosis_lh: http://w3id.org/glosis/model/layerhorizon#
+ sosa: http://www.w3.org/ns/sosa/
+ qudt: http://qudt.org/schema/qudt/ 
+ xsd: http://www.w3.org/2001/XMLSchema#
+
+mappings:
+  observation_pH:
+    sources:
+      - ['SoilData.csv~csv']
+    s: wosis_obs:pH-$(layer_id)
+    po:
+      - [a, glosis_lh:PH]
+      - [sosa:hasFeatureOfInterest, wosis_lyr:$(layer_id)~iri]
+      - [sosa:hasResult, wosis_res:pH-$(layer_id)~iri]
+
+  result_pH:
+    sources:
+      - ['SoilData.csv~csv']
+    s: wosis_res:pH-$(layer_id)
+    po:
+      - [a, glosis_lh:PHValue]
+      - p: qudt:numericValue
+        o:
+           value: "$(pH)"
+           datatype: xsd:float
+
+  observation_SOC:
+    sources:
+      - ['SoilData.csv~csv']
+    s: wosis_obs:SOC-$(layer_id)
+    po:
+      - [a, glosis_lh:CarbonOrganic]
+      - [sosa:hasFeatureOfInterest, wosis_lyr:$(layer_id)~iri]
+      - [sosa:hasResult, wosis_res:SOC-$(layer_id)~iri]
+
+  result_SOC:
+    sources:
+      - ['SoilData.csv~csv']
+    s: wosis_res:SOC-$(layer_id)
+    po:
+      - [a, glosis_lh:CarbonOrganicValue]
+      - p: qudt:numericValue
+        o:
+           value: "$(SOC)"
+           datatype: xsd:float
+ 

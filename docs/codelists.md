@@ -1,5 +1,12 @@
+---
+title: Overview Code Lists
+summary: 
+authors:
+    - Paul van Genuchten
+date: 2022-11-10
+---
 
-# Code Lists
+# Overview Code Lists
 
 Adoption of common code lists is an important aspect of data harmonization. For INSPIRE the [INSPIRE registry](https://inspire.ec.europa.eu/registry) is the source of common code lists. Other common codelists relevant to the soil domain are available in [FAO Agrovoc](https://agrovoc.fao.org/browse/agrovoc/en/), [GEMET](https://www.eionet.europa.eu/gemet/en/about/), [OGC definition server](https://www.ogc.org/def-server), [ISO TC211](http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml), and [GLosis](https://github.com/rapw3k/glosis/blob/master/glosis_cl.ttl). At a national level [some countries](https://ec.europa.eu/isa2/solutions/re3gistry_en/) have implemented a national repository for common national codelists which may be relevant (either as a source or as a target, to publish an extended list).
 

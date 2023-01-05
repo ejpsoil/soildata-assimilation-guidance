@@ -1,5 +1,12 @@
+---
+title: Overview INSPIRE View Services
+summary: 
+authors:
+    - Paul van Genuchten
+date: 2022-11-10
+---
 
-# **View services**
+# Overview INSPIRE View Services
 
 The [TG View services](https://inspire.ec.europa.eu/documents/technical-guidance-implementation-inspire-view-services-1) prescribes the adoption of view services, which offer the capability of visualization of spatial data, possibly in a portal, GIS software or webpage. The service provides a quick view on the data, without the need to transfer the data itself to the client. The [TG Soil](https://inspire.ec.europa.eu/id/document/tg/so) prescribes that for each measured soil parameter a view service `layer` is made available online. Layers can relate to actual site observations (soil profiles) as well as parameter distribution grids or vector maps.
 

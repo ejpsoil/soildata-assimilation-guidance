@@ -1,8 +1,17 @@
-# Local tunnel
+---
+title: Overview Local Tunnel
+summary: 
+authors:
+    - Paul van Genuchten
+date: 2023-01-05
+---
 
-This recipe describes an approach to temporarily host a local webservice online. A utility opens a tunnel to a service provicer, the service providers routes all traffic to a specific domain to that tunnel.
+# Overview Local Tunnel
+
+This recipe describes an approach to temporarily host a local webservice as an online service. A utility opens a tunnel to a service provicer, the service provider routes all traffic for a specific domain via the tunnel to your machine. The tunnel stops if you quit the utility (ctrl-c).
 
 Various (free) service providers exist offering this service:
+
 - [localtunnel](https://theboroer.github.io/localtunnel-www/) requires nodejs 
 - [ngrok](https://ngrok.com) web based, but requires registration 
 - [localhost.run](https://localhost.run) requires SSH to be installed

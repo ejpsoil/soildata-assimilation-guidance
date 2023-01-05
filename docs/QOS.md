@@ -1,5 +1,12 @@
+---
+title: Overview Quality of Service
+summary: 
+authors:
+    - Paul van Genuchten
+date: 2022-11-10
+---
 
-# **Quality of Service**
+# Overview Quality of Service 
 
 Via the quality of service conventions data providers report about the quality of their services. Aspects which are monitored are:
 

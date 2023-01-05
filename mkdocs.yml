@@ -16,9 +16,8 @@ nav:
 
 # use_directory_urls: true
 
-#theme:
-#    name: null
-#    custom_dir: pygeoapi.io-theme
+theme:
+    name: material
 
 plugins:
     - search

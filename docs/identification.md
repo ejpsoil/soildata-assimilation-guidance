@@ -1,5 +1,12 @@
+---
+title: Identification, namespaces and URI strategy
+summary: 
+authors:
+    - Paul van Genuchten
+date: 2022-11-10
+---
 
-# **Identification, namespaces and URI strategy**
+# Identification, namespaces and URI strategy
 
 An important aspect of publication of data on the web is universal identification of objects within the European INSPIRE infrastructure. Identifiers are constant, unique and authoritative.
 

@@ -1,4 +1,12 @@
-# Docker
+---
+title: Overview Docker
+summary: 
+authors:
+    - Paul van Genuchten
+date: 2023-01-05
+---
+
+# Overview Docker
 
 Docker is a virtualisation technology slightly more efficient then running a virtual machine. With docker you run a full virtual environment (container) within your PC. Most containers run a flavour of Linux and you access them as if you access a remote server. Containers run an `docker-image`, a prepared set of operating system and software. Docker images are build locally from a `Dockerfile` (recipe) or downloaded from a repository such as `dockerhub`. Learn more about docker in the [Docker Overview](https://docs.docker.com/get-started/overview).
 

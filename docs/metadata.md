@@ -1,5 +1,12 @@
+---
+title: Overview Metadata & discovery
+summary: 
+authors:
+    - Paul van Genuchten
+date: 2022-11-10
+---
 
-# Metadata & discovery
+# Overview Metadata & discovery
 
 As described in section 3.3.3. of the D6.1 report on harmonized procedures for creation of databases and maps, metadata discovery is important for potential users to be aware what data is available, evaluate if the data is relevant for them and how they can fetch it, or who to contact for more details. Essentially, the initial goal of any Spatial Data Infrastructure (SDI) is to describe its content. Metadata of datasets and services is described in documents, which are made accessible via a discovery service as records in a catalogue.
 

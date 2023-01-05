@@ -2,7 +2,7 @@
 
 This repository has been set up as a colaborative space for working on a cookbook on guidance for Soil Data assimilation and dissemination.
 
-Documentation is maintained in the [docs](docs) folder as [markdown](https://en.wikipedia.org/wiki/Markdown) and is published at an online location at intervals using [MKdocs](https://www.mkdocs.org). 
+Documentation is maintained in the [docs](docs) folder as [markdown](https://en.wikipedia.org/wiki/Markdown) and is published at [an online location](https://ejpsoil.github.io/soildata-assimilation-guidance) at intervals using [MKdocs](https://www.mkdocs.org). 
 
 In the [docker folder](docker) some docker compose files are kept for each of the cookbooks for which it is relevant. 
 

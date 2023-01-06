@@ -31,7 +31,7 @@ Alternatively, products like [GeoNetwork](https://geonetwork-opensource.org/manu
 | Xtraserver | [XtraServer](https://www.interactive-instruments.de/en/xtraserver/) / [ArcGIS](https://enterprise.arcgis.com/en/inspire/) | Xtraserver, either standalone or as INSPIRE plugin for ArcGIS, facilitates on the fly transformation of relational data to INSPIRE GML as part of the WFS service definition. The developers of Xtraserver lead the GML working group at OGC |
 | [GeoServer](tools/geoserver.md) | [GeoServer](https://geoserver.org/) | The app-schema plugin extends the WFS implementation with support for hierarchical features. On the fly transformation is managed from a configuration file. Marcus Sen (Onegeology) create a [cookbook for this approach](http://www.onegeology.org/docs/technical/OneGeologyWFSCookbook_v1.4.pdf). |
 | [Get started with Hale Connect](https://help.wetransform.to/docs/getting-started/2018-04-28-quick-start) | [Hale Connect](https://www.wetransform.to/products/haleconnect/) | Optimized for performance, stores pregeneralised xml fragments in combination with an elastic search index for filtering |
-| [Good practice on coverage data](https://inspire.rasdaman.org/) | [Rasdaman](http://www.rasdaman.org/) | A Web Coverage Service implementation |
+| [Coverages with rasdaman](tools/rasdaman.md) | [Rasdaman](http://www.rasdaman.org/) | A Web Coverage Service implementation |
 
 Consider that a product advertising WFS support does not automatically qualify for INSPIRE, the product has to support hierarchical GML.
 

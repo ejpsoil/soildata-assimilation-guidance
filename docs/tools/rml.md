@@ -1,7 +1,7 @@
 [RML.io](https://rml.io/#rules)
 ======
 
-RML.io is a toolset for the generation of knowledge graphs. They automate
+RML.io is a tool set for the generation of knowledge graphs. They automate
 the creation of RDF from diverse data sources, primarily unstructured tabular
 data. 
 
@@ -47,7 +47,7 @@ The YARRRML syntax
 The RML tools apply data transformations according to a set of rules recorded in
 a YAML file. This file must respect a specific syntax, named
 [YARRRML](https://rml.io/yarrrml/spec/). This specification defines a number of
-sections (or environments) in the YAML file that laid out the structure of the
+sections (or environments) in the YAML file that lay out the structure of the
 resulting triples.
 
 The first of these sections is named `prefixes` and provides the space for the
@@ -62,7 +62,7 @@ prefixes:
  geo: http://www.opengis.net/ont/geosparql#
 ```
 
-Next comes the `mappings` where the actual transformations are encoded. This
+Next comes the `mappings` section, where the actual transformations are encoded. This
 section is to be populated with sub-sections, one for each individual subject
 class (or type) necessary in the output RDF. For instance, if the transformation must produce
 triples for profiles and layers, then a sub-suction for each is necessary. The
@@ -76,7 +76,7 @@ mappings:
 ```
 
 For each subject class sub-section at least one data source needs to be specified in
-the `sources` section. The source can declared within square brakets (i.e. a YAML
+the `sources` section. The source can be declared within square brackets (i.e. a YAML
 collection), providing a path to a file followed by a tilde and then a type.
 The sources section can be more intricate, as YARRRML supports [a wide range of different data sources](https://rml.io/yarrrml/spec/#data-sources), including flat tables, databases and Web APIs. 
 
@@ -91,8 +91,8 @@ The following sub-section of the class declares the subject and has the simple
 name of `s`. Its purpose is to define the URI structure for the instances of the
 class. In principle this is also the first element that makes reference to the
 contents of the source file. In the case of CSV, as in this example, the column
-names are used. They are invoked using the dollar character (`$`), whith the
-column name within paranthesis. The practical result is the generation of an
+names are used. They are invoked using the dollar character (`$`), with the
+column name within parenthesis. The practical result is the generation of an
 individual element (subject in this case) for each distinct value found in the
 source column. 
 
@@ -108,7 +108,7 @@ in sub-section `po`. This section is itself composed by a list, whose items
 comprise a pair: predicate (item `p`) and object (item `o`). The predicate is
 encoded as a URI in a similar way to the subject, using abbreviations if
 necessary. As for the object it can be decomposed further into a `value` and a
-`datatype` to accomodate literals.   
+`datatype` to accommodate literals.   
 
 The example below creates triples for the layer class subject, using the
 `layer_id` column in the source to generate subject URIs. The source column
@@ -132,20 +132,19 @@ mappings:
            datatype: xsd:integer
 ```
 
-The encoding of the predicates and objects list can be agilised with
-collections. Instead of descriminating value and datatype, they can be expressed
+The encoding of the predicates and objects list can be shortened with
+collections. Instead of discriminating value and datatype, they can be expressed
 as elements of a collection. This formulation is useful when the object is
 itself a URI. Note how in the example below (for the layer class) the tilde is
 used again, to indicate the object type. 
 
 ```yml
     po:
-      - [a, glosis_pr:GL_Layer]
       - [iso28258:Profile.elementOfProfile, http://my.soil.org#$(layer_id)~iri]
 ```
 
 This was just a brief introduction to the YARRRML syntax. It goes far deeper,
-even allowing for a level of functional programming. While the guidelines in this
+even allowing for some functional programming. While the guidelines in this
 document make enough of a start to automated RDF generation, the
 [documentation](https://w3id.org/yarrrml) is indispensable to take full
 advantage of the RML tool set.
@@ -193,7 +192,7 @@ Service (WoSIS):
   - http://wosis.isric.org/observation#
   - http://wosis.isric.org/result#
 
-Note that none of the data used in this exercise is actually part of WoSIS.
+Note that none of the data used in this exercise are actually part of WoSIS.
 
 ### Profiles
 
@@ -289,7 +288,7 @@ a challenge. Download the file [layer.yarrrml](rml/layer.yarrrml) and try it
 yourself. 
 
 Look carefully at the transformation file, note how the object properties from
-the ISO28258 module are used to declare the layers depths.
+the [ISO28258 module](https://rapw3k.github.io/glosis/docs/iso-28258-doc/index-en.html) are used to declare the layers depths.
 
 **Question**: what would be different if in the source dataset horizons were
 identified instead of layers? 
@@ -304,7 +303,7 @@ elements to address in this transformation are:
   - Relation between Observation and Result;
   - Numerical literal with the measurement result.
 
-**Question**: Identify in Layer Horizon module of GloSIS which are the units of measurement
+**Question**: Identify in the [Layer Horizon module](https://rapw3k.github.io/glosis/docs/glosis-lh-doc/index-en.html) of GloSIS which are the units of measurement
 associated with the Result instances used in this example. 
 
 **Exercise I**: Create a new `yarrrml` file including all the transformations given

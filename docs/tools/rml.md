@@ -1,13 +1,5 @@
----
-title: RML.io
-summary: 
-authors:
-    - Louis de Sousa
-date: 2022-11-10
----
-
-# [RML.io](https://rml.io/#rules)
-
+[RML.io](https://rml.io/)
+=========================
 
 RML.io is a toolset for the generation of knowledge graphs. They automate
 the creation of RDF from diverse data sources, primarily unstructured tabular
@@ -18,8 +10,8 @@ RML.io has programmes to be used on-line and to be installed on computer systems
 for prototyping, whereas the latter are meant for actual transformations of
 large datasets.
 
-## Install
-
+Install
+-------
 
 Using RML.io in your system requires two programmes, a parser for the YARRRML syntax
 (`yarrrml-parser`) and a
@@ -47,11 +39,115 @@ java -jar rmlmapper-6.1.3-r367-all.jar
 
 At this stage it might be useful to create a shortcut to call the programme with
 a simple command like `rmlmapper`.
-How to do this depends on your system as is beyond the scope of this document.
+How to do this depends on your system and is beyond the scope of this document.
 
 The YARRRML syntax
 ------------------
 
+The RML tools apply data transformations according to a set of rules recorded in
+a YAML file. This file must respect a specific syntax, named
+[YARRRML](https://rml.io/yarrrml/spec/). This specification defines a number of
+sections (or environments) in the YAML file that lay out the structure of the
+resulting triples.
+
+The first of these sections is named `prefixes` and provides the space for the
+definition of URI abbreviations, in all similar to the Turtle syntax. Each
+abbreviation is encoded as a list item and can be used in the reminder of the
+YARRRML as it would be in a Turtle knowledge graph.
+
+```yml
+prefixes:
+ rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+ xsd: http://www.w3.org/2001/XMLSchema#
+ geo: http://www.opengis.net/ont/geosparql#
+```
+
+Next comes the `mappings` section, where the actual transformations are encoded. This
+section is to be populated with sub-sections, one for each individual subject
+class (or type) necessary in the output RDF. For instance, if the transformation must produce
+triples for profiles and layers, then a sub-suction for each is necessary. The
+name of these subject sub-sections is arbitrarily chosen by the user.
+
+```yml
+mappings:
+  profile:
+
+  layer:
+```
+
+For each subject class sub-section at least one data source needs to be specified in
+the `sources` section. The source can be declared within square brackets (i.e. a YAML
+collection), providing a path to a file followed by a tilde and then a type.
+The sources section can be more intricate, as YARRRML supports [a wide range of different data sources](https://rml.io/yarrrml/spec/#data-sources), including flat tables, databases and Web APIs. 
+
+```yml
+mappings:
+  profile:
+    sources:
+      - ['SoilData.csv~csv']
+```
+
+The following sub-section of the class declares the subject and has the simple
+name of `s`. Its purpose is to define the URI structure for the instances of the
+class. In principle this is also the first element that makes reference to the
+contents of the source file. In the case of CSV, as in this example, the column
+names are used. They are invoked using the dollar character (`$`), with the
+column name within parenthesis. The practical result is the generation of an
+individual element (subject in this case) for each distinct value found in the
+source column. 
+
+```yml
+  profile:
+    sources:
+      - ['SoilData.csv~csv']
+    s: http://my.soil.org#$(profile_id)
+```
+
+With the subject defined, triples can be completed with predicates and objects
+in sub-section `po`. This section is itself composed by a list, whose items
+comprise a pair: predicate (item `p`) and object (item `o`). The predicate is
+encoded as a URI in a similar way to the subject, using abbreviations if
+necessary. As for the object it can be decomposed further into a `value` and a
+`datatype` to accommodate literals.   
+
+The example below creates triples for the layer class subject, using the
+`layer_id` column in the source to generate subject URIs. The source column
+`layer_order` is used to complete triples declaring the order of a layer within
+a profile.
+
+```yml
+prefixes:
+ xsd: http://www.w3.org/2001/XMLSchema#
+ iso28258: http://w3id.org/glosis/model/iso28258/2013#
+
+mappings:
+  layer:
+    sources:
+      - ['SoilData.csv~csv']
+    s: http://my.soil.org#$(layer_id)
+    po:
+      - p: iso28258:ProfileElement.order
+        o:
+           value: "$(layer_order)"
+           datatype: xsd:integer
+```
+
+The encoding of the predicates and objects list can be shortened with
+collections. Instead of discriminating value and datatype, they can be expressed
+as elements of a collection. This formulation is useful when the object is
+itself a URI. Note how in the example below (for the layer class) the tilde is
+used again, to indicate the object type. 
+
+```yml
+    po:
+      - [iso28258:Profile.elementOfProfile, http://my.soil.org#$(layer_id)~iri]
+```
+
+This was just a brief introduction to the YARRRML syntax. It goes far deeper,
+even allowing for some functional programming. While the guidelines in this
+document make enough of a start to automated RDF generation, the
+[documentation](https://w3id.org/yarrrml) is indispensable to take full
+advantage of the RML tool set.
 
 How to use
 ----------
@@ -96,7 +192,7 @@ Service (WoSIS):
   - http://wosis.isric.org/observation#
   - http://wosis.isric.org/result#
 
-Note that none of the data used in this exercise is actually part of WoSIS.
+Note that none of the data used in this exercise are actually part of WoSIS.
 
 ### Profiles
 
@@ -192,7 +288,7 @@ a challenge. Download the file [layer.yarrrml](rml/layer.yarrrml) and try it
 yourself. 
 
 Look carefully at the transformation file, note how the object properties from
-the ISO28258 module are used to declare the layers depths.
+the [ISO28258 module](https://rapw3k.github.io/glosis/docs/iso-28258-doc/index-en.html) are used to declare the layers depths.
 
 **Question**: what would be different if in the source dataset horizons were
 identified instead of layers? 
@@ -207,7 +303,7 @@ elements to address in this transformation are:
   - Relation between Observation and Result;
   - Numerical literal with the measurement result.
 
-**Question**: Identify in Layer Horizon module of GloSIS which are the units of measurement
+**Question**: Identify in the [Layer Horizon module](https://rapw3k.github.io/glosis/docs/glosis-lh-doc/index-en.html) of GloSIS which are the units of measurement
 associated with the Result instances used in this example. 
 
 **Exercise I**: Create a new `yarrrml` file including all the transformations given

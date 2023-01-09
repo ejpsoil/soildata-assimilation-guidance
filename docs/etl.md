@@ -1,12 +1,22 @@
-
+---
+title: Data harmonization (vector data)
+summary: 
+authors:
+    - Paul van Genuchten
+date: 2022-11-10
+---
 
 # Data harmonization (vector data)
 
 A main aspect of INSPIRE is the harmonization of environmental data throughout Europe. Alinging the format, structure and content of your data to match a common model, so the data can be integrated with other datasets in Europe. And to describe aspects of the data which differ from the common model in such a way, that the differences can be understood by others. INSPIRE does not require to restructure your work processes to fit the INSPIRE conventions, however in case your data infrastructure goes through a major refactor, INSPIRE conventions should be introduced.
 
-One of the most important activities related to harmonization is the adoption of INSPIRE code lists and extending those lists to capture regional conventions. The role of code lists is explained in a dedicated [codelists section](codelists.md). 
+An important activity related to harmonization is the adoption of INSPIRE code lists and extending those lists to capture regional conventions. The role of code lists is explained in a dedicated [codelists section](codelists.md). 
 
-This document lists various implementation options for data harmonization
+INSPIRE datamodel extension is another aspect to consider as part of data harmonization. Harmonization should not lead to loss of data (because some data doesn't fit the target model). Instead the target model should be extended to capture these aspects. [Annex D of TG Soil](https://github.com/INSPIRE-MIF/technical-guidelines/blob/2022.2/data/so/dataspecification_so.adoc#soil-data-model-extensions-informative) has a specific example on extending the model for a soil contamination use case. Options for model extensions vary per technology. Wetransform has a [dedicated section on model extension](http://inspire-extensions.wetransform.to) on their website, based on an [R&D project](https://www.geonovum.nl/uploads/documents/20161121-INSPIRE-Extensions.pdf) from 2016. 
+
+If you missed the initial EJP Training on Soil data good practices, you can still have a look at [a presentation about vector data harmonization](https://wur.yuja.com/V/Video?v=195126&node=829569&a=1133213006&autoplay=1), [a presentation about harmonization based on Coverage and Sensor](https://wur.yuja.com/V/Video?v=186405&node=793609&a=1936269719&autoplay=1), and [presenation about semantic web (GLOSIS)](https://wur.yuja.com/V/Video?v=184392&node=785996&a=2121794774&autoplay=1)
+
+This document lists various implementation options for data harmonization. 
 
 ## Minimal
 
@@ -21,7 +31,7 @@ Pro's and Con's:
 
 | Cookbook | Software | Description |
 | --- | --- | --- |
-| [Glosis as a database](glosis-db.md) | - | Harmonise soil data using GeoPackage |
+| [Glosis as a database](tools/glosis-db.md) | - | Harmonise soil data using GeoPackage |
 
 ## Traditional
 
@@ -30,7 +40,7 @@ Tools like Hale Studio and FME are typically used to configure a conversion from
 | Cookbook | Software | Description |
 | --- | --- | --- |
 | [FME & INSPIRE](https://www.safe.com/integrate/inspire-gml/) | [FME](https://www.safe.com/fme/) | Feature Manipulation Engine is a visually oriented data integration platform |
-| [Hale Studio](tools/hale.md) | [Hale Studio](https://wetransform.to/halestudio/) | Humboldt Alignment Editor Studio is a Desktop tool to author 'data alignments'. |
+| [Hale Studio](tools/hale-studio.md) | [Hale Studio](https://wetransform.to/halestudio/) | Humboldt Alignment Editor Studio is a Desktop tool to author 'data alignments'. |
 
 Alternatively some server tools offer on the fly transformation as part of the download service, the data mapping is defined within the service configuration.
 
@@ -64,5 +74,5 @@ Various groups prefer to work with semantic web technology over UML/XSD to publi
 | --- | --- | --- |
 | [Publish data through semantic web](https://doi.org/10.15454/YJLFZI) | [Yed](https://www.yworks.com/products/yed) [Coby](https://forgemia.inra.fr/anaee-dev/coby) [BlazeGraph](https://blazegraph.com/) | Cookbook by INRAE on publishing soild data as RDF | 
 | [Tutorial](https://ontop-vkg.org/tutorial/) | [Ontop](https://ontop-vkg.org/) | Exposes the content of arbitrary relational databases as knowledge graphs |
-| [Cookbook](tools\yarrrml.md) | [YARRRML](https://rml.io/yarrrml/) | Relational to RDF mapping in YML |
+| [YARRRML](tools/rml.md) | [RML mapper](https://rml.io/) | Relational to RDF mapping using RML.io |
 | [EDG Quick start guides](https://archive.topquadrant.com/doc/7.4/quick_start_guides/index.html) | [TopBraid EDG](https://www.topquadrant.com) | Desktop/SAAS solution to manage graphs including various [data imports](https://www.topquadrant.com/doc/7.4/scripting/importing.html) |

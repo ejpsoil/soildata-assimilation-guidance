@@ -2,7 +2,7 @@
 
 *Status: in progress*
 
-[GeoNetwork](https://geonetwork-opensource.org) is a catalogue for registering spatial datasets and services. GeoNetwork does support multiple [metadata models](https://github.com/metadata101) based on XML, but it is optimized for iso19139:2007 and iso19115-2:2018. This cookbook uses docker to run GeoNetwork locally. It will discuss aspects such as schema plugins, creating metadata records, set up codelists and harvest metadata.
+[GeoNetwork](https://geonetwork-opensource.org) is a catalogue for registering spatial datasets and services. GeoNetwork does support multiple [metadata models](https://github.com/metadata101) based on XML, but it is optimized for iso19139:2007 and iso19115-2:2018. This recipe uses [docker](../utils/docker.md) to run GeoNetwork locally. It will discuss aspects such as schema plugins, creating metadata records, set up codelists and harvest metadata.
 
 ## Schema plugins
 
@@ -66,6 +66,9 @@ The `metasearch` plugin is a default plugin in QGIS.
 - Switch to the find tab, and search some records. 
 - Select a search result, for some search results the `load data` button (lower left) is activated and you can load some data to the map
 
+## Atom download service from GeoNetwork
+
+You can enable an ATOM download service in GeoNetwork. GeoNetwork provides an opensearch API and will use the metadata content to generate Atom service and dataset files. You can read more about this option in the [documentation](https://geonetwork-opensource.org/manuals/3.10.x/en/tutorials/inspire/download-atom.html).
 
 ## Read more
 

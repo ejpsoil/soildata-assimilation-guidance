@@ -2,17 +2,17 @@
 
 *Status: ready*
 
-In this cookbook we use GeoCat Bridge to publish a View Service on a soil dataset in GeoServer, combined with connected metadata in a GeoNetwork instance. 
+In this recipe we use GeoCat Bridge to publish a View Service on a soil dataset in GeoServer, combined with connected metadata in a GeoNetwork instance. 
 
 [GeoCat Bridge](https://www.geocat.net/bridge/) is a plugin for QGIS or ArcMap developed by GeoCat in Bennekom, the Netherlands. Its goal is to 
 facilitate the complex process of data publication from 
 a well known desktop environment. An introductionary video is available at https://www.youtube.com/watch?v=f-sZCVnR9dc
 
-[GeoServer](geoserver.md) is a server application providing OGC services on various database backends.
+[GeoServer](geoserver.md) is a server application providing OGC services on various database backends. See the [relevant recipe](geoserver.md) for a more detailed description. 
 
-[GeoNetwork](geonetwork.md) is a server application providing a search interface and various api's on a collection of metadata records.
+[GeoNetwork](geonetwork.md) is a server application providing a search interface and various api's on a collection of metadata records. See the [relevant recipe](geonetwork.md) for a more detailed description.
 
-## Contents of the cookbook:
+## Contents of the recipe:
 
 - Deploy GeoServer and GeoNetwork using Docker
 - Install and configure the Bridge plugin
@@ -20,7 +20,9 @@ a well known desktop environment. An introductionary video is available at https
 
 ## Deploy GeoServer and GeoNetwork using Docker
 
-This cookbook assumes you have docker installed, but you can also install each of the components directly on your system. We use the QGIS edition of Bridge, but an [edition for ArcMAP](https://geocat.net/bridge) is also available.
+This recipe is based on Docker, but you can also install each of the components directly on your system. New to Docker? Read the [Docker recipe](../utils/docker.md).
+
+We use the QGIS edition of Bridge, but an [edition for ArcMAP](https://geocat.net/bridge) is also available.
 
 Download the file https://github.com/ejpsoil/ejpsoil-data-publication-guidance/docker/bridge-geoserver-geonetwork/docker-compose.yml into an empty folder.
 Navigate to the folder using a shell client (windows powershell or Linux/Apple shell) and run:
@@ -60,3 +62,12 @@ Select the target servers for the publisation and click the publish button.
 When returning to the publish panel, you will notice an icon behind each layer indicating the publication status. You can now right click on the layer to preview the wms layer or the metadata.
 
 | Note that the styling options in QGIS and GeoServer are not a full match. Some styling transformations are applied which may impact the final result on GeoServer. A common caveat is the availability of certain fonts, used for labeling or icons, on the client and the server. Make sure all used fonts are available on the server as well. |
+
+## Validate the view service
+
+The INSPIRE Validator provides a validation of view services. It will mainly test if metadata elements are available and the service is reachable.
+
+The docker containers run locally, so the services can not be tested by the [INSPIRE Validator](https://inspire.ec.europa.eu/validator/test-selection/index.html). 
+In [Local Tunnel](../utils/localtunnel.md) an approach is suggested to temporarily host a local service online, so you can run the validation.
+
+We have not yet installed the INSPIRE plugin on GeoServer and optimized the configuration of GeoNetwork, so expect some tests to fail

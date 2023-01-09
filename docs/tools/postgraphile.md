@@ -10,7 +10,7 @@ At ISRIC we use GraphQL (along WMS/WFS) to disseminate the [WOSIS soil profile d
 
 ## Postgraphile
 
-[Postgraphile](https://www.graphile.org/postgraphile/) is a NodeJS server application which creates a GraphQL api on any postgres database. For this cookbook we've prepared a docker orchestration which includes a postgres database and a postgraphile container. Also included is PGadmin, which provides a webbased user interface to the database.
+[Postgraphile](https://www.graphile.org/postgraphile/) is a NodeJS server application which creates a GraphQL api on any postgres database. For this recipe we've prepared a [docker](../utils/docker.md) orchestration which includes a postgres database and a postgraphile container. Also included is PGadmin, which provides a webbased user interface to the database.
 
 ## Load some data into the database
 

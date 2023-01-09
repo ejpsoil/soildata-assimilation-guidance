@@ -6,9 +6,9 @@ A tool to monitor availability of spatial services. The tool will query a list o
 
 The tool can be compared to (and is often combined with) generic web availability tools such as Zabbix, Uptimerobot, Nagios. The generic tools are used to identify if the service is up, GeoHealthCheck will go a level deeper, identify which layers are available in a getcapabilities response and ask random maps to individual layers to identify if a service is properly running.
 
-## Cookbook
+## Exercise
 
-The cookbook assunes docker desktop installed. Alternatively you can create a personal account at https://demo.geohealthcheck.org (click `register` in the login page). Start a local GeoHealthCheck container:
+The recipe assunes docker desktop installed. Alternatively you can create a personal account at https://demo.geohealthcheck.org (click `register` in the login page). Start a local GeoHealthCheck container:
 
 ```
 docker run --name ghc -p80:80 geopython/geohealthcheck

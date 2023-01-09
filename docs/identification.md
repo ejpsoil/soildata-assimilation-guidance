@@ -1,5 +1,12 @@
+---
+title: Identification, namespaces and URI strategy
+summary: 
+authors:
+    - Paul van Genuchten
+date: 2022-11-10
+---
 
-# **Identification, namespaces and URI strategy**
+# Identification, namespaces and URI strategy
 
 An important aspect of publication of data on the web is universal identification of objects within the European INSPIRE infrastructure. Identifiers are constant, unique and authoritative.
 
@@ -37,4 +44,4 @@ The aspect of identification is one of the major benefits of the upcoming OGC AP
 
 In many cases catalogue records and service definitions are populated manually in separate locations. Verify that at each location the identification and namespace of links between metadata and services are correct. Initially JRC did not have testing procedures to test these linkages. In practice a lot of these links where not correct, causing users not to be able to download a dataset from a search result in the national and INSPIRE GeoPortal.
 
-Integrated data and metadata platforms, such as Hale Connect, prevent this type of mistakes. A helpful tool in this area is GeoCat Bridge (a plugin for QGIS or ArcGIS Desktop), which publishes data to a feature server and metadata to a catalogue, ensuring the bidirectional linkage is correct.
+Integrated data and metadata platforms, such as [deegree](tools/deegree.md) and [Hale Connect](tools/hale-connect.md), prevent this type of mistakes. A helpful tool in this area is [GeoCat Bridge](tools/bridge-geoserver-geonetwork.md), which publishes data to GeoServer and metadata to GeoNetwork synchronously, ensuring that bidirectional linkage is correct.

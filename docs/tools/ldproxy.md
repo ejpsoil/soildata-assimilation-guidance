@@ -2,7 +2,7 @@
 
 *Status: ready*
 
-[ldproxy](https://ldproxy.net) is an open source product by [interactive instruments](interactive-instruments.de). The team has an important role in the development of the suite of new OGC API's and the implementation of ldproxy is an important aspect of that process.
+[ldproxy](https://ldproxy.net) is an open source product by [interactive instruments](https://www.interactive-instruments.de). The team has an important role in the development of the suite of new OGC API's and the implementation of ldproxy is an important aspect of that process.
 
 ## Quick start
 

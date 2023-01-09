@@ -1,14 +1,14 @@
-# Cookbook WebDav & Atom
+# WebDav & Atom
 
 *Status: ready*
 
 In the [technical Guidelines download services](https://inspire.ec.europa.eu/documents/technical-guidance-implementation-inspire-download-services) `INSPIRE atom services` are described to provide a light weight alternative to WFS and WCS, while fitting with all the aspects of a `webservice` as described in the implementing rules. 
 
-This cookbook describes a minimal approach which is based on placing a number of Atom-xml files along side the downloadable resources in a web accessible folder or webdav. 
+This recipe describes a minimal approach which is based on placing a number of Atom-xml files along side the downloadable resources in a web accessible folder or webdav. Consider that WebDav is used as an example, any online file system would suffice. A plain apache webserver, Zenodo or even sharepoint or dropbox.
 
 ## WSGIDAV
 
-Various webdav implmentations exist; [apache webdav](https://httpd.apache.org/docs/2.4/mod/mod_dav.html), [NGINX DAV](https://nginx.org/en/docs/http/ngx_http_dav_module.html), [SFTPGO](https://github.com/drakkan/sftpgo), [wsgidav](https://wsgidav.readthedocs.io/). For this cookbook we'll use wsgidav, but others will work in a similar way.
+Various webdav implmentations exist; [apache webdav](https://httpd.apache.org/docs/2.4/mod/mod_dav.html), [NGINX DAV](https://nginx.org/en/docs/http/ngx_http_dav_module.html), [SFTPGO](https://github.com/drakkan/sftpgo), [wsgidav](https://wsgidav.readthedocs.io/). For this recipe we'll use wsgidav, but others will work in a similar way.
 
 WsgiDAV provides a docker image, with below statement you advertise the current folder via WebDAV.
 
@@ -136,7 +136,10 @@ Notice that you can provide multiple distributions for the same dataset (in vari
 
 Notice that the examples above incorperate ongoing work as described in https://github.com/INSPIRE-MIF/gp-data-service-linking-simplification/issues/63.
 
-The docker container runs locally, so it can not be tested by the [INSPIRE Validator](https://inspire.ec.europa.eu/validator/test-selection/index.html). A workaround exists; you can use [localtunnel](https://theboroer.github.io/localtunnel-www/) (requires nodejs), [ngrok](https://ngrok.com) (requires registration) or [localhost.run](https://localhost.run) to provide a temporal web address to your local server. Note that you have to update the self-references in atom files to use the tunneled web address. Then trigger the Atom validation:
+The docker container runs locally, so it can not be tested by the [INSPIRE Validator](https://inspire.ec.europa.eu/validator/test-selection/index.html). 
+In [Local Tunnel](../utils/localtunnel.md) an approach is suggested to temporarily host a local service online, so you can run the validation.
+
+Note that you have to update the self-references in atom files to use the tunneled web address. Then trigger the Atom validation:
 
 ![trigger the atom test](img/atom-test.png)
 

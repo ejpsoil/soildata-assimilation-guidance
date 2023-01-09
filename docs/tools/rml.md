@@ -1,7 +1,7 @@
-[RML.io](https://rml.io/#rules)
-======
+[RML.io](https://rml.io/)
+=========================
 
-RML.io is a tool set for the generation of knowledge graphs. They automate
+RML.io is a toolset for the generation of knowledge graphs. They automate
 the creation of RDF from diverse data sources, primarily unstructured tabular
 data. 
 
@@ -296,7 +296,7 @@ identified instead of layers?
 ### Measurements
 
 An example transformation for the measurements in the original dataset is
-available in the file [measurements.yarrrml](measurements.yarrrml). The extra
+available in the file [measurements.yarrrml](rml/measurements.yarrrml). The extra
 elements to address in this transformation are:
   - Instance of the respective Observation class;
   - Instance of the respective Result class;

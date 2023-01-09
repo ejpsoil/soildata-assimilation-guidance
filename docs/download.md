@@ -1,7 +1,16 @@
+---
+title: Overview Download Services
+summary: 
+authors:
+    - Paul van Genuchten
+date: 2022-11-10
+---
 
-# **Download services**
+# Overview Download Services
 
-Download services facilitate the download of vector or grid data.
+Download services facilitate the download of vector, grid or sensor data. 
+
+If you missed the initial EJP Training on Soil data good practices, you can still have a look at [a presentation about download services as Coverage and SensorThings](https://wur.yuja.com/V/Video?v=184380&node=785951&a=1565884354&autoplay=1) or [a presentation on Atom/WMS/WFS](https://wur.yuja.com/V/Video?v=184438&node=786146&a=1735271407&autoplay=1).
 
 ### Minimal
 
@@ -12,7 +21,7 @@ Alternatively, products like [GeoNetwork](https://geonetwork-opensource.org/manu
 | Cookbook | Software | Description |
 | --- | --- | --- |
 | [Webdav](tools/webdav.md) | [Wsgidav](https://wsgidav.readthedocs.io) | Setting up atom service using webdav |
-| [GeoNetwork Atom](tools/geonetwork-atom.md) | [GeoNetwork](https://geonetwork-opensource.org) | Atom download service from GeoNetwork |
+| [GeoNetwork Atom](tools/geonetwork.md) | [GeoNetwork](https://geonetwork-opensource.org) | Atom download service from GeoNetwork |
 
 ### Traditional
 
@@ -24,7 +33,7 @@ Alternatively, products like [GeoNetwork](https://geonetwork-opensource.org/manu
 | Xtraserver | [XtraServer](https://www.interactive-instruments.de/en/xtraserver/) / [ArcGIS](https://enterprise.arcgis.com/en/inspire/) | Xtraserver, either standalone or as INSPIRE plugin for ArcGIS, facilitates on the fly transformation of relational data to INSPIRE GML as part of the WFS service definition. The developers of Xtraserver lead the GML working group at OGC |
 | [GeoServer](tools/geoserver.md) | [GeoServer](https://geoserver.org/) | The app-schema plugin extends the WFS implementation with support for hierarchical features. On the fly transformation is managed from a configuration file. Marcus Sen (Onegeology) create a [cookbook for this approach](http://www.onegeology.org/docs/technical/OneGeologyWFSCookbook_v1.4.pdf). |
 | [Get started with Hale Connect](https://help.wetransform.to/docs/getting-started/2018-04-28-quick-start) | [Hale Connect](https://www.wetransform.to/products/haleconnect/) | Optimized for performance, stores pregeneralised xml fragments in combination with an elastic search index for filtering |
-| [Good practice on coverage data](https://inspire.rasdaman.org/) | [Rasdaman](http://www.rasdaman.org/) | A Web Coverage Service implementation |
+| [Coverages with rasdaman](tools/rasdaman.md) | [Rasdaman](http://www.rasdaman.org/) | A Web Coverage Service implementation |
 
 Consider that a product advertising WFS support does not automatically qualify for INSPIRE, the product has to support hierarchical GML.
 
@@ -44,7 +53,8 @@ GraphQL is an industry standard for queries on hierarchical data using modern ap
 | LDProxy | [ldproxy](tools/ldproxy.md) | A java based open source implementation of OGC APIs. Originally developed by Interactive Instruments as an easy way to consume API (proxy) on top of existing WFS. These experiments were a main driver for OGC in the direction of OGC API. Configuration is managed from a web interface. |
 | [GeoServer](tools/geoserver.md) | [GeoServer](https://geoserver.org) | OGC API is a community plugin of GeoServer, it publishes an alternative endpoint for the datasets published as WFS. |
 | [QGIS server](tools/qgis.md) | [QGIS](https://qgis.org) | QGIS Server includes the option to enable OGC API Features access to datasets published as WFS |
-| [Cookbook Semantic Web](https://doi.org/10.15454/YJLFZI/OGHA0V) | [Blazegraph](https://blazegraph.com/) / [Coby](https://forgemia.inra.fr/anaee-dev/coby) | INRAE prepared a linked data primer for semantic soil data
+| [Cookbook Semantic Web](https://doi.org/10.15454/YJLFZI/OGHA0V) | [Blazegraph](https://blazegraph.com/) / [Coby](https://forgemia.inra.fr/anaee-dev/coby) | INRAE prepared a linked data primer for semantic soil data |
 | [Virtuoso & skosmos](tools/virtuoso.md) | [Virtuoso](https://virtuoso.openlinksw.com/) | Triple store providing a SPARQL endpoint |
 | [YARRRML](tools/yarrrml.md) | [yarrrml](https://rml.io/yarrrml) | Human readable declaritive mapping rules for semantic web |
 | [Postgraphile](tools/postgraphile.md) | [Postgraphile](https://www.graphile.org/postgraphile/) | Plugin offering graphile access to postgres databases |
+

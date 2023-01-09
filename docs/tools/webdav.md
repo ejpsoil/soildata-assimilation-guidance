@@ -4,7 +4,7 @@
 
 In the [technical Guidelines download services](https://inspire.ec.europa.eu/documents/technical-guidance-implementation-inspire-download-services) `INSPIRE atom services` are described to provide a light weight alternative to WFS and WCS, while fitting with all the aspects of a `webservice` as described in the implementing rules. 
 
-This recipe describes a minimal approach which is based on placing a number of Atom-xml files along side the downloadable resources in a web accessible folder or webdav. 
+This recipe describes a minimal approach which is based on placing a number of Atom-xml files along side the downloadable resources in a web accessible folder or webdav. Consider that WebDav is used as an example, any online file system would suffice. A plain apache webserver, Zenodo or even sharepoint or dropbox.
 
 ## WSGIDAV
 

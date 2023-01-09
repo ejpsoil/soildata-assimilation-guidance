@@ -26,9 +26,11 @@ Adoption of a dedicated codelist is relevant for example for Soil classification
 
 The soil theme has a large number of code lists, ranging from soil type to ranges of grain size. Many code lists originate from the FAO soil classification and are published in the [INSPIRE registry](https://inspire.ec.europa.eu/registry/).
 
-## Implementation options for extending a code list
+If you missed the 2022 EJP Training on Soil data good practices, you can still have a look at [a presentation about codelists](https://wur.yuja.com/V/Video?v=195138&node=829589&a=1673682788&autoplay=1).
 
-### Minimal
+Implementation options for managing and publishing a code list:
+
+## Minimal
 
 The most basic form of publishing an alternative or extended code list is to place a code list file on a web location and reference values in it as [http://example.com/codelist.xml#concept](http://example.com/codelist.xml#concept) (see for example [http://schemas.opengis.net/iso/19139/20070417/resources/Codelist/gmxCodelists.xml](http://schemas.opengis.net/iso/19139/20070417/resources/Codelist/gmxCodelists.xml))
 

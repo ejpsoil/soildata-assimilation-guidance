@@ -8,7 +8,9 @@ date: 2022-11-10
 
 # Overview Download Services
 
-Download services facilitate the download of vector or grid data.
+Download services facilitate the download of vector, grid or sensor data. 
+
+If you missed the initial EJP Training on Soil data good practices, you can still have a look at [a presentation about download services as Coverage and SensorThings](https://wur.yuja.com/V/Video?v=184380&node=785951&a=1565884354&autoplay=1) or [a presentation on Atom/WMS/WFS](https://wur.yuja.com/V/Video?v=184438&node=786146&a=1735271407&autoplay=1).
 
 ### Minimal
 
@@ -51,7 +53,8 @@ GraphQL is an industry standard for queries on hierarchical data using modern ap
 | LDProxy | [ldproxy](tools/ldproxy.md) | A java based open source implementation of OGC APIs. Originally developed by Interactive Instruments as an easy way to consume API (proxy) on top of existing WFS. These experiments were a main driver for OGC in the direction of OGC API. Configuration is managed from a web interface. |
 | [GeoServer](tools/geoserver.md) | [GeoServer](https://geoserver.org) | OGC API is a community plugin of GeoServer, it publishes an alternative endpoint for the datasets published as WFS. |
 | [QGIS server](tools/qgis.md) | [QGIS](https://qgis.org) | QGIS Server includes the option to enable OGC API Features access to datasets published as WFS |
-| [Cookbook Semantic Web](https://doi.org/10.15454/YJLFZI/OGHA0V) | [Blazegraph](https://blazegraph.com/) / [Coby](https://forgemia.inra.fr/anaee-dev/coby) | INRAE prepared a linked data primer for semantic soil data
+| [Cookbook Semantic Web](https://doi.org/10.15454/YJLFZI/OGHA0V) | [Blazegraph](https://blazegraph.com/) / [Coby](https://forgemia.inra.fr/anaee-dev/coby) | INRAE prepared a linked data primer for semantic soil data |
 | [Virtuoso & skosmos](tools/virtuoso.md) | [Virtuoso](https://virtuoso.openlinksw.com/) | Triple store providing a SPARQL endpoint |
 | [YARRRML](tools/yarrrml.md) | [yarrrml](https://rml.io/yarrrml) | Human readable declaritive mapping rules for semantic web |
 | [Postgraphile](tools/postgraphile.md) | [Postgraphile](https://www.graphile.org/postgraphile/) | Plugin offering graphile access to postgres databases |
+

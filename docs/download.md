@@ -12,6 +12,8 @@ Download services facilitate the download of vector, grid or sensor data.
 
 If you missed the initial EJP Training on Soil data good practices, you can still have a look at [a presentation about download services as Coverage and SensorThings](https://wur.yuja.com/V/Video?v=184380&node=785951&a=1565884354&autoplay=1) or [a presentation on Atom/WMS/WFS](https://wur.yuja.com/V/Video?v=184438&node=786146&a=1735271407&autoplay=1).
 
+This page lists some implementation options for providing INSPIRE Download Services.
+
 ### Minimal
 
 The INSPIRE Atom Service provides a minimal download service implementation on a series of downloadable files placed in a web accessible folder. For every file a 'dataset feed' document can be generated and linked to a service feed describing the 'service'. A metadata record points to the service feed to complete the implementation.

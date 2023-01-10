@@ -152,7 +152,7 @@ advantage of the RML tool set.
 How to use
 ----------
 
-The file [SoilData.csv](rml/SoilData.csv) contains a simple set of
+The file [SoilData.csv](data/SoilData.csv) contains a simple set of
 hypothetical measurements referring to three soil profiles collected in two
 different sites. The goal is to transform this dataset into [GloSIS](https://github.com/rapw3k/glosis) compliant
 RDF.

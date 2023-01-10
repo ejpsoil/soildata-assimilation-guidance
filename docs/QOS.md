@@ -14,6 +14,9 @@ Via the quality of service conventions data providers report about the quality o
 - Performance and capacity (a period in which performance and capacity requirements are not met, is considered downtime)
 - Usage (how much is the service used)
 
+Measuring and reporting about Quality of Service is an aspect of step `7) Soil Information User Consideration` in the [soil information workflow](https://www.isric.org/index.php/utilise/community-practice).
+
+
 There is no minimal, traditional or experimental approach on how to measure these quality indicators. Consult your IT department or hosting company which tools they are used to work with. Confirm with them to extend and/or share these measurements for the requested parameters.
 
 To know the availability of a service, it requires to permanently monitor the availability of the service (excluding the maintenance windows). A basic alive-test every 5 minutes is sufficient. Many software exists for availability monitoring, such as [Zabbix](https://zabbix.com/), [Nagios](https://nagios.org/), [CheckMK](https://checkmk.com/), [pingdom](https://www.pingdom.com/). A special mention for the Python based [GeoHealthCheck](https://geohealthcheck.org/) package, which includes the capability on WMS/WFS services to drill down to the data level starting from the GetCapabilities operation.

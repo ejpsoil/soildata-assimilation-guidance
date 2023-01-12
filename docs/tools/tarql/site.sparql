@@ -1,0 +1,18 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX glosis_sp: <http://w3id.org/glosis/model/siteplot#>
+
+CONSTRUCT { 
+    ?uri_site rdf:type glosis_sp:GL_Site ;
+              rdf:type geo:Feature ;
+              geo:hasGeometry ?uri_geo .
+
+    ?uri_geo rdf:type geo:Point ; 
+             geo:asWKT ?geom .
+}
+WHERE {
+    BIND (URI(CONCAT("http://wosis.isric.org/site#", ?site_id)) AS ?uri_site)
+    BIND (URI(CONCAT("http://wosis.isric.org/geometry#", ?site_id)) AS ?uri_geo)
+    BIND (STRDT(CONCAT("POINT(", $lon, ", ", $lat, ")"), geo:wktLiteral) AS ?geom)
+}
+

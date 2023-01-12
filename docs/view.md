@@ -10,6 +10,10 @@ date: 2022-11-10
 
 The [TG View services](https://inspire.ec.europa.eu/documents/technical-guidance-implementation-inspire-view-services-1) prescribes the adoption of view services, which offer the capability of visualization of spatial data, possibly in a portal, GIS software or webpage. The service provides a quick view on the data, without the need to transfer the data itself to the client. The [TG Soil](https://inspire.ec.europa.eu/id/document/tg/so) prescribes that for each measured soil parameter a view service `layer` is made available online. Layers can relate to actual site observations (soil profiles) as well as parameter distribution grids or vector maps.
 
+Setting up view services is an aspect of step `6) data and info sharing` in the [soil information workflow](https://www.isric.org/index.php/utilise/community-practice).
+
+This page lists some implementation options for providing INSPIRE View Services.
+
 ### Minimal
 
 In a minimal implementation the Web Map Tiling Service (WMTS) standard is used to provide view services. Tile services have little risk with respect to the Quality of Service requirements. The alternative option, Web Map Service (WMS), is quite prone to exceed the performance limits in cases when it has to 'draw' a lot of data at once.

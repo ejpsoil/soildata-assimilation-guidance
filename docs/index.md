@@ -10,9 +10,14 @@ date: 2022-11-10
 
 This WIKI is a collaborative effort to collect and describe hands-on good practices on data assimilation and dissemination in the [Soil](https://agrovoc.fao.org/browse/agrovoc/en/page/c_7156) domain, with a focus on Europe. The [INSPIRE](https://inspire.ec.europa.eu/) directive has been and is an important effort for standardisation in the environmental data domain, therefore this WIKI has a lot of links to INSPIRE sources. Because INSPIRE adopts industry standards, this WIKI does reference common standards from ISO, Open Geospatial Consortium, Global Soils Partnership, IANA and W3C, giving it a global relevance.
 
-For data assimilation 2 aspects are important
-- Data dissemination; the process of making data discoverable and available 
+For data assimilation 3 aspects are important:
+
+- Data dissemination and consumption; the process of making data discoverable and available, including the actual collection of the data
 - Data harmonization; the process of adopting or transforming data to a common data model
+
+[Toner et al, 2022](https://www.isric.org/index.php/utilise/community-practice) identified 6 steps in a typical soil information workflow from a data producer perspective and a separate category for the data user perspective. These steps form a relevant categorisation of the articles in this wiki. Much of the articles apply to the categories `4) Data organisation` and `6) data and info sharing` and `7) Soil Information User Consideration`. We've labeled each of the articles as to which step in the workflow they apply.
+
+![Soil information workflow](https://www.isric.org/sites/default/files/Soil%20information%20workflow_circular_notext.jpg)
 
 The INSPIRE [implementation rules](https://inspire.ec.europa.eu/inspire-implementing-rules/51763) (IR) present approaches to harmonise and publish data. There is a number of conventions, tools and practices available to faciliate this. Initially, the JRC published a series of [technical guidelines](https://inspire.ec.europa.eu/inspire-technical-guidance/57753) (TG). These days [good practice documents](https://inspire.ec.europa.eu/portfolio/good-practice-library) (GP) are prepared by the community and adopted by JRC. By following these guidelines or good practices, you are facilitated to be compliant to the INSPIRE rules according to agreed upon procedures. However, you can still publish data in alternative ways, but in that case you need to declare how you comply to the rules with your implementation.
 
@@ -25,14 +30,16 @@ This wiki lists a series of options for publishing data according to the Technic
 The practices cover 7 topics.
 
 - [Identification and namespaces](identification.md)
-- [Data harmonization](etl.md) for vector data
+- [Data harmonization](etl.md)
 - [Code lists](codelists.md)
 - [Metadata and Discovery](metadata.md)
 - [View services](view.md)
 - [Download services](download.md)
 - [Quality of service](QOS.md)
 
-| Disclaimer: References to products and approaches are examples. We do not aim to provide a complete listing, nor endorse a specific technology or service provider. Please consult any alternative software provider to what extent INSPIRE is supported in their products. In that scenario consider to contribute your experiences to this WIKI. |
+!!! info
+
+    Disclaimer: References to products and approaches are examples. We do not aim to provide a complete listing, nor endorse a specific technology or service provider. Please consult any alternative software provider to what extent INSPIRE is supported in their products. In that scenario consider to contribute your experiences to this WIKI. 
 
 ## Reading guide
 

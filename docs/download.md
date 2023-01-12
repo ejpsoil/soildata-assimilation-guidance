@@ -12,6 +12,8 @@ Download services facilitate the download of vector, grid or sensor data.
 
 If you missed the initial EJP Training on Soil data good practices, you can still have a look at [a presentation about download services as Coverage and SensorThings](https://wur.yuja.com/V/Video?v=184380&node=785951&a=1565884354&autoplay=1) or [a presentation on Atom/WMS/WFS](https://wur.yuja.com/V/Video?v=184438&node=786146&a=1735271407&autoplay=1).
 
+Setting up download services is an aspect of step `6) data and info sharing` in the [soil information workflow](https://www.isric.org/index.php/utilise/community-practice).
+
 This page lists some implementation options for providing INSPIRE Download Services.
 
 ### Minimal

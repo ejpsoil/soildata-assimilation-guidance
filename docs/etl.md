@@ -8,13 +8,15 @@ date: 2022-11-10
 
 # Data harmonization (vector data)
 
-A main aspect of INSPIRE is the harmonization of environmental data throughout Europe. Alinging the format, structure and content of your data to match a common model, so the data can be integrated with other datasets in Europe. And to describe aspects of the data which differ from the common model in such a way, that the differences can be understood by others. INSPIRE does not require to restructure your work processes to fit the INSPIRE conventions, however in case your data infrastructure goes through a major refactor, INSPIRE conventions should be introduced.
+A main aspect of INSPIRE is the harmonization of environmental data throughout Europe. Alinging the format, structure and content of your data to match a common model, so the data can be integrated with other datasets in Europe. And to describe aspects of the data which differ from the common model in such a way, that the differences can be understood by others. 
+
+Data harmonization is an aspect of step `4) data organization` in the [soil information workflow](https://www.isric.org/index.php/utilise/community-practice).
 
 An important activity related to harmonization is the adoption of INSPIRE code lists and extending those lists to capture regional conventions. The role of code lists is explained in a dedicated [codelists section](codelists.md). 
 
 INSPIRE datamodel extension is another aspect to consider as part of data harmonization. Harmonization should not lead to loss of data (because some data doesn't fit the target model). Instead the target model should be extended to capture these aspects. [Annex D of TG Soil](https://github.com/INSPIRE-MIF/technical-guidelines/blob/2022.2/data/so/dataspecification_so.adoc#soil-data-model-extensions-informative) has a specific example on extending the model for a soil contamination use case. Options for model extensions vary per technology. Wetransform has a [dedicated section on model extension](http://inspire-extensions.wetransform.to) on their website, based on an [R&D project](https://www.geonovum.nl/uploads/documents/20161121-INSPIRE-Extensions.pdf) from 2016. 
 
-If you missed the initial EJP Training on Soil data good practices, you can still have a look at [a presentation about vector data harmonization](https://wur.yuja.com/V/Video?v=195126&node=829569&a=1133213006&autoplay=1), [a presentation about harmonization based on Coverage and Sensor](https://wur.yuja.com/V/Video?v=186405&node=793609&a=1936269719&autoplay=1), and [presenation about semantic web (GLOSIS)](https://wur.yuja.com/V/Video?v=184392&node=785996&a=2121794774&autoplay=1)
+If you missed the initial EJP Training on Soil data good practices, you can still have a look at [a presentation about vector data harmonization](https://wur.yuja.com/V/Video?v=195126&node=829569&a=1133213006&autoplay=1).
 
 This document lists various implementation options for data harmonization. 
 
@@ -39,28 +41,22 @@ Tools like Hale Studio and FME are typically used to configure a conversion from
 
 | Cookbook | Software | Description |
 | --- | --- | --- |
-| [FME & INSPIRE](https://www.safe.com/integrate/inspire-gml/) | [FME](https://www.safe.com/fme/) | Feature Manipulation Engine is a visually oriented data integration platform |
 | [Hale Studio](tools/hale-studio.md) | [Hale Studio](https://wetransform.to/halestudio/) | Humboldt Alignment Editor Studio is a Desktop tool to author 'data alignments'. |
+| [FME & INSPIRE](https://www.safe.com/integrate/inspire-gml/) | [FME](https://www.safe.com/fme/) | Feature Manipulation Engine is a visually oriented data integration platform |
+
+You may not have considered before, but consuming a rich GML is not straight forward in common GIS clients like ArcGIS or QGIS. To consume a rich GML you need software which is able to traverse xml hierarchies and links. Tools like Hale Studio can also be used to read rich GML and convert it back to a relational database. Unfortunately you can not automatically reverse an existing database to GML ETL-configuration. But you can set up a new ETL configuration to read and transform the rich GML. A recipe is available which [imports INSPIRE Soil GML from the city of Berlin and converts it to a relational database](tools/hale-studio-consume-gml.md).
 
 Alternatively some server tools offer on the fly transformation as part of the download service, the data mapping is defined within the service configuration.
 
-| Product | Software | Description |
+| Cookbook | Software | Description |
 | --- | --- | --- |
-| [GeoServer](tools/geoserver.md) | [GeoServer](https://geoserver.org)) | Java based server implementation |
-| [deegree](tools/deegree.md) | [deegree](https://www.deegree.org) |  Java based server implementation |
+| [GeoServer](tools/geoserver.md) | [GeoServer](https://geoserver.org) | Java based server implementation |
+| [deegree](tools/deegree.md) | [deegree](https://www.deegree.org) | Java based server implementation |
 | [Xtraserver](tools/xtraserver.md) | [xtraserver](https://www.interactive-instruments.de/en/xtraserver/)  | Java based server implementation, also distributed as [ArcGIS for INSPIRE Classic](https://enterprise.arcgis.com/en/inspire/10.8/get-started/what-is-arcgis-for-inspire.htm) |
-
-Pro's and Con's:
-
-- The approach is well established, availability of documentation and validation tooling.
-- The model captures the richness of soil data 
-
-- Environment is hard to set up and maintain and is resource intensive (memory and cpu)
-- GML is difficult to consume by average users
 
 ## Experimental
 
-Since the soil theme substantially depends on [Observations and Measurements](https://www.ogc.org/standards/om) (O&M), the use of [Sensor Observation Service](https://www.ogc.org/standards/sos) (SOS) as a download service is a proper alternative to WFS. Various tools offer SOS, or its follow-up, [SensorThings API](https://www.ogc.org/standards/sensorthings), directly on top of a relational database. Katharina Schleidt provides some interesting work on [setting up SensorThings API to provide INSPIRE data](http://www.datacove.eu/inspire/).
+Because the common soil datamodels substantially depend on [Observations and Measurements](https://www.ogc.org/standards/om) (O&M), the use of [Sensor Observation Service](https://www.ogc.org/standards/sos) (SOS) as a download service is a proper alternative to WFS. Various tools facilitate SOS, or its follow-up, [SensorThings API](https://www.ogc.org/standards/sensorthings). Katharina Schleidt provides some interesting work on [setting up SensorThings API to provide INSPIRE data](http://www.datacove.eu/inspire/). See also her [presentation about harmonization based on Coverage and Sensor](https://wur.yuja.com/V/Video?v=186405&node=793609&a=1936269719&autoplay=1) from the 2022 EJP Soil training.
 
 | Product | Software | Description |
 | --- | --- | --- |
@@ -69,6 +65,8 @@ Since the soil theme substantially depends on [Observations and Measurements](ht
 | [istSOS tutorial - Python notebook](https://sourceforge.net/projects/istsos/files/Tutorials/) | [istSOS](http://istsos.org/) | Python based open source SOS 1.0 implementation |
 
 Various groups prefer to work with semantic web technology over UML/XSD to publish environmental data. Various tools exist which expose relational models as semantic graph.
+
+See also the [presenation about semantic web (GLOSIS)](https://wur.yuja.com/V/Video?v=184392&node=785996&a=2121794774&autoplay=1) from the 2022 EJP Soil training.
 
 | Product | Software | Description |
 | --- | --- | --- |

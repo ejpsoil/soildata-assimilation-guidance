@@ -56,21 +56,15 @@ Alternatively some server tools offer on the fly transformation as part of the d
 
 ## Experimental
 
-Because the common soil datamodels substantially depend on [Observations and Measurements](https://www.ogc.org/standards/om) (O&M), the use of [Sensor Observation Service](https://www.ogc.org/standards/sos) (SOS) as a download service is a proper alternative to WFS. Various tools facilitate SOS, or its follow-up, [SensorThings API](https://www.ogc.org/standards/sensorthings). Katharina Schleidt provides some interesting work on [setting up SensorThings API to provide INSPIRE data](http://www.datacove.eu/inspire/). See also her [presentation about harmonization based on Coverage and Sensor](https://wur.yuja.com/V/Video?v=186405&node=793609&a=1936269719&autoplay=1) from the 2022 EJP Soil training.
-
-| Product | Software | Description |
-| --- | --- | --- |
-| [52North](tools/52north.md) | [52 north](https://52north.org/software/software-projects/sos/) | Java based SOS and STA implementation |
-| [Workshop API4INSPIRE](https://datacoveeu.github.io/API4INSPIRE/dissemination/Workshop-2020-11-19.html) | [Frost server](https://fraunhoferiosb.github.io/FROST-Server/) | Java based implementation of Sensorthings API |
-| [istSOS tutorial - Python notebook](https://sourceforge.net/projects/istsos/files/Tutorials/) | [istSOS](http://istsos.org/) | Python based open source SOS 1.0 implementation |
-
-Various groups prefer to work with semantic web technology over UML/XSD to publish environmental data. Various tools exist which expose relational models as semantic graph.
+Alternative ETL procedures are based on Semantic Web technology. The INSPIRE community is [exploring various semantic web options](https://inspire-eu-rdf.github.io/inspire-rdf-guidelines/), but no good practice has been adopted yet.
 
 See also the [presenation about semantic web (GLOSIS)](https://wur.yuja.com/V/Video?v=184392&node=785996&a=2121794774&autoplay=1) from the 2022 EJP Soil training.
 
 | Product | Software | Description |
 | --- | --- | --- |
+| [Semantic harmonization using TARQL](tools/tarql.md) | [TARQL](https://github.com/tarql/tarql) | command-line tool for converting CSV files to RDF using SPARQL 1.1 |
+| [Semantic mapping using YARRRML](tools/rml.md) | [RML mapper](https://rml.io/) | Human readable RDF mappings for RML.io |
 | [Publish data through semantic web](https://doi.org/10.15454/YJLFZI) | [Yed](https://www.yworks.com/products/yed) [Coby](https://forgemia.inra.fr/anaee-dev/coby) [BlazeGraph](https://blazegraph.com/) | Cookbook by INRAE on publishing soild data as RDF | 
-| [Tutorial](https://ontop-vkg.org/tutorial/) | [Ontop](https://ontop-vkg.org/) | Exposes the content of arbitrary relational databases as knowledge graphs |
-| [YARRRML](tools/rml.md) | [RML mapper](https://rml.io/) | Relational to RDF mapping using RML.io |
-| [EDG Quick start guides](https://archive.topquadrant.com/doc/7.4/quick_start_guides/index.html) | [TopBraid EDG](https://www.topquadrant.com) | Desktop/SAAS solution to manage graphs including various [data imports](https://www.topquadrant.com/doc/7.4/scripting/importing.html) |
+tarql
+
+

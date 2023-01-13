@@ -1,7 +1,7 @@
 # Consumer of Soil Data
 
 In each of the articles we aim to describe the producer and consumer aspect of a topic. However in many cases we mainly describe the producer aspect. 
-On this page we provide some specific consumer guidance and reference a number of articles which have explicit sections on the consumer aspect of discovering, accessing and downloading Soil Data.
+On this page we provide some specific consumer guidance and reference a number of articles which have explicit sections on the consumer aspect of discovering, accessing and assimilating Soil Data.
 
 Consuming and assimilating soil data has various challenges. 
 
@@ -49,11 +49,11 @@ The [GDAL utility](utils/gdal.md) supports [GMLAS](https://gdal.org/drivers/vect
 
 Common codelists are stored on the INSPIRE registry, or common registries such as Agrovoc or Gemet. If a value needs to be registered which is not in those registries, organisations have the option to publish an extended version of the code list locally. Code list values are typically provided as a URI referencing the concept in a registry. 
 
-The soil model has various codelists. Important codelists are the (WRB) soil clasification, the observed soil property and the methods used in the laboratory. It is important to understand if the method used impacts the measured value. For example there are various methods to measure pH, which each give a specific value. Pedo transfer functions exist to recalculate the value based on the method used. Prior to applying a pedo transfer function, you have to map the codelist from the remote dataset to the code list used locally. Some cases can exits:
+The soil model has various codelists. Important codelists are the (WRB) soil clasification, the observed soil property and the methods used in the laboratory. It is important to understand if the method used impacts the measured value. For example there are various methods to measure pH, which each give a specific value. Pedo transfer functions exist to recalculate the value based on the method used. Prior to applying a pedo transfer function, you have to map the codelist from the remote dataset to the code list used locally. Some cases can exist:
  
 - Both datasets reference the same value from a common code list
 - The dataset references a remote concept, but it matches with a concept used locally
 - The dataset references a remote concept, but no local representation exists for the concept 
 - No information exists on the concept used
 
-Option 1 is optimal, option 2 requires a mapping table (a suggestion can be made to include the concept on the inspire registry), option 3 and 4 are problematic, these cases should be decided on case by case. Hale studio includes an option to provide mapping tables to map codelist values. 
+Option 1 is optimal, option 2 requires a mapping table (a suggestion can be made to include the concept on the inspire registry), option 3 and 4 are problematic, these cases should be decided on case by case. Hale studio includes an option to provide mapping tables to [map codelist values](). 

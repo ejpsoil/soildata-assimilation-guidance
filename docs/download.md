@@ -41,12 +41,11 @@ Consider that a product advertising WFS support does not automatically qualify f
 
 ### Experimental
 
-As described in the harmonization paragraph, Sensor Observation Service and SensorThings API offer an alternative download option for themes including much observation data, such as Soil.
-
 A good practice document has been adopted on the [use of OGC API Features as download service](https://inspire.ec.europa.eu/good-practice/ogc-api-%E2%80%93-features-inspire-download-service). With its 20 years of history WFS and GML are out of synch with current IT practices. OGC API is a new direction of standards within OGC adopting some of the latest IT conventions, such as Open API, Rest services, JSON encodings, content negotiation, etc. The use of OGC API will increase in coming years while OGC adopts more standards. Various products exist implementing the final and/or draft specifications. 
 
-SensorThings API is a modern sensor standard. JRC adopted the good practice to provide download services using SensorThings API.
+As described in the harmonization paragraph, Sensor Observation Service and SensorThings API offer an alternative download option for themes including much observation data, such as Soil.
 
+[GraphQL](https://graphile.org) and [SPARQL](https://www.w3.org/TR/sparql11-query/) are powerfull query api's to request data over the web. Both have not gone through the proces of Good practice adoption. But they are serious candidates to provide a modern INSPIRE download service.
 
 | Cookbook | Software | Description |
 | --- | --- | --- |

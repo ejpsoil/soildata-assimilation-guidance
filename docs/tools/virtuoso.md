@@ -37,18 +37,18 @@ The file [config-docker.ttl](https://github.com/ejpsoil/soildata-assimilation-gu
 
 Virtuoso
 
-- Website: https://virtuoso.openlinksw.com/
-- Github: https://github.com/openlink/virtuoso-opensource
-- Docker: https://hub.docker.com/r/openlink/virtuoso-opensource-7
-- Virtuoso at ISRIC: https://virtuoso.isric.org/
+- Website: [virtuoso](https://virtuoso.openlinksw.com)
+- Github: [github](https://github.com/openlink/virtuoso-opensource)
+- Docker: [docker](https://hub.docker.com/r/openlink/virtuoso-opensource-7)
+- Virtuoso at ISRIC: [isric](https://virtuoso.isric.org/)
 
 Skosmos
 
-- Website: https://skosmos.org
-- Github: https://github.com/NatLibFi/Skosmos
-- Docker: https://hub.docker.com/r/ndslabs/skosmos
-- Skosmos examples: https://glosis.isric.org/, https://agrovoc.fao.org, https://agclass.nal.usda.gov/
+- Website: [skosmos](https://skosmos.org)
+- Github: [github](https://github.com/NatLibFi/Skosmos)
+- Docker: [docker](https://hub.docker.com/r/ndslabs/skosmos)
+- Skosmos examples: [glosis](https://glosis.isric.org), [agrovoc](https://agrovoc.fao.org), [agclass](https://agclass.nal.usda.gov)
 
 Skos play
 
-- Skos play: https://skos-play.sparna.fr/play/convert
+- Skos play: [skos play](https://skos-play.sparna.fr/play/convert)

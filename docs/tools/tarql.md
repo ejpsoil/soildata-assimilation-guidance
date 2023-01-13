@@ -65,6 +65,25 @@ WHERE {
 }
 ```
 
+#### Remove duplicates
+
+By default tarql generates a triple for each line in CSV file. Most likely the
+data in the CSV is not normalised, and thus many duplicate results. You can
+observe this with the example for the Profile class above. 
+
+The tool provides a specific argument to deal with duplicates: `--dedup`. It
+supresses all duplicate triples up to a given line in the output. In general you
+will want to use this argument with a large enough number to cover all the
+triples produced.
+
+```
+$ tarql --dedup 1000 tarql/profile.sparql data/SoilData.csv
+```  
+
+If your only intention is to load tarql's output to a triple store, you might not need to
+worry about duplicate triples. Most likely the software automatically discards
+the duplicates on load.
+
 ### Site
 
 ```sparql

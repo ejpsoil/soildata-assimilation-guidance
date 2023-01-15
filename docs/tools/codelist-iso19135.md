@@ -23,7 +23,7 @@ A common approach for extending codelists is to create a new codelist file and d
 
 ## Content negotiation
 
-When a human arrives at a codelist file, the syntax with http://example.com#concept opens the full file, and does not point to the relavant concept, because the web browser does not understand the file format. The mechanism of content negotiation can identify web browsers and present them an alternative format (html). Content negotiation can be set up in an intermediary webserver layer, the transformation from SKOS/iso19135 to html should be managed by an extra utility (such as [SKOSMOS](./virtuoso.md)).
+When a human arrives at a codelist file, the syntax with https://example.org/#concept opens the full file, and does not point to the relavant concept, because the web browser does not understand the file format. The mechanism of content negotiation can identify web browsers and present them an alternative format (html). Content negotiation can be set up in an intermediary webserver layer, the transformation from SKOS/iso19135 to html should be managed by an extra utility (such as [SKOSMOS](./virtuoso.md)).
 
 ## Multilingual concept labels
 

@@ -22,6 +22,6 @@
 
 ## Read more
 
-Github: https://github.com/interactive-instruments/ldproxy
+GitHub: https://github.com/interactive-instruments/ldproxy
 Docker: https://hub.docker.com/r/iide/ldproxy
 Documentation: https://docs.ldproxy.net/

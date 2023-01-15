@@ -18,7 +18,7 @@ As soon as a user imports a remote dataset for use in a project, it is usefull t
 
 ## Related recipes in this cookbook:
 
-- [A pythonic metadata workflow](tools/pygeometa.md)
+- [A Pythonic metadata workflow](tools/pygeometa.md)
 - [A discovery service in GeoNetwork](tools/geonetwork.md) includes a section on metadata authoring in GeoNetwork
 - [Metadata and View Service with GeoCat Bridge, GeoNetwork and GeoServer](tools/bridge-geoserver-geonetwork.md) includes a section on metadata management in QGIS
 - [DCAT](tools/dcat.md)

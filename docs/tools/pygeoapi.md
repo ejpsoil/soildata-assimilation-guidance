@@ -2,7 +2,7 @@
 
 *Status: in progress*
 
-A good practice has been published on how to provide an [INSPIRE dowload service based on OGC API Features](https://github.com/INSPIRE-MIF/gp-ogc-api-features/blob/master/spec/oapif-inspire-download.md). In this recipe we'll set up an instance of [pygeoapi](https://pygeoapi.io) with some soil data. pygeoapi is an open source python server implementation of OGCAPI Features, Tiles, Coverages, Records and Processes.
+A good practice has been published on how to provide an [INSPIRE download service based on OGC API Features](https://github.com/INSPIRE-MIF/gp-ogc-api-features/blob/master/spec/oapif-inspire-download.md). In this recipe we'll set up an instance of [pygeoapi](https://pygeoapi.io) with some soil data. pygeoapi is an open source python server implementation of OGCAPI Features, Tiles, Coverages, Records and Processes.
 
 The geopython community has prepared a [workshop on getting started with pygeoapi](https://dive.pygeoapi.io/).
 
@@ -13,7 +13,7 @@ The recipe is based on Docker. New to docker? Read more in the [Docker recipe](.
 - With commandline in a new folder, run this command:
 
 ```
-docker run -p5000:80 geopython/pygeoapi:latest
+docker run -p 5000:80 geopython/pygeoapi:latest
 ```
 
 - Navigate with your browser to http://localhost:5000 
@@ -60,7 +60,7 @@ resources:
 - Mount config file in containter
 
 ```
-docker run -p5000:80 -v ${PWD}/pygeoapi-config.yml:/pygeoapi/local.config.yml -v ${PWD}/brobhrpvolledigeset.gpkg:/pygeoapi/brobhrpvolledigeset.gpkg  geopython/pygeoapi:latest
+docker run -p 5000:80 -v ${PWD}/pygeoapi-config.yml:/pygeoapi/local.config.yml -v ${PWD}/brobhrpvolledigeset.gpkg:/pygeoapi/brobhrpvolledigeset.gpkg  geopython/pygeoapi:latest
 ```
 
 
@@ -72,8 +72,8 @@ Because docker runs locally, you need to set up a tunnel for the validator to ac
 ## Read more
 
 - Website: https://pygeoapi.io/
-- Github: https://github.com/geopython/pygeoapi
+- GitHub: https://github.com/geopython/pygeoapi
 - Docker: https://hub.docker.com/r/geopython/pygeoapi
 - Demo: https://demo.pygeoapi.io/master
-- Documentation: https://docs.pygeoapi.io/en/latest
+- Documentation: https://docs.pygeoapi.io
 - OSGeo: https://www.osgeo.org/projects/pygeoapi 

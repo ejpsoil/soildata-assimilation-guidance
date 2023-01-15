@@ -21,7 +21,7 @@ Various (free) service providers exist offering this service:
 - Verify a docker image is running, for example: 
 
   ```
-  docker run -p80:80 -d uzyexe/tetris:latest
+  docker run -p 80:80 -d uzyexe/tetris:latest
   ```
 
 - Enter this command:

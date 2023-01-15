@@ -18,7 +18,7 @@ GeoNetwork provides a number of transformation options for crosswalks between me
 - Start a GeoNetwork instance locally (initial startup may take some time)
   
   ```
-  docker run -p8080:8080 geonetwork:3.12
+  docker run -p 8080:8080 geonetwork:3.12
   ```
 
 - Navigate to [http://localhost:8080/geonetwork](http://localhost:8080/geonetwork)
@@ -73,7 +73,7 @@ You can enable an ATOM download service in GeoNetwork. GeoNetwork provides an op
 ## Read more
 
 - Website: https://geonetwork-opensource.org/
-- Github repository: https://github.com/geonetwork
+- GitHub repository: https://github.com/geonetwork
 - Docker composition: https://github.com/geonetwork/docker-geonetwork/blob/main/4.2.1/docker-compose.yml
 - Documentation: https://geonetwork-opensource.org/manuals/4.0.x/en
 - Tutorial: https://geonetwork-opensource.org/manuals/trunk/en/tutorials/introduction

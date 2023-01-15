@@ -18,6 +18,6 @@ docker run -d -name pycsw -p 8000:8000 geopython/pycsw
 ## Read more
 
 - Website: https://pycsw.org/
-- Github: https://github.com/geopython/pycsw
+- GitHub: https://github.com/geopython/pycsw
 - Docker: https://hub.docker.com/r/geopython/pycsw
 - Demo: https://demo.pycsw.org/cite/collections

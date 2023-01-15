@@ -10,7 +10,7 @@ GeoServer is a popular server component because of the initial ease of setup and
 ## Run as docker container
 
 ```
-docker run -p8080:8080 kartoza/geoserver:2.22.0
+docker run -p 8080:8080 kartoza/geoserver:2.22.0
 ```
 
 - Navigate to http://localhost:8080/geoserver
@@ -45,7 +45,7 @@ GeoServer also provides options to publish view services (WMS or WMTS). Read mor
 ## Read more
 
 Website: https://geoserver.org
-Github: https://github.com/geoserver/
+GitHub: https://github.com/geoserver/
 Docker: https://docker.osgeo.org/geoserver
 Issue management: https://osgeo-org.atlassian.net/projects/GEOS/summary
 OSGeo: https://www.osgeo.org/projects/geoserver/

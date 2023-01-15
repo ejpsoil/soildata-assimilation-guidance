@@ -2,7 +2,7 @@
 
 *Status: review required*
 
-[Frost](https://fraunhoferiosb.github.io/FROST-Server/) is an open source server implementation of [OGC Sensorthings](https://www.ogc.org/standards/sensorthings), a modern data exchange standard for Sensor Data. 
+[FROST](https://fraunhoferiosb.github.io/FROST-Server/) is an open source server implementation of [OGC Sensorthings](https://www.ogc.org/standards/sensorthings), a modern data exchange standard for Sensor Data.
 Because the INSPIRE Soil model is based on [Observations and Measurements](https://www.ogc.org/standards/om), the Sensorthings API can be used 
 to provide sensor download services, with the soil profile and horizons as `FeatureOfInterest`. Sensorthings API is generally easier to set up for administrators and easier to consume by clients then INSPIRE Soil data in GML. INSPIRE has recently adopted a [good practice on Download services based on SensorThings API](https://inspire.ec.europa.eu/good-practice/ogc-sensorthings-api-inspire-download-service).
 
@@ -17,6 +17,6 @@ Kathi Schleidt has prepared a [workshop on inspire data in sensorthings API](htt
 ## Read more
 
 - Good practice Sensorthings: https://inspire.ec.europa.eu/good-practice/ogc-sensorthings-api-inspire-download-service
-- Github repository: https://github.com/FraunhoferIOSB/FROST-Server
+- GitHub repository: https://github.com/FraunhoferIOSB/FROST-Server
 - Documentation: https://fraunhoferiosb.github.io/FROST-Server/
 - Workshop: https://datacoveeu.github.io/API4INSPIRE/dissemination/Workshop-2020-11-19.html

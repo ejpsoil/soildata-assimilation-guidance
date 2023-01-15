@@ -121,7 +121,7 @@ CONSTRUCT {
 }
 FROM <file:data.csv>
 WHERE {
-    BIND (URI(CONCAT('http://example.com/layer#', ?Layer)) AS ?uri_layer)
-    BIND (URI(CONCAT('http://example.com/profile#', ?Profile)) AS ?uri_profile)
+    BIND (URI(CONCAT('https://example.org/layer#', ?Layer)) AS ?uri_layer)
+    BIND (URI(CONCAT('https://example.org/profile#', ?Profile)) AS ?uri_profile)
 }
 ```

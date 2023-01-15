@@ -11,7 +11,7 @@ The tool can be compared to (and is often combined with) generic web availabilit
 The recipe assunes docker desktop installed. Alternatively you can create a personal account at https://demo.geohealthcheck.org (click `register` in the login page). Start a local GeoHealthCheck container:
 
 ```
-docker run --name ghc -p80:80 geopython/geohealthcheck
+docker run --name ghc -p 80:80 geopython/geohealthcheck
 ```
 
 - Visit http://localhost

@@ -32,6 +32,8 @@ $ tarql --help
 Use
 ---
 
+**Note**: before starting a data transformation into RDF you must devise a URI policy for your data. Please refer to the [URI Policy](../uri.md) document for details.
+
 The file [SoilData.csv](data/SoilData.csv) contains a simple set of
 hypothetical measurements referring to three soil profiles collected in two
 different sites. The goal is to transform this dataset into [GloSIS](https://github.com/rapw3k/glosis) compliant
@@ -125,3 +127,12 @@ WHERE {
     BIND (URI(CONCAT('https://example.org/profile#', ?Profile)) AS ?uri_profile)
 }
 ```
+
+More
+----
+
+Now that you obtained a RDF knowledge graph you can publish it to the internet.
+Follow the guide on [Virtuoso](virtuoso.md) to learn how.
+
+In alternative to RML, you may transform tabular data into RDF with SPARQL
+queries using [tarql](tarql.md). Follow that guide for the details.

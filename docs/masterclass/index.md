@@ -1,10 +1,9 @@
 # Masterclass on Soil Data Assimilation
 
-At jan24-26 2023 WENR & ISRIC are orhganising a masterclass on Soil Data Assimilation.
+At jan 24-26 2023 WENR & ISRIC are organising a masterclass on Soil Data Assimilation.
 
 The general design of the masterclass is to set up workgroups around certain topics, which self organise to set some goals for the masterclass and try to achieve the goals.
 Every day starts with a general kick-off and closing to report on aims and progress. A selection of content experts is available which circulate between the groups.
-
 
 
 ## Program
@@ -44,7 +43,12 @@ Every day starts with a general kick-off and closing to report on aims and progr
 
 ## Suggestion for group formation
 
-- Carbon stock
+- Carbon stock (Sample dataset: [Dutch BRH-P](tools/data/bhr-p/readme))
+- Soil biology
+- Soil contamination
+- Soil and fertilisation
+- Forest Soils
+- Erosion and compaction
 
 ## Team of Experts
 
@@ -56,7 +60,7 @@ Every day starts with a general kick-off and closing to report on aims and progr
 | Luis de Sousa | ISRIC - World Soil Information | [RML.io](../tools/rml.md), [tarql](../tools/tarql.md), [virtuoso](../tools/virtuoso.md), geopython |
 | Paul van Genuchten | ISRIC - World Soil Information | [pygeoapi](../tools/pygeoapi.md), [GeoNetwork](../tools/geonetwork.md), [GeoServer](../tools/geoserver.md) | 
 | Peter Baumann | Constructor University Bremen | [Rasdaman](../tools/rasdaman.md) |
-| Seth Grivin | GeoGraphica | [MapServer](../tools/mapserver.md) |
+| Seth Girvin | GeoGraphica | [MapServer](../tools/mapserver.md) |
 | Stefania Morrone | Epsilon | [Re3gistry](../tools/re3gistry.md), [Hale studio](../tools/hale-studio.md) |
 | Thorsten Friebe | LatLon | [deegree webservices](../tools/deegree.md) |
 | Thorsten Reitz | Wetransform | [Hale Studio](../tools/hale-studio.md), [Hale Connect](../tools/hale-connect.md) |

@@ -1,4 +1,4 @@
-# ldproxy
+# OGC API Features from a proxied WFS using ldproxy
 
 *Status: ready*
 
@@ -20,8 +20,11 @@
 - Click `ADD`. You return to the list of services, select the one you've just created and click on the `home` button top right to open it.
 - Click `Access the data`, select a `collection` to visualise the items of the collection.
 
+With a [tunnel](../utils/localtunnel.md), you can test the local service using [inspire OGC API Features validator](https://inspire.ec.europa.eu/validator).
+
 ## Read more
 
-Github: https://github.com/interactive-instruments/ldproxy
-Docker: https://hub.docker.com/r/iide/ldproxy
-Documentation: https://docs.ldproxy.net/
+- [Github](https://github.com/interactive-instruments/ldproxy)
+- [Docker](https://hub.docker.com/r/iide/ldproxy)
+- [Documentation](https://docs.ldproxy.net)
+- [Report testbed Spatial data on the web](https://github.com/geo4web-testbed/topic4/blob/master/spatial-data-on-the-web-using-sdi-report.pdf)

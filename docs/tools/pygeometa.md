@@ -2,9 +2,9 @@
 
 *status: in progress*
 
-This recipe presents a minimalistic, however integrated and standardised approach to metadata management. Each data file on the file system will be accompagnied by a minimal YML metadata file. Crawler scripts will pick up these metadata files and publish them as iso19139 (or other metadata models) records on a catalogue.
+This recipe presents a minimalistic, however integrated and standardised approach to metadata management. Each data file on a file system will be accompagnied by a minimal YML metadata file. Crawler scripts will pick up these metadata files and publish them as iso19139 (or alternative models) on a catalogue. iso19139 is the metadata model currently [mandated by INSPIRE](https://inspire.ec.europa.eu/id/document/tg/metadata-iso19139) and very common in the GeoSpatial domain. Other communities tend to use different standards, such as [STAC](https://stacspec.org/en/about/stac-spec/) (Earth Observation), [DCAT](https://www.w3.org/TR/vocab-dcat-2/) (Open Data), [DataCite](https://schema.datacite.org/) (Academia), etc.
 
-The recipe uses an incremental approach to extend the functionality of the data management system step by step.
+Th recipe introduces you to a pythonic metadata workflow step by step.
 
 ## Initial
 
@@ -43,7 +43,7 @@ spatial:
 
 identification:
     language: eng
-    title: Soilrids sample Dataset
+    title: Soilgrids sample Dataset
     abstract: This is a sample dataset for the EJP Soil Dataset Assimilation Masterclass
     dates:
         creation: 2023-01-01
@@ -96,7 +96,7 @@ distribution:
 
 ## Import existing metadata
 
-- If the data file already has a metadata document (for example with a shapefile, if it contains a file with extension .shp.xml), you can try to import it using the owslib library. pygeometa requires you to know the metadata schema in advance.
+- If the data file already has a metadata document (for example with a shapefile, if it contains a file with extension .shp.xml), you can try to import it using pygeometa. pygeometa requires to indicate the metadata schema in advance.
 
 For iso19139:2007 use:
 
@@ -125,11 +125,11 @@ FILES="/path/to/*.yml"
 for f in $FILES
 do
   echo "Processing $f file..."
-  pygeometa metadata generate $f --schema=iso19139 --output=$f.yml
+  pygeometa metadata generate $f --schema=iso19139 --output=$f.xml
 done
 ```
 
-Notice that you can also create your own template of the target iso19139 generation. By using a customised template you're able to optimise the generated iso19139 records to facilitate for example better INSPIRE complience.
+Notice that you can also create your own template for the iso19139 generation. By using a customised template you're able to optimise the generated iso19139 records to facilitate for example better INSPIRE complience.
 
 ```
 pygeometa metadata generate path/to/file.yml --schema_local=/path/to/my-schema --output=some_file.xml

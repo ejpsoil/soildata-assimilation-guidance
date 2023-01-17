@@ -90,6 +90,60 @@ Extending code-lists
 
 ### SKOS
 
+The SKOS ontology is remarkably simple, actually one of its strengths. At its
+core are five primitives:
+
+- **Concept** - a unit of though, an idea, a meaning, a category or an object.
+  They are identified with URIs.
+
+- **Label** - a lexical string used to annotate a concept. The same concept may
+  be annotated in different natural languages.
+
+- **Relation** - an semantic association between two concepts, conveying
+  hierarchy or simply connecting concepts in a network.
+
+- **Scheme** - an aggregator of related concepts, usually forming a hierarchy.
+
+- **Note** - provides further semantics or definition to a concept. Often used
+  to associate a concept to other knowledge graphs or other external resources.
+
+The listing below presents an item from the GloSIS code-list for [crop
+classes](http://w3id.org/glosis/model/codelists#CropClassValueCode). Its URI is
+[http://w3id.org/glosis/model/codelists#cropClassValueCode-Ce_Ba](http://w3id.org/glosis/model/codelists#cropClassValueCode-Ce_Ba),
+abbreviated with the Turtle syntax to `glosis_cl:cropClassValueCode-Ce_Ba`. The
+label for this item is "Barley" in the English language, an annotation also
+indicates its short notation: "Ce_Ba". Two object properties provide semantic
+associations, this item is a narrower definition of the
+`glosis_cl:cropClassValueCode-Ce` item (the "Cereals" concept), and is part of
+the scheme `glosis_cl:cropClassValueCode`.  
+
+```turtle
+glosis_cl:cropClassValueCode-Ce_Ba a skos:Concept, glosis_cl:CropClassValueCode;
+        skos:prefLabel "Barley"@en ;
+        skos:notation "Ce_Ba" ;
+        skos:inScheme glosis_cl:cropClassValueCode ;
+        skos:broader glosis_cl:cropClassValueCode-Ce .
+```
+
+The next listing shows the scheme integrating the "Barley" concept above.
+This object is very similar, with a label providing its name and some notes
+adding further definition. The literal "table 9" indicates the source of this
+code-list within the FAO Guidelines for Soil Description.
+
+```turtle
+glosis_cl:cropClassValueCode a skos:ConceptScheme ;
+        skos:prefLabel "Code list for CropClassValue - codelist scheme"@en;
+        rdfs:label "Code list for CropClassValue - codelist scheme"@en;
+        skos:note "This  code list provides the CropClassValue."@en;
+        skos:definition "table 9" ;
+        rdfs:seeAlso glosis_cl:CropClassValueCode .
+```
+
+Using this simple pattern, a hierarchical code-list can be developed further
+simply using the predicates `skos:inScheme`, `skos:broader` and `skos:narrower`.
+The predicates `skos:topConceptOf` and `skos:hasTopConcept` can be further use
+to indicate the root items in a concept hierarchy. 
+
 ### Extend an INSPIRE code-list with SKOS
 
 ### Extend a GloSIS code-list

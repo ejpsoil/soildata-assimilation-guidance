@@ -146,7 +146,42 @@ to indicate the root items in a concept hierarchy.
 
 ### Extend an INSPIRE code-list with SKOS
 
+Imagine that you intend to publish results of chemical analysis appraising the
+Zinc content of the soil. The INSPIRE code-lists do not presently include that
+metal as property, therefore an additional code-list item must be created.
+
+The first action is to identify in which code-list the item should be added.
+Physio-chemical properties like Zinc content appear associated with the Horizon
+or Layer class in soil ontologies, thus the appropriate code-list is [ProfileElementParameterNameValue](http://inspire.ec.europa.eu/codelist/ProfileElementParameterNameValue). Open that URI in your browser an go through the respective r3gistry record.
+
+At the bottom of the page r3gistry lists the items for this code-list, in this
+case they are [biological
+parameter](http://inspire.ec.europa.eu/codelist/ProfileElementParameterNameValue/biologicalParameter),
+[chemical
+parameter](http://inspire.ec.europa.eu/codelist/ProfileElementParameterNameValue/chemicalParameter)
+and [physical
+parameter](http://inspire.ec.europa.eu/codelist/ProfileElementParameterNameValue/physicalParameter). Follow the URI to the chemical parameter, in that page there is another list of items, including other metals. The new item for Zinc should therefore be created at this same level in the hierarchy.
+
+```turtle
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix inspire_cl_profile: <http://inspire.ec.europa.eu/codelist/ProfileElementParameterNameValue/> .
+@prefix glosis_cl: <http://w3id.org/glosis/model/codelists#> .
+@prefix my_soil: <http://example.com/my-soil/> . 
+
+my_soil:zincContent a skos:Concept;
+        skos:prefLabel "Zinc content"@en ;
+        skos:definition "Zinc content of the profile element" ;
+        skos:inScheme inspire_cl_profile: ;
+        skos:broader inspire_cl_profile:physicalParameter ;
+        skos:related glosis_cl:physioChemicalPropertyCode-Zin .
+```
+ 
+
+
+
 ### Extend a GloSIS code-list
+
+
 
 
 Publishing your own code-list

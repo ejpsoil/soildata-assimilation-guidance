@@ -6,7 +6,7 @@ Bulk density and organic matter are relevant indicators of Carbon Stock.
 
 Downloaded at 17-01-2023.
 
-- [Buld density](./bhr-p-bulk-dens.geojson) has been extracted via:
+- [Bulk density](./bhr-p-bulk-dens.geojson) has been extracted via:
 
 ```sql
 SELECT borehole_research_pk, bro_id, research_report_date, litter_layer_investigated, standardized_location, begin_depth, end_depth, analysis_report_date,  dry_bulk_density_determination.*

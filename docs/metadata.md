@@ -20,13 +20,13 @@ This page lists various implementation options both for creating metadata, as we
 
 ## Minimal
 
-In a minimal implementation you can describe your dataset as well as your services in a single metadata document. This 'good practice' is described in [https://github.com/INSPIRE-MIF/gp-data-service-linking-simplification](https://github.com/INSPIRE-MIF/gp-data-service-linking-simplification). Basic metadata editors exist, of which the most basic is Notepad++. In the Python domain exists the pyGeoMeta and OWSLib projects, which offer capabilities to generate ISO19139 metadata from other formats.
+In a minimal implementation you can describe your dataset as well as your services in a single metadata document. This 'good practice' is described in [https://github.com/INSPIRE-MIF/gp-data-service-linking-simplification](https://github.com/INSPIRE-MIF/gp-data-service-linking-simplification). Basic metadata editors exist, of which the most basic is Notepad++. In the Python domain exists the pygeometa and OWSLib projects, which offer capabilities to generate ISO19139 metadata from other formats.
 
 These metadata documents can be placed in a [Web Accessible Folder](https://ioos.github.io/catalog/pages/registry/waf_creation/). Products exist which are able to ingest documents from such a folder and expose it as a CSW discovery service. Such an ingest point could be installed at a national level, to facilitate the European INSPIRE GeoPortal (which currently only supports ingests via CSW).
 
 | Cookbook | Software | Description |
 | --- | ---| --- |
-| [A pythonic metadata workflow](tools/pygeometa.md) | [pygeometa](https://geopython.github.io/pygeometa) | A minimalistic approach to data discovery |
+| [A Pythonic metadata workflow](tools/pygeometa.md) | [pygeometa](https://geopython.github.io/pygeometa) | A minimalistic approach to data discovery |
 | [Data in zenodo](tools/zenodo.md) | [zenodo](https://zenodo.org) | Zenodo is a data repository by CERN/Horizon2020, including rich metadata options |
 
 ## Traditional
@@ -38,7 +38,7 @@ The [TG discovery](https://inspire.ec.europa.eu/documents/technical-guidance-imp
 | Cookbook | Software | Description |
 | --- | ---| --- |
 | [GeoNetwork](tools/geonetwork.md) | [GeoNetwork](https://www.geonetwork-opensource.org/) | A java based open source catalogue application widely used by member states for INSPIRE discovery. Provides a public portal application. Supports CSW, metadata authoring, validation and harvesting. |
-| [pycsw](tools/pycsw.md) | [pyCSW](https://pycsw.org/) | A python based open source CSW server. Supports CSW, OGC API Records. Used in portal software such as [CKAN](https://github.com/ckan/ckanext-spatial)[Spatial](https://github.com/ckan/ckanext-spatial) and [GeoNode](https://geonode.org/). |
+| [pycsw](tools/pycsw.md) | [pycsw](https://pycsw.org/) | A Python based open source CSW server. Supports CSW, OGC API Records. Used in portal software such as [CKAN](https://github.com/ckan/ckanext-spatial)[Spatial](https://github.com/ckan/ckanext-spatial) and [GeoNode](https://geonode.org/). |
 | [Geoportal server](tools/geoportal-server.md) | [ArcGIS Geoportal](https://github.com/Esri/geoportal-server) | A java based open source CSW implementation for the ArcGIS platform. A CSW client for ArcGIS desktop is included. Note that this package is not the same as ArcGIS Portal. |
 | [Hale Connect](tools/hale-connect.md) | [Hale Connect](https://www.wetransform.to/products/haleconnect/) | A metadata authoring and CSW interface is provided as part of the HALE Connect SAAS offering. |
 

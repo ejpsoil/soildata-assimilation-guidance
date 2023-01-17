@@ -36,7 +36,7 @@ service.atom.xml is the `service feed` (comparable to the capabilities operation
  <!-- self-referencing link to this feed -->
  <link href="http://localhost:8080/service.atom.xml" rel="self" type="application/atom+xml"  hreflang="en" title="This document"/>
  <!-- link to Open Search definition file for this servicen (not implemented) 
-<link rel="search" href="http://example.com/search/opensearchdescription.xml" type="application/opensearchdescription+xml" title="Open Search Description for XYZ download service"/> -->
+<link rel="search" href="https://example.org/search/opensearchdescription.xml" type="application/opensearchdescription+xml" title="Open Search Description for XYZ download service"/> -->
  <!-- identifier -->
  <id>http://localhost:8080/service.atom.xml</id>
  <!-- rights, access restrictions -->
@@ -44,7 +44,7 @@ service.atom.xml is the `service feed` (comparable to the capabilities operation
  <!-- date/time this feed was last updated -->
  <updated>2021-03-31T13:45:03Z</updated>
  <!-- author contact information -->
- <author><name>John Doe</name><email>doe@example.com</email></author>
+ <author><name>John Doe</name><email>doe@example.org</email></author>
  <category term="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory/infoFeatureAccessService" scheme="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory"/>
  <!-- entry for a "Dataset Feed" for a pre-defined dataset -->
  <entry>
@@ -52,9 +52,9 @@ service.atom.xml is the `service feed` (comparable to the capabilities operation
     <title>soil properties ABC Dataset Feed</title>
     <!-- Spatial Dataset Unique Resource Identifier for this dataset-->
     <inspire_dls:spatial_dataset_identifier_code>wn_id1</inspire_dls:spatial_dataset_identifier_code> 
-    <inspire_dls:spatial_dataset_identifier_namespace>http://example.com/</inspire_dls:spatial_dataset_identifier_namespace>
+    <inspire_dls:spatial_dataset_identifier_namespace>https://example.org/</inspire_dls:spatial_dataset_identifier_namespace>
     <!-- link to dataset metadata record -->
-    <link href="http://example.com/metadata/abcISO19139.xml" rel="describedby" type="application/xml"/>
+    <link href="https://example.org/metadata/abcISO19139.xml" rel="describedby" type="application/xml"/>
     <!-- link to "Dataset Feed" for pre-defined dataset -->
     <link rel="alternate" href="http://localhost:8080/soilproperties.atom.xml" type="application/atom+xml"  hreflang="en" title="Feed containing the soil properties data"/>
     <!-- identifier for "Dataset Feed" for pre-defined dataset -->

@@ -28,3 +28,4 @@ With a [tunnel](../utils/localtunnel.md), you can test the local service using [
 - [Docker](https://hub.docker.com/r/iide/ldproxy)
 - [Documentation](https://docs.ldproxy.net)
 - [Report testbed Spatial data on the web](https://github.com/geo4web-testbed/topic4/blob/master/spatial-data-on-the-web-using-sdi-report.pdf)
+

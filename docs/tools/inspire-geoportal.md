@@ -5,7 +5,7 @@
 The [INSPIRE Geoportal](https://inspire-geoportal.ec.europa.eu/) is the central European access point to the data provided by EU Member States and several EFTA countries under the INSPIRE Directive.
 
 - Website: https://inspire-geoportal.ec.europa.eu/
-- Github: https://github.com/INSPIRE-MIF/helpdesk-geoportal
+- GitHub: https://github.com/INSPIRE-MIF/helpdesk-geoportal
 
 ## Harvesting metadata
 
@@ -36,4 +36,4 @@ Operational links are an important aspect in metadata. It determines for example
 
 ## Multilingual metadata
 
-Metadata harvested from a national catalogue is usually available in a local language only. To offer users a better user experience, the INSPIRE geoportal translates some key elements of the metadata to english. An automated service is used, which in some cases gives a unexpected translation result. For this reason we encourage you to use the multilingual options of ISO19139:2007 to provide the metadata at least in a local language and english.
+metadata harvested from a national catalogue is usually available in a local language only. To offer users a better user experience, the INSPIRE geoportal translates some key elements of the metadata to english. An automated service is used, which in some cases gives a unexpected translation result. For this reason we encourage you to use the multilingual options of ISO19139:2007 to provide the metadata at least in a local language and english.

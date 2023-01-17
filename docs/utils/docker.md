@@ -31,10 +31,10 @@ Instead of running containers for permanent server applications, you can also st
 - On commandline run this command
   
   ```
-  docker run -p80:80 uzyexe/tetris:latest
+  docker run -p 80:80 uzyexe/tetris:latest
   ```
 
 - Open browser at http://localhost
 - in command line ctrl-c to stop the container
 
-(if other processes are running on port 80, Docker will throw an error, select another port, e.g. -p81:80, and open http://localhost:81)
+(if other processes are running on port 80, Docker will throw an error, select another port, e.g. -p 81:80, and open http://localhost:81)

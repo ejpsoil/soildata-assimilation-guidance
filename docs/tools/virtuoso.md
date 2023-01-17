@@ -10,7 +10,7 @@ classification schemes, subject heading lists and taxonomies within the framewor
 
 ## Preparing the codelist
 
-Excel is often used to create lists of concepts with their definition. But consider that tabular systems are less optimal when defining relations between concepts. For that reason the [Glosis codelists](https://github.com/rapw3k/glosis/blob/master/glosis_cl.ttl) are maintained as Turtle RDF files on Github.
+Excel is often used to create lists of concepts with their definition. But consider that tabular systems are less optimal when defining relations between concepts. For that reason the [Glosis codelists](https://github.com/rapw3k/glosis/blob/master/glosis_cl.ttl) are maintained as Turtle RDF files on GitHub.
 
 For this recipe we assume the codelist to be published is available as a CSV. A range of tools is available to transform an excel to a skos RDF document. [Skos play](https://skos-play.sparna.fr/play/convert) offers for example a webbased conversion tool.
 
@@ -38,14 +38,14 @@ The file [config-docker.ttl](https://github.com/ejpsoil/soildata-assimilation-gu
 Virtuoso
 
 - Website: [virtuoso](https://virtuoso.openlinksw.com)
-- Github: [github](https://github.com/openlink/virtuoso-opensource)
+- GitHub: [github](https://github.com/openlink/virtuoso-opensource)
 - Docker: [docker](https://hub.docker.com/r/openlink/virtuoso-opensource-7)
 - Virtuoso at ISRIC: [isric](https://virtuoso.isric.org/)
 
 Skosmos
 
 - Website: [skosmos](https://skosmos.org)
-- Github: [github](https://github.com/NatLibFi/Skosmos)
+- GitHub: [github](https://github.com/NatLibFi/Skosmos)
 - Docker: [docker](https://hub.docker.com/r/ndslabs/skosmos)
 - Skosmos examples: [glosis](https://glosis.isric.org), [agrovoc](https://agrovoc.fao.org), [agclass](https://agclass.nal.usda.gov)
 

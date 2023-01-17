@@ -152,6 +152,8 @@ advantage of the RML tool set.
 How to use
 ----------
 
+**Note**: before starting a data transformation into RDF you must devise a URI policy for your data. Please refer to the [URI Policy](../uri.md) document for details.
+
 The file [SoilData.csv](data/SoilData.csv) contains a simple set of
 hypothetical measurements referring to three soil profiles collected in two
 different sites. The goal is to transform this dataset into [GloSIS](https://github.com/rapw3k/glosis) compliant
@@ -167,32 +169,6 @@ site_id,lat,lon,profile_id,layer_id,upper_depth,lower_depth,pH,SOC,
 2,46.82,11.45,3,32,15,30,6.7,1,
 2,46.82,11.45,3,33,30,60,6.7,0,
 ```
-
-### Selecting a URI structure
-
-Before starting a data transformation into RDF you must devise an appropriate
-URI structure. Every non-literal element in the resulting knowledge graph must
-have a URI, its unique identifier on the World Wide Web.
-
-A simple approach is to use a sub-domain of your institutional domain to
-identify a single project or dataset. Then concatenate the name of the OWL class
-to which the data instance belongs, and finally compound a unique identifier
-of the instance (the latter should already exist if you use a relational
-database). The template for this approach looks like:
-
-```
-http://project.institution.org/class#identifier
-``` 
-
-This example applies the URIs currently in use for the World Soil Information
-Service (WoSIS):
-  - http://wosis.isric.org/site#
-  - http://wosis.isric.org/profile#
-  - http://wosis.isric.org/layer#
-  - http://wosis.isric.org/observation#
-  - http://wosis.isric.org/result#
-
-Note that none of the data used in this exercise are actually part of WoSIS.
 
 ### Profiles
 
@@ -315,4 +291,11 @@ a new, complete, knowledge graph.
 so that it declares all pH measurements as resulting from a H2O procedure
 (water solution).
 
+More
+----
 
+Now that you obtained a RDF knowledge graph you can publish it to the internet.
+Follow the guide on [Virtuoso](virtuoso.md) to learn how.
+
+In alternative to RML, you may transform tabular data into RDF with SPARQL
+queries using [tarql](tarql.md). Follow that guide for the details.

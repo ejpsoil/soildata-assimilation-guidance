@@ -34,11 +34,11 @@ Implementation options for managing and publishing a code list:
 
 ## Minimal
 
-The most basic form of publishing an alternative or extended code list is to place a code list file on a web location and reference values in it as [http://example.com/codelist.xml#concept](http://example.com/codelist.xml#concept) (see for example [http://schemas.opengis.net/iso/19139/20070417/resources/Codelist/gmxCodelists.xml](http://schemas.opengis.net/iso/19139/20070417/resources/Codelist/gmxCodelists.xml))
+The most basic form of publishing an alternative or extended code list is to place a code list file on a web location and reference values in it as [https://example.org/codelist.xml#concept](https://example.org/codelist.xml#concept) (see for example [http://schemas.opengis.net/iso/19139/20070417/resources/Codelist/gmxCodelists.xml](http://schemas.opengis.net/iso/19139/20070417/resources/Codelist/gmxCodelists.xml))
 
 | Cookbook | Software | Description |
 | --- | --- | --- |
-| [Code list as iso19135](tools/codelist-iso19135.md) | | Publish a xml file on a web location |
+| [Code list as iso19135](tools/codelist-iso19135.md) | | Publish an XML file on a web location |
 
 
 ### Traditional
@@ -57,4 +57,4 @@ A powerfull aspect of SKOS is that you can link from a concept to existing conce
 
 | Cookbook | Software | Description |
 | --- | --- | --- |
-| [SKOS codelist in semantic web](tools/virtuoso.md) | [Virtuoso](https://virtuoso.openlinksw.com/) [Skosmos](https://skosmos.org) | Publish a semantic web code list | 
+| [SKOS codelist in semantic web](tools/virtuoso.md) | [Virtuoso](https://virtuoso.openlinksw.com/) [Skosmos](https://skosmos.org) | Publish a semantic web code list |

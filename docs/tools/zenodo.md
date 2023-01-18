@@ -40,6 +40,11 @@ For option 2, the relevant element is the subject area at the bottom of the meta
 
 ![subject](./img/zenodo-subject.png)
 
+Since Zenodo is DataCite oriented, it does not directly match the requirement of INSPIRE to provide iso19139 metadata. However by following the above approach, the records are almost semantically identical. Two routes of resolving this issue are possible:
+
+- Engage with the INSPIRE community to enable the DataCite encoding as an additional format to provide INSPIRE metadata
+- Introduce a technical component, such as [pygeometa](./pygeometa.md), which could provide a transformation from DataCite to iso19139
+
 ## An Atom approach to access the data on Zenodo
 
 This approach is based on the [recipe on WebDav and Atom services](./webdav.md). The suggestion is to upload 2 additional Atom.xml files which describe the resources in an Atom format. The first file describes the Atom Download Service. The second Atom describes the distributions of the dataset. The zenodo approach will not cover all the aspects of a INSPIRE ATOM Download service, the OpenSearch option is missing. 

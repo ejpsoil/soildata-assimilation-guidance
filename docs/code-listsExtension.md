@@ -118,6 +118,9 @@ associations, this item is a narrower definition of the
 the scheme `glosis_cl:cropClassValueCode`.  
 
 ```turtle
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix glosis_cl: <http://w3id.org/glosis/model/codelists#> .
+
 glosis_cl:cropClassValueCode-Ce_Ba a skos:Concept, glosis_cl:CropClassValueCode;
         skos:prefLabel "Barley"@en ;
         skos:notation "Ce_Ba" ;
@@ -131,6 +134,10 @@ adding further definition. The literal "table 9" indicates the source of this
 code-list within the FAO Guidelines for Soil Description.
 
 ```turtle
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix glosis_cl: <http://w3id.org/glosis/model/codelists#> .
+
 glosis_cl:cropClassValueCode a skos:ConceptScheme ;
         skos:prefLabel "Code list for CropClassValue - codelist scheme"@en;
         rdfs:label "Code list for CropClassValue - codelist scheme"@en;
@@ -278,7 +285,8 @@ resources within the same file. E.g.  `http://example.com/my-soil#zincContent`
 for the Zinc item.
 
 With more advanced software like SKOSMOS, a mid-layer mechanism is necessary to
-translate the URIs declared in the RDF into the corresponding pages or services. 
+translate the URIs declared in the RDF into the corresponding pages or services.
+More about this topic in the [Identification](identification.md) document. 
 
 
 

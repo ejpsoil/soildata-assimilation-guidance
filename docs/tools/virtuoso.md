@@ -22,18 +22,24 @@ We're using a docker compose orchestration to deploy virtuoso and skosmos locall
 docker compose up
 ```
 
-Load RDF data into Virtuoso ...
+(ctrl-c to stop the containers)
+
+- open http://localhost:8090 and login using user: dba, password: dba.
+- Import ttl file
+- Run a query to the SPARQL endpoint to evaluate the data
 
 
 ## Setup Skosmos
 
 The file [config-docker.ttl](https://github.com/ejpsoil/soildata-assimilation-guidance/blob/main/docker/virtuoso-skosmos/config-docker.ttl) contains the configuration of SKOSMOS. You have to indicate which elements to select from the triple store.
 
-## Extending an existing codelist
+Start the docker compose again.
 
-
+- Open http://localhost and evaluate if the codelist is properly loaded. 
 
 ## Read more
+
+A recipe has been prepared which continues on the topic of [Codelist Extension]()
 
 Virtuoso
 

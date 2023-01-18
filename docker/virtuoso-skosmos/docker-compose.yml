@@ -9,8 +9,16 @@ services:
 
   virtuoso:
     image: openlink/virtuoso-opensource-7:latest
+    ports:
+      - 8890:8890
+    environment:
+      - DBA_PASSWORD=dba
+    volumes:
+      - virtuoso:/database
 
   skosmos:
     image: ndslabs/skosmos:latest
-
-# we need to map a config file into the container as a volume, pointing to the local sparql endpoint
+    ports:
+      - 80:80
+    volumes:
+      - ./config-docker.ttl:/var/www/html/vocabularies.ttl

@@ -12,8 +12,7 @@ An important aspect of publication of data on the web is universal identificatio
 
 Resource identificiation is an aspect of step `4) data organization` in the [soil information workflow](https://www.isric.org/index.php/utilise/community-practice).
 
-
-Any identifier is typically combined with a namespace for that identifier, or both aspects are combined into a single Universal Resource Identifier (URI) for the object. Namespaces need to be authoritative but should not be sensible to change. For example, a project name is not a good namespace, because the project is bound to end after a certain period. Examples of good namespaces are: w3id.org, doi.org, data.gouv.fr.
+Any identifier is typically combined with a namespace for that identifier, or both aspects are combined into a single [Universal Resource Identifier (URI)](./utils/) for the object. Namespaces need to be authoritative but should not be sensible to change. For example, a project name is not a good namespace, because the project is bound to end after a certain period. Examples of good namespaces are: w3id.org, doi.org, data.gouv.fr.
 
 Some countries have a registry of national namespaces. Select a namespace from that registry, or consider to add your namespace to that registry if it relates to a national application.
 

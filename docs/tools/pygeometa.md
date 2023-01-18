@@ -4,7 +4,7 @@
 
 This recipe presents a minimalistic, however integrated and standardised approach to metadata management. Each data file on a file system will be accompagnied by a minimal YML metadata file. Crawler scripts will pick up these metadata files and publish them as iso19139 (or alternative models) on a catalogue. iso19139 is the metadata model currently [mandated by INSPIRE](https://inspire.ec.europa.eu/id/document/tg/metadata-iso19139) and very common in the GeoSpatial domain. Other communities tend to use different standards, such as [STAC](https://stacspec.org/en/about/stac-spec/) (Earth Observation), [DCAT](https://www.w3.org/TR/vocab-dcat-2/) (Open Data), [DataCite](https://schema.datacite.org/) (Academia), etc.
 
-Th recipe introduces you to a pythonic metadata workflow step by step.
+The recipe introduces you to a pythonic metadata workflow step by step.
 
 ## Initial
 
@@ -161,13 +161,18 @@ Check out the new content at http://localhost:8000/collections. Note that if you
 
 Try to mount also a customised [configuration file](https://github.com/geopython/pycsw/blob/master/docker/pycsw.cfg) into the container, so you can optimise the configuration of the catalogue. Also have a look at the [INSPIRE extension](https://docs.pycsw.org/en/latest/profiles.html#inspire-extension) for pycsw.
 
+## Evaluate Metadata and Discovery Service
+
+You can evaluate individual iso19139 records in the [INSPIRE reference validator](https://inspire.ec.europa.eu/validator/home/index.html). Also you can evaluate the discovery service. If a service is running on localhost, use the [tunnel approach](../utils/localtunnel.md) to evaluate it.
+
 ## Access the service from QGIS
 
 QGIS contains a default plugin called [MetaSearch](https://docs.qgis.org/3.22/en/docs/user_manual/plugins/core_plugins/plugins_metasearch.html) which enables catalogue searches from within QGIS. You can find the plugin in the `web` menu or on the toolbar as a set of binoculars. Open the plugin. First you need to set up a new service connection. On the services tab, click new, choose a name and add the url http://localhost:8080/csw. Click the `serviceinfo` button to view the metadata of the service. Now return to the `Search` tab and perform a search. Notice that if you select a search result, it highlights on the map and may trigger the `Add data` button in the footer (this depends on if QGIS recognises the protocol mentioned in the metadata). 
 
 ## Read more
 
+- [github](https://github.com/geopython) the geopython community welcomes your questions and contributions.
 - [pygeometa](https://geopython.github.io/pygeometa)
 - [pycsw](https://pycsw.org)
-- [pyGeoDataCrawler](https://github.com/pvgenuchten/pyGeoDataCrawler) A set of scripts to manage mcf's. It supports importing MCF from a CSV, MCF inheritence, generate mcf from a data file, etc
-- [Model Driven Metadata Editor](https://github.com/osgeo/mdme) A web based GUI for populating MCF's
+- [pyGeoDataCrawler](https://github.com/pvgenuchten/pyGeoDataCrawler) is a set of scripts to manage MCF's. It supports importing MCF from a CSV, MCF inheritence, generate MCF from a data file, etc.
+- [Model Driven Metadata Editor](https://github.com/osgeo/mdme) A web based GUI for populating MCF's.

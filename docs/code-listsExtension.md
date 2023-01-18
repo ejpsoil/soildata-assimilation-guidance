@@ -146,7 +146,7 @@ to indicate the root items in a concept hierarchy.
 
 ### Extend an INSPIRE code-list with SKOS
 
-Imagine that you intend to publish results of chemical analysis appraising the
+Suppose you intend to publish results of chemical analysis appraising the
 Zinc content of the soil. The INSPIRE code-lists do not presently include that
 metal as property, therefore an additional code-list item must be created.
 
@@ -162,6 +162,12 @@ parameter](http://inspire.ec.europa.eu/codelist/ProfileElementParameterNameValue
 and [physical
 parameter](http://inspire.ec.europa.eu/codelist/ProfileElementParameterNameValue/physicalParameter). Follow the URI to the chemical parameter, in that page there is another list of items, including other metals. The new item for Zinc should therefore be created at this same level in the hierarchy.
 
+The list below presents a RDF document defining a new sub-item for Zinc within the physical parameter code-list.
+The URI for this item is `http://example.com/my-soil/zincContent`. As this item
+is not directly in a INSPIRE code-list, its URI must refer to an authority that
+you control, i.e. you or your institution are the responsible party for the
+code-list item, its definition and publication. For more on this, check the [URI strategy](uri.md) document. 
+
 ```turtle
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix inspire_cl_profile: <http://inspire.ec.europa.eu/codelist/ProfileElementParameterNameValue/> .
@@ -170,14 +176,21 @@ parameter](http://inspire.ec.europa.eu/codelist/ProfileElementParameterNameValue
 
 my_soil:zincContent a skos:Concept;
         skos:prefLabel "Zinc content"@en ;
-        skos:definition "Zinc content of the profile element" ;
-        skos:inScheme inspire_cl_profile: ;
+        skos:definition "Zinc content of the soil within a profile element." ;
         skos:broader inspire_cl_profile:physicalParameter ;
+        skos:inScheme inspire_cl_profile: ;
         skos:related glosis_cl:physioChemicalPropertyCode-Zin .
 ```
  
-
-
+The RDF above contains the basic SKOS elements: a Concept instance, a label, an
+annotation defining the concept and a reference to the parent item with the
+`skos:broader` code-list. The last two triples need a closer look. The item is
+declared as belonging to a Scheme with the URI
+`http://inspire.ec.europa.eu/codelist/ProfileElementParameterNameValue/`. While
+the later is not actually declared as such in `r3gistry`, it is still important to
+convey the nature of this item as part of structured INSPIRE code-list. Finally,
+the `skos:related` predicated is employed to refer a similar property in the
+GloSIS web ontology. 
 
 ### Extend a GloSIS code-list
 

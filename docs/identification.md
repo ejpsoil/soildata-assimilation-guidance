@@ -12,9 +12,9 @@ An important aspect of publication of data on the web is universal identificatio
 
 Resource identificiation is an aspect of step `4) data organization` in the [soil information workflow](https://www.isric.org/index.php/utilise/community-practice).
 
-Any identifier is typically combined with a namespace for that identifier, or both aspects are combined into a single [Universal Resource Identifier (URI)](./utils/) for the object. Namespaces need to be authoritative but should not be sensible to change. For example, a project name is not a good namespace, because the project is bound to end after a certain period. Examples of good namespaces are: w3id.org, doi.org, data.gouv.fr.
+Any identifier is typically combined with a namespace for that identifier, or both aspects are combined into a single [Universal Resource Identifier (URI)](./utils/uri.md) for the object. Namespaces need to be authoritative but should not be sensible to change. For example, a project name is not a good namespace, because the project is bound to end after a certain period. Examples of good namespaces are: w3id.org, doi.org, data.gouv.fr.
 
-Some countries have a registry of national namespaces. Select a namespace from that registry, or consider to add your namespace to that registry if it relates to a national application.
+Some countries have a registry of national namespaces ([Netherlands](http://inspirelab.geonovum.nl/namespaces), [Germany](https://registry.gdi-de.org/register/namespace/)). Select a namespace from that registry, or consider to add your namespace to such a registry.
 
 ### Minimal implementation
 
@@ -46,4 +46,8 @@ The aspect of identification is one of the major benefits of the upcoming OGC AP
 
 In many cases catalogue records and service definitions are populated manually in separate locations. Verify that at each location the identification and namespace of links between metadata and services are correct. Initially JRC did not have testing procedures to test these linkages. In practice a lot of these links where not correct, causing users not to be able to download a dataset from a search result in the national and INSPIRE GeoPortal.
 
-Integrated data and metadata platforms, such as [deegree](tools/deegree.md) and [Hale Connect](tools/hale-connect.md), prevent this type of mistakes. A helpful tool in this area is [GeoCat Bridge](tools/bridge-geoserver-geonetwork.md), which publishes data to GeoServer and metadata to GeoNetwork synchronously, ensuring that bidirectional linkage is correct.
+JRC provides the [resource linkage checker](https://inspire-geoportal.ec.europa.eu/linkagechecker.html) to evaluate linkage of resources.
+
+## Read more
+
+See also the article about [uri strategy](./utils/uri.md)

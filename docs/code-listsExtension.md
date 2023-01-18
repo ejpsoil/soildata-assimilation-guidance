@@ -40,10 +40,10 @@ reference base for soil resources 2006, first update 2007.
 
 These code-lists are all available on-line through a
 [r3gistry](https://ec.europa.eu/isa2/solutions/re3gistry_en/) instance. Each
-item in these code-lists is dereferenceable by URI. 
+item in these code-lists is a dereferenceable by URI. 
 
 Four of these lists are extendable, those expressing properties associated with
-the different features of interest. These code-lists are design to serve as
+the different features of interest. They are designed to serve as
 umbrella structures for further specialisation according to local practices.
 Extension is made in an hierarchical fashion, meaning that each additional item
 must be a narrower definition of one of the existing items.
@@ -55,19 +55,19 @@ above.
 
 There is no practical guidance in the Technical Guidelines document on how to
 extend or create new code-lists towards INSPIRE compliance. This document
-provides broad guidelines on how to do so. 
+provides broad guidelines on how to do so with the [Simple Knowledge
+Organisation System](https://www.w3.org/2004/02/skos/) (SKOS), described ahead. 
 
 GloSIS
 ------
 
 The [GloSIS web ontology](https://github.com/rapw3k/glosis) includes a large
-range of code-lists that are relevant within within the INSPIRE context. GloSIS
+range of code-lists that are relevant within the INSPIRE context. GloSIS
 follows the pattern of the [Sensor, Observation, Sample, and
 Actuator](https://www.w3.org/TR/vocab-ssn/) (SOSA) ontology, which is the
 Semantic Web counterpart of the [Observations &
 Measurements](https://www.ogc.org/standards/om) standard (O&M). These code-lists
-are expressed with the [Simple Knowledge Onrganisation System](https://www.w3.org/2004/02/skos/) (SKOS), described
-briefly below.
+are expressed with SKOS.
 
 The GloSIS code-lists spread along four main categories:
 
@@ -82,7 +82,7 @@ The GloSIS code-lists spread along four main categories:
 
 Code-lists in GloSIS are gathered in a [generic
 module](https://rapw3k.github.io/glosis/docs/glosis-cl-doc/index-en.html). With
-physcio-chemical analysis procedures in a [specific
+physio-chemical analysis procedures in a [specific
 module](https://rapw3k.github.io/glosis/docs/glosis-pc-doc/index-en.html).
 
 Extending code-lists
@@ -93,13 +93,13 @@ Extending code-lists
 The SKOS ontology is remarkably simple, actually one of its strengths. At its
 core are five primitives:
 
-- **Concept** - a unit of though, an idea, a meaning, a category or an object.
-  They are identified with URIs.
+- **Concept** - a unit of thought, an idea, a meaning, a category or an object.
+  Concepts are identified with URIs.
 
 - **Label** - a lexical string used to annotate a concept. The same concept may
   be annotated in different natural languages.
 
-- **Relation** - an semantic association between two concepts, conveying
+- **Relation** - a semantic association between two concepts, conveying
   hierarchy or simply connecting concepts in a network.
 
 - **Scheme** - an aggregator of related concepts, usually forming a hierarchy.
@@ -141,20 +141,20 @@ glosis_cl:cropClassValueCode a skos:ConceptScheme ;
 
 Using this simple pattern, a hierarchical code-list can be developed further
 simply using the predicates `skos:inScheme`, `skos:broader` and `skos:narrower`.
-The predicates `skos:topConceptOf` and `skos:hasTopConcept` can be further use
+The predicates `skos:topConceptOf` and `skos:hasTopConcept` can be further used
 to indicate the root items in a concept hierarchy. 
 
 ### Extend an INSPIRE code-list with SKOS
 
-Suppose you intend to publish results of chemical analysis appraising the
+Suppose you intend to publish results of chemical analyses appraising the
 Zinc content of the soil. The INSPIRE code-lists do not presently include that
 metal as property, therefore an additional code-list item must be created.
 
 The first action is to identify in which code-list the item should be added.
 Physio-chemical properties like Zinc content appear associated with the Horizon
-or Layer class in soil ontologies, thus the appropriate code-list is [ProfileElementParameterNameValue](http://inspire.ec.europa.eu/codelist/ProfileElementParameterNameValue). Open that URI in your browser an go through the respective r3gistry record.
+or Layer class in soil ontologies, thus the appropriate code-list is [ProfileElementParameterNameValue](http://inspire.ec.europa.eu/codelist/ProfileElementParameterNameValue). Open that URI in your browser an go through the respective `r3gistry` record.
 
-At the bottom of the page r3gistry lists the items for this code-list, in this
+At the bottom of the page `r3gistry` lists the items for this code-list, in this
 case they are [biological
 parameter](http://inspire.ec.europa.eu/codelist/ProfileElementParameterNameValue/biologicalParameter),
 [chemical
@@ -188,14 +188,71 @@ annotation defining the concept and a reference to the parent item with the
 declared as belonging to a Scheme with the URI
 `http://inspire.ec.europa.eu/codelist/ProfileElementParameterNameValue/`. While
 the later is not actually declared as such in `r3gistry`, it is still important to
-convey the nature of this item as part of structured INSPIRE code-list. Finally,
+convey the nature of this item as part of a structured INSPIRE code-list. Finally,
 the `skos:related` predicated is employed to refer a similar property in the
-GloSIS web ontology. 
+GloSIS web ontology. This last triple is not at all mandatory, but provides
+another dimension to the code-list item.
 
 ### Extend a GloSIS code-list
 
+The GloSIS web ontology becomes particularly relevant in the sections of the
+INSPIRE domain model for which code-lists do not yet exist. A prominent case is
+the list of laboratory procedures to assess physico-chemical properties. As
+mentioned above, GloSIS includes a specific module for procedures.
 
+The listing below presents a RDF document with an extra item for the soil
+texture procedures code list (SKOS scheme `glosis_proc:textProcedure`). Compared
+to the previous example, the most remarkable aspect here is the declaration of a
+`glosis_proc:TextProcedure` instance. The latter is a sub-class of the SOSA
+Procedure class, making the bridge to the Observation instances declared in
+other GloSIS modules.  
 
+```turtle
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix glosis_proc: <http://w3id.org/glosis/model/procedure#> .
+@prefix my_soil: <http://example.com/my-soil/> . 
 
-Publishing your own code-list
-------------------------------
+my_soil:textureProcedure-SaSiCl_5-50-2000u a skos:Concept, glosis_proc:TextureProcedure ;
+    skos:inScheme glosis_proc:textProcedure ;
+    skos:topConceptOf glosis_proc:textureProcedure ;
+    skos:prefLabel "SaSiCl_5-50-2000u"@en ;
+    skos:notation "SaSiCl_5-50-2000u" ;
+    skos:definition "Sand, silt and clay fractions as used in my country (5-50-2000um)" .
+``` 
+
+The remaining triples should all be familiar by now. The link to the SKOS scheme
+is made with the `skos:inScheme` and `skos:topConceptOf` predicates. Then come
+the annotations.
+
+### Create a new code-list
+
+INSPIRE and GloSIS cover quite a good deal of ground with their code-lists.
+However, there might be circumstances where you may require an entire new
+code-list to express a domain property specific to your institution or dataset.
+
+The examples above already provide the necessary to build a code-list on your
+own. In summary, these are the steps:
+
+1. Devise a URI policy, encompassing the code-list and its items.
+
+2. Create a Scheme instance to aggregate the code-list items. The Scheme
+   provides a URI and annotation for the code-list.
+
+3. Add in the top Concept instances with the predicates `skos:inScheme`,
+   `skos:topConceptOf` and `skos:hasTopConcept`.
+
+4. If necessary, add in narrower terms forming a hierarchy with `skos:broader`
+   and `skos:narrower`.
+
+5. Link items to similar concepts in other ontologies or vocabularies if possible.
+
+Publishing your own code-list items
+-----------------------------------
+
+Now that you extended 
+
+1. **A simple on-line RDF file**.
+
+2. **A knowledge graph deployed to a triple store**. 
+
+3. **A SKOSMOS instance**.

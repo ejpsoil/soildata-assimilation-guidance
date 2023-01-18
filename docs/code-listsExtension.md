@@ -249,10 +249,54 @@ own. In summary, these are the steps:
 Publishing your own code-list items
 -----------------------------------
 
-Now that you extended 
+Now that you extended or even created a new code-list the next step is to
+publish it on-line. There are three essentials ways of doing so, briefly
+described below. 
 
-1. **A simple on-line RDF file**.
+1. **A simple on-line RDF file**. Save the items or code-list as a RDF document
+   and deploy it to a web server. Fairly easy, but not the most user friendly. 
 
-2. **A knowledge graph deployed to a triple store**. 
+2. **A knowledge graph deployed to a triple store**. Load the RDF document to a
+   triple store or directly create the code-list triples with SPARQL queries.
+Triple stores usually provide end-points for interaction with SPARQL queries and
+other mechanisms that facilitate user access/view of the code-list.
+[Virtuoso](tools/virtuoso.md) is a triple store providing these functionalities.
 
-3. **A SKOSMOS instance**.
+3. **A [SKOSMOS](tools/skosmos.md) instance**. Load the code-list triples into a triple store and then
+   link it to a [SKOSMOS](tools/skosmos.md) instance. This software leverages
+the SKOS ontology to presnnt code-lists in a
+user friendly, browsable complex of HTML pages.
+
+### Derreferenceable URIs
+
+When publishing a code-list, it is important to facilitate the resolution of the
+respective URIs. This promotes accessibility and use of the code-list. With a
+simple deployment to a web server, the hypothetical URI used above:
+`http://example.com/my-soil` can point directly to the RDF file. In this case it
+is customary the use of the hash character (`#`) to distinguish different
+resources within the same file. E.g.  `http://example.com/my-soil#zincContent`
+for the Zinc item.
+
+With more advanced software like SKOSMOS, a mid-layer mechanism is necessary to
+translate the URIs declared in the RDF into the corresponding pages or services. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

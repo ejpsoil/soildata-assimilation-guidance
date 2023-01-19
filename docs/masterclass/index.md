@@ -15,7 +15,8 @@ Every day starts with a general kick-off and closing to report on aims and progr
 | 13.00 | Lunch break |
 | 13.45 | Progress check; is everybody on track? |
 | 14:00 | |
-| 14.30 | Soil model in Geopackage - Stefania Morrone  |
+| 14.30 | Soil model in Geopackage - Luis de Sousa  |
+| 15:00 | |
 | 16.00 | Day-closing pitches |
  
 
@@ -43,12 +44,11 @@ Every day starts with a general kick-off and closing to report on aims and progr
 
 ## Suggestion for group formation
 
-- Carbon stock (Sample dataset: [Dutch BRH-P](cookbook/data/bhr-p/readme))
-- Soil biology
-- Soil contamination
-- Soil and fertilisation
-- Forest Soils
-- Erosion and compaction
+- Carbon stock (Sample dataset: [Dutch BRH-P](cookbook/data/bhr-p/readme) or [SoilGrids](https://files.isric.org/soilgrids/latest/data_aggregated/1000m/soc/) ([COG format](https://www.cogeo.org/)))
+- Soil biology & quality
+- Soil profile databases and laboratory results
+- View services
+- 
 
 ## Team of Experts
 
@@ -58,11 +58,11 @@ Every day starts with a general kick-off and closing to report on aims and progr
 | Hylke van der Schaaf | Fraunhofer | [Frost server](../cookbook/frost-server.md) |
 | Kathi Schleidt | Datacove.eu | [Rasdaman](../cookbook/rasdaman.md), [Frost server](../cookbook/frost-server.md) |
 | Luis de Sousa | ISRIC - World Soil Information | [RML.io](../cookbook/rml.md), [tarql](../cookbook/tarql.md), [virtuoso](../cookbook/virtuoso.md), geopython |
-| Paul van Genuchten | ISRIC - World Soil Information | [pygeoapi](../cookbook/pygeoapi.md), [GeoNetwork](../cookbook/geonetwork.md), [GeoServer](../cookbook/geoserver.md) | 
+| Paul van Genuchten | ISRIC - World Soil Information | [pygeoapi](../cookbook/pygeoapi.md), [GeoNetwork](../cookbook/geonetwork.md) | 
 | Peter Baumann | Constructor University Bremen | [Rasdaman](../cookbook/rasdaman.md) |
 | Seth Girvin | GeoGraphica | [MapServer](../cookbook/mapserver.md) |
 | Stefania Morrone | Epsilon | [Re3gistry](../cookbook/re3gistry.md), [Hale studio](../cookbook/hale-studio.md) |
-| Thorsten Friebe | LatLon | [deegree webservices](../cookbook/deegree.md) |
+| Torsten Friebe | LatLon | [deegree webservices](../cookbook/deegree.md) |
 | Thorsten Reitz | Wetransform | [Hale Studio](../cookbook/hale-studio.md), [Hale Connect](../cookbook/hale-connect.md) |
 | Tom Kralidis | OSGeo | [pygeoapi](../cookbook/pygeoapi.md), pycsw, owslib, [pygeometa](../cookbook/pygeometa.md) |
 

@@ -13,14 +13,15 @@ Hale Studio is a familiar tool to transform data from a relational datamodel to 
     ogr2ogr -f SQLite tmp.sqlite GMLAS:soil.gml -dsco SPATILIATE=YES -nlt CONVERT_TO_LINEAR -oo EXPOSE_METADATA_LAYERS=YES
 
 
+
 In this recipe we will transform INSPIRE Soil GML from the city of Berlin to a relational database (GeoPackage).
 
 - (Install and) Start the Hale Studio tool
 - Import soil data from the Berlin Soil at https://fbinter.stadt-berlin.de/fb/atom/SO/SO_KrBwBoF2015.zip
 - unzip the file to a new folder
 - In hale studio, at File > Import > Source model, select the soil.xml included in the zip file
-- At File > Import > Source data, select the `INSPIRE GML...gml` included in the zip file, select default options on the import wizard
-- At File ...
+- At File > Import > Source data, select the `INSPIRE GML.gml` included in the zip file, select default options on the import wizard
+- At File > import > Target model, select an empty database.
 
 
 

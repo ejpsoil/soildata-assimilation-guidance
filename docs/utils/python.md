@@ -1,7 +1,7 @@
 # Python
 
 A programming language commonly used in data science. From scripts to increase the capabilities or automate processes in 
-ArcMAP or QGIS, maintanance and deployment tasks in DevOps up to full programs such as GeoNode and pygeoapi.
+ArcMAP or QGIS, maintanance and deployment tasks in DevOps, up to full programs such as GeoNode and pygeoapi.
 
 ## PIP
 
@@ -19,7 +19,7 @@ Note that some prefer to work even more isolated and use [docker](./docker.md) t
 
 ## GeoPython Community
 
-There is a large community dedicated to the use of python in the geospatial domain. Interesting libraries used in that community are: 
+There is a significat community dedicated to the use of python in the geospatial domain. Interesting libraries used in that community are: 
 
 - [RasterIO](https://rasterio.readthedocs.io/)
 - [Shapely](https://shapely.readthedocs.io/)

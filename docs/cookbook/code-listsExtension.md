@@ -8,7 +8,7 @@ Title: Extending Code Lists
 Code-lists
 ==========
 
-This recipe describes an approach to extend an INSPIRE codelist.
+This recipe describes a semantic approach based on [SKOS](https://www.w3.org/2004/02/skos/) to extend an INSPIRE codelist.
 
 
 INSPIRE
@@ -286,8 +286,10 @@ translate the URIs declared in the RDF into the corresponding pages or services.
 More about this topic in the [Identification](../identification.md) document. 
 
 
+## Read more
 
-
+In [this article](https://wetransform.to/news-and-events/inspire-codelists/) Wetransform explains how and which INSPIRE codelists can be extended.
+Either the UML model and/or the INSPIRE registry indicate if a codelist is extensible.
 
 
 

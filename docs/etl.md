@@ -33,7 +33,7 @@ Pro's and Con's:
 
 | Cookbook | Software | Description |
 | --- | --- | --- |
-| [Glosis as a database](cookbook/glosis-db.md) | - | Harmonise soil data using GeoPackage |
+| [INSPIRE in a relational database](cookbook/glosis-db.md) | [Geopackage](https://www.geopackage.org) | Harmonise soil data using GeoPackage |
 
 ## Traditional
 
@@ -44,7 +44,7 @@ Tools like Hale Studio and FME are typically used to configure a conversion from
 | [Hale Studio](cookbook/hale-studio.md) | [Hale Studio](https://wetransform.to/halestudio/) | Humboldt Alignment Editor Studio is a Desktop tool to author 'data alignments'. |
 | - | [FME](https://www.safe.com/fme/) | Feature Manipulation Engine is a visually oriented data integration platform |
 
-You may not have considered before, but consuming a rich GML is not straight forward in common GIS clients like ArcGIS or QGIS. To consume a rich GML you need software which is able to traverse xml hierarchies and links. Tools like Hale Studio can also be used to read rich GML and convert it back to a relational database. Unfortunately you can not automatically reverse an existing database to GML ETL-configuration. But you can set up a new ETL configuration to read and transform the rich GML. A recipe is available which [imports INSPIRE Soil GML from the city of Berlin and converts it to a relational database](cookbook/hale-studio-consume-gml.md).
+You may not have considered before, but consuming a rich GML is not straight forward in common GIS clients like ArcGIS or QGIS. To consume a rich GML you need software which is able to traverse xml hierarchies and links. Tools like Hale Studio can also be used to read rich GML and convert it back to a relational database. Unfortunately you can not automatically reverse a ETL-configuration. But you can set up a new ETL configuration to read and transform the rich GML. A recipe is available which [imports INSPIRE Soil GML from the city of Berlin and converts it to a relational database](cookbook/hale-studio-consume-gml.md).
 
 ## Experimental
 

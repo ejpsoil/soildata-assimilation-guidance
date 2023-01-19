@@ -11,16 +11,16 @@ nav:
         - uri: cookbook/uri.md
     - 'Harmonization': 
         - Intro: etl.md
-        - Glosis as a database: cookbook/glosis-db.md
-        - Hale Studio: cookbook/hale-studio.md
+        - 'Relational database': cookbook/glosis-db.md
+        - 'Hale Studio': cookbook/hale-studio.md
         - TARQL: cookbook/tarql.md
         - YARRRML: cookbook/rml.md
     - 'Code lists': 
         - 'Intro': codelists.md
-        - 'iso19135': cookbook/codelist-iso19135.md
+        - 'Filebased': cookbook/codelist-iso19135.md
         - 'Re3gistry': cookbook/re3gistry.md
-        - 'Extend code lists': cookbook/code-listsExtension.md
         - 'Skosmos': cookbook/virtuoso.md
+        - 'Extend code lists': cookbook/code-listsExtension.md
     - 'Discovery': 
         - Metadata: metadata.md
         - pygeometa: cookbook/pygeometa.md
@@ -36,6 +36,7 @@ nav:
         - Webdav: cookbook/webdav.md
         - Zenodo: cookbook/zenodo.md
         - GeoServer: cookbook/geoserver.md
+        - deegree: cookbook/deegree.md
         - 'CSW Rasdaman': cookbook/rasdaman.md
         - 'SensorThings API' : cookbook/frost-server.md
         - pygeoapi: cookbook/pygeoapi.md

@@ -46,6 +46,7 @@ harmonisation](etl.md)).
 
 ## Related recipes in this cookbook:
 
+- [a URI strategy](cookbook/uri.md)
 - [A Pythonic metadata workflow](cookbook/pygeometa.md)
 - [A discovery service in GeoNetwork](cookbook/geonetwork.md) includes a section on
   metadata authoring in GeoNetwork

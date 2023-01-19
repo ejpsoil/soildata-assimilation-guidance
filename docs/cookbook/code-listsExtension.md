@@ -264,10 +264,10 @@ described below.
    triple store or directly create the code-list triples with SPARQL queries.
 Triple stores usually provide end-points for interaction with SPARQL queries and
 other mechanisms that facilitate user access/view of the code-list.
-[Virtuoso](cookbook/virtuoso.md) is a triple store providing these functionalities.
+[Virtuoso](virtuoso.md) is a triple store providing these functionalities.
 
-3. **A [SKOSMOS](cookbook/skosmos.md) instance**. Load the code-list triples into a triple store and then
-   link it to a [SKOSMOS](cookbook/skosmos.md) instance. This software leverages
+3. **A [SKOSMOS](skosmos.md) instance**. Load the code-list triples into a triple store and then
+   link it to a [SKOSMOS](skosmos.md) instance. This software leverages
 the SKOS ontology to presnnt code-lists in a
 user friendly, browsable complex of HTML pages.
 
@@ -283,7 +283,7 @@ for the Zinc item.
 
 With more advanced software like SKOSMOS, a mid-layer mechanism is necessary to
 translate the URIs declared in the RDF into the corresponding pages or services.
-More about this topic in the [Identification](identification.md) document. 
+More about this topic in the [Identification](../identification.md) document. 
 
 
 

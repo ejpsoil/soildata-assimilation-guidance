@@ -10,37 +10,6 @@ RML.io has programmes to be used on-line and to be installed on computer systems
 for prototyping, whereas the latter are meant for actual transformations of
 large datasets.
 
-Install
--------
-
-Using RML.io in your system requires two programmes, a parser for the YARRRML syntax
-(`yarrrml-parser`) and a
-transformer that converts tabular data to RDF (`rmlmapper`).
-
-The first of these programmes is installed with `npm`:
-
-````
-npm i -g @rmlio/yarrrml-parser
-````
-
-`rmlmapper` is a Java programme, that can be downloaded directly from the
-project [GitHub page](https://github.com/RMLio/rmlmapper-java/releases). For
-instance:
-
-```
-wget https://github.com/RMLio/rmlmapper-java/releases/download/v6.1.3/rmlmapper-6.1.3-r367-all.jar
-```
-
-It can then be run with the Java Runtime Environment:
-
-```
-java -jar rmlmapper-6.1.3-r367-all.jar
-```
-
-At this stage it might be useful to create a shortcut to call the programme with
-a simple command like `rmlmapper`.
-How to do this depends on your system and is beyond the scope of this document.
-
 The YARRRML syntax
 ------------------
 
@@ -149,6 +118,59 @@ document make enough of a start to automated RDF generation, the
 [documentation](https://w3id.org/yarrrml) is indispensable to take full
 advantage of the RML tool set.
 
+Matey
+-----
+
+The simplest way to start using RML.io is through the
+[Matey](https://rml.io/yarrrml/matey/) online user interface. It is an
+excellent prototyping tool and will help you getting acquainted with the
+YARRRML syntax.
+
+The standard view of Matey has 4 sections:
+- a section for input data;
+- a section to define YARRRML rules;
+- a section to display RDF output;
+- a section to visualise exported RML.io rules from YARRRML.
+
+There are various examples available to guide you through the basics of YARRRML and
+RML. Take some time to experiment with these examples, try modifying the
+output, or even to create further transformation rules.  
+
+Eventually you will find the limitatios of Matey, while convinient for
+prototyping, it does not scale for large datasets or to process a large number
+of source files. For that you need to use the command line interface.
+
+Install
+-------
+
+Using RML.io in your system requires two programmes, a parser for the YARRRML syntax
+(`yarrrml-parser`) and a
+transformer that converts tabular data to RDF (`rmlmapper`).
+
+The first of these programmes is installed with `npm`:
+
+````
+npm i -g @rmlio/yarrrml-parser
+````
+
+`rmlmapper` is a Java programme, that can be downloaded directly from the
+project [GitHub page](https://github.com/RMLio/rmlmapper-java/releases). For
+instance:
+
+```
+wget https://github.com/RMLio/rmlmapper-java/releases/download/v6.1.3/rmlmapper-6.1.3-r367-all.jar
+```
+
+It can then be run with the Java Runtime Environment:
+
+```
+java -jar rmlmapper-6.1.3-r367-all.jar
+```
+
+At this stage it might be useful to create a shortcut to call the programme with
+a simple command like `rmlmapper`.
+How to do this depends on your system and is beyond the scope of this document.
+
 How to use
 ----------
 
@@ -172,7 +194,8 @@ site_id,lat,lon,profile_id,layer_id,upper_depth,lower_depth,pH,SOC,
 
 ### Profiles
 
-The simplest place to start is the profiles. There are three essential elements to generate for each profile:
+The simplest place to start is with the profiles. There are three essential elements
+to generate for each profile:
   - A new URI for the profile;
   - The declaration of the new profile as an instance of the class `GL_Profile`;
   - The association with the respective site. 
@@ -200,7 +223,7 @@ mappings:
 
 To perform the actual transformation you must first apply `yarrrml-parser` to create
 the RML transformation file and then use `rmlmapper` to obtain the actual
-knowledge graph. Be default `rmlmapper` creates a Turtle file that is printed to
+knowledge graph. By default `rmlmapper` creates a Turtle file that is printed to
 the standard output (STDOUT). You can use the parameters `-o` to redirect output
 to a text file and `-s` to select an alternative serialisation syntax.
 

@@ -43,7 +43,7 @@ Every day starts with a general kick-off and closing to report on aims and progr
 
 ## Suggestion for group formation
 
-- Carbon stock (Sample dataset: [Dutch BRH-P](tools/data/bhr-p/readme))
+- Carbon stock (Sample dataset: [Dutch BRH-P](cookbook/data/bhr-p/readme))
 - Soil biology
 - Soil contamination
 - Soil and fertilisation
@@ -55,15 +55,15 @@ Every day starts with a general kick-off and closing to report on aims and progr
 | Expert | Affiliation | Topic |
 | ---|  --- | --- |
 | Jandirk Bulens | Wageningen Environmental Research | INSPIRE Soil Datamodel |
-| Hylke van der Schaaf | Fraunhofer | [Frost server](../tools/frost-server.md) |
-| Kathi Schleidt | Datacove.eu | [Rasdaman](../tools/rasdaman.md), [Frost server](../tools/frost-server.md) |
-| Luis de Sousa | ISRIC - World Soil Information | [RML.io](../tools/rml.md), [tarql](../tools/tarql.md), [virtuoso](../tools/virtuoso.md), geopython |
-| Paul van Genuchten | ISRIC - World Soil Information | [pygeoapi](../tools/pygeoapi.md), [GeoNetwork](../tools/geonetwork.md), [GeoServer](../tools/geoserver.md) | 
-| Peter Baumann | Constructor University Bremen | [Rasdaman](../tools/rasdaman.md) |
-| Seth Girvin | GeoGraphica | [MapServer](../tools/mapserver.md) |
-| Stefania Morrone | Epsilon | [Re3gistry](../tools/re3gistry.md), [Hale studio](../tools/hale-studio.md) |
-| Thorsten Friebe | LatLon | [deegree webservices](../tools/deegree.md) |
-| Thorsten Reitz | Wetransform | [Hale Studio](../tools/hale-studio.md), [Hale Connect](../tools/hale-connect.md) |
-| Tom Kralidis | OSGeo | [pygeoapi](../tools/pygeoapi.md), pycsw, owslib, [pygeometa](../tools/pygeometa.md) |
+| Hylke van der Schaaf | Fraunhofer | [Frost server](../cookbook/frost-server.md) |
+| Kathi Schleidt | Datacove.eu | [Rasdaman](../cookbook/rasdaman.md), [Frost server](../cookbook/frost-server.md) |
+| Luis de Sousa | ISRIC - World Soil Information | [RML.io](../cookbook/rml.md), [tarql](../cookbook/tarql.md), [virtuoso](../cookbook/virtuoso.md), geopython |
+| Paul van Genuchten | ISRIC - World Soil Information | [pygeoapi](../cookbook/pygeoapi.md), [GeoNetwork](../cookbook/geonetwork.md), [GeoServer](../cookbook/geoserver.md) | 
+| Peter Baumann | Constructor University Bremen | [Rasdaman](../cookbook/rasdaman.md) |
+| Seth Girvin | GeoGraphica | [MapServer](../cookbook/mapserver.md) |
+| Stefania Morrone | Epsilon | [Re3gistry](../cookbook/re3gistry.md), [Hale studio](../cookbook/hale-studio.md) |
+| Thorsten Friebe | LatLon | [deegree webservices](../cookbook/deegree.md) |
+| Thorsten Reitz | Wetransform | [Hale Studio](../cookbook/hale-studio.md), [Hale Connect](../cookbook/hale-connect.md) |
+| Tom Kralidis | OSGeo | [pygeoapi](../cookbook/pygeoapi.md), pycsw, owslib, [pygeometa](../cookbook/pygeometa.md) |
 
 

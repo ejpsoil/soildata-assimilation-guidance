@@ -26,8 +26,8 @@ These metadata documents can be placed in a [Web Accessible Folder](https://ioos
 
 | Cookbook | Software | Description |
 | --- | ---| --- |
-| [A Pythonic metadata workflow](tools/pygeometa.md) | [pygeometa](https://geopython.github.io/pygeometa) | A minimalistic approach to data discovery |
-| [Data in zenodo](tools/zenodo.md) | [zenodo](https://zenodo.org) | Zenodo is a data repository by CERN/Horizon2020, including rich metadata options |
+| [A Pythonic metadata workflow](cookbook/pygeometa.md) | [pygeometa](https://geopython.github.io/pygeometa) | A minimalistic approach to data discovery |
+| [Data in zenodo](cookbook/zenodo.md) | [zenodo](https://zenodo.org) | Zenodo is a data repository by CERN/Horizon2020, including rich metadata options |
 
 ## Traditional
 
@@ -37,10 +37,10 @@ The [TG discovery](https://inspire.ec.europa.eu/documents/technical-guidance-imp
 
 | Cookbook | Software | Description |
 | --- | ---| --- |
-| [GeoNetwork](tools/geonetwork.md) | [GeoNetwork](https://www.geonetwork-opensource.org/) | A java based open source catalogue application widely used by member states for INSPIRE discovery. Provides a public portal application. Supports CSW, metadata authoring, validation and harvesting. |
-| [pycsw](tools/pycsw.md) | [pycsw](https://pycsw.org/) | A Python based open source CSW server. Supports CSW, OGC API Records. Used in portal software such as [CKAN](https://github.com/ckan/ckanext-spatial)[Spatial](https://github.com/ckan/ckanext-spatial) and [GeoNode](https://geonode.org/). |
-| [Geoportal server](tools/geoportal-server.md) | [ArcGIS Geoportal](https://github.com/Esri/geoportal-server) | A java based open source CSW implementation for the ArcGIS platform. A CSW client for ArcGIS desktop is included. Note that this package is not the same as ArcGIS Portal. |
-| [Hale Connect](tools/hale-connect.md) | [Hale Connect](https://www.wetransform.to/products/haleconnect/) | A metadata authoring and CSW interface is provided as part of the HALE Connect SAAS offering. |
+| [GeoNetwork](cookbook/geonetwork.md) | [GeoNetwork](https://www.geonetwork-opensource.org/) | A java based open source catalogue application widely used by member states for INSPIRE discovery. Provides a public portal application. Supports CSW, metadata authoring, validation and harvesting. |
+| [pycsw](cookbook/pycsw.md) | [pycsw](https://pycsw.org/) | A Python based open source CSW server. Supports CSW, OGC API Records. Used in portal software such as [CKAN](https://github.com/ckan/ckanext-spatial)[Spatial](https://github.com/ckan/ckanext-spatial) and [GeoNode](https://geonode.org/). |
+| [Geoportal server](cookbook/geoportal-server.md) | [ArcGIS Geoportal](https://github.com/Esri/geoportal-server) | A java based open source CSW implementation for the ArcGIS platform. A CSW client for ArcGIS desktop is included. Note that this package is not the same as ArcGIS Portal. |
+| [Hale Connect](cookbook/hale-connect.md) | [Hale Connect](https://www.wetransform.to/products/haleconnect/) | A metadata authoring and CSW interface is provided as part of the HALE Connect SAAS offering. |
 
 ## Experimental
 
@@ -50,4 +50,4 @@ Currently no 'good practice' exists to offer discovery services in alternative p
 
 | Cookbook | Software | Description |
 | --- | ---| --- |
-| [dcat](tools/dcat.md) | - | A dcat approach to dataset discovery |
+| [dcat](cookbook/dcat.md) | - | A dcat approach to dataset discovery |

@@ -33,7 +33,7 @@ Pro's and Con's:
 
 | Cookbook | Software | Description |
 | --- | --- | --- |
-| [Glosis as a database](tools/glosis-db.md) | - | Harmonise soil data using GeoPackage |
+| [Glosis as a database](cookbook/glosis-db.md) | - | Harmonise soil data using GeoPackage |
 
 ## Traditional
 
@@ -41,18 +41,18 @@ Tools like Hale Studio and FME are typically used to configure a conversion from
 
 | Cookbook | Software | Description |
 | --- | --- | --- |
-| [Hale Studio](tools/hale-studio.md) | [Hale Studio](https://wetransform.to/halestudio/) | Humboldt Alignment Editor Studio is a Desktop tool to author 'data alignments'. |
+| [Hale Studio](cookbook/hale-studio.md) | [Hale Studio](https://wetransform.to/halestudio/) | Humboldt Alignment Editor Studio is a Desktop tool to author 'data alignments'. |
 | [FME & INSPIRE](https://www.safe.com/integrate/inspire-gml/) | [FME](https://www.safe.com/fme/) | Feature Manipulation Engine is a visually oriented data integration platform |
 
-You may not have considered before, but consuming a rich GML is not straight forward in common GIS clients like ArcGIS or QGIS. To consume a rich GML you need software which is able to traverse xml hierarchies and links. Tools like Hale Studio can also be used to read rich GML and convert it back to a relational database. Unfortunately you can not automatically reverse an existing database to GML ETL-configuration. But you can set up a new ETL configuration to read and transform the rich GML. A recipe is available which [imports INSPIRE Soil GML from the city of Berlin and converts it to a relational database](tools/hale-studio-consume-gml.md).
+You may not have considered before, but consuming a rich GML is not straight forward in common GIS clients like ArcGIS or QGIS. To consume a rich GML you need software which is able to traverse xml hierarchies and links. Tools like Hale Studio can also be used to read rich GML and convert it back to a relational database. Unfortunately you can not automatically reverse an existing database to GML ETL-configuration. But you can set up a new ETL configuration to read and transform the rich GML. A recipe is available which [imports INSPIRE Soil GML from the city of Berlin and converts it to a relational database](cookbook/hale-studio-consume-gml.md).
 
 Alternatively some server tools offer on the fly transformation as part of the download service, the data mapping is defined within the service configuration.
 
 | Cookbook | Software | Description |
 | --- | --- | --- |
-| [GeoServer](tools/geoserver.md) | [GeoServer](https://geoserver.org) | Java based server implementation |
-| [deegree](tools/deegree.md) | [deegree](https://www.deegree.org) | Java based server implementation |
-| [Xtraserver](tools/xtraserver.md) | [xtraserver](https://www.interactive-instruments.de/en/xtraserver/)  | Java based server implementation, also distributed as [ArcGIS for INSPIRE Classic](https://enterprise.arcgis.com/en/inspire/10.8/get-started/what-is-arcgis-for-inspire.htm) |
+| [GeoServer](cookbook/geoserver.md) | [GeoServer](https://geoserver.org) | Java based server implementation |
+| [deegree](cookbook/deegree.md) | [deegree](https://www.deegree.org) | Java based server implementation |
+| [Xtraserver](cookbook/xtraserver.md) | [xtraserver](https://www.interactive-instruments.de/en/xtraserver/)  | Java based server implementation, also distributed as [ArcGIS for INSPIRE Classic](https://enterprise.arcgis.com/en/inspire/10.8/get-started/what-is-arcgis-for-inspire.htm) |
 
 ## Experimental
 
@@ -62,8 +62,8 @@ See also the [presenation about semantic web (GLOSIS)](https://wur.yuja.com/V/Vi
 
 | Product | Software | Description |
 | --- | --- | --- |
-| [Semantic harmonization using TARQL](tools/tarql.md) | [TARQL](https://github.com/tarql/tarql) | command-line tool for converting CSV files to RDF using SPARQL 1.1 |
-| [Semantic mapping using YARRRML](tools/rml.md) | [RML mapper](https://rml.io/) | Human readable RDF mappings for RML.io |
+| [Semantic harmonization using TARQL](cookbook/tarql.md) | [TARQL](https://github.com/tarql/tarql) | command-line tool for converting CSV files to RDF using SPARQL 1.1 |
+| [Semantic mapping using YARRRML](cookbook/rml.md) | [RML mapper](https://rml.io/) | Human readable RDF mappings for RML.io |
 | [Publish data through semantic web](https://doi.org/10.15454/YJLFZI) | [Yed](https://www.yworks.com/products/yed) [Coby](https://forgemia.inra.fr/anaee-dev/coby) [BlazeGraph](https://blazegraph.com/) | Cookbook by INRAE on publishing soild data as RDF | 
 tarql
 

@@ -29,7 +29,7 @@ Some guidance on locating soil data sources.
 
 INSPIRE provides guidance on how to [indicate in metadata the level of harmonisation of the service](https://github.com/INSPIRE-MIF/technical-guidelines/blob/2022.2/metadata/metadata-iso19139/metadata-iso19139.adoc#4332-category-of-the-spatial-data-service). Unfortunately this feature is not broadly adopted yet, many data providers provide non harmonised data without indicating it as such.
 
-In case data is provided using the INSPIRE Soil Model you can use [Hale Studio to import gml](tools/hale-studio-consume-gml.md) to an alternative datamodel.
+In case data is provided using the INSPIRE Soil Model you can use [Hale Studio to import gml](cookbook/hale-studio-consume-gml.md) to an alternative datamodel.
 
 Because INSPIRE Soil is based on the [Observations and Measurements](https://www.ogc.org/standards/om) model, it is possible to publish soil data using a [SOS](https://www.ogc.org/standards/sos) or [SensorThings API](https://www.ogc.org/standards/sensorthings). At this moment there are no known implementations of SOS or STA to provide Soil data. I'm not aware of procedures to download full datasets from a sensor service and transform them, but the use case may not be relevant to sensor data. A multitude of sensor clients is available to interact directly with Sensor Services, providing the options to filter the results and extract only the relevant data for a use case.
 

@@ -20,7 +20,7 @@ access constraints apply which may prevent publication to a wider audience in a
 later stage.
 
 Metadata documents are preferably based on a common ontology such as
-[DCAT](tools/dcat.md) or [ISO19139](tools/iso19139.md). Roughly 2 approaches,
+[DCAT](cookbook/dcat.md) or [ISO19139](cookbook/iso19139.md). Roughly 2 approaches,
 with various implementation options, exist to maintain metadata in an
 organisation:
 
@@ -41,16 +41,16 @@ about that dataset in the local repository, so colleagues understand where/when
 the data was imported. If the dataset is available online, it is better to link
 to the remote dataset, so users would always use the latest version. As part of
 the assimilation a [data harmonisation to a locally used
-data model](tools/hale-studio-consume-gml.md) is relevant (See also [Data
+data model](cookbook/hale-studio-consume-gml.md) is relevant (See also [Data
 harmonisation](etl.md)).
 
 ## Related recipes in this cookbook:
 
-- [A Pythonic metadata workflow](tools/pygeometa.md)
-- [A discovery service in GeoNetwork](tools/geonetwork.md) includes a section on
+- [A Pythonic metadata workflow](cookbook/pygeometa.md)
+- [A discovery service in GeoNetwork](cookbook/geonetwork.md) includes a section on
   metadata authoring in GeoNetwork
 - [Metadata and View Service with GeoCat Bridge, GeoNetwork and
-  GeoServer](tools/bridge-geoserver-geonetwork.md) includes a section on
+  GeoServer](cookbook/bridge-geoserver-geonetwork.md) includes a section on
 metadata management in QGIS
-- [DCAT](tools/dcat.md)
-- [Consume Soil GML with Hale Studio](tools/hale-studio-consume-gml.md)
+- [DCAT](cookbook/dcat.md)
+- [Consume Soil GML with Hale Studio](cookbook/hale-studio-consume-gml.md)

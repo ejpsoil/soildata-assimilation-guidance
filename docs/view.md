@@ -24,8 +24,8 @@ The getFeatureInfo (gfi) operation is not mandatory for INSPIRE (however useful 
 
 | Cookbook | Software | Description |
 | --- | --- | --- |
-| [mapserver](tools/mapserver.md) [MapServer](https://mapserver.org/) | C based FastCGI WMS/WFS/WCS server implementation configured using 'mapfiles' |
-| [Bridge & GeoServer](tools/bridge-geoserver-geonetwork.md) | [Bridge](https://geocat.net/bridge) [GeoServer](https://geoserver.org) | The recipe describes how to publish view services from QGIS ArcMAP using GeoCat Bridge |
+| [mapserver](cookbook/mapserver.md) [MapServer](https://mapserver.org/) | C based FastCGI WMS/WFS/WCS server implementation configured using 'mapfiles' |
+| [Bridge & GeoServer](cookbook/bridge-geoserver-geonetwork.md) | [Bridge](https://geocat.net/bridge) [GeoServer](https://geoserver.org) | The recipe describes how to publish view services from QGIS ArcMAP using GeoCat Bridge |
 | [INSPIRE](https://mapproxy.org/docs/latest/inspire.html) | [Mapproxy](https://mapproxy.org/) | Python based tile (cache) server implementation, delegates on the fly rendering to a WMS server |
 | [WMS from QGIS](https://docs.qgis.org/3.22/en/docs/training_manual/qgis_server/wms.html) | [QGIS server](https://docs.qgis.org/3.22/en/docs/server_manual/index.html#qgis-server-manual) | The open source desktop GIS client deployed as a server application |
 
@@ -41,7 +41,7 @@ OGC API Tiles is an upcoming standard for map visualization. The Open Geospatial
 
 | Cookbook | Software | Description |
 | --- | --- | --- |
-| [GeoServer](tools/geoserver.md) | [GeoServer](https://geoserver.org/) | OGC API Tiles is available via the OGC API community plugin |
+| [GeoServer](cookbook/geoserver.md) | [GeoServer](https://geoserver.org/) | OGC API Tiles is available via the OGC API community plugin |
 | [Dive into pygeoapi](https://dive.pygeoapi.io/) | [pygeoapi](https://pygeoapi.io/) | Python package which exposes a cache of tiles as OGC API Tiles |
 | LDProxy | [LDProxy](https://github.com/interactive-instruments/ldproxy) | Java based opensource OGC API implementation |
 

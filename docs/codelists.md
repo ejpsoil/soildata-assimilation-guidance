@@ -38,7 +38,7 @@ The most basic form of publishing an alternative or extended code list is to pla
 
 | Cookbook | Software | Description |
 | --- | --- | --- |
-| [Code list as iso19135](tools/codelist-iso19135.md) | | Publish an XML file on a web location |
+| [Code list as iso19135](cookbook/codelist-iso19135.md) | | Publish an XML file on a web location |
 
 
 ### Traditional
@@ -47,7 +47,7 @@ Extended code lists can be published in a local or national instance of the [Re3
 
 | Cookbook | Software | Description |
 | --- | --- | --- |
-| [Code list in Re3gistry](tools/re3gistry.md) | [Re3gistry](https://ec.europa.eu/isa2/solutions/re3gistry_en/) | Publish a codelist in Re3gistry |
+| [Code list in Re3gistry](cookbook/re3gistry.md) | [Re3gistry](https://ec.europa.eu/isa2/solutions/re3gistry_en/) | Publish a codelist in Re3gistry |
 
 ### Experimental
 
@@ -57,5 +57,5 @@ A powerfull aspect of SKOS is that you can link from a concept to existing conce
 
 | Cookbook | Software | Description |
 | --- | --- | --- |
-| [Extend a codelist](tools/code-listsExtension.md) |  | How to extend an INSPIRE codelist |
-| [Publish a SKOS codelist](tools/virtuoso.md) | [Virtuoso](https://virtuoso.openlinksw.com/) [Skosmos](https://skosmos.org) | Publish a code list in semantic web |
+| [Extend a codelist](cookbook/code-listsExtension.md) |  | How to extend an INSPIRE codelist |
+| [Publish a SKOS codelist](cookbook/virtuoso.md) | [Virtuoso](https://virtuoso.openlinksw.com/) [Skosmos](https://skosmos.org) | Publish a code list in semantic web |

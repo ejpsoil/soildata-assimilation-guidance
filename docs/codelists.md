@@ -57,4 +57,5 @@ A powerfull aspect of SKOS is that you can link from a concept to existing conce
 
 | Cookbook | Software | Description |
 | --- | --- | --- |
-| [SKOS codelist in semantic web](tools/virtuoso.md) | [Virtuoso](https://virtuoso.openlinksw.com/) [Skosmos](https://skosmos.org) | Publish a semantic web code list |
+| [Extend a codelist](tools/code-listsExtension.md) |  | How to extend an INSPIRE codelist |
+| [Publish a SKOS codelist](tools/virtuoso.md) | [Virtuoso](https://virtuoso.openlinksw.com/) [Skosmos](https://skosmos.org) | Publish a code list in semantic web |

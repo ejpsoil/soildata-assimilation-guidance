@@ -25,7 +25,7 @@
 
 :config a skosmos:Configuration ;
     # SPARQL endpoint
-    skosmos:sparqlEndpoint <https://localhost:8890/sparql/> ;
+    skosmos:sparqlEndpoint <http://virtuoso:8890/sparql/> ;
     # sparql-query extension, or "Generic" for plain SPARQL 1.1
     # set to "JenaText" instead if you use Fuseki with jena-text index
     skosmos:sparqlDialect "Generic" ;
@@ -35,7 +35,7 @@
     skosmos:sparqlTimeout 20 ;
     skosmos:httpTimeout 5 ;
     # customize the service name
-    skosmos:serviceName "Vocabularies" ;
+    skosmos:serviceName "Vocabularies of EJP Soil Data Assimilation Masterclass" ;
     # customize the base element. Set this if the automatic base url detection doesn't work. For example setups behind a proxy.
     # skosmos:baseHref "http://glosis.org/" ;
     # interface languages available, and the corresponding system locales
@@ -55,7 +55,7 @@
     # a default location for Twig template rendering
     skosmos:templateCache "/tmp/skosmos-template-cache" ;
     # customize the css by adding your own stylesheet
-    skosmos:customCss "resource/css/stylesheet.css" ;
+    # skosmos:customCss "resource/css/stylesheet.css" ;
     # default email address where to send the feedback
     skosmos:feedbackAddress "" ;
     # email address to set as the sender for feedback messages
@@ -73,13 +73,15 @@
 
 # Skosmos vocabularies
 
-:glosis_cl a skosmos:Vocabulary, void:Dataset, owl:Ontology ;
-    dc:title "GLOSIS - Global Soil Information System"@en ;
-    skosmos:shortName "glosis_cl";
+:glosis_proc a skosmos:Vocabulary, void:Dataset, owl:Ontology ;
+    dc:title "GLOSIS - Soil Procedures"@en ;
+    skosmos:shortName "glosis_proc";
     dc:subject :cat_general ;
-    void:uriSpace "http://w3id.org/glosis/model/codelists#";
+    void:uriSpace "http://w3id.org/glosis/model/procedure#";
     skosmos:language "en";
     skosmos:defaultLanguage "en";
-    void:sparqlEndpoint <https://virtuoso.isric.org/sparql> ;
-    skosmos:sparqlGraph <http://w3id.org/glosis/model/codelists#> ;
-    skosmos:mainConceptScheme  <http://w3id.org/glosis/model/codelists#physioChemicalPropertyCode> .
+    void:sparqlEndpoint <http://virtuoso:8890/sparql> ;
+    skosmos:sparqlGraph <http://w3id.org/glosis/model/procedure#> .
+
+
+

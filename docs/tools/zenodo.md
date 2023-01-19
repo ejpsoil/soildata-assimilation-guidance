@@ -1,13 +1,20 @@
 # Zenodo
 
 This recipe proposes an approach to use [Zenodo](https://zenodo.org) to publish a dataset in such a way, that many of the INSPIRE practices are implemented. 
-Zenodo is a generic  repository for academic works part of the European OpenAIRE program and operated by CERN. 
+Zenodo is a generic repository for academic work part of the European OpenAIRE program and operated by CERN. 
 Zenodo resources are clustered in communities. You can join an existing community or start one. Resources from a community can be accessed as a collection.
 Community moderators (dis)allow contributions to a community.
 
-Zenodo adopted aspects of the [DataCite metadata schema](https://schema.datacite.org/). The procedure below is also relevant for other DataCite oriented repositories, such as [Dataverse](https://dataverse.org).
+## DataCite & INSPIRE
 
-## Upload your data
+Zenodo adopted aspects of the [DataCite metadata schema](https://schema.datacite.org/). The procedure below is also relevant for other DataCite oriented repositories, such as [Dataverse](https://dataverse.org). Since Zenodo is DataCite oriented, it does not directly match the requirement of INSPIRE to provide iso19139 metadata. However by following the suggested procedure, the metadata is almost semantically identical. Two routes of resolving this challenge are possible:
+
+- Engage with the INSPIRE community to enable the DataCite encoding as an additional format to provide INSPIRE metadata
+- Introduce a technical component, such as [pygeometa](./pygeometa.md), which could provide a transformation from DataCite to iso19139
+
+Clement Lattelais (INRAE) is preparing a [comparison tool](https://creagov.sharepoint.com/:p:/r/sites/EJP-SOILWP6INSPIREWG/Documenti%20condivisi/General/task6.1/task6.1_metadata/EJP%20SOIL_JRC_metadata%20catalog%20meeting_nov%202022.pptx?d=w3ed829c3137b4e36a1e169b7f2ffd4a8&csf=1&web=1&e=NfJAaV) on how the metadata schemes of various repositories (DataVerse, Zenodo, ..) relate to the INSPIRE Metadata Guidelines. This tool is relevant to evaluate if (and how) a certain repository can be used for INSPIRE. But also to assess any non listed repositories.
+
+## Upload your data to Zenodo
 
 After (registering and) logging in you can select the upload resource option.
 
@@ -39,11 +46,6 @@ For option 2, the relevant element is the subject area at the bottom of the meta
 | Spatial Scope | [Spatial Scope](https://inspire.ec.europa.eu/metadata-codelist/SpatialScope) | [Regional](http://inspire.ec.europa.eu/metadata-codelist/SpatialScope/regional) |
 
 ![subject](./img/zenodo-subject.png)
-
-Since Zenodo is DataCite oriented, it does not directly match the requirement of INSPIRE to provide iso19139 metadata. However by following the above approach, the records are almost semantically identical. Two routes of resolving this issue are possible:
-
-- Engage with the INSPIRE community to enable the DataCite encoding as an additional format to provide INSPIRE metadata
-- Introduce a technical component, such as [pygeometa](./pygeometa.md), which could provide a transformation from DataCite to iso19139
 
 ## An Atom approach to access the data on Zenodo
 

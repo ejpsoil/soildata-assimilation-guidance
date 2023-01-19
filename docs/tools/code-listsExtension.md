@@ -1,5 +1,15 @@
+---
+Author: Luis de Sousa
+Date: 2023-01-18
+Title: Extending Code Lists
+---
+
+
 Code-lists
 ==========
+
+This recipe describes an approach to extend an INSPIRE codelist.
+
 
 INSPIRE
 -------

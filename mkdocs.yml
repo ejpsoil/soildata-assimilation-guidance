@@ -30,6 +30,7 @@ nav:
         - View: view.md
         - MapServer: cookbook/mapserver.md
         - GeoServer: cookbook/bridge-geoserver-geonetwork.md
+        - 'QGIS server': cookbook/qgis.md
     - Download: 
         - Intro: download.md
         - Webdav: cookbook/webdav.md
@@ -39,10 +40,17 @@ nav:
         - 'SensorThings API' : cookbook/frost-server.md
         - pygeoapi: cookbook/pygeoapi.md
         - LDProxy: cookbook/ldproxy.md
-        - GraphQL: cookbook/postgraphile.md)
+        - GraphQL: cookbook/postgraphile.md
     - QOS: QOS.md
-
-        
+    - Utils:
+        - docker: utils/docker.md
+        - gdal: utils/gdal.md
+        - git: utils/git.md
+        - jupyter: utils/jupyter.md
+        - tunnel: utils/tunnel.md
+        - r: utils/r.md
+        - visualstudiocode: utils/visualstudiocode.md
+        - python: utils/python.md
 
 theme:
     name: material

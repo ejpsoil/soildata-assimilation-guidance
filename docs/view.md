@@ -26,6 +26,7 @@ The getFeatureInfo (gfi) operation is not mandatory for INSPIRE (however useful 
 | --- | --- | --- |
 | [MapServer](cookbook/mapserver.md) [MapServer](https://mapserver.org/) | C based FastCGI WMS/WFS/WCS server implementation configured using 'mapfiles' |
 | [Bridge & GeoServer](cookbook/bridge-geoserver-geonetwork.md) | [Bridge](https://geocat.net/bridge) [GeoServer](https://geoserver.org) | The recipe describes how to publish view services from QGIS ArcMAP using GeoCat Bridge |
+| [QGis server](cookbook/qgis.md) | [QGIS](https://qgis.org) | Qgis as a server |
 
 ### Traditional
 

@@ -2,7 +2,9 @@
 =================================
 
 The basic idea behind `tarql` is to develop a `CONSTRUCT` SPARQL query that
-instead of executing agains a triple store is executed against a CSV file.
+instead of executing against a triple store is executed against a CSV file. The
+result is a knowledge graph that may itself be deployed to a triple store or
+outright published on the web.
 
 Install
 -------
@@ -32,12 +34,14 @@ $ tarql --help
 Use
 ---
 
-**Note**: before starting a data transformation into RDF you must devise a URI policy for your data. Please refer to the [URI Policy](../uri.md) document for details.
+**Note**: before starting a data transformation into RDF you must devise a URI
+policy for your data. Please refer to the [URI Policy](../uri.md) document for
+details.
 
-The file [SoilData.csv](data/SoilData.csv) contains a simple set of
-hypothetical measurements referring to three soil profiles collected in two
-different sites. The goal is to transform this dataset into [GloSIS](https://github.com/rapw3k/glosis) compliant
-RDF.
+The file [SoilData.csv](data/SoilData.csv) contains a simple set of hypothetical
+measurements referring to three soil profiles collected in two different sites.
+The goal is to transform this dataset into
+[GloSIS](https://github.com/rapw3k/glosis) compliant RDF.
 
 ```csv
 site_id,lat,lon,profile_id,layer_id,upper_depth,lower_depth,pH,SOC,
@@ -51,6 +55,8 @@ site_id,lat,lon,profile_id,layer_id,upper_depth,lower_depth,pH,SOC,
 ```
 
 ### Profile
+
+
 
 ```sparql
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>

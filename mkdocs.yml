@@ -6,13 +6,43 @@ site_url: https://ejpsoil.github.io/soildata-assimilation-guidance
 repo_url: https://github.com/ejpsoil/soildata-assimilation-guidance
 docs_dir: docs
 nav:
-    - Identification: identification.md
-    - Harmonization: etl.md
-    - Code lists: codelists.md
-    - Discovery: metadata.md
-    - View: view.md
-    - Download: download.md
+    - 'Identification': 
+        - intro: identification.md
+        - uri: cookbook/uri.md
+    - 'Harmonization': 
+        - Intro: etl.md
+        - Glosis as a database: cookbook/glosis-db.md
+        - Hale Studio: cookbook/hale-studio.md
+        - TARQL: cookbook/tarql.md
+        - YARRRML: cookbook/rml.md
+    - 'Code lists': 
+        - 'Intro': codelists.md
+        - 'iso19135': cookbook/codelist-iso19135.md
+        - 'Re3gistry': cookbook/re3gistry.md
+        - 'Extend code lists': cookbook/code-listsExtension.md
+        - 'Skosmos': cookbook/virtuoso.md
+    - 'Discovery': 
+        - Metadata: metadata.md
+        - pygeometa: cookbook/pygeometa.md
+        - DCAT: cookbook/dcat.md
+        - GeoNetwork: cookbook/geonetwork.md
+    - View: 
+        - View: view.md
+        - MapServer: cookbook/mapserver.md
+        - GeoServer: cookbook/bridge-geoserver-geonetwork.md
+    - Download: 
+        - Intro: download.md
+        - Webdav: cookbook/webdav.md
+        - Zenodo: cookbook/zenodo.md
+        - GeoServer: cookbook/geoserver.md
+        - 'CSW Rasdaman': cookbook/rasdaman.md
+        - 'SensorThings API' : cookbook/frost-server.md
+        - pygeoapi: cookbook/pygeoapi.md
+        - LDProxy: cookbook/ldproxy.md
+        - GraphQL: cookbook/postgraphile.md)
     - QOS: QOS.md
+
+        
 
 theme:
     name: material

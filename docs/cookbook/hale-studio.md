@@ -220,3 +220,21 @@ Hale Studio is not able to process `anytype` fields by default. Instead you have
 
 ## Export GML
 
+- On the Export panel, follow the wizard, select the GML format. 
+- A 
+
+
+## Export GeoPackage
+
+Hale Studio
+
+
+## Validate GML
+
+You can test the generated GML in the [INSPIRE Validator](https://inspire.ec.europa.eu/validator/test-selection/index.html). 
+In [Local Tunnel](../utils/localtunnel.md) an approach is suggested to temporarily host a local service online, so you can run the validation.
+
+## Read more
+
+Website: https://inspire.ec.europa.eu/validator/home/index.html
+GitHub: https://github.com/INSPIRE-MIF/helpdesk-validator

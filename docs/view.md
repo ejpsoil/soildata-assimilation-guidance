@@ -24,10 +24,8 @@ The getFeatureInfo (gfi) operation is not mandatory for INSPIRE (however useful 
 
 | Cookbook | Software | Description |
 | --- | --- | --- |
-| [mapserver](cookbook/mapserver.md) [MapServer](https://mapserver.org/) | C based FastCGI WMS/WFS/WCS server implementation configured using 'mapfiles' |
+| [MapServer](cookbook/mapserver.md) [MapServer](https://mapserver.org/) | C based FastCGI WMS/WFS/WCS server implementation configured using 'mapfiles' |
 | [Bridge & GeoServer](cookbook/bridge-geoserver-geonetwork.md) | [Bridge](https://geocat.net/bridge) [GeoServer](https://geoserver.org) | The recipe describes how to publish view services from QGIS ArcMAP using GeoCat Bridge |
-| [INSPIRE](https://mapproxy.org/docs/latest/inspire.html) | [Mapproxy](https://mapproxy.org/) | Python based tile (cache) server implementation, delegates on the fly rendering to a WMS server |
-| [WMS from QGIS](https://docs.qgis.org/3.22/en/docs/training_manual/qgis_server/wms.html) | [QGIS server](https://docs.qgis.org/3.22/en/docs/server_manual/index.html#qgis-server-manual) | The open source desktop GIS client deployed as a server application |
 
 ### Traditional
 
@@ -37,18 +35,15 @@ Examples are in the [download services](download.md) section.
 
 ### Experimental
 
-OGC API Tiles is an upcoming standard for map visualization. The Open Geospatial Consortium (OGC) is preparing the final standardization documents, however initial implementations are available in. There is no good practice document for adoption of OGC API Tiles within INSPIRE in preparation yet.
+OGC API Tiles and OGC API Maps are upcoming standards for map visualization. The Open Geospatial Consortium (OGC) is preparing the final standardization documents, however initial implementations are available in. There is no good practice document for adoption of OGC API Tiles or Maps in preparation yet within INSPIRE.
 
 | Cookbook | Software | Description |
 | --- | --- | --- |
-| [GeoServer](cookbook/geoserver.md) | [GeoServer](https://geoserver.org/) | OGC API Tiles is available via the OGC API community plugin |
-| [Dive into pygeoapi](https://dive.pygeoapi.io/) | [pygeoapi](https://pygeoapi.io/) | Python package which exposes a cache of tiles as OGC API Tiles |
-| LDProxy | [LDProxy](https://github.com/interactive-instruments/ldproxy) | Java based opensource OGC API implementation |
+| - | [GeoServer](https://geoserver.org/) | OGC API Tiles is available via the OGC API community plugin |
+| - | [pygeoapi](https://pygeoapi.io/) | Python package which exposes a cache of tiles as OGC API Tiles |
+| - | [LDProxy](https://github.com/interactive-instruments/ldproxy) | Java based opensource OGC API implementation |
 
-Within the sector there is a shift to the use of Vector tiles for vector map visualization. Vector tiles usually require less bandwidth and provide a sharper view on the data, especially on mobile devices with high resolution. INSPIRE does not provide Guidance on the use of vector tiles yet. The [MapBox Vector tiles specification](https://github.com/mapbox/tilejson-spec) is a common API used to publish vector tiles.
+Within the sector there is a shift to the use of Vector tiles for vector map visualization. Vector tiles usually require less bandwidth and provide a sharper view on the data, especially on mobile devices with high resolution. INSPIRE does not provide Guidance on the use of vector tiles yet. OGC API Tiles and the [MapBox Vector tiles specification](https://github.com/mapbox/tilejson-spec) are common API's used to publish vector tiles.
 
-OGC API Maps is an upcoming standard for dynamic map visualization. The Open Geospatial Consortium (OGC) is preparing the final standardization documents, however initial implementations are available in. There is no good practice document for adoption of OGC API Maps within INSPIRE in preparation yet.
 
-| Cookbook | Software | Description |
-| --- | --- | --- |
-| pygeoapi | [pygeoapi](https://pygeoapi.io/) | Python package which exposes geospatial data as dynamic maps via OGC API Maps |
+

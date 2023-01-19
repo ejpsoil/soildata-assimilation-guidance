@@ -32,7 +32,7 @@ $ tarql --help
 Use
 ---
 
-**Note**: before starting a data transformation into RDF you must devise a URI policy for your data. Please refer to the [URI Policy](../uri.md) document for details.
+**Note**: before starting a data transformation into RDF you must devise a URI policy for your data. Please refer to the [URI Policy](./uri.md) document for details.
 
 The file [SoilData.csv](data/SoilData.csv) contains a simple set of
 hypothetical measurements referring to three soil profiles collected in two

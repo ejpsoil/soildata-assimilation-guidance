@@ -25,7 +25,7 @@ Alternatively, products like [GeoNetwork](https://geonetwork-opensource.org/manu
 | Cookbook | Software | Description |
 | --- | --- | --- |
 | [Webdav](cookbook/webdav.md) | [Wsgidav](https://wsgidav.readthedocs.io) | Setting up atom service using webdav |
-| [GeoNetwork Atom](cookbook/geonetwork.md) | [GeoNetwork](https://geonetwork-opensource.org) | Atom download service from GeoNetwork |
+| [Zenodo](cookbook/zenodo.md) | [zenodo](https://zenodo.org) | Data publication on Zenodo |
 
 ### Traditional
 
@@ -36,6 +36,7 @@ Alternatively, products like [GeoNetwork](https://geonetwork-opensource.org/manu
 | [GeoServer](cookbook/geoserver.md) | [GeoServer](https://geoserver.org/) | The app-schema plugin extends the WFS implementation with support for hierarchical features. On the fly transformation is managed from a configuration file. Marcus Sen (Onegeology) create a [cookbook for this approach](https://onegeology.org/docs/technical/OneGeologyWFSCookbook_v1.4.pdf). |
 | [Get started with Hale Connect](https://help.wetransform.to/docs/getting-started/2018-04-28-quick-start) | [Hale Connect](https://www.wetransform.to/products/haleconnect/) | Optimized for performance, stores pregeneralised xml fragments in combination with an elastic search index for filtering |
 | [Coverages with rasdaman](cookbook/rasdaman.md) | [Rasdaman](https://www.rasdaman.org/) | A Web Coverage Service implementation |
+| [SensorThings API via FROST server](cookbook/frost-server.md) | [FROST server](https://fraunhoferiosb.github.io/FROST-Server/) | Soil observation data as sensor stream |
 
 Consider that a product advertising WFS support does not automatically qualify for INSPIRE, the product has to support hierarchical GML.
 
@@ -51,7 +52,6 @@ As described in the harmonization paragraph, Sensor Observation Service and Sens
 | --- | --- | --- |
 | [OGC API Features via pygeoapi](cookbook/pygeoapi.md) | [pygeoapi](https://pygeoapi.io) | A python based open source implementation of OGC APIs including OGC API Features. Configuration is managed from a configuration file. |
 | [Proxy a WFS as OGC API Features using LDProxy](cookbook/ldproxy.md) | [ldproxy](https://github.com/interactive-instruments/ldproxy) | A java based open source implementation of OGC APIs. Originally developed by Interactive Instruments as an easy way to consume API (proxy) on top of existing WFS. These experiments were a main driver for OGC in the direction of OGC API. Configuration is managed from a web interface. |
-| [SensorThings API via FROST server](cookbook/frost-server.md) | [FROST server](https://fraunhoferiosb.github.io/FROST-Server/) | Soil observation data as sensor stream |
 | [Soil data via GraphQL](cookbook/postgraphile.md) | [Postgraphile](https://www.graphile.org/postgraphile/) | Soil data from a postgres database via graphQL |
 
 

@@ -17,8 +17,8 @@ services:
       - virtuoso:/database
 
   skosmos:
-    image: ndslabs/skosmos:latest
+    image: rajeev05/skosmos:dec
     ports:
       - 80:80
     volumes:
-      - ./config-docker.ttl:/var/www/html/vocabularies.ttl
+      - ./config-docker.ttl:/var/www/html/config.ttl

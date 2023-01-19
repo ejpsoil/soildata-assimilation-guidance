@@ -2,17 +2,12 @@
 
 *Status: in progress*
 
-This recipe presents steps to publish a soil codelists using the SKOS ontology in Virtuoso and Skosmos. Virtuoso is an open source Triple store providing a SPARQL endpoint. 
-Skosmos is an open source web application providing a human friendly browse interface for skos thesauri stored in a triple store.
+This recipe presents steps to publish a code-lists using the [SKOS ontology](https://www.w3.org/2004/02/skos/) in Virtuoso and Skosmos. [Virtuoso](https://virtuoso.openlinksw.com) is an open source Triple store providing a SPARQL endpoint. 
+[Skosmos](https:/skosmos.org) is an open source web application providing a human friendly browse interface for skos thesauri stored in a triple store.
 
-The [skos ontology](https://www.w3.org/2004/02/skos/) supports the use of knowledge organization systems such as thesauri, 
-classification schemes, subject heading lists and taxonomies within the framework of the Semantic Web (and beyond). For any concept (identified by a uri) a definition in multiple languages is modeled. For each concept a range of relation types is available to capture it's relation to other concepts, e.g. SameAs, Broader, Narrower, Affect, hasComponent, etc.
+This is a follow up recipe of the [extending code-lists recipe](./code-listsExtension.md).
 
-## Preparing the codelist
-
-Excel is often used to create lists of concepts with their definition. But consider that tabular systems are less optimal when defining relations between concepts. For that reason the [Glosis codelists](https://github.com/rapw3k/glosis/blob/master/glosis_cl.ttl) are maintained as Turtle RDF files on GitHub.
-
-For this recipe we assume the codelist to be published is available as a CSV. A range of tools is available to transform an excel to a skos RDF document. [Skos play](https://skos-play.sparna.fr/play/convert) offers for example a webbased conversion tool.
+In this recipe we're going to reproduce the publication of the `GLOSIS - Procedures` Codelist, maintained at [github](https://raw.githubusercontent.com/rapw3k/glosis/master/glosis_procedure.ttl), initiated by the former [SieuSoil project](https://www.sieusoil.eu/) with contributions from the [EJP Soil project](https://ejpsoil.eu).  
 
 ## Load SKOS RDF to virtuoso
 
@@ -24,22 +19,31 @@ docker compose up
 
 (ctrl-c to stop the containers)
 
-- open http://localhost:8090 and login using user: dba, password: dba.
-- Import ttl file
-- Run a query to the SPARQL endpoint to evaluate the data
+- Open http://localhost:8090/conductor and login using user: dba, password: dba (the password is configured as part of the docker compose)
 
+![Log in to virtuoso](img/virtuoso-dba.png)
+
+- On the `linked data` tab, select `Quad store upload`.
+- Select `Resource URL` and past the [url of the ttl file](https://raw.githubusercontent.com/rapw3k/glosis/master/glosis_procedure.ttl) from github (or upload a local file)
+- Select `create graph` and enter as graph uri `http://w3id.org/glosis/model/procedure#`, click `upload`.
+
+![Upload Quad store](img/virtuoso-upload.png)
+
+- Navigate to http://localhost:8090/sparql/ and run a default sparql query `select distinct ?Concept where {[] a ?Concept} LIMIT 20`, the glosis concepts should be returned.
 
 ## Setup Skosmos
 
-The file [config-docker.ttl](https://github.com/ejpsoil/soildata-assimilation-guidance/blob/main/docker/virtuoso-skosmos/config-docker.ttl) contains the configuration of SKOSMOS. You have to indicate which elements to select from the triple store.
+The file [config-docker.ttl](https://github.com/ejpsoil/soildata-assimilation-guidance/blob/main/docker/virtuoso-skosmos/config-docker.ttl) contains the configuration of SKOSMOS. The file is pre-configured for the procedures codelist, but you have to update it if you want to include alternative code lists. 
 
-Start the docker compose again.
+After an update of the config file, you need to restart the docker compose.
 
 - Open http://localhost and evaluate if the codelist is properly loaded. 
 
-## Read more
+In case of errors, logging of skosmos occurs in the `browser log panel`, click anywhere in the page and select `inspect` from the context menu. Then open the `console` tab and refresh the page.
 
-A recipe has been prepared which continues on the topic of [Codelist Extension]()
+In case you are insterested to update the look and feel of the skosmos instance, notice the `skosmos:customCss` property on the configfile. This property can link to a css file having custom css. Include the css file via a volume mount in the docker compose.
+
+## Read more
 
 Virtuoso
 
@@ -55,6 +59,3 @@ Skosmos
 - Docker: [docker](https://hub.docker.com/r/ndslabs/skosmos)
 - Skosmos examples: [glosis](https://glosis.isric.org), [agrovoc](https://agrovoc.fao.org), [agclass](https://agclass.nal.usda.gov)
 
-Skos play
-
-- Skos play: [skos play](https://skos-play.sparna.fr/play/convert)

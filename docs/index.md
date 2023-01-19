@@ -14,11 +14,17 @@ For data assimilation 3 aspects are important:
 
 - Data dissemination; the process of making data discoverable and available
 - Data harmonization; the process of adopting or transforming data to a common data model
-- Data consumption; the process of collecting (harmonised) data from various sources
+- Data consumption; the process of collecting (harmonised) data from various sources](consumer.md)
 
 ## Organisation of the articles
 
-[Toner et al, 2022](https://www.isric.org/index.php/utilise/community-practice) identified 6 steps in a typical soil information workflow from a data producer perspective and a separate category for the data user perspective. These steps form a relevant categorisation of the articles in this wiki. Much of the articles apply to the producer categories `4) Data organisation` and `6) data and info sharing` and [7) Soil Information User Consideration](consumer.md). We've labeled each of the articles as to which step in the workflow they apply.
+[Toner et al, 2022](https://www.isric.org/index.php/utilise/community-practice) identified 6 steps in a typical soil information workflow from a data producer perspective and a separate category for the data user perspective. These steps form a relevant categorisation of the articles in this wiki. Much of the articles apply to the categories:
+
+- [4) Data organisation](./data-organisation.md) 
+- [6) data and info sharing](./data-sharing.md) 
+- [7) Soil Information User Consideration](./consumer.md) 
+
+We've labeled each of the articles as to which step in the workflow they apply.
 
 ![Soil information workflow](https://www.isric.org/sites/default/files/Soil%20information%20workflow_circular_notext.jpg)
 

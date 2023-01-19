@@ -35,6 +35,7 @@ Alternatively, products like [GeoNetwork](https://geonetwork-opensource.org/manu
 | --- | --- | --- |
 | [GeoServer](cookbook/geoserver.md) | [GeoServer](https://geoserver.org/) | The app-schema plugin extends the WFS implementation with support for hierarchical features. On the fly transformation is managed from a configuration file. Marcus Sen (Onegeology) create a [cookbook for this approach](https://onegeology.org/docs/technical/OneGeologyWFSCookbook_v1.4.pdf). |
 | [Get started with Hale Connect](https://help.wetransform.to/docs/getting-started/2018-04-28-quick-start) | [Hale Connect](https://www.wetransform.to/products/haleconnect/) | Optimized for performance, stores pregeneralised xml fragments in combination with an elastic search index for filtering |
+| [deegree](./cookbook/deegree.md) | [deegree](https://deegree.org) | A java based spatial application server | 
 | [Coverages with rasdaman](cookbook/rasdaman.md) | [Rasdaman](https://www.rasdaman.org/) | A Web Coverage Service implementation |
 | [SensorThings API via FROST server](cookbook/frost-server.md) | [FROST server](https://fraunhoferiosb.github.io/FROST-Server/) | Soil observation data as sensor stream |
 

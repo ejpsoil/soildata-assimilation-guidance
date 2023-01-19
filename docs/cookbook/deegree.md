@@ -4,6 +4,15 @@
 
 An open source java server implementation of WMS, WMTS, CSW, WCS, WFS, WPS.
 
+Deegree has 2 options to publish rich GML data. 
+
+- Using a relational database and a mapping configuration to generate the GML
+- Using a `blob` storage to provide individual features without any processing
+
+The second is easy to setup and efficient when users often request full datasets. The second approach may get problematic if users use advanced filters to select subsets of the dataset.
+
+## Get started with deegree
+
 Start a deegree instance locally using the docker hub image as:
 
 ```
@@ -25,6 +34,14 @@ The client tools are described in the [online manual](https://download.deegree.o
 ```
 docker exec -w /opt/ deegree java -jar deegree-tools-gml.jar SqlFeatureStoreConfigCreator --format=ddl --dialect=postgis --cycledepth=1 -schemaUrl=https://inspire.ec.europa.eu/schemas/so/4.0/Soil.xsd
 ```
+
+## Featured implementations
+
+Some implementations of INSPIRE Soil data services based on deegree
+
+- [Baden Württemberg, Germany](https://lgrbwissen.lgrb-bw.de/bodenkunde)
+- [Brandenburg, Germany](https://geoportal.brandenburg.de/de/cms/portal/geodaten/diensteanbieter/dienste/psv/landesamt-fuer-bergbau-geologie-und-rohstoffe-lbgr/bGFuZC1sYmdyLWJi)
+
 
 ## Read more
 

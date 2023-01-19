@@ -47,7 +47,7 @@ nav:
         - gdal: utils/gdal.md
         - git: utils/git.md
         - jupyter: utils/jupyter.md
-        - tunnel: utils/tunnel.md
+        - tunnel: utils/localtunnel.md
         - r: utils/r.md
         - visualstudiocode: utils/visualstudiocode.md
         - python: utils/python.md

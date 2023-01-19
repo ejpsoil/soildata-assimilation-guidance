@@ -121,13 +121,13 @@ Kate Lyndegaard from WeTransform published a nice overview of Hale Studio at htt
 
 We'll go through some cases to highlight some of the features, we'll not produce a full mapping.
 
-
-
 ### Join tables
 
 In order to link the geometries from the shapefile to the SOTER data, we'll use a table join.
 On the left column, select the shapefile as well as the `terrain`, `soils` and `soilscomponent` tables (ctrl-click). On the right colum select the SoilBody type.
 Now click the blue arrow in the middle and select the `join` method.
+
+![Hale join](img/hale-join.png)
 
 ### Link or embed and identification?
 
@@ -170,12 +170,35 @@ Both approaches are supported and can be combined in Hale Studio, but you have t
 
 A suggestion from our side; define Plot, Profile, OM_Observation and Laboratory as root types and embed other types.
 
+## Codelist Mappings
 
-### Anytype in XSD
+A common challenge in harmonization is the adoption and [extension of common codelists](./code-listsExtension.md). Hale Studio facilitates the codelist mapping with the possibility to import codelists from the INSPIRE registry and the possibility to define a mapping file to map a local code to a common code. 
+
+First let's import a codelist from the INSPIRE registry.
+
+- In file > import > Codelist, select `Import from INSPIRE registry`
+- Import the [SoilProfileParameterNameValue](https://inspire.ec.europa.eu/codelist/SoilProfileParameterNameValue) codelist
+
+![Import a codelist in Hale](img/hale-codelists.png)
+
+Now assign a mapping from local values to this codelist.
+
+- Select the observed property (bulkdens, organic matter, ...) on the source model
+- On target model select the `href` attribute of the `observedProperty` of the `OM_Observation`
+- Click the blue button and select the `classification` item
+- Proceed to second screen and click the second button `Attempt to fill source...`, the unique values of the source data are displayed
+- Double click the empty value next to the first value, on the panel select the button to select a codelist
+- Select the codelist, notice the pull down is now populated, select a value from the pulldown
+- Continue the mapping for each of the values
+
+![select a concept from list](img/hale-select-code.png)
+
+- In case you can't find a relevant target value for a source value, then have a look at the [extending codelist recipe](./code-listsExtension.md).
+
+## Anytype in XSD
 
 XSD allows to leave the type of a property as `any`. From a standardisation perspective, this is not optimal, because every developer may implement a different type for that field. In the INSPRE Soil theme this challenge is very obvious because the type of the result property of an observation is defined as `any`.
-Hale Studio is not able to process `anytype` fields by default. Instead you have to add below snippet to the `eu.esdihumboldt.hale.io.schema.read.target` resource of the  `project.halex` file. 
-
+Hale Studio is not able to process `anytype` fields by default. Instead you have to add below snippet to the `eu.esdihumboldt.hale.io.schema.read.target` resource of the  `project.halex` file, to map the any field to a CharacterString. 
 
 ```
  <complex-setting name="customTypeContent">
@@ -210,12 +233,6 @@ Hale Studio is not able to process `anytype` fields by default. Instead you have
     </xsd:typeContentConfig>
 </complex-setting>
 ```
-
-
-![Hale join](img/hale-join.png)
-
-
-
 
 
 ## Export GML

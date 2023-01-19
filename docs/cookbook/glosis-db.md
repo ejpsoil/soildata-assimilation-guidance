@@ -7,11 +7,11 @@ The INSPIRE community has recently started an interesting activity to set up [gu
 Idea behind the activity is that communities around a certain topic come together to develop a common relational model which substantially represents the INSPIRE UML model. 
 This activity is supported by [a template](https://github.com/INSPIRE-MIF/2017.2/blob/master/template/template.md) that communities can use to share their work with the wider INSPIRE commuity. This template for example suggests to include a mapping which can facilitate a transformation of the data from the relational to the uml model and vice versa.
 
-As soon as discussion has led to a conclusion, initial implementations have succeeded and the INSPIRE community confirmed the approach, then a typical harmonization effort would start from an empty database, following the `gpkg4soil` model. A user would insert their data using tools such as [r](../utils/r.md), [python](../utils/python.md), [FME](https://www.safe.com/fme/fme-desktop/), [Hale studio](./hale-studio.md), [DBeaver](https://dbeaver.io/), etc. or a dedicated (web) interface.
+As soon as discussion has led to a conclusion, initial implementations have succeeded and the INSPIRE community confirmed the approach, then a typical harmonization effort would start from an empty database, following the defined relational model, let's call it `gpkg4soil` as a working title. A user would insert their data using tools such as [r](../utils/r.md), [python](../utils/python.md), [FME](https://www.safe.com/fme/fme-desktop/), [Hale studio](./hale-studio.md), [DBeaver](https://dbeaver.io/), etc. or a dedicated (web) interface.
 
-## SoilML in a PostGres database
+## ISO19258 in a PostGres database
 
-As part of the [Soils4africa project](https://www.soils4africa-h2020.eu/) ISRIC and partners are experimenting with a SoilML model, similar to the INSPIRE Soil model, encoded in a relational PostGres database. It is interesting to evaluate in the masterclass if this effort can be ported to GeoPackage and form a starting point for the `gpkg4soil` effort.
+As part of the [Soils4africa project](https://www.soils4africa-h2020.eu/) ISRIC and partners are experimenting with a ISO19258 model, similar to the INSPIRE Soil model, encoded in a relational PostGres database. It is interesting to evaluate in the masterclass if this effort can be ported to GeoPackage and form a starting point for the `gpkg4soil` effort.
 
 
 

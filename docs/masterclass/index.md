@@ -26,7 +26,7 @@ During the masterclass questions can be placed in the [gitter channel](https://g
  
 
 | 25th | Lumen 2 meeting room |
-| --- | --- |
+| --- | --- | --- |
 | 9.00 | Day start; Introduction to View and download services | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
 | 10.00 | Sensorthings API - Kathi Schleidt, Hylke van de Schaaf | [ejp-sda-sta](https://meet.waag.org/ejp-sda-sta) | 
 | 11.00 | GLOSIS/RDF - Luis de Sousa | [ejp-sda-glosis](https://meet.waag.org/ejp-sda-glosis) | 
@@ -38,7 +38,7 @@ During the masterclass questions can be placed in the [gitter channel](https://g
 | 16.00 | Day-closing pitches | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
          
 | 26th | Gaia 2 meeting room |
-| --- | --- |
+| --- | --- | ---|
 | 9.00 | Day start; Introduction to Metadata and discovery | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
 | 10:00 | deegree webservices intro and Q&A - Torsten Friebe | [ejp-sda-deegree](https://meet.waag.org/ejp-sda-deegree) | 
 | 10:30 | MapServer intro and Q&A - Seth Girvin | [ejp-sda-mapserver](https://meet.waag.org/ejp-sda-mapserver) | 
@@ -52,12 +52,18 @@ During the masterclass questions can be placed in the [gitter channel](https://g
 
 ## Focus groups
 
-Participants cluster in groups around a certain topic of technology. Initial groups are formed in the welcome ceremony, here are some suggestions.
+Participants cluster in focus groups around a certain topic or technology. Initial groups are formed in the welcome ceremony. Here are some suggestions:
 
 - Carbon stock (Sample dataset: [Dutch BRH-P](cookbook/data/bhr-p/readme) or [SoilGrids](https://files.isric.org/soilgrids/latest/data_aggregated/1000m/soc/) ([COG format](https://www.cogeo.org/)))
 - Soil biology & quality
-- Soil profile databases and laboratory results
-- View services
+- Soil profile databases, lab results & spectroscopy
+- Agriculture
+- Java tribe (Geoserver, deegree, geotools)
+- Sensorthings, O&M
+- GeoPython
+- Governance aspects (open data, security, EU requirements)
+- Semantic web, GLOSIS, SKOS
+- Dataspaces
 
 For each group a wiki, chat and jitsy are listed below.
 

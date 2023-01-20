@@ -19,7 +19,7 @@ docker compose up
 
 (ctrl-c to stop the containers)
 
-- Open http://localhost:8090/conductor and login using user: dba, password: dba (the password is configured as part of the docker compose)
+- Open http://localhost:8890/conductor and login using user: dba, password: dba (the password is configured as part of the docker compose)
 
 ![Log in to virtuoso](img/virtuoso-dba.png)
 
@@ -29,7 +29,14 @@ docker compose up
 
 ![Upload Quad store](img/virtuoso-upload.png)
 
-- Navigate to http://localhost:8090/sparql/ and run a default sparql query `select distinct ?Concept where {[] a ?Concept} LIMIT 20`, the glosis concepts should be returned.
+- Navigate to http://localhost:8890/sparql/ and run a SPARQL query like the one below, the glosis concepts should be returned.
+
+```
+SELECT DISTINCT ?Concept 
+FROM <http://w3id.org/glosis/model/procedure#>
+WHERE {[] a ?Concept} 
+LIMIT 20
+```
 
 ## Setup Skosmos
 
@@ -37,11 +44,11 @@ The file [config-docker.ttl](https://github.com/ejpsoil/soildata-assimilation-gu
 
 After an update of the config file, you need to restart the docker compose.
 
-- Open http://localhost and evaluate if the codelist is properly loaded. 
+- Open http://localhost:8080 and evaluate if the codelist is properly loaded. 
 
 In case of errors, logging of skosmos occurs in the `browser log panel`, click anywhere in the page and select `inspect` from the context menu. Then open the `console` tab and refresh the page.
 
-In case you are insterested to update the look and feel of the skosmos instance, notice the `skosmos:customCss` property on the configfile. This property can link to a css file having custom css. Include the css file via a volume mount in the docker compose.
+In case you are insterested to update the look and feel of the skosmos instance, notice the `skosmos:customCss` property on the config file. This property can link to a css file having custom css. Include the css file via a volume mount in the docker compose.
 
 ## Read more
 

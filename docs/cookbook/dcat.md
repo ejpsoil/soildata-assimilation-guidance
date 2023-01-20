@@ -7,3 +7,27 @@ been introduced in follow-up editions of DCAT (v2, v3).
 - Standard: https://www.w3.org/ns/dcat
 - GeoDCAT-AP: https://semiceu.github.io/GeoDCAT-AP
 - Good Paractice: https://inspire.ec.europa.eu/good-practice/geodcat-ap
+
+## Ontologies used in DCAT
+
+DCAT makes use of other ontologies, following the best practices of the Semantic
+Web. They are all relevant to produce consistent and usable meta-data for the
+web.
+
+- **[vCard](https://www.w3.org/TR/vcard-rdf/)**: For the description of People
+  and Organisations according to the specification issued by the Internet
+Engineering Task Force (IETF)
+([RFC6350](https://www.rfc-editor.org/rfc/rfc6350)). Also considers addresses,
+communication means and inter-personal relations.
+
+- **[Dublin
+  Core](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/)**: A
+small ontology implementing the fifteen element [ISO
+15836-1:2017](https://www.iso.org/standard/71339.html) standard for
+documentation meta-data. The ontology expands on the original Dublin Core with
+additional terms meant to facilitate meta-data creation and publication with RDF.
+
+- **[PROV-O](https://www.w3.org/TR/prov-o/)**: An OWL translation of the [Prov
+  Data Model](http://www.w3.org/TR/2013/REC-prov-dm-20130430/) specified by the
+W3C. Provides a set of classes, properties, and restrictions that can be used to
+represent and interchange provenance information.

@@ -54,11 +54,11 @@ During the masterclass questions can be placed in the [gitter channel](https://g
 
 Participants cluster in focus groups around a certain topic or technology. Initial groups are formed in the welcome ceremony. Here are some suggestions:
 
-- Carbon stock (Sample dataset: [Dutch BRH-P](cookbook/data/bhr-p/readme) or [SoilGrids](https://files.isric.org/soilgrids/latest/data_aggregated/1000m/soc/) ([COG format](https://www.cogeo.org/)))
+- Carbon stock (Sample dataset: [Dutch BRH-P](../cookbook/data/bhr-p/readme))
 - Soil biology & quality
+- Grids, Soilmaps, WCS ([SoilGrids](https://files.isric.org/soilgrids/latest/data_aggregated/1000m/soc/) [COG format](https://www.cogeo.org/))
 - Soil profile databases, lab results & spectroscopy
 - Agriculture
-- Java tribe (Geoserver, deegree, geotools)
 - Sensorthings, O&M
 - GeoPython
 - Governance aspects (open data, security, EU requirements)

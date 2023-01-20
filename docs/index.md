@@ -50,7 +50,9 @@ The practices cover 7 topics.
 
 ## Masterclass
 
-24-26 jan ISRIC and WENR are organising a masterclass on soil data assimilation. [A page](masterclass/index.md) has been set up for organisational aspects.
+At 24-26 january 2023 [Wageningen Environmental Research](https://www.wur.nl/en/research-results/research-institutes/environmental-research.htm) and
+[ISRIC - World Soil Information](https://www.isric.org) are organising a masterclass on Soil Data Assimilation. This masterclass is a follow up of 
+the [Training on INSPIRE Good Practices around Soil Data](masterclass/edition-2022.md) held in april 2022. [A page](masterclass/index.md) has been set up for organisational aspects of the masterclass. 
 
 ## Reading guide
 

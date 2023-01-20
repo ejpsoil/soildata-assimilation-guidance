@@ -1,13 +1,17 @@
 # Masterclass on Soil Data Assimilation
 
-At jan 24-26 2023 WENR & ISRIC are organising a masterclass on Soil Data Assimilation.
+At 24-26 january 2023 [Wageningen Environmental Research](https://www.wur.nl/en/research-results/research-institutes/environmental-research.htm) and
+[ISRIC - World Soil Information](https://www.isric.org) are organising a masterclass on Soil Data Assimilation. This masterclass is a follow up of 
+the [Training on INSPIRE Good Practices around Soil Data](./edition-2022.md) held in april 2022.
 
 The general design of the masterclass is to set up workgroups around certain topics, which self organise to set some goals for the masterclass and try to achieve the goals.
 Every day starts with a general kick-off and closing to report on aims and progress. A selection of content experts is available which circulate between the groups.
 
-## Q&A channel
+## Q&A channel and meets
 
-During the masterclass questions can be placed in the [gitter channel](https://gitter.im/ejpsoil/soildata-assimilation-guidance). Note that it may take some time to respond, for urgent matters, use alternative channels.
+During the masterclass questions can be placed in a [Q&A channel](https://gitter.im/ejpsoil/soildata-assimilation-guidance). Note that it may take some time to respond. For urgent matters, use alternative channels (email/phone).
+
+The live meetings are facilitated by [Waag](https://waag.org) via the [jitsi software](https://github.com/jitsi). Read the [privacy statement](https://waag-org.translate.goog/nl/article/privacy-statement-meetwaagorg-jitsi/?_x_tr_sl=en&_x_tr_tl=de&_x_tr_hl=en&_x_tr_pto=wapp). We will record the meetings and publish it as open access training materials, by joining the meeting you confirm to this aspect. To keep performance good, please deactivate your camera when not speaking.
 
 ## Program (times in CET)
 
@@ -16,7 +20,7 @@ During the masterclass questions can be placed in the [gitter channel](https://g
 | 9.00 | Welcome ceremony / Set up teams | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) |
 | 10.00 | Day start; Introduction to data assimilation (harmonization; extension; codelists) | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
 | 11:00 |  |  |
-| 12:00 |  |  |
+| 12:00 | a pythonic metadata workflow - Paul van Genuchten | [ejp-sda-geopython](https://meet.waag.org/ejp-sda-geopython)  |
 | 13.00 | Lunch break |  |
 | 13.45 | Progress check; is everybody on track? | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
 | 14:00 |  |  |
@@ -64,6 +68,8 @@ Participants cluster in focus groups around a certain topic or technology. Initi
 - Governance aspects (open data, security, EU requirements)
 - Semantic web, GLOSIS, SKOS
 - Dataspaces
+- Timezone Pacific
+- Timezone Americas
 
 For each group a wiki, chat and jitsy are listed below.
 

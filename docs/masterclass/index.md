@@ -11,7 +11,7 @@ During the masterclass questions can be placed in the [gitter channel](https://g
 
 ## Program (times in CET)
 
-| 24th | Building Gaia; Meeting room 2 | Online link | 
+| 24th | Building Gaia; Meeting room 2 | Join online | 
 | --- | --- | --- |
 | 9.00 | Welcome ceremony / Set up teams | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) |
 | 10.00 | Day start; Introduction to data assimilation (harmonization; extension; codelists) | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
@@ -25,7 +25,7 @@ During the masterclass questions can be placed in the [gitter channel](https://g
 | 16.00 | Day-closing pitches | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) |
  
 
-| 25th | Lumen 2 meeting room |
+| 25th | Lumen 2 meeting room | Join online | 
 | --- | --- | --- |
 | 9.00 | Day start; Introduction to View and download services | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
 | 10.00 | Sensorthings API - Kathi Schleidt, Hylke van de Schaaf | [ejp-sda-sta](https://meet.waag.org/ejp-sda-sta) | 
@@ -37,7 +37,7 @@ During the masterclass questions can be placed in the [gitter channel](https://g
 | 15.00 | geopython (pygeoapi, pygeometa, pycsw) - Tom Kralidis, Luis de Sousa | [ejp-sda-geopython](https://meet.waag.org/ejp-sda-geopython) | 
 | 16.00 | Day-closing pitches | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
          
-| 26th | Gaia 2 meeting room |
+| 26th | Gaia 2 meeting room | Join online | 
 | --- | --- | ---|
 | 9.00 | Day start; Introduction to Metadata and discovery | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
 | 10:00 | deegree webservices intro and Q&A - Torsten Friebe | [ejp-sda-deegree](https://meet.waag.org/ejp-sda-deegree) | 

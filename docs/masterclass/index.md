@@ -68,6 +68,8 @@ Participants cluster in focus groups around a certain topic or technology. Initi
 - Governance aspects (open data, security, EU requirements)
 - Semantic web, GLOSIS, SKOS
 - Dataspaces
+- Timezone Pacific
+- Timezone Americas
 
 For each group a wiki, chat and jitsy are listed below.
 

@@ -25,9 +25,9 @@ MapServer is configured using [map files](https://www.mapserver.org/mapfile/). T
 https://example.org/mapserv.cgi?map=/data/soilbody.map&service=WMS&request=GetCapabilities
 ```
 
-Various tools exist which create mapfiles automatically, from for example a QGIS layer. See https://plugins.qgis.org/plugins/geocatbridge/.
+Various tools exist which create mapfiles automatically, from for example a QGIS layer. See for example the [GeoCat Bridge](https://plugins.qgis.org/plugins/geocatbridge/) software.
 
-In this case we'll assemble the mapfile in a text editor. For some of the more advanced text editors, such as [Visual Studio Code](https://code.visualstudio.com/), mapfile editing plugins are available, which provide validation and syntax highlighting.
+In this recipe we'll assemble the mapfile in a text editor. For some of the more advanced text editors, such as [Visual Studio Code](../utils/visualstudiocode.md), mapfile editing plugins are available, which provide validation and syntax highlighting.
 
 A generic mapfile Quick Start is provided at https://live.osgeo.org/en/quickstart/mapserver_quickstart.html. The quickstart is based on [OSGeo Live](https://live.osgeo.org/), a virtual DVD, which offers a preinstalled mapserver and has data from [Natural Earth](https://www.naturalearthdata.com/downloads/).
 
@@ -73,7 +73,7 @@ END
 
 ## MapServer via Docker
 
-MapServer requires a number of dependencies, which may be hard to install on some systems, that's why this recipe suggests to work with Docker containers which are prepared to run mapserver.
+MapServer requires a number of dependencies, which may be hard to install on some systems, that's why this recipe suggests to work with [Docker containers](../utils/docker.md) which are prepared to run mapserver.
 
 The [camp2camp mapserver image](https://hub.docker.com/r/camptocamp/mapserver) is a commonly used mapserver container image. While starting the container we provide a number of parameters so the container is able to locate the mapfile and the data files.
 
@@ -83,6 +83,13 @@ docker run -p=80:80 \
     -v=$(PWD)/data:/home/user/data/ \
     camptocamp/mapserver
 ```
+
+For a local installation of mapserver, options vary by platform
+
+- Windows; install [ms4w](https://www.ms4w.com) 
+- Apple; [brew install mapserver](https://formulae.brew.sh/formula/mapserver)
+- [Debian](http://wiki.debian.org/DebianGis) 
+- [Ubuntu](https://wiki.ubuntu.com/UbuntuGIS) 
 
 ## Testing a mapfile
 
@@ -122,6 +129,11 @@ If many style rules are involved (or if your project already has styling) a tool
 ## MapServer and WMTS
 
 MapServer does not provide tile services (WMTS) itself, but is often combined with a separate tool, [mapcache](https://mapserver.org/mapcache/), which provides tile service on top of a MapServer instance. Tile services are generally a safer option with respect to Quality of Service, but less dynamic in update and styling options. An interesting option is to use the WMS option of Mapcache, which uses a cache of tiles as a source to provide WMS services.
+
+## Validate a Mapserver WMS as INSPIRE View service
+
+You need to set up a [tunnel](../utils/localtunnel.md) so the [INSPIRE validator](https://inspire.ec.europa.eu/validator/home/index.html) will be able to assess your local service. 
+
 
 ## Read more:
 

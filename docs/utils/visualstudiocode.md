@@ -23,4 +23,4 @@ Optional features:
 - Git operations
 - Content comparison, compare 2 (or more) files.
 
-Many of the text editor communities have a range of plugins available to extend the functionality of the editor. Various text editors have for example a MapServer Mapfile plugin, which facilitates mapserver mapfile development.
+Many of the text editor communities have a range of plugins available to extend the functionality of the editor. Various text editors have for example a [MapServer](../cookbook/mapserver.md) Mapfile or [SLD](../cookbook/geoserver.md) plugin.

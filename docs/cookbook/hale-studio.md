@@ -237,21 +237,21 @@ Hale Studio is not able to process `anytype` fields by default. Instead you have
 
 ## Export GML
 
-- On the Export panel, follow the wizard, select the GML format. 
-- A 
-
+- On the File menu, select `Export` > `Transformed data`. A panel opens.
+- Select the `GML (FeatureCollection)` format.
+- Use one of projections suggested by INSPIRE, EPSG:4258 if you're not sure which. Enable the EPSG prefix. 
+- Finish the wizard, a GML file will be generated.
 
 ## Export GeoPackage
 
-Hale Studio
+Hale Studio also facilitates an export to GeoPackage. Hale Studio is able to auto generate a relation data model based on the XSD schema. See also the recipe on [GeoPackage](./glosis-db.md).
 
+- From the format selection, select the GeoPackage format.
+- Select the relevant projection and finish.
+- Use [DBeaver](https://dbeaver.io) or some other tool to view the outputs. DBeaver has a usefull ER-diagram vizualisation option.
 
 ## Validate GML
 
 You can test the generated GML in the [INSPIRE Validator](https://inspire.ec.europa.eu/validator/test-selection/index.html). 
-In [Local Tunnel](../utils/localtunnel.md) an approach is suggested to temporarily host a local service online, so you can run the validation.
+Select Dataset, and from `Annex III`, the Soil theme. Solve the `numeric riddle`, upload the GML file, add a label and start the test.
 
-## Read more
-
-Website: https://inspire.ec.europa.eu/validator/home/index.html
-GitHub: https://github.com/INSPIRE-MIF/helpdesk-validator

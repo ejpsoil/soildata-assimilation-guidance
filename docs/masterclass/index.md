@@ -19,35 +19,35 @@ The live meetings are facilitated by [Waag](https://waag.org) via the [jitsi sof
 | --- | --- | --- |
 | 9.00 | Welcome ceremony / Set up teams | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) |
 | 10.00 | Day start; Introduction to data assimilation (harmonization; extension; codelists) | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
-| 11:00 |  |  |
-| 12:00 | a pythonic metadata workflow - Paul van Genuchten | [ejp-sda-geopython](https://meet.waag.org/ejp-sda-geopython)  |
+| 11:00 | JRC INSPIRE Tools - Paul van Genuchten | [ejp-sda-jrc](https://meet.waag.org/ejp-sda-jrc) |
+| 12:00 | Skosmos (code lists) - Luis de Sousa, Paul van Genuchten | [ejp-sda-glosis](https://meet.waag.org/ejp-sda-glosis) | 
 | 13.00 | Lunch break |  |
 | 13.45 | Progress check; is everybody on track? | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
-| 14:00 |  |  |
+| 14:00 | GeoNetwork, GeoServer, Bridge - Paul van Genuchten | [ejp-sda-geoserver](https://meet.waag.org/ejp-sda-geoserver) | 
 | 14.30 | Soil model in Geopackage - Luis de Sousa  | [ejp-sda-gpkg](https://meet.waag.org/ejp-sda-gpkg) | 
-| 15:00 | GeoNetwork, GeoServer, Bridge - Paul van Genuchten | [ejp-sda-geoserver](https://meet.waag.org/ejp-sda-geoserver) | 
+| 15:00 | geopython (pygeoapi, pygeometa, pycsw) - Tom Kralidis, Luis de Sousa | [ejp-sda-geopython](https://meet.waag.org/ejp-sda-geopython) | 
 | 16.00 | Day-closing pitches | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) |
  
 
 | 25th | Lumen 2 meeting room | Join online | 
 | --- | --- | --- |
 | 9.00 | Day start; Introduction to View and download services | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
-| 10.00 | Sensorthings API - Kathi Schleidt, Hylke van de Schaaf | [ejp-sda-sta](https://meet.waag.org/ejp-sda-sta) | 
+| 10.00 | Sensorthings API - Kathi Schleidt, Hylke van der Schaaf | [ejp-sda-sta](https://meet.waag.org/ejp-sda-sta) | 
 | 11.00 | GLOSIS/RDF - Luis de Sousa | [ejp-sda-glosis](https://meet.waag.org/ejp-sda-glosis) | 
-| 12:00 | Hale Studio - | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
-| 13.00 | Lunch |
+| 12:00 | | |
+| 13.00 | Lunch | |
 | 13.45 | Progress check; is everybody on track? | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
 | 14.00 | WCS - Kathi Schleidt, Peter Baumann | [ejp-sda-wcs](https://meet.waag.org/ejp-sda-wcs) | 
-| 15.00 | geopython (pygeoapi, pygeometa, pycsw) - Tom Kralidis, Luis de Sousa | [ejp-sda-geopython](https://meet.waag.org/ejp-sda-geopython) | 
+| 15.00 | Hale Studio - Thorsten Reitz | [ejp-sda-general](https://meet.waag.org/ejp-sda-hale) |
 | 16.00 | Day-closing pitches | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
          
 | 26th | Gaia 2 meeting room | Join online | 
 | --- | --- | ---|
 | 9.00 | Day start; Introduction to Metadata and discovery | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
 | 10:00 | deegree webservices intro and Q&A - Torsten Friebe | [ejp-sda-deegree](https://meet.waag.org/ejp-sda-deegree) | 
-| 10:30 | MapServer intro and Q&A - Seth Girvin | [ejp-sda-mapserver](https://meet.waag.org/ejp-sda-mapserver) | 
-| 11:00 | JRC INSPIRE Tools - Paul van Genuchten | [ejp-sda-jrc](https://meet.waag.org/ejp-sda-jrc) | 
-| 11:30 | Skosmos (code lists) - Paul van Genuchten | [ejp-sda-glosis](https://meet.waag.org/ejp-sda-glosis) | 
+| 10:30 | MapServer intro and Q&A - Seth G | [ejp-sda-mapserver](https://meet.waag.org/ejp-sda-mapserver) | 
+| 11:00 | | |
+| 11:30 | A pythonic metadata workflow - Paul van Genuchten | [ejp-sda-geopython](https://meet.waag.org/ejp-sda-geopython)  |
 | 12:00 | STA-WCS Q&A - Kathi Schleidt | [ejp-sda-sta](https://meet.waag.org/ejp-sda-sta) | 
 | 13.00 | Lunch | |
 | 13.45 | Presentation of the results | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
@@ -80,18 +80,19 @@ For each group a wiki, chat and jitsy are listed below.
 
 ## Team of Experts
 
-| Expert | Affiliation | Topic |
+| Expert | Affiliation | Topic | Github |
 | ---|  --- | --- |
-| Jandirk Bulens | Wageningen Environmental Research | INSPIRE Soil Datamodel |
-| Hylke van der Schaaf | Fraunhofer | [Frost server](../cookbook/frost-server.md) |
-| Kathi Schleidt | Datacove.eu | [Rasdaman](../cookbook/rasdaman.md), [Frost server](../cookbook/frost-server.md) |
-| Luis de Sousa | ISRIC - World Soil Information | [RML.io](../cookbook/rml.md), [tarql](../cookbook/tarql.md), [virtuoso](../cookbook/virtuoso.md), geopython |
-| Paul van Genuchten | ISRIC - World Soil Information | [pygeoapi](../cookbook/pygeoapi.md), [GeoNetwork](../cookbook/geonetwork.md) | 
-| Peter Baumann | Constructor University Bremen | [Rasdaman](../cookbook/rasdaman.md) |
-| Seth Girvin | GeoGraphica | [MapServer](../cookbook/mapserver.md) |
-| Stefania Morrone | Epsilon | [Re3gistry](../cookbook/re3gistry.md), [Hale studio](../cookbook/hale-studio.md) |
-| Torsten Friebe | LatLon | [deegree webservices](../cookbook/deegree.md) |
-| Thorsten Reitz | Wetransform | [Hale Studio](../cookbook/hale-studio.md), [Hale Connect](../cookbook/hale-connect.md) |
-| Tom Kralidis | OSGeo | [pygeoapi](../cookbook/pygeoapi.md), pycsw, owslib, [pygeometa](../cookbook/pygeometa.md) |
+| Jandirk Bulens | Wageningen Environmental Research | INSPIRE Soil Datamodel | [bulen001](https://github.com/bulen001) |
+| Fenny van Egmond | ISRIC / Wageningen Environmental Research | Spectroscopy, Soil data, Soil Standards | [FennyVanEgmond](https://github.com/FennyVanEgmond) | 
+| Hylke van der Schaaf | Fraunhofer | [Frost server](../cookbook/frost-server.md) | [hylkevds](https://github.com/hylkevds) | 
+| Kathi Schleidt | Datacove.eu | [Rasdaman](../cookbook/rasdaman.md), [Frost server](../cookbook/frost-server.md) | [KathiSchleidt](https://github.com/KathiSchleidt)
+| Luis de Sousa | ISRIC - World Soil Information | [RML.io](../cookbook/rml.md), [tarql](../cookbook/tarql.md), [virtuoso](../cookbook/virtuoso.md), geopython | [ldesousa](https://github.com/ldesousa) |
+| Paul van Genuchten | ISRIC - World Soil Information | [pygeoapi](../cookbook/pygeoapi.md), [GeoNetwork](../cookbook/geonetwork.md) |  [pvgenuchten](https://github.com/pvgenuchten) |
+| Peter Baumann | Constructor University Bremen | [Rasdaman](../cookbook/rasdaman.md) | [pebau](https://github.com/pebau) |
+| Seth G | GeoGraphica | [MapServer](../cookbook/mapserver.md) | [geographika](https://github.com/geographika) |
+| Stefania Morrone | Epsilon | [Re3gistry](../cookbook/re3gistry.md), [Hale studio](../cookbook/hale-studio.md) | [sMorrone](https://github.com/sMorrone) |
+| Torsten Friebe | LatLon | [deegree webservices](../cookbook/deegree.md) | [tfr42](https://github.com/tfr42) |
+| Thorsten Reitz | Wetransform | [Hale Studio](../cookbook/hale-studio.md), [Hale Connect](../cookbook/hale-connect.md) | [thorsten-reitz](https://github.com/thorsten-reitz) |
+| Tom Kralidis | OSGeo | [pygeoapi](../cookbook/pygeoapi.md), pycsw, owslib, [pygeometa](../cookbook/pygeometa.md) | [tomkralidis](https://github.com/tomkralidis) |
 
 

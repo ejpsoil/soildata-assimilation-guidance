@@ -1,6 +1,7 @@
 # Training on INSPIRE Good Practices around Soil Data
 
-The [masterclass](./index.md) is a follow up of the Training on INSPIRE Good Practices around Soil Data which has been organised in april 2022. The presentations of that training are still available and provide a good introduction to this masterclass.
+In april 2022 WENR and ISRIC organised a first iteration of a training series on Good Practices around Soil Data. 
+The presentations of that training are still available and provide a good introduction to the [edition 2023 masterclass](./index.md).
 
 ![Visit to Soil Museum](img/museum.png)
 

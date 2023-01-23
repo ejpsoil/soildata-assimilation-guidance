@@ -26,5 +26,6 @@ There is a significat community dedicated to the use of python in the geospatial
 - [Fiona](https://fiona.readthedocs.io/)
 - [OWSLib](https://geopython.github.io/OWSLib/)
 - [GeoPandas](https://geopandas.org/)
+- [PyGRASS](https://grass.osgeo.org/grass82/manuals/libpython/pygrass_index.html)
 - [pygeometa](../cookbook/pygeometa.md)
 - [pyproj](https://pyproj4.github.io/pyproj), etc.

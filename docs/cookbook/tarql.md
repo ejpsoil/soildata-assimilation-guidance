@@ -1,3 +1,9 @@
+---
+Title: RDF creation with tarql
+Author: Luís Moreira de Sousa
+Date: 2023-01-19
+---
+
 [tarql](https://tarql.github.io/)
 =================================
 

@@ -1,14 +1,14 @@
 ---
-Author: Luis de Sousa
-Date: 2023-01-18
 Title: Extending Code Lists
+Author: Luís Moreira de Sousa
+Date: 2023-01-18
 ---
 
 
 Code-lists
 ==========
 
-This recipe describes a semantic approach based on [SKOS](https://www.w3.org/2004/02/skos/) to extend an INSPIRE codelist.
+This recipe describes a semantic approach based on [SKOS](https://www.w3.org/2004/02/skos/) to extend an INSPIRE code-list.
 
 
 INSPIRE

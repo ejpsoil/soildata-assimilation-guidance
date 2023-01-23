@@ -1,3 +1,12 @@
+---
+Title: DCAT
+Authors:
+    - Paul van Genuchten 
+    - Luís Moreira de Sousa
+Date: 2023-01-23
+---
+
+
 # DCAT
 
 [DCAT](https://www.w3.org/ns/dcat) is an ontology from W3C to describe datasets in the semantic web. It is supported by software such as CKAN, GeoNetwork.

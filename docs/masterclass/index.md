@@ -26,7 +26,7 @@ The live meetings are facilitated by [Waag](https://waag.org) via the [jitsi sof
 | 13.00 | Lunch break |  |
 | 13.45 | Progress check; is everybody on track? | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
 | 14:00 | GeoNetwork, GeoServer, Bridge - Paul van Genuchten | [ejp-sda-geoserver](https://meet.waag.org/ejp-sda-geoserver) | 
-| 15:00 | Soil model in Geopackage - Luis de Sousa  | [ejp-sda-gpkg](https://meet.waag.org/ejp-sda-gpkg) | 
+| 14:30 | Soil model in Geopackage - Luis de Sousa  | [ejp-sda-gpkg](https://meet.waag.org/ejp-sda-gpkg) | 
 | 16.00 | Day-closing pitches | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) |
  
 ### 25th of january

@@ -8,14 +8,20 @@ For example chapter 5 of [TG discovery services](https://inspire.ec.europa.eu/do
 
 ## Installation
 
-Jmeter is a java program, which can run on most platforms (if java is installed). Download the latest version from the [apache website](https://jmeter.apache.org/download_jmeter.cgi).
+Jmeter is a java program, which can run on most platforms (if java is installed). Download the latest version from the [apache website](https://jmeter.apache.org/download_jmeter.cgi). Unzip the archive and run `jmeter.bat` from bin directory.
+
+Jmeter may be quite overwhelming at first, the number of options is vast. Follow the tutorials to get introduced to the basic aspects.
 
 ## Web test plan
 
 Jmeter is typically used to test the performance and capacity of a website or webservice. 
 
-- Set up a web testing plan in jmeter by creating a list of sample requests (WMS/WFS/WCS, getcapabilities/getmap/getfeatere etc) 
-- Run the test against the webservice
+- Start Jmeter and follow the [build web test plan](https://jmeter.apache.org/usermanual/build-web-test-plan.html) tutorial. 
+- Create a web testing plan in jmeter and add a list of sample requests (WMS/WFS/WCS, getcapabilities/getmap/getfeatere etc). 
+
+![JMeter testplan](img/jmeter-testplan.png)
+
+- Run the test against the webservice 
 - Run the test with multiple users, notice the performance decrease of the service. Do not test against a production url, it wil severely impact the performance of that service. 
 
 ## Samples of requests:

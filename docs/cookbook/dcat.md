@@ -31,3 +31,28 @@ additional terms meant to facilitate meta-data creation and publication with RDF
   Data Model](http://www.w3.org/TR/2013/REC-prov-dm-20130430/) specified by the
 W3C. Provides a set of classes, properties, and restrictions that can be used to
 represent and interchange provenance information.
+
+## Query a DCAT resource
+
+The query below provides an example of how to interact with a knowledge graph
+of meta-data making use of the DCAT ontology. It returns a list of datasets
+tagged with keywords containing the string "soil". The data property
+`dcat:keyword` was originally meant exclusively for instances of the
+`dcat:Dataset` class, but since version 2 of the ontology it can be used with
+any class. 
+
+```sparql
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+
+SELECT ?dataset
+WHERE {
+    ?dataset a dcat:Dataset ;
+             dcat:keyword ?keyword .
+    FILTER CONTAINS(?keyword, "soil") .
+}
+```
+
+The `CONTAINS` function in the query above is used to partially match the
+string. For an exact match the equals operator can be used instead (`=`). To
+match more than one keyword, successive `FILTER` clauses can be concatenated with
+the or operator (`||`).

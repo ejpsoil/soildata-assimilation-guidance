@@ -135,6 +135,7 @@ excellent prototyping tool and will help you getting acquainted with the
 YARRRML syntax.
 
 The standard view of Matey has 4 sections:
+
 - a section for input data;
 - a section to define YARRRML rules;
 - a section to display RDF output;
@@ -144,7 +145,7 @@ There are various examples available to guide you through the basics of YARRRML 
 RML. Take some time to experiment with these examples, try modifying the
 output, or even to create further transformation rules.  
 
-Eventually you will find the limitatios of Matey, while convinient for
+Eventually you will find the limitations of Matey, while convenient for
 prototyping, it does not scale for large datasets or to process a large number
 of source files. For that you need to use the command line interface.
 
@@ -305,6 +306,7 @@ identified instead of layers?
 An example transformation for the measurements in the original dataset is
 available in the file [measurements.yarrrml](rml/measurements.yarrrml). The extra
 elements to address in this transformation are:
+  
   - Instance of the respective Observation class;
   - Instance of the respective Result class;
   - Relation between Observation and Result;

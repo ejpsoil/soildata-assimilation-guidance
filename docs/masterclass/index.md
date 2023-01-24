@@ -21,12 +21,12 @@ The live meetings are facilitated by [Waag](https://waag.org) via the [jitsi sof
 | --- | --- | --- |
 | 9.00 | Welcome ceremony / Set up teams | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) |
 | 10.00 | Day start; Introduction to data assimilation (harmonization; extension; codelists) | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
-| 11:00 | JRC INSPIRE Tools - Paul van Genuchten | [ejp-sda-jrc](https://meet.waag.org/ejp-sda-jrc) |
-| 12:00 | Skosmos (code lists) - Luis de Sousa, Paul van Genuchten | [ejp-sda-glosis](https://meet.waag.org/ejp-sda-glosis) | 
+| 11:00 | JRC INSPIRE Tools - Paul van Genuchten | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) |
+| 12:00 | Skosmos (code lists) - Luis de Sousa, Paul van Genuchten | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
 | 13.00 | Lunch break |  |
 | 13.45 | Progress check; is everybody on track? | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
-| 14:00 | GeoNetwork, GeoServer, Bridge - Paul van Genuchten | [ejp-sda-geoserver](https://meet.waag.org/ejp-sda-geoserver) | 
-| 14:30 | Soil model in Geopackage - Luis de Sousa  | [ejp-sda-gpkg](https://meet.waag.org/ejp-sda-gpkg) | 
+| 14:00 | GeoNetwork, GeoServer, Bridge - Paul van Genuchten | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
+| 14:30 | Soil model in Geopackage - Luis de Sousa  | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
 | 16.00 | Day-closing pitches | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) |
  
 ### 25th of january
@@ -34,12 +34,12 @@ The live meetings are facilitated by [Waag](https://waag.org) via the [jitsi sof
 | | Lumen 2 meeting room | Join online | 
 | --- | --- | --- |
 | 9.00 | Day start; Introduction to View and download services | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
-| 10.00 | Sensorthings API - Kathi Schleidt, Hylke van der Schaaf | [ejp-sda-sta](https://meet.waag.org/ejp-sda-sta) | 
-| 11.00 | GLOSIS/RDF - Luis de Sousa | [ejp-sda-glosis](https://meet.waag.org/ejp-sda-glosis) | 
+| 10.00 | Sensorthings API - Kathi Schleidt, Hylke van der Schaaf | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
+| 11.00 | GLOSIS/RDF - Luis de Sousa | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
 | 12:00 | | |
 | 13:00 | Lunch | |
-| 13:45 | WCS - Kathi Schleidt, Peter Baumann | [ejp-sda-wcs](https://meet.waag.org/ejp-sda-wcs) |
-| 14:30 | geopython (pygeoapi, pygeometa, pycsw) - Tom Kralidis, Luis de Sousa |  [ejp-sda-geopython](https://meet.waag.org/ejp-sda-geopython) | 
+| 13:45 | WCS - Kathi Schleidt, Peter Baumann | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) |
+| 14:30 | geopython (pygeoapi, pygeometa, pycsw) - Tom Kralidis, Luis de Sousa |  [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
 | 15:15 | Hale Studio - Thorsten Reitz | [ejp-sda-general](https://meet.waag.org/ejp-sda-hale) |
 | 16:00 | Day-closing pitches | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
 
@@ -48,13 +48,13 @@ The live meetings are facilitated by [Waag](https://waag.org) via the [jitsi sof
 | | Gaia 2 meeting room | Join online | 
 | --- | --- | ---|
 | 9.00 | Day start; Introduction to Metadata and discovery | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
-| 10:00 | deegree webservices intro and Q&A - Torsten Friebe | [ejp-sda-deegree](https://meet.waag.org/ejp-sda-deegree) | 
-| 10:30 | MapServer intro and Q&A - Seth G | [ejp-sda-mapserver](https://meet.waag.org/ejp-sda-mapserver) | 
-| 11:00 | A pythonic metadata workflow - Paul van Genuchten | [ejp-sda-geopython](https://meet.waag.org/ejp-sda-geopython)  |
-| 12:00 | STA-WCS Q&A - Kathi Schleidt | [ejp-sda-sta](https://meet.waag.org/ejp-sda-sta) | 
+| 10:00 | deegree webservices intro and Q&A - Torsten Friebe | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
+| 10:30 | MapServer intro and Q&A - Seth G | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
+| 11:00 | A pythonic metadata workflow - Paul van Genuchten | [ejp-sda-general](https://meet.waag.org/ejp-sda-general)  |
+| 12:00 | STA-WCS Q&A - Kathi Schleidt | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
 | 13.00 | Lunch | |
 | 13.45 | Presentation of the results | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
-| 16.00 | Evaluation and drinks | [ejp-sda-social](https://meet.waag.org/ejp-sda-social) | 
+| 16.00 | Evaluation and drinks | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
 
 
 ## Focus groups

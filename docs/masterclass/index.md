@@ -78,13 +78,16 @@ For each group a wiki, chat and jitsy are listed below.
 
 | Topic | Wiki | Chat | Meet | 
 | --- | --- | --- | --- |
-|  |  |  |  | 
+| Sensorthings | [wiki](https://docs.google.com/document/d/10Rpu7v1uBkv7gBb2UdxPeOkbxLWS5gJc4Q8kMhr2tKA/edit?usp=sharing) |  |  | 
+| Codelists | [wiki](https://docs.google.com/document/d/1HKiA3FXkyHqy9AZxrI7hcm6KSnP-_HZaLst5stujX1o/edit?usp=sharing) | |
+| Soil profiles and maps | [wiki](https://docs.google.com/document/d/1o2L1EUMihuQEYVOkOhwi5ADUfTKdnwFhqdeTsXIJW7I/edit?usp=sharing) | |
+| Raster data | [wiki](https://docs.google.com/document/d/1CktRieKSCVcUxw3WYZQLV7EHk32EkmNBJNxGMT80thg/edit?usp=sharing) | |
 
 
 ## Team of Experts
 
 | Expert | Affiliation | Topic | Github |
-| ---|  --- | --- |
+| ---|  --- | --- | --- |
 | Jandirk Bulens | Wageningen Environmental Research | INSPIRE Soil Datamodel | [bulen001](https://github.com/bulen001) |
 | Fenny van Egmond | ISRIC / Wageningen Environmental Research | Spectroscopy, Soil data, Soil Standards | [FennyVanEgmond](https://github.com/FennyVanEgmond) | 
 | Hylke van der Schaaf | Fraunhofer | [Frost server](../cookbook/frost-server.md) | [hylkevds](https://github.com/hylkevds) | 

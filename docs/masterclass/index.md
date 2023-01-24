@@ -26,7 +26,7 @@ The live meetings are facilitated by [Waag](https://waag.org) via the [jitsi sof
 | 13.00 | Lunch break |  |
 | 13.45 | Progress check; is everybody on track? | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
 | 14:00 | GeoNetwork, GeoServer, Bridge - Paul van Genuchten | [ejp-sda-geoserver](https://meet.waag.org/ejp-sda-geoserver) | 
-| 15:00 | Soil model in Geopackage - Luis de Sousa  | [ejp-sda-gpkg](https://meet.waag.org/ejp-sda-gpkg) | 
+| 14:30 | Soil model in Geopackage - Luis de Sousa  | [ejp-sda-gpkg](https://meet.waag.org/ejp-sda-gpkg) | 
 | 16.00 | Day-closing pitches | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) |
  
 ### 25th of january
@@ -59,32 +59,22 @@ The live meetings are facilitated by [Waag](https://waag.org) via the [jitsi sof
 
 ## Focus groups
 
-Participants cluster in focus groups around a certain topic or technology. Initial groups are formed in the welcome ceremony. Here are some suggestions:
-
-- Carbon stock (Sample dataset: [Dutch BRH-P](../cookbook/data/bhr-p/readme))
-- Soil biology & quality
-- Grids, Soilmaps, WCS ([SoilGrids](https://files.isric.org/soilgrids/latest/data_aggregated/1000m/soc/) [COG format](https://www.cogeo.org/))
-- Soil profile databases, lab results & spectroscopy
-- Agriculture
-- Sensorthings, O&M
-- GeoPython
-- Governance aspects (open data, security, EU requirements)
-- Semantic web, GLOSIS, SKOS
-- Dataspaces
-- Timezone Pacific
-- Timezone Americas
+Participants cluster in focus groups around a certain topic or technology. Initial groups are formed in the welcome ceremony. YOu can suggest a new group any time.
 
 For each group a wiki, chat and jitsy are listed below.
 
-| Topic | Wiki | Chat | Meet | 
-| --- | --- | --- | --- |
-|  |  |  |  | 
+| Topic | Wiki | Chat |  
+| --- | --- | --- | 
+| Sensorthings | [wiki](https://docs.google.com/document/d/10Rpu7v1uBkv7gBb2UdxPeOkbxLWS5gJc4Q8kMhr2tKA/edit?usp=sharing) | [gitter](https://gitter.im/ejpsoil/sensorthings) |  
+| Codelists | [wiki](https://docs.google.com/document/d/1HKiA3FXkyHqy9AZxrI7hcm6KSnP-_HZaLst5stujX1o/edit?usp=sharing) | [gitter](https://gitter.im/ejpsoil/code-lists) |
+| Soil profiles and maps | [wiki](https://docs.google.com/document/d/1o2L1EUMihuQEYVOkOhwi5ADUfTKdnwFhqdeTsXIJW7I/edit?usp=sharing) | [gitter](https://gitter.im/ejpsoil/soil-profiles) |
+| Raster data | [wiki](https://docs.google.com/document/d/1CktRieKSCVcUxw3WYZQLV7EHk32EkmNBJNxGMT80thg/edit?usp=sharing) | [gitter](https://gitter.im/ejpsoil/raster-data) |
 
 
 ## Team of Experts
 
 | Expert | Affiliation | Topic | Github |
-| ---|  --- | --- |
+| ---|  --- | --- | --- |
 | Jandirk Bulens | Wageningen Environmental Research | INSPIRE Soil Datamodel | [bulen001](https://github.com/bulen001) |
 | Fenny van Egmond | ISRIC / Wageningen Environmental Research | Spectroscopy, Soil data, Soil Standards | [FennyVanEgmond](https://github.com/FennyVanEgmond) | 
 | Hylke van der Schaaf | Fraunhofer | [Frost server](../cookbook/frost-server.md) | [hylkevds](https://github.com/hylkevds) | 

@@ -44,20 +44,25 @@ represent and interchange provenance information.
 ## Query a DCAT resource
 
 The query below provides an example of how to interact with a knowledge graph
-of meta-data making use of the DCAT ontology. It returns a list of datasets
+of metadata making use of the DCAT ontology. It returns a list of datasets
 tagged with keywords containing the string "soil". The data property
 `dcat:keyword` was originally meant exclusively for instances of the
 `dcat:Dataset` class, but since version 2 of the ontology it can be used with
 any class. 
 
+- Follow the [virtuoso/skosmos](./virtuoso.md) recipe up to step `On the linked data tab, select Quad store upload.` Instead of adding a remote url you unzip and upload a [rdf snapshot of the dutch spatial catalogue](data/ngr.rdf.xml.zip). 
+- Navigate to http://localhost:8890/sparql/ and run the query below.
+
 ```sparql
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dct: <http://purl.org/dc/terms/>
 
-SELECT ?dataset
+SELECT ?dataset, ?title
 WHERE {
     ?dataset a dcat:Dataset ;
+             dct:title ?title ;
              dcat:keyword ?keyword .
-    FILTER CONTAINS(?keyword, "soil") .
+    FILTER CONTAINS(?keyword, "EIGEN") .
 }
 ```
 
@@ -65,3 +70,11 @@ The `CONTAINS` function in the query above is used to partially match the
 string. For an exact match the equals operator can be used instead (`=`). To
 match more than one keyword, successive `FILTER` clauses can be concatenated with
 the or operator (`||`).
+
+If at some point your database is corrupt, you can remove all triples by running:
+
+```
+DELETE FROM DB.DBA.RDF_QUAD ;
+```
+
+Colin Maundry provides some [dcat sample sparql queries](https://gist.github.com/ColinMaudry/fdc466383fdfd0dd24d2). Notice that you replace the graph url `http://www.data.maudry.com/uk` in the queries with yours.

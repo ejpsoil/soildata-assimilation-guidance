@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Harmonization</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/beige.min.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <section>
+                    <img src="https://ejpsoil.eu/fileadmin/projects/ejpsoil/EJP_Soil_logo_cmyk-h100.png"
+                        style="border:none;height:60px" />
+                    <h1>Data Harmonization</h1>
+                    <h4>Masterclass on soil data assimilation</h4>
+                    <small>Wageningen Environmental Research /
+                        ISRIC - World Soil information </small><br>
+                    January 2023
+                    </p>
+                    <img src="https://ejpsoil.eu/fileadmin/_processed_/0/3/csm_Horizon_2020_funding_Thumbnail_a20cd538b7.jpg"
+                        style="border:none;height:60px"" />
+                </section>
+            </section>
+            
+            <section>
+                <section>
+                    <h2>Bring 2 datasets together</h2>
+                    <ul>
+                        <li>2 datasets from different regions/countries</li>
+                        <li>For example in cross border projects</li>
+                        <li>Historic versus current</li>
+                        <li>Modelled vs actual</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Unify the datamodels</h2>
+                    <ul>
+                        <li>Align the file format</li>
+                        <li>Connect tables & fieldnames</li>
+                        <li>Convert values</li>
+                        <li>Map code lists</li>
+                        <li>Reproject/Connect geometries</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Standards</h2>
+                    <ul>
+                        <li>iso28258:2013 / INSPIRE Soil</li>
+                        <li>GLOSIS</li>
+                        <li>GPKG</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Software</h2>
+                    <ul>
+                        <li>GML - Hale</li>
+                        <li>Glosis - Yarrml/TarQL/...</li>
+                        <li>GPKG - GDAL/R/Python/SQL/...</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>What if the models don't match?</h2>
+                    <ul>
+                        <li>Extend codelists</li>
+                        <li>Extend datamodel</li>
+                        <li>Drop data...</li>
+                    </ul>
+                </section>
+            </section>
+
+                
+            <section>
+                <section>
+                    <h1>Questions?</h1>
+                </section>
+            </section>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.2.12/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/markdown/markdown.min.js"></script>
+
+    <script>
+        Reveal.initialize({
+            hash: true,
+            plugins: [RevealMarkdown]
+        });
+    </script>
+</body>
+
+</html>

@@ -59,20 +59,7 @@ The live meetings are facilitated by [Waag](https://waag.org) via the [jitsi sof
 
 ## Focus groups
 
-Participants cluster in focus groups around a certain topic or technology. Initial groups are formed in the welcome ceremony. Here are some suggestions:
-
-- Carbon stock (Sample dataset: [Dutch BRH-P](../cookbook/data/bhr-p/readme))
-- Soil biology & quality
-- Grids, Soilmaps, WCS ([SoilGrids](https://files.isric.org/soilgrids/latest/data_aggregated/1000m/soc/) [COG format](https://www.cogeo.org/))
-- Soil profile databases, lab results & spectroscopy
-- Agriculture
-- Sensorthings, O&M
-- GeoPython
-- Governance aspects (open data, security, EU requirements)
-- Semantic web, GLOSIS, SKOS
-- Dataspaces
-- Timezone Pacific
-- Timezone Americas
+Participants cluster in focus groups around a certain topic or technology. Initial groups are formed in the welcome ceremony. YOu can suggest a new group any time.
 
 For each group a wiki, chat and jitsy are listed below.
 

@@ -17,17 +17,16 @@ The live meetings are facilitated by [Waag](https://waag.org) via the [jitsi sof
 
 ### 24th of january
 
-|  | Building Gaia; Meeting room 2 | Join online | 
+|  | Building Gaia; Meeting room 2 | Video | 
 | --- | --- | --- |
-| 9.00 | Welcome ceremony / Set up teams | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) |
-| 10.00 | Day start; Introduction to data assimilation (harmonization; extension; codelists) | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
-| 11:00 | JRC INSPIRE Tools - Paul van Genuchten | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) |
-| 12:00 | Skosmos (code lists) - Luis de Sousa, Paul van Genuchten | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
+| 9.00 | Welcome ceremony / Set up teams |  |
+| 10.00 | Day start; Introduction to data assimilation (harmonization; extension; codelists) | [video](https://wur.yuja.com/V/Video?v=430847&node=1937918&a=83533229&autoplay=1) | 
+| 11:00 | JRC INSPIRE Tools - Paul van Genuchten | [video](https://wur.yuja.com/V/Video?v=430878&node=1938063&a=187273784&autoplay=1) |
+| 12:00 | Skosmos (code lists) - Paul van Genuchten | [video](https://wur.yuja.com/V/Video?v=430881&node=1938074&a=143339043&autoplay=1) | 
 | 13.00 | Lunch break |  |
-| 13.45 | Progress check; is everybody on track? | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
-| 14:00 | GeoNetwork, GeoServer, Bridge - Paul van Genuchten | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
-| 14:30 | Soil model in Geopackage - Luis de Sousa  | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
-| 16.00 | Day-closing pitches | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) |
+| 14:00 | GeoNetwork, GeoServer, Bridge - Paul van Genuchten |  | 
+| 14:30 | Soil model in Geopackage - Stefania Morrone  | [video](https://wur.yuja.com/V/Video?v=430869&node=1938006&a=184498297&autoplay=1) | 
+| 16.00 | Day-closing wrapup | [video](https://wur.yuja.com/V/Video?v=430850&node=1937930&a=156608566&autoplay=1) |
  
 ### 25th of january
 

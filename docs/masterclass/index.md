@@ -76,12 +76,12 @@ Participants cluster in focus groups around a certain topic or technology. Initi
 
 For each group a wiki, chat and jitsy are listed below.
 
-| Topic | Wiki | Chat | Meet | 
-| --- | --- | --- | --- |
-| Sensorthings | [wiki](https://docs.google.com/document/d/10Rpu7v1uBkv7gBb2UdxPeOkbxLWS5gJc4Q8kMhr2tKA/edit?usp=sharing) |  |  | 
-| Codelists | [wiki](https://docs.google.com/document/d/1HKiA3FXkyHqy9AZxrI7hcm6KSnP-_HZaLst5stujX1o/edit?usp=sharing) | |
-| Soil profiles and maps | [wiki](https://docs.google.com/document/d/1o2L1EUMihuQEYVOkOhwi5ADUfTKdnwFhqdeTsXIJW7I/edit?usp=sharing) | |
-| Raster data | [wiki](https://docs.google.com/document/d/1CktRieKSCVcUxw3WYZQLV7EHk32EkmNBJNxGMT80thg/edit?usp=sharing) | |
+| Topic | Wiki | Chat |  
+| --- | --- | --- | 
+| Sensorthings | [wiki](https://docs.google.com/document/d/10Rpu7v1uBkv7gBb2UdxPeOkbxLWS5gJc4Q8kMhr2tKA/edit?usp=sharing) | [gitter](https://gitter.im/ejpsoil/sensorthings) |  
+| Codelists | [wiki](https://docs.google.com/document/d/1HKiA3FXkyHqy9AZxrI7hcm6KSnP-_HZaLst5stujX1o/edit?usp=sharing) | [gitter](https://gitter.im/ejpsoil/code-lists) |
+| Soil profiles and maps | [wiki](https://docs.google.com/document/d/1o2L1EUMihuQEYVOkOhwi5ADUfTKdnwFhqdeTsXIJW7I/edit?usp=sharing) | [gitter](https://gitter.im/ejpsoil/soil-profiles) |
+| Raster data | [wiki](https://docs.google.com/document/d/1CktRieKSCVcUxw3WYZQLV7EHk32EkmNBJNxGMT80thg/edit?usp=sharing) | [gitter](https://gitter.im/ejpsoil/raster-data) |
 
 
 ## Team of Experts

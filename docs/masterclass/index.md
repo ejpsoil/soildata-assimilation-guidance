@@ -33,14 +33,14 @@ The live meetings are facilitated by [Waag](https://waag.org) via the [jitsi sof
 | | Lumen 2 meeting room | Join online | 
 | --- | --- | --- |
 | 9.00 | Day start; Introduction to View and download services |[Teams](https://teams.microsoft.com/l/meetup-join/19:meeting_OTY4ZWQ4NGYtYmI1Mi00NjliLThkMTUtOGU1Zjg0OTI4ZWYw@thread.v2/0?context=%7B%22Tid%22:%2227d137e5-761f-4dc1-af88-d26430abb18f%22,%22Oid%22:%224af21b12-8edb-458f-8178-fc83b6e0aa47%22%7D) | 
-| 10.00 | Sensorthings API - Kathi Schleidt, Hylke van der Schaaf | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
-| 11.00 | GLOSIS/RDF - Luis de Sousa | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
+| 10.00 | Sensorthings API - Kathi Schleidt, Hylke van der Schaaf | [Teams](https://teams.microsoft.com/l/meetup-join/19:meeting_OTY4ZWQ4NGYtYmI1Mi00NjliLThkMTUtOGU1Zjg0OTI4ZWYw@thread.v2/0?context=%7B%22Tid%22:%2227d137e5-761f-4dc1-af88-d26430abb18f%22,%22Oid%22:%224af21b12-8edb-458f-8178-fc83b6e0aa47%22%7D) | 
+| 11.00 | GLOSIS/RDF - Luis de Sousa | [Teams](https://teams.microsoft.com/l/meetup-join/19:meeting_OTY4ZWQ4NGYtYmI1Mi00NjliLThkMTUtOGU1Zjg0OTI4ZWYw@thread.v2/0?context=%7B%22Tid%22:%2227d137e5-761f-4dc1-af88-d26430abb18f%22,%22Oid%22:%224af21b12-8edb-458f-8178-fc83b6e0aa47%22%7D) | 
 | 12:00 | | |
 | 13:00 | Lunch | |
-| 13:45 | WCS - Kathi Schleidt, Peter Baumann | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) |
-| 14:30 | geopython (pygeoapi, pygeometa, pycsw) - Tom Kralidis, Luis de Sousa |  [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
-| 15:15 | Hale Studio - Thorsten Reitz | [ejp-sda-general](https://meet.waag.org/ejp-sda-hale) |
-| 16:00 | Day-closing pitches | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
+| 13:45 | WCS - Kathi Schleidt, Peter Baumann | [Teams](https://teams.microsoft.com/l/meetup-join/19:meeting_OTY4ZWQ4NGYtYmI1Mi00NjliLThkMTUtOGU1Zjg0OTI4ZWYw@thread.v2/0?context=%7B%22Tid%22:%2227d137e5-761f-4dc1-af88-d26430abb18f%22,%22Oid%22:%224af21b12-8edb-458f-8178-fc83b6e0aa47%22%7D) |
+| 14:30 | geopython (pygeoapi, pygeometa, pycsw) - Tom Kralidis, Luis de Sousa |  [Teams](https://teams.microsoft.com/l/meetup-join/19:meeting_OTY4ZWQ4NGYtYmI1Mi00NjliLThkMTUtOGU1Zjg0OTI4ZWYw@thread.v2/0?context=%7B%22Tid%22:%2227d137e5-761f-4dc1-af88-d26430abb18f%22,%22Oid%22:%224af21b12-8edb-458f-8178-fc83b6e0aa47%22%7D) | 
+| 15:15 | Hale Studio - Thorsten Reitz | [Teams](https://teams.microsoft.com/l/meetup-join/19:meeting_OTY4ZWQ4NGYtYmI1Mi00NjliLThkMTUtOGU1Zjg0OTI4ZWYw@thread.v2/0?context=%7B%22Tid%22:%2227d137e5-761f-4dc1-af88-d26430abb18f%22,%22Oid%22:%224af21b12-8edb-458f-8178-fc83b6e0aa47%22%7D) |
+| 16:00 | Day-closing pitches | [Teams](https://teams.microsoft.com/l/meetup-join/19:meeting_OTY4ZWQ4NGYtYmI1Mi00NjliLThkMTUtOGU1Zjg0OTI4ZWYw@thread.v2/0?context=%7B%22Tid%22:%2227d137e5-761f-4dc1-af88-d26430abb18f%22,%22Oid%22:%224af21b12-8edb-458f-8178-fc83b6e0aa47%22%7D) | 
 
 ### 26th of january
          

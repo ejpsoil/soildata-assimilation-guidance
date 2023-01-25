@@ -32,7 +32,7 @@ The live meetings are facilitated by [Waag](https://waag.org) via the [jitsi sof
 
 | | Lumen 2 meeting room | Join online | 
 | --- | --- | --- |
-| 9.00 | Day start; Introduction to View and download services | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
+| 9.00 | Day start; Introduction to View and download services |[Teams](https://teams.microsoft.com/l/meetup-join/19:meeting_OTY4ZWQ4NGYtYmI1Mi00NjliLThkMTUtOGU1Zjg0OTI4ZWYw@thread.v2/0?context=%7B%22Tid%22:%2227d137e5-761f-4dc1-af88-d26430abb18f%22,%22Oid%22:%224af21b12-8edb-458f-8178-fc83b6e0aa47%22%7D) | 
 | 10.00 | Sensorthings API - Kathi Schleidt, Hylke van der Schaaf | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
 | 11.00 | GLOSIS/RDF - Luis de Sousa | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
 | 12:00 | | |

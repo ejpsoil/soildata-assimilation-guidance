@@ -46,14 +46,14 @@ The live meetings are facilitated by [Waag](https://waag.org) via the [jitsi sof
          
 | | Gaia 2 meeting room | Join online | 
 | --- | --- | ---|
-| 9.00 | Day start; Introduction to Metadata and discovery | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
-| 10:00 | deegree webservices intro and Q&A - Torsten Friebe | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
-| 10:30 | MapServer intro and Q&A - Seth G | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
-| 11:00 | A pythonic metadata workflow - Paul van Genuchten | [ejp-sda-general](https://meet.waag.org/ejp-sda-general)  |
-| 12:00 | STA-WCS Q&A - Kathi Schleidt | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
+| 9.00 | Day start; Introduction to Metadata and discovery | [Teams_Thursday](https://teams.microsoft.com/l/meetup-join/19%3ameeting_NzBlZTZmMDYtYzJmMC00Y2JmLWI3YzItYjQyYzQ5MmQ0NjZj%40thread.v2/0?context=%7b%22Tid%22%3a%2227d137e5-761f-4dc1-af88-d26430abb18f%22%2c%22Oid%22%3a%224af21b12-8edb-458f-8178-fc83b6e0aa47%22%7d) | 
+| 10:00 | deegree webservices intro and Q&A - Torsten Friebe | [Teams_Thursday](https://teams.microsoft.com/l/meetup-join/19%3ameeting_NzBlZTZmMDYtYzJmMC00Y2JmLWI3YzItYjQyYzQ5MmQ0NjZj%40thread.v2/0?context=%7b%22Tid%22%3a%2227d137e5-761f-4dc1-af88-d26430abb18f%22%2c%22Oid%22%3a%224af21b12-8edb-458f-8178-fc83b6e0aa47%22%7d) | 
+| 10:30 | MapServer intro and Q&A - Seth G | [Teams_Thursday](https://teams.microsoft.com/l/meetup-join/19%3ameeting_NzBlZTZmMDYtYzJmMC00Y2JmLWI3YzItYjQyYzQ5MmQ0NjZj%40thread.v2/0?context=%7b%22Tid%22%3a%2227d137e5-761f-4dc1-af88-d26430abb18f%22%2c%22Oid%22%3a%224af21b12-8edb-458f-8178-fc83b6e0aa47%22%7d) | 
+| 11:00 | A pythonic metadata workflow - Paul van Genuchten | [Teams_Thursday](https://teams.microsoft.com/l/meetup-join/19%3ameeting_NzBlZTZmMDYtYzJmMC00Y2JmLWI3YzItYjQyYzQ5MmQ0NjZj%40thread.v2/0?context=%7b%22Tid%22%3a%2227d137e5-761f-4dc1-af88-d26430abb18f%22%2c%22Oid%22%3a%224af21b12-8edb-458f-8178-fc83b6e0aa47%22%7d)  |
+| 12:00 | STA-WCS Q&A - Kathi Schleidt | [Teams_Thursday](https://teams.microsoft.com/l/meetup-join/19%3ameeting_NzBlZTZmMDYtYzJmMC00Y2JmLWI3YzItYjQyYzQ5MmQ0NjZj%40thread.v2/0?context=%7b%22Tid%22%3a%2227d137e5-761f-4dc1-af88-d26430abb18f%22%2c%22Oid%22%3a%224af21b12-8edb-458f-8178-fc83b6e0aa47%22%7d)| 
 | 13.00 | Lunch | |
-| 13.45 | Presentation of the results | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
-| 16.00 | Evaluation and drinks | [ejp-sda-general](https://meet.waag.org/ejp-sda-general) | 
+| 13.45 | Presentation of the results | [Teams_Thursday](https://teams.microsoft.com/l/meetup-join/19%3ameeting_NzBlZTZmMDYtYzJmMC00Y2JmLWI3YzItYjQyYzQ5MmQ0NjZj%40thread.v2/0?context=%7b%22Tid%22%3a%2227d137e5-761f-4dc1-af88-d26430abb18f%22%2c%22Oid%22%3a%224af21b12-8edb-458f-8178-fc83b6e0aa47%22%7d) | 
+| 16.00 | Evaluation and drinks | [Teams_Thursday](https://teams.microsoft.com/l/meetup-join/19%3ameeting_NzBlZTZmMDYtYzJmMC00Y2JmLWI3YzItYjQyYzQ5MmQ0NjZj%40thread.v2/0?context=%7b%22Tid%22%3a%2227d137e5-761f-4dc1-af88-d26430abb18f%22%2c%22Oid%22%3a%224af21b12-8edb-458f-8178-fc83b6e0aa47%22%7d) | 
 
 
 ## Focus groups

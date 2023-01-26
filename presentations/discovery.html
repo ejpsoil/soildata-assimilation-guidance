@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Harmonization</title>
+    <title>Metadata & discovery</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/reveal.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/beige.min.css">
 </head>
@@ -16,7 +16,7 @@
                 <section>
                     <img src="https://ejpsoil.eu/fileadmin/projects/ejpsoil/EJP_Soil_logo_cmyk-h100.png"
                         style="border:none;height:60px" />
-                    <h1>Data Harmonization</h1>
+                    <h1>Metadata & discovery</h1>
                     <h4>Masterclass on soil data assimilation</h4>
                     <small>Wageningen Environmental Research /
                         ISRIC - World Soil information </small><br>
@@ -29,51 +29,84 @@
             
             <section>
                 <section>
-                    <h2>Bring 2 datasets together</h2>
+                    <h2>Metadata & discovery</h2>
                     <ul>
-                        <li>2 datasets from different regions/countries</li>
-                        <li>For example in cross border projects</li>
-                        <li>Historic versus current</li>
-                        <li>Modelled vs actual</li>
+                        <li>In order to combine data, you first have to find it, and understand usage constraints</li>
+                        <li>For colleagues to find data on intranet (sharepoint), and externals via portals</li>
                     </ul>
                 </section>
                 <section>
-                    <h2>Unify the datamodels</h2>
+                    <h2>Metadata harvests</h2>
                     <ul>
-                        <li>Align the file format</li>
-                        <li>Connect tables & fieldnames</li>
-                        <li>Convert values</li>
-                        <li>Map code lists</li>
-                        <li>Reproject/Connect geometries</li>
+                        <li>Metadata of various sources is collected in central repositories to increase findability</li>
+                        <li>Usually from regional up to country and europe</li>
+                        <li>Vice versa is also of interest to facilitate colleagues to discover relevant data from external sources</li>
                     </ul>
                 </section>
                 <section>
-                    <h2>Standards</h2>
+                    <h2>Metadata standards</h2>
                     <ul>
-                        <li>iso28258:2013 / INSPIRE Soil</li>
-                        <li>GLOSIS</li>
-                        <li>GPKG</li>
+                        <li>To facilitate wide discovery, communities should agree on adopting a metadata standard</li>
+                        <li>Various communities have different metadata standards, central repositories can facilate transformations</li>
+                        <li>Common standards are ISO19115, DublinCore/DCAT, Datacite, ...</li>
                     </ul>
                 </section>
                 <section>
-                    <h2>Software</h2>
+                    <ul>Metadata protocols</ul>
                     <ul>
-                        <li>GML - Hale</li>
-                        <li>Glosis - Yarrml/TarQL/...</li>
-                        <li>GPKG - GDAL/R/Python/SQL/...</li>
+                        <li>A metadata standard is often combined with a protocol for metadata exchange</li>
+                        <li>ISO19115 - Catalogue Service for the Web, OGC API Records</li>
+                        <li>DataCite - OAI-PMH</li>
+                        <li>DCAT - SPARQL; CKAN-API</li>
                     </ul>
                 </section>
                 <section>
-                    <h2>What if the models don't match?</h2>
+                    <h2>Search data via search engines</h2>
                     <ul>
-                        <li>Extend codelists</li>
-                        <li>Extend datamodel</li>
-                        <li>Drop data...</li>
+                        <li>The schema.org ontology adds structured data to websites</li>
+                        <li>Schema.org includes a topic related to [catalogues and datasets](https://schema.org/Dataset)</li>
+                        <li>Google offers a [dataset search](https://datasetsearch.research.google.com/) based on schema.org/Dataset</li>
+                        <li>Many catalogues (and data servers) now include schema.org annotations in their html representation of metadata records</li>
+                        <li>UK government wrote a guidance document on how to optimally have your data found on search engines</li>
+                        <li>Google and Yandex provide a [validator](https://search.google.com/test/rich-results/) to validate your annotations</li>
+                    </ul>
+                </section>
+                </section>
+                <section>
+                <section>
+                    <h2>Cookbook</h2>
+                    <ul>
+                        <li>A number of recipes has been prepared in the coobook related to metadata</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Zenodo/Dataverse</h2>
+                    <ul>
+                        <li>Datacite oriented repositories</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>GeoNetwork</h2>
+                    <ul>
+                        <li>Software widely used in geospatial domain, including INSPIRE GeoPortal (soon)</li>
+                        <li>ISO19115 oriented, but supports other models via plugins</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>A pythonic metadata workflow</h2>
+                    <ul>
+                        <li>Metadata creation using pygeometa (mcf)</li>
+                        <li>Participatory approach via github</li>
+                        <li>Publication as iso19115 in pycsw</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>DCAT</h2>
+                    <ul>
+                        <li>Standard by W3C, adopted in Semantic web and open data domain</li>
                     </ul>
                 </section>
             </section>
-
-                
             <section>
                 <section>
                     <h1>Questions?</h1>
@@ -82,16 +115,17 @@
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.2.12/marked.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/markdown/markdown.min.js"></script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.min.js"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.2.12/marked.min.js"></script>
+                    <script
+                        src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/markdown/markdown.min.js"></script>
 
-    <script>
-        Reveal.initialize({
-            hash: true,
-            plugins: [RevealMarkdown]
-        });
-    </script>
+                    <script>
+                        Reveal.initialize({
+                            hash: true,
+                            plugins: [RevealMarkdown]
+                        });
+                    </script>
 </body>
 
 </html>

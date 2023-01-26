@@ -32,15 +32,14 @@ The live meetings are facilitated by [Waag](https://waag.org) via the [jitsi sof
 
 | | Lumen 2 meeting room | Join online | 
 | --- | --- | --- |
-| 9.00 | Day start; Introduction to View and download services |[Teams](https://teams.microsoft.com/l/meetup-join/19:meeting_OTY4ZWQ4NGYtYmI1Mi00NjliLThkMTUtOGU1Zjg0OTI4ZWYw@thread.v2/0?context=%7B%22Tid%22:%2227d137e5-761f-4dc1-af88-d26430abb18f%22,%22Oid%22:%224af21b12-8edb-458f-8178-fc83b6e0aa47%22%7D) | 
-| 10.00 | Sensorthings API - Kathi Schleidt, Hylke van der Schaaf | [Teams](https://teams.microsoft.com/l/meetup-join/19:meeting_OTY4ZWQ4NGYtYmI1Mi00NjliLThkMTUtOGU1Zjg0OTI4ZWYw@thread.v2/0?context=%7B%22Tid%22:%2227d137e5-761f-4dc1-af88-d26430abb18f%22,%22Oid%22:%224af21b12-8edb-458f-8178-fc83b6e0aa47%22%7D) | 
-| 11.00 | GLOSIS/RDF - Luis de Sousa | [Teams](https://teams.microsoft.com/l/meetup-join/19:meeting_OTY4ZWQ4NGYtYmI1Mi00NjliLThkMTUtOGU1Zjg0OTI4ZWYw@thread.v2/0?context=%7B%22Tid%22:%2227d137e5-761f-4dc1-af88-d26430abb18f%22,%22Oid%22:%224af21b12-8edb-458f-8178-fc83b6e0aa47%22%7D) | 
+| 9.00 | Day start; Introduction to View and download services | | 
+| 10.00 | Sensorthings API - Kathi Schleidt, Hylke van der Schaaf | | 
+| 11.00 | GLOSIS/RDF - Luis de Sousa |  | 
 | 12:00 | | |
 | 13:00 | Lunch | |
-| 13:45 | WCS - Kathi Schleidt, Peter Baumann | [Teams](https://teams.microsoft.com/l/meetup-join/19:meeting_OTY4ZWQ4NGYtYmI1Mi00NjliLThkMTUtOGU1Zjg0OTI4ZWYw@thread.v2/0?context=%7B%22Tid%22:%2227d137e5-761f-4dc1-af88-d26430abb18f%22,%22Oid%22:%224af21b12-8edb-458f-8178-fc83b6e0aa47%22%7D) |
-| 14:30 | geopython (pygeoapi, pygeometa, pycsw) - Tom Kralidis, Luis de Sousa |  [Teams](https://teams.microsoft.com/l/meetup-join/19:meeting_OTY4ZWQ4NGYtYmI1Mi00NjliLThkMTUtOGU1Zjg0OTI4ZWYw@thread.v2/0?context=%7B%22Tid%22:%2227d137e5-761f-4dc1-af88-d26430abb18f%22,%22Oid%22:%224af21b12-8edb-458f-8178-fc83b6e0aa47%22%7D) | 
-| 15:15 | Hale Studio - Thorsten Reitz | [Teams](https://teams.microsoft.com/l/meetup-join/19:meeting_OTY4ZWQ4NGYtYmI1Mi00NjliLThkMTUtOGU1Zjg0OTI4ZWYw@thread.v2/0?context=%7B%22Tid%22:%2227d137e5-761f-4dc1-af88-d26430abb18f%22,%22Oid%22:%224af21b12-8edb-458f-8178-fc83b6e0aa47%22%7D) |
-| 16:00 | Day-closing pitches | [Teams](https://teams.microsoft.com/l/meetup-join/19:meeting_OTY4ZWQ4NGYtYmI1Mi00NjliLThkMTUtOGU1Zjg0OTI4ZWYw@thread.v2/0?context=%7B%22Tid%22:%2227d137e5-761f-4dc1-af88-d26430abb18f%22,%22Oid%22:%224af21b12-8edb-458f-8178-fc83b6e0aa47%22%7D) | 
+| 13:45 | WCS - Kathi Schleidt, Peter Baumann | |
+| 14:30 | geopython (pygeoapi, pygeometa, pycsw) - Tom Kralidis, Luis de Sousa |   | 
+| 16:00 | Day-closing pitches |  | 
 
 ### 26th of january
          
@@ -52,7 +51,8 @@ The live meetings are facilitated by [Waag](https://waag.org) via the [jitsi sof
 | 11:00 | A pythonic metadata workflow - Paul van Genuchten | [Teams_Thursday](https://teams.microsoft.com/l/meetup-join/19%3ameeting_NzBlZTZmMDYtYzJmMC00Y2JmLWI3YzItYjQyYzQ5MmQ0NjZj%40thread.v2/0?context=%7b%22Tid%22%3a%2227d137e5-761f-4dc1-af88-d26430abb18f%22%2c%22Oid%22%3a%224af21b12-8edb-458f-8178-fc83b6e0aa47%22%7d)  |
 | 12:00 | STA-WCS Q&A - Kathi Schleidt | [Teams_Thursday](https://teams.microsoft.com/l/meetup-join/19%3ameeting_NzBlZTZmMDYtYzJmMC00Y2JmLWI3YzItYjQyYzQ5MmQ0NjZj%40thread.v2/0?context=%7b%22Tid%22%3a%2227d137e5-761f-4dc1-af88-d26430abb18f%22%2c%22Oid%22%3a%224af21b12-8edb-458f-8178-fc83b6e0aa47%22%7d)| 
 | 13.00 | Lunch | |
-| 13.45 | Presentation of the results | [Teams_Thursday](https://teams.microsoft.com/l/meetup-join/19%3ameeting_NzBlZTZmMDYtYzJmMC00Y2JmLWI3YzItYjQyYzQ5MmQ0NjZj%40thread.v2/0?context=%7b%22Tid%22%3a%2227d137e5-761f-4dc1-af88-d26430abb18f%22%2c%22Oid%22%3a%224af21b12-8edb-458f-8178-fc83b6e0aa47%22%7d) | 
+| 14.00 | Hale Studio - Kate Lyndegaard | [Teams_Thursday](https://teams.microsoft.com/l/meetup-join/19%3ameeting_NzBlZTZmMDYtYzJmMC00Y2JmLWI3YzItYjQyYzQ5MmQ0NjZj%40thread.v2/0?context=%7b%22Tid%22%3a%2227d137e5-761f-4dc1-af88-d26430abb18f%22%2c%22Oid%22%3a%224af21b12-8edb-458f-8178-fc83b6e0aa47%22%7d) | 
+| 15.00 | Presentation of the results | [Teams_Thursday](https://teams.microsoft.com/l/meetup-join/19%3ameeting_NzBlZTZmMDYtYzJmMC00Y2JmLWI3YzItYjQyYzQ5MmQ0NjZj%40thread.v2/0?context=%7b%22Tid%22%3a%2227d137e5-761f-4dc1-af88-d26430abb18f%22%2c%22Oid%22%3a%224af21b12-8edb-458f-8178-fc83b6e0aa47%22%7d) | 
 | 16.00 | Evaluation and drinks | [Teams_Thursday](https://teams.microsoft.com/l/meetup-join/19%3ameeting_NzBlZTZmMDYtYzJmMC00Y2JmLWI3YzItYjQyYzQ5MmQ0NjZj%40thread.v2/0?context=%7b%22Tid%22%3a%2227d137e5-761f-4dc1-af88-d26430abb18f%22%2c%22Oid%22%3a%224af21b12-8edb-458f-8178-fc83b6e0aa47%22%7d) | 
 
 
@@ -84,7 +84,7 @@ For each group a wiki, chat and jitsy are listed below.
 | Seth G | GeoGraphica | [MapServer](../cookbook/mapserver.md) | [geographika](https://github.com/geographika) |
 | Stefania Morrone | Epsilon | [Re3gistry](../cookbook/re3gistry.md), [Hale studio](../cookbook/hale-studio.md) | [sMorrone](https://github.com/sMorrone) |
 | Torsten Friebe | LatLon | [deegree webservices](../cookbook/deegree.md) | [tfr42](https://github.com/tfr42) |
-| Thorsten Reitz | Wetransform | [Hale Studio](../cookbook/hale-studio.md), [Hale Connect](../cookbook/hale-connect.md) | [thorsten-reitz](https://github.com/thorsten-reitz) |
+| Kate Lyndegaard | Wetransform | [Hale Studio](../cookbook/hale-studio.md), [Hale Connect](../cookbook/hale-connect.md) | [Kate-Lyndegaard](https://github.com/Kate-Lyndegaard) |
 | Tom Kralidis | OSGeo | [pygeoapi](../cookbook/pygeoapi.md), pycsw, owslib, [pygeometa](../cookbook/pygeometa.md) | [tomkralidis](https://github.com/tomkralidis) |
 
 

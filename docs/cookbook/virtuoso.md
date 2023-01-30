@@ -24,7 +24,7 @@ docker compose up
 ![Log in to virtuoso](img/virtuoso-dba.png)
 
 - On the `linked data` tab, select `Quad store upload`.
-- Select `Resource URL` and past the [url of the ttl file](https://raw.githubusercontent.com/rapw3k/glosis/master/glosis_procedure.ttl) from github (or upload a local file)
+- Select `Resource URL` and paste the [url of the ttl file](https://raw.githubusercontent.com/rapw3k/glosis/master/glosis_procedure.ttl) from github (or upload a local file)
 - Select `create graph` and enter as graph uri `http://w3id.org/glosis/model/procedure#`, click `upload`.
 
 ![Upload Quad store](img/virtuoso-upload.png)

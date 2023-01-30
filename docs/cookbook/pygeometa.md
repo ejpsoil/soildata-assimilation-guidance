@@ -171,6 +171,10 @@ QGIS contains a default plugin called [MetaSearch](https://docs.qgis.org/3.22/en
 
 ## Read more
 
+At masterclass edition 2023 Tom Kralidis presented the geopython ecosystem, including pycsw.
+
+<iframe title='Embedded Media titled: geopython' width="560"  height="315"  src="https://wur.yuja.com/V/Video?v=432913&node=1952041&a=194733222&preload=false" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen loading="lazy"></iframe>
+
 - [github](https://github.com/geopython) the geopython community welcomes your questions and contributions.
 - [pygeometa](https://geopython.github.io/pygeometa)
 - [pycsw](https://pycsw.org)

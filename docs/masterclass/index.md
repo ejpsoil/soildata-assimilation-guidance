@@ -1,17 +1,8 @@
 # Masterclass on Soil Data Assimilation
 
 At 24-26 january 2023 [Wageningen Environmental Research](https://www.wur.nl/en/research-results/research-institutes/environmental-research.htm) and
-[ISRIC - World Soil Information](https://www.isric.org) are organising a masterclass on Soil Data Assimilation. This masterclass is a follow up of 
+[ISRIC - World Soil Information](https://www.isric.org) has organised a masterclass on Soil Data Assimilation. This masterclass was a follow up of 
 the [Training on INSPIRE Good Practices around Soil Data](./edition-2022.md) held in april 2022.
-
-The general design of the masterclass is to set up workgroups around certain topics, which self organise to set some goals for the masterclass and try to achieve the goals.
-Every day starts with a general kick-off and closing to report on aims and progress. A selection of content experts is available which circulate between the groups.
-
-## Q&A channel and meets
-
-During the masterclass questions can be placed in a [Q&A channel](https://gitter.im/ejpsoil/soildata-assimilation-guidance). Note that it may take some time to respond. For urgent matters, use alternative channels (email/phone).
-
-The live meetings are facilitated by [Waag](https://waag.org) via the [jitsi software](https://github.com/jitsi). Read the [privacy statement](https://waag-org.translate.goog/nl/article/privacy-statement-meetwaagorg-jitsi/?_x_tr_sl=en&_x_tr_tl=de&_x_tr_hl=en&_x_tr_pto=wapp). We will record the meetings and publish it as open access training materials, by joining the meeting you confirm to this aspect. To keep performance good, please deactivate your camera when not speaking.
 
 ## Program (times in CET)
 
@@ -21,16 +12,16 @@ The live meetings are facilitated by [Waag](https://waag.org) via the [jitsi sof
 | --- | --- | --- |
 | 9.00 | Welcome ceremony / Set up teams |  |
 | 10.00 | Day start; Introduction to data assimilation (harmonization; extension; codelists) | [video](https://wur.yuja.com/V/Video?v=430847&node=1937918&a=83533229&autoplay=1) | 
-| 11:00 | JRC INSPIRE Tools - Paul van Genuchten | [video](https://wur.yuja.com/V/Video?v=430878&node=1938063&a=187273784&autoplay=1) |
+| 11:00 | INSPIRE Tools - Paul van Genuchten | [video](https://wur.yuja.com/V/Video?v=430878&node=1938063&a=187273784&autoplay=1) |
 | 12:00 | Skosmos (code lists) - Paul van Genuchten | [video](https://wur.yuja.com/V/Video?v=430881&node=1938074&a=143339043&autoplay=1) | 
 | 13.00 | Lunch break |  |
 | 14:00 | GeoNetwork, GeoServer, Bridge - Paul van Genuchten |  | 
 | 14:30 | Soil model in Geopackage - Stefania Morrone  | [video](https://wur.yuja.com/V/Video?v=430869&node=1938006&a=184498297&autoplay=1) | 
-| 16.00 | Day-closing wrapup | [video](https://wur.yuja.com/V/Video?v=430850&node=1937930&a=156608566&autoplay=1) |
+| 16.00 | Day-closing wrapup |  |
  
 ### 25th of january
 
-| | Lumen 2 meeting room | Join online | 
+| | Lumen 2 meeting room |Video | 
 | --- | --- | --- |
 | 9.00 | Day start; Introduction to View and download services | | 
 | 10.00 | Sensorthings API - Kathi Schleidt, Hylke van der Schaaf | | 
@@ -43,48 +34,16 @@ The live meetings are facilitated by [Waag](https://waag.org) via the [jitsi sof
 
 ### 26th of january
          
-| | Gaia 2 meeting room | Join online | 
+| | Gaia 2 meeting room | Video | 
 | --- | --- | ---|
-| 9.00 | Day start; Introduction to Metadata and discovery | [Teams_Thursday](https://teams.microsoft.com/l/meetup-join/19%3ameeting_NzBlZTZmMDYtYzJmMC00Y2JmLWI3YzItYjQyYzQ5MmQ0NjZj%40thread.v2/0?context=%7b%22Tid%22%3a%2227d137e5-761f-4dc1-af88-d26430abb18f%22%2c%22Oid%22%3a%224af21b12-8edb-458f-8178-fc83b6e0aa47%22%7d) | 
-| 10:00 | deegree webservices intro and Q&A - Torsten Friebe | [Teams_Thursday](https://teams.microsoft.com/l/meetup-join/19%3ameeting_NzBlZTZmMDYtYzJmMC00Y2JmLWI3YzItYjQyYzQ5MmQ0NjZj%40thread.v2/0?context=%7b%22Tid%22%3a%2227d137e5-761f-4dc1-af88-d26430abb18f%22%2c%22Oid%22%3a%224af21b12-8edb-458f-8178-fc83b6e0aa47%22%7d) | 
-| 10:30 | MapServer intro and Q&A - Seth G | [Teams_Thursday](https://teams.microsoft.com/l/meetup-join/19%3ameeting_NzBlZTZmMDYtYzJmMC00Y2JmLWI3YzItYjQyYzQ5MmQ0NjZj%40thread.v2/0?context=%7b%22Tid%22%3a%2227d137e5-761f-4dc1-af88-d26430abb18f%22%2c%22Oid%22%3a%224af21b12-8edb-458f-8178-fc83b6e0aa47%22%7d) | 
-| 11:00 | A pythonic metadata workflow - Paul van Genuchten | [Teams_Thursday](https://teams.microsoft.com/l/meetup-join/19%3ameeting_NzBlZTZmMDYtYzJmMC00Y2JmLWI3YzItYjQyYzQ5MmQ0NjZj%40thread.v2/0?context=%7b%22Tid%22%3a%2227d137e5-761f-4dc1-af88-d26430abb18f%22%2c%22Oid%22%3a%224af21b12-8edb-458f-8178-fc83b6e0aa47%22%7d)  |
-| 12:00 | STA-WCS Q&A - Kathi Schleidt | [Teams_Thursday](https://teams.microsoft.com/l/meetup-join/19%3ameeting_NzBlZTZmMDYtYzJmMC00Y2JmLWI3YzItYjQyYzQ5MmQ0NjZj%40thread.v2/0?context=%7b%22Tid%22%3a%2227d137e5-761f-4dc1-af88-d26430abb18f%22%2c%22Oid%22%3a%224af21b12-8edb-458f-8178-fc83b6e0aa47%22%7d)| 
+| 9.00 | Day start; Introduction to Metadata and discovery |  | 
+| 10:00 | deegree webservices intro and Q&A - Torsten Friebe |  | 
+| 10:30 | MapServer intro and Q&A - Seth G |  | 
+| 11:00 | A pythonic metadata workflow - Paul van Genuchten |   |
+| 12:00 | STA-WCS Q&A - Kathi Schleidt | | 
 | 13.00 | Lunch | |
-| 14.00 | Hale Studio - Kate Lyndegaard | [Teams_Thursday](https://teams.microsoft.com/l/meetup-join/19%3ameeting_NzBlZTZmMDYtYzJmMC00Y2JmLWI3YzItYjQyYzQ5MmQ0NjZj%40thread.v2/0?context=%7b%22Tid%22%3a%2227d137e5-761f-4dc1-af88-d26430abb18f%22%2c%22Oid%22%3a%224af21b12-8edb-458f-8178-fc83b6e0aa47%22%7d) | 
-| 15.00 | Presentation of the results | [Teams_Thursday](https://teams.microsoft.com/l/meetup-join/19%3ameeting_NzBlZTZmMDYtYzJmMC00Y2JmLWI3YzItYjQyYzQ5MmQ0NjZj%40thread.v2/0?context=%7b%22Tid%22%3a%2227d137e5-761f-4dc1-af88-d26430abb18f%22%2c%22Oid%22%3a%224af21b12-8edb-458f-8178-fc83b6e0aa47%22%7d) | 
-| 16.00 | Evaluation and drinks | [Teams_Thursday](https://teams.microsoft.com/l/meetup-join/19%3ameeting_NzBlZTZmMDYtYzJmMC00Y2JmLWI3YzItYjQyYzQ5MmQ0NjZj%40thread.v2/0?context=%7b%22Tid%22%3a%2227d137e5-761f-4dc1-af88-d26430abb18f%22%2c%22Oid%22%3a%224af21b12-8edb-458f-8178-fc83b6e0aa47%22%7d) | 
-
-
-## Focus groups
-
-Participants cluster in focus groups around a certain topic or technology. Initial groups are formed in the welcome ceremony. YOu can suggest a new group any time.
-
-For each group a wiki, chat and jitsy are listed below.
-
-| Topic | Wiki | Chat |  
-| --- | --- | --- | 
-| Sensorthings | [wiki](https://docs.google.com/document/d/10Rpu7v1uBkv7gBb2UdxPeOkbxLWS5gJc4Q8kMhr2tKA/edit?usp=sharing) | [gitter](https://gitter.im/ejpsoil/sensorthings) |  
-| Codelists | [wiki](https://docs.google.com/document/d/1HKiA3FXkyHqy9AZxrI7hcm6KSnP-_HZaLst5stujX1o/edit?usp=sharing) | [gitter](https://gitter.im/ejpsoil/code-lists) |
-| Soil profiles and maps | [wiki](https://docs.google.com/document/d/1o2L1EUMihuQEYVOkOhwi5ADUfTKdnwFhqdeTsXIJW7I/edit?usp=sharing) | [gitter](https://gitter.im/ejpsoil/soil-profiles) |
-| Raster data | [wiki](https://docs.google.com/document/d/1CktRieKSCVcUxw3WYZQLV7EHk32EkmNBJNxGMT80thg/edit?usp=sharing) | [gitter](https://gitter.im/ejpsoil/raster-data) |
-
-
-## Team of Experts
-
-| Expert | Affiliation | Topic | Github |
-| ---|  --- | --- | --- |
-| Jandirk Bulens | Wageningen Environmental Research | INSPIRE Soil Datamodel | [bulen001](https://github.com/bulen001) |
-| Fenny van Egmond | ISRIC / Wageningen Environmental Research | Spectroscopy, Soil data, Soil Standards | [FennyVanEgmond](https://github.com/FennyVanEgmond) | 
-| Hylke van der Schaaf | Fraunhofer | [Frost server](../cookbook/frost-server.md) | [hylkevds](https://github.com/hylkevds) | 
-| Kathi Schleidt | Datacove.eu | [Rasdaman](../cookbook/rasdaman.md), [Frost server](../cookbook/frost-server.md) | [KathiSchleidt](https://github.com/KathiSchleidt)
-| Luis de Sousa | ISRIC - World Soil Information | [RML.io](../cookbook/rml.md), [tarql](../cookbook/tarql.md), [virtuoso](../cookbook/virtuoso.md), geopython | [ldesousa](https://github.com/ldesousa) |
-| Paul van Genuchten | ISRIC - World Soil Information | [pygeoapi](../cookbook/pygeoapi.md), [GeoNetwork](../cookbook/geonetwork.md) |  [pvgenuchten](https://github.com/pvgenuchten) |
-| Peter Baumann | Constructor University Bremen | [Rasdaman](../cookbook/rasdaman.md) | [pebau](https://github.com/pebau) |
-| Seth G | GeoGraphica | [MapServer](../cookbook/mapserver.md) | [geographika](https://github.com/geographika) |
-| Stefania Morrone | Epsilon | [Re3gistry](../cookbook/re3gistry.md), [Hale studio](../cookbook/hale-studio.md) | [sMorrone](https://github.com/sMorrone) |
-| Torsten Friebe | LatLon | [deegree webservices](../cookbook/deegree.md) | [tfr42](https://github.com/tfr42) |
-| Kate Lyndegaard | Wetransform | [Hale Studio](../cookbook/hale-studio.md), [Hale Connect](../cookbook/hale-connect.md) | [Kate-Lyndegaard](https://github.com/Kate-Lyndegaard) |
-| Tom Kralidis | OSGeo | [pygeoapi](../cookbook/pygeoapi.md), pycsw, owslib, [pygeometa](../cookbook/pygeometa.md) | [tomkralidis](https://github.com/tomkralidis) |
+| 14.00 | Hale Studio - Kate Lyndegaard |  | 
+| 15.00 | Presentation of the results |  | 
+| 16.00 | Evaluation and drinks |  | 
 
 

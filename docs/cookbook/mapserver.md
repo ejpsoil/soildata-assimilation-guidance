@@ -109,8 +109,6 @@ map2img -m local.map -o test2.png
 - `-m` references the mapfile
 - `-o` references an output file to be generated
 
-
-
 ## WRB layer with GeoCat Bridge 
 
 The technical guidance provides quite detailed instructions on how to style the relavant soil layers. For example a SO.SoilBody.WRB is described with dedicated colors for each WRB Soil type.
@@ -126,9 +124,17 @@ If many style rules are involved (or if your project already has styling) a tool
 
 ![Mapfile styler Geocat Bridge](img/bridge-mapfile-styler.png)
 
+An alternative option for creating mapfiles is the [geostyler](https://geostyler.org/) library. A NodeJS application which is able to read and write various styling formats.
+
+A web application [mapserver studio](https://mapserverstudio.net/) is in preparation which will be able to create a mapfile in a web environment.
+
+## MapServer for WFS, OGC API Features & WCS
+
+MapServer includes support for [WFS](https://mapserver.org/ogc/wfs_server.html), [OGC API Features](https://mapserver.org/ogc/ogc_api.html) (8+) and [WCS](https://mapserver.org/ogc/wcs_server.html). Note that WFS does not support the hierarchal data models as required for INSPIRE, only `flat` tables are supported.
+
 ## MapServer and WMTS
 
-MapServer does not provide tile services (WMTS) itself, but is often combined with a separate tool, [mapcache](https://mapserver.org/mapcache/), which provides tile service on top of a MapServer instance. Tile services are generally a safer option with respect to Quality of Service, but less dynamic in update and styling options. An interesting option is to use the WMS option of Mapcache, which uses a cache of tiles as a source to provide WMS services.
+MapServer does not provide tile services (WMTS) itself, but is often combined with a separate tool, [mapcache](https://mapserver.org/mapcache/), which provides tile service on top of a MapServer instance. Tile services are generally a safer option with respect to Quality of Service, but less dynamic in update and styling options. 
 
 ## Validate a Mapserver WMS as INSPIRE View service
 
@@ -137,7 +143,11 @@ You need to set up a [tunnel](../utils/localtunnel.md) so the [INSPIRE validator
 
 ## Read more:
 
-- Website: https://mapserver.org
-- GitHub: https://github.com/MapServer/MapServer
-- Docker: https://hub.docker.com/r/camptocamp/mapserver
-- OSGeo: https://www.osgeo.org/projects/mapserver
+At masterclass edition 2023 Seth G presented MapServer.
+
+<iframe title='MapServer Primer' width="560"  height="315"  src="https://wur.yuja.com/v/ejp-sda-mapserver?preload=false" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen loading="lazy"></iframe>
+
+- [Website](https://mapserver.org)
+- [GitHub](https://github.com/MapServer/MapServer)
+- [Docker](https://hub.docker.com/r/camptocamp/mapserver)
+- [OSGeo](https://www.osgeo.org/projects/mapserver)

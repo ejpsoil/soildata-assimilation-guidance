@@ -7,8 +7,13 @@
 
 ## Read more:
 
-- Website: https://rasdaman.org
-- Docker: https://github.com/ARPASMR/rasdaman
-- Sources: https://www.rasdaman.org/browser
-- Tickets: https://www.rasdaman.org/report/1
-- OsGeo: https://www.osgeo.org/projects/rasdaman/
+At masterclass edition 2023 Kathi Schleidt presented INSPIRE CSW using Rasdaman.
+
+<iframe title='INSPIRE CSW using Rasdaman' width="560"  height="315"  src="https://wur.yuja.com/v/ejp-sda-wcs?preload=false" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen loading="lazy"></iframe>
+
+- [Website](https://rasdaman.org)
+- [Docker](https://github.com/ARPASMR/rasdaman)
+- [Sources](https://www.rasdaman.org/browser)
+- [Tickets](https://www.rasdaman.org/report/1)
+- [OsGeo](https://www.osgeo.org/projects/rasdaman)
+- [Rasdaman & INSPIRE](https://inspire.rasdaman.org)

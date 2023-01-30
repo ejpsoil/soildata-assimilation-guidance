@@ -2,9 +2,7 @@
 
 *Status: in progress*
 
-A good practice has been published on how to provide an [INSPIRE download service based on OGC API Features](https://github.com/INSPIRE-MIF/gp-ogc-api-features/blob/master/spec/oapif-inspire-download.md). In this recipe we'll set up an instance of [pygeoapi](https://pygeoapi.io) with some soil data. pygeoapi is an open source python server implementation of OGCAPI Features, Tiles, Coverages, Records and Processes.
-
-The geopython community has prepared a [workshop on getting started with pygeoapi](https://dive.pygeoapi.io/).
+ In this recipe we'll set up an instance of [pygeoapi](https://pygeoapi.io) with some soil data. A good practice is available on how to provide an [INSPIRE download service based on OGC API Features](https://github.com/INSPIRE-MIF/gp-ogc-api-features/blob/master/spec/oapif-inspire-download.md). pygeoapi is an open source python server implementation of OGCAPI Features, Tiles, Maps, Coverages, Records and Processes.
 
 ## Quick start
 
@@ -71,9 +69,15 @@ Because docker runs locally, you need to set up a tunnel for the validator to ac
 
 ## Read more
 
-- Website: https://pygeoapi.io/
-- GitHub: https://github.com/geopython/pygeoapi
-- Docker: https://hub.docker.com/r/geopython/pygeoapi
-- Demo: https://demo.pygeoapi.io/master
-- Documentation: https://docs.pygeoapi.io
-- OSGeo: https://www.osgeo.org/projects/pygeoapi 
+At masterclass edition 2023 Tom Kralidis presented the geopython ecosystem, including pygeoapi.
+
+<iframe title='Embedded Media titled: geopython' width="560"  height="315"  src="https://wur.yuja.com/V/Video?v=432913&node=1952041&a=194733222&preload=false" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen loading="lazy"></iframe>
+
+The geopython community has prepared a [workshop on getting started with pygeoapi](https://dive.pygeoapi.io/).
+
+- [Website](https://pygeoapi.io)
+- [GitHub](https://github.com/geopython/pygeoapi)
+- [Docker](https://hub.docker.com/r/geopython/pygeoapi)
+- [Demo server](https://demo.pygeoapi.io/master)
+- [Documentation](https://docs.pygeoapi.io)
+- [OSGeo](https://www.osgeo.org/projects/pygeoapi) 

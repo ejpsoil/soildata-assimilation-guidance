@@ -3,14 +3,12 @@
 *status: in progress* 
 
 [jmeter](https://jmeter.apache.org/) is a utility which can run a series of performance and capacity tests on a webservice.
-The requirements for Capacity and Performance of an INSPIRE services are described in each of the technical guidelines for View, Download and Discoveryservices.
-For example chapter 5 of [TG discovery services](https://inspire.ec.europa.eu/documents/Network_Services/TechnicalGuidance_DiscoveryServices_v3.1.pdf).
 
 ## Installation
 
 Jmeter is a java program, which can run on most platforms (if java is installed). Download the latest version from the [apache website](https://jmeter.apache.org/download_jmeter.cgi). Unzip the archive and run `jmeter.bat` from bin directory.
 
-Jmeter may be quite overwhelming at first, the number of options is vast. Follow the tutorials to get introduced to the basic aspects.
+Jmeter may be quite overwhelming at first, the number of options is high. Follow the tutorials to get introduced to the basic aspects.
 
 ## Web test plan
 
@@ -22,7 +20,11 @@ Jmeter is typically used to test the performance and capacity of a website or we
 ![JMeter testplan](img/jmeter-testplan.png)
 
 - Run the test against the webservice 
-- Run the test with multiple users, notice the performance decrease of the service. Do not test against a production url, it wil severely impact the performance of that service. 
+- Run the test with multiple users, notice the performance decrease of the service. 
+
+!!!note
+
+    Do not perform a load test against a production url, it wil severely impact the performance of that service. 
 
 ## Samples of requests:
 

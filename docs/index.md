@@ -48,12 +48,6 @@ The practices cover 7 topics.
 
     Disclaimer: References to products and approaches are examples. We do not aim to provide a complete listing, nor endorse a specific technology or service provider. Please consult any alternative software provider to what extent INSPIRE is supported in their products. In that scenario consider to contribute your experiences to this WIKI. 
 
-## Masterclass
-
-At 24-26 january 2023 [Wageningen Environmental Research](https://www.wur.nl/en/research-results/research-institutes/environmental-research.htm) and
-[ISRIC - World Soil Information](https://www.isric.org) are organising a masterclass on Soil Data Assimilation. This masterclass is a follow up of 
-the [Training on INSPIRE Good Practices around Soil Data](masterclass/edition-2022.md) held in april 2022. [A page](masterclass/index.md) has been set up for organisational aspects of the masterclass. 
-
 ## Reading guide
 
 While reading the document you may realize; if INSPIRE offers so many options, then consuming and combining data on the client side will be a challenge, a client needs to be aware of all these practices and conventions. But consider that despite the various technical options (which could also be bridged by intermediaries) there are certain aspects that are constant in any of the implementations; any implementation covers some form of data discovery, harmonization, view and download services. But also, aspects such as identifier persistence and adoption of code lists, as we will explain.

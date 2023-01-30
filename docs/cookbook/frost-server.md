@@ -16,7 +16,11 @@ Kathi Schleidt has prepared a [workshop on inspire data in sensorthings API](htt
 
 ## Read more
 
-- Good practice Sensorthings: https://inspire.ec.europa.eu/good-practice/ogc-sensorthings-api-inspire-download-service
-- GitHub repository: https://github.com/FraunhoferIOSB/FROST-Server
-- Documentation: https://fraunhoferiosb.github.io/FROST-Server/
-- Workshop: https://datacoveeu.github.io/API4INSPIRE/dissemination/Workshop-2020-11-19.html
+At masterclass edition 2023 Kathi Schleidt and Hylke van der Schaaf presented Sensorthings API using Frost server.
+
+<iframe title='Sensorthings API using Frost server' width="560"  height="315"  src="https://wur.yuja.com/v/ejp-sda-sta?preload=false" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen loading="lazy"></iframe>
+
+- [Good practice Sensorthings](https://inspire.ec.europa.eu/good-practice/ogc-sensorthings-api-inspire-download-service)
+- [GitHub repository](https://github.com/FraunhoferIOSB/FROST-Server)
+- [Documentation](https://fraunhoferiosb.github.io/FROST-Server)
+- [Workshop](https://datacoveeu.github.io/API4INSPIRE/dissemination/Workshop-2020-11-19.html)

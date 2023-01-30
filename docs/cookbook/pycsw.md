@@ -17,7 +17,13 @@ docker run -d -name pycsw -p 8000:8000 geopython/pycsw
 
 ## Read more
 
-- Website: https://pycsw.org/
-- GitHub: https://github.com/geopython/pycsw
-- Docker: https://hub.docker.com/r/geopython/pycsw
-- Demo: https://demo.pycsw.org/cite/collections
+At masterclass edition 2023 Tom Kralidis presented the geopython ecosystem, including pycsw.
+
+<iframe title='Embedded Media titled: geopython' width="560"  height="315"  src="https://wur.yuja.com/V/Video?v=432913&node=1952041&a=194733222&preload=false" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen loading="lazy"></iframe>
+
+- [Website](https://pycsw.org)
+- [Documentation](https://docs.pycsw.org/en/latest)
+- [GitHub](https://github.com/geopython/pycsw)
+- [Docker](https://hub.docker.com/r/geopython/pycsw)
+- [Demo server](https://demo.pycsw.org/cite/collections)
+- [OSGeo](https://www.osgeo.org/projects/pycsw)

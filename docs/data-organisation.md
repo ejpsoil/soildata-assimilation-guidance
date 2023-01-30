@@ -20,7 +20,7 @@ access constraints apply which may prevent publication to a wider audience in a
 later stage.
 
 Metadata documents are preferably based on a common ontology such as
-[DCAT](cookbook/dcat.md) or [ISO19139](cookbook/iso19139.md). Roughly 2 approaches,
+[DCAT](cookbook/dcat.md) or iso19139. Roughly 2 approaches,
 with various implementation options, exist to maintain metadata in an
 organisation:
 

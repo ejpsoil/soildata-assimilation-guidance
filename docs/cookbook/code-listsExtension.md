@@ -266,12 +266,12 @@ Triple stores usually provide end-points for interaction with SPARQL queries and
 other mechanisms that facilitate user access/view of the code-list.
 [Virtuoso](virtuoso.md) is a triple store providing these functionalities.
 
-3. **A [SKOSMOS](skosmos.md) instance**. Load the code-list triples into a triple store and then
-   link it to a [SKOSMOS](skosmos.md) instance. This software leverages
+3. **A [SKOSMOS](virtuoso.md) instance**. Load the code-list triples into a triple store and then
+   link it to a [SKOSMOS](virtuoso.md) instance. This software leverages
 the SKOS ontology to presnnt code-lists in a
 user friendly, browsable complex of HTML pages.
 
-### Derreferenceable URIs
+### Dereferenceable URIs
 
 When publishing a code-list, it is important to facilitate the resolution of the
 respective URIs. This promotes accessibility and use of the code-list. With a

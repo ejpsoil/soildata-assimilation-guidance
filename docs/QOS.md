@@ -10,7 +10,7 @@ date: 2022-11-10
 
 Via the quality of service conventions data providers report about the quality of their services. Aspects which are monitored are:
 
-- Availability (how long was a service down or offline in a period)
+- Availability (% of the time that the service has been available)
 - Performance and capacity (a period in which performance and capacity requirements are not met, is considered downtime)
 - Usage (how much is the service used)
 

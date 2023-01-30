@@ -288,6 +288,10 @@ More about this topic in the [Identification](../identification.md) document.
 
 ## Read more
 
+At the masterclass edition 2023 Luis de Sousa presented an approach to extend codelists based on SKOS.
+
+<iframe title='Extend codelists using SKOS' width="560"  height="315"  src="https://wur.yuja.com/V/Video?v=433006&node=1952642&a=176575180" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen loading="lazy"></iframe>
+
 In [this article](https://wetransform.to/news-and-events/inspire-codelists/) Wetransform explains how and which INSPIRE codelists can be extended.
 Either the UML model and/or the INSPIRE registry indicate if a codelist is extensible.
 

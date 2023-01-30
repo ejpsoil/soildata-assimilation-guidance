@@ -1,25 +1,25 @@
-# gdal
+# GDAL
 
-[OGR/GDAL](https://gdal.org) is a swiss army knife for spatial data. It can read u multitude of grid and vector formats and interact with OGC services. 
+[OGR/GDAL](https://gdal.org) is a swiss army knife for spatial data. It can read u multitude of grid and vector formats and interact with OGC services. The tool includes 2 clusters of scripts: 
 
-GDAL utilities interact with grids, OGR utilities interact with vector formats.
-
+- `GDAL utilities` interact with grids 
+- `OGR utilities` interact with vector formats
 
 ## Installation
 
-- Windows; most easy install is [using Conda](https://gdal.org/download.html#conda). Other option is via [ms4w](https://ms4w.com/). Note that QGIS (C:\Program Files\QGIS 3.xx\bin\gdalinfo.exe) and [ArcMap](https://www.arcgis.com/home/item.html?id=1eec30bf5fa042a5a2227b094db89441) are also packaged with GDAL.
-- Apple; [brew install gdal](https://formulae.brew.sh/formula/gdal)
-- Ubuntu; [add-apt-repository ppa:ubuntugis/ppa && apt update && apt install gdal-bin](https://mothergeo-py.readthedocs.io/en/latest/development/how-to/gdal-ubuntu-pkg.html)
-- Debian; Use Conda
-- [Docker](https://hub.docker.com/r/osgeo/gdal)
+- On Windows, most easy install is [using Conda](https://gdal.org/download.html#conda). Other option is via [ms4w](https://ms4w.com/). Note that QGIS (C:\Program Files\QGIS 3.xx\bin\gdalinfo.exe) and [ArcMap](https://www.arcgis.com/home/item.html?id=1eec30bf5fa042a5a2227b094db89441) are also packaged with GDAL.
+- For Apple, use [brew install gdal](https://formulae.brew.sh/formula/gdal)
+- On Ubuntu, run [add-apt-repository ppa:ubuntugis/ppa && apt update && apt install gdal-bin](https://mothergeo-py.readthedocs.io/en/latest/development/how-to/gdal-ubuntu-pkg.html)
+- On Debian, use [Conda](https://gdal.org/download.html#conda)
+- For Docker, use [this container](https://hub.docker.com/r/osgeo/gdal)
 
 ## GDAL exersize
 
 - Get details of a gridded dataset
 
-'''
+``` 
 gdalinfo https://files.isric.org/soilgrids/latest/data/bdod/bdod_0-5cm_mean.vrt
-'''
+```
 
 - Get details of a geojson file
 

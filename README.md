@@ -6,6 +6,11 @@ Documentation is maintained in the [docs](docs) folder as [Markdown](https://en.
 
 In the [docker folder](docker) some docker compose files are kept for each of the cookbooks for which it is relevant. 
 
+Build and preview the docs locally
 
+```
+pip install -r requirements.txt
+mkdocs serve
+```
 
-[EJP Soil](https://ejpsoil.eu) is a research project led by INRAE (FR) which has received funding from the EU's Horizon 2020 research and innovation programme; Grant Agreement: 862696
+[EJP Soil](https://ejpsoil.eu) is a research project led by INRAE (FR) which has received funding from the EU's Horizon 2020 research and innovation programme; Grant Agreement: [862695](https://cordis.europa.eu/project/id/862695)

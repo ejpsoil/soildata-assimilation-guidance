@@ -10,6 +10,8 @@ date: 2023-01-05
 
 This recipe describes an approach to temporarily host a local webservice as an online service. A utility opens a tunnel to a service provicer, the service provider routes all traffic for a specific domain via the tunnel to your machine. The tunnel stops if you quit the utility (ctrl-c).
 
+This technology is for example relevant if you want to test a local service with the [INSPIRE validator](https://inspire.ec.europa.eu/validator/home) (which requires a service to be online).
+
 Various (free) service providers exist offering this service:
 
 - [localtunnel](https://theboroer.github.io/localtunnel-www/) requires nodejs 

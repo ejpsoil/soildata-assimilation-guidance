@@ -9,13 +9,22 @@ date: 2023-01-06
 
 # Overview Git
 
-Git is a distributed version management system of mainly text files to facilitate shared development of software and/or documentation. Git is one of the creations of Linus Torvalds. In Git everybody `checks out` the full repository with all its history, you make changes to a version locally and `push` them back to the server. In the process incidental `conflicts` may occur, if someone else has made a change in the same version and line as you. The server will reject the push until you resolved the conflict.
+Git is a distributed version management system of mainly text files to facilitate shared development of software and/or 
+documentation. Git is one of the creations of Linus Torvalds. In Git everybody `checks out` the full repository with all 
+its history, you make changes to a version locally and `push` them back to the server. In the process incidental `conflicts` 
+may occur, if someone else has made a change in the same version and line as you. The server will reject the push until 
+you resolved the conflict.
 
-Git is mainly operated from the command line, but a lot of client software is available to facilitate participation. An example is [SmartGit](https://www.syntevo.com/smartgit/), which provides an easy to use interface to manage even complex git tasks such as fixing conflicts. [Git GUI](https://github.com/prati0100/git-gui/) is the graphical user interface included with the Git software suite.
+Git is mainly operated from the command line, but a lot of client software is available to facilitate participation. 
+An example is [SmartGit](https://www.syntevo.com/smartgit/), which provides an easy to use interface to manage even 
+complex git tasks such as fixing conflicts. [Git GUI](https://github.com/prati0100/git-gui/) is the graphical user 
+interface included with the Git software suite.
 
-[GitHub.com](https://github.com) is a well known provider of Git services. They offer a lot of additional functionality on top of the Git version management, such as a web interface, issue management, forking & pull requests, wiki, actions, etc.
+[GitHub.com](https://github.com) is a well known provider of Git services. They offer a lot of additional functionality on top 
+of the Git version management, such as a web interface, issue management, forking & pull requests, wiki, actions, etc.
 
-[Gitlab](https://about.gitlab.com/) is a popular open source software stack offering a similar set of functionality as GitHub, you can use it as [SAAS](https://en.wikipedia.org/wiki/Software_as_a_service) or install it on a server.
+[Gitlab](https://about.gitlab.com/) is a popular open source software stack offering a similar set of functionalities as GitHub, 
+you can use it as [SAAS](https://en.wikipedia.org/wiki/Software_as_a_service) or install it on a server.
 
 In 2020 various code forges based in the United States arbitrary blocked access
 to users from countries deemed hostile. This action affected foreign students
@@ -25,7 +34,8 @@ non-for-profit in Germany to support an independent code forge hosted in Europe.
 The result is [Codeberg](https://codeberg.org/), a free, open source, Git-based
 code forge accessible to everyone in the world.
 
-An interesting [quick start to Git](https://rogerdudler.github.io/git-guide/) is written by Roger Dudler (multiple translations). Or if you [prefer a video](https://git-scm.com/video/what-is-git).
+An interesting [quick start to Git](https://rogerdudler.github.io/git-guide/) is written by Roger Dudler (multiple translations). 
+Or if you [prefer a video](https://git-scm.com/video/what-is-git).
 
 The main reference for this software is the [Git Book](https://git-scm.com/book/en/v2).
 

@@ -181,7 +181,16 @@ First let's import a codelist from the INSPIRE registry.
 
 ![Import a codelist in Hale](img/hale-codelists.png)
 
-Hale studio supports the INSPIRE registry xml format as well as codelists based on the SKOS ontology. However SKOS codelists shold be encoded as RDF/XML. In order to load the [GLOSIS codelists](https://github.com/rapw3k/glosis/blob/master/glosis_cl.ttl), which are encoded as turtle. You can use a tool like [easyrdf.org](https://www.easyrdf.org/converter) to convert it to RDF/XML first. 
+Hale studio supports the INSPIRE registry xml format as well as codelists based on the SKOS ontology. However SKOS codelists should be encoded as RDF/XML. In order to load the [GLOSIS codelists](https://github.com/rapw3k/glosis/blob/master/glosis_cl.ttl), which are encoded as turtle, you can use a python snippet below to convert it to RDF/XML first. 
+
+```python
+from rdflib import Graph
+g = Graph()
+g.parse("https://raw.githubusercontent.com/rapw3k/glosis/master/glosis_procedure.ttl",format='ttl')
+g.serialize(destination='output.xml', format='xml')
+```
+
+Or use an online conversion tool such as [https://issemantic.net/rdf-converter](https://issemantic.net/rdf-converter).
 
 Now assign a mapping from local values to this codelist.
 

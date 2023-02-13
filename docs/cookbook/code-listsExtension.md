@@ -21,6 +21,7 @@ A brief overview of these code-lists is offered below.
 
 | Code-list | Description |
 |-----------|-------------|
+| **[PhenomenonTypeValue](https://inspire.ec.europa.eu/codelist/PhenomenonTypeValue)** | [Extensible] A code list of phenomena (e.g. temperature, wind speed). Parent of ProfileElementParameterName, SoilSiteParameterName, SoilProfileParameterName and SoilDerivedObjectParameterName. |
 | **[LayerGenesisProcessStateValue](http://inspire.ec.europa.eu/codelist/LayerGenesisProcessStateValue)** | An indication of whether the process specified in layerGenesisProcess is ongoing or ceased in the past. |
 | **[LayerTypeValue](http://inspire-registry.jrc.ec.europa.eu/clr/LayerTypeValue)** | Classification of a layer according to the concept that fits the purpose,  e.g. "topsoil". |
 | **[ProfileElementParameterNameValue](http://inspire.ec.europa.eu/codelist/ProfileElementParameterNameValue)** | [Extensible] List of properties that can be observed to characterize the profile element. |

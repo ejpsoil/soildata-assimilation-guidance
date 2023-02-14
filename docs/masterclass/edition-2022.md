@@ -7,12 +7,12 @@ The presentations of that training are still available and provide a good introd
 
 | Video | Speaker |
 | --- | --- |
-| [The reasoning behind INSPIRE why do we need a directive?](https://wur.yuja.com/V/Video?v=184972&amp;node=788552&amp;a=1999677049&amp;autoplay=1) | Joeri Robbrecht, European Commission) |
-| [Why do we need to understand INSPIRE and share data?](https://wur.yuja.com/V/Video?v=195134&amp;node=829584&amp;a=639795076&amp;autoplay=1) | Jandrik Bulens, WENR) |
-| [Experiences of Implementing SOIL in INSPIRE.](https://wur.yuja.com/V/Video?v=184979&amp;node=788563&amp;a=278913036&amp;autoplay=1) | Maria Fantappiè (CREA), Florian Hoedt (Thünen) and Dries Luts (AGIV) |
+| [The reasoning behind INSPIRE why do we need a directive?](https://wur.yuja.com/V/Video?v=184972&amp;node=788552&amp;a=1999677049&amp;autoplay=1) | Joeri Robbrecht, European Commission |
+| [Why do we need to understand INSPIRE and share data?](https://wur.yuja.com/V/Video?v=195134&amp;node=829584&amp;a=639795076&amp;autoplay=1) | Jandrik Bulens, WENR |
+| [Experiences of Implementing SOIL in INSPIRE.](https://wur.yuja.com/V/Video?v=184979&amp;node=788563&amp;a=278913036&amp;autoplay=1) | Maria Fantappiè (CREA), Florian Hoedt (Thünen) and Dries Luts (Department of the Environment and Spatial Development, Flemish Government) |
 | [INSPIRE Conceptual Framework](https://wur.yuja.com/V/Video?v=184980&amp;node=788565&amp;a=488615975&amp;autoplay=1) | Luis de Sousa, ISRIC |
-| [Data discovery](https://wur.yuja.com/V/Video?v=186423&amp;node=793652&amp;a=1324462841&amp;autoplay=1) | Paul van Genuchten, ISRIC) |
-| [Interoperability; O&M, Sensorthings API, Web Coverage Services](https://wur.yuja.com/V/Video?v=184380&amp;node=785951&amp;a=1565884354&amp;autoplay=1) | Kathi Schleidt, Datacove) |
+| [Data discovery](https://wur.yuja.com/V/Video?v=186423&amp;node=793652&amp;a=1324462841&amp;autoplay=1) | Paul van Genuchten, ISRIC |
+| [Interoperability; O&M, Sensorthings API, Web Coverage Services](https://wur.yuja.com/V/Video?v=184380&amp;node=785951&amp;a=1565884354&amp;autoplay=1) | Kathi Schleidt, Datacove |
 | [Extending INSPIRE for the Air Quality directive](https://wur.yuja.com/V/Video?v=195150&amp;node=829611&amp;a=1837117774&amp;autoplay=1) | Kathi Schleidt, Datacove |
 | [INSPIRE Soil: an overview and relations with other standards, the conceptual model of the soil theme as a common base](https://wur.yuja.com/V/Video?v=195152&amp;node=829619&amp;a=1128747791&amp;autoplay=1) | Kathi Schleidt, Datacove |
 | [Harmonize, map, transform: what does it mean?](https://wur.yuja.com/V/Video?v=195126&amp;node=829569&amp;a=1133213006&amp;autoplay=1) | Paul van Genuchten, ISRIC |

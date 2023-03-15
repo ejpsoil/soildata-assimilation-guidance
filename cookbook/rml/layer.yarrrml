@@ -1,0 +1,23 @@
+prefixes:
+ wosis_lyr: http://wosis.isric.org/layer#
+ wosis_prf: http://wosis.isric.org/profile#  
+ glosis_lh: http://w3id.org/glosis/model/layerhorizon#
+ iso28258: http://w3id.org/glosis/model/iso28258/2013#
+ xsd: http://www.w3.org/2001/XMLSchema#
+
+mappings:
+  layer:
+    sources:
+      - ['SoilData.csv~csv']
+    s: wosis_lyr:$(layer_id)
+    po:
+      - [a, glosis_lh:GL_Layer]
+      - [iso28258:ProfileElement.elementOfProfile, wosis_prf:$(profile_id)~iri]
+      - p: iso28258:ProfileElement.upperDepth
+        o: 
+           value: "$(upper_depth)"
+           datatype: xsd:real
+      - p: iso28258:ProfileElement.lowerDepth
+        o: 
+           value: "$(lower_depth)"
+           datatype: xsd:real

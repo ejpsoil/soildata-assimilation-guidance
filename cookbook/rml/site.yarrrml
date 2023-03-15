@@ -1,0 +1,27 @@
+prefixes:
+ geo: http://www.opengis.net/ont/geosparql#
+ glosis_sp: http://w3id.org/glosis/model/siteplot# 
+ wosis_sit: http://wosis.isric.org/site#
+ wosis_geo: http://wosis.isric.org/geometry#
+
+mappings:
+  site:
+    sources:
+      - ['SoilData.csv~csv']
+    s: wosis_sit:$(site_id)
+    po:
+      - [a, glosis_sp:GL_Site]
+      - [a, geo:Feature]
+      - [geo:hasGeometry, wosis_geo:$(site_id)~iri]
+
+  geometry:
+    sources:
+      - ['SoilData.csv~csv']
+    s: wosis_geo:$(site_id)
+    po:
+      - [a, geo:Point]
+      - p: geo:asWKT
+        o:
+           value: "POINT($(lon) $(lat))"
+           datatype: geo:wktLiteral
+

@@ -1,0 +1,12 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX glosis_pr: <http://w3id.org/glosis/model/profile#>
+PREFIX iso28258: <http://w3id.org/glosis/model/iso28258/2013#>
+
+CONSTRUCT { 
+    ?uri_profile rdf:type glosis_pr:GL_Profile ; 
+               iso28258:Profile.profileSite ?uri_site .
+}
+WHERE {
+    BIND (URI(CONCAT('http://wosis.isric.org/site#', ?site_id)) AS ?uri_site)
+    BIND (URI(CONCAT('http://wosis.isric.org/profile#', ?profile_id)) AS ?uri_profile)
+}

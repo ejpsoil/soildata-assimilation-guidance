@@ -54,7 +54,8 @@ nav:
         - r: utils/r.md
         - visualstudiocode: utils/visualstudiocode.md
         - python: utils/python.md
-
+    - Glossary: glossary.md
+    
 theme:
     name: material
     logo: https://ejpsoil.eu/fileadmin/projects/ejpsoil/EJP_Soil_logo_cmyk-h100.png

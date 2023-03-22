@@ -13,27 +13,30 @@ After an initial effort of defining and describing the alternative model, a typi
 - Users populate the database from various sources using their favourite tool ([r](../utils/r.md), [python](../utils/python.md), [FME](https://www.safe.com/fme/fme-desktop/), [Hale studio](./hale-studio.md), [DBeaver](https://dbeaver.io/))
 - Users publish the database as an [Atom service](./webdav.md) or [OGC API Features](./pygeoapi.md).
 
-## Sub models for dedicated use cases
+## Partial models for dedicated use cases
 
-The INSPIRE Model is able to capture a number of use cases, which are usually not combined in a single database. By creating a dedicated (minimal) database model for specific use cases, the database model will be smaller and easier to understand. The following use case can be identified:
+The INSPIRE Soil Model is designed to capture multiple soil data use cases:
+- capture profile descriptions in the field based on horizons
+- capture laboratory results from soil samples at fixed depths (layers)
+- predicted distribution of soil properties within soil bodies, linked to derived soil profiles
 
-- A Soilbody polygon map based on Derived Soil Profiles
-- A point map of Observed Soil Profiles
-- Grid data of derived soil property distribution
-
-For each of the cases a Layer or Horizon oriented approach can be used. 
+In many cases these use cases are not combined in a single database. By creating a dedicated database model for specific use cases (remove the unused database object), the database model will be smaller and easier to understand. 
 
 ![Soil model](./img/soil-model.png)
 
+## Use cases with combinations of data themes in a single database
+
+In many cases, such as the `Soil Erosion` case, data is combined which is described in multiple INSPRE themes, such as soil, hydrology and environmental facilities. Some of the current GeoPackage implementation advertised in the INSPIRE MIF reference this type of combined use cases.
+
 ## ISO25258 in a PostGres database
 
-As part of the [Soils4africa project](https://www.soils4africa-h2020.eu/) ISRIC and partners are experimenting with a [ISO25258](https://www.iso.org/standard/44595.html) model, similar to the INSPIRE Soil model, encoded in a relational PostGres database. It is interesting to evaluate if this effort can be ported to GeoPackage and form a starting point for the initial effort.
+As part of the [Soils4africa project](https://www.soils4africa-h2020.eu/) ISRIC and partners are experimenting with a [ISO25258](https://www.iso.org/standard/44595.html) model, encoded in a relational PostGres database. It is interesting to evaluate if this effort can be ported to GeoPackage and form a starting point for the initial effort.
 
 ## Read more
 
-At the masterclass edition 2023 Stefania Morrone (Epsilon) presented an approach to use geopackage as an alternative encoding for Soil data download services.
+At the masterclass edition 2023 Stefania Morrone (Epsilon) presented an approach to use [geopackage as an alternative encoding for Soil data](https://wur.yuja.com/v/ejps-sda-gpkg).
 
-<iframe title='use geopackage as an alternative encoding for Soil data download services' width="560"  height="315"  src="use geopackage as an alternative encoding for Soil data download services" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen loading="lazy"></iframe>
+<iframe title='Embedded Media titled: INSPIRE Soil as GeoPackage 2023-01-24' width="560"  height="315"  src="https://wur.yuja.com/V/Video?v=434081&node=1959303&a=121418291&preload=false" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen loading="lazy"></iframe>
 
 - [Good practice on GeoPackage](https://github.com/INSPIRE-MIF/gp-geopackage-encodings)
 - [Model Transformation Rules for alternative encodings](https://github.com/INSPIRE-MIF/model-transformation-rules)

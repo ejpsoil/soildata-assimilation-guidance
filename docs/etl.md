@@ -1,28 +1,32 @@
 ---
-title: Data harmonization (vector data)
+title: Data Standardisation (vector data)
 summary: 
 authors:
     - Paul van Genuchten
 date: 2022-11-10
 ---
 
-# Data harmonization (vector data)
+# Data Standardisation (vector data)
 
-A main aspect of INSPIRE is the harmonization of environmental data throughout Europe. Alinging the format, structure and content of your data to match a common model, so the data can be integrated with other datasets in Europe. And to describe aspects of the data which differ from the common model in such a way, that the differences can be understood by others. 
+A main aspect of INSPIRE is the Standardisation of environmental data throughout Europe. Alinging the format, structure and content of  data to match a common model, so the data can be integrated with other datasets in Europe. And to describe aspects of the data which differ from the common model in such a way, that the differences can be understood by others. 
 
-Data harmonization is an aspect of step `4) data organization` in the [soil information workflow](https://www.isric.org/index.php/utilise/community-practice).
+!!! Note
+    
+    In the wider data domain the term `harmonization` is used to indicate the process of data standardisation. However in the soil domain we use this term to indicate alignment of observation result values by creating pseudo results, as if the result was measured with a common procedure (Pedotransfer functions). 
 
-An important activity related to harmonization is the adoption of INSPIRE code lists and extending those lists to capture regional conventions. The role of code lists is explained in a dedicated [codelists section](codelists.md). 
+Data Standardisation is an aspect of step `4) data organization` in the [soil information workflow](https://www.isric.org/index.php/utilise/community-practice).
 
-INSPIRE datamodel extension is another aspect to consider as part of data harmonization. Harmonization should not lead to loss of data (because some data doesn't fit the target model). Instead the target model should be extended to capture these aspects. [Annex D of TG Soil](https://github.com/INSPIRE-MIF/technical-guidelines/blob/2022.2/data/so/dataspecification_so.adoc#soil-data-model-extensions-informative) has a specific example on extending the model for a soil contamination use case. Options for model extensions vary per technology. Wetransform has a [dedicated section on model extension](http://inspire-extensions.wetransform.to) on their website, based on an [R&D project](https://www.geonovum.nl/uploads/documents/20161121-INSPIRE-Extensions.pdf) from 2016. 
+An important activity related to Standardisation is the adoption of INSPIRE code lists and extending those lists to capture regional conventions. The role of code lists is explained in a dedicated [codelists section](codelists.md). 
 
-If you missed the initial EJP Training on Soil data good practices, you can still have a look at [a presentation about vector data harmonization](https://wur.yuja.com/V/Video?v=195126&node=829569&a=1133213006&autoplay=1).
+INSPIRE datamodel extension is another aspect to consider as part of data Standardisation. Standardisation should not lead to loss of data (because some data doesn't fit the target model). Instead the target model should be extended to capture these aspects. [Annex D of TG Soil](https://github.com/INSPIRE-MIF/technical-guidelines/blob/2022.2/data/so/dataspecification_so.adoc#soil-data-model-extensions-informative) has a specific example on extending the model for a soil contamination use case. Options for model extensions vary per technology. Wetransform has a [dedicated section on model extension](http://inspire-extensions.wetransform.to) on their website, based on an [R&D project](https://www.geonovum.nl/uploads/documents/20161121-INSPIRE-Extensions.pdf) from 2016. 
 
-This document lists various implementation options for data harmonization. 
+If you missed the initial EJP Training on Soil data good practices, you can still have a look at [a presentation about vector data standardisation](https://wur.yuja.com/V/Video?v=195126&node=829569&a=1133213006&autoplay=1).
+
+This document lists various implementation options for data Standardisation. 
 
 ## Minimal
 
-The [good practice on GeoPackage](https://github.com/INSPIRE-MIF/gp-geopackage-encodings) describes a relational database format to share harmonised data. [GeoPackage](https://www.geopackage.org/) is a standardised format for storing relational data by the Open Geospatial Consorium, building on the SQLite database specification. Becuase many soil data is stored in the form of relational databases, the transformation to GeoPackage is relatively easy. The transformation process could for example be triggered by a series of database queries within a GIS Desktop client such as QGIS, in Python scripts or an ETL tool such as Hale Studio or FME. 
+The [good practice on GeoPackage](https://github.com/INSPIRE-MIF/gp-geopackage-encodings) describes a relational database format to share standardised data. [GeoPackage](https://www.geopackage.org/) is a standardised format for storing relational data by the Open Geospatial Consorium, building on the SQLite database specification. Becuase many soil data is stored in the form of relational databases, the transformation to GeoPackage is relatively easy. The transformation process could for example be triggered by a series of database queries within a GIS Desktop client such as QGIS, in Python scripts or an ETL tool such as Hale Studio or FME. 
 
 Pro's and Con's:
 
@@ -33,7 +37,7 @@ Pro's and Con's:
 
 | Cookbook | Software | Description |
 | --- | --- | --- |
-| [INSPIRE in a relational database](cookbook/glosis-db.md) | [Geopackage](https://www.geopackage.org) | Harmonise soil data using GeoPackage |
+| [INSPIRE in a relational database](cookbook/glosis-db.md) | [Geopackage](https://www.geopackage.org) | Standardise soil data using GeoPackage |
 
 ## Traditional
 
@@ -54,7 +58,7 @@ See also the [presenation about semantic web (GLOSIS)](https://wur.yuja.com/V/Vi
 
 | Product | Software | Description |
 | --- | --- | --- |
-| [Semantic harmonization using TARQL](cookbook/tarql.md) | [TARQL](https://github.com/tarql/tarql) | command-line tool for converting CSV files to RDF using SPARQL 1.1 |
+| [Semantic Standardisation using TARQL](cookbook/tarql.md) | [TARQL](https://github.com/tarql/tarql) | command-line tool for converting CSV files to RDF using SPARQL 1.1 |
 | [Semantic mapping using YARRRML](cookbook/rml.md) | [RML mapper](https://rml.io/) | Human readable RDF mappings for RML.io |
 | [Publish data through semantic web](https://doi.org/10.15454/YJLFZI) | [Yed](https://www.yworks.com/products/yed) [Coby](https://forgemia.inra.fr/anaee-dev/coby) [BlazeGraph](https://blazegraph.com/) | Cookbook by INRAE on publishing soild data as RDF | 
 tarql

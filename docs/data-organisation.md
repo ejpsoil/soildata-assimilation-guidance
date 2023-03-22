@@ -9,40 +9,59 @@ observations from field studies and laboratory work. Data from external
 organisations is prepared and made available to augment and/or validate local
 data. Relevant measures are put in place to authorise relevant staff, prevent
 data loss and data redundancy and assess privacy concerns. Concrete deliverables
-of this phase are: a data model materialised in a physical database, implemented
-procedures to prevent data loss, access grants to relevant staff, a metadata
-document in which these aspects are described, implemented procedures to
-evaluate quality of the data and infrastructure. 
+of this phase are: 
+- data model materialised in a physical database 
+- implemented procedures to prevent data loss 
+- access grants to relevant staff 
+- metadata document in which these aspects are described
+- procedures to evaluate quality of the data and infrastructure 
 
 Note that in this phase no effort is made to publish data to remote partners or
 the general public, but it does make sense to capture on the metadata if any
 access constraints apply which may prevent publication to a wider audience in a
 later stage.
 
+## Types of soil data
+
+Within the soil domain (and wider earth sciences) typically 4 types of data are identified: 
+
+0.	‘As-is’ data, legacy datasets in their original form or field and analytical data as it is received from field surveyors and laboratories, including reporting about the applied procedures.
+1.	Soil analytical data and field descriptions of a) soil profiles and b) soil plots, standardised to a common model (iso28258). The data includes the lineage, the definition of the soil in space and time (xyzt), the attribute concerned, the procedure used and the unit of expression. Domain values are selected from common code lists. 
+2.	A dataset in which the soil parameter values are harmonised as if they were analysed using a single procedure. The metadata of individual observations can be left out, resulting in a abbreviated dataset, typically presented as multiple parameter values (texture fractions, pH, Ca content, Vegetation, Groundwater level) of a feature of interest (horizon, profile, plot defined by xyzt) in a flat table.
+3.	Predicted distribution of soil properties or soil classes, either as grid cells through a statistical model or as vector polygons drawn with expert knowledge in the field. 
+
+## Code lists
+
+Another aspect to consider as part of data standardization is the adoption of common code lists that support interoperability of data. Datasets which use for example different texture classes are hard to compare. Within the soil community there are a number of common code lists available.  
+
+- World Reference Base (WRB), available in digital form via [Agrovoc](http://aims.fao.org/aos/agrovoc/c_89f35c33). 
+- FAO Guidelines of Soil Description (these practices are integrated in the latest version of WRB), digitised as part of the [GLOSIS Web Ontology effort](https://rapw3k.github.io/glosis/doc/glosis_cl/index-en.html). 
+- The GLOSIS Web Ontology includes [code lists of common soil properties](https://rapw3k.github.io/glosis/doc/glosis_ext_property/index-en.html) and [analysis procedures](https://rapw3k.github.io/glosis/doc/glosis_procedure/index-en.html). This list was originally collected in A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (Africa Soil Profiles Database; Leenaars J.G.B et al 2014). And later extended by the soil community. 
+
+In some cases it is relevant to define code lists at a country or even regional level. A regional code list repository supports practitioners in standardizing their data early in the data lifecycle. Extending a codelist is then a relevant recipe.
+
+
+## Metadata management
+
 Metadata documents are preferably based on a common ontology such as
-[DCAT](cookbook/dcat.md) or iso19139. Roughly 2 approaches,
-with various implementation options, exist to maintain metadata in an
+[DCAT](cookbook/dcat.md), [DataCite](https://schema.datacite.org/) or 
+[iso19115](https://www.iso.org/standard/53798.html). Roughly 2 approaches,
+with various implementation options, exist to maintain metadata within an
 organisation:
 
-- Metadata is included in the data file or is stored as a sidecar file next to
-  the actual data file. At intervals a crawler imports metadata to make the data
-findable from a central location.
-- Metadata is captured in a separate system and linkage is maintained between
-  the actual dataset and its metadata.
+- Metadata is included in the data file or is stored as a sidecar file next to the actual data file. At intervals a crawler imports metadata to make the data findable from a central location.
+- Metadata is captured in a separate system and linkage is maintained between the actual dataset and its metadata.
 
 The second option is relatively easy to adopt, however it comes with a potential
-big effort to keep the metadata system in sync with the organisation. In
+big effort to keep the metadata system in sync within the organisation. In
 practice organisations tend to implement a combination of both options. 
 
-Within this step is also the organisation of data arriving from external sources
-and the assimilation of that data with local data.  As soon as a user imports a
+This step includes the organisation of data arriving from external sources
+and the standardisation of that data with local data (transform to a common model). As soon as a user imports a
 remote dataset for use in a project, it is useful to include a metadata record
 about that dataset in the local repository, so colleagues understand where/when
 the data was imported. If the dataset is available online, it is better to link
-to the remote dataset, so users would always use the latest version. As part of
-the assimilation a [data harmonisation to a locally used
-data model](cookbook/hale-studio-consume-gml.md) is relevant (See also [Data
-harmonisation](etl.md)).
+to the remote dataset, so users would always use the latest version. 
 
 ## Related recipes in this cookbook:
 
@@ -54,4 +73,7 @@ harmonisation](etl.md)).
   GeoServer](cookbook/bridge-geoserver-geonetwork.md) includes a section on
 metadata management in QGIS
 - [DCAT](cookbook/dcat.md)
-- [Consume Soil GML with Hale Studio](cookbook/hale-studio-consume-gml.md)
+
+Consider that if a project uses a dedicated data model, transforming external data from a common model to the dedicated project model is relevant.
+The recipe on [data harmonisation to a locally used data model](cookbook/hale-studio-consume-gml.md) is relevant (See also the general [Data
+standardisation](etl.md) recipe).

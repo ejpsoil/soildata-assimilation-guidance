@@ -1,0 +1,83 @@
+---
+title: Glossary
+summary: 
+authors:
+    - Paul van Genuchten
+    - Luis de Sousa
+date: 2022-11-10
+---
+
+# Glossary
+
+This page includes terms that we use in our wiki, so that you have a reference for how we’re using them.
+
+*Application programming interface (API)* is a way for two or more computer programs to communicate with each other (source [wikipedia](https://en.wikipedia.org/wiki/API))
+
+*Assimilation* is a catchy term indicating the processes involved to combine multiple datasets with different origin into a common dataset, the term is somewhat similarly used in psychology as `incorporation of new concepts into existing schemes` (source [wikipedia](https://en.wikipedia.org/wiki/Assimilation)). But is not well aligned with its usage in the data science community: ` updating a numerical model with observed data` (source [wikipedia](https://en.wikipedia.org/wiki/Assimilation))
+
+*Catalogue* or *metadata registry* is a central location in an organization where metadata definitions are stored and maintained (source [wikipedia](https://en.wikipedia.org/wiki/Metadata_registry))
+
+*ATOM* is a standardised interface to exchange news feeds over the internet. It has been adopted by INSPIRE as a basic alternative to download services via WFS or WCS.
+
+*Conceptual model* or *domain model* represents concepts (entities) and relationships between them (source [wikipedia](https://en.wikipedia.org/wiki/Conceptual_model_(computer_science)))
+
+*Content negotiation* refers to mechanisms that make it possible to serve different representations of a resource at the same URI (source [wikipedia](https://en.wikipedia.org/wiki/Content_negotiation))
+
+*Digital exchange of soil-related data (ISO 28258:2013)* presents a conceptual model of a common understanding of what soil profile data are
+
+*Discovery service* is a concept from [INSPRE](https://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/discovery) indicating a service type which enables discovery of resources (search and find). Typically implemented as CSW.
+
+*Download service* is a concept from [INSPRE](https://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/download) indicating a service type which enables download of a (subset of a) dataset. Typically implemented as WFS, WCS, SOS or Atom.
+
+*Encoding* is the format used to [serialise](https://en.wikipedia.org/wiki/Serialization) a resource to a file, common encodings are xml, json, turtle
+
+*Geography Markup Language (GML)* is an xml based standardised encoding for spatial data.
+
+*Global Soil Information System ([GLOSIS](https://www.fao.org/global-soil-partnership/areas-of-work/soil-information-and-data/en/))* is an activity of FAO Global Soil Partnership enabling a federation of soil information systems and interoperable data sets 
+
+*GLOSIS domain model* is an abstract, architectural component that defines how data are organised; it embodies a common understanding of what soil profile data are.
+
+*[GLOSIS Web Ontology](https://github.com/rapw3k/glosis)* is an implementation of the GLOSIS domain model using semantic technology
+
+*[GLOSIS Codelists](https://github.com/rapw3k/glosis/blob/master/glosis_cl.ttl)* is a series of codelists supporting the GLOSIS web ontology. Including the codelists as published in the FAO Guidelines for Soil Description (v2007), soil properties as collected by FAO GfSD and procedures as initally collected by Johan Leenaars.
+
+*Harmonization* is the process of transforming 2 datasets to a common model, a common projection, usage of common domain values and align their geometries
+
+Observations and Measurements (O&M)
+
+OGC API
+
+Ontology
+
+Publication
+
+Relational model
+
+RDF
+
+REST
+
+Registry
+
+Repository
+
+SensorthingsAPI
+
+SOS
+
+UML model
+
+*View service* is a concept from [INSPRE](https://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view) indicating a service type which presents a (pre)view of a dataset. Typically implemented as WMS or WMTS.
+
+Webservice
+
+WMS
+
+WFS
+
+WCS
+
+WMTS
+
+XSD
+

@@ -8,21 +8,30 @@ The open source software has been developed in the scope of a European Research 
 
 This recipe has been developed in the scope of a Masterclass on data assimilation within the [EJP Soil project](https://ejpsoil.eu/) and builds on harmonization work performed in the scope of the [eDanube project](https://www.isric.org/projects/soil-and-terrain-database-danube-basin).
 
-In this recipe we'll harmonize a SOTER database to the INSPIRE model. Read more about the INSPIRE Soil model in the relevant [technical guidelines](https://inspire.ec.europa.eu/id/document/tg/so). 
+In this recipe we'll harmonize a SOTER database to the INSPIRE model. Read more about the INSPIRE Soil model in the relevant [technical guidelines](https://inspire.ec.europa.eu/id/document/tg/so). Some samples of harmonised INSPIRE soil data are available from these data providers: 
 
-Contents of the recipe
+- [City of Berlin](https://fbinter.stadt-berlin.de/fb/atom/SO/SO_BoKw2015.zip)
+- [wielkopolski region in Poland](http://mapy.geoportal.gov.pl/wss/service/ATOM/httpauth/download/?fileId=3fe348acdbf4318c7d9c618e62cf6006&name=wielkopolskie_5k.zip)
+- [Lihuania](https://www.inspire-geoportal.lt/resources/atom/so/data/SO_INSPIRE2.zip) (1.6GB)
+ 
 
-- SOTER database
-- Proparing the data 
-- Install & get started with Hale Studio
-- Define harmonization rules
-- Export GML
+## Contents of the recipe
+
+- [SOTER database](#soter-database)
+- [Preparing the data](#preparing-the-data)
+- [Install & get started with Hale Studio](#install-hale-studio)
+- [Define harmonization rules](#define-harmonization-rules)
+- [Codelist Mappings](#codelist-mappings)
+- [Anytype in XSD](#anytype-in-xsd)
+- [Export GML](#export-gml)
+- [Export GeoPackage](#export-geopackage)
+- [Validate GML](#validate-gml)
 
 ## SOTER Database
 
 For this recipe we're going to use the SOTER database of Cuba. Download the zip file from https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/f31ac19f-67a4-4f64-94cc-d4f063ea9add. 
 
-The [SOTER programme](https://www.isric.org/explore/soter) was initiated in 1986 by the Food and Agricultural Organization of the United Nations (FAO), the United Nations Environmental Programme and ISRIC, under the auspices of the International Soil Science Society. The aim of the programme was to develop a global SOTER database at scale 1:1 million that was supposed to be the successor of the FAO-UNESCO Soil Map of the World. A SOTER database with global coverage was never achieved, but SOTER databases were developed for various regions, countries and continents.
+The [SOTER programme](https://www.isric.org/explore/soter) was initiated in 1986 by the Food and Agricultural Organization (FAO), the United Nations Environmental Programme and ISRIC, under the auspices of the International Soil Science Society. The aim of the programme was to develop a global SOTER database at scale 1:1 million that was supposed to be the successor of the FAO-UNESCO Soil Map of the World. A SOTER database with global coverage was never achieved, but SOTER databases were developed for various regions, countries and continents.
 
 The picture below shows the database structure of a SOTER database. The database structure allows to store terrain, soil profile up to wet chemistry results.
 
@@ -32,7 +41,7 @@ In this recipe we're focussing on the `RepresentativeHorizonValues` table mostly
 
 ## Preparing the data
 
-Notice that, like many other soil databases, the observed soil property values are listed as columns for each horizon. The INSPIRE model instead uses the Observations and Measurments model, in which each observation is an individual entity which includes the feature of interest (e.g. `Horizon 2`), the observed property (e.g. `pH`), the result (e.g. `7.2`) and the process (e.g. `pHCaCl2`). 
+Notice that, like many other soil databases, the observed soil property values are listed as columns for each horizon. The INSPIRE model instead uses the Observations and Measurments model, in which each observation is an individual entity which includes the feature of interest (e.g. `Horizon 2`), the observed property (e.g. `pH`), the result (e.g. `7.2`) and a procedure (e.g. `pHCaCl2`). 
 
 ![Observations and measurements, source 52North](img/obsmes.png)
 

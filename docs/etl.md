@@ -8,17 +8,20 @@ date: 2022-11-10
 
 # Data Standardisation (vector data)
 
-A main aspect of INSPIRE is the Standardisation of environmental data throughout Europe. Alinging the format, structure and content of  data to match a common model, so the data can be integrated with other datasets in Europe. And to describe aspects of the data which differ from the common model in such a way, that the differences can be understood by others. 
-
-!!! Note
-    
-    In the wider data domain the term `harmonization` is used to indicate the process of data standardisation. However in the soil domain we use this term to indicate alignment of observation result values by creating pseudo results, as if the result was measured with a common procedure (Pedotransfer functions). 
-
 Data Standardisation is an aspect of step `4) data organization` in the [soil information workflow](https://www.isric.org/index.php/utilise/community-practice).
 
-An important activity related to Standardisation is the adoption of INSPIRE code lists and extending those lists to capture regional conventions. The role of code lists is explained in a dedicated [codelists section](codelists.md). 
+Data standardisation is the process of aligning one or more datasets to a common (standardised) data model. For the soil domain, [ISO 28258:2013 Soil quality — Digital exchange of soil-related data](https://www.iso.org/obp/ui/#iso:std:iso:28258:ed-1:v1:en) is a standardised conceptual model which has been developed by the soil community to facilitate the capture of soil plot and profile data. The core of the model is the [Observations and Measurements](https://www.ogc.org/standard/om/) model of the Open Geospatial Community. The ISO28258 model has proven to be generic to capture a lot of soil data use cases, and facilitates interoperability with partners. 
 
-INSPIRE datamodel extension is another aspect to consider as part of data Standardisation. Standardisation should not lead to loss of data (because some data doesn't fit the target model). Instead the target model should be extended to capture these aspects. [Annex D of TG Soil](https://github.com/INSPIRE-MIF/technical-guidelines/blob/2022.2/data/so/dataspecification_so.adoc#soil-data-model-extensions-informative) has a specific example on extending the model for a soil contamination use case. Options for model extensions vary per technology. Wetransform has a [dedicated section on model extension](http://inspire-extensions.wetransform.to) on their website, based on an [R&D project](https://www.geonovum.nl/uploads/documents/20161121-INSPIRE-Extensions.pdf) from 2016. 
+![Observations and Measurements](https://52north.github.io/sensor-web-tutorial/images/om1.png)
+
+These days various encodings of the ISO28258 conceptual model are available
+-	A xml/xsd oriented model 
+-	A relational model ([PostGreSQL](https://iso28258.isric.org)) 
+-	A semantic web ontology, called [GLOSIS Web Ontology](http://w3id.org/glosis/model) 
+
+During implantation of ISO28258 limitations of the model are likely to be  discovered related to the local Use Cases. These limitations can usually be bypassed by extending the model. In recent years some extensions to ISO28258 have been published, which could be relevant to the your cases. Examples are [GLOSIS domain model](https://www.fao.org/global-soil-partnership/areas-of-work/soil-information-and-data/en/) and the [INSPIRE Soil data model](https://inspire.ec.europa.eu/id/document/tg/so).  [Annex D of TG Soil](https://github.com/INSPIRE-MIF/technical-guidelines/blob/2022.2/data/so/dataspecification_so.adoc#soil-data-model-extensions-informative) has a specific example on extending the model for a soil contamination use case. Options for model extensions vary per technology. Wetransform has a [dedicated section on model extension](http://inspire-extensions.wetransform.to) on their website, based on an [R&D project](https://www.geonovum.nl/uploads/documents/20161121-INSPIRE-Extensions.pdf) from 2016. 
+
+An important activity related to Standardisation is the adoption of common code lists and extending those lists to capture regional conventions. The role of code lists is explained in a dedicated [codelists section](codelists.md). 
 
 If you missed the initial EJP Training on Soil data good practices, you can still have a look at [a presentation about vector data standardisation](https://wur.yuja.com/V/Video?v=195126&node=829569&a=1133213006&autoplay=1).
 

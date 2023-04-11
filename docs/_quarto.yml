@@ -3,6 +3,9 @@ project:
 
 website:
   title: "Soil data guidance"
+  repo-url: https://github.com/ejpsoil/soildata-assimilation-guidance
+  repo-actions: [edit, issue]
+  repo-subdir: docs/cookbook
   navbar:
     logo: https://ejpsoil.eu/fileadmin/projects/ejpsoil/EJP_Soil_logo_cmyk-h100.png
     logo-href: https://ejpsoil.eu

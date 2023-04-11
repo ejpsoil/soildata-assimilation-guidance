@@ -28,7 +28,7 @@ https://example.org/mapserv.cgi?map=/data/soilbody.map&service=WMS&request=GetCa
 
 Various tools exist which create mapfiles automatically, from for example a QGIS layer. See for example the [GeoCat Bridge](https://plugins.qgis.org/plugins/geocatbridge/) software.
 
-In this recipe we'll assemble the mapfile in a text editor. For some of the more advanced text editors, such as [Visual Studio Code](../utils/visualstudiocode.qmd), mapfile editing plugins are available, which provide validation and syntax highlighting.
+In this recipe we'll assemble the mapfile in a text editor. For some of the more advanced text editors, such as [Visual Studio Code](../utils/vscode.qmd), mapfile editing plugins are available, which provide validation and syntax highlighting.
 
 A generic mapfile Quick Start is provided at https://live.osgeo.org/en/quickstart/mapserver_quickstart.html. The quickstart is based on [OSGeo Live](https://live.osgeo.org/), a virtual DVD, which offers a preinstalled mapserver and has data from [Natural Earth](https://www.naturalearthdata.com/downloads/).
 

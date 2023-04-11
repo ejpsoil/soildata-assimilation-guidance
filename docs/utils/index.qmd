@@ -1,0 +1,14 @@
+---
+title: Utils
+---
+
+This page lists a set of usefull utilities.
+
+- [Docker](docker.qmd) - a virtualisation technology
+- [Gdal/OGR](gdal.qmd) - a format conversion utility for spatial files
+- [Git](git.qmd) - a versioning system
+- [Jupyter notebooks](jupyter.qmd) - Interactive notebooks
+- [Local tunnel](localtunnel.qmd) - Set up a local tunnel to the web
+- [Python](python.qmd) - A common programming language in data science
+- [R](r.qmd) - A language for statistics
+- [Visual Studio Code](vscode.qmd) - A text editor

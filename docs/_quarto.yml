@@ -1,0 +1,44 @@
+project:
+  type: website
+
+website:
+  title: "Soil data guidance"
+  navbar:
+    logo: https://ejpsoil.eu/fileadmin/projects/ejpsoil/EJP_Soil_logo_cmyk-h100.png
+    logo-href: https://ejpsoil.eu
+    logo-alt: EJPSoil website
+    title: ''
+    left:
+      - href: index.qmd
+        text: Home
+      - text: Identification 
+        href: identification.qmd
+      - text: Harmonization 
+        href: etl.qmd
+      - text: Code lists 
+        href: codelists.qmd
+      - text: Discovery 
+        href: metadata.qmd
+      - text: View 
+        href: view.qmd
+      - text: Download 
+        href: download.qmd
+      - text: QOS 
+        href: QOS.qmd
+      - text: Utils 
+        href: utils/index.qmd
+      - text: Glossary 
+        href: glossary.qmd
+  page-footer:
+    right: 
+      - text: "About"
+        href: about.qmd
+      - text: "License"
+        href: license.qmd
+      - text: <img style="width:80px;margin:5px 0px" src="https://ejpsoil.eu/fileadmin/_processed_/0/3/csm_Horizon_2020_funding_Thumbnail_a20cd538b7.jpg">
+        href: https://cordis.europa.eu/project/id/862695
+
+format:
+  html:
+    theme: litera
+    toc: true

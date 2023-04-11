@@ -1,35 +1,50 @@
 
 # Workflow to build and deploy docs on GitHub Pages.
-# Author: Just van den Broecke - 2021
-#
-name: Docs Deploy ⚙️
-
-# Trigger only when services/docs subdir changed
 on:
   push:
-    paths:
-      - '**'
+    branches: 
+      - main
+      - quarto
 
-defaults:
-  run:
-    working-directory: .
+name: Docs Deploy ⚙️
 
 jobs:
-  build:
-    name: Build and Deploy Documentation
+  build-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout ✅
-        uses: actions/checkout@v2
-
-      - uses: actions/setup-python@v2
+      - name: Check out repository
+        uses: actions/checkout@v3
+        
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
         with:
-          python-version: '3.x'
+          # To install LaTeX to build PDF book 
+          tinytex: true 
+          # uncomment below and fill to pin a version
+          # version: SPECIFIC-QUARTO-VERSION-HERE
+      
+      # add software dependencies here
 
-      - name: Install requirements 📦
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+      # To publish to Netlify, RStudio Connect, or GitHub Pages, uncomment
+      # the appropriate block below
+      
+      # - name: Publish to Netlify (and render)
+      #   uses: quarto-dev/quarto-actions/publish@v2
+      #   with:
+      #     target: netlify
+      #     NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        
+      # - name: Publish to RStudio Connect (and render)
+      #   uses: quarto-dev/quarto-actions/publish@v2
+      #   with:
+      #     target: connect
+      #     CONNECT_SERVER: enter-the-server-url-here
+      #     CONNECT_API_KEY: ${{ secrets.CONNECT_API_KEY }} 
 
-      - name: Deploy 📦
-        run: mkdocs gh-deploy --force -m 'Update website via GH Action'
+      - name: Publish to GitHub Pages (and render)
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: test-quarto
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # this secret is always available for github actions
+      

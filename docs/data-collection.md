@@ -1,0 +1,11 @@
+# Data Collection
+
+This article describes the `data collection` step in the [Soil Information
+Workflow](https://www.isric.org/index.php/utilise/community-practice) and
+references various cookbook recipes related to this step in the workflow.
+
+Data collection is done in the field and laboratory. During this process, data collection tools are used. Proper selection and preparation of data collection tooling impacts how data is passed to the next steps of the data workflow. Verify on the collection tooling:
+
+- Relevant aspects to the observation are captured (staff, date, sample-id, depth, location, procedure, ...)
+- Use of common code lists (definition of texture classes, colours, units of measure)
+

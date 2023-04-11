@@ -1,0 +1,1643 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Cookbook for a masterclass on Soil Data Assimilation">
+      
+      
+        <meta name="author" content="Wageningen Environmental Research">
+      
+      
+        <link rel="canonical" href="https://ejpsoil.github.io/soildata-assimilation-guidance/cookbook/code-listsExtension/">
+      
+      
+        <link rel="prev" href="../virtuoso/">
+      
+      
+        <link rel="next" href="../../metadata/">
+      
+      <link rel="icon" href="https://cdn.au.dk/favicon.ico">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
+    
+    
+      
+        <title>Extend code lists - Soil Data Assimilation Guidance</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ded33207.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#code-lists" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://ejpsoil.eu/" title="Soil Data Assimilation Guidance" class="md-header__button md-logo" aria-label="Soil Data Assimilation Guidance" data-md-component="logo">
+      
+  <img src="https://ejpsoil.eu/fileadmin/projects/ejpsoil/EJP_Soil_logo_cmyk-h100.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Soil Data Assimilation Guidance
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Extend code lists
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ejpsoil/soildata-assimilation-guidance" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://ejpsoil.eu/" title="Soil Data Assimilation Guidance" class="md-nav__button md-logo" aria-label="Soil Data Assimilation Guidance" data-md-component="logo">
+      
+  <img src="https://ejpsoil.eu/fileadmin/projects/ejpsoil/EJP_Soil_logo_cmyk-h100.png" alt="logo">
+
+    </a>
+    Soil Data Assimilation Guidance
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ejpsoil/soildata-assimilation-guidance" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../masterclass/" class="md-nav__link">
+        Masterclass
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Identification
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Identification
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../identification/" class="md-nav__link">
+        Intro
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uri/" class="md-nav__link">
+        Uri strategy
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Harmonization
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Harmonization
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../etl/" class="md-nav__link">
+        Intro
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glosis-db/" class="md-nav__link">
+        Relational database
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hale-studio/" class="md-nav__link">
+        Hale Studio
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tarql/" class="md-nav__link">
+        TARQL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rml/" class="md-nav__link">
+        YARRRML
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Code lists
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Code lists
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../codelists/" class="md-nav__link">
+        Intro
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../codelist-iso19135/" class="md-nav__link">
+        Filebased
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../re3gistry/" class="md-nav__link">
+        Re3gistry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../virtuoso/" class="md-nav__link">
+        Skosmos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Extend code lists
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Extend code lists
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#inspire" class="md-nav__link">
+    INSPIRE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glosis" class="md-nav__link">
+    GloSIS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extending-code-lists" class="md-nav__link">
+    Extending code-lists
+  </a>
+  
+    <nav class="md-nav" aria-label="Extending code-lists">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#skos" class="md-nav__link">
+    SKOS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extend-an-inspire-code-list-with-skos" class="md-nav__link">
+    Extend an INSPIRE code-list with SKOS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extend-a-glosis-code-list" class="md-nav__link">
+    Extend a GloSIS code-list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-new-code-list" class="md-nav__link">
+    Create a new code-list
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publishing-your-own-code-list-items" class="md-nav__link">
+    Publishing your own code-list items
+  </a>
+  
+    <nav class="md-nav" aria-label="Publishing your own code-list items">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dereferenceable-uris" class="md-nav__link">
+    Dereferenceable URIs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#read-more" class="md-nav__link">
+    Read more
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          Discovery
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Discovery
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metadata/" class="md-nav__link">
+        Metadata
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pygeometa/" class="md-nav__link">
+        pygeometa
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dcat/" class="md-nav__link">
+        DCAT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../geonetwork/" class="md-nav__link">
+        GeoNetwork
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          View
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          View
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../view/" class="md-nav__link">
+        View
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mapserver/" class="md-nav__link">
+        MapServer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bridge-geoserver-geonetwork/" class="md-nav__link">
+        GeoServer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qgis/" class="md-nav__link">
+        QGIS server
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+          Download
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Download
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../download/" class="md-nav__link">
+        Intro
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webdav/" class="md-nav__link">
+        Webdav
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zenodo/" class="md-nav__link">
+        Zenodo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../geoserver/" class="md-nav__link">
+        GeoServer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deegree/" class="md-nav__link">
+        deegree
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rasdaman/" class="md-nav__link">
+        CSW Rasdaman
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../frost-server/" class="md-nav__link">
+        SensorThings API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pygeoapi/" class="md-nav__link">
+        pygeoapi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ldproxy/" class="md-nav__link">
+        LDProxy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../postgraphile/" class="md-nav__link">
+        GraphQL
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../QOS/" class="md-nav__link">
+        QOS
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+          Utils
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          Utils
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../utils/docker/" class="md-nav__link">
+        docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../utils/gdal/" class="md-nav__link">
+        gdal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../utils/git/" class="md-nav__link">
+        git
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../utils/jupyter/" class="md-nav__link">
+        jupyter
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../utils/localtunnel/" class="md-nav__link">
+        tunnel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../utils/r/" class="md-nav__link">
+        r
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../utils/visualstudiocode/" class="md-nav__link">
+        visualstudiocode
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../utils/python/" class="md-nav__link">
+        python
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        Glossary
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#inspire" class="md-nav__link">
+    INSPIRE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glosis" class="md-nav__link">
+    GloSIS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extending-code-lists" class="md-nav__link">
+    Extending code-lists
+  </a>
+  
+    <nav class="md-nav" aria-label="Extending code-lists">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#skos" class="md-nav__link">
+    SKOS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extend-an-inspire-code-list-with-skos" class="md-nav__link">
+    Extend an INSPIRE code-list with SKOS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extend-a-glosis-code-list" class="md-nav__link">
+    Extend a GloSIS code-list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-new-code-list" class="md-nav__link">
+    Create a new code-list
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publishing-your-own-code-list-items" class="md-nav__link">
+    Publishing your own code-list items
+  </a>
+  
+    <nav class="md-nav" aria-label="Publishing your own code-list items">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dereferenceable-uris" class="md-nav__link">
+    Dereferenceable URIs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#read-more" class="md-nav__link">
+    Read more
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="code-lists">Code-lists</h1>
+<p>This recipe describes a semantic approach based on <a href="https://www.w3.org/2004/02/skos/">SKOS</a> to extend an INSPIRE code-list.</p>
+<h2 id="inspire">INSPIRE</h2>
+<p>Code-lists specified for the Soil domain within the INSPIRE directive are
+described in the report <a href="https://inspire.ec.europa.eu/documents/Data_Specifications/INSPIRE_DataSpecification_OI_v3.0rc3.pdf">D2.8.III.3 Data Specification on Soil – Technical
+Guidelines</a>.
+A brief overview of these code-lists is offered below.</p>
+<table>
+<thead>
+<tr>
+<th>Code-list</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><a href="https://inspire.ec.europa.eu/codelist/PhenomenonTypeValue">PhenomenonTypeValue</a></strong></td>
+<td>[Extensible] A code list of phenomena (e.g. temperature, wind speed). Parent of ProfileElementParameterName, SoilSiteParameterName, SoilProfileParameterName and SoilDerivedObjectParameterName.</td>
+</tr>
+<tr>
+<td><strong><a href="http://inspire.ec.europa.eu/codelist/LayerGenesisProcessStateValue">LayerGenesisProcessStateValue</a></strong></td>
+<td>An indication of whether the process specified in layerGenesisProcess is ongoing or ceased in the past.</td>
+</tr>
+<tr>
+<td><strong><a href="http://inspire-registry.jrc.ec.europa.eu/clr/LayerTypeValue">LayerTypeValue</a></strong></td>
+<td>Classification of a layer according to the concept that fits the purpose,  e.g. "topsoil".</td>
+</tr>
+<tr>
+<td><strong><a href="http://inspire.ec.europa.eu/codelist/ProfileElementParameterNameValue">ProfileElementParameterNameValue</a></strong></td>
+<td>[Extensible] List of properties that can be observed to characterize the profile element.</td>
+</tr>
+<tr>
+<td><strong><a href="http://inspire.ec.europa.eu/codelist/SoilDerivedObjectParameterNameValue">SoilDerivedObjectParameterNameValue</a></strong></td>
+<td>[Extensible] List of soil related properties that can be derived from soil and other data.</td>
+</tr>
+<tr>
+<td><strong><a href="http://inspire.ec.europa.eu/codelist/SoilInvestigationPurposeValue">SoilInvestigationPurposeValue</a></strong></td>
+<td>List of terms indicating the reasons for conducting a survey.</td>
+</tr>
+<tr>
+<td><strong><a href="http://inspire.ec.europa.eu/codelist/SoilPlotTypeValue">SoilPlotTypeValue</a></strong></td>
+<td>List of possible values that give information on what kind of plot the observation of the soil is made.</td>
+</tr>
+<tr>
+<td><strong><a href="http://inspire.ec.europa.eu/codelist/SoilProfileParameterNameValue">SoilProfileParameterNameValue</a></strong></td>
+<td>[Extensible] List of properties that can be observed to characterize the soil profile.</td>
+</tr>
+<tr>
+<td><strong><a href="http://inspire.ec.europa.eu/codelist/SoilSiteParameterNameValue">SoilSiteParameterNameValue</a></strong></td>
+<td>[Extensible] List of properties that can be observed to characterize the soil site.</td>
+</tr>
+<tr>
+<td><strong><a href="http://inspire.ec.europa.eu/codelist/WRBQualifierPlaceValue">WRBQualifierPlaceValue</a></strong></td>
+<td>List of values to indicate the placement of the Qualifier with regard to the WRB reference soil group (RSG), according to naming rules of the World reference base for soil resources 2006, first update 2007.</td>
+</tr>
+<tr>
+<td><strong><a href="http://inspire.ec.europa.eu/codelist/WRBQualifierValue">WRBQualifierValue</a></strong></td>
+<td>List of possible qualifiers (i.e. prefix and suffix qualifiers of the World Reference Base for Soil Resources 2006, first update 2007).</td>
+</tr>
+<tr>
+<td><strong><a href="http://inspire.ec.europa.eu/codelist/WRBReferenceSoilGroupValue">WRBReferenceSoilGroupValue</a></strong></td>
+<td>List of possible reference soil groups (i.e. first level of classification of the World Reference Base for Soil Resources 2006, first update 2007).</td>
+</tr>
+<tr>
+<td><strong><a href="http://inspire.ec.europa.eu/codelist/WRBSpecifierValue">WRBSpecifierValue</a></strong></td>
+<td>List of possible specifiers, comprising only the values specified in the World Reference Base for Soil Resources 2006, first update 2007.</td>
+</tr>
+</tbody>
+</table>
+<p>These code-lists are all available on-line through a
+<a href="https://ec.europa.eu/isa2/solutions/re3gistry_en/">r3gistry</a> instance. Each
+item in these code-lists is a dereferenceable by URI. </p>
+<p>Four of these lists are extensible, those expressing properties associated with
+the different features of interest. They are designed to serve as
+umbrella structures for further specialisation according to local practices.
+Extension is made in an hierarchical fashion, meaning that each additional item
+must be a narrower definition of one of the existing items.</p>
+<p>Besides these curated code-lists, the INSPIRE domain model also creates space
+for code-lists of physio-chemical procedures of soil analysis. These are to be
+referenced from the Observation instances related to the properties referred
+above.</p>
+<p>There is no practical guidance in the Technical Guidelines document on how to
+extend or create new code-lists towards INSPIRE compliance. This document
+provides broad guidelines on how to do so with the <a href="https://www.w3.org/2004/02/skos/">Simple Knowledge
+Organisation System</a> (SKOS), described ahead. </p>
+<h2 id="glosis">GloSIS</h2>
+<p>The <a href="https://github.com/rapw3k/glosis">GloSIS web ontology</a> includes a large
+range of code-lists that are relevant within the INSPIRE context. GloSIS
+follows the pattern of the <a href="https://www.w3.org/TR/vocab-ssn/">Sensor, Observation, Sample, and
+Actuator</a> (SOSA) ontology, which is the
+Semantic Web counterpart of the <a href="https://www.ogc.org/standards/om">Observations &amp;
+Measurements</a> standard (O&amp;M). These code-lists
+are expressed with SKOS.</p>
+<p>The GloSIS code-lists spread along four main categories:</p>
+<ul>
+<li>Values meeting <strong>Descriptive</strong> properties (FAO Guidelines of Soil
+  Description):<ul>
+<li>Site/Plot (40)</li>
+<li>Layer/Profile (90)</li>
+<li>Surface (5)</li>
+</ul>
+</li>
+<li><strong>Physio-chemical</strong> properties (circa 80 items)</li>
+<li><strong>Procedures</strong> of physio-chemical analysis (circa 230 items).</li>
+</ul>
+<p>Code-lists in GloSIS are gathered in a <a href="https://rapw3k.github.io/glosis/docs/glosis-cl-doc/index-en.html">generic
+module</a>. With
+physio-chemical analysis procedures in a <a href="https://rapw3k.github.io/glosis/docs/glosis-pc-doc/index-en.html">specific
+module</a>.</p>
+<h2 id="extending-code-lists">Extending code-lists</h2>
+<h3 id="skos">SKOS</h3>
+<p>The SKOS ontology is remarkably simple, actually one of its strengths. At its
+core are five primitives:</p>
+<ul>
+<li>
+<p><strong>Concept</strong> - a unit of thought, an idea, a meaning, a category or an object.
+  Concepts are identified with URIs.</p>
+</li>
+<li>
+<p><strong>Label</strong> - a lexical string used to annotate a concept. The same concept may
+  be annotated in different natural languages.</p>
+</li>
+<li>
+<p><strong>Relation</strong> - a semantic association between two concepts, conveying
+  hierarchy or simply connecting concepts in a network.</p>
+</li>
+<li>
+<p><strong>Scheme</strong> - an aggregator of related concepts, usually forming a hierarchy.</p>
+</li>
+<li>
+<p><strong>Note</strong> - provides further semantics or definition to a concept. Often used
+  to associate a concept to other knowledge graphs or other external resources.</p>
+</li>
+</ul>
+<p>The listing below presents an item from the GloSIS code-list for <a href="http://w3id.org/glosis/model/codelists#CropClassValueCode">crop
+classes</a>. Its URI is
+<a href="http://w3id.org/glosis/model/codelists#cropClassValueCode-Ce_Ba">http://w3id.org/glosis/model/codelists#cropClassValueCode-Ce_Ba</a>,
+abbreviated with the Turtle syntax to <code>glosis_cl:cropClassValueCode-Ce_Ba</code>. The
+label for this item is "Barley" in the English language, an annotation also
+indicates its short notation: "Ce_Ba". Two object properties provide semantic
+associations, this item is a narrower definition of the
+<code>glosis_cl:cropClassValueCode-Ce</code> item (the "Cereals" concept), and is part of
+the scheme <code>glosis_cl:cropClassValueCode</code>.  </p>
+<pre><code class="language-turtle">@prefix skos:  &lt;http://www.w3.org/2004/02/skos/core#&gt; .
+@prefix glosis_cl: &lt;http://w3id.org/glosis/model/codelists#&gt; .
+
+glosis_cl:cropClassValueCode-Ce_Ba a skos:Concept, glosis_cl:CropClassValueCode;
+        skos:prefLabel &quot;Barley&quot;@en ;
+        skos:notation &quot;Ce_Ba&quot; ;
+        skos:inScheme glosis_cl:cropClassValueCode ;
+        skos:broader glosis_cl:cropClassValueCode-Ce .
+</code></pre>
+<p>The next listing shows the scheme integrating the "Barley" concept above.
+This object is very similar, with a label providing its name and some notes
+adding further definition. The literal "table 9" indicates the source of this
+code-list within the FAO Guidelines for Soil Description.</p>
+<pre><code class="language-turtle">@prefix rdfs:  &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix skos:  &lt;http://www.w3.org/2004/02/skos/core#&gt; .
+@prefix glosis_cl: &lt;http://w3id.org/glosis/model/codelists#&gt; .
+
+glosis_cl:cropClassValueCode a skos:ConceptScheme ;
+        skos:prefLabel &quot;Code list for CropClassValue - codelist scheme&quot;@en;
+        rdfs:label &quot;Code list for CropClassValue - codelist scheme&quot;@en;
+        skos:note &quot;This  code list provides the CropClassValue.&quot;@en;
+        skos:definition &quot;table 9&quot; ;
+        rdfs:seeAlso glosis_cl:CropClassValueCode .
+</code></pre>
+<p>Using this simple pattern, a hierarchical code-list can be developed further
+simply using the predicates <code>skos:inScheme</code>, <code>skos:broader</code> and <code>skos:narrower</code>.
+The predicates <code>skos:topConceptOf</code> and <code>skos:hasTopConcept</code> can be further used
+to indicate the root items in a concept hierarchy. </p>
+<h3 id="extend-an-inspire-code-list-with-skos">Extend an INSPIRE code-list with SKOS</h3>
+<p>Suppose you intend to publish results of chemical analyses appraising the
+Zinc content of the soil. The INSPIRE code-lists do not presently include that
+metal as property, therefore an additional code-list item must be created.</p>
+<p>The first action is to identify in which code-list the item should be added.
+Physio-chemical properties like Zinc content appear associated with the Horizon
+or Layer class in soil ontologies, thus the appropriate code-list is <a href="http://inspire.ec.europa.eu/codelist/ProfileElementParameterNameValue">ProfileElementParameterNameValue</a>. Open that URI in your browser an go through the respective <code>r3gistry</code> record.</p>
+<p>At the bottom of the page <code>r3gistry</code> lists the items for this code-list, in this
+case they are <a href="http://inspire.ec.europa.eu/codelist/ProfileElementParameterNameValue/biologicalParameter">biological
+parameter</a>,
+<a href="http://inspire.ec.europa.eu/codelist/ProfileElementParameterNameValue/chemicalParameter">chemical
+parameter</a>
+and <a href="http://inspire.ec.europa.eu/codelist/ProfileElementParameterNameValue/physicalParameter">physical
+parameter</a>. Follow the URI to the chemical parameter, in that page there is another list of items, including other metals. The new item for Zinc should therefore be created at this same level in the hierarchy.</p>
+<p>The list below presents a RDF document defining a new sub-item for Zinc within the physical parameter code-list.
+The URI for this item is <code>http://example.com/my-soil/zincContent</code>. As this item
+is not directly in a INSPIRE code-list, its URI must refer to an authority that
+you control, i.e. you or your institution are the responsible party for the
+code-list item, its definition and publication. For more on this, check the <a href="../uri/">URI strategy</a> document. </p>
+<pre><code class="language-turtle">@prefix skos: &lt;http://www.w3.org/2004/02/skos/core#&gt; .
+@prefix inspire_cl_profile: &lt;http://inspire.ec.europa.eu/codelist/ProfileElementParameterNameValue/&gt; .
+@prefix glosis_cl: &lt;http://w3id.org/glosis/model/codelists#&gt; .
+@prefix my_soil: &lt;http://example.com/my-soil/&gt; . 
+
+my_soil:zincContent a skos:Concept;
+        skos:prefLabel &quot;Zinc content&quot;@en ;
+        skos:definition &quot;Zinc content of the soil within a profile element.&quot; ;
+        skos:broader inspire_cl_profile:physicalParameter ;
+        skos:inScheme inspire_cl_profile: ;
+        skos:related glosis_cl:physioChemicalPropertyCode-Zin .
+</code></pre>
+<p>The RDF above contains the basic SKOS elements: a Concept instance, a label, an
+annotation defining the concept and a reference to the parent item with the
+<code>skos:broader</code> code-list. The last two triples need a closer look. The item is
+declared as belonging to a Scheme with the URI
+<code>http://inspire.ec.europa.eu/codelist/ProfileElementParameterNameValue/</code>. While
+the later is not actually declared as such in <code>r3gistry</code>, it is still important to
+convey the nature of this item as part of a structured INSPIRE code-list. Finally,
+the <code>skos:related</code> predicated is employed to refer a similar property in the
+GloSIS web ontology. This last triple is not at all mandatory, but provides
+another dimension to the code-list item.</p>
+<h3 id="extend-a-glosis-code-list">Extend a GloSIS code-list</h3>
+<p>The GloSIS web ontology becomes particularly relevant in the sections of the
+INSPIRE domain model for which code-lists do not yet exist. A prominent case is
+the list of laboratory procedures to assess physico-chemical properties. As
+mentioned above, GloSIS includes a specific module for procedures.</p>
+<p>The listing below presents a RDF document with an extra item for the soil
+texture procedures code list (SKOS scheme <code>glosis_proc:textProcedure</code>). Compared
+to the previous example, the most remarkable aspect here is the declaration of a
+<code>glosis_proc:TextProcedure</code> instance. The latter is a sub-class of the SOSA
+Procedure class, making the bridge to the Observation instances declared in
+other GloSIS modules.  </p>
+<pre><code class="language-turtle">@prefix skos: &lt;http://www.w3.org/2004/02/skos/core#&gt; .
+@prefix glosis_proc: &lt;http://w3id.org/glosis/model/procedure#&gt; .
+@prefix my_soil: &lt;http://example.com/my-soil/&gt; . 
+
+my_soil:textureProcedure-SaSiCl_5-50-2000u a skos:Concept, glosis_proc:TextureProcedure ;
+    skos:inScheme glosis_proc:textProcedure ;
+    skos:topConceptOf glosis_proc:textureProcedure ;
+    skos:prefLabel &quot;SaSiCl_5-50-2000u&quot;@en ;
+    skos:notation &quot;SaSiCl_5-50-2000u&quot; ;
+    skos:definition &quot;Sand, silt and clay fractions as used in my country (5-50-2000um)&quot; .
+</code></pre>
+<p>The remaining triples should all be familiar by now. The link to the SKOS scheme
+is made with the <code>skos:inScheme</code> and <code>skos:topConceptOf</code> predicates. Then come
+the annotations.</p>
+<h3 id="create-a-new-code-list">Create a new code-list</h3>
+<p>INSPIRE and GloSIS cover quite a good deal of ground with their code-lists.
+However, there might be circumstances where you may require an entire new
+code-list to express a domain property specific to your institution or dataset.</p>
+<p>The examples above already provide the necessary to build a code-list on your
+own. In summary, these are the steps:</p>
+<ol>
+<li>
+<p>Devise a URI policy, encompassing the code-list and its items.</p>
+</li>
+<li>
+<p>Create a Scheme instance to aggregate the code-list items. The Scheme
+   provides a URI and annotation for the code-list.</p>
+</li>
+<li>
+<p>Add in the top Concept instances with the predicates <code>skos:inScheme</code>,
+   <code>skos:topConceptOf</code> and <code>skos:hasTopConcept</code>.</p>
+</li>
+<li>
+<p>If necessary, add in narrower terms forming a hierarchy with <code>skos:broader</code>
+   and <code>skos:narrower</code>.</p>
+</li>
+<li>
+<p>Link items to similar concepts in other ontologies or vocabularies if possible.</p>
+</li>
+</ol>
+<h2 id="publishing-your-own-code-list-items">Publishing your own code-list items</h2>
+<p>Now that you extended or even created a new code-list the next step is to
+publish it on-line. There are three essentials ways of doing so, briefly
+described below. </p>
+<ol>
+<li>
+<p><strong>A simple on-line RDF file</strong>. Save the items or code-list as a RDF document
+   and deploy it to a web server. Fairly easy, but not the most user friendly. </p>
+</li>
+<li>
+<p><strong>A knowledge graph deployed to a triple store</strong>. Load the RDF document to a
+   triple store or directly create the code-list triples with SPARQL queries.
+Triple stores usually provide end-points for interaction with SPARQL queries and
+other mechanisms that facilitate user access/view of the code-list.
+<a href="../virtuoso/">Virtuoso</a> is a triple store providing these functionalities.</p>
+</li>
+<li>
+<p><strong>A <a href="../virtuoso/">SKOSMOS</a> instance</strong>. Load the code-list triples into a triple store and then
+   link it to a <a href="../virtuoso/">SKOSMOS</a> instance. This software leverages
+the SKOS ontology to presnnt code-lists in a
+user friendly, browsable complex of HTML pages.</p>
+</li>
+</ol>
+<h3 id="dereferenceable-uris">Dereferenceable URIs</h3>
+<p>When publishing a code-list, it is important to facilitate the resolution of the
+respective URIs. This promotes accessibility and use of the code-list. With a
+simple deployment to a web server, the hypothetical URI used above:
+<code>http://example.com/my-soil</code> can point directly to the RDF file. In this case it
+is customary the use of the hash character (<code>#</code>) to distinguish different
+resources within the same file. E.g.  <code>http://example.com/my-soil#zincContent</code>
+for the Zinc item.</p>
+<p>With more advanced software like SKOSMOS, a mid-layer mechanism is necessary to
+translate the URIs declared in the RDF into the corresponding pages or services.
+More about this topic in the <a href="../../identification/">Identification</a> document. </p>
+<h2 id="read-more">Read more</h2>
+<p>At the masterclass edition 2023 Luis de Sousa presented an approach to extend codelists based on SKOS.</p>
+<iframe title='Extend codelists using SKOS' width="560"  height="315"  src="https://wur.yuja.com/V/Video?v=433006&node=1952642&a=176575180" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen loading="lazy"></iframe>
+
+<p>In <a href="https://wetransform.to/news-and-events/inspire-codelists/">this article</a> Wetransform explains how and which INSPIRE codelists can be extended.
+Either the UML model and/or the INSPIRE registry indicate if a codelist is extensible.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2022-2023 Wageningen Environmental Research
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.51198bba.min.js"></script>
+      
+    
+  </body>
+</html>

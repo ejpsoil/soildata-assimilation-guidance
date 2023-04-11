@@ -1,0 +1,15 @@
+prefixes:
+ wosis_prf: http://wosis.isric.org/profile#  
+ wosis_sit: http://wosis.isric.org/site#
+ glosis_pr: http://w3id.org/glosis/model/profile# 
+ iso28258: http://w3id.org/glosis/model/iso28258/2013#
+
+mappings:
+  profile:
+    sources:
+      - ['SoilData.csv~csv']
+    s: wosis_prf:$(profile_id)
+    po:
+      - [a, glosis_pr:GL_Profile]
+      - [iso28258:Profile.profileSite, wosis_sit:$(site_id)~iri]
+

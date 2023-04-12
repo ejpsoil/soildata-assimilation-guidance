@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Luís Moreira de Sousa">
+<meta name="dcterms.date" content="2023-01-19">
 
-<title>Soil data guidance – tarql</title>
+<title>Soil data guidance - RDF creation with tarql</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -197,9 +199,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#tarql" id="toc-tarql" class="nav-link active" data-scroll-target="#tarql">tarql</a>
-  <ul class="collapse">
-  <li><a href="#install" id="toc-install" class="nav-link" data-scroll-target="#install">Install</a>
+  <li><a href="#install" id="toc-install" class="nav-link active" data-scroll-target="#install">Install</a>
   <ul class="collapse">
   <li><a href="#profile" id="toc-profile" class="nav-link" data-scroll-target="#profile">Profile</a></li>
   <li><a href="#remove-duplicates" id="toc-remove-duplicates" class="nav-link" data-scroll-target="#remove-duplicates">Remove duplicates</a></li>
@@ -207,18 +207,42 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#layer" id="toc-layer" class="nav-link" data-scroll-target="#layer">Layer</a></li>
   </ul></li>
   <li><a href="#more" id="toc-more" class="nav-link" data-scroll-target="#more">More</a></li>
-  </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/quarto/docs/cookbook/tarql.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/tarql.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">RDF creation with tarql</h1>
+</div>
 
 
-<section id="tarql" class="level1">
-<h1><a href="https://tarql.github.io/">tarql</a></h1>
-<p>The basic idea behind <code>tarql</code> is to develop a <code>CONSTRUCT</code> SPARQL query that instead of executing against a triple store is executed against a CSV file. The result is a knowledge graph that may itself be deployed to a triple store or outright published on the web.</p>
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Luís Moreira de Sousa </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 19, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<p>The basic idea behind <a href="https://tarql.github.io/">tarql</a> is to develop a <code>CONSTRUCT</code> SPARQL query that instead of executing against a triple store is executed against a CSV file. The result is a knowledge graph that may itself be deployed to a triple store or outright published on the web.</p>
 <section id="install" class="level2">
 <h2 class="anchored" data-anchor-id="install">Install</h2>
 <p>Start by accessing the <a href="https://github.com/tarql/tarql/releases">releases page</a> and download a compressed file with the latest version. Then uncompress the file, it will create a new folder in your system with the release number appended, for instance <code>tarql-1.2</code>.</p>
@@ -315,7 +339,6 @@ WHERE {
 <p>In alternative to <code>tarql</code>, you may instead transform tabular data into RDF with <a href="../cookbook/rml.html">RML.io</a>, a transformation tool-set based on YAML configuration files.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

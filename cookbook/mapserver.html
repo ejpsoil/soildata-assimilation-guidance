@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Soil data guidance – mapserver</title>
+<title>Soil data guidance - MapServer</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -134,9 +134,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#mapserver" id="toc-mapserver" class="nav-link active" data-scroll-target="#mapserver">MapServer</a>
-  <ul class="collapse">
-  <li><a href="#the-mapserver-mapfile" id="toc-the-mapserver-mapfile" class="nav-link" data-scroll-target="#the-mapserver-mapfile">The MapServer Mapfile</a></li>
+  <li><a href="#the-mapserver-mapfile" id="toc-the-mapserver-mapfile" class="nav-link active" data-scroll-target="#the-mapserver-mapfile">The MapServer Mapfile</a></li>
   <li><a href="#mapserver-via-docker" id="toc-mapserver-via-docker" class="nav-link" data-scroll-target="#mapserver-via-docker">MapServer via Docker</a></li>
   <li><a href="#testing-a-mapfile" id="toc-testing-a-mapfile" class="nav-link" data-scroll-target="#testing-a-mapfile">Testing a mapfile</a></li>
   <li><a href="#wrb-layer-with-geocat-bridge" id="toc-wrb-layer-with-geocat-bridge" class="nav-link" data-scroll-target="#wrb-layer-with-geocat-bridge">WRB layer with GeoCat Bridge</a></li>
@@ -144,18 +142,29 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#mapserver-and-wmts" id="toc-mapserver-and-wmts" class="nav-link" data-scroll-target="#mapserver-and-wmts">MapServer and WMTS</a></li>
   <li><a href="#validate-a-mapserver-wms-as-inspire-view-service" id="toc-validate-a-mapserver-wms-as-inspire-view-service" class="nav-link" data-scroll-target="#validate-a-mapserver-wms-as-inspire-view-service">Validate a Mapserver WMS as INSPIRE View service</a></li>
   <li><a href="#read-more" id="toc-read-more" class="nav-link" data-scroll-target="#read-more">Read more:</a></li>
-  </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/quarto/docs/cookbook/mapserver.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/mapserver.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">MapServer</h1>
+</div>
 
 
-<section id="mapserver" class="level1">
-<h1>MapServer</h1>
-<p><em>Status: ready</em></p>
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
 <p>MapServer, originally <code>UMN MapServer</code>, is an open source server component which provides OWS services on a variety of data sources. MapServer is commonly used to set up INSPIRE View Services. A detailed guidance on how to use MapServer to set up INSPIRE View Services is available at https://mapserver.org/ogc/inspire.html.</p>
 <p>MapServer supports WFS and WCS as data exchange mechanisms. MapServer is not able to publish datasets having a hierarchical structure, as common in many INSPIRE datasets, which makes MapServer less suitable to provide INSPIRE download Services using WFS. Stored queries are supported. MapServer can be used to set up a WCS Download service.</p>
 <p>MapServer runs as a <a href="https://en.wikipedia.org/wiki/Common_Gateway_Interface">CGI</a> executable. The progream will start up as soon as a request arrives at the server. This makes mapserver very suitable for situations where many datasets are incidentally queried and scales out very well.</p>
@@ -311,7 +320,6 @@ END</code></pre>
 </ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

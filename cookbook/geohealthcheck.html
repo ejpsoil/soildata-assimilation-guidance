@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Soil data guidance – geohealthcheck</title>
+<title>Soil data guidance - GeoHealthCheck</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -134,21 +134,30 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#geohealthcheck" id="toc-geohealthcheck" class="nav-link active" data-scroll-target="#geohealthcheck">GeoHealthCheck</a>
-  <ul class="collapse">
-  <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise">Exercise</a></li>
-  </ul></li>
+  <li><a href="#exercise" id="toc-exercise" class="nav-link active" data-scroll-target="#exercise">Exercise</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/quarto/docs/cookbook/geohealthcheck.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/geohealthcheck.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">GeoHealthCheck</h1>
+</div>
 
 
-<section id="geohealthcheck" class="level1">
-<h1>GeoHealthCheck</h1>
-<p><em>Status: ready</em></p>
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
 <p>A tool to monitor availability of spatial services. The tool will query a list of configured spatial services at intervals and report on availability using charts. The tool can also send out notifications in case of disruptions.</p>
 <p>The tool can be compared to (and is often combined with) generic web availability tools such as Zabbix, Uptimerobot, Nagios. The generic tools are used to identify if the service is up, GeoHealthCheck will go a level deeper, identify which layers are available in a getcapabilities response and ask random maps to individual layers to identify if a service is properly running.</p>
 <section id="exercise" class="level2">
@@ -166,7 +175,6 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

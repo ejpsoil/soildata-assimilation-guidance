@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Soil data guidance – zenodo</title>
+<title>Soil data guidance - Zenodo data repository</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -134,22 +134,32 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#zenodo" id="toc-zenodo" class="nav-link active" data-scroll-target="#zenodo">Zenodo</a>
-  <ul class="collapse">
-  <li><a href="#datacite-inspire" id="toc-datacite-inspire" class="nav-link" data-scroll-target="#datacite-inspire">DataCite &amp; INSPIRE</a></li>
+  <li><a href="#datacite-inspire" id="toc-datacite-inspire" class="nav-link active" data-scroll-target="#datacite-inspire">DataCite &amp; INSPIRE</a></li>
   <li><a href="#upload-your-data-to-zenodo" id="toc-upload-your-data-to-zenodo" class="nav-link" data-scroll-target="#upload-your-data-to-zenodo">Upload your data to Zenodo</a></li>
   <li><a href="#an-atom-approach-to-access-the-data-on-zenodo" id="toc-an-atom-approach-to-access-the-data-on-zenodo" class="nav-link" data-scroll-target="#an-atom-approach-to-access-the-data-on-zenodo">An Atom approach to access the data on Zenodo</a></li>
-  </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/quarto/docs/cookbook/zenodo.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/zenodo.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Zenodo data repository</h1>
+</div>
 
 
-<section id="zenodo" class="level1">
-<h1>Zenodo</h1>
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
 <p>This recipe proposes an approach to use <a href="https://zenodo.org">Zenodo</a> to publish a dataset in such a way, that many of the INSPIRE practices are implemented. Zenodo is a generic repository for academic work part of the European OpenAIRE program and operated by CERN. Zenodo resources are clustered in communities. You can join an existing community or start one. Resources from a community can be accessed as a collection. Community moderators (dis)allow contributions to a community.</p>
 <section id="datacite-inspire" class="level2">
 <h2 class="anchored" data-anchor-id="datacite-inspire">DataCite &amp; INSPIRE</h2>
@@ -251,7 +261,6 @@ ul.task-list li input[type="checkbox"] {
 <p>This approach is based on the <a href="../cookbook/webdav.html">recipe on WebDav and Atom services</a>. The suggestion is to upload 2 additional Atom.xml files which describe the resources in an Atom format. The first file describes the Atom Download Service. The second Atom describes the distributions of the dataset. The zenodo approach will not cover all the aspects of a INSPIRE ATOM Download service, the OpenSearch option is missing.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

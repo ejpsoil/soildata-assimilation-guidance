@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Soil data guidance – awstats</title>
+<title>Soil data guidance - AWStats for Usage Statistics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -134,23 +134,32 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#awstat" id="toc-awstat" class="nav-link active" data-scroll-target="#awstat">AWStat</a>
-  <ul class="collapse">
-  <li><a href="#deploy-awstats" id="toc-deploy-awstats" class="nav-link" data-scroll-target="#deploy-awstats">Deploy AWStats</a></li>
+  <li><a href="#deploy-awstats" id="toc-deploy-awstats" class="nav-link active" data-scroll-target="#deploy-awstats">Deploy AWStats</a></li>
   <li><a href="#read-more" id="toc-read-more" class="nav-link" data-scroll-target="#read-more">Read more</a></li>
-  </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/quarto/docs/cookbook/awstats.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/awstats.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">AWStats for Usage Statistics</h1>
+</div>
 
 
-<section id="awstat" class="level1">
-<h1>AWStat</h1>
-<p><em>Status: in progress</em></p>
-<p><a href="https://awstats.sourceforge.io/">AWStat</a> is a utility to report on service usage. These days there are advanced tools such as Splunk, Elastic Search, Grafana which can report on service usage. These tools are recommended to use if your orchanisation provides it. However if such a tool is not provided AWStat could be an interesting alternative. It is a small utility with some nice vizualisation options to present aggregated usage statistics in a dashboard.</p>
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p><a href="https://awstats.sourceforge.io/">AWStats</a> is a utility to report on service usage. These days there are advanced tools such as Splunk, Elastic Search, Grafana which can report on service usage. These tools are recommended to use if your orchanisation provides it. However if such a tool is not provided AWStat could be an interesting alternative. It is a small utility with some nice vizualisation options to present aggregated usage statistics in a dashboard.</p>
 <p>Most of these tools, including AWStats use the Access logs of the webserver to extract and aggregate usefull information. Consider that these applications need a carefull privacy strategy, because ip-adresses from logs can be used to identify users.</p>
 <section id="deploy-awstats" class="level2">
 <h2 class="anchored" data-anchor-id="deploy-awstats">Deploy AWStats</h2>
@@ -179,7 +188,6 @@ Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.77 Safa
 </ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

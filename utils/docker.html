@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2023-01-05">
 
-<title>Soil data guidance - Overview Docker</title>
+<title>Soil data guidance - What is Docker?</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -135,20 +135,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview-docker" id="toc-overview-docker" class="nav-link active" data-scroll-target="#overview-docker">Overview Docker</a>
-  <ul class="collapse">
-  <li><a href="#docker-exercise" id="toc-docker-exercise" class="nav-link" data-scroll-target="#docker-exercise">Docker exercise</a></li>
+  <li><a href="#docker-exercise" id="toc-docker-exercise" class="nav-link active" data-scroll-target="#docker-exercise">Docker exercise</a></li>
   <li><a href="#cleaning-up" id="toc-cleaning-up" class="nav-link" data-scroll-target="#cleaning-up">Cleaning up</a></li>
-  </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/quarto/docs/utils/docker.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/utils/docker.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Overview Docker</h1>
+<h1 class="title">What is Docker?</h1>
 </div>
 
 
@@ -175,8 +172,6 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="overview-docker" class="level1">
-<h1>Overview Docker</h1>
 <p>Docker is a virtualisation technology, slightly more efficient then running a virtual machine. With docker you run a full virtual environment (container) within your PC. Most containers run a flavour of Linux and you access them as if you access a remote server. Containers are based on a <code>docker-image</code>, a prepared set of operating system and software. Docker images are build locally from a <code>Dockerfile</code> (recipe) or downloaded from a repository such as <a href="https://hub.docker.com/">dockerhub</a>. Learn more about docker in the <a href="https://docs.docker.com/get-started/overview">Docker Overview</a>.</p>
 <p>In this recipe we run most examples using Docker, because in this way there is no need to install any software on your computer, which may either not be allowed, give errors due to missing dependencies or in a worse case scenario can corrupt an existing configuration.</p>
 <p>On Windows and Apple we recommend to install <a href="https://www.docker.com/products/docker-desktop/">Docker Desktop</a>. Docker Desktop provides an additional panel to manage running containers. On Linux you can install <a href="https://docs.docker.com/engine/install/ubuntu/">docker engine</a>. Start docker engine from the start menu, if it is not already running. A general check can be triggered by typing <code>docker ps</code> in a console, this will provide a notification of docker availability and running containers.</p>
@@ -214,7 +209,6 @@ ul.task-list li input[type="checkbox"] {
 <p>Only use it if you are sure you don’t want to keep any docker resources.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

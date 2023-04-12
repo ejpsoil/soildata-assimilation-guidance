@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Soil data guidance – pygeometa</title>
+<title>Soil data guidance - A Pythonic metadata workflow</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -134,9 +134,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#a-pythonic-metadata-workflow" id="toc-a-pythonic-metadata-workflow" class="nav-link active" data-scroll-target="#a-pythonic-metadata-workflow">A Pythonic metadata workflow</a>
-  <ul class="collapse">
-  <li><a href="#initial" id="toc-initial" class="nav-link" data-scroll-target="#initial">Initial</a></li>
+  <li><a href="#initial" id="toc-initial" class="nav-link active" data-scroll-target="#initial">Initial</a></li>
   <li><a href="#create-an-mcf" id="toc-create-an-mcf" class="nav-link" data-scroll-target="#create-an-mcf">Create an MCF</a></li>
   <li><a href="#import-existing-metadata" id="toc-import-existing-metadata" class="nav-link" data-scroll-target="#import-existing-metadata">Import existing metadata</a></li>
   <li><a href="#generate-iso191392007" id="toc-generate-iso191392007" class="nav-link" data-scroll-target="#generate-iso191392007">Generate iso19139:2007</a></li>
@@ -144,18 +142,29 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#evaluate-metadata-and-discovery-service" id="toc-evaluate-metadata-and-discovery-service" class="nav-link" data-scroll-target="#evaluate-metadata-and-discovery-service">Evaluate Metadata and Discovery Service</a></li>
   <li><a href="#access-the-service-from-qgis" id="toc-access-the-service-from-qgis" class="nav-link" data-scroll-target="#access-the-service-from-qgis">Access the service from QGIS</a></li>
   <li><a href="#read-more" id="toc-read-more" class="nav-link" data-scroll-target="#read-more">Read more</a></li>
-  </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/quarto/docs/cookbook/pygeometa.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/pygeometa.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">A Pythonic metadata workflow</h1>
+</div>
 
 
-<section id="a-pythonic-metadata-workflow" class="level1">
-<h1>A Pythonic metadata workflow</h1>
-<p><em>status: in progress</em></p>
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
 <p>This recipe presents a minimalistic, however integrated and standardised approach to metadata management. Each data file on a file system will be accompagnied by a minimal YML metadata file. Crawler scripts will pick up these metadata files and publish them as iso19139 (or alternative models) on a catalogue. iso19139 is the metadata model currently <a href="https://inspire.ec.europa.eu/id/document/tg/metadata-iso19139">mandated by INSPIRE</a> and very common in the GeoSpatial domain. Other communities tend to use different standards, such as <a href="https://stacspec.org/en/about/stac-spec/">STAC</a> (Earth Observation), <a href="https://www.w3.org/TR/vocab-dcat-2/">DCAT</a> (Open Data), <a href="https://schema.datacite.org/">DataCite</a> (Academia), etc.</p>
 <p>The recipe introduces you to a pythonic metadata workflow step by step.</p>
 <section id="initial" class="level2">
@@ -294,7 +303,6 @@ docker exec -ti pycsw pycsw-admin.py load-records -c /etc/pycsw/pycsw.cfg -p /me
 </ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Soil data guidance – frost-server</title>
+<title>Soil data guidance - FROST server</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -135,21 +135,30 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#frost-server" id="toc-frost-server" class="nav-link active" data-scroll-target="#frost-server">FROST server</a>
-  <ul class="collapse">
-  <li><a href="#read-more" id="toc-read-more" class="nav-link" data-scroll-target="#read-more">Read more</a></li>
-  </ul></li>
+  <li><a href="#read-more" id="toc-read-more" class="nav-link active" data-scroll-target="#read-more">Read more</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/quarto/docs/cookbook/frost-server.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/frost-server.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">FROST server</h1>
+</div>
 
 
-<section id="frost-server" class="level1">
-<h1>FROST server</h1>
-<p><em>Status: review required</em></p>
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
 <p><a href="https://fraunhoferiosb.github.io/FROST-Server/">FROST</a> is an open source server implementation of <a href="https://www.ogc.org/standards/sensorthings">OGC Sensorthings</a>, a modern data exchange standard for Sensor Data. Because the INSPIRE Soil model is based on <a href="https://www.ogc.org/standards/om">Observations and Measurements</a>, the Sensorthings API can be used to provide sensor download services, with the soil profile and horizons as <code>FeatureOfInterest</code>. Sensorthings API is generally easier to set up for administrators and easier to consume by clients then INSPIRE Soil data in GML. INSPIRE has recently adopted a <a href="https://inspire.ec.europa.eu/good-practice/ogc-sensorthings-api-inspire-download-service">good practice on Download services based on SensorThings API</a>.</p>
 <p>Kathi Schleidt has prepared a <a href="https://datacoveeu.github.io/API4INSPIRE/dissemination/Workshop-2020-11-19.html">workshop on inspire data in sensorthings API</a>. Also have a look at her sensor presentation in the <a href="https://wur.yuja.com/V/Video?v=184380&amp;node=785951&amp;a=1565884354&amp;autoplay=1">2022 edition of the training</a>. After the 2022 training Kathy together with colleagues from Fraunhofer IOSB has put together a <code>SoilThings</code> variant of STA. The experiment has proven to be a most interesting use case, it has shown where flexibility has to be added in the STA model (these changes will be integrated in the upcoming 2.0 version of the standard). The cool thing about this API is that it allows you to do queries like the following: <code>give me all plots that contain a profile that contains a horizon on which pH H2O is measured</code>; while the query syntax can be a bit daunting, the other existing technologies for provision (WFS and the new OGC API) would require 5 separate requests to do this. Links:</p>
 <ul>
@@ -170,7 +179,6 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

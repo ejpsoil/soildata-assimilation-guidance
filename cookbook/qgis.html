@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Soil data guidance – qgis</title>
+<title>Soil data guidance - View services with QGIS server</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -134,26 +134,35 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#view-services-with-qgis-server" id="toc-view-services-with-qgis-server" class="nav-link active" data-scroll-target="#view-services-with-qgis-server">View services with QGIS server</a>
-  <ul class="collapse">
-  <li><a href="#prepare-a-view-service-in-qgis-desktop" id="toc-prepare-a-view-service-in-qgis-desktop" class="nav-link" data-scroll-target="#prepare-a-view-service-in-qgis-desktop">Prepare a view service in QGIS Desktop</a></li>
+  <li><a href="#prepare-a-view-service-in-qgis-desktop" id="toc-prepare-a-view-service-in-qgis-desktop" class="nav-link active" data-scroll-target="#prepare-a-view-service-in-qgis-desktop">Prepare a view service in QGIS Desktop</a></li>
   <li><a href="#publish-a-view-service" id="toc-publish-a-view-service" class="nav-link" data-scroll-target="#publish-a-view-service">Publish a view service</a></li>
   <li><a href="#validate-the-view-service" id="toc-validate-the-view-service" class="nav-link" data-scroll-target="#validate-the-view-service">Validate the view service</a></li>
   <li><a href="#qgis-desktop-as-a-client-for-inspire-data" id="toc-qgis-desktop-as-a-client-for-inspire-data" class="nav-link" data-scroll-target="#qgis-desktop-as-a-client-for-inspire-data">QGIS Desktop as a client for INSPIRE data</a></li>
-  </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/quarto/docs/cookbook/qgis.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/qgis.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">View services with QGIS server</h1>
+</div>
 
 
-<section id="view-services-with-qgis-server" class="level1">
-<h1>View services with QGIS server</h1>
-<p><em>Status: done</em></p>
-<p><a href="https://qgis.org">QGIS</a> started as a GIS desktop application. In recent years the community prepared a server edition of QGIS. The server provides WMS, WFS and since recently OGC API Features.</p>
-<p>The advantage of using QGIS both as a desktop and server component is that the maps generated on the server will display exactly the same as those prepared on a desktop client.</p>
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p><a href="https://qgis.org">QGIS</a> is mostly known as a GIS desktop application. In recent years the community prepared a server edition of QGIS. The server provides datasets via WMS, WFS and OGC API Features interfaces.</p>
+<p>The advantage of using QGIS both as a desktop and server component is that the maps generated on the server will display exactly the same as those prepared on the desktop client.</p>
 <section id="prepare-a-view-service-in-qgis-desktop" class="level2">
 <h2 class="anchored" data-anchor-id="prepare-a-view-service-in-qgis-desktop">Prepare a view service in QGIS Desktop</h2>
 <p>Use an existing QGIS project, or create a new project with some <a href="https://data.isric.org">sample data</a>. If you include any data, place it in a folder within the current folder, so docker can access it as a docker mounted volume.</p>
@@ -178,7 +187,6 @@ ul.task-list li input[type="checkbox"] {
 <p>The QGIS data model is based on data layers and has minimalistic support for joins. QGIS is therefore less optimal for rich GML data as used in INSPIRE. There have been initiatives to bring hierarchical data to QGIS, such as <a href="https://plugins.qgis.org/plugins/gml_application_schema_toolbox/">GMLAS</a> but adoption has been limited. The Application Schema functionality has been introduced in <a href="../utils/gdal.html">GDAL/OGR</a>, the QGIS plugin builds on top of it. OGR converts the contents of the GML to a relational database. Individual tables from that database are loaded in the QGIS interface.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

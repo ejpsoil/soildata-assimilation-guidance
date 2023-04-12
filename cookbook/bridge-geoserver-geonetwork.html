@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Soil data guidance – bridge-geoserver-geonetwork</title>
+<title>Soil data guidance - Metadata and View Service with GeoCat Bridge, GeoNetwork and GeoServer</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -134,25 +134,34 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#metadata-and-view-service-with-geocat-bridge-geonetwork-and-geoserver" id="toc-metadata-and-view-service-with-geocat-bridge-geonetwork-and-geoserver" class="nav-link active" data-scroll-target="#metadata-and-view-service-with-geocat-bridge-geonetwork-and-geoserver">Metadata and View Service with GeoCat Bridge, GeoNetwork and GeoServer</a>
-  <ul class="collapse">
-  <li><a href="#contents-of-the-recipe" id="toc-contents-of-the-recipe" class="nav-link" data-scroll-target="#contents-of-the-recipe">Contents of the recipe:</a></li>
+  <li><a href="#contents-of-the-recipe" id="toc-contents-of-the-recipe" class="nav-link active" data-scroll-target="#contents-of-the-recipe">Contents of the recipe:</a></li>
   <li><a href="#deploy-geoserver-and-geonetwork-using-docker" id="toc-deploy-geoserver-and-geonetwork-using-docker" class="nav-link" data-scroll-target="#deploy-geoserver-and-geonetwork-using-docker">Deploy GeoServer and GeoNetwork using Docker</a></li>
   <li><a href="#install-and-configure-the-bridge-plugin" id="toc-install-and-configure-the-bridge-plugin" class="nav-link" data-scroll-target="#install-and-configure-the-bridge-plugin">Install and configure the Bridge plugin</a></li>
   <li><a href="#publish-the-dataset" id="toc-publish-the-dataset" class="nav-link" data-scroll-target="#publish-the-dataset">Publish the dataset</a></li>
   <li><a href="#validate-the-view-service" id="toc-validate-the-view-service" class="nav-link" data-scroll-target="#validate-the-view-service">Validate the view service</a></li>
-  </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/quarto/docs/cookbook/bridge-geoserver-geonetwork.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/bridge-geoserver-geonetwork.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Metadata and View Service with GeoCat Bridge, GeoNetwork and GeoServer</h1>
+</div>
 
 
-<section id="metadata-and-view-service-with-geocat-bridge-geonetwork-and-geoserver" class="level1">
-<h1>Metadata and View Service with GeoCat Bridge, GeoNetwork and GeoServer</h1>
-<p><em>Status: ready</em></p>
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
 <p>In this recipe we use GeoCat Bridge to publish a View Service on a soil dataset in GeoServer, combined with connected metadata in a GeoNetwork instance.</p>
 <p><a href="https://www.geocat.net/bridge/">GeoCat Bridge</a> is a plugin for QGIS or ArcMap developed by GeoCat in Bennekom, the Netherlands. Its goal is to facilitate the complex process of data publication from a well known desktop environment. An introductionary video is available at https://www.youtube.com/watch?v=f-sZCVnR9dc</p>
 <p><a href="../cookbook/geoserver.html">GeoServer</a> is a server application providing OGC services on various database backends. See the <a href="../cookbook/geoserver.html">relevant recipe</a> for a more detailed description.</p>
@@ -199,7 +208,6 @@ ul.task-list li input[type="checkbox"] {
 <p>We have not yet installed the INSPIRE plugin on GeoServer and optimized the configuration of GeoNetwork, so expect some tests to fail</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

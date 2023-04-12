@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2023-01-17">
 
-<title>Soil data guidance – rml</title>
+<title>Soil data guidance - RDF creation with RML.io</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -197,9 +198,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#rml.io" id="toc-rml.io" class="nav-link active" data-scroll-target="#rml.io">RML.io</a>
-  <ul class="collapse">
-  <li><a href="#the-yarrrml-syntax" id="toc-the-yarrrml-syntax" class="nav-link" data-scroll-target="#the-yarrrml-syntax">The YARRRML syntax</a></li>
+  <li><a href="#the-yarrrml-syntax" id="toc-the-yarrrml-syntax" class="nav-link active" data-scroll-target="#the-yarrrml-syntax">The YARRRML syntax</a></li>
   <li><a href="#matey" id="toc-matey" class="nav-link" data-scroll-target="#matey">Matey</a></li>
   <li><a href="#install" id="toc-install" class="nav-link" data-scroll-target="#install">Install</a></li>
   <li><a href="#how-to-use" id="toc-how-to-use" class="nav-link" data-scroll-target="#how-to-use">How to use</a>
@@ -210,18 +209,43 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#measurements" id="toc-measurements" class="nav-link" data-scroll-target="#measurements">Measurements</a></li>
   </ul></li>
   <li><a href="#more" id="toc-more" class="nav-link" data-scroll-target="#more">More</a></li>
-  </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/quarto/docs/cookbook/rml.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/rml.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">RDF creation with RML.io</h1>
+</div>
 
 
-<section id="rml.io" class="level1">
-<h1><a href="https://rml.io/">RML.io</a></h1>
-<p>RML.io is a toolset for the generation of knowledge graphs. They automate the creation of RDF from diverse data sources, primarily unstructured tabular data.</p>
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Authors</div>
+    <div class="quarto-title-meta-contents">
+             <p>Luís Moreira de Sousa </p>
+             <p>Paul van Genuchten </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 17, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<p><a href="https://rml.io/">RML.io</a> is a toolset for the generation of knowledge graphs. They automate the creation of RDF from diverse data sources, primarily unstructured tabular data.</p>
 <p>RML.io has programmes to be used on-line and to be installed on computer systems (Linux, MacIntosh and Windows platforms are supported). The former are useful for prototyping, whereas the latter are meant for actual transformations of large datasets.</p>
 <section id="the-yarrrml-syntax" class="level2">
 <h2 class="anchored" data-anchor-id="the-yarrrml-syntax">The YARRRML syntax</h2>
@@ -383,7 +407,6 @@ rmlmapper -s turtle -m profile.rml.ttl</code></pre>
 <p>In alternative to RML, you may transform tabular data into RDF with SPARQL queries using <a href="../cookbook/tarql.html">tarql</a>. Follow that guide for the details.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

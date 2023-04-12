@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Soil data guidance – hale-studio</title>
+<title>Soil data guidance - eSOTER to INSPIRE Soil model with HALE Studio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -197,9 +197,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#hale-studio" id="toc-hale-studio" class="nav-link active" data-scroll-target="#hale-studio">HALE Studio</a>
-  <ul class="collapse">
-  <li><a href="#contents-of-the-recipe" id="toc-contents-of-the-recipe" class="nav-link" data-scroll-target="#contents-of-the-recipe">Contents of the recipe</a></li>
+  <li><a href="#contents-of-the-recipe" id="toc-contents-of-the-recipe" class="nav-link active" data-scroll-target="#contents-of-the-recipe">Contents of the recipe</a></li>
   <li><a href="#soter-database" id="toc-soter-database" class="nav-link" data-scroll-target="#soter-database">SOTER Database</a></li>
   <li><a href="#preparing-the-data" id="toc-preparing-the-data" class="nav-link" data-scroll-target="#preparing-the-data">Preparing the data</a></li>
   <li><a href="#install-hale-studio" id="toc-install-hale-studio" class="nav-link" data-scroll-target="#install-hale-studio">Install Hale Studio</a></li>
@@ -213,22 +211,33 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#export-gml" id="toc-export-gml" class="nav-link" data-scroll-target="#export-gml">Export GML</a></li>
   <li><a href="#export-geopackage" id="toc-export-geopackage" class="nav-link" data-scroll-target="#export-geopackage">Export GeoPackage</a></li>
   <li><a href="#validate-gml" id="toc-validate-gml" class="nav-link" data-scroll-target="#validate-gml">Validate GML</a></li>
-  </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/quarto/docs/cookbook/hale-studio.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/hale-studio.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">eSOTER to INSPIRE Soil model with HALE Studio</h1>
+</div>
 
 
-<section id="hale-studio" class="level1">
-<h1>HALE Studio</h1>
-<p><em>Status: in progress</em></p>
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
 <p>HALE Studio aims to enable users to set up a harmonization workflow on datasets from a local model to a common model, such as INSPIRE. The user interface presents the model of the source dataset (derived from database) on the left and the target model on the right (derived from xml schema). Conversion rules are defined by selecting similar properties on both sides.</p>
 <p>The open source software has been developed in the scope of a European Research project, HUMBOLDT (2006) and is currently maintained by a company called <a href="https://wetransform.to">WeTransform</a> in Darmstad Germany. WeTransform hosts the Hale Studio <a href="http://help.halestudio.org/latest">user guide</a> and a <a href="https://discuss.wetransform.to">user forum</a>. The Git repository for Hale Studio is at https://github.com/halestudio/hale.</p>
 <p>This recipe has been developed in the scope of a Masterclass on data assimilation within the <a href="https://ejpsoil.eu/">EJP Soil project</a> and builds on harmonization work performed in the scope of the <a href="https://www.isric.org/projects/soil-and-terrain-database-danube-basin">eDanube project</a>.</p>
-<p>In this recipe we’ll harmonize a SOTER database to the INSPIRE model. Read more about the INSPIRE Soil model in the relevant <a href="https://inspire.ec.europa.eu/id/document/tg/so">technical guidelines</a>. Some samples of harmonised INSPIRE soil data are available from these data providers:</p>
+<p>In this recipe we’ll harmonize a eSOTER database to the INSPIRE model. Read more about the INSPIRE Soil model in the relevant <a href="https://inspire.ec.europa.eu/id/document/tg/so">technical guidelines</a>. Some samples of harmonised INSPIRE soil data are available from these data providers:</p>
 <ul>
 <li><a href="https://fbinter.stadt-berlin.de/fb/atom/SO/SO_BoKw2015.zip">City of Berlin</a></li>
 <li><a href="http://mapy.geoportal.gov.pl/wss/service/ATOM/httpauth/download/?fileId=3fe348acdbf4318c7d9c618e62cf6006&amp;name=wielkopolskie_5k.zip">wielkopolski region in Poland</a></li>
@@ -492,7 +501,6 @@ Select HONU,PRID,'TOTN' as PARAM,TOTN as RESULT from RepresentativeHorizonValues
 <p>You can test the generated GML in the <a href="https://inspire.ec.europa.eu/validator/test-selection/index.html">INSPIRE Validator</a>. Select Dataset, and from <code>Annex III</code>, the Soil theme. Solve the <code>numeric riddle</code>, upload the GML file, add a label and start the test.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

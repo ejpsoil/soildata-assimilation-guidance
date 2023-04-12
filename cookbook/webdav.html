@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Soil data guidance – webdav</title>
+<title>Soil data guidance - WebDav &amp; Atom download service</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -197,23 +197,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#webdav-atom" id="toc-webdav-atom" class="nav-link active" data-scroll-target="#webdav-atom">WebDav &amp; Atom</a>
-  <ul class="collapse">
-  <li><a href="#wsgidav" id="toc-wsgidav" class="nav-link" data-scroll-target="#wsgidav">WSGIDAV</a></li>
+  <li><a href="#wsgidav" id="toc-wsgidav" class="nav-link active" data-scroll-target="#wsgidav">WSGIDAV</a></li>
   <li><a href="#atom-files" id="toc-atom-files" class="nav-link" data-scroll-target="#atom-files">ATOM files</a></li>
   <li><a href="#read-more" id="toc-read-more" class="nav-link" data-scroll-target="#read-more">Read more</a></li>
-  </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/quarto/docs/cookbook/webdav.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/webdav.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">WebDav &amp; Atom download service</h1>
+</div>
 
 
-<section id="webdav-atom" class="level1">
-<h1>WebDav &amp; Atom</h1>
-<p><em>Status: ready</em></p>
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
 <p>In the <a href="https://inspire.ec.europa.eu/documents/technical-guidance-implementation-inspire-download-services">technical Guidelines download services</a> <code>INSPIRE atom services</code> are described to provide a light weight alternative to WFS and WCS, while fitting with all the aspects of a <code>webservice</code> as described in the implementing rules.</p>
 <p>This recipe describes a minimal approach which is based on placing a number of Atom-xml files along side the downloadable resources in a web accessible folder or webdav. Consider that WebDav is used as an example, any online file system would suffice. A plain apache webserver, Zenodo or even sharepoint or dropbox.</p>
 <section id="wsgidav" class="level2">
@@ -345,7 +354,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>The <a href="https://plugins.qgis.org/plugins/inspireatomclient/">QGIS INSPIRE Atom plugin</a> provides access to Atom services through QGIS.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

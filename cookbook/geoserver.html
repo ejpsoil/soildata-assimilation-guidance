@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Soil data guidance – geoserver</title>
+<title>Soil data guidance - Appschema WFS in GeoServer</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -134,25 +134,34 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#appschema-wfs-in-geoserver" id="toc-appschema-wfs-in-geoserver" class="nav-link active" data-scroll-target="#appschema-wfs-in-geoserver">Appschema WFS in GeoServer</a>
-  <ul class="collapse">
-  <li><a href="#run-as-docker-container" id="toc-run-as-docker-container" class="nav-link" data-scroll-target="#run-as-docker-container">Run as docker container</a></li>
+  <li><a href="#run-as-docker-container" id="toc-run-as-docker-container" class="nav-link active" data-scroll-target="#run-as-docker-container">Run as docker container</a></li>
   <li><a href="#inspire-plugin" id="toc-inspire-plugin" class="nav-link" data-scroll-target="#inspire-plugin">INSPIRE plugin</a></li>
   <li><a href="#appschema-support" id="toc-appschema-support" class="nav-link" data-scroll-target="#appschema-support">Appschema support</a></li>
   <li><a href="#geoserver-as-a-view-service" id="toc-geoserver-as-a-view-service" class="nav-link" data-scroll-target="#geoserver-as-a-view-service">GeoServer as a View service</a></li>
   <li><a href="#read-more" id="toc-read-more" class="nav-link" data-scroll-target="#read-more">Read more</a></li>
-  </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/quarto/docs/cookbook/geoserver.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/geoserver.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Appschema WFS in GeoServer</h1>
+</div>
 
 
-<section id="appschema-wfs-in-geoserver" class="level1">
-<h1>Appschema WFS in GeoServer</h1>
-<p><em>Status: contribution required</em></p>
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
 <p>GeoServer is an open source java imlementation of WFS, WCS, WPS, WMS, CSW. Various OGC API endpoints are available via a <a href="https://docs.geoserver.org/latest/en/user/community/ogc-api">OGCAPI community plugin</a>. WMTS is available via a default plugin called <code>GeoWebCache</code>.</p>
 <p>GeoServer is a popular server component because of the initial ease of setup and configuration in a webbased environment. It includes an authentication and authorisation system and advanced styling options. Configuration via a webinterface also has some negative aspects related to reproducability and scaling. GeoServer is able to provide INSPIRE data via the <a href="https://docs.geoserver.org/latest/en/user/data/app-schema/index.html">appschema plugin</a> and (INSPIRE plugin)[https://docs.geoserver.org/stable/en/user/extensions/inspire].</p>
 <section id="run-as-docker-container" class="level2">
@@ -190,7 +199,6 @@ ul.task-list li input[type="checkbox"] {
 <p>Website: https://geoserver.org GitHub: https://github.com/geoserver/ Docker: https://docker.osgeo.org/geoserver Issue management: https://osgeo-org.atlassian.net/projects/GEOS/summary OSGeo: https://www.osgeo.org/projects/geoserver/</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

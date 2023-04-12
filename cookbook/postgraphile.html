@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Soil data guidance – postgraphile</title>
+<title>Soil data guidance - GraphQL with Postgraphile</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -134,25 +134,34 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#graphql-with-postgraphile" id="toc-graphql-with-postgraphile" class="nav-link active" data-scroll-target="#graphql-with-postgraphile">GraphQL with Postgraphile</a>
-  <ul class="collapse">
-  <li><a href="#postgraphile" id="toc-postgraphile" class="nav-link" data-scroll-target="#postgraphile">Postgraphile</a></li>
+  <li><a href="#postgraphile" id="toc-postgraphile" class="nav-link active" data-scroll-target="#postgraphile">Postgraphile</a></li>
   <li><a href="#load-some-data-into-the-database" id="toc-load-some-data-into-the-database" class="nav-link" data-scroll-target="#load-some-data-into-the-database">Load some data into the database</a></li>
   <li><a href="#configure-the-service" id="toc-configure-the-service" class="nav-link" data-scroll-target="#configure-the-service">Configure the service</a></li>
   <li><a href="#query-a-graphql-endpoint" id="toc-query-a-graphql-endpoint" class="nav-link" data-scroll-target="#query-a-graphql-endpoint">Query a GraphQL endpoint</a></li>
   <li><a href="#read-more" id="toc-read-more" class="nav-link" data-scroll-target="#read-more">Read more</a></li>
-  </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/quarto/docs/cookbook/postgraphile.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/postgraphile.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">GraphQL with Postgraphile</h1>
+</div>
 
 
-<section id="graphql-with-postgraphile" class="level1">
-<h1>GraphQL with Postgraphile</h1>
-<p><em>Status: in progress</em></p>
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
 <p><a href="https://graphql.org">GraphQL</a> is a de-facto standard for self describing API’s on hierarchical data. Graphql provides via its API specification capabilities to query datasets using filters, but also indicate which properties to be returned alongside with proper pagination. The GraphQL website provides a <a href="https://graphql.org/graphql">quick start on Graphql</a> based on NodeJS.</p>
 <p>GraphQL is currently not endorsed as an INSPIRE Good Practice, but it fits many aspects of an INSPIRE download service. GraphQL is a good fit to disseminate measurement and observation data from soil profiles.</p>
 <p>At ISRIC we use GraphQL (along WMS/WFS) to disseminate the <a href="https://www.isric.org/explore/wosis">WOSIS soil profile database</a>.</p>
@@ -177,7 +186,6 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

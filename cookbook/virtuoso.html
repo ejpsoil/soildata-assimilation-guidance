@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Soil data guidance – virtuoso</title>
+<title>Soil data guidance - Virtuoso &amp; Skosmos</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -134,23 +134,32 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#virtuoso-skosmos" id="toc-virtuoso-skosmos" class="nav-link active" data-scroll-target="#virtuoso-skosmos">Virtuoso &amp; Skosmos</a>
-  <ul class="collapse">
-  <li><a href="#load-skos-rdf-to-virtuoso" id="toc-load-skos-rdf-to-virtuoso" class="nav-link" data-scroll-target="#load-skos-rdf-to-virtuoso">Load SKOS RDF to virtuoso</a></li>
+  <li><a href="#load-skos-rdf-to-virtuoso" id="toc-load-skos-rdf-to-virtuoso" class="nav-link active" data-scroll-target="#load-skos-rdf-to-virtuoso">Load SKOS RDF to virtuoso</a></li>
   <li><a href="#setup-skosmos" id="toc-setup-skosmos" class="nav-link" data-scroll-target="#setup-skosmos">Setup Skosmos</a></li>
   <li><a href="#read-more" id="toc-read-more" class="nav-link" data-scroll-target="#read-more">Read more</a></li>
-  </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/quarto/docs/cookbook/virtuoso.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/virtuoso.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Virtuoso &amp; Skosmos</h1>
+</div>
 
 
-<section id="virtuoso-skosmos" class="level1">
-<h1>Virtuoso &amp; Skosmos</h1>
-<p><em>Status: in progress</em></p>
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
 <p>This recipe presents steps to publish a code-lists using the <a href="https://www.w3.org/2004/02/skos/">SKOS ontology</a> in Virtuoso and Skosmos. <a href="https://virtuoso.openlinksw.com">Virtuoso</a> is an open source Triple store providing a SPARQL endpoint. <a href="https:/skosmos.org">Skosmos</a> is an open source web application providing a human friendly browse interface for skos thesauri stored in a triple store.</p>
 <p>This is a follow up recipe of the <a href="../cookbook/code-listsExtension.html">extending code-lists recipe</a>.</p>
 <p>In this recipe we’re going to reproduce the publication of the <code>GLOSIS - Procedures</code> Codelist, maintained at <a href="https://raw.githubusercontent.com/rapw3k/glosis/master/glosis_procedure.ttl">github</a>, initiated by the former <a href="https://www.sieusoil.eu/">SieuSoil project</a> with contributions from the <a href="https://ejpsoil.eu">EJP Soil project</a>.</p>
@@ -215,7 +224,6 @@ LIMIT 20</code></pre>
 </ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

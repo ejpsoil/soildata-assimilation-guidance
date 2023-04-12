@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Soil data guidance – rasdaman</title>
+<title>Soil data guidance - Coverages with rasdaman</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -134,27 +134,41 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#coverages-with-rasdaman" id="toc-coverages-with-rasdaman" class="nav-link active" data-scroll-target="#coverages-with-rasdaman">Coverages with rasdaman</a>
-  <ul class="collapse">
+  <li><a href="#video" id="toc-video" class="nav-link active" data-scroll-target="#video">Video</a></li>
   <li><a href="#read-more" id="toc-read-more" class="nav-link" data-scroll-target="#read-more">Read more:</a></li>
-  </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/quarto/docs/cookbook/rasdaman.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/rasdaman.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Coverages with rasdaman</h1>
+</div>
 
 
-<section id="coverages-with-rasdaman" class="level1">
-<h1>Coverages with rasdaman</h1>
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
 <p><a href="https://en.wikipedia.org/wiki/Coverage_data">Coverage data</a> is the digital representation of some spatio-temporal phenomenon. Usually in the form of a grid of cells having a certain resolution. Grid cells can provide a value for multiple phenomena. The <a href="https://www.ogc.org/standards/wcs">OGC Web Coverage Service</a> and the upcoming <a href="https://ogcapi.ogc.org/coverages/">OGC API Coverages</a> provide a standardised mechanism to query coverage data over the web. Web Coverage Service is the main option to <a href="https://inspire.ec.europa.eu/id/document/tg/download-wcs">provide a Download service on INSPIRE coverage data</a>. An alternative option is <a href="../cookbook/webdav.html">INSPIRE Atom</a>.</p>
 <p><a href="https://rasdaman.org">Rasdaman</a> is software to set up a Web Coverage Service. The Rasdaman team has prepared a tutorial for setting up an INSPIRE Coverage service at <a href="https://inspire.rasdaman.org/">Good practice on coverage data</a>. The tutorial is set up using Jupyter. New to Jupyter? Read the <a href="../utils/jupyter.html">Jupyter recipe</a>.</p>
-<section id="read-more" class="level2">
-<h2 class="anchored" data-anchor-id="read-more">Read more:</h2>
-<p>At masterclass edition 2023 Kathi Schleidt presented INSPIRE CSW using Rasdaman.</p>
+<section id="video" class="level2">
+<h2 class="anchored" data-anchor-id="video">Video</h2>
+<p>At masterclass edition 2023 Kathi Schleidt presented <a href="https://wur.yuja.com/v/ejp-sda-wcs?preload=false">INSPIRE CSW using Rasdaman</a>.</p>
 <iframe title="INSPIRE CSW using Rasdaman" width="560" height="315" src="https://wur.yuja.com/v/ejp-sda-wcs?preload=false" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" loading="lazy">
 </iframe>
+</section>
+<section id="read-more" class="level2">
+<h2 class="anchored" data-anchor-id="read-more">Read more:</h2>
 <ul>
 <li><a href="https://rasdaman.org">Website</a></li>
 <li><a href="https://github.com/ARPASMR/rasdaman">Docker</a></li>
@@ -165,7 +179,6 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

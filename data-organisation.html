@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2022-11-10">
 
-<title>Soil data guidance – data-organisation</title>
+<title>Soil data guidance - Data Organisation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -134,23 +135,45 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#data-organisation" id="toc-data-organisation" class="nav-link active" data-scroll-target="#data-organisation">Data Organisation</a>
-  <ul class="collapse">
-  <li><a href="#types-of-soil-data" id="toc-types-of-soil-data" class="nav-link" data-scroll-target="#types-of-soil-data">Types of soil data</a></li>
+  <li><a href="#types-of-soil-data" id="toc-types-of-soil-data" class="nav-link active" data-scroll-target="#types-of-soil-data">Types of soil data</a></li>
   <li><a href="#code-lists" id="toc-code-lists" class="nav-link" data-scroll-target="#code-lists">Code lists</a></li>
   <li><a href="#metadata-management" id="toc-metadata-management" class="nav-link" data-scroll-target="#metadata-management">Metadata management</a></li>
   <li><a href="#related-recipes-in-this-cookbook" id="toc-related-recipes-in-this-cookbook" class="nav-link" data-scroll-target="#related-recipes-in-this-cookbook">Related recipes in this cookbook:</a></li>
-  </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/quarto/docs/data-organisation.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/data-organisation.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Data Organisation</h1>
+</div>
 
 
-<section id="data-organisation" class="level1">
-<h1>Data Organisation</h1>
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Paul van Genuchten </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 10, 2022</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
 <p>This article describes the <code>data organisation</code> step in the <a href="https://www.isric.org/index.php/utilise/community-practice">Soil Information Workflow</a> and references various cookbook recipes related to this step in the workflow.</p>
 <p>In this step a data curator prepares the organisation for incoming soil observations from field studies and laboratory work. Data from external organisations is prepared and made available to augment and/or validate local data. Relevant measures are put in place to authorise relevant staff, prevent data loss and data redundancy and assess privacy concerns. Concrete deliverables of this phase are: - data model materialised in a physical database - implemented procedures to prevent data loss - access grants to relevant staff - metadata document in which these aspects are described - procedures to evaluate quality of the data and infrastructure</p>
 <p>Note that in this phase no effort is made to publish data to remote partners or the general public, but it does make sense to capture on the metadata if any access constraints apply which may prevent publication to a wider audience in a later stage.</p>
@@ -196,7 +219,6 @@ ul.task-list li input[type="checkbox"] {
 <p>Consider that if a project uses a dedicated data model, transforming external data from a common model to the dedicated project model is relevant. The recipe on <a href="./cookbook/hale-studio-consume-gml.html">data harmonisation to a locally used data model</a> is relevant (See also the general <a href="./etl.html">Data standardisation</a> recipe).</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

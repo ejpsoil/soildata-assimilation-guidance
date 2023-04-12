@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Soil data guidance – index</title>
+<title>Soil data guidance – bridge-geoserver-geonetwork</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -134,137 +134,71 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#masterclass-on-soil-data-assimilation" id="toc-masterclass-on-soil-data-assimilation" class="nav-link active" data-scroll-target="#masterclass-on-soil-data-assimilation">Masterclass on Soil Data Assimilation</a>
+  <li><a href="#metadata-and-view-service-with-geocat-bridge-geonetwork-and-geoserver" id="toc-metadata-and-view-service-with-geocat-bridge-geonetwork-and-geoserver" class="nav-link active" data-scroll-target="#metadata-and-view-service-with-geocat-bridge-geonetwork-and-geoserver">Metadata and View Service with GeoCat Bridge, GeoNetwork and GeoServer</a>
   <ul class="collapse">
-  <li><a href="#program-times-in-cet" id="toc-program-times-in-cet" class="nav-link" data-scroll-target="#program-times-in-cet">Program (times in CET)</a>
-  <ul class="collapse">
-  <li><a href="#th-of-january" id="toc-th-of-january" class="nav-link" data-scroll-target="#th-of-january">24th of january</a></li>
-  <li><a href="#th-of-january-1" id="toc-th-of-january-1" class="nav-link" data-scroll-target="#th-of-january-1">25th of january</a></li>
-  <li><a href="#th-of-january-2" id="toc-th-of-january-2" class="nav-link" data-scroll-target="#th-of-january-2">26th of january</a></li>
-  </ul></li>
+  <li><a href="#contents-of-the-recipe" id="toc-contents-of-the-recipe" class="nav-link" data-scroll-target="#contents-of-the-recipe">Contents of the recipe:</a></li>
+  <li><a href="#deploy-geoserver-and-geonetwork-using-docker" id="toc-deploy-geoserver-and-geonetwork-using-docker" class="nav-link" data-scroll-target="#deploy-geoserver-and-geonetwork-using-docker">Deploy GeoServer and GeoNetwork using Docker</a></li>
+  <li><a href="#install-and-configure-the-bridge-plugin" id="toc-install-and-configure-the-bridge-plugin" class="nav-link" data-scroll-target="#install-and-configure-the-bridge-plugin">Install and configure the Bridge plugin</a></li>
+  <li><a href="#publish-the-dataset" id="toc-publish-the-dataset" class="nav-link" data-scroll-target="#publish-the-dataset">Publish the dataset</a></li>
+  <li><a href="#validate-the-view-service" id="toc-validate-the-view-service" class="nav-link" data-scroll-target="#validate-the-view-service">Validate the view service</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/masterclass/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/cookbook/bridge-geoserver-geonetwork.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
 
-<section id="masterclass-on-soil-data-assimilation" class="level1">
-<h1>Masterclass on Soil Data Assimilation</h1>
-<p>At 24-26 january 2023 <a href="https://www.wur.nl/en/research-results/research-institutes/environmental-research.htm">Wageningen Environmental Research</a> and <a href="https://www.isric.org">ISRIC - World Soil Information</a> has organised a masterclass on Soil Data Assimilation. This masterclass was a follow up of the <a href="../masterclass/edition-2022.html">Training on INSPIRE Good Practices around Soil Data</a> held in april 2022.</p>
-<section id="program-times-in-cet" class="level2">
-<h2 class="anchored" data-anchor-id="program-times-in-cet">Program (times in CET)</h2>
-<section id="th-of-january" class="level3">
-<h3 class="anchored" data-anchor-id="th-of-january">24th of january</h3>
-<table class="table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Building Gaia; Meeting room 2</th>
-<th>Video</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>10.00</td>
-<td>Introduction to data assimilation (harmonization; extension; codelists) - Paul van Genuchten, Jandirk Bulens</td>
-<td><a href="https://wur.yuja.com/V/Video?v=430847&amp;node=1937918&amp;a=83533229&amp;autoplay=1">video</a></td>
-</tr>
-<tr class="even">
-<td>11:00</td>
-<td>INSPIRE Tools - Paul van Genuchten</td>
-<td><a href="https://wur.yuja.com/V/Video?v=430878&amp;node=1938063&amp;a=187273784&amp;autoplay=1">video</a></td>
-</tr>
-<tr class="odd">
-<td>12:00</td>
-<td>Skosmos (code lists) - Paul van Genuchten</td>
-<td><a href="https://wur.yuja.com/V/Video?v=430881&amp;node=1938074&amp;a=143339043&amp;autoplay=1">video</a></td>
-</tr>
-<tr class="even">
-<td>14:30</td>
-<td>Soil model in Geopackage - Stefania Morrone</td>
-<td><a href="https://wur.yuja.com/V/Video?v=430869&amp;node=1938006&amp;a=184498297&amp;autoplay=1">video</a></td>
-</tr>
-</tbody>
-</table>
+<section id="metadata-and-view-service-with-geocat-bridge-geonetwork-and-geoserver" class="level1">
+<h1>Metadata and View Service with GeoCat Bridge, GeoNetwork and GeoServer</h1>
+<p><em>Status: ready</em></p>
+<p>In this recipe we use GeoCat Bridge to publish a View Service on a soil dataset in GeoServer, combined with connected metadata in a GeoNetwork instance.</p>
+<p><a href="https://www.geocat.net/bridge/">GeoCat Bridge</a> is a plugin for QGIS or ArcMap developed by GeoCat in Bennekom, the Netherlands. Its goal is to facilitate the complex process of data publication from a well known desktop environment. An introductionary video is available at https://www.youtube.com/watch?v=f-sZCVnR9dc</p>
+<p><a href="../cookbook/geoserver.html">GeoServer</a> is a server application providing OGC services on various database backends. See the <a href="../cookbook/geoserver.html">relevant recipe</a> for a more detailed description.</p>
+<p><a href="../cookbook/geonetwork.html">GeoNetwork</a> is a server application providing a search interface and various api’s on a collection of metadata records. See the <a href="../cookbook/geonetwork.html">relevant recipe</a> for a more detailed description.</p>
+<section id="contents-of-the-recipe" class="level2">
+<h2 class="anchored" data-anchor-id="contents-of-the-recipe">Contents of the recipe:</h2>
+<ul>
+<li>Deploy GeoServer and GeoNetwork using Docker</li>
+<li>Install and configure the Bridge plugin</li>
+<li>Publish the dataset</li>
+</ul>
 </section>
-<section id="th-of-january-1" class="level3">
-<h3 class="anchored" data-anchor-id="th-of-january-1">25th of january</h3>
-<table class="table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Lumen 2 meeting room</th>
-<th>Video</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>9.00</td>
-<td>Introduction to View and download services</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-view-download">video</a></td>
-</tr>
-<tr class="even">
-<td>10.00</td>
-<td>Sensorthings API - Kathi Schleidt, Hylke van der Schaaf</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-sta">video</a></td>
-</tr>
-<tr class="odd">
-<td>13:45</td>
-<td>WCS - Kathi Schleidt, Peter Baumann</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-wcs">video</a></td>
-</tr>
-<tr class="even">
-<td>14:30</td>
-<td>geopython (pygeoapi, pygeometa, pycsw) - Tom Kralidis, Luis de Sousa</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-geopython">video</a></td>
-</tr>
-</tbody>
-</table>
+<section id="deploy-geoserver-and-geonetwork-using-docker" class="level2">
+<h2 class="anchored" data-anchor-id="deploy-geoserver-and-geonetwork-using-docker">Deploy GeoServer and GeoNetwork using Docker</h2>
+<p>This recipe is based on Docker, but you can also install each of the components directly on your system. New to Docker? Read the <a href="../utils/docker.html">Docker recipe</a>.</p>
+<p>We use the QGIS edition of Bridge, but an <a href="https://geocat.net/bridge">edition for ArcMAP</a> is also available.</p>
+<p>Download the file https://github.com/ejpsoil/ejpsoil-data-publication-guidance/docker/bridge-geoserver-geonetwork/docker-compose.yml into an empty folder. Navigate to the folder using a shell client (windows powershell or Linux/Apple shell) and run:</p>
+<pre><code>docker compose up</code></pre>
+<p>The above statement will download and deploy docker containers for GeoServer, GeoNetwork, PostGreSQL and Elastic Search. When finished (it may take a long time), you can access GeoServer at https://localhost:8000/geoserver and GeoNetwork at https://localhost:8001/geonetwork.</p>
+<p>GeoNetwork starts with an error, because the database is empty. Navigate to <code>http://localhost:8001/geonetwork/srv/eng/admin.console#/metadata</code>, login as user: <code>admin</code>, password: <code>admin</code>. Select the <code>iso19139:2007</code> profile and click <code>Load templates</code> and <code>Load samples</code>.</p>
 </section>
-<section id="th-of-january-2" class="level3">
-<h3 class="anchored" data-anchor-id="th-of-january-2">26th of january</h3>
-<table class="table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Gaia 2 meeting room</th>
-<th>Video</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>9.00</td>
-<td>Introduction to Metadata and discovery</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-metadata">vido</a></td>
-</tr>
-<tr class="even">
-<td>10:00</td>
-<td>deegree webservices intro and Q&amp;A - Torsten Friebe</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-deegree">video</a></td>
-</tr>
-<tr class="odd">
-<td>10:30</td>
-<td>MapServer intro and Q&amp;A - Seth G</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-mapserver">video</a></td>
-</tr>
-<tr class="even">
-<td>11:00</td>
-<td>Extending Codelists - Luis de Sousa</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-codelists">video</a></td>
-</tr>
-<tr class="odd">
-<td>14.00</td>
-<td>Hale Studio - Kate Lyndegaard</td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<section id="install-and-configure-the-bridge-plugin" class="level2">
+<h2 class="anchored" data-anchor-id="install-and-configure-the-bridge-plugin">Install and configure the Bridge plugin</h2>
+<p>With QGIS, open the QGIS plugins repository and search for the <code>GeoCat Bridge</code> plugin. Install it.</p>
+<p>After succesfull installation, we will configure our GeoServer and GeoNetwork instances.</p>
+<p>Find the Bridge module on the toolbar or in the <code>Web &gt; GeoCat Bridge &gt; Publish</code> menu. From the publish window, open the <code>Servers</code> tab.</p>
+<p>In the bottom left click the <code>New server</code> option and select <code>GeoServer</code>. Populate the fields.</p>
+<p>Click <code>New server</code> again and select <code>GeoNetwork</code>. Populate the fields.</p>
+<p>You are now ready to publish your first dataset from QGIS.</p>
+</section>
+<section id="publish-the-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="publish-the-dataset">Publish the dataset</h2>
+<p>Open the dataset to be published. Configure the layer with relevant styling and labels.</p>
+<p>Open the publish window from the menu (or toolbar).</p>
+<p>Select the layer to be published. A metadata editor will open in which you can configure some metadata. You can also import embedded metadata (use the button with a downward arrow, top right).</p>
+<p>Select the target servers for the publisation and click the publish button.</p>
+<p>When returning to the publish panel, you will notice an icon behind each layer indicating the publication status. You can now right click on the layer to preview the wms layer or the metadata.</p>
+<p>Note that the styling options in QGIS and GeoServer are not a full match. Some styling transformations are applied which may impact the final result on GeoServer. A common caveat is the availability of certain fonts, used for labeling or icons, on the client and the server. Make sure all used fonts are available on the server as well. |</p>
+</section>
+<section id="validate-the-view-service" class="level2">
+<h2 class="anchored" data-anchor-id="validate-the-view-service">Validate the view service</h2>
+<p>The INSPIRE Validator provides a validation of view services. It will mainly test if metadata elements are available and the service is reachable.</p>
+<p>The docker containers run locally, so the services can not be tested by the <a href="https://inspire.ec.europa.eu/validator/test-selection/index.html">INSPIRE Validator</a>. In <a href="../utils/localtunnel.html">Local Tunnel</a> an approach is suggested to temporarily host a local service online, so you can run the validation.</p>
+<p>We have not yet installed the INSPIRE plugin on GeoServer and optimized the configuration of GeoNetwork, so expect some tests to fail</p>
 
 
-</section>
 </section>
 </section>
 

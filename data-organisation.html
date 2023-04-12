@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2022-11-10">
 
-<title>Soil data guidance - Introduction</title>
+<title>Soil data guidance – data-organisation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -81,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page">
+    <a class="nav-link" href="./index.html">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -135,111 +134,66 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
+  <li><a href="#data-organisation" id="toc-data-organisation" class="nav-link active" data-scroll-target="#data-organisation">Data Organisation</a>
   <ul class="collapse">
-  <li><a href="#organisation-of-the-articles" id="toc-organisation-of-the-articles" class="nav-link" data-scroll-target="#organisation-of-the-articles">Organisation of the articles</a></li>
-  <li><a href="#reading-guide" id="toc-reading-guide" class="nav-link" data-scroll-target="#reading-guide">Reading guide</a></li>
+  <li><a href="#types-of-soil-data" id="toc-types-of-soil-data" class="nav-link" data-scroll-target="#types-of-soil-data">Types of soil data</a></li>
+  <li><a href="#code-lists" id="toc-code-lists" class="nav-link" data-scroll-target="#code-lists">Code lists</a></li>
+  <li><a href="#metadata-management" id="toc-metadata-management" class="nav-link" data-scroll-target="#metadata-management">Metadata management</a></li>
+  <li><a href="#related-recipes-in-this-cookbook" id="toc-related-recipes-in-this-cookbook" class="nav-link" data-scroll-target="#related-recipes-in-this-cookbook">Related recipes in this cookbook:</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/data-organisation.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Introduction</h1>
-</div>
 
 
-
-<div class="quarto-title-meta">
-
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Paul van Genuchten </p>
-          </div>
-  </div>
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">November 10, 2022</p>
-    </div>
-  </div>
-  
-    
-  </div>
-  
-
-</header>
-
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
-<p>This WIKI is a collaborative effort to collect and describe hands-on good practices on data assimilation and dissemination in the <a href="https://agrovoc.fao.org/browse/agrovoc/en/page/c_7156">Soil</a> domain, with a focus on Europe. The <a href="https://inspire.ec.europa.eu/">INSPIRE</a> directive has been and is an important effort for standardisation in the environmental data domain, therefore this WIKI has a lot of links to INSPIRE sources. Because INSPIRE adopts industry standards, this WIKI does reference common standards from ISO, Open Geospatial Consortium, Global Soils Partnership, IANA and W3C, giving it a global relevance.</p>
-<p>The term <code>data assimilation</code> has been chosen by the autors as an alternative to the terms harmonisation and standardisation, which already have a specific meaning in the soil domain:</p>
-<ul>
-<li><code>standardisation</code>; aligning soil data to a common model, using common codelists.</li>
-<li><code>harmonisation</code>; transforming results from observations and measurements to values as if all results for a property are measured using the same procedure, by applying so called <a href="https://en.wikipedia.org/wiki/Pedotransfer_function">Pedotransfer Functions (PTF)</a>.</li>
-</ul>
-<p>The process of assimilation also aims to capture additional aspects, such as finding, downloading and using the data. Most of these aspects are also well described as part of the <a href="https://www.go-fair.org/fair-principles/">FAIR principles</a>.</p>
-<ul>
-<li>Findable, provide relevant metadata via online portals</li>
-<li>Accessible, make the data available as download or API</li>
-<li>Interoperable, adopt common data models and code lists</li>
-<li>Reusable, add documentation and provide tools to reuse the data</li>
-</ul>
-<section id="organisation-of-the-articles" class="level2">
-<h2 class="anchored" data-anchor-id="organisation-of-the-articles">Organisation of the articles</h2>
-<p><a href="https://www.isric.org/index.php/utilise/community-practice">Toner et al, 2022</a> identified 6 steps in a typical soil information workflow from a data producer perspective and a separate category for the data user perspective. These steps form a relevant categorisation of the articles in this wiki. Much of the articles apply to the categories:</p>
-<ul>
-<li><a href="./data-organisation.html">4) Data organisation</a></li>
-<li><a href="./data-sharing.html">6) data and info sharing</a></li>
-<li><a href="./consumer.html">7) Soil Information User Consideration</a></li>
-</ul>
-<p>We’ve labeled each of the articles as to which step in the workflow they apply.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://www.isric.org/sites/default/files/Soil%20information%20workflow_circular_notext.jpg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Soil information workflow</figcaption><p></p>
-</figure>
-</div>
-<p>This wiki lists a series of options for publishing data according to the Technical Guidelines and/or the Good Practices dedicated to use cases from the Soil domain. For each option recipes on various technologies are provided. The practices are categorized at 3 levels:</p>
-<ul>
-<li>Minimal, based on a minimal effort</li>
-<li>Traditional, following initial technical guidelines</li>
-<li>Experimental, following recent and upcoming good practices</li>
-</ul>
-<p>The practices cover 7 topics.</p>
-<ul>
-<li><a href="./identification.html">Identification and namespaces</a></li>
-<li><a href="./etl.html">Data harmonization</a></li>
-<li><a href="./codelists.html">Code lists</a></li>
-<li><a href="./metadata.html">Metadata and Discovery</a></li>
-<li><a href="./view.html">View services</a></li>
-<li><a href="./download.html">Download services</a></li>
-<li><a href="./QOS.html">Quality of service</a></li>
-</ul>
-<p>!!! info</p>
-<pre><code>Disclaimer: References to products and approaches are examples. We do not aim to provide a complete listing, nor endorse a specific technology or service provider. Please consult any alternative software provider to what extent INSPIRE is supported in their products. In that scenario consider to contribute your experiences to this WIKI. </code></pre>
+<section id="data-organisation" class="level1">
+<h1>Data Organisation</h1>
+<p>This article describes the <code>data organisation</code> step in the <a href="https://www.isric.org/index.php/utilise/community-practice">Soil Information Workflow</a> and references various cookbook recipes related to this step in the workflow.</p>
+<p>In this step a data curator prepares the organisation for incoming soil observations from field studies and laboratory work. Data from external organisations is prepared and made available to augment and/or validate local data. Relevant measures are put in place to authorise relevant staff, prevent data loss and data redundancy and assess privacy concerns. Concrete deliverables of this phase are: - data model materialised in a physical database - implemented procedures to prevent data loss - access grants to relevant staff - metadata document in which these aspects are described - procedures to evaluate quality of the data and infrastructure</p>
+<p>Note that in this phase no effort is made to publish data to remote partners or the general public, but it does make sense to capture on the metadata if any access constraints apply which may prevent publication to a wider audience in a later stage.</p>
+<section id="types-of-soil-data" class="level2">
+<h2 class="anchored" data-anchor-id="types-of-soil-data">Types of soil data</h2>
+<p>Within the soil domain (and wider earth sciences) typically 4 types of data are identified:</p>
+<ol start="0" type="1">
+<li>‘As-is’ data, legacy datasets in their original form or field and analytical data as it is received from field surveyors and laboratories, including reporting about the applied procedures.</li>
+<li>Soil analytical data and field descriptions of a) soil profiles and b) soil plots, standardised to a common model (iso28258). The data includes the lineage, the definition of the soil in space and time (xyzt), the attribute concerned, the procedure used and the unit of expression. Domain values are selected from common code lists.</li>
+<li>A dataset in which the soil parameter values are harmonised as if they were analysed using a single procedure. The metadata of individual observations can be left out, resulting in a abbreviated dataset, typically presented as multiple parameter values (texture fractions, pH, Ca content, Vegetation, Groundwater level) of a feature of interest (horizon, profile, plot defined by xyzt) in a flat table.</li>
+<li>Predicted distribution of soil properties or soil classes, either as grid cells through a statistical model or as vector polygons drawn with expert knowledge in the field.</li>
+</ol>
 </section>
-<section id="reading-guide" class="level2">
-<h2 class="anchored" data-anchor-id="reading-guide">Reading guide</h2>
-<p>While reading the vast amount of recipes in this cookbook you may realize; if there are so many options, how are the differences between the implementations bridged. - Some implementation options differ in technology, but generate a similar result - Some options actually need some bridging before data can be combined, but the number of bridges is limited (and could also be bridged by intermediaries) - All options share some basic principles, such as identifier persistence and adoption of common codelists, which make any option beneficial</p>
-<p>When selecting one of the available options, consider the following aspects:</p>
+<section id="code-lists" class="level2">
+<h2 class="anchored" data-anchor-id="code-lists">Code lists</h2>
+<p>Another aspect to consider as part of data standardization is the adoption of common code lists that support interoperability of data. Datasets which use for example different texture classes are hard to compare. Within the soil community there are a number of common code lists available.</p>
 <ul>
-<li>The minimal implementation will have limitations for end users (for example having to download the full dataset, if they are only interested in a small section). On the other hand, minimal implementations tend to be less complex in setup which makes understanding the implementation easier.</li>
-<li>The traditional implementations have the most active users, so dedicated documentation and tooling is available with high Technical Readiness Level (TRL). However, some technologies are based on conventions of almost 20 years ago. These conventions are outdated, compared to current IT practices.</li>
-<li>An experimental approach brings the risk of incomplete documentation and tools. Also there is less evidence on usability. But it does give opportunity to use current technologies and engage with the community to design the next iteration of data sharing.</li>
+<li>World Reference Base (WRB), available in digital form via <a href="http://aims.fao.org/aos/agrovoc/c_89f35c33">Agrovoc</a>.</li>
+<li>FAO Guidelines of Soil Description (these practices are integrated in the latest version of WRB), digitised as part of the <a href="https://rapw3k.github.io/glosis/doc/glosis_cl/index-en.html">GLOSIS Web Ontology effort</a>.</li>
+<li>The GLOSIS Web Ontology includes <a href="https://rapw3k.github.io/glosis/doc/glosis_ext_property/index-en.html">code lists of common soil properties</a> and <a href="https://rapw3k.github.io/glosis/doc/glosis_procedure/index-en.html">analysis procedures</a>. This list was originally collected in A compilation of georeferenced and standardised legacy soil profile data for Sub-Saharan Africa (Africa Soil Profiles Database; Leenaars J.G.B et al 2014). And later extended by the soil community.</li>
 </ul>
-<p>Before selecting an option evaluate the following aspects in your organization.</p>
+<p>In some cases it is relevant to define code lists at a country or even regional level. A regional code list repository supports practitioners in standardizing their data early in the data lifecycle. Extending a codelist is then a relevant recipe.</p>
+</section>
+<section id="metadata-management" class="level2">
+<h2 class="anchored" data-anchor-id="metadata-management">Metadata management</h2>
+<p>Metadata documents are preferably based on a common ontology such as <a href="./cookbook/dcat.html">DCAT</a>, <a href="https://schema.datacite.org/">DataCite</a> or <a href="https://www.iso.org/standard/53798.html">iso19115</a>. Roughly 2 approaches, with various implementation options, exist to maintain metadata within an organisation:</p>
 <ul>
-<li>What are current IT tools and conventions used in the organization to understand which of the approaches fits best with the current knowledge and experience</li>
-<li>Combine an implementation of INSPIRE with business cases that generate direct benefit for your organization or partners. For example, adoption of the open data directive, better documentation and reporting of service levels, improved archival of data, discoverability on search engines.</li>
-<li>Assess the projected audience. Verify that the complexity and nature of the implementation matches with the expectations and capabilities of that audience.</li>
+<li>Metadata is included in the data file or is stored as a sidecar file next to the actual data file. At intervals a crawler imports metadata to make the data findable from a central location.</li>
+<li>Metadata is captured in a separate system and linkage is maintained between the actual dataset and its metadata.</li>
 </ul>
-<p>We recommend to start with a minimal implementation and validate it with the provided <a href="https://ejpsoil.github.io/soildata-assimilation-guidance/QOS/">compliance test tooling</a>. From there, extend the implementation while continuing the tests with each iteration. With such an you are able to focus on the important aspects and prevent caveats early on in the process.</p>
+<p>The second option is relatively easy to adopt, however it comes with a potential big effort to keep the metadata system in sync within the organisation. In practice organisations tend to implement a combination of both options.</p>
+<p>This step includes the organisation of data arriving from external sources and the standardisation of that data with local data (transform to a common model). As soon as a user imports a remote dataset for use in a project, it is useful to include a metadata record about that dataset in the local repository, so colleagues understand where/when the data was imported. If the dataset is available online, it is better to link to the remote dataset, so users would always use the latest version.</p>
+</section>
+<section id="related-recipes-in-this-cookbook" class="level2">
+<h2 class="anchored" data-anchor-id="related-recipes-in-this-cookbook">Related recipes in this cookbook:</h2>
+<ul>
+<li><a href="./cookbook/uri.html">a URI strategy</a></li>
+<li><a href="./cookbook/pygeometa.html">A Pythonic metadata workflow</a></li>
+<li><a href="./cookbook/geonetwork.html">A discovery service in GeoNetwork</a> includes a section on metadata authoring in GeoNetwork</li>
+<li><a href="./cookbook/bridge-geoserver-geonetwork.html">Metadata and View Service with GeoCat Bridge, GeoNetwork and GeoServer</a> includes a section on metadata management in QGIS</li>
+<li><a href="./cookbook/dcat.html">DCAT</a></li>
+</ul>
+<p>Consider that if a project uses a dedicated data model, transforming external data from a common model to the dedicated project model is relevant. The recipe on <a href="./cookbook/hale-studio-consume-gml.html">data harmonisation to a locally used data model</a> is relevant (See also the general <a href="./etl.html">Data standardisation</a> recipe).</p>
 
 
 </section>

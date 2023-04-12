@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.475">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Soil data guidance – code-listsextension</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../style/styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="https://ejpsoil.eu" class="navbar-brand navbar-brand-logo">
+    <img src="https://ejpsoil.eu/fileadmin/projects/ejpsoil/EJP_Soil_logo_cmyk-h100.png" alt="EJPSoil website" class="navbar-logo">
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../identification.html">
+ <span class="menu-text">Identification</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../etl.html">
+ <span class="menu-text">Harmonization</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../codelists.html">
+ <span class="menu-text">Code lists</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../metadata.html">
+ <span class="menu-text">Discovery</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../view.html">
+ <span class="menu-text">View</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../download.html">
+ <span class="menu-text">Download</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../QOS.html">
+ <span class="menu-text">QOS</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../utils/index.html">
+ <span class="menu-text">Utils</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../glossary.html">
+ <span class="menu-text">Glossary</span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#code-lists" id="toc-code-lists" class="nav-link active" data-scroll-target="#code-lists">Code-lists</a>
+  <ul class="collapse">
+  <li><a href="#inspire" id="toc-inspire" class="nav-link" data-scroll-target="#inspire">INSPIRE</a></li>
+  <li><a href="#glosis" id="toc-glosis" class="nav-link" data-scroll-target="#glosis">GloSIS</a></li>
+  <li><a href="#extending-code-lists" id="toc-extending-code-lists" class="nav-link" data-scroll-target="#extending-code-lists">Extending code-lists</a>
+  <ul class="collapse">
+  <li><a href="#skos" id="toc-skos" class="nav-link" data-scroll-target="#skos">SKOS</a></li>
+  <li><a href="#extend-an-inspire-code-list-with-skos" id="toc-extend-an-inspire-code-list-with-skos" class="nav-link" data-scroll-target="#extend-an-inspire-code-list-with-skos">Extend an INSPIRE code-list with SKOS</a></li>
+  <li><a href="#extend-a-glosis-code-list" id="toc-extend-a-glosis-code-list" class="nav-link" data-scroll-target="#extend-a-glosis-code-list">Extend a GloSIS code-list</a></li>
+  <li><a href="#create-a-new-code-list" id="toc-create-a-new-code-list" class="nav-link" data-scroll-target="#create-a-new-code-list">Create a new code-list</a></li>
+  </ul></li>
+  <li><a href="#publishing-your-own-code-list-items" id="toc-publishing-your-own-code-list-items" class="nav-link" data-scroll-target="#publishing-your-own-code-list-items">Publishing your own code-list items</a>
+  <ul class="collapse">
+  <li><a href="#dereferenceable-uris" id="toc-dereferenceable-uris" class="nav-link" data-scroll-target="#dereferenceable-uris">Dereferenceable URIs</a></li>
+  </ul></li>
+  <li><a href="#read-more" id="toc-read-more" class="nav-link" data-scroll-target="#read-more">Read more</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/cookbook/code-listsExtension.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="code-lists" class="level1">
+<h1>Code-lists</h1>
+<p>This recipe describes a semantic approach based on <a href="https://www.w3.org/2004/02/skos/">SKOS</a> to extend an INSPIRE code-list.</p>
+<section id="inspire" class="level2">
+<h2 class="anchored" data-anchor-id="inspire">INSPIRE</h2>
+<p>Code-lists specified for the Soil domain within the INSPIRE directive are described in the report <a href="https://inspire.ec.europa.eu/documents/Data_Specifications/INSPIRE_DataSpecification_OI_v3.0rc3.pdf">D2.8.III.3 Data Specification on Soil – Technical Guidelines</a>. A brief overview of these code-lists is offered below.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Code-list</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong><a href="https://inspire.ec.europa.eu/codelist/PhenomenonTypeValue">PhenomenonTypeValue</a></strong></td>
+<td>[Extensible] A code list of phenomena (e.g.&nbsp;temperature, wind speed). Parent of ProfileElementParameterName, SoilSiteParameterName, SoilProfileParameterName and SoilDerivedObjectParameterName.</td>
+</tr>
+<tr class="even">
+<td><strong><a href="http://inspire.ec.europa.eu/codelist/LayerGenesisProcessStateValue">LayerGenesisProcessStateValue</a></strong></td>
+<td>An indication of whether the process specified in layerGenesisProcess is ongoing or ceased in the past.</td>
+</tr>
+<tr class="odd">
+<td><strong><a href="http://inspire-registry.jrc.ec.europa.eu/clr/LayerTypeValue">LayerTypeValue</a></strong></td>
+<td>Classification of a layer according to the concept that fits the purpose, e.g.&nbsp;“topsoil”.</td>
+</tr>
+<tr class="even">
+<td><strong><a href="http://inspire.ec.europa.eu/codelist/ProfileElementParameterNameValue">ProfileElementParameterNameValue</a></strong></td>
+<td>[Extensible] List of properties that can be observed to characterize the profile element.</td>
+</tr>
+<tr class="odd">
+<td><strong><a href="http://inspire.ec.europa.eu/codelist/SoilDerivedObjectParameterNameValue">SoilDerivedObjectParameterNameValue</a></strong></td>
+<td>[Extensible] List of soil related properties that can be derived from soil and other data.</td>
+</tr>
+<tr class="even">
+<td><strong><a href="http://inspire.ec.europa.eu/codelist/SoilInvestigationPurposeValue">SoilInvestigationPurposeValue</a></strong></td>
+<td>List of terms indicating the reasons for conducting a survey.</td>
+</tr>
+<tr class="odd">
+<td><strong><a href="http://inspire.ec.europa.eu/codelist/SoilPlotTypeValue">SoilPlotTypeValue</a></strong></td>
+<td>List of possible values that give information on what kind of plot the observation of the soil is made.</td>
+</tr>
+<tr class="even">
+<td><strong><a href="http://inspire.ec.europa.eu/codelist/SoilProfileParameterNameValue">SoilProfileParameterNameValue</a></strong></td>
+<td>[Extensible] List of properties that can be observed to characterize the soil profile.</td>
+</tr>
+<tr class="odd">
+<td><strong><a href="http://inspire.ec.europa.eu/codelist/SoilSiteParameterNameValue">SoilSiteParameterNameValue</a></strong></td>
+<td>[Extensible] List of properties that can be observed to characterize the soil site.</td>
+</tr>
+<tr class="even">
+<td><strong><a href="http://inspire.ec.europa.eu/codelist/WRBQualifierPlaceValue">WRBQualifierPlaceValue</a></strong></td>
+<td>List of values to indicate the placement of the Qualifier with regard to the WRB reference soil group (RSG), according to naming rules of the World reference base for soil resources 2006, first update 2007.</td>
+</tr>
+<tr class="odd">
+<td><strong><a href="http://inspire.ec.europa.eu/codelist/WRBQualifierValue">WRBQualifierValue</a></strong></td>
+<td>List of possible qualifiers (i.e.&nbsp;prefix and suffix qualifiers of the World Reference Base for Soil Resources 2006, first update 2007).</td>
+</tr>
+<tr class="even">
+<td><strong><a href="http://inspire.ec.europa.eu/codelist/WRBReferenceSoilGroupValue">WRBReferenceSoilGroupValue</a></strong></td>
+<td>List of possible reference soil groups (i.e.&nbsp;first level of classification of the World Reference Base for Soil Resources 2006, first update 2007).</td>
+</tr>
+<tr class="odd">
+<td><strong><a href="http://inspire.ec.europa.eu/codelist/WRBSpecifierValue">WRBSpecifierValue</a></strong></td>
+<td>List of possible specifiers, comprising only the values specified in the World Reference Base for Soil Resources 2006, first update 2007.</td>
+</tr>
+</tbody>
+</table>
+<p>These code-lists are all available on-line through a <a href="https://ec.europa.eu/isa2/solutions/re3gistry_en/">r3gistry</a> instance. Each item in these code-lists is a dereferenceable by URI.</p>
+<p>Four of these lists are extensible, those expressing properties associated with the different features of interest. They are designed to serve as umbrella structures for further specialisation according to local practices. Extension is made in an hierarchical fashion, meaning that each additional item must be a narrower definition of one of the existing items.</p>
+<p>Besides these curated code-lists, the INSPIRE domain model also creates space for code-lists of physio-chemical procedures of soil analysis. These are to be referenced from the Observation instances related to the properties referred above.</p>
+<p>There is no practical guidance in the Technical Guidelines document on how to extend or create new code-lists towards INSPIRE compliance. This document provides broad guidelines on how to do so with the <a href="https://www.w3.org/2004/02/skos/">Simple Knowledge Organisation System</a> (SKOS), described ahead.</p>
+</section>
+<section id="glosis" class="level2">
+<h2 class="anchored" data-anchor-id="glosis">GloSIS</h2>
+<p>The <a href="https://github.com/rapw3k/glosis">GloSIS web ontology</a> includes a large range of code-lists that are relevant within the INSPIRE context. GloSIS follows the pattern of the <a href="https://www.w3.org/TR/vocab-ssn/">Sensor, Observation, Sample, and Actuator</a> (SOSA) ontology, which is the Semantic Web counterpart of the <a href="https://www.ogc.org/standards/om">Observations &amp; Measurements</a> standard (O&amp;M). These code-lists are expressed with SKOS.</p>
+<p>The GloSIS code-lists spread along four main categories:</p>
+<ul>
+<li>Values meeting <strong>Descriptive</strong> properties (FAO Guidelines of Soil Description):
+<ul>
+<li>Site/Plot (40)</li>
+<li>Layer/Profile (90)</li>
+<li>Surface (5)</li>
+</ul></li>
+<li><strong>Physio-chemical</strong> properties (circa 80 items)</li>
+<li><strong>Procedures</strong> of physio-chemical analysis (circa 230 items).</li>
+</ul>
+<p>Code-lists in GloSIS are gathered in a <a href="https://rapw3k.github.io/glosis/docs/glosis-cl-doc/index-en.html">generic module</a>. With physio-chemical analysis procedures in a <a href="https://rapw3k.github.io/glosis/docs/glosis-pc-doc/index-en.html">specific module</a>.</p>
+</section>
+<section id="extending-code-lists" class="level2">
+<h2 class="anchored" data-anchor-id="extending-code-lists">Extending code-lists</h2>
+<section id="skos" class="level3">
+<h3 class="anchored" data-anchor-id="skos">SKOS</h3>
+<p>The SKOS ontology is remarkably simple, actually one of its strengths. At its core are five primitives:</p>
+<ul>
+<li><p><strong>Concept</strong> - a unit of thought, an idea, a meaning, a category or an object. Concepts are identified with URIs.</p></li>
+<li><p><strong>Label</strong> - a lexical string used to annotate a concept. The same concept may be annotated in different natural languages.</p></li>
+<li><p><strong>Relation</strong> - a semantic association between two concepts, conveying hierarchy or simply connecting concepts in a network.</p></li>
+<li><p><strong>Scheme</strong> - an aggregator of related concepts, usually forming a hierarchy.</p></li>
+<li><p><strong>Note</strong> - provides further semantics or definition to a concept. Often used to associate a concept to other knowledge graphs or other external resources.</p></li>
+</ul>
+<p>The listing below presents an item from the GloSIS code-list for <a href="http://w3id.org/glosis/model/codelists#CropClassValueCode">crop classes</a>. Its URI is <a href="http://w3id.org/glosis/model/codelists#cropClassValueCode-Ce_Ba">http://w3id.org/glosis/model/codelists#cropClassValueCode-Ce_Ba</a>, abbreviated with the Turtle syntax to <code>glosis_cl:cropClassValueCode-Ce_Ba</code>. The label for this item is “Barley” in the English language, an annotation also indicates its short notation: “Ce_Ba”. Two object properties provide semantic associations, this item is a narrower definition of the <code>glosis_cl:cropClassValueCode-Ce</code> item (the “Cereals” concept), and is part of the scheme <code>glosis_cl:cropClassValueCode</code>.</p>
+<pre class="turtle"><code>@prefix skos:  &lt;http://www.w3.org/2004/02/skos/core#&gt; .
+@prefix glosis_cl: &lt;http://w3id.org/glosis/model/codelists#&gt; .
+
+glosis_cl:cropClassValueCode-Ce_Ba a skos:Concept, glosis_cl:CropClassValueCode;
+        skos:prefLabel "Barley"@en ;
+        skos:notation "Ce_Ba" ;
+        skos:inScheme glosis_cl:cropClassValueCode ;
+        skos:broader glosis_cl:cropClassValueCode-Ce .</code></pre>
+<p>The next listing shows the scheme integrating the “Barley” concept above. This object is very similar, with a label providing its name and some notes adding further definition. The literal “table 9” indicates the source of this code-list within the FAO Guidelines for Soil Description.</p>
+<pre class="turtle"><code>@prefix rdfs:  &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix skos:  &lt;http://www.w3.org/2004/02/skos/core#&gt; .
+@prefix glosis_cl: &lt;http://w3id.org/glosis/model/codelists#&gt; .
+
+glosis_cl:cropClassValueCode a skos:ConceptScheme ;
+        skos:prefLabel "Code list for CropClassValue - codelist scheme"@en;
+        rdfs:label "Code list for CropClassValue - codelist scheme"@en;
+        skos:note "This  code list provides the CropClassValue."@en;
+        skos:definition "table 9" ;
+        rdfs:seeAlso glosis_cl:CropClassValueCode .</code></pre>
+<p>Using this simple pattern, a hierarchical code-list can be developed further simply using the predicates <code>skos:inScheme</code>, <code>skos:broader</code> and <code>skos:narrower</code>. The predicates <code>skos:topConceptOf</code> and <code>skos:hasTopConcept</code> can be further used to indicate the root items in a concept hierarchy.</p>
+</section>
+<section id="extend-an-inspire-code-list-with-skos" class="level3">
+<h3 class="anchored" data-anchor-id="extend-an-inspire-code-list-with-skos">Extend an INSPIRE code-list with SKOS</h3>
+<p>Suppose you intend to publish results of chemical analyses appraising the Zinc content of the soil. The INSPIRE code-lists do not presently include that metal as property, therefore an additional code-list item must be created.</p>
+<p>The first action is to identify in which code-list the item should be added. Physio-chemical properties like Zinc content appear associated with the Horizon or Layer class in soil ontologies, thus the appropriate code-list is <a href="http://inspire.ec.europa.eu/codelist/ProfileElementParameterNameValue">ProfileElementParameterNameValue</a>. Open that URI in your browser an go through the respective <code>r3gistry</code> record.</p>
+<p>At the bottom of the page <code>r3gistry</code> lists the items for this code-list, in this case they are <a href="http://inspire.ec.europa.eu/codelist/ProfileElementParameterNameValue/biologicalParameter">biological parameter</a>, <a href="http://inspire.ec.europa.eu/codelist/ProfileElementParameterNameValue/chemicalParameter">chemical parameter</a> and <a href="http://inspire.ec.europa.eu/codelist/ProfileElementParameterNameValue/physicalParameter">physical parameter</a>. Follow the URI to the chemical parameter, in that page there is another list of items, including other metals. The new item for Zinc should therefore be created at this same level in the hierarchy.</p>
+<p>The list below presents a RDF document defining a new sub-item for Zinc within the physical parameter code-list. The URI for this item is <code>http://example.com/my-soil/zincContent</code>. As this item is not directly in a INSPIRE code-list, its URI must refer to an authority that you control, i.e.&nbsp;you or your institution are the responsible party for the code-list item, its definition and publication. For more on this, check the <a href="../cookbook/uri.html">URI strategy</a> document.</p>
+<pre class="turtle"><code>@prefix skos: &lt;http://www.w3.org/2004/02/skos/core#&gt; .
+@prefix inspire_cl_profile: &lt;http://inspire.ec.europa.eu/codelist/ProfileElementParameterNameValue/&gt; .
+@prefix glosis_cl: &lt;http://w3id.org/glosis/model/codelists#&gt; .
+@prefix my_soil: &lt;http://example.com/my-soil/&gt; . 
+
+my_soil:zincContent a skos:Concept;
+        skos:prefLabel "Zinc content"@en ;
+        skos:definition "Zinc content of the soil within a profile element." ;
+        skos:broader inspire_cl_profile:physicalParameter ;
+        skos:inScheme inspire_cl_profile: ;
+        skos:related glosis_cl:physioChemicalPropertyCode-Zin .</code></pre>
+<p>The RDF above contains the basic SKOS elements: a Concept instance, a label, an annotation defining the concept and a reference to the parent item with the <code>skos:broader</code> code-list. The last two triples need a closer look. The item is declared as belonging to a Scheme with the URI <code>http://inspire.ec.europa.eu/codelist/ProfileElementParameterNameValue/</code>. While the later is not actually declared as such in <code>r3gistry</code>, it is still important to convey the nature of this item as part of a structured INSPIRE code-list. Finally, the <code>skos:related</code> predicated is employed to refer a similar property in the GloSIS web ontology. This last triple is not at all mandatory, but provides another dimension to the code-list item.</p>
+</section>
+<section id="extend-a-glosis-code-list" class="level3">
+<h3 class="anchored" data-anchor-id="extend-a-glosis-code-list">Extend a GloSIS code-list</h3>
+<p>The GloSIS web ontology becomes particularly relevant in the sections of the INSPIRE domain model for which code-lists do not yet exist. A prominent case is the list of laboratory procedures to assess physico-chemical properties. As mentioned above, GloSIS includes a specific module for procedures.</p>
+<p>The listing below presents a RDF document with an extra item for the soil texture procedures code list (SKOS scheme <code>glosis_proc:textProcedure</code>). Compared to the previous example, the most remarkable aspect here is the declaration of a <code>glosis_proc:TextProcedure</code> instance. The latter is a sub-class of the SOSA Procedure class, making the bridge to the Observation instances declared in other GloSIS modules.</p>
+<pre class="turtle"><code>@prefix skos: &lt;http://www.w3.org/2004/02/skos/core#&gt; .
+@prefix glosis_proc: &lt;http://w3id.org/glosis/model/procedure#&gt; .
+@prefix my_soil: &lt;http://example.com/my-soil/&gt; . 
+
+my_soil:textureProcedure-SaSiCl_5-50-2000u a skos:Concept, glosis_proc:TextureProcedure ;
+    skos:inScheme glosis_proc:textProcedure ;
+    skos:topConceptOf glosis_proc:textureProcedure ;
+    skos:prefLabel "SaSiCl_5-50-2000u"@en ;
+    skos:notation "SaSiCl_5-50-2000u" ;
+    skos:definition "Sand, silt and clay fractions as used in my country (5-50-2000um)" .</code></pre>
+<p>The remaining triples should all be familiar by now. The link to the SKOS scheme is made with the <code>skos:inScheme</code> and <code>skos:topConceptOf</code> predicates. Then come the annotations.</p>
+</section>
+<section id="create-a-new-code-list" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-new-code-list">Create a new code-list</h3>
+<p>INSPIRE and GloSIS cover quite a good deal of ground with their code-lists. However, there might be circumstances where you may require an entire new code-list to express a domain property specific to your institution or dataset.</p>
+<p>The examples above already provide the necessary to build a code-list on your own. In summary, these are the steps:</p>
+<ol type="1">
+<li><p>Devise a URI policy, encompassing the code-list and its items.</p></li>
+<li><p>Create a Scheme instance to aggregate the code-list items. The Scheme provides a URI and annotation for the code-list.</p></li>
+<li><p>Add in the top Concept instances with the predicates <code>skos:inScheme</code>, <code>skos:topConceptOf</code> and <code>skos:hasTopConcept</code>.</p></li>
+<li><p>If necessary, add in narrower terms forming a hierarchy with <code>skos:broader</code> and <code>skos:narrower</code>.</p></li>
+<li><p>Link items to similar concepts in other ontologies or vocabularies if possible.</p></li>
+</ol>
+</section>
+</section>
+<section id="publishing-your-own-code-list-items" class="level2">
+<h2 class="anchored" data-anchor-id="publishing-your-own-code-list-items">Publishing your own code-list items</h2>
+<p>Now that you extended or even created a new code-list the next step is to publish it on-line. There are three essentials ways of doing so, briefly described below.</p>
+<ol type="1">
+<li><p><strong>A simple on-line RDF file</strong>. Save the items or code-list as a RDF document and deploy it to a web server. Fairly easy, but not the most user friendly.</p></li>
+<li><p><strong>A knowledge graph deployed to a triple store</strong>. Load the RDF document to a triple store or directly create the code-list triples with SPARQL queries. Triple stores usually provide end-points for interaction with SPARQL queries and other mechanisms that facilitate user access/view of the code-list. <a href="../cookbook/virtuoso.html">Virtuoso</a> is a triple store providing these functionalities.</p></li>
+<li><p><strong>A <a href="../cookbook/virtuoso.html">SKOSMOS</a> instance</strong>. Load the code-list triples into a triple store and then link it to a <a href="../cookbook/virtuoso.html">SKOSMOS</a> instance. This software leverages the SKOS ontology to presnnt code-lists in a user friendly, browsable complex of HTML pages.</p></li>
+</ol>
+<section id="dereferenceable-uris" class="level3">
+<h3 class="anchored" data-anchor-id="dereferenceable-uris">Dereferenceable URIs</h3>
+<p>When publishing a code-list, it is important to facilitate the resolution of the respective URIs. This promotes accessibility and use of the code-list. With a simple deployment to a web server, the hypothetical URI used above: <code>http://example.com/my-soil</code> can point directly to the RDF file. In this case it is customary the use of the hash character (<code>#</code>) to distinguish different resources within the same file. E.g. <code>http://example.com/my-soil#zincContent</code> for the Zinc item.</p>
+<p>With more advanced software like SKOSMOS, a mid-layer mechanism is necessary to translate the URIs declared in the RDF into the corresponding pages or services. More about this topic in the <a href="../identification.html">Identification</a> document.</p>
+</section>
+</section>
+<section id="read-more" class="level2">
+<h2 class="anchored" data-anchor-id="read-more">Read more</h2>
+<p>At the masterclass edition 2023 Luis de Sousa presented an approach to extend codelists based on SKOS.</p>
+<iframe title="Extend codelists using SKOS" width="560" height="315" src="https://wur.yuja.com/V/Video?v=433006&amp;node=1952642&amp;a=176575180" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" loading="lazy">
+</iframe>
+<p>In <a href="https://wetransform.to/news-and-events/inspire-codelists/">this article</a> Wetransform explains how and which INSPIRE codelists can be extended. Either the UML model and/or the INSPIRE registry indicate if a codelist is extensible.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../about.html">About</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../license.html">License</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://cordis.europa.eu/project/id/862695"><img style="width:80px;margin:5px 0px" src="https://ejpsoil.eu/fileadmin/_processed_/0/3/csm_Horizon_2020_funding_Thumbnail_a20cd538b7.jpg"></a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

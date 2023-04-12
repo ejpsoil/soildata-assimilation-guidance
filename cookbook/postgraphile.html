@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Soil data guidance – index</title>
+<title>Soil data guidance – postgraphile</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -134,137 +134,49 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#masterclass-on-soil-data-assimilation" id="toc-masterclass-on-soil-data-assimilation" class="nav-link active" data-scroll-target="#masterclass-on-soil-data-assimilation">Masterclass on Soil Data Assimilation</a>
+  <li><a href="#graphql-with-postgraphile" id="toc-graphql-with-postgraphile" class="nav-link active" data-scroll-target="#graphql-with-postgraphile">GraphQL with Postgraphile</a>
   <ul class="collapse">
-  <li><a href="#program-times-in-cet" id="toc-program-times-in-cet" class="nav-link" data-scroll-target="#program-times-in-cet">Program (times in CET)</a>
-  <ul class="collapse">
-  <li><a href="#th-of-january" id="toc-th-of-january" class="nav-link" data-scroll-target="#th-of-january">24th of january</a></li>
-  <li><a href="#th-of-january-1" id="toc-th-of-january-1" class="nav-link" data-scroll-target="#th-of-january-1">25th of january</a></li>
-  <li><a href="#th-of-january-2" id="toc-th-of-january-2" class="nav-link" data-scroll-target="#th-of-january-2">26th of january</a></li>
-  </ul></li>
+  <li><a href="#postgraphile" id="toc-postgraphile" class="nav-link" data-scroll-target="#postgraphile">Postgraphile</a></li>
+  <li><a href="#load-some-data-into-the-database" id="toc-load-some-data-into-the-database" class="nav-link" data-scroll-target="#load-some-data-into-the-database">Load some data into the database</a></li>
+  <li><a href="#configure-the-service" id="toc-configure-the-service" class="nav-link" data-scroll-target="#configure-the-service">Configure the service</a></li>
+  <li><a href="#query-a-graphql-endpoint" id="toc-query-a-graphql-endpoint" class="nav-link" data-scroll-target="#query-a-graphql-endpoint">Query a GraphQL endpoint</a></li>
+  <li><a href="#read-more" id="toc-read-more" class="nav-link" data-scroll-target="#read-more">Read more</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/masterclass/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/cookbook/postgraphile.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
 
-<section id="masterclass-on-soil-data-assimilation" class="level1">
-<h1>Masterclass on Soil Data Assimilation</h1>
-<p>At 24-26 january 2023 <a href="https://www.wur.nl/en/research-results/research-institutes/environmental-research.htm">Wageningen Environmental Research</a> and <a href="https://www.isric.org">ISRIC - World Soil Information</a> has organised a masterclass on Soil Data Assimilation. This masterclass was a follow up of the <a href="../masterclass/edition-2022.html">Training on INSPIRE Good Practices around Soil Data</a> held in april 2022.</p>
-<section id="program-times-in-cet" class="level2">
-<h2 class="anchored" data-anchor-id="program-times-in-cet">Program (times in CET)</h2>
-<section id="th-of-january" class="level3">
-<h3 class="anchored" data-anchor-id="th-of-january">24th of january</h3>
-<table class="table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Building Gaia; Meeting room 2</th>
-<th>Video</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>10.00</td>
-<td>Introduction to data assimilation (harmonization; extension; codelists) - Paul van Genuchten, Jandirk Bulens</td>
-<td><a href="https://wur.yuja.com/V/Video?v=430847&amp;node=1937918&amp;a=83533229&amp;autoplay=1">video</a></td>
-</tr>
-<tr class="even">
-<td>11:00</td>
-<td>INSPIRE Tools - Paul van Genuchten</td>
-<td><a href="https://wur.yuja.com/V/Video?v=430878&amp;node=1938063&amp;a=187273784&amp;autoplay=1">video</a></td>
-</tr>
-<tr class="odd">
-<td>12:00</td>
-<td>Skosmos (code lists) - Paul van Genuchten</td>
-<td><a href="https://wur.yuja.com/V/Video?v=430881&amp;node=1938074&amp;a=143339043&amp;autoplay=1">video</a></td>
-</tr>
-<tr class="even">
-<td>14:30</td>
-<td>Soil model in Geopackage - Stefania Morrone</td>
-<td><a href="https://wur.yuja.com/V/Video?v=430869&amp;node=1938006&amp;a=184498297&amp;autoplay=1">video</a></td>
-</tr>
-</tbody>
-</table>
+<section id="graphql-with-postgraphile" class="level1">
+<h1>GraphQL with Postgraphile</h1>
+<p><em>Status: in progress</em></p>
+<p><a href="https://graphql.org">GraphQL</a> is a de-facto standard for self describing API’s on hierarchical data. Graphql provides via its API specification capabilities to query datasets using filters, but also indicate which properties to be returned alongside with proper pagination. The GraphQL website provides a <a href="https://graphql.org/graphql">quick start on Graphql</a> based on NodeJS.</p>
+<p>GraphQL is currently not endorsed as an INSPIRE Good Practice, but it fits many aspects of an INSPIRE download service. GraphQL is a good fit to disseminate measurement and observation data from soil profiles.</p>
+<p>At ISRIC we use GraphQL (along WMS/WFS) to disseminate the <a href="https://www.isric.org/explore/wosis">WOSIS soil profile database</a>.</p>
+<section id="postgraphile" class="level2">
+<h2 class="anchored" data-anchor-id="postgraphile">Postgraphile</h2>
+<p><a href="https://www.graphile.org/postgraphile/">Postgraphile</a> is a NodeJS server application which creates a GraphQL API on any postgres database. Besides being totally compatible with PostgreSQL it also supports PostGIS and therefore it can easily work as a <a href="https://github.com/lcalisto/workshop-spatial-graphql">Spatial GraphQL API</a>.</p>
 </section>
-<section id="th-of-january-1" class="level3">
-<h3 class="anchored" data-anchor-id="th-of-january-1">25th of january</h3>
-<table class="table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Lumen 2 meeting room</th>
-<th>Video</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>9.00</td>
-<td>Introduction to View and download services</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-view-download">video</a></td>
-</tr>
-<tr class="even">
-<td>10.00</td>
-<td>Sensorthings API - Kathi Schleidt, Hylke van der Schaaf</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-sta">video</a></td>
-</tr>
-<tr class="odd">
-<td>13:45</td>
-<td>WCS - Kathi Schleidt, Peter Baumann</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-wcs">video</a></td>
-</tr>
-<tr class="even">
-<td>14:30</td>
-<td>geopython (pygeoapi, pygeometa, pycsw) - Tom Kralidis, Luis de Sousa</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-geopython">video</a></td>
-</tr>
-</tbody>
-</table>
+<section id="load-some-data-into-the-database" class="level2">
+<h2 class="anchored" data-anchor-id="load-some-data-into-the-database">Load some data into the database</h2>
 </section>
-<section id="th-of-january-2" class="level3">
-<h3 class="anchored" data-anchor-id="th-of-january-2">26th of january</h3>
-<table class="table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Gaia 2 meeting room</th>
-<th>Video</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>9.00</td>
-<td>Introduction to Metadata and discovery</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-metadata">vido</a></td>
-</tr>
-<tr class="even">
-<td>10:00</td>
-<td>deegree webservices intro and Q&amp;A - Torsten Friebe</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-deegree">video</a></td>
-</tr>
-<tr class="odd">
-<td>10:30</td>
-<td>MapServer intro and Q&amp;A - Seth G</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-mapserver">video</a></td>
-</tr>
-<tr class="even">
-<td>11:00</td>
-<td>Extending Codelists - Luis de Sousa</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-codelists">video</a></td>
-</tr>
-<tr class="odd">
-<td>14.00</td>
-<td>Hale Studio - Kate Lyndegaard</td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<section id="configure-the-service" class="level2">
+<h2 class="anchored" data-anchor-id="configure-the-service">Configure the service</h2>
+</section>
+<section id="query-a-graphql-endpoint" class="level2">
+<h2 class="anchored" data-anchor-id="query-a-graphql-endpoint">Query a GraphQL endpoint</h2>
+</section>
+<section id="read-more" class="level2">
+<h2 class="anchored" data-anchor-id="read-more">Read more</h2>
+<ul>
+<li><a href="https://www.graphile.org/postgraphile">postgraphile</a></li>
+<li><a href="https://github.com/lcalisto/workshop-spatial-graphql">workshop</a></li>
+</ul>
 
 
-</section>
 </section>
 </section>
 

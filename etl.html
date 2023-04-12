@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2022-11-10">
 
-<title>Soil data guidance - Introduction</title>
+<title>Soil data guidance - Data Standardisation (vector data)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page">
+    <a class="nav-link" href="./index.html">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -89,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Identification</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./etl.html">
+    <a class="nav-link active" href="./etl.html" aria-current="page">
  <span class="menu-text">Harmonization</span></a>
   </li>  
   <li class="nav-item">
@@ -135,20 +135,21 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
+  <li><a href="#data-standardisation-vector-data" id="toc-data-standardisation-vector-data" class="nav-link active" data-scroll-target="#data-standardisation-vector-data">Data Standardisation (vector data)</a>
   <ul class="collapse">
-  <li><a href="#organisation-of-the-articles" id="toc-organisation-of-the-articles" class="nav-link" data-scroll-target="#organisation-of-the-articles">Organisation of the articles</a></li>
-  <li><a href="#reading-guide" id="toc-reading-guide" class="nav-link" data-scroll-target="#reading-guide">Reading guide</a></li>
+  <li><a href="#minimal" id="toc-minimal" class="nav-link" data-scroll-target="#minimal">Minimal</a></li>
+  <li><a href="#traditional" id="toc-traditional" class="nav-link" data-scroll-target="#traditional">Traditional</a></li>
+  <li><a href="#experimental" id="toc-experimental" class="nav-link" data-scroll-target="#experimental">Experimental</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/etl.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Introduction</h1>
+<h1 class="title">Data Standardisation (vector data)</h1>
 </div>
 
 
@@ -175,71 +176,105 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
-<p>This WIKI is a collaborative effort to collect and describe hands-on good practices on data assimilation and dissemination in the <a href="https://agrovoc.fao.org/browse/agrovoc/en/page/c_7156">Soil</a> domain, with a focus on Europe. The <a href="https://inspire.ec.europa.eu/">INSPIRE</a> directive has been and is an important effort for standardisation in the environmental data domain, therefore this WIKI has a lot of links to INSPIRE sources. Because INSPIRE adopts industry standards, this WIKI does reference common standards from ISO, Open Geospatial Consortium, Global Soils Partnership, IANA and W3C, giving it a global relevance.</p>
-<p>The term <code>data assimilation</code> has been chosen by the autors as an alternative to the terms harmonisation and standardisation, which already have a specific meaning in the soil domain:</p>
-<ul>
-<li><code>standardisation</code>; aligning soil data to a common model, using common codelists.</li>
-<li><code>harmonisation</code>; transforming results from observations and measurements to values as if all results for a property are measured using the same procedure, by applying so called <a href="https://en.wikipedia.org/wiki/Pedotransfer_function">Pedotransfer Functions (PTF)</a>.</li>
-</ul>
-<p>The process of assimilation also aims to capture additional aspects, such as finding, downloading and using the data. Most of these aspects are also well described as part of the <a href="https://www.go-fair.org/fair-principles/">FAIR principles</a>.</p>
-<ul>
-<li>Findable, provide relevant metadata via online portals</li>
-<li>Accessible, make the data available as download or API</li>
-<li>Interoperable, adopt common data models and code lists</li>
-<li>Reusable, add documentation and provide tools to reuse the data</li>
-</ul>
-<section id="organisation-of-the-articles" class="level2">
-<h2 class="anchored" data-anchor-id="organisation-of-the-articles">Organisation of the articles</h2>
-<p><a href="https://www.isric.org/index.php/utilise/community-practice">Toner et al, 2022</a> identified 6 steps in a typical soil information workflow from a data producer perspective and a separate category for the data user perspective. These steps form a relevant categorisation of the articles in this wiki. Much of the articles apply to the categories:</p>
-<ul>
-<li><a href="./data-organisation.html">4) Data organisation</a></li>
-<li><a href="./data-sharing.html">6) data and info sharing</a></li>
-<li><a href="./consumer.html">7) Soil Information User Consideration</a></li>
-</ul>
-<p>We’ve labeled each of the articles as to which step in the workflow they apply.</p>
+<section id="data-standardisation-vector-data" class="level1">
+<h1>Data Standardisation (vector data)</h1>
+<p>Data Standardisation is an aspect of step <code>4) data organization</code> in the <a href="https://www.isric.org/index.php/utilise/community-practice">soil information workflow</a>.</p>
+<p>Data standardisation is the process of aligning one or more datasets to a common (standardised) data model. For the soil domain, <a href="https://www.iso.org/obp/ui/#iso:std:iso:28258:ed-1:v1:en">ISO 28258:2013 Soil quality — Digital exchange of soil-related data</a> is a standardised conceptual model which has been developed by the soil community to facilitate the capture of soil plot and profile data. The core of the model is the <a href="https://www.ogc.org/standard/om/">Observations and Measurements</a> model of the Open Geospatial Community. The ISO28258 model has proven to be generic to capture a lot of soil data use cases, and facilitates interoperability with partners.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://www.isric.org/sites/default/files/Soil%20information%20workflow_circular_notext.jpg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Soil information workflow</figcaption><p></p>
+<p><img src="https://52north.github.io/sensor-web-tutorial/images/om1.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Observations and Measurements</figcaption><p></p>
 </figure>
 </div>
-<p>This wiki lists a series of options for publishing data according to the Technical Guidelines and/or the Good Practices dedicated to use cases from the Soil domain. For each option recipes on various technologies are provided. The practices are categorized at 3 levels:</p>
+<p>These days various encodings of the ISO28258 conceptual model are available - A xml/xsd oriented model - A relational model (<a href="https://iso28258.isric.org">PostGreSQL</a>) - A semantic web ontology, called <a href="http://w3id.org/glosis/model">GLOSIS Web Ontology</a></p>
+<p>During implantation of ISO28258 limitations of the model are likely to be discovered related to the local Use Cases. These limitations can usually be bypassed by extending the model. In recent years some extensions to ISO28258 have been published, which could be relevant to the your cases. Examples are <a href="https://www.fao.org/global-soil-partnership/areas-of-work/soil-information-and-data/en/">GLOSIS domain model</a> and the <a href="https://inspire.ec.europa.eu/id/document/tg/so">INSPIRE Soil data model</a>. <a href="https://github.com/INSPIRE-MIF/technical-guidelines/blob/2022.2/data/so/dataspecification_so.adoc#soil-data-model-extensions-informative">Annex D of TG Soil</a> has a specific example on extending the model for a soil contamination use case. Options for model extensions vary per technology. Wetransform has a <a href="http://inspire-extensions.wetransform.to">dedicated section on model extension</a> on their website, based on an <a href="https://www.geonovum.nl/uploads/documents/20161121-INSPIRE-Extensions.pdf">R&amp;D project</a> from 2016.</p>
+<p>An important activity related to Standardisation is the adoption of common code lists and extending those lists to capture regional conventions. The role of code lists is explained in a dedicated <a href="./codelists.html">codelists section</a>.</p>
+<p>If you missed the initial EJP Training on Soil data good practices, you can still have a look at <a href="https://wur.yuja.com/V/Video?v=195126&amp;node=829569&amp;a=1133213006&amp;autoplay=1">a presentation about vector data standardisation</a>.</p>
+<p>This document lists various implementation options for data Standardisation.</p>
+<section id="minimal" class="level2">
+<h2 class="anchored" data-anchor-id="minimal">Minimal</h2>
+<p>The <a href="https://github.com/INSPIRE-MIF/gp-geopackage-encodings">good practice on GeoPackage</a> describes a relational database format to share standardised data. <a href="https://www.geopackage.org/">GeoPackage</a> is a standardised format for storing relational data by the Open Geospatial Consorium, building on the SQLite database specification. Becuase many soil data is stored in the form of relational databases, the transformation to GeoPackage is relatively easy. The transformation process could for example be triggered by a series of database queries within a GIS Desktop client such as QGIS, in Python scripts or an ETL tool such as Hale Studio or FME.</p>
+<p>Pro’s and Con’s:</p>
 <ul>
-<li>Minimal, based on a minimal effort</li>
-<li>Traditional, following initial technical guidelines</li>
-<li>Experimental, following recent and upcoming good practices</li>
+<li>The GeoPackage format is easy to consume by average users.</li>
+<li>To capture the hierarchical structure of the INSPIRE datamodels, a lot of tables are needed, resulting in a complex data-model.</li>
+<li>The good practice is recent, so not a lot of community experience is available yet</li>
+<li>Users download a full dataset, no (filering) api’s are defined for GeoPackages yet</li>
 </ul>
-<p>The practices cover 7 topics.</p>
-<ul>
-<li><a href="./identification.html">Identification and namespaces</a></li>
-<li><a href="./etl.html">Data harmonization</a></li>
-<li><a href="./codelists.html">Code lists</a></li>
-<li><a href="./metadata.html">Metadata and Discovery</a></li>
-<li><a href="./view.html">View services</a></li>
-<li><a href="./download.html">Download services</a></li>
-<li><a href="./QOS.html">Quality of service</a></li>
-</ul>
-<p>!!! info</p>
-<pre><code>Disclaimer: References to products and approaches are examples. We do not aim to provide a complete listing, nor endorse a specific technology or service provider. Please consult any alternative software provider to what extent INSPIRE is supported in their products. In that scenario consider to contribute your experiences to this WIKI. </code></pre>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Cookbook</th>
+<th>Software</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="./cookbook/glosis-db.html">INSPIRE in a relational database</a></td>
+<td><a href="https://www.geopackage.org">Geopackage</a></td>
+<td>Standardise soil data using GeoPackage</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="reading-guide" class="level2">
-<h2 class="anchored" data-anchor-id="reading-guide">Reading guide</h2>
-<p>While reading the vast amount of recipes in this cookbook you may realize; if there are so many options, how are the differences between the implementations bridged. - Some implementation options differ in technology, but generate a similar result - Some options actually need some bridging before data can be combined, but the number of bridges is limited (and could also be bridged by intermediaries) - All options share some basic principles, such as identifier persistence and adoption of common codelists, which make any option beneficial</p>
-<p>When selecting one of the available options, consider the following aspects:</p>
-<ul>
-<li>The minimal implementation will have limitations for end users (for example having to download the full dataset, if they are only interested in a small section). On the other hand, minimal implementations tend to be less complex in setup which makes understanding the implementation easier.</li>
-<li>The traditional implementations have the most active users, so dedicated documentation and tooling is available with high Technical Readiness Level (TRL). However, some technologies are based on conventions of almost 20 years ago. These conventions are outdated, compared to current IT practices.</li>
-<li>An experimental approach brings the risk of incomplete documentation and tools. Also there is less evidence on usability. But it does give opportunity to use current technologies and engage with the community to design the next iteration of data sharing.</li>
-</ul>
-<p>Before selecting an option evaluate the following aspects in your organization.</p>
-<ul>
-<li>What are current IT tools and conventions used in the organization to understand which of the approaches fits best with the current knowledge and experience</li>
-<li>Combine an implementation of INSPIRE with business cases that generate direct benefit for your organization or partners. For example, adoption of the open data directive, better documentation and reporting of service levels, improved archival of data, discoverability on search engines.</li>
-<li>Assess the projected audience. Verify that the complexity and nature of the implementation matches with the expectations and capabilities of that audience.</li>
-</ul>
-<p>We recommend to start with a minimal implementation and validate it with the provided <a href="https://ejpsoil.github.io/soildata-assimilation-guidance/QOS/">compliance test tooling</a>. From there, extend the implementation while continuing the tests with each iteration. With such an you are able to focus on the important aspects and prevent caveats early on in the process.</p>
+<section id="traditional" class="level2">
+<h2 class="anchored" data-anchor-id="traditional">Traditional</h2>
+<p>Tools like Hale Studio and FME are typically used to configure a conversion from data in a relational data model to data in a GML based INSPIRE model. The output is a big GML file which can be published using a WFS server or Atom download service. Below table links to detailed pages on various relevant technologies.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Cookbook</th>
+<th>Software</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="./cookbook/hale-studio.html">Hale Studio</a></td>
+<td><a href="https://wetransform.to/halestudio/">Hale Studio</a></td>
+<td>Humboldt Alignment Editor Studio is a Desktop tool to author ‘data alignments’.</td>
+</tr>
+<tr class="even">
+<td>-</td>
+<td><a href="https://www.safe.com/fme/">FME</a></td>
+<td>Feature Manipulation Engine is a visually oriented data integration platform</td>
+</tr>
+</tbody>
+</table>
+<p>You may not have considered before, but consuming a rich GML is not straight forward in common GIS clients like ArcGIS or QGIS. To consume a rich GML you need software which is able to traverse xml hierarchies and links. Tools like Hale Studio can also be used to read rich GML and convert it back to a relational database. Unfortunately you can not automatically reverse a ETL-configuration. But you can set up a new ETL configuration to read and transform the rich GML. A recipe is available which <a href="./cookbook/hale-studio-consume-gml.html">imports INSPIRE Soil GML from the city of Berlin and converts it to a relational database</a>.</p>
+</section>
+<section id="experimental" class="level2">
+<h2 class="anchored" data-anchor-id="experimental">Experimental</h2>
+<p>Alternative ETL procedures are based on Semantic Web technology. The INSPIRE community is <a href="https://inspire-eu-rdf.github.io/inspire-rdf-guidelines/">exploring various semantic web options</a>, but no good practice has been adopted yet.</p>
+<p>See also the <a href="https://wur.yuja.com/V/Video?v=184392&amp;node=785996&amp;a=2121794774&amp;autoplay=1">presenation about semantic web (GLOSIS)</a> from the 2022 EJP Soil training.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Product</th>
+<th>Software</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="./cookbook/tarql.html">Semantic Standardisation using TARQL</a></td>
+<td><a href="https://github.com/tarql/tarql">TARQL</a></td>
+<td>command-line tool for converting CSV files to RDF using SPARQL 1.1</td>
+</tr>
+<tr class="even">
+<td><a href="./cookbook/rml.html">Semantic mapping using YARRRML</a></td>
+<td><a href="https://rml.io/">RML mapper</a></td>
+<td>Human readable RDF mappings for RML.io</td>
+</tr>
+<tr class="odd">
+<td><a href="https://doi.org/10.15454/YJLFZI">Publish data through semantic web</a></td>
+<td><a href="https://www.yworks.com/products/yed">Yed</a> <a href="https://forgemia.inra.fr/anaee-dev/coby">Coby</a> <a href="https://blazegraph.com/">BlazeGraph</a></td>
+<td>Cookbook by INRAE on publishing soild data as RDF</td>
+</tr>
+</tbody>
+</table>
+<p>tarql</p>
 
 
 </section>

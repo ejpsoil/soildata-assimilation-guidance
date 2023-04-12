@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Soil data guidance – index</title>
+<title>Soil data guidance – dcat</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -134,137 +134,59 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#masterclass-on-soil-data-assimilation" id="toc-masterclass-on-soil-data-assimilation" class="nav-link active" data-scroll-target="#masterclass-on-soil-data-assimilation">Masterclass on Soil Data Assimilation</a>
+  <li><a href="#dcat" id="toc-dcat" class="nav-link active" data-scroll-target="#dcat">DCAT</a>
   <ul class="collapse">
-  <li><a href="#program-times-in-cet" id="toc-program-times-in-cet" class="nav-link" data-scroll-target="#program-times-in-cet">Program (times in CET)</a>
-  <ul class="collapse">
-  <li><a href="#th-of-january" id="toc-th-of-january" class="nav-link" data-scroll-target="#th-of-january">24th of january</a></li>
-  <li><a href="#th-of-january-1" id="toc-th-of-january-1" class="nav-link" data-scroll-target="#th-of-january-1">25th of january</a></li>
-  <li><a href="#th-of-january-2" id="toc-th-of-january-2" class="nav-link" data-scroll-target="#th-of-january-2">26th of january</a></li>
-  </ul></li>
+  <li><a href="#ontologies-used-in-dcat" id="toc-ontologies-used-in-dcat" class="nav-link" data-scroll-target="#ontologies-used-in-dcat">Ontologies used in DCAT</a></li>
+  <li><a href="#query-a-dcat-resource" id="toc-query-a-dcat-resource" class="nav-link" data-scroll-target="#query-a-dcat-resource">Query a DCAT resource</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/masterclass/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/cookbook/dcat.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
 
-<section id="masterclass-on-soil-data-assimilation" class="level1">
-<h1>Masterclass on Soil Data Assimilation</h1>
-<p>At 24-26 january 2023 <a href="https://www.wur.nl/en/research-results/research-institutes/environmental-research.htm">Wageningen Environmental Research</a> and <a href="https://www.isric.org">ISRIC - World Soil Information</a> has organised a masterclass on Soil Data Assimilation. This masterclass was a follow up of the <a href="../masterclass/edition-2022.html">Training on INSPIRE Good Practices around Soil Data</a> held in april 2022.</p>
-<section id="program-times-in-cet" class="level2">
-<h2 class="anchored" data-anchor-id="program-times-in-cet">Program (times in CET)</h2>
-<section id="th-of-january" class="level3">
-<h3 class="anchored" data-anchor-id="th-of-january">24th of january</h3>
-<table class="table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Building Gaia; Meeting room 2</th>
-<th>Video</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>10.00</td>
-<td>Introduction to data assimilation (harmonization; extension; codelists) - Paul van Genuchten, Jandirk Bulens</td>
-<td><a href="https://wur.yuja.com/V/Video?v=430847&amp;node=1937918&amp;a=83533229&amp;autoplay=1">video</a></td>
-</tr>
-<tr class="even">
-<td>11:00</td>
-<td>INSPIRE Tools - Paul van Genuchten</td>
-<td><a href="https://wur.yuja.com/V/Video?v=430878&amp;node=1938063&amp;a=187273784&amp;autoplay=1">video</a></td>
-</tr>
-<tr class="odd">
-<td>12:00</td>
-<td>Skosmos (code lists) - Paul van Genuchten</td>
-<td><a href="https://wur.yuja.com/V/Video?v=430881&amp;node=1938074&amp;a=143339043&amp;autoplay=1">video</a></td>
-</tr>
-<tr class="even">
-<td>14:30</td>
-<td>Soil model in Geopackage - Stefania Morrone</td>
-<td><a href="https://wur.yuja.com/V/Video?v=430869&amp;node=1938006&amp;a=184498297&amp;autoplay=1">video</a></td>
-</tr>
-</tbody>
-</table>
+<section id="dcat" class="level1">
+<h1>DCAT</h1>
+<p><a href="https://www.w3.org/ns/dcat">DCAT</a> is an ontology from W3C to describe datasets in the semantic web. It is supported by software such as CKAN, GeoNetwork. The <a href="">geodcat-ap</a> group has developed a specialisation of DCAT v1 to describe spatial datasets. Many of the conventions of geodcat-ap have been introduced in follow-up editions of DCAT (v2, v3).</p>
+<ul>
+<li>Standard: https://www.w3.org/ns/dcat</li>
+<li>GeoDCAT-AP: https://semiceu.github.io/GeoDCAT-AP</li>
+<li>Good Paractice: https://inspire.ec.europa.eu/good-practice/geodcat-ap</li>
+</ul>
+<section id="ontologies-used-in-dcat" class="level2">
+<h2 class="anchored" data-anchor-id="ontologies-used-in-dcat">Ontologies used in DCAT</h2>
+<p>DCAT makes use of other ontologies, following the best practices of the Semantic Web. They are all relevant to produce consistent and usable meta-data for the web.</p>
+<ul>
+<li><p><strong><a href="https://www.w3.org/TR/vcard-rdf/">vCard</a></strong>: For the description of People and Organisations according to the specification issued by the Internet Engineering Task Force (IETF) (<a href="https://www.rfc-editor.org/rfc/rfc6350">RFC6350</a>). Also considers addresses, communication means and inter-personal relations.</p></li>
+<li><p><strong><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/">Dublin Core</a></strong>: A small ontology implementing the fifteen element <a href="https://www.iso.org/standard/71339.html">ISO 15836-1:2017</a> standard for documentation meta-data. The ontology expands on the original Dublin Core with additional terms meant to facilitate meta-data creation and publication with RDF.</p></li>
+<li><p><strong><a href="https://www.w3.org/TR/prov-o/">PROV-O</a></strong>: An OWL translation of the <a href="http://www.w3.org/TR/2013/REC-prov-dm-20130430/">Prov Data Model</a> specified by the W3C. Provides a set of classes, properties, and restrictions that can be used to represent and interchange provenance information.</p></li>
+</ul>
 </section>
-<section id="th-of-january-1" class="level3">
-<h3 class="anchored" data-anchor-id="th-of-january-1">25th of january</h3>
-<table class="table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Lumen 2 meeting room</th>
-<th>Video</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>9.00</td>
-<td>Introduction to View and download services</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-view-download">video</a></td>
-</tr>
-<tr class="even">
-<td>10.00</td>
-<td>Sensorthings API - Kathi Schleidt, Hylke van der Schaaf</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-sta">video</a></td>
-</tr>
-<tr class="odd">
-<td>13:45</td>
-<td>WCS - Kathi Schleidt, Peter Baumann</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-wcs">video</a></td>
-</tr>
-<tr class="even">
-<td>14:30</td>
-<td>geopython (pygeoapi, pygeometa, pycsw) - Tom Kralidis, Luis de Sousa</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-geopython">video</a></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="th-of-january-2" class="level3">
-<h3 class="anchored" data-anchor-id="th-of-january-2">26th of january</h3>
-<table class="table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Gaia 2 meeting room</th>
-<th>Video</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>9.00</td>
-<td>Introduction to Metadata and discovery</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-metadata">vido</a></td>
-</tr>
-<tr class="even">
-<td>10:00</td>
-<td>deegree webservices intro and Q&amp;A - Torsten Friebe</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-deegree">video</a></td>
-</tr>
-<tr class="odd">
-<td>10:30</td>
-<td>MapServer intro and Q&amp;A - Seth G</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-mapserver">video</a></td>
-</tr>
-<tr class="even">
-<td>11:00</td>
-<td>Extending Codelists - Luis de Sousa</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-codelists">video</a></td>
-</tr>
-<tr class="odd">
-<td>14.00</td>
-<td>Hale Studio - Kate Lyndegaard</td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<section id="query-a-dcat-resource" class="level2">
+<h2 class="anchored" data-anchor-id="query-a-dcat-resource">Query a DCAT resource</h2>
+<p>The query below provides an example of how to interact with a knowledge graph of metadata making use of the DCAT ontology. It returns a list of datasets tagged with keywords containing the string “soil”. The data property <code>dcat:keyword</code> was originally meant exclusively for instances of the <code>dcat:Dataset</code> class, but since version 2 of the ontology it can be used with any class.</p>
+<ul>
+<li>Follow the <a href="../cookbook/virtuoso.html">virtuoso/skosmos</a> recipe up to step <code>On the linked data tab, select Quad store upload.</code> Instead of adding a remote url you unzip and upload a <a href="data/ngr.rdf.xml.zip">rdf snapshot of the dutch spatial catalogue</a>.</li>
+<li>Navigate to http://localhost:8890/sparql/ and run the query below.</li>
+</ul>
+<pre class="sparql"><code>PREFIX dcat: &lt;http://www.w3.org/ns/dcat#&gt;
+PREFIX dct: &lt;http://purl.org/dc/terms/&gt;
+
+SELECT ?dataset, ?title
+WHERE {
+    ?dataset a dcat:Dataset ;
+             dct:title ?title ;
+             dcat:keyword ?keyword .
+    FILTER CONTAINS(?keyword, "EIGEN") .
+}</code></pre>
+<p>The <code>CONTAINS</code> function in the query above is used to partially match the string. For an exact match the equals operator can be used instead (<code>=</code>). To match more than one keyword, successive <code>FILTER</code> clauses can be concatenated with the or operator (<code>||</code>).</p>
+<p>If at some point your database is corrupt, you can remove all triples by running:</p>
+<pre><code>DELETE FROM DB.DBA.RDF_QUAD ;</code></pre>
+<p>Colin Maundry provides some <a href="https://gist.github.com/ColinMaudry/fdc466383fdfd0dd24d2">dcat sample sparql queries</a>. Notice that you replace the graph url <code>http://www.data.maudry.com/uk</code> in the queries with yours.</p>
 
 
-</section>
 </section>
 </section>
 

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Soil data guidance – index</title>
+<title>Soil data guidance – geonetwork</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -134,137 +134,99 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#masterclass-on-soil-data-assimilation" id="toc-masterclass-on-soil-data-assimilation" class="nav-link active" data-scroll-target="#masterclass-on-soil-data-assimilation">Masterclass on Soil Data Assimilation</a>
+  <li><a href="#a-discovery-service-in-geonetwork" id="toc-a-discovery-service-in-geonetwork" class="nav-link active" data-scroll-target="#a-discovery-service-in-geonetwork">A discovery service in GeoNetwork</a>
   <ul class="collapse">
-  <li><a href="#program-times-in-cet" id="toc-program-times-in-cet" class="nav-link" data-scroll-target="#program-times-in-cet">Program (times in CET)</a>
-  <ul class="collapse">
-  <li><a href="#th-of-january" id="toc-th-of-january" class="nav-link" data-scroll-target="#th-of-january">24th of january</a></li>
-  <li><a href="#th-of-january-1" id="toc-th-of-january-1" class="nav-link" data-scroll-target="#th-of-january-1">25th of january</a></li>
-  <li><a href="#th-of-january-2" id="toc-th-of-january-2" class="nav-link" data-scroll-target="#th-of-january-2">26th of january</a></li>
-  </ul></li>
+  <li><a href="#schema-plugins" id="toc-schema-plugins" class="nav-link" data-scroll-target="#schema-plugins">Schema plugins</a></li>
+  <li><a href="#quick-start" id="toc-quick-start" class="nav-link" data-scroll-target="#quick-start">Quick Start</a></li>
+  <li><a href="#create-records" id="toc-create-records" class="nav-link" data-scroll-target="#create-records">Create records</a></li>
+  <li><a href="#harvest-records" id="toc-harvest-records" class="nav-link" data-scroll-target="#harvest-records">Harvest records</a></li>
+  <li><a href="#discovery-from-qgis" id="toc-discovery-from-qgis" class="nav-link" data-scroll-target="#discovery-from-qgis">Discovery from QGIS</a></li>
+  <li><a href="#atom-download-service-from-geonetwork" id="toc-atom-download-service-from-geonetwork" class="nav-link" data-scroll-target="#atom-download-service-from-geonetwork">Atom download service from GeoNetwork</a></li>
+  <li><a href="#read-more" id="toc-read-more" class="nav-link" data-scroll-target="#read-more">Read more</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/masterclass/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/cookbook/geonetwork.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
 
-<section id="masterclass-on-soil-data-assimilation" class="level1">
-<h1>Masterclass on Soil Data Assimilation</h1>
-<p>At 24-26 january 2023 <a href="https://www.wur.nl/en/research-results/research-institutes/environmental-research.htm">Wageningen Environmental Research</a> and <a href="https://www.isric.org">ISRIC - World Soil Information</a> has organised a masterclass on Soil Data Assimilation. This masterclass was a follow up of the <a href="../masterclass/edition-2022.html">Training on INSPIRE Good Practices around Soil Data</a> held in april 2022.</p>
-<section id="program-times-in-cet" class="level2">
-<h2 class="anchored" data-anchor-id="program-times-in-cet">Program (times in CET)</h2>
-<section id="th-of-january" class="level3">
-<h3 class="anchored" data-anchor-id="th-of-january">24th of january</h3>
-<table class="table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Building Gaia; Meeting room 2</th>
-<th>Video</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>10.00</td>
-<td>Introduction to data assimilation (harmonization; extension; codelists) - Paul van Genuchten, Jandirk Bulens</td>
-<td><a href="https://wur.yuja.com/V/Video?v=430847&amp;node=1937918&amp;a=83533229&amp;autoplay=1">video</a></td>
-</tr>
-<tr class="even">
-<td>11:00</td>
-<td>INSPIRE Tools - Paul van Genuchten</td>
-<td><a href="https://wur.yuja.com/V/Video?v=430878&amp;node=1938063&amp;a=187273784&amp;autoplay=1">video</a></td>
-</tr>
-<tr class="odd">
-<td>12:00</td>
-<td>Skosmos (code lists) - Paul van Genuchten</td>
-<td><a href="https://wur.yuja.com/V/Video?v=430881&amp;node=1938074&amp;a=143339043&amp;autoplay=1">video</a></td>
-</tr>
-<tr class="even">
-<td>14:30</td>
-<td>Soil model in Geopackage - Stefania Morrone</td>
-<td><a href="https://wur.yuja.com/V/Video?v=430869&amp;node=1938006&amp;a=184498297&amp;autoplay=1">video</a></td>
-</tr>
-</tbody>
-</table>
+<section id="a-discovery-service-in-geonetwork" class="level1">
+<h1>A discovery service in GeoNetwork</h1>
+<p><em>Status: in progress</em></p>
+<p><a href="https://geonetwork-opensource.org">GeoNetwork</a> is a catalogue for registering spatial datasets and services. GeoNetwork does support multiple <a href="https://github.com/metadata101">metadata models</a> based on XML, but it is optimized for iso19139:2007 and iso19115-2:2018. This recipe uses <a href="../utils/docker.html">docker</a> to run GeoNetwork locally. It will discuss aspects such as schema plugins, creating metadata records, set up codelists and harvest metadata.</p>
+<section id="schema-plugins" class="level2">
+<h2 class="anchored" data-anchor-id="schema-plugins">Schema plugins</h2>
+<p>GeoNetwork provides a dynamic system to pre load schema plugins providing support for a variety of metadata models, such as iso19139:2007, iso19115-2:2018, national profiles based on these, DCAT, SensorML, EML/GBIF, etc. Many of these plugins are made available via https://github.com/metadata101. Before creating or importing records, verify that the relevant profile is available in the GeoNetwork instance.</p>
+<p>Creation of metadata records is based on templates. For each metadata model a series of templates is available. Users select a relevant template for their use case while creating a new record to describe a resource. Any template is based on a specific metadata model, which determines which properties need to be described and in which format the record will be stored.</p>
+<p>GeoNetwork provides a number of transformation options for crosswalks between metadata models, but you should always consider some loss of information in these crosswalks. Crosswalks occur for example when a user requests a record in DCAT, while it is stored as iso19139:2007 in the database.</p>
 </section>
-<section id="th-of-january-1" class="level3">
-<h3 class="anchored" data-anchor-id="th-of-january-1">25th of january</h3>
-<table class="table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Lumen 2 meeting room</th>
-<th>Video</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>9.00</td>
-<td>Introduction to View and download services</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-view-download">video</a></td>
-</tr>
-<tr class="even">
-<td>10.00</td>
-<td>Sensorthings API - Kathi Schleidt, Hylke van der Schaaf</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-sta">video</a></td>
-</tr>
-<tr class="odd">
-<td>13:45</td>
-<td>WCS - Kathi Schleidt, Peter Baumann</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-wcs">video</a></td>
-</tr>
-<tr class="even">
-<td>14:30</td>
-<td>geopython (pygeoapi, pygeometa, pycsw) - Tom Kralidis, Luis de Sousa</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-geopython">video</a></td>
-</tr>
-</tbody>
-</table>
+<section id="quick-start" class="level2">
+<h2 class="anchored" data-anchor-id="quick-start">Quick Start</h2>
+<ul>
+<li><p>Start a GeoNetwork instance locally (initial startup may take some time)</p>
+<pre><code>docker run -p 8080:8080 geonetwork:3.12</code></pre></li>
+<li><p>Navigate to <a href="http://localhost:8080/geonetwork">http://localhost:8080/geonetwork</a></p></li>
+<li><p>Let’s load some sample data. Select <code>Login</code>; login as usr:<code>admin</code>, pwd:<code>admin</code></p></li>
+<li><p>Select <code>Admin console</code> &gt; <code>Metadata records and templates</code>; Select <code>iso19139:2007</code>, click on <code>load samples</code> and <code>load templates</code></p></li>
+<li><p>On <code>Admin console</code> &gt; <code>Settings</code>, set the title and url of the instance.</p></li>
+<li><p>Let’s set up some code lists (which populate the pull downs on the editor). Select <code>Classification systems</code> from <code>Admin console</code>.</p></li>
+<li><p>Select <code>From registry</code> in <code>Add thesaurus</code>.</p></li>
+<li><p>Click <code>Use INSPIRE registry</code> for the <code>Url</code> field</p></li>
+<li><p>Select language(s) and <code>INSPIRE theme register</code> and click <code>Upload</code></p></li>
+<li><p>Add another thesaurus from registry, select <code>INSPIRE metadata code list register</code> and then <code>Spatial scope</code>.</p></li>
+<li><p>Continue with other relevant code lists, notice that you can also create a new code list manually.</p></li>
+</ul>
 </section>
-<section id="th-of-january-2" class="level3">
-<h3 class="anchored" data-anchor-id="th-of-january-2">26th of january</h3>
-<table class="table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Gaia 2 meeting room</th>
-<th>Video</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>9.00</td>
-<td>Introduction to Metadata and discovery</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-metadata">vido</a></td>
-</tr>
-<tr class="even">
-<td>10:00</td>
-<td>deegree webservices intro and Q&amp;A - Torsten Friebe</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-deegree">video</a></td>
-</tr>
-<tr class="odd">
-<td>10:30</td>
-<td>MapServer intro and Q&amp;A - Seth G</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-mapserver">video</a></td>
-</tr>
-<tr class="even">
-<td>11:00</td>
-<td>Extending Codelists - Luis de Sousa</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-codelists">video</a></td>
-</tr>
-<tr class="odd">
-<td>14.00</td>
-<td>Hale Studio - Kate Lyndegaard</td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<section id="create-records" class="level2">
+<h2 class="anchored" data-anchor-id="create-records">Create records</h2>
+<ul>
+<li>On <code>Contribute</code> Editor board, click <code>Add new record</code></li>
+<li>Select a template (they we’re loaded on the previous step) and click <code>create</code></li>
+<li>On the editor notice the view (eye) button on top right, you can switch the editor view between <code>Simple</code>, <code>Full</code> and <code>XML</code>.</li>
+<li>Notice the <code>validate</code> button, which provides a report on the level of completion of the record</li>
+<li>The associated resources side panel displays links to remote resources, such as data files, data services and thumbnails</li>
+<li>Notice that you can also import a record from a local xml file</li>
+<li>Notice that you can collapse the <code>save</code> button to <code>save as template</code>, in this way others can use this record as a base to start a new record</li>
+</ul>
+</section>
+<section id="harvest-records" class="level2">
+<h2 class="anchored" data-anchor-id="harvest-records">Harvest records</h2>
+<p>Harvesting is the process of importing records from remote sources at intervals.</p>
+<ul>
+<li>Open <code>harvesting</code> from <code>Admin console</code></li>
+<li>Select <code>OGC CSW 2.0.2</code> from <code>Add thesaurus</code></li>
+<li>Provide a name for the harvester</li>
+<li><code>Action on UUID collision</code> determines the behaviour when similar records are found in multiple remote endpoints</li>
+<li>Provide the url of the remote endpoint (for example https://www.geocatalogue.fr/api-public/servicesRest?request=GetCapabilities&amp;service=CSW)</li>
+<li>Add a filter <code>Anytext:Soil</code></li>
+<li>Set a interval schedule for the harvest (<code>only one run</code>)</li>
+<li>Harvesters have many additional options, you can read about it in the <a href="https://geonetwork-opensource.org/manuals/trunk/en/user-guide/harvesting/index.html">documentation</a></li>
+<li>Click <code>Save</code> and on the next screen <code>harvest</code>, a spinner starts to run, the harvest may take some minutes, depending of the size of the remote catalogue</li>
+<li>Notice a list of harvest run logs at the bottom of the screen, you can click <code>log</code> to check in more detail.</li>
+<li>If you increase logging on <code>Settings</code> to <code>DEV</code>, the logging on <code>harvesting</code> will also provide more details (in case of non explainable errors)</li>
+</ul>
+</section>
+<section id="discovery-from-qgis" class="level2">
+<h2 class="anchored" data-anchor-id="discovery-from-qgis">Discovery from QGIS</h2>
+<p>The <code>metasearch</code> plugin is a default plugin in QGIS. - Open the plugin from the <code>Web</code> menu (or toolbar). - Click <code>New connection</code>. Provide a name for the connection and the url http://localhost:8080/geonetwork/srv/eng/csw - Switch to the find tab, and search some records. - Select a search result, for some search results the <code>load data</code> button (lower left) is activated and you can load some data to the map</p>
+</section>
+<section id="atom-download-service-from-geonetwork" class="level2">
+<h2 class="anchored" data-anchor-id="atom-download-service-from-geonetwork">Atom download service from GeoNetwork</h2>
+<p>You can enable an ATOM download service in GeoNetwork. GeoNetwork provides an opensearch API and will use the metadata content to generate Atom service and dataset files. You can read more about this option in the <a href="https://geonetwork-opensource.org/manuals/3.10.x/en/tutorials/inspire/download-atom.html">documentation</a>.</p>
+</section>
+<section id="read-more" class="level2">
+<h2 class="anchored" data-anchor-id="read-more">Read more</h2>
+<ul>
+<li>Website: https://geonetwork-opensource.org/</li>
+<li>GitHub repository: https://github.com/geonetwork</li>
+<li>Docker composition: https://github.com/geonetwork/docker-geonetwork/blob/main/4.2.1/docker-compose.yml</li>
+<li>Documentation: https://geonetwork-opensource.org/manuals/4.0.x/en</li>
+<li>Tutorial: https://geonetwork-opensource.org/manuals/trunk/en/tutorials/introduction</li>
+</ul>
 
 
-</section>
 </section>
 </section>
 

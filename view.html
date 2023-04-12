@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2022-11-10">
 
-<title>Soil data guidance - Introduction</title>
+<title>Soil data guidance - Overview INSPIRE View Services</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page">
+    <a class="nav-link" href="./index.html">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -101,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Discovery</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./view.html">
+    <a class="nav-link active" href="./view.html" aria-current="page">
  <span class="menu-text">View</span></a>
   </li>  
   <li class="nav-item">
@@ -135,20 +135,21 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
+  <li><a href="#overview-inspire-view-services" id="toc-overview-inspire-view-services" class="nav-link active" data-scroll-target="#overview-inspire-view-services">Overview INSPIRE View Services</a>
   <ul class="collapse">
-  <li><a href="#organisation-of-the-articles" id="toc-organisation-of-the-articles" class="nav-link" data-scroll-target="#organisation-of-the-articles">Organisation of the articles</a></li>
-  <li><a href="#reading-guide" id="toc-reading-guide" class="nav-link" data-scroll-target="#reading-guide">Reading guide</a></li>
+  <li><a href="#minimal" id="toc-minimal" class="nav-link" data-scroll-target="#minimal">Minimal</a></li>
+  <li><a href="#traditional" id="toc-traditional" class="nav-link" data-scroll-target="#traditional">Traditional</a></li>
+  <li><a href="#experimental" id="toc-experimental" class="nav-link" data-scroll-target="#experimental">Experimental</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/view.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Introduction</h1>
+<h1 class="title">Overview INSPIRE View Services</h1>
 </div>
 
 
@@ -175,71 +176,78 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
-<p>This WIKI is a collaborative effort to collect and describe hands-on good practices on data assimilation and dissemination in the <a href="https://agrovoc.fao.org/browse/agrovoc/en/page/c_7156">Soil</a> domain, with a focus on Europe. The <a href="https://inspire.ec.europa.eu/">INSPIRE</a> directive has been and is an important effort for standardisation in the environmental data domain, therefore this WIKI has a lot of links to INSPIRE sources. Because INSPIRE adopts industry standards, this WIKI does reference common standards from ISO, Open Geospatial Consortium, Global Soils Partnership, IANA and W3C, giving it a global relevance.</p>
-<p>The term <code>data assimilation</code> has been chosen by the autors as an alternative to the terms harmonisation and standardisation, which already have a specific meaning in the soil domain:</p>
-<ul>
-<li><code>standardisation</code>; aligning soil data to a common model, using common codelists.</li>
-<li><code>harmonisation</code>; transforming results from observations and measurements to values as if all results for a property are measured using the same procedure, by applying so called <a href="https://en.wikipedia.org/wiki/Pedotransfer_function">Pedotransfer Functions (PTF)</a>.</li>
-</ul>
-<p>The process of assimilation also aims to capture additional aspects, such as finding, downloading and using the data. Most of these aspects are also well described as part of the <a href="https://www.go-fair.org/fair-principles/">FAIR principles</a>.</p>
-<ul>
-<li>Findable, provide relevant metadata via online portals</li>
-<li>Accessible, make the data available as download or API</li>
-<li>Interoperable, adopt common data models and code lists</li>
-<li>Reusable, add documentation and provide tools to reuse the data</li>
-</ul>
-<section id="organisation-of-the-articles" class="level2">
-<h2 class="anchored" data-anchor-id="organisation-of-the-articles">Organisation of the articles</h2>
-<p><a href="https://www.isric.org/index.php/utilise/community-practice">Toner et al, 2022</a> identified 6 steps in a typical soil information workflow from a data producer perspective and a separate category for the data user perspective. These steps form a relevant categorisation of the articles in this wiki. Much of the articles apply to the categories:</p>
-<ul>
-<li><a href="./data-organisation.html">4) Data organisation</a></li>
-<li><a href="./data-sharing.html">6) data and info sharing</a></li>
-<li><a href="./consumer.html">7) Soil Information User Consideration</a></li>
-</ul>
-<p>We’ve labeled each of the articles as to which step in the workflow they apply.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://www.isric.org/sites/default/files/Soil%20information%20workflow_circular_notext.jpg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Soil information workflow</figcaption><p></p>
-</figure>
-</div>
-<p>This wiki lists a series of options for publishing data according to the Technical Guidelines and/or the Good Practices dedicated to use cases from the Soil domain. For each option recipes on various technologies are provided. The practices are categorized at 3 levels:</p>
-<ul>
-<li>Minimal, based on a minimal effort</li>
-<li>Traditional, following initial technical guidelines</li>
-<li>Experimental, following recent and upcoming good practices</li>
-</ul>
-<p>The practices cover 7 topics.</p>
-<ul>
-<li><a href="./identification.html">Identification and namespaces</a></li>
-<li><a href="./etl.html">Data harmonization</a></li>
-<li><a href="./codelists.html">Code lists</a></li>
-<li><a href="./metadata.html">Metadata and Discovery</a></li>
-<li><a href="./view.html">View services</a></li>
-<li><a href="./download.html">Download services</a></li>
-<li><a href="./QOS.html">Quality of service</a></li>
-</ul>
-<p>!!! info</p>
-<pre><code>Disclaimer: References to products and approaches are examples. We do not aim to provide a complete listing, nor endorse a specific technology or service provider. Please consult any alternative software provider to what extent INSPIRE is supported in their products. In that scenario consider to contribute your experiences to this WIKI. </code></pre>
+<section id="overview-inspire-view-services" class="level1">
+<h1>Overview INSPIRE View Services</h1>
+<p>The <a href="https://inspire.ec.europa.eu/documents/technical-guidance-implementation-inspire-view-services-1">TG View services</a> prescribes the adoption of view services, which offer the capability of visualization of spatial data, possibly in a portal, GIS software or webpage. The service provides a quick view on the data, without the need to transfer the data itself to the client. The <a href="https://inspire.ec.europa.eu/id/document/tg/so">TG Soil</a> prescribes that for each measured soil parameter a view service <code>layer</code> is made available online. Layers can relate to actual site observations (soil profiles) as well as parameter distribution grids or vector maps.</p>
+<p>Setting up view services is an aspect of step <code>6) data and info sharing</code> in the <a href="https://www.isric.org/index.php/utilise/community-practice">soil information workflow</a>.</p>
+<p>This page lists some implementation options for providing INSPIRE View Services.</p>
+<section id="minimal" class="level3">
+<h3 class="anchored" data-anchor-id="minimal">Minimal</h3>
+<p>In a minimal implementation the Web Map Tiling Service (WMTS) standard is used to provide view services. Tile services have little risk with respect to the Quality of Service requirements. The alternative option, Web Map Service (WMS), is quite prone to exceed the performance limits in cases when it has to ‘draw’ a lot of data at once.</p>
+<p>Tile services are however not optimal for dynamic data and may require a large (tile) storage. Also consider that the adoption of WMTS is less wide spread then WMS in GIS clients.</p>
+<p>The getFeatureInfo (gfi) operation is not mandatory for INSPIRE (however useful for end users). Without getFeatureInfo, data used as a source for the view service can be minimal (geometry only).</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Cookbook</th>
+<th>Software</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="./cookbook/mapserver.html">MapServer</a> <a href="https://mapserver.org/">MapServer</a></td>
+<td>C based FastCGI WMS/WFS/WCS server implementation configured using ‘mapfiles’</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="./cookbook/bridge-geoserver-geonetwork.html">Bridge &amp; GeoServer</a></td>
+<td><a href="https://geocat.net/bridge">Bridge</a> <a href="https://geoserver.org">GeoServer</a></td>
+<td>The recipe describes how to publish view services from QGIS ArcMAP using GeoCat Bridge</td>
+</tr>
+<tr class="odd">
+<td><a href="./cookbook/qgis.html">QGis server</a></td>
+<td><a href="https://qgis.org">QGIS</a></td>
+<td>Qgis as a server</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="reading-guide" class="level2">
-<h2 class="anchored" data-anchor-id="reading-guide">Reading guide</h2>
-<p>While reading the vast amount of recipes in this cookbook you may realize; if there are so many options, how are the differences between the implementations bridged. - Some implementation options differ in technology, but generate a similar result - Some options actually need some bridging before data can be combined, but the number of bridges is limited (and could also be bridged by intermediaries) - All options share some basic principles, such as identifier persistence and adoption of common codelists, which make any option beneficial</p>
-<p>When selecting one of the available options, consider the following aspects:</p>
-<ul>
-<li>The minimal implementation will have limitations for end users (for example having to download the full dataset, if they are only interested in a small section). On the other hand, minimal implementations tend to be less complex in setup which makes understanding the implementation easier.</li>
-<li>The traditional implementations have the most active users, so dedicated documentation and tooling is available with high Technical Readiness Level (TRL). However, some technologies are based on conventions of almost 20 years ago. These conventions are outdated, compared to current IT practices.</li>
-<li>An experimental approach brings the risk of incomplete documentation and tools. Also there is less evidence on usability. But it does give opportunity to use current technologies and engage with the community to design the next iteration of data sharing.</li>
-</ul>
-<p>Before selecting an option evaluate the following aspects in your organization.</p>
-<ul>
-<li>What are current IT tools and conventions used in the organization to understand which of the approaches fits best with the current knowledge and experience</li>
-<li>Combine an implementation of INSPIRE with business cases that generate direct benefit for your organization or partners. For example, adoption of the open data directive, better documentation and reporting of service levels, improved archival of data, discoverability on search engines.</li>
-<li>Assess the projected audience. Verify that the complexity and nature of the implementation matches with the expectations and capabilities of that audience.</li>
-</ul>
-<p>We recommend to start with a minimal implementation and validate it with the provided <a href="https://ejpsoil.github.io/soildata-assimilation-guidance/QOS/">compliance test tooling</a>. From there, extend the implementation while continuing the tests with each iteration. With such an you are able to focus on the important aspects and prevent caveats early on in the process.</p>
+<section id="traditional" class="level3">
+<h3 class="anchored" data-anchor-id="traditional">Traditional</h3>
+<p>Most current view services are based on the Web Map Service (WMS) standard. These services are usually easy to set up on top of an existing traditional Web Feature Service or Web Coverage service implementation.</p>
+<p>Examples are in the <a href="./download.html">download services</a> section.</p>
+</section>
+<section id="experimental" class="level3">
+<h3 class="anchored" data-anchor-id="experimental">Experimental</h3>
+<p>OGC API Tiles and OGC API Maps are upcoming standards for map visualization. The Open Geospatial Consortium (OGC) is preparing the final standardization documents, however initial implementations are available in. There is no good practice document for adoption of OGC API Tiles or Maps in preparation yet within INSPIRE.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Cookbook</th>
+<th>Software</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>-</td>
+<td><a href="https://geoserver.org/">GeoServer</a></td>
+<td>OGC API Tiles is available via the OGC API community plugin</td>
+</tr>
+<tr class="even">
+<td>-</td>
+<td><a href="https://pygeoapi.io/">pygeoapi</a></td>
+<td>Python package which exposes a cache of tiles as OGC API Tiles</td>
+</tr>
+<tr class="odd">
+<td>-</td>
+<td><a href="https://github.com/interactive-instruments/ldproxy">LDProxy</a></td>
+<td>Java based opensource OGC API implementation</td>
+</tr>
+</tbody>
+</table>
+<p>Within the sector there is a shift to the use of Vector tiles for vector map visualization. Vector tiles usually require less bandwidth and provide a sharper view on the data, especially on mobile devices with high resolution. INSPIRE does not provide Guidance on the use of vector tiles yet. OGC API Tiles and the <a href="https://github.com/mapbox/tilejson-spec">MapBox Vector tiles specification</a> are common API’s used to publish vector tiles.</p>
 
 
 </section>

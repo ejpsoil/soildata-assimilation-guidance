@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.475">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Soil data guidance – mapserver</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../style/styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="https://ejpsoil.eu" class="navbar-brand navbar-brand-logo">
+    <img src="https://ejpsoil.eu/fileadmin/projects/ejpsoil/EJP_Soil_logo_cmyk-h100.png" alt="EJPSoil website" class="navbar-logo">
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../identification.html">
+ <span class="menu-text">Identification</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../etl.html">
+ <span class="menu-text">Harmonization</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../codelists.html">
+ <span class="menu-text">Code lists</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../metadata.html">
+ <span class="menu-text">Discovery</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../view.html">
+ <span class="menu-text">View</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../download.html">
+ <span class="menu-text">Download</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../QOS.html">
+ <span class="menu-text">QOS</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../utils/index.html">
+ <span class="menu-text">Utils</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../glossary.html">
+ <span class="menu-text">Glossary</span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#mapserver" id="toc-mapserver" class="nav-link active" data-scroll-target="#mapserver">MapServer</a>
+  <ul class="collapse">
+  <li><a href="#the-mapserver-mapfile" id="toc-the-mapserver-mapfile" class="nav-link" data-scroll-target="#the-mapserver-mapfile">The MapServer Mapfile</a></li>
+  <li><a href="#mapserver-via-docker" id="toc-mapserver-via-docker" class="nav-link" data-scroll-target="#mapserver-via-docker">MapServer via Docker</a></li>
+  <li><a href="#testing-a-mapfile" id="toc-testing-a-mapfile" class="nav-link" data-scroll-target="#testing-a-mapfile">Testing a mapfile</a></li>
+  <li><a href="#wrb-layer-with-geocat-bridge" id="toc-wrb-layer-with-geocat-bridge" class="nav-link" data-scroll-target="#wrb-layer-with-geocat-bridge">WRB layer with GeoCat Bridge</a></li>
+  <li><a href="#mapserver-for-wfs-ogc-api-features-wcs" id="toc-mapserver-for-wfs-ogc-api-features-wcs" class="nav-link" data-scroll-target="#mapserver-for-wfs-ogc-api-features-wcs">MapServer for WFS, OGC API Features &amp; WCS</a></li>
+  <li><a href="#mapserver-and-wmts" id="toc-mapserver-and-wmts" class="nav-link" data-scroll-target="#mapserver-and-wmts">MapServer and WMTS</a></li>
+  <li><a href="#validate-a-mapserver-wms-as-inspire-view-service" id="toc-validate-a-mapserver-wms-as-inspire-view-service" class="nav-link" data-scroll-target="#validate-a-mapserver-wms-as-inspire-view-service">Validate a Mapserver WMS as INSPIRE View service</a></li>
+  <li><a href="#read-more" id="toc-read-more" class="nav-link" data-scroll-target="#read-more">Read more:</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/cookbook/mapserver.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="mapserver" class="level1">
+<h1>MapServer</h1>
+<p><em>Status: ready</em></p>
+<p>MapServer, originally <code>UMN MapServer</code>, is an open source server component which provides OWS services on a variety of data sources. MapServer is commonly used to set up INSPIRE View Services. A detailed guidance on how to use MapServer to set up INSPIRE View Services is available at https://mapserver.org/ogc/inspire.html.</p>
+<p>MapServer supports WFS and WCS as data exchange mechanisms. MapServer is not able to publish datasets having a hierarchical structure, as common in many INSPIRE datasets, which makes MapServer less suitable to provide INSPIRE download Services using WFS. Stored queries are supported. MapServer can be used to set up a WCS Download service.</p>
+<p>MapServer runs as a <a href="https://en.wikipedia.org/wiki/Common_Gateway_Interface">CGI</a> executable. The progream will start up as soon as a request arrives at the server. This makes mapserver very suitable for situations where many datasets are incidentally queried and scales out very well.</p>
+<p>MapServer is configured using <a href="https://www.mapserver.org/mapfile/">map files</a>. These mapfiles contain metadata for each layer, connection details to the datasource and styling rules for the vizualisation. Various tools exist which create mapfiles automatically, from for example a <a href="../cookbook/bridge-geoserver-geonetwork.html">QGIS layer with GeoCat Bridge</a>. Or by using python script, for example with the <a href="https://github.com/geographika/mappyfile">mappyfile</a> library. The View services relevant for INSPIRE Soil are described in <a href="https://inspire.ec.europa.eu/id/document/tg/so">INSPIRE Data Specification on Soil – Technical Guidelines</a> in <a href="https://github.com/INSPIRE-MIF/technical-guidelines/blob/2022.2/data/so/dataspecification_so.adoc#layers-to-be-provided-by-inspire-view-services">chapter 11</a>. 3 types of layers can be distinguished:</p>
+<ul>
+<li>Soil body, Soil profile and Soil Site are vector datasets indicating the location of research area’s.</li>
+<li>Soil properties as vector provide a map view of soil observations on soil profiles or the distribution of a soil property in soil bodies, derived from observations in the area and/or expert judgement.</li>
+<li>Soil properties as coverage, coverage (grid) is a common output of statistical models which calculate the distribution of a soil property.</li>
+</ul>
+<section id="the-mapserver-mapfile" class="level2">
+<h2 class="anchored" data-anchor-id="the-mapserver-mapfile">The MapServer Mapfile</h2>
+<p>For this recipe we’ll prepare a WMS view service on a Soil Body dataset. For each Soil Body some derived soil properties of the top soil are available.</p>
+<p>MapServer is configured using <a href="https://www.mapserver.org/mapfile/">map files</a>. These mapfiles contain metadata for each layer, connection details to the datasource and styling rules for the vizualisation. In a typical configuration a user ‘calls’ the mapserver executable via the web, while indicating the relevant mapfile. For example:</p>
+<pre><code>https://example.org/mapserv.cgi?map=/data/soilbody.map&amp;service=WMS&amp;request=GetCapabilities</code></pre>
+<p>Various tools exist which create mapfiles automatically, from for example a QGIS layer. See for example the <a href="https://plugins.qgis.org/plugins/geocatbridge/">GeoCat Bridge</a> software.</p>
+<p>In this recipe we’ll assemble the mapfile in a text editor. For some of the more advanced text editors, such as <a href="../utils/vscode.html">Visual Studio Code</a>, mapfile editing plugins are available, which provide validation and syntax highlighting.</p>
+<p>A generic mapfile Quick Start is provided at https://live.osgeo.org/en/quickstart/mapserver_quickstart.html. The quickstart is based on <a href="https://live.osgeo.org/">OSGeo Live</a>, a virtual DVD, which offers a preinstalled mapserver and has data from <a href="https://www.naturalearthdata.com/downloads/">Natural Earth</a>.</p>
+<p>Within the mapfile, created in the Quickstart, let’s replace some metadata and update the natural earth layer to point to our soil body dataset.</p>
+<pre><code>MAP
+  NAME "SOILBODY_QUICKSTART"
+  EXTENT -180 -90 180 90
+  UNITS DD
+  SHAPEPATH "/home/user/data/"
+  SIZE 800 600
+
+  IMAGETYPE PNG24
+
+  PROJECTION
+    "init=epsg:4326"
+  END
+
+  WEB
+    METADATA
+      ows_title "Soil Body Quickstart"
+      ows_enable_request "*"
+      ows_srs "EPSG:4326 EPSG:25832 EPSG:25833"
+    END
+  END
+
+  LAYER
+    NAME "Soilbody"
+    STATUS ON
+    TYPE POLYGON
+    DATA "soilbody"
+    CLASS
+      STYLE
+        COLOR 246 241 223
+        OUTLINECOLOR 0 0 0
+      END
+    END
+  END
+
+END</code></pre>
+</section>
+<section id="mapserver-via-docker" class="level2">
+<h2 class="anchored" data-anchor-id="mapserver-via-docker">MapServer via Docker</h2>
+<p>MapServer requires a number of dependencies, which may be hard to install on some systems, that’s why this recipe suggests to work with <a href="../utils/docker.html">Docker containers</a> which are prepared to run mapserver.</p>
+<p>The <a href="https://hub.docker.com/r/camptocamp/mapserver">camp2camp mapserver image</a> is a commonly used mapserver container image. While starting the container we provide a number of parameters so the container is able to locate the mapfile and the data files.</p>
+<pre><code>docker run -p=80:80 \
+    -v=$(PWD)/soilbody.map:/etc/mapserver/wms.map \
+    -v=$(PWD)/data:/home/user/data/ \
+    camptocamp/mapserver</code></pre>
+<p>For a local installation of mapserver, options vary by platform</p>
+<ul>
+<li>Windows; install <a href="https://www.ms4w.com">ms4w</a></li>
+<li>Apple; <a href="https://formulae.brew.sh/formula/mapserver">brew install mapserver</a></li>
+<li><a href="http://wiki.debian.org/DebianGis">Debian</a></li>
+<li><a href="https://wiki.ubuntu.com/UbuntuGIS">Ubuntu</a></li>
+</ul>
+</section>
+<section id="testing-a-mapfile" class="level2">
+<h2 class="anchored" data-anchor-id="testing-a-mapfile">Testing a mapfile</h2>
+<p>Sometimes mapserver reports an error while generating a map response. If the logs of the container do not provide enough information, mapserver provides an interesting utility <a href="https://mapserver.org/utilities/map2img.html">map2img</a> to validate a mapfile. To run the utility, you have to open bash on the container:</p>
+<pre><code>docker exec -it &lt;container&gt; /bin/bash </code></pre>
+<p>and then run the utily:</p>
+<pre><code>map2img -m local.map -o test2.png</code></pre>
+<ul>
+<li><code>-m</code> references the mapfile</li>
+<li><code>-o</code> references an output file to be generated</li>
+</ul>
+</section>
+<section id="wrb-layer-with-geocat-bridge" class="level2">
+<h2 class="anchored" data-anchor-id="wrb-layer-with-geocat-bridge">WRB layer with GeoCat Bridge</h2>
+<p>The technical guidance provides quite detailed instructions on how to style the relavant soil layers. For example a SO.SoilBody.WRB is described with dedicated colors for each WRB Soil type.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>WRB RSG Code</th>
+<th>WRB RSG Name</th>
+<th>Colour RGB code</th>
+<th>Colour HEX code</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>AC</td>
+<td>Acrisol</td>
+<td>(247, 152, 4)</td>
+<td>#F79804</td>
+</tr>
+<tr class="even">
+<td>AB</td>
+<td>Albeluvisol</td>
+<td>(254, 194, 194)</td>
+<td>#FEC2C2</td>
+</tr>
+<tr class="odd">
+<td>AL</td>
+<td>Alisol</td>
+<td>(255, 255, 190)</td>
+<td>#FFFFBE</td>
+</tr>
+<tr class="even">
+<td>..</td>
+<td>..</td>
+<td>..</td>
+<td>..</td>
+</tr>
+</tbody>
+</table>
+<p>If many style rules are involved (or if your project already has styling) a tool like GeoCat Bridge is helpfull. Read more about GeoCat Bridge in the <a href="../cookbook/bridge-geoserver-geonetwork.html">recipe Bridge and GeoServer</a>. On QGIS, with the GeoCat Bridge plugin installed, load a SoilBody dataset and assign some of the colors. In the web &gt; bridge menu, activate the Style viewer panel. Notice the various tabs in the panel which represent the layer style in various encodings. The first tab contains <a href="https://www.ogc.org/standards/sld">Styled Layer Descriptor</a> (SLD), a standardised styling format, used for example in GeoServer. The second tab presents the mapfile syntax, you can copy the value into your mapfile (or let Bridge generate a full mapfile).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/bridge-mapfile-styler.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Mapfile styler Geocat Bridge</figcaption><p></p>
+</figure>
+</div>
+<p>An alternative option for creating mapfiles is the <a href="https://geostyler.org/">geostyler</a> library. A NodeJS application which is able to read and write various styling formats.</p>
+<p>A web application <a href="https://mapserverstudio.net/">mapserver studio</a> is in preparation which will be able to create a mapfile in a web environment.</p>
+</section>
+<section id="mapserver-for-wfs-ogc-api-features-wcs" class="level2">
+<h2 class="anchored" data-anchor-id="mapserver-for-wfs-ogc-api-features-wcs">MapServer for WFS, OGC API Features &amp; WCS</h2>
+<p>MapServer includes support for <a href="https://mapserver.org/ogc/wfs_server.html">WFS</a>, <a href="https://mapserver.org/ogc/ogc_api.html">OGC API Features</a> (8+) and <a href="https://mapserver.org/ogc/wcs_server.html">WCS</a>. Note that WFS does not support the hierarchal data models as required for INSPIRE, only <code>flat</code> tables are supported.</p>
+</section>
+<section id="mapserver-and-wmts" class="level2">
+<h2 class="anchored" data-anchor-id="mapserver-and-wmts">MapServer and WMTS</h2>
+<p>MapServer does not provide tile services (WMTS) itself, but is often combined with a separate tool, <a href="https://mapserver.org/mapcache/">mapcache</a>, which provides tile service on top of a MapServer instance. Tile services are generally a safer option with respect to Quality of Service, but less dynamic in update and styling options.</p>
+</section>
+<section id="validate-a-mapserver-wms-as-inspire-view-service" class="level2">
+<h2 class="anchored" data-anchor-id="validate-a-mapserver-wms-as-inspire-view-service">Validate a Mapserver WMS as INSPIRE View service</h2>
+<p>You need to set up a <a href="../utils/localtunnel.html">tunnel</a> so the <a href="https://inspire.ec.europa.eu/validator/home/index.html">INSPIRE validator</a> will be able to assess your local service.</p>
+</section>
+<section id="read-more" class="level2">
+<h2 class="anchored" data-anchor-id="read-more">Read more:</h2>
+<p>At masterclass edition 2023 Seth G presented MapServer.</p>
+<iframe title="MapServer Primer" width="560" height="315" src="https://wur.yuja.com/v/ejp-sda-mapserver?preload=false" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" loading="lazy">
+</iframe>
+<ul>
+<li><a href="https://mapserver.org">Website</a></li>
+<li><a href="https://github.com/MapServer/MapServer">GitHub</a></li>
+<li><a href="https://hub.docker.com/r/camptocamp/mapserver">Docker</a></li>
+<li><a href="https://www.osgeo.org/projects/mapserver">OSGeo</a></li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../about.html">About</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../license.html">License</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://cordis.europa.eu/project/id/862695"><img style="width:80px;margin:5px 0px" src="https://ejpsoil.eu/fileadmin/_processed_/0/3/csm_Horizon_2020_funding_Thumbnail_a20cd538b7.jpg"></a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

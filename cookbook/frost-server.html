@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Soil data guidance – index</title>
+<title>Soil data guidance – frost-server</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -59,6 +59,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../style/styles.css">
 </head>
@@ -134,137 +135,41 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#masterclass-on-soil-data-assimilation" id="toc-masterclass-on-soil-data-assimilation" class="nav-link active" data-scroll-target="#masterclass-on-soil-data-assimilation">Masterclass on Soil Data Assimilation</a>
+  <li><a href="#frost-server" id="toc-frost-server" class="nav-link active" data-scroll-target="#frost-server">FROST server</a>
   <ul class="collapse">
-  <li><a href="#program-times-in-cet" id="toc-program-times-in-cet" class="nav-link" data-scroll-target="#program-times-in-cet">Program (times in CET)</a>
-  <ul class="collapse">
-  <li><a href="#th-of-january" id="toc-th-of-january" class="nav-link" data-scroll-target="#th-of-january">24th of january</a></li>
-  <li><a href="#th-of-january-1" id="toc-th-of-january-1" class="nav-link" data-scroll-target="#th-of-january-1">25th of january</a></li>
-  <li><a href="#th-of-january-2" id="toc-th-of-january-2" class="nav-link" data-scroll-target="#th-of-january-2">26th of january</a></li>
-  </ul></li>
+  <li><a href="#read-more" id="toc-read-more" class="nav-link" data-scroll-target="#read-more">Read more</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/masterclass/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/cookbook/frost-server.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
 
-<section id="masterclass-on-soil-data-assimilation" class="level1">
-<h1>Masterclass on Soil Data Assimilation</h1>
-<p>At 24-26 january 2023 <a href="https://www.wur.nl/en/research-results/research-institutes/environmental-research.htm">Wageningen Environmental Research</a> and <a href="https://www.isric.org">ISRIC - World Soil Information</a> has organised a masterclass on Soil Data Assimilation. This masterclass was a follow up of the <a href="../masterclass/edition-2022.html">Training on INSPIRE Good Practices around Soil Data</a> held in april 2022.</p>
-<section id="program-times-in-cet" class="level2">
-<h2 class="anchored" data-anchor-id="program-times-in-cet">Program (times in CET)</h2>
-<section id="th-of-january" class="level3">
-<h3 class="anchored" data-anchor-id="th-of-january">24th of january</h3>
-<table class="table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Building Gaia; Meeting room 2</th>
-<th>Video</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>10.00</td>
-<td>Introduction to data assimilation (harmonization; extension; codelists) - Paul van Genuchten, Jandirk Bulens</td>
-<td><a href="https://wur.yuja.com/V/Video?v=430847&amp;node=1937918&amp;a=83533229&amp;autoplay=1">video</a></td>
-</tr>
-<tr class="even">
-<td>11:00</td>
-<td>INSPIRE Tools - Paul van Genuchten</td>
-<td><a href="https://wur.yuja.com/V/Video?v=430878&amp;node=1938063&amp;a=187273784&amp;autoplay=1">video</a></td>
-</tr>
-<tr class="odd">
-<td>12:00</td>
-<td>Skosmos (code lists) - Paul van Genuchten</td>
-<td><a href="https://wur.yuja.com/V/Video?v=430881&amp;node=1938074&amp;a=143339043&amp;autoplay=1">video</a></td>
-</tr>
-<tr class="even">
-<td>14:30</td>
-<td>Soil model in Geopackage - Stefania Morrone</td>
-<td><a href="https://wur.yuja.com/V/Video?v=430869&amp;node=1938006&amp;a=184498297&amp;autoplay=1">video</a></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="th-of-january-1" class="level3">
-<h3 class="anchored" data-anchor-id="th-of-january-1">25th of january</h3>
-<table class="table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Lumen 2 meeting room</th>
-<th>Video</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>9.00</td>
-<td>Introduction to View and download services</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-view-download">video</a></td>
-</tr>
-<tr class="even">
-<td>10.00</td>
-<td>Sensorthings API - Kathi Schleidt, Hylke van der Schaaf</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-sta">video</a></td>
-</tr>
-<tr class="odd">
-<td>13:45</td>
-<td>WCS - Kathi Schleidt, Peter Baumann</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-wcs">video</a></td>
-</tr>
-<tr class="even">
-<td>14:30</td>
-<td>geopython (pygeoapi, pygeometa, pycsw) - Tom Kralidis, Luis de Sousa</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-geopython">video</a></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="th-of-january-2" class="level3">
-<h3 class="anchored" data-anchor-id="th-of-january-2">26th of january</h3>
-<table class="table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Gaia 2 meeting room</th>
-<th>Video</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>9.00</td>
-<td>Introduction to Metadata and discovery</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-metadata">vido</a></td>
-</tr>
-<tr class="even">
-<td>10:00</td>
-<td>deegree webservices intro and Q&amp;A - Torsten Friebe</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-deegree">video</a></td>
-</tr>
-<tr class="odd">
-<td>10:30</td>
-<td>MapServer intro and Q&amp;A - Seth G</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-mapserver">video</a></td>
-</tr>
-<tr class="even">
-<td>11:00</td>
-<td>Extending Codelists - Luis de Sousa</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-codelists">video</a></td>
-</tr>
-<tr class="odd">
-<td>14.00</td>
-<td>Hale Studio - Kate Lyndegaard</td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<section id="frost-server" class="level1">
+<h1>FROST server</h1>
+<p><em>Status: review required</em></p>
+<p><a href="https://fraunhoferiosb.github.io/FROST-Server/">FROST</a> is an open source server implementation of <a href="https://www.ogc.org/standards/sensorthings">OGC Sensorthings</a>, a modern data exchange standard for Sensor Data. Because the INSPIRE Soil model is based on <a href="https://www.ogc.org/standards/om">Observations and Measurements</a>, the Sensorthings API can be used to provide sensor download services, with the soil profile and horizons as <code>FeatureOfInterest</code>. Sensorthings API is generally easier to set up for administrators and easier to consume by clients then INSPIRE Soil data in GML. INSPIRE has recently adopted a <a href="https://inspire.ec.europa.eu/good-practice/ogc-sensorthings-api-inspire-download-service">good practice on Download services based on SensorThings API</a>.</p>
+<p>Kathi Schleidt has prepared a <a href="https://datacoveeu.github.io/API4INSPIRE/dissemination/Workshop-2020-11-19.html">workshop on inspire data in sensorthings API</a>. Also have a look at her sensor presentation in the <a href="https://wur.yuja.com/V/Video?v=184380&amp;node=785951&amp;a=1565884354&amp;autoplay=1">2022 edition of the training</a>. After the 2022 training Kathy together with colleagues from Fraunhofer IOSB has put together a <code>SoilThings</code> variant of STA. The experiment has proven to be a most interesting use case, it has shown where flexibility has to be added in the STA model (these changes will be integrated in the upcoming 2.0 version of the standard). The cool thing about this API is that it allows you to do queries like the following: <code>give me all plots that contain a profile that contains a horizon on which pH H2O is measured</code>; while the query syntax can be a bit daunting, the other existing technologies for provision (WFS and the new OGC API) would require 5 separate requests to do this. Links:</p>
+<ul>
+<li><p>Base SoilThings API: https://ogc-demo.k8s.ilt-dmz.iosb.fraunhofer.de/FROST-SoilThings/v1.1/</p></li>
+<li><p>Query on all plots that contain a profile that contains a horizon on which pH H2O is measured, including the measurements:</p>
+<p>https://ogc-demo.k8s.ilt-dmz.iosb.fraunhofer.de/FROST-SoilThings/v1.1/SoilPlots?<span class="math inline">\(count=true&amp;\)</span>select=name&amp;<span class="math inline">\(filter=ObservedProfile/IsDescribedByHorizon/Datastreams/ObservedProperty/name%20eq%20%27pH%20H2O%27&amp;\)</span>expand=ObservedProfile(<span class="math inline">\(select=name;\)</span>expand=IsDescribedByHorizon(<span class="math inline">\(select=name;\)</span>expand=Datastreams(<span class="math inline">\(select=name;\)</span>filter=ObservedProperty/name%20eq%20%27pH%20H2O%27;<span class="math inline">\(expand=ObservedProperty(\)</span>select=name),%20Observations)))</p></li>
+</ul>
+<section id="read-more" class="level2">
+<h2 class="anchored" data-anchor-id="read-more">Read more</h2>
+<p>At masterclass edition 2023 Kathi Schleidt and Hylke van der Schaaf presented Sensorthings API using Frost server.</p>
+<iframe title="Sensorthings API using Frost server" width="560" height="315" src="https://wur.yuja.com/v/ejp-sda-sta?preload=false" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" loading="lazy">
+</iframe>
+<ul>
+<li><a href="https://inspire.ec.europa.eu/good-practice/ogc-sensorthings-api-inspire-download-service">Good practice Sensorthings</a></li>
+<li><a href="https://github.com/FraunhoferIOSB/FROST-Server">GitHub repository</a></li>
+<li><a href="https://fraunhoferiosb.github.io/FROST-Server">Documentation</a></li>
+<li><a href="https://datacoveeu.github.io/API4INSPIRE/dissemination/Workshop-2020-11-19.html">Workshop</a></li>
+</ul>
 
 
-</section>
 </section>
 </section>
 

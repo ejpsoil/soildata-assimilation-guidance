@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2023-01-06">
 
-<title>Soil data guidance – index</title>
+<title>Soil data guidance - Overview Git</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -134,137 +135,93 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#masterclass-on-soil-data-assimilation" id="toc-masterclass-on-soil-data-assimilation" class="nav-link active" data-scroll-target="#masterclass-on-soil-data-assimilation">Masterclass on Soil Data Assimilation</a>
+  <li><a href="#overview-git" id="toc-overview-git" class="nav-link active" data-scroll-target="#overview-git">Overview Git</a>
   <ul class="collapse">
-  <li><a href="#program-times-in-cet" id="toc-program-times-in-cet" class="nav-link" data-scroll-target="#program-times-in-cet">Program (times in CET)</a>
-  <ul class="collapse">
-  <li><a href="#th-of-january" id="toc-th-of-january" class="nav-link" data-scroll-target="#th-of-january">24th of january</a></li>
-  <li><a href="#th-of-january-1" id="toc-th-of-january-1" class="nav-link" data-scroll-target="#th-of-january-1">25th of january</a></li>
-  <li><a href="#th-of-january-2" id="toc-th-of-january-2" class="nav-link" data-scroll-target="#th-of-january-2">26th of january</a></li>
-  </ul></li>
+  <li><a href="#git-use-cases" id="toc-git-use-cases" class="nav-link" data-scroll-target="#git-use-cases">Git Use Cases</a></li>
+  <li><a href="#exersize" id="toc-exersize" class="nav-link" data-scroll-target="#exersize">Exersize</a></li>
+  <li><a href="#forking-and-pull-requests" id="toc-forking-and-pull-requests" class="nav-link" data-scroll-target="#forking-and-pull-requests">Forking and Pull requests</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/masterclass/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/utils/git.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Overview Git</h1>
+</div>
 
 
-<section id="masterclass-on-soil-data-assimilation" class="level1">
-<h1>Masterclass on Soil Data Assimilation</h1>
-<p>At 24-26 january 2023 <a href="https://www.wur.nl/en/research-results/research-institutes/environmental-research.htm">Wageningen Environmental Research</a> and <a href="https://www.isric.org">ISRIC - World Soil Information</a> has organised a masterclass on Soil Data Assimilation. This masterclass was a follow up of the <a href="../masterclass/edition-2022.html">Training on INSPIRE Good Practices around Soil Data</a> held in april 2022.</p>
-<section id="program-times-in-cet" class="level2">
-<h2 class="anchored" data-anchor-id="program-times-in-cet">Program (times in CET)</h2>
-<section id="th-of-january" class="level3">
-<h3 class="anchored" data-anchor-id="th-of-january">24th of january</h3>
-<table class="table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Building Gaia; Meeting room 2</th>
-<th>Video</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>10.00</td>
-<td>Introduction to data assimilation (harmonization; extension; codelists) - Paul van Genuchten, Jandirk Bulens</td>
-<td><a href="https://wur.yuja.com/V/Video?v=430847&amp;node=1937918&amp;a=83533229&amp;autoplay=1">video</a></td>
-</tr>
-<tr class="even">
-<td>11:00</td>
-<td>INSPIRE Tools - Paul van Genuchten</td>
-<td><a href="https://wur.yuja.com/V/Video?v=430878&amp;node=1938063&amp;a=187273784&amp;autoplay=1">video</a></td>
-</tr>
-<tr class="odd">
-<td>12:00</td>
-<td>Skosmos (code lists) - Paul van Genuchten</td>
-<td><a href="https://wur.yuja.com/V/Video?v=430881&amp;node=1938074&amp;a=143339043&amp;autoplay=1">video</a></td>
-</tr>
-<tr class="even">
-<td>14:30</td>
-<td>Soil model in Geopackage - Stefania Morrone</td>
-<td><a href="https://wur.yuja.com/V/Video?v=430869&amp;node=1938006&amp;a=184498297&amp;autoplay=1">video</a></td>
-</tr>
-</tbody>
-</table>
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Authors</div>
+    <div class="quarto-title-meta-contents">
+             <p>Paul van Genuchten </p>
+             <p>Luís Moreira de Sousa </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 6, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="overview-git" class="level1">
+<h1>Overview Git</h1>
+<p>Git is a distributed version management system of mainly text files to facilitate shared development of software and/or documentation. Git is one of the creations of Linus Torvalds. In Git everybody <code>checks out</code> the full repository with all its history, you make changes to a version locally and <code>push</code> them back to the server. In the process incidental <code>conflicts</code> may occur, if someone else has made a change in the same version and line as you. The server will reject the push until you resolved the conflict.</p>
+<p>Git is mainly operated from the command line, but a lot of client software is available to facilitate participation. An example is <a href="https://www.syntevo.com/smartgit/">SmartGit</a>, which provides an easy to use interface to manage even complex git tasks such as fixing conflicts. <a href="https://github.com/prati0100/git-gui/">Git GUI</a> is the graphical user interface included with the Git software suite.</p>
+<p><a href="https://github.com">GitHub.com</a> is a well known provider of Git services. They offer a lot of additional functionality on top of the Git version management, such as a web interface, issue management, forking &amp; pull requests, wiki, actions, etc.</p>
+<p><a href="https://about.gitlab.com/">Gitlab</a> is a popular open source software stack offering a similar set of functionalities as GitHub, you can use it as <a href="https://en.wikipedia.org/wiki/Software_as_a_service">SAAS</a> or install it on a server.</p>
+<p>In 2020 various code forges based in the United States arbitrary blocked access to users from countries deemed hostile. This action affected foreign students and scientists working in Europe or collaborating with European institutions. That same year a community of European software developers registered a non-for-profit in Germany to support an independent code forge hosted in Europe. The result is <a href="https://codeberg.org/">Codeberg</a>, a free, open source, Git-based code forge accessible to everyone in the world.</p>
+<p>An interesting <a href="https://rogerdudler.github.io/git-guide/">quick start to Git</a> is written by Roger Dudler (multiple translations). Or if you <a href="https://git-scm.com/video/what-is-git">prefer a video</a>.</p>
+<p>The main reference for this software is the <a href="https://git-scm.com/book/en/v2">Git Book</a>.</p>
+<section id="git-use-cases" class="level2">
+<h2 class="anchored" data-anchor-id="git-use-cases">Git Use Cases</h2>
+<ul>
+<li>A software project with contributors from around the globe. Including issue management, software releases and automated validation of unit and integration tests.</li>
+<li>This wiki is maintained in a Git repository. With every new push a new version is build and it replaces the previous version.</li>
+<li>A roll out of an improved composition of Docker containers on a cloud platform like <a href="https://kubernetes.io/">Kubernetes</a>. The helm charts (configuration files) are stored on a Git repository, every change to the helm chart results in an update of the development environment to reflect the latest changes.</li>
+<li>Git is an important tool for Dev Ops staff. Manual interventions are minimized. Every action is scripted, stored in a Git repository and started from a Git action. This improves tracebility and reproducability in software maintenance.</li>
+</ul>
 </section>
-<section id="th-of-january-1" class="level3">
-<h3 class="anchored" data-anchor-id="th-of-january-1">25th of january</h3>
-<table class="table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Lumen 2 meeting room</th>
-<th>Video</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>9.00</td>
-<td>Introduction to View and download services</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-view-download">video</a></td>
-</tr>
-<tr class="even">
-<td>10.00</td>
-<td>Sensorthings API - Kathi Schleidt, Hylke van der Schaaf</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-sta">video</a></td>
-</tr>
-<tr class="odd">
-<td>13:45</td>
-<td>WCS - Kathi Schleidt, Peter Baumann</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-wcs">video</a></td>
-</tr>
-<tr class="even">
-<td>14:30</td>
-<td>geopython (pygeoapi, pygeometa, pycsw) - Tom Kralidis, Luis de Sousa</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-geopython">video</a></td>
-</tr>
-</tbody>
-</table>
+<section id="exersize" class="level2">
+<h2 class="anchored" data-anchor-id="exersize">Exersize</h2>
+<ul>
+<li>Install <a href="https://git-scm.com/download/">git</a> (or smartgit, which has git included) on your machine</li>
+<li>Clone the repository of this wiki from the command line:</li>
+</ul>
+<pre><code>git clone https://github.com/ejpsoil/soildata-assimilation-guidance.git</code></pre>
+<ul>
+<li>open the folder and log all events that happened on the repository</li>
+</ul>
+<pre><code>cd soildata-assimilation-guidance
+git log --oneline</code></pre>
 </section>
-<section id="th-of-january-2" class="level3">
-<h3 class="anchored" data-anchor-id="th-of-january-2">26th of january</h3>
-<table class="table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Gaia 2 meeting room</th>
-<th>Video</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>9.00</td>
-<td>Introduction to Metadata and discovery</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-metadata">vido</a></td>
-</tr>
-<tr class="even">
-<td>10:00</td>
-<td>deegree webservices intro and Q&amp;A - Torsten Friebe</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-deegree">video</a></td>
-</tr>
-<tr class="odd">
-<td>10:30</td>
-<td>MapServer intro and Q&amp;A - Seth G</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-mapserver">video</a></td>
-</tr>
-<tr class="even">
-<td>11:00</td>
-<td>Extending Codelists - Luis de Sousa</td>
-<td><a href="https://wur.yuja.com/v/ejp-sda-codelists">video</a></td>
-</tr>
-<tr class="odd">
-<td>14.00</td>
-<td>Hale Studio - Kate Lyndegaard</td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<section id="forking-and-pull-requests" class="level2">
+<h2 class="anchored" data-anchor-id="forking-and-pull-requests">Forking and Pull requests</h2>
+<p>GitHub added an extra interactivity on top of Git, the option to <code>Fork</code> a repository to a personal space. And from the personal space provide an option to propose a change to the <code>upstream</code> repository, this is called a <code>pull request</code>. Now users were able to propose changes to repositories of which they were not even a member yet. The fork and pull mechanism has now been adopted by other git platforms, such as Gitlab, but because it is not part of the Git specification itself, it may work slightly different on other platforms. Let’s try and improve this wiki via a pull request:</p>
+<ul>
+<li>If you do not have a github account yet, we invite you to set up one now at https://github.com/signup.</li>
+<li>When logged in, open https://github.com/ejpsoil/soildata-assimilation-guidance, and click the fork button in the top right. This will clone the repo to your personal space.</li>
+<li>On https://github.com/<em>YOU</em>/soildata-assimilation-guidance, edit a file (maybe you found a typo somewhere, or would like to comment/extend something) via the github web interface by opening the file and clicking on the pencil button.</li>
+<li>Below the text you notice a commit message and button. Every commit in Git requires a usefull message, so others understand what you did. Select the option “Create a new branch for this commit …”.</li>
+<li>Then create the branch, but not the pull request in the next step, because this pull request would arrive in your own repository</li>
+<li>Now navigate back to https://github.com/ejpsoil/soildata-assimilation-guidance. A banner shows indicating you can <code>compare and pull request</code> your recent change. Click this button and create the pull request.</li>
+</ul>
+<p>The process of a pull request is quite overwhelming. But it is an important aspect in collaborative development these days. Many repositories only allow code changes via pull requests, because it is a guarantee that at least 2 persons have looked at it.</p>
 
 
-</section>
 </section>
 </section>
 

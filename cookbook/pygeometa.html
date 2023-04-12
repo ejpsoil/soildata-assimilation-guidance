@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.475">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Soil data guidance – pygeometa</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../style/styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="https://ejpsoil.eu" class="navbar-brand navbar-brand-logo">
+    <img src="https://ejpsoil.eu/fileadmin/projects/ejpsoil/EJP_Soil_logo_cmyk-h100.png" alt="EJPSoil website" class="navbar-logo">
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../identification.html">
+ <span class="menu-text">Identification</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../etl.html">
+ <span class="menu-text">Harmonization</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../codelists.html">
+ <span class="menu-text">Code lists</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../metadata.html">
+ <span class="menu-text">Discovery</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../view.html">
+ <span class="menu-text">View</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../download.html">
+ <span class="menu-text">Download</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../QOS.html">
+ <span class="menu-text">QOS</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../utils/index.html">
+ <span class="menu-text">Utils</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../glossary.html">
+ <span class="menu-text">Glossary</span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#a-pythonic-metadata-workflow" id="toc-a-pythonic-metadata-workflow" class="nav-link active" data-scroll-target="#a-pythonic-metadata-workflow">A Pythonic metadata workflow</a>
+  <ul class="collapse">
+  <li><a href="#initial" id="toc-initial" class="nav-link" data-scroll-target="#initial">Initial</a></li>
+  <li><a href="#create-an-mcf" id="toc-create-an-mcf" class="nav-link" data-scroll-target="#create-an-mcf">Create an MCF</a></li>
+  <li><a href="#import-existing-metadata" id="toc-import-existing-metadata" class="nav-link" data-scroll-target="#import-existing-metadata">Import existing metadata</a></li>
+  <li><a href="#generate-iso191392007" id="toc-generate-iso191392007" class="nav-link" data-scroll-target="#generate-iso191392007">Generate iso19139:2007</a></li>
+  <li><a href="#import-generated-metadata-to-pycsw" id="toc-import-generated-metadata-to-pycsw" class="nav-link" data-scroll-target="#import-generated-metadata-to-pycsw">Import generated metadata to pycsw</a></li>
+  <li><a href="#evaluate-metadata-and-discovery-service" id="toc-evaluate-metadata-and-discovery-service" class="nav-link" data-scroll-target="#evaluate-metadata-and-discovery-service">Evaluate Metadata and Discovery Service</a></li>
+  <li><a href="#access-the-service-from-qgis" id="toc-access-the-service-from-qgis" class="nav-link" data-scroll-target="#access-the-service-from-qgis">Access the service from QGIS</a></li>
+  <li><a href="#read-more" id="toc-read-more" class="nav-link" data-scroll-target="#read-more">Read more</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/cookbook/pygeometa.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="a-pythonic-metadata-workflow" class="level1">
+<h1>A Pythonic metadata workflow</h1>
+<p><em>status: in progress</em></p>
+<p>This recipe presents a minimalistic, however integrated and standardised approach to metadata management. Each data file on a file system will be accompagnied by a minimal YML metadata file. Crawler scripts will pick up these metadata files and publish them as iso19139 (or alternative models) on a catalogue. iso19139 is the metadata model currently <a href="https://inspire.ec.europa.eu/id/document/tg/metadata-iso19139">mandated by INSPIRE</a> and very common in the GeoSpatial domain. Other communities tend to use different standards, such as <a href="https://stacspec.org/en/about/stac-spec/">STAC</a> (Earth Observation), <a href="https://www.w3.org/TR/vocab-dcat-2/">DCAT</a> (Open Data), <a href="https://schema.datacite.org/">DataCite</a> (Academia), etc.</p>
+<p>The recipe introduces you to a pythonic metadata workflow step by step.</p>
+<section id="initial" class="level2">
+<h2 class="anchored" data-anchor-id="initial">Initial</h2>
+<p>The inital step assumes a folder of data files on a network drive, sharepoint or git repository. Datasets stored on a database will not be considered for now, but can follow a similar workflow.</p>
+<p>For each data file in the folder we will create a <code>metadata control file</code> (MCF). <a href="https://geopython.github.io/pygeometa/reference/mcf/">MCF</a> is a convention from the <a href="https://geopython.github.io/pygeometa">pygeometa</a> community. It is a <a href="https://en.wikipedia.org/wiki/YAML">YAML</a> encoded subset of iso19139:2007. YAML is easy to read by humans and an optimal for content versioning (in git).</p>
+<p>Consider to set up a virtual environment for the workshop:</p>
+<pre><code>virtualenv pygeometa &amp;&amp; cd pygeometa &amp;&amp; . bin/activate</code></pre>
+<p>Then install the pygeometa library.</p>
+<pre><code>pip install pygeometa</code></pre>
+</section>
+<section id="create-an-mcf" class="level2">
+<h2 class="anchored" data-anchor-id="create-an-mcf">Create an MCF</h2>
+<p>A minimal example of MCF is (see also a <a href="https://github.com/geopython/pygeometa/blob/master/sample.yml">more extended version</a>):</p>
+<pre><code>mcf:
+    version: 1.0
+
+metadata:
+    identifier: 3f342f64-9348-11df-ba6a-0014c2c00eab
+    language: en
+    hierarchylevel: dataset
+    datestamp: 2023-01-01
+
+spatial:
+    datatype: grid
+
+identification:
+    language: eng
+    title: Soilgrids sample Dataset
+    abstract: This is a sample dataset for the EJP Soil Dataset Assimilation Masterclass
+    dates:
+        creation: 2023-01-01
+    keywords:
+        default:
+            keywords: ["sample"]
+    topiccategory:
+        - geoscientificInformation
+    extents:
+        spatial:
+            - bbox: [2,50,4,52]
+              crs: 4326
+    fees: None
+    accessconstraints: otherRestrictions
+    rights: CC-BY
+
+contact:
+    pointOfContact: 
+        organization: ISRIC - World Soil Information
+        url: https://www.isric.org
+        city: Wageningen
+        country: The Netherlands
+        email: info@isric.org
+
+content_info:
+    type: image
+    dimensions:
+        - name: N
+          units: g/m3
+          min: 10
+          max: 75
+        - name: P
+          units: mg/m3
+          min: 30
+          max: 75
+        - name: K
+          units: mg/m3
+          min: 0.5
+          max: 1.2
+
+distribution:
+    wms:
+        url: https://maps.isric.org
+        type: OGC:WMS
+        rel: service
+        name: soilgrids</code></pre>
+<ul>
+<li>Use the above template to create a metadata file for a dataset. The file should have the same name as the dataset, but with an extension <code>.yml</code> or <code>.mcf</code>.</li>
+</ul>
+</section>
+<section id="import-existing-metadata" class="level2">
+<h2 class="anchored" data-anchor-id="import-existing-metadata">Import existing metadata</h2>
+<ul>
+<li>If the data file already has a metadata document (for example with a shapefile, if it contains a file with extension .shp.xml), you can try to import it using pygeometa. pygeometa requires to indicate the metadata schema in advance.</li>
+</ul>
+<p>For iso19139:2007 use:</p>
+<pre><code>pygeometa metadata import path/to/file.xml --schema=iso19139</code></pre>
+<p>For fgdc (typically used with shapefiles) use:</p>
+<pre><code>pygeometa metadata import path/to/file.xml --schema=fgdc</code></pre>
+</section>
+<section id="generate-iso191392007" class="level2">
+<h2 class="anchored" data-anchor-id="generate-iso191392007">Generate iso19139:2007</h2>
+<p>As soon as you have a folder of MCF’s, you can use <code>pygeometa generate</code> to convert them to iso19139:2007.</p>
+<pre><code>pygeometa metadata generate path/to/file.yml --schema=iso19139 --output=some_file.xml</code></pre>
+<p>Or for a folder of files:</p>
+<pre><code>FILES="/path/to/*.yml"
+for f in $FILES
+do
+  echo "Processing $f file..."
+  pygeometa metadata generate $f --schema=iso19139 --output=$f.xml
+done</code></pre>
+<p>Notice that you can also create your own template for the iso19139 generation. By using a customised template you’re able to optimise the generated iso19139 records to facilitate for example better INSPIRE complience.</p>
+<pre><code>pygeometa metadata generate path/to/file.yml --schema_local=/path/to/my-schema --output=some_file.xml</code></pre>
+</section>
+<section id="import-generated-metadata-to-pycsw" class="level2">
+<h2 class="anchored" data-anchor-id="import-generated-metadata-to-pycsw">Import generated metadata to pycsw</h2>
+<p><a href="https://www.pycsw.org">pycsw</a> is a python based OGC reference implementation of <a href="https://www.ogc.org/standards/cat">Catalog Service for the Web</a> and an early adaptor of <a href="https://ogcapi.ogc.org/records/">OGC API Records</a> and <a href="https://stacspec.org/en">STAC Catalog</a>. We’ll use pycsw via a <a href="https://docs.pycsw.org/en/latest/docker.html">docker image</a> to publish the metadata records in a search service. We run it in <code>detach</code> mode so we can interact with the running container, type <code>docker stop pycsw</code> to stop the container.</p>
+<pre><code>docker run -d --rm --name pycsw -p 8000:8000 geopython/pycsw</code></pre>
+<p>We now have a running pycsw at http://localhost:8000/collections with some sample data. We will now remove the sample data and insert our metadata. For that reason we <code>mount</code> our current folder with xml files into the container</p>
+<pre><code>docker stop pycsw
+docker run -d --rm --name pycsw -v ${PWD}:/metadata -p 8000:8000 geopython/pycsw</code></pre>
+<p>Now we can trigger pycsw admin to remove the default records and import our metadata. As part of the calls we reference the config file, which contains the connection details to the database.</p>
+<pre><code>docker exec -ti pycsw pycsw-admin.py delete-records -c /etc/pycsw/pycsw.cfg
+docker exec -ti pycsw pycsw-admin.py load-records -c /etc/pycsw/pycsw.cfg -p /metadata -r</code></pre>
+<p>Check out the new content at http://localhost:8000/collections. Note that if you restart the container, all records are removed, because the database is currently not persisted on a volume.</p>
+<p>Try to mount also a customised <a href="https://github.com/geopython/pycsw/blob/master/docker/pycsw.cfg">configuration file</a> into the container, so you can optimise the configuration of the catalogue. Also have a look at the <a href="https://docs.pycsw.org/en/latest/profiles.html#inspire-extension">INSPIRE extension</a> for pycsw.</p>
+</section>
+<section id="evaluate-metadata-and-discovery-service" class="level2">
+<h2 class="anchored" data-anchor-id="evaluate-metadata-and-discovery-service">Evaluate Metadata and Discovery Service</h2>
+<p>You can evaluate individual iso19139 records in the <a href="https://inspire.ec.europa.eu/validator/home/index.html">INSPIRE reference validator</a>. Also you can evaluate the discovery service. If a service is running on localhost, use the <a href="../utils/localtunnel.html">tunnel approach</a> to evaluate it.</p>
+</section>
+<section id="access-the-service-from-qgis" class="level2">
+<h2 class="anchored" data-anchor-id="access-the-service-from-qgis">Access the service from QGIS</h2>
+<p>QGIS contains a default plugin called <a href="https://docs.qgis.org/3.22/en/docs/user_manual/plugins/core_plugins/plugins_metasearch.html">MetaSearch</a> which enables catalogue searches from within QGIS. You can find the plugin in the <code>web</code> menu or on the toolbar as a set of binoculars. Open the plugin. First you need to set up a new service connection. On the services tab, click new, choose a name and add the url http://localhost:8080/csw. Click the <code>serviceinfo</code> button to view the metadata of the service. Now return to the <code>Search</code> tab and perform a search. Notice that if you select a search result, it highlights on the map and may trigger the <code>Add data</code> button in the footer (this depends on if QGIS recognises the protocol mentioned in the metadata).</p>
+</section>
+<section id="read-more" class="level2">
+<h2 class="anchored" data-anchor-id="read-more">Read more</h2>
+<p>At masterclass edition 2023 Tom Kralidis presented the geopython ecosystem, including pycsw.</p>
+<iframe title="Embedded Media titled: geopython" width="560" height="315" src="https://wur.yuja.com/V/Video?v=432913&amp;node=1952041&amp;a=194733222&amp;preload=false" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" loading="lazy">
+</iframe>
+<ul>
+<li><a href="https://github.com/geopython">github</a> the geopython community welcomes your questions and contributions.</li>
+<li><a href="https://geopython.github.io/pygeometa">pygeometa</a></li>
+<li><a href="https://pycsw.org">pycsw</a></li>
+<li><a href="https://github.com/pvgenuchten/pyGeoDataCrawler">pyGeoDataCrawler</a> is a set of scripts to manage MCF’s. It supports importing MCF from a CSV, MCF inheritence, generate MCF from a data file, etc.</li>
+<li><a href="https://github.com/osgeo/mdme">Model Driven Metadata Editor</a> A web based GUI for populating MCF’s.</li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../about.html">About</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../license.html">License</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://cordis.europa.eu/project/id/862695"><img style="width:80px;margin:5px 0px" src="https://ejpsoil.eu/fileadmin/_processed_/0/3/csm_Horizon_2020_funding_Thumbnail_a20cd538b7.jpg"></a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

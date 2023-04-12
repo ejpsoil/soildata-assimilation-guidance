@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2022-11-10">
 
-<title>Soil data guidance - Introduction</title>
+<title>Soil data guidance – consumer</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -81,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page">
+    <a class="nav-link" href="./index.html">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -135,111 +134,70 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
+  <li><a href="#consumer-of-soil-data" id="toc-consumer-of-soil-data" class="nav-link active" data-scroll-target="#consumer-of-soil-data">Consumer of Soil Data</a>
   <ul class="collapse">
-  <li><a href="#organisation-of-the-articles" id="toc-organisation-of-the-articles" class="nav-link" data-scroll-target="#organisation-of-the-articles">Organisation of the articles</a></li>
-  <li><a href="#reading-guide" id="toc-reading-guide" class="nav-link" data-scroll-target="#reading-guide">Reading guide</a></li>
+  <li><a href="#discovery-of-data" id="toc-discovery-of-data" class="nav-link" data-scroll-target="#discovery-of-data">Discovery of data</a></li>
+  <li><a href="#multiple-source-data-models" id="toc-multiple-source-data-models" class="nav-link" data-scroll-target="#multiple-source-data-models">Multiple source data models</a></li>
+  <li><a href="#importing-wfs-data" id="toc-importing-wfs-data" class="nav-link" data-scroll-target="#importing-wfs-data">Importing WFS data</a></li>
+  <li><a href="#code-list-mappings" id="toc-code-list-mappings" class="nav-link" data-scroll-target="#code-list-mappings">Code list mappings</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/consumer.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Introduction</h1>
-</div>
 
 
-
-<div class="quarto-title-meta">
-
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Paul van Genuchten </p>
-          </div>
-  </div>
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">November 10, 2022</p>
-    </div>
-  </div>
-  
-    
-  </div>
-  
-
-</header>
-
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
-<p>This WIKI is a collaborative effort to collect and describe hands-on good practices on data assimilation and dissemination in the <a href="https://agrovoc.fao.org/browse/agrovoc/en/page/c_7156">Soil</a> domain, with a focus on Europe. The <a href="https://inspire.ec.europa.eu/">INSPIRE</a> directive has been and is an important effort for standardisation in the environmental data domain, therefore this WIKI has a lot of links to INSPIRE sources. Because INSPIRE adopts industry standards, this WIKI does reference common standards from ISO, Open Geospatial Consortium, Global Soils Partnership, IANA and W3C, giving it a global relevance.</p>
-<p>The term <code>data assimilation</code> has been chosen by the autors as an alternative to the terms harmonisation and standardisation, which already have a specific meaning in the soil domain:</p>
+<section id="consumer-of-soil-data" class="level1">
+<h1>Consumer of Soil Data</h1>
+<p>In each of the articles we aim to describe the producer and consumer aspect of a topic. However in many cases we mainly describe the producer aspect. On this page we provide some specific consumer guidance and reference a number of articles which have explicit sections on the consumer aspect of discovering, accessing and assimilating Soil Data.</p>
+<p>Consuming and assimilating soil data has various challenges.</p>
 <ul>
-<li><code>standardisation</code>; aligning soil data to a common model, using common codelists.</li>
-<li><code>harmonisation</code>; transforming results from observations and measurements to values as if all results for a property are measured using the same procedure, by applying so called <a href="https://en.wikipedia.org/wiki/Pedotransfer_function">Pedotransfer Functions (PTF)</a>.</li>
+<li>Discovery of data; not much data is advertised and on various platforms. In many cases the search engine is the only option to find something. In other cases there’s too much similar results, which prevent you from easily finding the gems between the others.</li>
+<li>Soil data is quite complex by nature; samples representing a soil horizon at a location, being analysed in some laboratory. These observations are used to derive a region sharing a common value, being vizualised on a map. Capturing this complexity in a standardised model has been quite a challenge. It resulted in <a href="https://www.iso.org/standard/44595.html">iso28258</a> and derived models such as GLOSIS and the INSPIRE model. The process of adopting the standard requires expert skills, consider that working with this type of models is challenging, especcially in generic GIS tools such as QGIS/ArcGIS. It resulted in the fact that many organisations haven’t fully adopted these models and provide the data in a local model or that the harmonised data is a subset of the original dataset. As a consumer it is hard to assess the level of implementation of the standard.</li>
+<li>INSPIRE identified WFS as a relevant exchange mechanism for rich data such as soil data. However the industry has not moved with those efforts and hardly any tooling exists which is able to use WFS to explore the richness of WFS’s providing rich (soil) data.</li>
+<li>As part of the harmonisation it is important to adopt common code lists, or, for unique concepts, extend existing code lists in a proper way. Many implementations have failed to follow this principle, resulting in a multitude of code list references which are redundant or under documented. In many cases a consumer will need to harmonize code list values as part of using the data.</li>
 </ul>
-<p>The process of assimilation also aims to capture additional aspects, such as finding, downloading and using the data. Most of these aspects are also well described as part of the <a href="https://www.go-fair.org/fair-principles/">FAIR principles</a>.</p>
+<p>Below some guidance on how to face some of these challenges:</p>
+<section id="discovery-of-data" class="level2">
+<h2 class="anchored" data-anchor-id="discovery-of-data">Discovery of data</h2>
+<p>Some guidance on locating soil data sources.</p>
 <ul>
-<li>Findable, provide relevant metadata via online portals</li>
-<li>Accessible, make the data available as download or API</li>
-<li>Interoperable, adopt common data models and code lists</li>
-<li>Reusable, add documentation and provide tools to reuse the data</li>
+<li>Datasets of soil institutes of EU memberstates are typically found on the <a href="https://inspire-geoportal.ec.europa.eu/overview.html?view=themeOverview&amp;theme=so">INSPIRE GeoPortal</a>, filter by theme ‘soil’.</li>
+<li>ESDAC hosts a series of <a href="https://esdac.jrc.ec.europa.eu/resource-type/datasets">pan European datasets</a>, including the <a href="https://esdac.jrc.ec.europa.eu/projects/lucas">Lucas database</a>.</li>
+<li>Datasets of academic projects can best be located at <a href="https://explore.openaire.eu/search/find?instancetypename=%22Dataset%22&amp;active=result&amp;fv0=soil&amp;f0=q&amp;page=1">OpenAire Explore</a></li>
+<li>ISRIC - World soil information hosts a discovery service including some 200 datasets at <a href="https://data.isric.org">https://data.isric.org</a>, and a separate collection of <a href="https://www.isric.org/index.php/explore/soil-geographic-databases">external soil resources</a></li>
+<li>Global Soil Partnership provides a number of <a href="https://www.fao.org/global-soil-partnership/areas-of-work/soil-information-and-data/en/">global soil maps</a></li>
+<li>FAO provides a number of legecay soil maps and databases in the <a href="https://www.fao.org/soils-portal/data-hub/soil-maps-and-databases/en/">Soils portal</a></li>
+<li>Google provides a <a href="https://datasetsearch.research.google.com/search?query=soil">dedicated dataset search</a> option, operating on <a href="https://developers.google.com/search/docs/appearance/structured-data/dataset">structured data</a> of websites</li>
 </ul>
-<section id="organisation-of-the-articles" class="level2">
-<h2 class="anchored" data-anchor-id="organisation-of-the-articles">Organisation of the articles</h2>
-<p><a href="https://www.isric.org/index.php/utilise/community-practice">Toner et al, 2022</a> identified 6 steps in a typical soil information workflow from a data producer perspective and a separate category for the data user perspective. These steps form a relevant categorisation of the articles in this wiki. Much of the articles apply to the categories:</p>
-<ul>
-<li><a href="./data-organisation.html">4) Data organisation</a></li>
-<li><a href="./data-sharing.html">6) data and info sharing</a></li>
-<li><a href="./consumer.html">7) Soil Information User Consideration</a></li>
-</ul>
-<p>We’ve labeled each of the articles as to which step in the workflow they apply.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://www.isric.org/sites/default/files/Soil%20information%20workflow_circular_notext.jpg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Soil information workflow</figcaption><p></p>
-</figure>
-</div>
-<p>This wiki lists a series of options for publishing data according to the Technical Guidelines and/or the Good Practices dedicated to use cases from the Soil domain. For each option recipes on various technologies are provided. The practices are categorized at 3 levels:</p>
-<ul>
-<li>Minimal, based on a minimal effort</li>
-<li>Traditional, following initial technical guidelines</li>
-<li>Experimental, following recent and upcoming good practices</li>
-</ul>
-<p>The practices cover 7 topics.</p>
-<ul>
-<li><a href="./identification.html">Identification and namespaces</a></li>
-<li><a href="./etl.html">Data harmonization</a></li>
-<li><a href="./codelists.html">Code lists</a></li>
-<li><a href="./metadata.html">Metadata and Discovery</a></li>
-<li><a href="./view.html">View services</a></li>
-<li><a href="./download.html">Download services</a></li>
-<li><a href="./QOS.html">Quality of service</a></li>
-</ul>
-<p>!!! info</p>
-<pre><code>Disclaimer: References to products and approaches are examples. We do not aim to provide a complete listing, nor endorse a specific technology or service provider. Please consult any alternative software provider to what extent INSPIRE is supported in their products. In that scenario consider to contribute your experiences to this WIKI. </code></pre>
 </section>
-<section id="reading-guide" class="level2">
-<h2 class="anchored" data-anchor-id="reading-guide">Reading guide</h2>
-<p>While reading the vast amount of recipes in this cookbook you may realize; if there are so many options, how are the differences between the implementations bridged. - Some implementation options differ in technology, but generate a similar result - Some options actually need some bridging before data can be combined, but the number of bridges is limited (and could also be bridged by intermediaries) - All options share some basic principles, such as identifier persistence and adoption of common codelists, which make any option beneficial</p>
-<p>When selecting one of the available options, consider the following aspects:</p>
+<section id="multiple-source-data-models" class="level2">
+<h2 class="anchored" data-anchor-id="multiple-source-data-models">Multiple source data models</h2>
+<p>INSPIRE provides guidance on how to <a href="https://github.com/INSPIRE-MIF/technical-guidelines/blob/2022.2/metadata/metadata-iso19139/metadata-iso19139.adoc#4332-category-of-the-spatial-data-service">indicate in metadata the level of harmonisation of the service</a>. Unfortunately this feature is not broadly adopted yet, many data providers provide non harmonised data without indicating it as such.</p>
+<p>In case data is provided using the INSPIRE Soil Model you can use <a href="./cookbook/hale-studio-consume-gml.html">Hale Studio to import gml</a> to an alternative datamodel.</p>
+<p>Because INSPIRE Soil is based on the <a href="https://www.ogc.org/standards/om">Observations and Measurements</a> model, it is possible to publish soil data using a <a href="https://www.ogc.org/standards/sos">SOS</a> or <a href="https://www.ogc.org/standards/sensorthings">SensorThings API</a>. At this moment there are no known implementations of SOS or STA to provide Soil data. I’m not aware of procedures to download full datasets from a sensor service and transform them, but the use case may not be relevant to sensor data. A multitude of sensor clients is available to interact directly with Sensor Services, providing the options to filter the results and extract only the relevant data for a use case.</p>
+</section>
+<section id="importing-wfs-data" class="level2">
+<h2 class="anchored" data-anchor-id="importing-wfs-data">Importing WFS data</h2>
+<p>Because a single INSPIRE Soil dataset consists of multiple featuretypes (plots, profiles, horizons, observations, …) requesting the full dataset is not possible using a single WFS GetFeature request. Instead a client should consult the service capabilities to evaluate which featuretypes are available and iterate over each of them.</p>
+<p>INSPIRE mandates the availability of a stored query on any WFS which is able to download the full dataset in a single request. This is by far the easiest option to download a dataset. However consider that this option is not provided by some providers.</p>
+<p>The <a href="./utils/gdal.html">GDAL utility</a> supports <a href="https://gdal.org/drivers/vector/gmlas.html">GMLAS</a> (GML Application Schema) and is able to import gml from WFS and store it in for example a database. See the <a href="./utils/gdal.html">GDAL recipe</a> for an example. Hale studio is also able to import data from a WFS.</p>
+<p>!!! note</p>
+<pre><code>If you open a rich INSPIRE WFS service in QGIS, you will get unexpected results. In some cases QGIS will be able to extract a geometry and display the layer, but in other cases it will open each featuretype as a table (without geometry). Links between layers and tables are not imported. A [GMLAS plugin](https://plugins.qgis.org/plugins/gml_application_schema_toolbox/) (based on the GDAL GMLAS functionality) has been developed in 2016, but adoption has been low and the project seems currently unmaintained.</code></pre>
+</section>
+<section id="code-list-mappings" class="level2">
+<h2 class="anchored" data-anchor-id="code-list-mappings">Code list mappings</h2>
+<p>Common codelists are stored on the INSPIRE registry, or common registries such as Agrovoc or Gemet. If a value needs to be registered which is not in those registries, organisations have the option to publish an extended version of the code list locally. Code list values are typically provided as a URI referencing the concept in a registry.</p>
+<p>The soil model has various codelists. Important codelists are the (WRB) soil clasification, the observed soil property and the methods used in the laboratory. It is important to understand if the method used impacts the measured value. For example there are various methods to measure pH, which each give a specific value. Pedo transfer functions exist to recalculate the value based on the method used. Prior to applying a pedo transfer function, you have to map the codelist from the remote dataset to the code list used locally. Some cases can exist:</p>
 <ul>
-<li>The minimal implementation will have limitations for end users (for example having to download the full dataset, if they are only interested in a small section). On the other hand, minimal implementations tend to be less complex in setup which makes understanding the implementation easier.</li>
-<li>The traditional implementations have the most active users, so dedicated documentation and tooling is available with high Technical Readiness Level (TRL). However, some technologies are based on conventions of almost 20 years ago. These conventions are outdated, compared to current IT practices.</li>
-<li>An experimental approach brings the risk of incomplete documentation and tools. Also there is less evidence on usability. But it does give opportunity to use current technologies and engage with the community to design the next iteration of data sharing.</li>
+<li>Both datasets reference the same value from a common code list</li>
+<li>The dataset references a remote concept, but it matches with a concept used locally</li>
+<li>The dataset references a remote concept, but no local representation exists for the concept</li>
+<li>No information exists on the concept used</li>
 </ul>
-<p>Before selecting an option evaluate the following aspects in your organization.</p>
-<ul>
-<li>What are current IT tools and conventions used in the organization to understand which of the approaches fits best with the current knowledge and experience</li>
-<li>Combine an implementation of INSPIRE with business cases that generate direct benefit for your organization or partners. For example, adoption of the open data directive, better documentation and reporting of service levels, improved archival of data, discoverability on search engines.</li>
-<li>Assess the projected audience. Verify that the complexity and nature of the implementation matches with the expectations and capabilities of that audience.</li>
-</ul>
-<p>We recommend to start with a minimal implementation and validate it with the provided <a href="https://ejpsoil.github.io/soildata-assimilation-guidance/QOS/">compliance test tooling</a>. From there, extend the implementation while continuing the tests with each iteration. With such an you are able to focus on the important aspects and prevent caveats early on in the process.</p>
+<p>Option 1 is optimal, option 2 requires a mapping table (a suggestion can be made to include the concept on the inspire registry), option 3 and 4 are problematic, these cases should be decided on case by case. Hale studio includes an option to provide mapping tables to <a href="">map codelist values</a>.</p>
 
 
 </section>

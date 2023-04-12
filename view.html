@@ -135,12 +135,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview-inspire-view-services" id="toc-overview-inspire-view-services" class="nav-link active" data-scroll-target="#overview-inspire-view-services">Overview INSPIRE View Services</a>
-  <ul class="collapse">
-  <li><a href="#minimal" id="toc-minimal" class="nav-link" data-scroll-target="#minimal">Minimal</a></li>
+  <li><a href="#minimal" id="toc-minimal" class="nav-link active" data-scroll-target="#minimal">Minimal</a></li>
   <li><a href="#traditional" id="toc-traditional" class="nav-link" data-scroll-target="#traditional">Traditional</a></li>
   <li><a href="#experimental" id="toc-experimental" class="nav-link" data-scroll-target="#experimental">Experimental</a></li>
-  </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/view.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -176,13 +173,11 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="overview-inspire-view-services" class="level1">
-<h1>Overview INSPIRE View Services</h1>
 <p>The <a href="https://inspire.ec.europa.eu/documents/technical-guidance-implementation-inspire-view-services-1">TG View services</a> prescribes the adoption of view services, which offer the capability of visualization of spatial data, possibly in a portal, GIS software or webpage. The service provides a quick view on the data, without the need to transfer the data itself to the client. The <a href="https://inspire.ec.europa.eu/id/document/tg/so">TG Soil</a> prescribes that for each measured soil parameter a view service <code>layer</code> is made available online. Layers can relate to actual site observations (soil profiles) as well as parameter distribution grids or vector maps.</p>
 <p>Setting up view services is an aspect of step <code>6) data and info sharing</code> in the <a href="https://www.isric.org/index.php/utilise/community-practice">soil information workflow</a>.</p>
 <p>This page lists some implementation options for providing INSPIRE View Services.</p>
-<section id="minimal" class="level3">
-<h3 class="anchored" data-anchor-id="minimal">Minimal</h3>
+<section id="minimal" class="level2">
+<h2 class="anchored" data-anchor-id="minimal">Minimal</h2>
 <p>In a minimal implementation the Web Map Tiling Service (WMTS) standard is used to provide view services. Tile services have little risk with respect to the Quality of Service requirements. The alternative option, Web Map Service (WMS), is quite prone to exceed the performance limits in cases when it has to ‘draw’ a lot of data at once.</p>
 <p>Tile services are however not optimal for dynamic data and may require a large (tile) storage. Also consider that the adoption of WMTS is less wide spread then WMS in GIS clients.</p>
 <p>The getFeatureInfo (gfi) operation is not mandatory for INSPIRE (however useful for end users). Without getFeatureInfo, data used as a source for the view service can be minimal (geometry only).</p>
@@ -196,13 +191,13 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td><a href="./cookbook/mapserver.html">MapServer</a> <a href="https://mapserver.org/">MapServer</a></td>
+<td><a href="./cookbook/mapserver.html">MapServer</a></td>
+<td><a href="https://mapserver.org/">MapServer</a></td>
 <td>C based FastCGI WMS/WFS/WCS server implementation configured using ‘mapfiles’</td>
-<td></td>
 </tr>
 <tr class="even">
 <td><a href="./cookbook/bridge-geoserver-geonetwork.html">Bridge &amp; GeoServer</a></td>
-<td><a href="https://geocat.net/bridge">Bridge</a> <a href="https://geoserver.org">GeoServer</a></td>
+<td><a href="https://geocat.net/bridge">Bridge</a>, <a href="https://geoserver.org">GeoServer</a></td>
 <td>The recipe describes how to publish view services from QGIS ArcMAP using GeoCat Bridge</td>
 </tr>
 <tr class="odd">
@@ -213,13 +208,13 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 </section>
-<section id="traditional" class="level3">
-<h3 class="anchored" data-anchor-id="traditional">Traditional</h3>
+<section id="traditional" class="level2">
+<h2 class="anchored" data-anchor-id="traditional">Traditional</h2>
 <p>Most current view services are based on the Web Map Service (WMS) standard. These services are usually easy to set up on top of an existing traditional Web Feature Service or Web Coverage service implementation.</p>
 <p>Examples are in the <a href="./download.html">download services</a> section.</p>
 </section>
-<section id="experimental" class="level3">
-<h3 class="anchored" data-anchor-id="experimental">Experimental</h3>
+<section id="experimental" class="level2">
+<h2 class="anchored" data-anchor-id="experimental">Experimental</h2>
 <p>OGC API Tiles and OGC API Maps are upcoming standards for map visualization. The Open Geospatial Consortium (OGC) is preparing the final standardization documents, however initial implementations are available in. There is no good practice document for adoption of OGC API Tiles or Maps in preparation yet within INSPIRE.</p>
 <table class="table">
 <thead>
@@ -247,10 +242,9 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<p>Within the sector there is a shift to the use of Vector tiles for vector map visualization. Vector tiles usually require less bandwidth and provide a sharper view on the data, especially on mobile devices with high resolution. INSPIRE does not provide Guidance on the use of vector tiles yet. OGC API Tiles and the <a href="https://github.com/mapbox/tilejson-spec">MapBox Vector tiles specification</a> are common API’s used to publish vector tiles.</p>
+<p>Within the sector there is a shift to the use of Vector tiles for vector map visualization. Vector tiles usually require less bandwidth and provide a sharper view on screen, especially on mobile devices with high resolution. INSPIRE does not provide Guidance on the use of vector tiles yet. OGC API Tiles and the <a href="https://github.com/mapbox/tilejson-spec">MapBox Vector tiles specification</a> are common API’s used to publish vector tiles.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

@@ -135,12 +135,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview-metadata-discovery" id="toc-overview-metadata-discovery" class="nav-link active" data-scroll-target="#overview-metadata-discovery">Overview Metadata &amp; discovery</a>
-  <ul class="collapse">
-  <li><a href="#minimal" id="toc-minimal" class="nav-link" data-scroll-target="#minimal">Minimal</a></li>
+  <li><a href="#minimal" id="toc-minimal" class="nav-link active" data-scroll-target="#minimal">Minimal</a></li>
   <li><a href="#traditional" id="toc-traditional" class="nav-link" data-scroll-target="#traditional">Traditional</a></li>
   <li><a href="#experimental" id="toc-experimental" class="nav-link" data-scroll-target="#experimental">Experimental</a></li>
-  </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/metadata.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -176,8 +173,6 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="overview-metadata-discovery" class="level1">
-<h1>Overview Metadata &amp; discovery</h1>
 <p>Discovery of available data is important for potential users to be aware what data is available, evaluate if the data is relevant for them and how they can fetch it, or who to contact for more details. Essentially, the initial goal of any Spatial Data Infrastructure (SDI) is to describe its content. Metadata of datasets and services is described in documents, which are made accessible via a discovery service as records in a catalogue.</p>
 <p>Capturing metadata prior and during data collection is an aspect of step <code>4) data organization</code> in the <a href="https://www.isric.org/index.php/utilise/community-practice">soil information workflow</a>, publishing the metadata as part of the data dissemination is an aspect of step <code>6) data and info sharing</code>. Evaluating the findability of datasets and assessing broken links on existing metadata is an aspect of step <code>7) Soil Information User Consideration</code>.</p>
 <p>In the soil domain we generally have 2 types of datasets, actual soil observations (calcium content in a horizon of a soil profile at a certain date or a soil profile field classification) and derived grids or polygon maps which represent parameter or soil type distribution for an area. For the second type of datasets describing the lineage (history) of the data is very important. Typically, you would describe the dataset with point observations in 1 document and link another document, describing the derived dataset, and link it as a parent-child relation. The document describing the derived dataset will contain ‘processing-steps’ describing the model that was used to calculate or derive the parameter or soil type distribution (D6.1 ch 5). This aspect is important for the usage of the derived dataset, to be able to evaluate if the estimate is valid for the envisioned use.</p>
@@ -267,7 +262,6 @@ ul.task-list li input[type="checkbox"] {
 </table>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

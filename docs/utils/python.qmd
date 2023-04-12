@@ -1,4 +1,9 @@
-# Python
+---
+title: Python
+authors:
+    - Paul van Genuchten
+date: 2022-11-10
+---
 
 A programming language commonly used in data science. From scripts to increase the capabilities or automate processes in 
 ArcMAP or QGIS, maintanance and deployment tasks in DevOps, up to full programs such as GeoNode and pygeoapi.

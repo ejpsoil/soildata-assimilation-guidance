@@ -1,6 +1,7 @@
-# MapServer
-
-*Status: ready*
+---
+title: MapServer
+status: ready
+---
 
 MapServer, originally `UMN MapServer`, is an open source server component which provides OWS services on a variety of data sources.
 MapServer is commonly used to set up INSPIRE View Services. A detailed guidance on how to use MapServer to set up INSPIRE View Services is available at https://mapserver.org/ogc/inspire.html.

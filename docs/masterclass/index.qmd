@@ -1,4 +1,6 @@
-# Masterclass on Soil Data Assimilation
+---
+title: Masterclass on Soil Data Assimilation
+---
 
 At 24-26 january 2023 [Wageningen Environmental Research](https://www.wur.nl/en/research-results/research-institutes/environmental-research.htm) and
 [ISRIC - World Soil Information](https://www.isric.org) has organised a masterclass on Soil Data Assimilation. This masterclass was a follow up of 

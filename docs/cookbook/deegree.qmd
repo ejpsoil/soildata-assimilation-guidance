@@ -1,8 +1,9 @@
-# deegree
+---
+title: deegree
+Status: contribution required*
+---
 
-*Status: contribution required*
-
-An open source java server implementation of WMS, WMTS, CSW, WCS, WFS, WPS.
+[deegree](https://deegree.org) is an open source java server implementation of WMS, WMTS, CSW, WCS, WFS, WPS.
 
 Deegree has 2 options to publish rich GML data. 
 

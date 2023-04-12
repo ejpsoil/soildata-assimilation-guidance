@@ -1,4 +1,6 @@
-# INSPIRE Soil in a relational database
+---
+title: INSPIRE Soil in a relational database
+---
 
 This recipe describes an approach where data is harmonised to a common relational database.
 

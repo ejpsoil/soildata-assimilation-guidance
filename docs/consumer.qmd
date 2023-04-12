@@ -1,4 +1,10 @@
-# Consumer of Soil Data
+---
+title: Consumer of Soil Data
+authors:
+    - Paul van Genuchten
+date: 2022-11-10
+---
+
 
 In each of the articles we aim to describe the producer and consumer aspect of a topic. However in many cases we mainly describe the producer aspect. 
 On this page we provide some specific consumer guidance and reference a number of articles which have explicit sections on the consumer aspect of discovering, accessing and assimilating Soil Data.

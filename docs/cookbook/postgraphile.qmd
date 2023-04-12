@@ -1,6 +1,7 @@
-# GraphQL with Postgraphile
-
-*Status: in progress*
+---
+title: GraphQL with Postgraphile
+status: in progress
+---
 
 [GraphQL](https://graphql.org) is a de-facto standard for self describing API's on hierarchical data. Graphql provides via its API specification capabilities to query datasets using filters, but also indicate which properties to be returned alongside with proper pagination. The GraphQL website provides a [quick start on Graphql](https://graphql.org/graphql) based on NodeJS.
 

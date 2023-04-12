@@ -7,8 +7,6 @@ authors:
 date: 2023-01-06
 ---
 
-# Overview Git
-
 Git is a distributed version management system of mainly text files to facilitate shared development of software and/or 
 documentation. Git is one of the creations of Linus Torvalds. In Git everybody `checks out` the full repository with all 
 its history, you make changes to a version locally and `push` them back to the server. In the process incidental `conflicts` 

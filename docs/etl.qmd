@@ -6,8 +6,6 @@ authors:
 date: 2022-11-10
 ---
 
-# Data Standardisation (vector data)
-
 Data Standardisation is an aspect of step `4) data organization` in the [soil information workflow](https://www.isric.org/index.php/utilise/community-practice).
 
 Data standardisation is the process of aligning one or more datasets to a common (standardised) data model. For the soil domain, [ISO 28258:2013 Soil quality — Digital exchange of soil-related data](https://www.iso.org/obp/ui/#iso:std:iso:28258:ed-1:v1:en) is a standardised conceptual model which has been developed by the soil community to facilitate the capture of soil plot and profile data. The core of the model is the [Observations and Measurements](https://www.ogc.org/standard/om/) model of the Open Geospatial Community. The ISO28258 model has proven to be generic to capture a lot of soil data use cases, and facilitates interoperability with partners. 

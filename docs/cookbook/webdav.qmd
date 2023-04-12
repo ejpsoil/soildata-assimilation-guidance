@@ -1,6 +1,7 @@
-# WebDav & Atom
-
-*Status: ready*
+---
+title: WebDav & Atom download service
+status: ready
+---
 
 In the [technical Guidelines download services](https://inspire.ec.europa.eu/documents/technical-guidance-implementation-inspire-download-services) `INSPIRE atom services` are described to provide a light weight alternative to WFS and WCS, while fitting with all the aspects of a `webservice` as described in the implementing rules. 
 

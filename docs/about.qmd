@@ -1,5 +1,9 @@
 ---
-title: About Soil Data Assiilation Guidance
+title: About Soil Data Assimilation Guidance
+authors:
+    - Paul van Genuchten
+    - Fenny van Egmond
+date: 2023-04-11
 ---
 
 This WIKI is a collaborative effort to collect and describe hands-on good practices on data assimilation in the [Soil](https://agrovoc.fao.org/browse/agrovoc/en/page/c_7156) domain, with a focus on Europe. The [INSPIRE](https://inspire.ec.europa.eu/) directive has been and is an important effort for standardisation in the environmental data domain, therefore this WIKI has a lot of links to INSPIRE sources. Because INSPIRE adopts industry standards, this WIKI does reference common standards from ISO, Open Geospatial Consortium, Global Soils Partnership, IANA and W3C, giving it a global relevance.

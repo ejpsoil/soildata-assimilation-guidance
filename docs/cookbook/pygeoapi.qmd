@@ -1,8 +1,9 @@
-# OGC API Features with pygeoapi
+---
+title: OGC API Features with pygeoapi
+status: in progress
+---
 
-*Status: in progress*
-
- In this recipe we'll set up an instance of [pygeoapi](https://pygeoapi.io) with some soil data. A good practice is available on how to provide an [INSPIRE download service based on OGC API Features](https://github.com/INSPIRE-MIF/gp-ogc-api-features/blob/master/spec/oapif-inspire-download.qmd). pygeoapi is an open source python server implementation of OGCAPI Features, Tiles, Maps, Coverages, Records and Processes.
+In this recipe we'll set up an instance of [pygeoapi](https://pygeoapi.io) with some soil data. A good practice is available on how to provide an [INSPIRE download service based on OGC API Features](https://github.com/INSPIRE-MIF/gp-ogc-api-features/blob/master/spec/oapif-inspire-download.qmd). pygeoapi is an open source python server implementation of OGCAPI Features, Tiles, Maps, Coverages, Records and Processes.
 
 ## Quick start
 

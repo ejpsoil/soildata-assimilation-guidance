@@ -1,6 +1,7 @@
-# Publish a codelist as a file in a web accessible folder
-
-*status: draft*
+---
+title: Publish a codelist as a file in a web accessible folder
+status: draft
+---
 
 This recipe presents a minimal approach for publishing a (extended) code list. The code list is stored as a text file on a web accessible folder. A number of potential formats to use for the text file are discussed in this article. Concepts within the codelist are referenced as http://example.com/codes.xml#concept. The concept identifier is concatenated to the url with a '#' character. '#' represents a local link within the document, a convention adopted from the html standard.
 

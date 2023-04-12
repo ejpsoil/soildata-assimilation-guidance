@@ -1,12 +1,10 @@
 ---
-title: Overview Download Services
+title: INSPIRE Download Services
 summary: 
 authors:
     - Paul van Genuchten
 date: 2022-11-10
 ---
-
-# Overview Download Services
 
 Download services facilitate the download of vector, grid or sensor data. 
 

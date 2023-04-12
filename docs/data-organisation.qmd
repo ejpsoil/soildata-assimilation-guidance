@@ -1,4 +1,9 @@
-# Data Organisation
+---
+title: Data Organisation
+authors:
+    - Paul van Genuchten
+date: 2022-11-10
+---
 
 This article describes the `data organisation` step in the [Soil Information
 Workflow](https://www.isric.org/index.php/utilise/community-practice) and

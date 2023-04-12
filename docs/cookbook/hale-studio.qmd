@@ -1,6 +1,7 @@
-# HALE Studio
-
-*Status: in progress*
+---
+title: eSOTER to INSPIRE Soil model with HALE Studio
+status: in progress
+---
 
 HALE Studio aims to enable users to set up a harmonization workflow on datasets from a local model to a common model, such as INSPIRE. The user interface presents the model of the source dataset (derived from database) on the left and the target model on the right (derived from xml schema). Conversion rules are defined by selecting similar properties on both sides.
 
@@ -8,7 +9,7 @@ The open source software has been developed in the scope of a European Research 
 
 This recipe has been developed in the scope of a Masterclass on data assimilation within the [EJP Soil project](https://ejpsoil.eu/) and builds on harmonization work performed in the scope of the [eDanube project](https://www.isric.org/projects/soil-and-terrain-database-danube-basin).
 
-In this recipe we'll harmonize a SOTER database to the INSPIRE model. Read more about the INSPIRE Soil model in the relevant [technical guidelines](https://inspire.ec.europa.eu/id/document/tg/so). Some samples of harmonised INSPIRE soil data are available from these data providers: 
+In this recipe we'll harmonize a eSOTER database to the INSPIRE model. Read more about the INSPIRE Soil model in the relevant [technical guidelines](https://inspire.ec.europa.eu/id/document/tg/so). Some samples of harmonised INSPIRE soil data are available from these data providers: 
 
 - [City of Berlin](https://fbinter.stadt-berlin.de/fb/atom/SO/SO_BoKw2015.zip)
 - [wielkopolski region in Poland](http://mapy.geoportal.gov.pl/wss/service/ATOM/httpauth/download/?fileId=3fe348acdbf4318c7d9c618e62cf6006&name=wielkopolskie_5k.zip)

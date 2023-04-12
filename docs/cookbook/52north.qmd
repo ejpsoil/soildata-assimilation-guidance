@@ -1,6 +1,9 @@
-# INSPIRE SOS download service using 52 North
+---
+title: INSPIRE SOS download service using 52 North
+status: planned
+---
 
-*Status: planned*
+
 
 ## Read more
 

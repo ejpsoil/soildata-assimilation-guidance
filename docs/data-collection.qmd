@@ -1,4 +1,9 @@
-# Data Collection
+---
+title: Data Collection
+authors: 
+  - Paul van Genuchten
+date: 2023-01-15
+---
 
 This article describes the `data collection` step in the [Soil Information
 Workflow](https://www.isric.org/index.php/utilise/community-practice) and

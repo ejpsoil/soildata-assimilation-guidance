@@ -1,6 +1,7 @@
-# GeoHealthCheck
-
-*Status: ready*
+---
+title: GeoHealthCheck
+status: ready
+---
 
 A tool to monitor availability of spatial services. The tool will query a list of configured spatial services at intervals and report on availability using charts. The tool can also send out notifications in case of disruptions.
 

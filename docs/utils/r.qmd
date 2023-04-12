@@ -1,4 +1,9 @@
-# R
+---
+title: R Statistics
+authors:
+    - Paul van Genuchten
+date: 2022-11-10
+---
 
 [r](https://www.r-project.org/) is a statistics utility commonly used in the soil statistics. R is typically extended with a series of libraries, like [GDAL](gdal.qmd) and [grassgis](https://grass.osgeo.org/). 
 Due to the amount of plugins required, some with a difficult installation procedure and potential high use of resources, the use of virtualisation, such as [Docker](./docker.qmd), is common in soil data statistics.

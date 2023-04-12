@@ -6,7 +6,6 @@ website:
   repo-url: https://github.com/ejpsoil/soildata-assimilation-guidance
   repo-actions: [edit, issue]
   repo-subdir: docs
-  repo-branch: quarto
   navbar:
     logo: https://ejpsoil.eu/fileadmin/projects/ejpsoil/EJP_Soil_logo_cmyk-h100.png
     logo-href: https://ejpsoil.eu

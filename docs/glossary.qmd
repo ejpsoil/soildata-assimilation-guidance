@@ -4,10 +4,8 @@ summary:
 authors:
     - Paul van Genuchten
     - Luis de Sousa
-date: 2022-11-10
+date: 2023-01-20
 ---
-
-# Glossary
 
 This page includes terms that we use in our wiki, so that you have a reference for how we’re using them.
 

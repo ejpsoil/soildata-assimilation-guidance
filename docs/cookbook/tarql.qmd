@@ -1,13 +1,10 @@
 ---
-Title: RDF creation with tarql
-Author: Luís Moreira de Sousa
-Date: 2023-01-19
+title: RDF creation with tarql
+author: Luís Moreira de Sousa
+date: 2023-01-19
 ---
 
-[tarql](https://tarql.github.io/)
-=================================
-
-The basic idea behind `tarql` is to develop a `CONSTRUCT` SPARQL query that
+The basic idea behind [tarql](https://tarql.github.io/) is to develop a `CONSTRUCT` SPARQL query that
 instead of executing against a triple store is executed against a CSV file. The
 result is a knowledge graph that may itself be deployed to a triple store or
 outright published on the web.

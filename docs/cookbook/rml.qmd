@@ -1,15 +1,12 @@
 ---
-Title: RDF creation with RML.io
-Authors: 
+title: RDF creation with RML.io
+authors: 
     - Luís Moreira de Sousa
     - Paul van Genuchten
-Date: 2023-01-17
+date: 2023-01-17
 ---
 
-[RML.io](https://rml.io/)
-=========================
-
-RML.io is a toolset for the generation of knowledge graphs. They automate
+[RML.io](https://rml.io/) is a toolset for the generation of knowledge graphs. They automate
 the creation of RDF from diverse data sources, primarily unstructured tabular
 data. 
 

@@ -1,6 +1,7 @@
-# Consume Soil GML with Hale Studio
-
-*Status: in progress*
+---
+title: Consume Soil GML with Hale Studio
+status: in progress
+---
 
 Hale Studio is a familiar tool to transform data from a relational datamodel to INSPIRE Soil GML. However you can also use Hale Studio to connect to an existing WFS or load a GML file from a atom service and use Hale Studio to transform the data to a relational database model, so you can easily combine it with other relational databases.
 

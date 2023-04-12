@@ -1,11 +1,8 @@
 ---
-Title: URI policy
-Author: Luís Moreira de Sousa
-Date: 2023-01-18
+title: URI policy
+author: Luís Moreira de Sousa
+date: 2023-01-18
 ---
-
-URI policy
-==========
 
 ## The role of URIs
 

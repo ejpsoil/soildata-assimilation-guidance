@@ -1,6 +1,7 @@
-# A Pythonic metadata workflow
-
-*status: in progress*
+---
+title: A Pythonic metadata workflow
+status: ready
+---
 
 This recipe presents a minimalistic, however integrated and standardised approach to metadata management. Each data file on a file system will be accompagnied by a minimal YML metadata file. Crawler scripts will pick up these metadata files and publish them as iso19139 (or alternative models) on a catalogue. iso19139 is the metadata model currently [mandated by INSPIRE](https://inspire.ec.europa.eu/id/document/tg/metadata-iso19139) and very common in the GeoSpatial domain. Other communities tend to use different standards, such as [STAC](https://stacspec.org/en/about/stac-spec/) (Earth Observation), [DCAT](https://www.w3.org/TR/vocab-dcat-2/) (Open Data), [DataCite](https://schema.datacite.org/) (Academia), etc.
 

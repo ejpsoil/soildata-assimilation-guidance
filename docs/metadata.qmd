@@ -6,8 +6,6 @@ authors:
 date: 2022-11-10
 ---
 
-# Overview Metadata & discovery
-
 Discovery of available data is important for potential users to be aware what data is available, evaluate if the data is relevant for them and how they can fetch it, or who to contact for more details. Essentially, the initial goal of any Spatial Data Infrastructure (SDI) is to describe its content. Metadata of datasets and services is described in documents, which are made accessible via a discovery service as records in a catalogue.
 
 Capturing metadata prior and during data collection is an aspect of step `4) data organization` in the [soil information workflow](https://www.isric.org/index.php/utilise/community-practice), publishing the metadata as part of the data dissemination is an aspect of step `6) data and info sharing`. Evaluating the findability of datasets and assessing broken links on existing metadata is an aspect of step `7) Soil Information User Consideration`.

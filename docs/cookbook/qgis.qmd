@@ -1,10 +1,11 @@
-# View services with QGIS server
+---
+title: View services with QGIS server
+status: done
+---
 
-*Status: done*
+[QGIS](https://qgis.org) is mostly known as a GIS desktop application. In recent years the community prepared a server edition of QGIS. The server provides datasets via WMS, WFS and OGC API Features interfaces.
 
-[QGIS](https://qgis.org) started as a GIS desktop application. In recent years the community prepared a server edition of QGIS. The server provides WMS, WFS and since recently OGC API Features. 
-
-The advantage of using QGIS both as a desktop and server component is that the maps generated on the server will display exactly the same as those prepared on a desktop client.
+The advantage of using QGIS both as a desktop and server component is that the maps generated on the server will display exactly the same as those prepared on the desktop client.
 
 ## Prepare a view service in QGIS Desktop
 

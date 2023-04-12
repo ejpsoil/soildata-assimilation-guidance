@@ -1,12 +1,9 @@
 ---
 title: Introduction
-summary: 
 authors:
     - Paul van Genuchten
 date: 2022-11-10
 ---
-
-# Introduction
 
 This WIKI is a collaborative effort to collect and describe hands-on good practices on data assimilation and dissemination in the [Soil](https://agrovoc.fao.org/browse/agrovoc/en/page/c_7156) domain, with a focus on Europe. The [INSPIRE](https://inspire.ec.europa.eu/) directive has been and is an important effort for standardisation in the environmental data domain, therefore this WIKI has a lot of links to INSPIRE sources. Because INSPIRE adopts industry standards, this WIKI does reference common standards from ISO, Open Geospatial Consortium, Global Soils Partnership, IANA and W3C, giving it a global relevance.
 

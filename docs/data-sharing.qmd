@@ -1,4 +1,9 @@
-# Data and information sharing
+---
+title: Data and information sharing
+authors:
+    - Paul van Genuchten
+date: 2022-11-10
+---
 
 This article describes the `data and information sharing` step in the [Soil Information Workflow](https://www.isric.org/index.php/utilise/community-practice) and references various cookbook recipes related to this step in the workflow.
 

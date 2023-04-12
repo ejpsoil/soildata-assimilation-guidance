@@ -1,6 +1,7 @@
-# pycsw
-
-*Status: in progress*
+---
+title: pycsw
+status: in progress
+---
 
 An open source python catalogue implementation, used within [CKAN-spatial](https://github.com/ckan/ckanext-spatial) and [GeoNode](https://geonode.org).
 

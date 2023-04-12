@@ -1,6 +1,7 @@
-# Virtuoso & Skosmos
-
-*Status: in progress*
+---
+title: Virtuoso & Skosmos
+status: ready
+---
 
 This recipe presents steps to publish a code-lists using the [SKOS ontology](https://www.w3.org/2004/02/skos/) in Virtuoso and Skosmos. [Virtuoso](https://virtuoso.openlinksw.com) is an open source Triple store providing a SPARQL endpoint. 
 [Skosmos](https:/skosmos.org) is an open source web application providing a human friendly browse interface for skos thesauri stored in a triple store.

@@ -1,6 +1,7 @@
-# Re3gistry
-
-*Status: contribution needed*
+---
+title: Re3gistry
+status: contribution needed
+---
 
 [Re3gistry](https://github.com/ec-jrc/re3gistry) is a tool to manage and share reference codes.  It provides a central access point that allows labels and descriptions for reference codes to be easily looked up by humans or retrieved by machines. It supports organisations in managing and updating reference codes consistently in a well governed manner so that all versions of a code remain traceable and adequately documented over time.
 

@@ -1,6 +1,7 @@
-# FROST server
-
-*Status: review required*
+---
+title: FROST server
+status: review
+---
 
 [FROST](https://fraunhoferiosb.github.io/FROST-Server/) is an open source server implementation of [OGC Sensorthings](https://www.ogc.org/standards/sensorthings), a modern data exchange standard for Sensor Data.
 Because the INSPIRE Soil model is based on [Observations and Measurements](https://www.ogc.org/standards/om), the Sensorthings API can be used 

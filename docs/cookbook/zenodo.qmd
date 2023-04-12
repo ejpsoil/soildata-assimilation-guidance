@@ -1,4 +1,6 @@
-# Zenodo
+---
+title: Zenodo data repository
+---
 
 This recipe proposes an approach to use [Zenodo](https://zenodo.org) to publish a dataset in such a way, that many of the INSPIRE practices are implemented. 
 Zenodo is a generic repository for academic work part of the European OpenAIRE program and operated by CERN. 

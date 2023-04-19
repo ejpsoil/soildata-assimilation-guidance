@@ -2,262 +2,262 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/etl.html</loc>
-    <lastmod>2023-04-19T10:19:55.673Z</lastmod>
+    <lastmod>2023-04-19T10:22:30.056Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/data-sharing.html</loc>
-    <lastmod>2023-04-19T10:19:56.593Z</lastmod>
+    <lastmod>2023-04-19T10:22:30.712Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/index.html</loc>
-    <lastmod>2023-04-19T10:19:57.101Z</lastmod>
+    <lastmod>2023-04-19T10:22:31.128Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/metadata.html</loc>
-    <lastmod>2023-04-19T10:19:57.657Z</lastmod>
+    <lastmod>2023-04-19T10:22:31.528Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/identification.html</loc>
-    <lastmod>2023-04-19T10:19:58.109Z</lastmod>
+    <lastmod>2023-04-19T10:22:31.848Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/download.html</loc>
-    <lastmod>2023-04-19T10:19:58.653Z</lastmod>
+    <lastmod>2023-04-19T10:22:32.248Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/data-organisation.html</loc>
-    <lastmod>2023-04-19T10:19:59.121Z</lastmod>
+    <lastmod>2023-04-19T10:22:32.604Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/masterclass/index.html</loc>
-    <lastmod>2023-04-19T10:19:59.553Z</lastmod>
+    <lastmod>2023-04-19T10:22:32.916Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/masterclass/edition-2022.html</loc>
-    <lastmod>2023-04-19T10:20:00.085Z</lastmod>
+    <lastmod>2023-04-19T10:22:33.292Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/data-collection.html</loc>
-    <lastmod>2023-04-19T10:20:00.525Z</lastmod>
+    <lastmod>2023-04-19T10:22:33.620Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/codelists.html</loc>
-    <lastmod>2023-04-19T10:20:01.037Z</lastmod>
+    <lastmod>2023-04-19T10:22:33.988Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/view.html</loc>
-    <lastmod>2023-04-19T10:20:01.549Z</lastmod>
+    <lastmod>2023-04-19T10:22:34.324Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/consumer.html</loc>
-    <lastmod>2023-04-19T10:20:02.161Z</lastmod>
+    <lastmod>2023-04-19T10:22:34.696Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/cookbook/re3gistry.html</loc>
-    <lastmod>2023-04-19T10:20:02.617Z</lastmod>
+    <lastmod>2023-04-19T10:22:35.000Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/cookbook/awstats.html</loc>
-    <lastmod>2023-04-19T10:20:03.641Z</lastmod>
+    <lastmod>2023-04-19T10:22:35.296Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/cookbook/inspire-geoportal.html</loc>
-    <lastmod>2023-04-19T10:20:04.105Z</lastmod>
+    <lastmod>2023-04-19T10:22:35.628Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/cookbook/dcat.html</loc>
-    <lastmod>2023-04-19T10:20:04.893Z</lastmod>
+    <lastmod>2023-04-19T10:22:36.172Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/cookbook/ldproxy.html</loc>
-    <lastmod>2023-04-19T10:20:05.321Z</lastmod>
+    <lastmod>2023-04-19T10:22:36.480Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/cookbook/geoportal-server.html</loc>
-    <lastmod>2023-04-19T10:20:05.737Z</lastmod>
+    <lastmod>2023-04-19T10:22:36.776Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/cookbook/geohealthcheck.html</loc>
-    <lastmod>2023-04-19T10:20:06.169Z</lastmod>
+    <lastmod>2023-04-19T10:22:37.072Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/cookbook/postgraphile.html</loc>
-    <lastmod>2023-04-19T10:20:06.577Z</lastmod>
+    <lastmod>2023-04-19T10:22:37.364Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/cookbook/hale-connect.html</loc>
-    <lastmod>2023-04-19T10:20:07.037Z</lastmod>
+    <lastmod>2023-04-19T10:22:37.672Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/cookbook/deegree.html</loc>
-    <lastmod>2023-04-19T10:20:07.457Z</lastmod>
+    <lastmod>2023-04-19T10:22:37.972Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/cookbook/sql.html</loc>
-    <lastmod>2023-04-19T10:20:07.849Z</lastmod>
+    <lastmod>2023-04-19T10:22:38.256Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/cookbook/pycsw.html</loc>
-    <lastmod>2023-04-19T10:20:08.241Z</lastmod>
+    <lastmod>2023-04-19T10:22:38.564Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/cookbook/mapserver.html</loc>
-    <lastmod>2023-04-19T10:20:08.797Z</lastmod>
+    <lastmod>2023-04-19T10:22:38.944Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/cookbook/xtraserver.html</loc>
-    <lastmod>2023-04-19T10:20:09.193Z</lastmod>
+    <lastmod>2023-04-19T10:22:39.228Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/cookbook/zenodo.html</loc>
-    <lastmod>2023-04-19T10:20:09.697Z</lastmod>
+    <lastmod>2023-04-19T10:22:39.572Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/cookbook/geoserver.html</loc>
-    <lastmod>2023-04-19T10:20:10.141Z</lastmod>
+    <lastmod>2023-04-19T10:22:39.916Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/cookbook/pygeoapi.html</loc>
-    <lastmod>2023-04-19T10:20:10.921Z</lastmod>
+    <lastmod>2023-04-19T10:22:40.468Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/cookbook/52north.html</loc>
-    <lastmod>2023-04-19T10:20:11.333Z</lastmod>
+    <lastmod>2023-04-19T10:22:40.772Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/cookbook/rml.html</loc>
-    <lastmod>2023-04-19T10:20:12.381Z</lastmod>
+    <lastmod>2023-04-19T10:22:41.500Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/cookbook/glosis-db.html</loc>
-    <lastmod>2023-04-19T10:20:12.881Z</lastmod>
+    <lastmod>2023-04-19T10:22:41.832Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/cookbook/fme.html</loc>
-    <lastmod>2023-04-19T10:20:13.285Z</lastmod>
+    <lastmod>2023-04-19T10:22:42.112Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/cookbook/geonetwork.html</loc>
-    <lastmod>2023-04-19T10:20:13.757Z</lastmod>
+    <lastmod>2023-04-19T10:22:42.460Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/cookbook/hale-studio-consume-gml.html</loc>
-    <lastmod>2023-04-19T10:20:14.213Z</lastmod>
+    <lastmod>2023-04-19T10:22:42.764Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/cookbook/pygeometa.html</loc>
-    <lastmod>2023-04-19T10:20:14.761Z</lastmod>
+    <lastmod>2023-04-19T10:22:43.160Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/cookbook/codelist-iso19135.html</loc>
-    <lastmod>2023-04-19T10:20:15.181Z</lastmod>
+    <lastmod>2023-04-19T10:22:43.476Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/cookbook/rasdaman.html</loc>
-    <lastmod>2023-04-19T10:20:15.601Z</lastmod>
+    <lastmod>2023-04-19T10:22:43.780Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/cookbook/frost-server.html</loc>
-    <lastmod>2023-04-19T10:20:16.057Z</lastmod>
+    <lastmod>2023-04-19T10:22:44.124Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/cookbook/hale-studio.html</loc>
-    <lastmod>2023-04-19T10:20:16.697Z</lastmod>
+    <lastmod>2023-04-19T10:22:44.576Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/cookbook/code-listsExtension.html</loc>
-    <lastmod>2023-04-19T10:20:17.677Z</lastmod>
+    <lastmod>2023-04-19T10:22:45.256Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/cookbook/bridge-geoserver-geonetwork.html</loc>
-    <lastmod>2023-04-19T10:20:18.145Z</lastmod>
+    <lastmod>2023-04-19T10:22:45.624Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/cookbook/qgis.html</loc>
-    <lastmod>2023-04-19T10:20:18.565Z</lastmod>
+    <lastmod>2023-04-19T10:22:45.936Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/cookbook/webdav.html</loc>
-    <lastmod>2023-04-19T10:20:19.157Z</lastmod>
+    <lastmod>2023-04-19T10:22:46.344Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/cookbook/odk.html</loc>
-    <lastmod>2023-04-19T10:20:19.529Z</lastmod>
+    <lastmod>2023-04-19T10:22:46.624Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/cookbook/tarql.html</loc>
-    <lastmod>2023-04-19T10:20:20.353Z</lastmod>
+    <lastmod>2023-04-19T10:22:47.208Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/cookbook/uri.html</loc>
-    <lastmod>2023-04-19T10:20:20.817Z</lastmod>
+    <lastmod>2023-04-19T10:22:47.596Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/cookbook/link-checker.html</loc>
-    <lastmod>2023-04-19T10:20:21.225Z</lastmod>
+    <lastmod>2023-04-19T10:22:47.880Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/cookbook/virtuoso.html</loc>
-    <lastmod>2023-04-19T10:20:21.729Z</lastmod>
+    <lastmod>2023-04-19T10:22:48.236Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/cookbook/jmeter.html</loc>
-    <lastmod>2023-04-19T10:20:22.177Z</lastmod>
+    <lastmod>2023-04-19T10:22:48.544Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/cookbook/data/bhr-p/readme.html</loc>
-    <lastmod>2023-04-19T10:20:22.637Z</lastmod>
+    <lastmod>2023-04-19T10:22:48.860Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/utils/python.html</loc>
-    <lastmod>2023-04-19T10:20:23.093Z</lastmod>
+    <lastmod>2023-04-19T10:22:49.204Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/utils/index.html</loc>
-    <lastmod>2023-04-19T10:20:23.517Z</lastmod>
+    <lastmod>2023-04-19T10:22:49.504Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/utils/git.html</loc>
-    <lastmod>2023-04-19T10:20:24.045Z</lastmod>
+    <lastmod>2023-04-19T10:22:49.864Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/utils/docker.html</loc>
-    <lastmod>2023-04-19T10:20:24.493Z</lastmod>
+    <lastmod>2023-04-19T10:22:50.200Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/utils/r.html</loc>
-    <lastmod>2023-04-19T10:20:24.933Z</lastmod>
+    <lastmod>2023-04-19T10:22:50.504Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/utils/gdal.html</loc>
-    <lastmod>2023-04-19T10:20:25.417Z</lastmod>
+    <lastmod>2023-04-19T10:22:50.864Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/utils/jupyter.html</loc>
-    <lastmod>2023-04-19T10:20:25.841Z</lastmod>
+    <lastmod>2023-04-19T10:22:51.156Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/utils/localtunnel.html</loc>
-    <lastmod>2023-04-19T10:20:26.313Z</lastmod>
+    <lastmod>2023-04-19T10:22:51.492Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/utils/vscode.html</loc>
-    <lastmod>2023-04-19T10:20:26.753Z</lastmod>
+    <lastmod>2023-04-19T10:22:51.796Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/about.html</loc>
-    <lastmod>2023-04-19T10:20:27.237Z</lastmod>
+    <lastmod>2023-04-19T10:22:52.104Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/license.html</loc>
-    <lastmod>2023-04-19T10:20:27.601Z</lastmod>
+    <lastmod>2023-04-19T10:22:52.416Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/QOS.html</loc>
-    <lastmod>2023-04-19T10:20:28.125Z</lastmod>
+    <lastmod>2023-04-19T10:22:52.760Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/ejpsoil/soildata-assimilation-guidance/glossary.html</loc>
-    <lastmod>2023-04-19T10:20:28.561Z</lastmod>
+    <lastmod>2023-04-19T10:22:53.092Z</lastmod>
   </url>
 </urlset>

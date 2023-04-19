@@ -14,3 +14,8 @@ The term `data assimilation` has been chosen by the autors as an alternative to 
 - `harmonisation`; transforming results from observations and measurements to values as if all results for a property are measured using the same procedure, by applying so called [Pedotransfer Functions (PTF)](https://en.wikipedia.org/wiki/Pedotransfer_function).
 
 The wiki has been initiated by ISRIC - World Soil Information and Wageningen University as part of 2 workshops for Soil Data Providers, held in 2022 and 2023 in the scope of the EJPSoil project.
+
+::: {layout-ncol=2}
+[![](https://search.researchequipment.wur.nl/resources/images/WUR_ZW_standard_cropped.png){fig-alt="WUR logo"}](https://www.wur.nl/en/research-results/research-institutes/environmental-research.htm)
+[![](https://www.isric.org/themes/custom/basic/logo.svg){fig-alt="ISRIC logo"}](https://www.isric.org)
+:::

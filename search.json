@@ -842,63 +842,70 @@
   {
     "objectID": "cookbook/pygeometa.html",
     "href": "cookbook/pygeometa.html",
-    "title": "A Pythonic metadata workflow",
+    "title": "A participatory metadata workflow",
     "section": "",
-    "text": "This recipe presents a minimalistic, however integrated and standardised approach to metadata management. Each data file on a file system will be accompagnied by a minimal YML metadata file. Crawler scripts will pick up these metadata files and publish them as iso19139 (or alternative models) on a catalogue. iso19139 is the metadata model currently mandated by INSPIRE and very common in the GeoSpatial domain. Other communities tend to use different standards, such as STAC (Earth Observation), DCAT (Open Data), DataCite (Academia), etc.\nThe recipe introduces you to a pythonic metadata workflow step by step."
+    "text": "This recipe presents a participatory, integrated and standardised approach to metadata management. Each data file on a file system will be accompagnied by a minimal metadata file. Crawler scripts will pick up these metadata files and publish them as iso19139 (or alternative models) on a searchable catalogue. iso19139 is the metadata model currently mandated by INSPIRE and very common in the GeoSpatial domain. Other communities tend to use different standards, such as STAC (Earth Observation), DCAT (Open Data), DataCite (Academia), which can benefit from the metadata workflow etc.\nThe recipe introduces you to the participatory metadata workflow step by step."
   },
   {
     "objectID": "cookbook/pygeometa.html#initial",
     "href": "cookbook/pygeometa.html#initial",
-    "title": "A Pythonic metadata workflow",
+    "title": "A participatory metadata workflow",
     "section": "Initial",
     "text": "Initial\nThe inital step assumes a folder of data files on a network drive, sharepoint or git repository. Datasets stored on a database will not be considered for now, but can follow a similar workflow.\nFor each data file in the folder we will create a metadata control file (MCF). MCF is a convention from the pygeometa community. It is a YAML encoded subset of iso19139:2007. YAML is easy to read by humans and an optimal for content versioning (in git).\nConsider to set up a virtual environment for the workshop:\nvirtualenv pygeometa && cd pygeometa && . bin/activate\nThen install the pygeometa library.\npip install pygeometa"
   },
   {
     "objectID": "cookbook/pygeometa.html#create-an-mcf",
     "href": "cookbook/pygeometa.html#create-an-mcf",
-    "title": "A Pythonic metadata workflow",
+    "title": "A participatory metadata workflow",
     "section": "Create an MCF",
-    "text": "Create an MCF\nA minimal example of MCF is (see also a more extended version):\nmcf:\n    version: 1.0\n\nmetadata:\n    identifier: 3f342f64-9348-11df-ba6a-0014c2c00eab\n    language: en\n    hierarchylevel: dataset\n    datestamp: 2023-01-01\n\nspatial:\n    datatype: grid\n\nidentification:\n    language: eng\n    title: Soilgrids sample Dataset\n    abstract: This is a sample dataset for the EJP Soil Dataset Assimilation Masterclass\n    dates:\n        creation: 2023-01-01\n    keywords:\n        default:\n            keywords: [\"sample\"]\n    topiccategory:\n        - geoscientificInformation\n    extents:\n        spatial:\n            - bbox: [2,50,4,52]\n              crs: 4326\n    fees: None\n    accessconstraints: otherRestrictions\n    rights: CC-BY\n\ncontact:\n    pointOfContact: \n        organization: ISRIC - World Soil Information\n        url: https://www.isric.org\n        city: Wageningen\n        country: The Netherlands\n        email: info@isric.org\n\ncontent_info:\n    type: image\n    dimensions:\n        - name: N\n          units: g/m3\n          min: 10\n          max: 75\n        - name: P\n          units: mg/m3\n          min: 30\n          max: 75\n        - name: K\n          units: mg/m3\n          min: 0.5\n          max: 1.2\n\ndistribution:\n    wms:\n        url: https://maps.isric.org\n        type: OGC:WMS\n        rel: service\n        name: soilgrids\n\nUse the above template to create a metadata file for a dataset. The file should have the same name as the dataset, but with an extension .yml or .mcf."
+    "text": "Create an MCF\nA minimal example of MCF is (see also a more extended version):\nmcf:\n    version: 1.0\n\nmetadata:\n    identifier: 3f342f64-9348-11df-ba6a-0014c2c00eab\n    language: en\n    hierarchylevel: dataset\n    datestamp: 2023-01-01\n\nspatial:\n    datatype: grid\n\nidentification:\n    language: eng\n    title: Soilgrids sample Dataset\n    abstract: This is a sample dataset for the EJP Soil Dataset Assimilation Masterclass\n    dates:\n        creation: 2023-01-01\n    keywords:\n        default:\n            keywords: [\"sample\"]\n    topiccategory:\n        - geoscientificInformation\n    extents:\n        spatial:\n            - bbox: [2,50,4,52]\n              crs: 4326\n    fees: None\n    accessconstraints: otherRestrictions\n    rights: CC-BY\n\ncontact:\n    pointOfContact: \n        organization: ISRIC - World Soil Information\n        url: https://www.isric.org\n        city: Wageningen\n        country: The Netherlands\n        email: info@isric.org\n\ndistribution:\n    wms:\n        url: https://maps.isric.org\n        type: OGC:WMS\n        rel: service\n        name: soilgrids\nUse the above template to create a metadata file for a dataset. The file should have the same name as the dataset, but with an extension .yml or .mcf. Alternatively, MDME is an online visual editor for mcf files."
   },
   {
     "objectID": "cookbook/pygeometa.html#import-existing-metadata",
     "href": "cookbook/pygeometa.html#import-existing-metadata",
-    "title": "A Pythonic metadata workflow",
+    "title": "A participatory metadata workflow",
     "section": "Import existing metadata",
     "text": "Import existing metadata\n\nIf the data file already has a metadata document (for example with a shapefile, if it contains a file with extension .shp.xml), you can try to import it using pygeometa. pygeometa requires to indicate the metadata schema in advance.\n\nFor iso19139:2007 use:\npygeometa metadata import path/to/file.xml --schema=iso19139\nFor fgdc (typically used with shapefiles) use:\npygeometa metadata import path/to/file.xml --schema=fgdc"
   },
   {
     "objectID": "cookbook/pygeometa.html#generate-iso191392007",
     "href": "cookbook/pygeometa.html#generate-iso191392007",
-    "title": "A Pythonic metadata workflow",
+    "title": "A participatory metadata workflow",
     "section": "Generate iso19139:2007",
-    "text": "Generate iso19139:2007\nAs soon as you have a folder of MCF’s, you can use pygeometa generate to convert them to iso19139:2007.\npygeometa metadata generate path/to/file.yml --schema=iso19139 --output=some_file.xml\nOr for a folder of files:\nFILES=\"/path/to/*.yml\"\nfor f in $FILES\ndo\n  echo \"Processing $f file...\"\n  pygeometa metadata generate $f --schema=iso19139 --output=$f.xml\ndone\nNotice that you can also create your own template for the iso19139 generation. By using a customised template you’re able to optimise the generated iso19139 records to facilitate for example better INSPIRE complience.\npygeometa metadata generate path/to/file.yml --schema_local=/path/to/my-schema --output=some_file.xml"
+    "text": "Generate iso19139:2007\nAs soon as you have a folder of MCF’s, you can use pygeometa generate to convert them to iso19139:2007.\npygeometa metadata generate path/to/file.yml --schema=iso19139 --output=some_file.xml\nOr for a folder of files, save the content below to a .sh (mac/linux) or .bat (windows) file and run it:\nFILES=\"/path/to/*.yml\"\nfor f in $FILES\ndo\n  echo \"Processing $f file...\"\n  pygeometa metadata generate $f --schema=iso19139 --output=$f.xml\ndone\nNotice that you can also create your own schema for the iso19139 generation. By using a customised template you’re able to include additional properties for example to have better INSPIRE complience.\npygeometa metadata generate path/to/file.yml --schema_local=/path/to/my-schema --output=some_file.xml"
   },
   {
-    "objectID": "cookbook/pygeometa.html#import-generated-metadata-to-pycsw",
-    "href": "cookbook/pygeometa.html#import-generated-metadata-to-pycsw",
-    "title": "A Pythonic metadata workflow",
-    "section": "Import generated metadata to pycsw",
-    "text": "Import generated metadata to pycsw\npycsw is a python based OGC reference implementation of Catalog Service for the Web and an early adaptor of OGC API Records and STAC Catalog. We’ll use pycsw via a docker image to publish the metadata records in a search service. We run it in detach mode so we can interact with the running container, type docker stop pycsw to stop the container.\ndocker run -d --rm --name pycsw -p 8000:8000 geopython/pycsw\nWe now have a running pycsw at http://localhost:8000/collections with some sample data. We will now remove the sample data and insert our metadata. For that reason we mount our current folder with xml files into the container\ndocker stop pycsw\ndocker run -d --rm --name pycsw -v ${PWD}:/metadata -p 8000:8000 geopython/pycsw\nNow we can trigger pycsw admin to remove the default records and import our metadata. As part of the calls we reference the config file, which contains the connection details to the database.\ndocker exec -ti pycsw pycsw-admin.py delete-records -c /etc/pycsw/pycsw.cfg\ndocker exec -ti pycsw pycsw-admin.py load-records -c /etc/pycsw/pycsw.cfg -p /metadata -r\nCheck out the new content at http://localhost:8000/collections. Note that if you restart the container, all records are removed, because the database is currently not persisted on a volume.\nTry to mount also a customised configuration file into the container, so you can optimise the configuration of the catalogue. Also have a look at the INSPIRE extension for pycsw."
+    "objectID": "cookbook/pygeometa.html#import-generated-metadata-to-a-searchable-catalogue",
+    "href": "cookbook/pygeometa.html#import-generated-metadata-to-a-searchable-catalogue",
+    "title": "A participatory metadata workflow",
+    "section": "Import generated metadata to a searchable catalogue",
+    "text": "Import generated metadata to a searchable catalogue\npycsw is a python based OGC reference implementation of Catalog Service for the Web and an early adaptor of OGC API Records and STAC Catalog. We’ll use pycsw via a docker image to publish the metadata records in a search service. We run it in detach mode so we can interact with the running container, type docker stop pycsw to stop the container.\ndocker run -d --rm --name pycsw -p 8000:8000 geopython/pycsw\nWe now have a running pycsw at http://localhost:8000/collections with some sample data. We will now remove the sample data and insert our metadata. For that reason we mount our current folder with xml files into the container\ndocker stop pycsw\ndocker run -d --rm --name pycsw -v ${PWD}:/metadata -p 8000:8000 geopython/pycsw\nNow we can trigger pycsw admin to remove the default records and import our metadata. As part of the calls we reference the config file, which contains the connection details to the database.\ndocker exec -ti pycsw pycsw-admin.py delete-records -c /etc/pycsw/pycsw.cfg\ndocker exec -ti pycsw pycsw-admin.py load-records -c /etc/pycsw/pycsw.cfg -p /metadata -r\nCheck out the new content at http://localhost:8000/collections. Note that if you restart the container, all records are removed, because the database is currently not persisted on a volume.\nTry to mount also a customised configuration file into the container, so you can optimise the configuration of the catalogue. Also have a look at the INSPIRE extension for pycsw."
+  },
+  {
+    "objectID": "cookbook/pygeometa.html#automated-workflows",
+    "href": "cookbook/pygeometa.html#automated-workflows",
+    "title": "A participatory metadata workflow",
+    "section": "Automated workflows",
+    "text": "Automated workflows\nThe tasks above are carried out manually. However they can also be set up to run automated at file changes or at regular intervals using cron jobs. With such an approach you can automatically update the catalogue content when for example some metadata records are updated or added to the GIT repository (CI-CD). To facilitate the participatory approach, consider to include a link from the dataset page in the catalogue back to the git source, to invite users to suggest optimizations to the metadata records (as GIT issue or Pull Request)."
   },
   {
     "objectID": "cookbook/pygeometa.html#evaluate-metadata-and-discovery-service",
     "href": "cookbook/pygeometa.html#evaluate-metadata-and-discovery-service",
-    "title": "A Pythonic metadata workflow",
+    "title": "A participatory metadata workflow",
     "section": "Evaluate Metadata and Discovery Service",
     "text": "Evaluate Metadata and Discovery Service\nYou can evaluate individual iso19139 records in the INSPIRE reference validator. Also you can evaluate the discovery service. If a service is running on localhost, use the tunnel approach to evaluate it."
   },
   {
     "objectID": "cookbook/pygeometa.html#access-the-service-from-qgis",
     "href": "cookbook/pygeometa.html#access-the-service-from-qgis",
-    "title": "A Pythonic metadata workflow",
+    "title": "A participatory metadata workflow",
     "section": "Access the service from QGIS",
     "text": "Access the service from QGIS\nQGIS contains a default plugin called MetaSearch which enables catalogue searches from within QGIS. You can find the plugin in the web menu or on the toolbar as a set of binoculars. Open the plugin. First you need to set up a new service connection. On the services tab, click new, choose a name and add the url http://localhost:8080/csw. Click the serviceinfo button to view the metadata of the service. Now return to the Search tab and perform a search. Notice that if you select a search result, it highlights on the map and may trigger the Add data button in the footer (this depends on if QGIS recognises the protocol mentioned in the metadata)."
   },
   {
     "objectID": "cookbook/pygeometa.html#read-more",
     "href": "cookbook/pygeometa.html#read-more",
-    "title": "A Pythonic metadata workflow",
+    "title": "A participatory metadata workflow",
     "section": "Read more",
     "text": "Read more\nAt masterclass edition 2023 Tom Kralidis presented the geopython ecosystem, including pycsw.\n\n\n\ngithub the geopython community welcomes your questions and contributions.\npygeometa\npycsw\npyGeoDataCrawler is a set of scripts to manage MCF’s. It supports importing MCF from a CSV, MCF inheritence, generate MCF from a data file, etc.\nModel Driven Metadata Editor A web based GUI for populating MCF’s."
   },

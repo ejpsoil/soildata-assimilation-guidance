@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Soil data guidance - A Pythonic metadata workflow</title>
+<title>Soil data guidance - A participatory metadata workflow</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -138,7 +138,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#create-an-mcf" id="toc-create-an-mcf" class="nav-link" data-scroll-target="#create-an-mcf">Create an MCF</a></li>
   <li><a href="#import-existing-metadata" id="toc-import-existing-metadata" class="nav-link" data-scroll-target="#import-existing-metadata">Import existing metadata</a></li>
   <li><a href="#generate-iso191392007" id="toc-generate-iso191392007" class="nav-link" data-scroll-target="#generate-iso191392007">Generate iso19139:2007</a></li>
-  <li><a href="#import-generated-metadata-to-pycsw" id="toc-import-generated-metadata-to-pycsw" class="nav-link" data-scroll-target="#import-generated-metadata-to-pycsw">Import generated metadata to pycsw</a></li>
+  <li><a href="#import-generated-metadata-to-a-searchable-catalogue" id="toc-import-generated-metadata-to-a-searchable-catalogue" class="nav-link" data-scroll-target="#import-generated-metadata-to-a-searchable-catalogue">Import generated metadata to a searchable catalogue</a></li>
+  <li><a href="#automated-workflows" id="toc-automated-workflows" class="nav-link" data-scroll-target="#automated-workflows">Automated workflows</a></li>
   <li><a href="#evaluate-metadata-and-discovery-service" id="toc-evaluate-metadata-and-discovery-service" class="nav-link" data-scroll-target="#evaluate-metadata-and-discovery-service">Evaluate Metadata and Discovery Service</a></li>
   <li><a href="#access-the-service-from-qgis" id="toc-access-the-service-from-qgis" class="nav-link" data-scroll-target="#access-the-service-from-qgis">Access the service from QGIS</a></li>
   <li><a href="#read-more" id="toc-read-more" class="nav-link" data-scroll-target="#read-more">Read more</a></li>
@@ -150,7 +151,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">A Pythonic metadata workflow</h1>
+<h1 class="title">A participatory metadata workflow</h1>
 </div>
 
 
@@ -165,8 +166,8 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>This recipe presents a minimalistic, however integrated and standardised approach to metadata management. Each data file on a file system will be accompagnied by a minimal YML metadata file. Crawler scripts will pick up these metadata files and publish them as iso19139 (or alternative models) on a catalogue. iso19139 is the metadata model currently <a href="https://inspire.ec.europa.eu/id/document/tg/metadata-iso19139">mandated by INSPIRE</a> and very common in the GeoSpatial domain. Other communities tend to use different standards, such as <a href="https://stacspec.org/en/about/stac-spec/">STAC</a> (Earth Observation), <a href="https://www.w3.org/TR/vocab-dcat-2/">DCAT</a> (Open Data), <a href="https://schema.datacite.org/">DataCite</a> (Academia), etc.</p>
-<p>The recipe introduces you to a pythonic metadata workflow step by step.</p>
+<p>This recipe presents a participatory, integrated and standardised approach to metadata management. Each data file on a file system will be accompagnied by a minimal metadata file. Crawler scripts will pick up these metadata files and publish them as iso19139 (or alternative models) on a searchable catalogue. iso19139 is the metadata model currently <a href="https://inspire.ec.europa.eu/id/document/tg/metadata-iso19139">mandated by INSPIRE</a> and very common in the GeoSpatial domain. Other communities tend to use different standards, such as <a href="https://stacspec.org/en/about/stac-spec/">STAC</a> (Earth Observation), <a href="https://www.w3.org/TR/vocab-dcat-2/">DCAT</a> (Open Data), <a href="https://schema.datacite.org/">DataCite</a> (Academia), which can benefit from the metadata workflow etc.</p>
+<p>The recipe introduces you to the participatory metadata workflow step by step.</p>
 <section id="initial" class="level2">
 <h2 class="anchored" data-anchor-id="initial">Initial</h2>
 <p>The inital step assumes a folder of data files on a network drive, sharepoint or git repository. Datasets stored on a database will not be considered for now, but can follow a similar workflow.</p>
@@ -218,31 +219,13 @@ contact:
         country: The Netherlands
         email: info@isric.org
 
-content_info:
-    type: image
-    dimensions:
-        - name: N
-          units: g/m3
-          min: 10
-          max: 75
-        - name: P
-          units: mg/m3
-          min: 30
-          max: 75
-        - name: K
-          units: mg/m3
-          min: 0.5
-          max: 1.2
-
 distribution:
     wms:
         url: https://maps.isric.org
         type: OGC:WMS
         rel: service
         name: soilgrids</code></pre>
-<ul>
-<li>Use the above template to create a metadata file for a dataset. The file should have the same name as the dataset, but with an extension <code>.yml</code> or <code>.mcf</code>.</li>
-</ul>
+<p>Use the above template to create a metadata file for a dataset. The file should have the same name as the dataset, but with an extension <code>.yml</code> or <code>.mcf</code>. Alternatively, <a href="https://osgeo.github.io/mdme">MDME</a> is an online visual editor for mcf files.</p>
 </section>
 <section id="import-existing-metadata" class="level2">
 <h2 class="anchored" data-anchor-id="import-existing-metadata">Import existing metadata</h2>
@@ -258,18 +241,18 @@ distribution:
 <h2 class="anchored" data-anchor-id="generate-iso191392007">Generate iso19139:2007</h2>
 <p>As soon as you have a folder of MCF’s, you can use <code>pygeometa generate</code> to convert them to iso19139:2007.</p>
 <pre><code>pygeometa metadata generate path/to/file.yml --schema=iso19139 --output=some_file.xml</code></pre>
-<p>Or for a folder of files:</p>
+<p>Or for a folder of files, save the content below to a .sh (mac/linux) or .bat (windows) file and run it:</p>
 <pre><code>FILES="/path/to/*.yml"
 for f in $FILES
 do
   echo "Processing $f file..."
   pygeometa metadata generate $f --schema=iso19139 --output=$f.xml
 done</code></pre>
-<p>Notice that you can also create your own template for the iso19139 generation. By using a customised template you’re able to optimise the generated iso19139 records to facilitate for example better INSPIRE complience.</p>
+<p>Notice that you can also <a href="https://geopython.github.io/pygeometa/tutorial/#adding-a-metadata-schema-to-the-core">create your own schema</a> for the iso19139 generation. By using a customised template you’re able to include additional properties for example to have better INSPIRE complience.</p>
 <pre><code>pygeometa metadata generate path/to/file.yml --schema_local=/path/to/my-schema --output=some_file.xml</code></pre>
 </section>
-<section id="import-generated-metadata-to-pycsw" class="level2">
-<h2 class="anchored" data-anchor-id="import-generated-metadata-to-pycsw">Import generated metadata to pycsw</h2>
+<section id="import-generated-metadata-to-a-searchable-catalogue" class="level2">
+<h2 class="anchored" data-anchor-id="import-generated-metadata-to-a-searchable-catalogue">Import generated metadata to a searchable catalogue</h2>
 <p><a href="https://www.pycsw.org">pycsw</a> is a python based OGC reference implementation of <a href="https://www.ogc.org/standards/cat">Catalog Service for the Web</a> and an early adaptor of <a href="https://ogcapi.ogc.org/records/">OGC API Records</a> and <a href="https://stacspec.org/en">STAC Catalog</a>. We’ll use pycsw via a <a href="https://docs.pycsw.org/en/latest/docker.html">docker image</a> to publish the metadata records in a search service. We run it in <code>detach</code> mode so we can interact with the running container, type <code>docker stop pycsw</code> to stop the container.</p>
 <pre><code>docker run -d --rm --name pycsw -p 8000:8000 geopython/pycsw</code></pre>
 <p>We now have a running pycsw at http://localhost:8000/collections with some sample data. We will now remove the sample data and insert our metadata. For that reason we <code>mount</code> our current folder with xml files into the container</p>
@@ -280,6 +263,10 @@ docker run -d --rm --name pycsw -v ${PWD}:/metadata -p 8000:8000 geopython/pycsw
 docker exec -ti pycsw pycsw-admin.py load-records -c /etc/pycsw/pycsw.cfg -p /metadata -r</code></pre>
 <p>Check out the new content at http://localhost:8000/collections. Note that if you restart the container, all records are removed, because the database is currently not persisted on a volume.</p>
 <p>Try to mount also a customised <a href="https://github.com/geopython/pycsw/blob/master/docker/pycsw.cfg">configuration file</a> into the container, so you can optimise the configuration of the catalogue. Also have a look at the <a href="https://docs.pycsw.org/en/latest/profiles.html#inspire-extension">INSPIRE extension</a> for pycsw.</p>
+</section>
+<section id="automated-workflows" class="level2">
+<h2 class="anchored" data-anchor-id="automated-workflows">Automated workflows</h2>
+<p>The tasks above are carried out manually. However they can also be set up to run automated at file changes or at regular intervals using cron jobs. With such an approach you can automatically update the catalogue content when for example some metadata records are updated or added to the GIT repository (CI-CD). To facilitate the participatory approach, consider to include a link from the dataset page in the catalogue back to the git source, to invite users to suggest optimizations to the metadata records (as GIT issue or Pull Request).</p>
 </section>
 <section id="evaluate-metadata-and-discovery-service" class="level2">
 <h2 class="anchored" data-anchor-id="evaluate-metadata-and-discovery-service">Evaluate Metadata and Discovery Service</h2>

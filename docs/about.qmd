@@ -17,5 +17,6 @@ The wiki has been initiated by ISRIC - World Soil Information and Wageningen Uni
 
 ::: {layout-ncol=2}
 [![](https://search.researchequipment.wur.nl/resources/images/WUR_ZW_standard_cropped.png){fig-alt="WUR logo"}](https://www.wur.nl/en/research-results/research-institutes/environmental-research.htm)
+
 [![](https://www.isric.org/themes/custom/basic/logo.svg){fig-alt="ISRIC logo"}](https://www.isric.org)
 :::

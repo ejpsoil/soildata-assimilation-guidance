@@ -9,15 +9,14 @@ date: 2023-04-11
 This WIKI is a collaborative effort to collect and describe hands-on good practices on data assimilation in the 
 [Soil](https://agrovoc.fao.org/browse/agrovoc/en/page/c_7156) domain, with a focus on Europe. The [INSPIRE](https://inspire.ec.europa.eu/) directive 
 has been and is an important effort for standardisation in the environmental data domain, therefore this WIKI has a lot of links to INSPIRE sources. 
-Because INSPIRE adopts industry standards, this WIKI does reference common standards from ISO, Open Geospatial Consortium, Global Soils Partnership, 
-IANA and W3C, giving it a global relevance.
+Because INSPIRE adopts industry standards, this WIKI does reference common standards from [ISO TC211](https://www.iso.org/committee/54904.html), [Open Geospatial Consortium](https://opengeospatial.org) (OGC), [Global Soils Partnership](https://www.fao.org/global-soil-partnership/en/) (GSP), 
+[International Assigned Numbers Authority](https://www.iana.org/) (IANA) and [World Wide Web Consortium](https://www.w3.org/) (W3C), giving it a global relevance.
 
 The term `data assimilation` has been chosen by the autors as an alternative to the terms harmonisation and standardisation, which already have a 
 specific meaning in the soil domain:
 
 - `standardisation`; aligning soil data to a common model, using common codelists.
-- `harmonisation`; transforming results from observations and measurements to values as if all results for a property are measured using the same 
-- procedure, by applying so called [Pedotransfer Functions (PTF)](https://en.wikipedia.org/wiki/Pedotransfer_function).
+- `harmonisation`; transforming results from observations and measurements to values as if all results for a property are measured using the same procedure, by applying so called [Pedotransfer Functions (PTF)](https://en.wikipedia.org/wiki/Pedotransfer_function).
 
 The wiki has been initiated by ISRIC - World Soil Information and Wageningen University as part of 2 workshops for Soil Data Providers, held in 
 2022 and 2023 in the scope of the [EJPSoil project](https://ejpsoil.eu). The EJPSoil project has received funding from the European Union’s horizon 2020

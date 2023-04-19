@@ -48,9 +48,9 @@ The practices cover 7 topics.
 - [Download services](download.qmd)
 - [Quality of service](QOS.qmd)
 
-!!! info
-
-    Disclaimer: References to products and approaches are examples. We do not aim to provide a complete listing, nor endorse a specific technology or service provider. Please consult any alternative software provider to what extent INSPIRE is supported in their products. In that scenario consider to contribute your experiences to this WIKI. 
+::: {.callout-note}
+References to products and approaches are examples. We do not aim to provide a complete listing, nor endorse a specific technology or service provider. Please consult any alternative software provider to what extent INSPIRE is supported in their products. In that scenario consider to contribute your experiences to this WIKI. 
+:::
 
 ## Reading guide
 

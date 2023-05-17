@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.475">
+<meta name="generator" content="quarto-1.3.353">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -18,7 +18,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -75,53 +75,55 @@ ul.task-list li input[type="checkbox"] {
     <img src="https://ejpsoil.eu/fileadmin/projects/ejpsoil/EJP_Soil_logo_cmyk-h100.png" alt="EJPSoil website" class="navbar-logo">
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html">
+    <a class="nav-link" href="./index.html" rel="" target="">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./identification.html">
+    <a class="nav-link" href="./identification.html" rel="" target="">
  <span class="menu-text">Identification</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./etl.html">
+    <a class="nav-link" href="./etl.html" rel="" target="">
  <span class="menu-text">Harmonization</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./codelists.html">
+    <a class="nav-link" href="./codelists.html" rel="" target="">
  <span class="menu-text">Code lists</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./metadata.html">
+    <a class="nav-link" href="./metadata.html" rel="" target="">
  <span class="menu-text">Discovery</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./view.html">
+    <a class="nav-link" href="./view.html" rel="" target="">
  <span class="menu-text">View</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./download.html">
+    <a class="nav-link" href="./download.html" rel="" target="">
  <span class="menu-text">Download</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./QOS.html">
+    <a class="nav-link" href="./QOS.html" rel="" target="">
  <span class="menu-text">QOS</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./utils/index.html">
+    <a class="nav-link" href="./utils/index.html" rel="" target="">
  <span class="menu-text">Utils</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./glossary.html" aria-current="page">
+    <a class="nav-link active" href="./glossary.html" rel="" target="" aria-current="page">
  <span class="menu-text">Glossary</span></a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
@@ -169,31 +171,44 @@ ul.task-list li input[type="checkbox"] {
 <p>This page includes terms that we use in our wiki, so that you have a reference for how we’re using them.</p>
 <p><em>Application programming interface (API)</em> is a way for two or more computer programs to communicate with each other (source <a href="https://en.wikipedia.org/wiki/API">wikipedia</a>)</p>
 <p><em>Assimilation</em> is a catchy term indicating the processes involved to combine multiple datasets with different origin into a common dataset, the term is somewhat similarly used in psychology as <code>incorporation of new concepts into existing schemes</code> (source <a href="https://en.wikipedia.org/wiki/Assimilation">wikipedia</a>). But is not well aligned with its usage in the data science community: <code>updating a numerical model with observed data</code> (source <a href="https://en.wikipedia.org/wiki/Assimilation">wikipedia</a>)</p>
-<p><em>Catalogue</em> or <em>metadata registry</em> is a central location in an organization where metadata definitions are stored and maintained (source <a href="https://en.wikipedia.org/wiki/Metadata_registry">wikipedia</a>)</p>
 <p><em>ATOM</em> is a standardised interface to exchange news feeds over the internet. It has been adopted by INSPIRE as a basic alternative to download services via WFS or WCS.</p>
+<p><em>Carbon sequestration</em> the process of storing carbon (source: <a href="https://en.wikipedia.org/wiki/Carbon_sequestration">wikipedia</a>)</p>
+<p><em>Carbon stock</em> the (predicted) amount of carbon stored in a soil</p>
+<p><em>Catalogue</em> or <em>metadata registry</em> is a central location in an organization where metadata definitions are stored and maintained (source <a href="https://en.wikipedia.org/wiki/Metadata_registry">wikipedia</a>)</p>
 <p><em>Conceptual model</em> or <em>domain model</em> represents concepts (entities) and relationships between them (source <a href="https://en.wikipedia.org/wiki/Conceptual_model_(computer_science)">wikipedia</a>)</p>
 <p><em>Content negotiation</em> refers to mechanisms that make it possible to serve different representations of a resource at the same URI (source <a href="https://en.wikipedia.org/wiki/Content_negotiation">wikipedia</a>)</p>
+<p><em>Cordis</em> is the primary source of <a href="https://cordis.europa.eu/">results from EU-funded projects</a> since 1990</p>
+<p><a href="https://dataverse.org/"><em>Dataverse</em></a> is open source research data repository software</p>
+<p><a href="https://datacite.org/"><em>Datacite</em></a> is a non-profit organisation that provides persistent identifiers (DOIs) for research data. It i</p>
+<p><a href="https://schema.datacite.org/"><em>Datacite metadata schema</em></a> a datamodel for metadata for scientific resources</p>
 <p><em>Digital exchange of soil-related data (ISO 28258:2013)</em> presents a conceptual model of a common understanding of what soil profile data are</p>
+<p><em>Digital soil mapping</em> is the creation and the population of a geographically referenced soil databases generated at a given resolution by using field and laboratory observation methods coupled with environmental data through quantitative relationships (source: <a href="https://en.wikipedia.org/wiki/Digital_soil_mapping">Wikipedia</a>)</p>
 <p><em>Discovery service</em> is a concept from <a href="https://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/discovery">INSPRE</a> indicating a service type which enables discovery of resources (search and find). Typically implemented as CSW.</p>
 <p><em>Download service</em> is a concept from <a href="https://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/download">INSPRE</a> indicating a service type which enables download of a (subset of a) dataset. Typically implemented as WFS, WCS, SOS or Atom.</p>
+<p><a href="https://www.doi.org/"><em>DOI</em></a> a digital identifier of an object, any object — physical, digital, or abstract</p>
 <p><em>Encoding</em> is the format used to <a href="https://en.wikipedia.org/wiki/Serialization">serialise</a> a resource to a file, common encodings are xml, json, turtle</p>
+<p><a href="https://esdac.jrc.ec.europa.eu/"><em>ESDAC</em></a> thematic centre for soil related data in Europe</p>
+<p><a href="https://joint-research-centre.ec.europa.eu/eu-soil-observatory-euso_en"><em>EUSO</em></a> European Soil Observatory</p>
 <p><em>Geography Markup Language (GML)</em> is an xml based standardised encoding for spatial data.</p>
 <p><em>Global Soil Information System (<a href="https://www.fao.org/global-soil-partnership/areas-of-work/soil-information-and-data/en/">GLOSIS</a>)</em> is an activity of FAO Global Soil Partnership enabling a federation of soil information systems and interoperable data sets</p>
 <p><em>GLOSIS domain model</em> is an abstract, architectural component that defines how data are organised; it embodies a common understanding of what soil profile data are.</p>
 <p><em><a href="https://github.com/rapw3k/glosis">GLOSIS Web Ontology</a></em> is an implementation of the GLOSIS domain model using semantic technology</p>
 <p><em><a href="https://github.com/rapw3k/glosis/blob/master/glosis_cl.ttl">GLOSIS Codelists</a></em> is a series of codelists supporting the GLOSIS web ontology. Including the codelists as published in the FAO Guidelines for Soil Description (v2007), soil properties as collected by FAO GfSD and procedures as initally collected by Johan Leenaars.</p>
 <p><em>Harmonization</em> is the process of transforming 2 datasets to a common model, a common projection, usage of common domain values and align their geometries</p>
+<p><em>JRC</em> Joint Research Centre. The JRC provides independent, evidence-based science and knowledge, supporting EU policies to positively impact society. Relevant policy areas within JRC are <a href="https://joint-research-centre.ec.europa.eu/scientific-activities-z/soil_en">JRC Soil</a> and <a href="https://inspire.ec.europa.eu/whos-who-inspire/57734">JRC INSPIRE</a></p>
 <p>Observations and Measurements (O&amp;M)</p>
 <p>OGC API</p>
 <p>Ontology</p>
 <p>Publication</p>
+<p><em>REA</em> is the European Research Executive Agency, it’s mandate is to manage several EU programmes and support services.</p>
 <p>Relational model</p>
 <p>RDF</p>
 <p>REST</p>
 <p>Registry</p>
 <p>Repository</p>
-<p>SensorthingsAPI</p>
+<p>SensorthingsAPI (STA)</p>
 <p>SOS</p>
+<p>Soil classification deals with the systematic categorization of soils based on distinguishing characteristics as well as criteria that dictate choices in use (source: <a href="https://en.wikipedia.org/wiki/Soil_classification">wikipedia</a>)</p>
 <p>UML model</p>
 <p><em>View service</em> is a concept from <a href="https://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view">INSPRE</a> indicating a service type which presents a (pre)view of a dataset. Typically implemented as WMS or WMTS.</p>
 <p>Webservice</p>
@@ -233,9 +248,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -300,6 +329,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -342,6 +457,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/glossary.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">

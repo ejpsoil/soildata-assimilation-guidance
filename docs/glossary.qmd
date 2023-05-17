@@ -63,6 +63,8 @@ This page includes terms that we use in our wiki, so that you have a reference f
 
 *[GLOSIS Codelists](https://github.com/rapw3k/glosis/blob/master/glosis_cl.ttl)* is a series of codelists supporting the GLOSIS web ontology. Including the codelists as published in the FAO Guidelines for Soil Description (v2007), soil properties as collected by FAO GfSD and procedures as initally collected by Johan Leenaars.
 
+[Glosolan](https://www.fao.org/global-soil-partnership/glosolan) network to strengthen the capacity of laboratories in soil analysis and to respond to the need for harmonizing soil analytical data
+
 *Harmonization* is the process of transforming 2 datasets to a common model, a common projection, usage of common domain values and align their geometries
 
 *JRC* Joint Research Centre. The JRC provides independent, evidence-based science and knowledge, supporting EU policies to positively impact society. Relevant policy areas within JRC are [JRC Soil](https://joint-research-centre.ec.europa.eu/scientific-activities-z/soil_en) and [JRC INSPIRE](https://inspire.ec.europa.eu/whos-who-inspire/57734)
@@ -71,19 +73,15 @@ This page includes terms that we use in our wiki, so that you have a reference f
 
 [OGC API](https://ogcapi.ogc.org/) building blocks that can be used to assemble novel APIs for web access to geospatial content
 
-Ontology
+*Ontology* a way of showing the properties of a subject area and how they are related, by defining a set of concepts and categories that represent the subject. (source: [wikipedia](https://en.wikipedia.org/wiki/Ontology_(computer_science)))
 
 *REA* is the European Research Executive Agency, it's mandate is to manage several EU programmes and support services.
 
-Relational model
+*Relational model* an approach to managing data using a structure and language consistent with first-order predicate logic (source: [wikipedia](https://en.wikipedia.org/wiki/Relational_model))
 
-RDF
+[Resource Description Framework](https://www.w3.org/RDF/) (RDF) a standard model for data interchange on the Web
 
-REST
-
-Registry
-
-Repository
+Representational state transfer (REST) a set of guidelines for creating stateless, reliable web APIs (source: [wikipedia](https://en.wikipedia.org/wiki/Representational_state_transfer))
 
 [SensorthingsAPI](https://www.ogc.org/standard/sensorthings/) (STA)
 
@@ -91,11 +89,13 @@ Repository
 
 Soil classification deals with the systematic categorization of soils based on distinguishing characteristics as well as criteria that dictate choices in use (source: [wikipedia](https://en.wikipedia.org/wiki/Soil_classification))
 
-UML model 
+*Soil spectroscopy* (source: [soilspectroscopy.org](https://soilspectroscopy.org/) is the measurement of light absorption. The proportion of the incident radiation reflected by soil is sensed through reflectance spectroscopy.
+
+*Unified Modeling Language* (UML) a general-purpose modeling language that is intended to provide a standard way to visualize the design of a system (source: [wikipedia](https://en.wikipedia.org/wiki/Unified_Modeling_Language))
 
 *View service* is a concept from [INSPRE](https://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view) indicating a service type which presents a (pre)view of a dataset. Typically implemented as WMS or WMTS.
 
-Webservice
+*Webservice* a service offered by a device to another device, communicating with each other via the Internet (source: [wikipedia](https://en.wikipedia.org/wiki/Web_service))
 
 [WMS](https://www.ogc.org/standard/wms/) Web Map service
 
@@ -105,5 +105,5 @@ Webservice
 
 [WMTS](https://www.ogc.org/standard/wmts) Web Map Tile Service
 
-XSD
+*XML Schema Definition* (XSD) recommendation how to formally describe the elements in an Extensible Markup Language (XML) document (source: [wikipedia](https://en.wikipedia.org/wiki/XML_Schema_(W3C))
 

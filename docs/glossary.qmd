@@ -13,21 +13,41 @@ This page includes terms that we use in our wiki, so that you have a reference f
 
 *Assimilation* is a catchy term indicating the processes involved to combine multiple datasets with different origin into a common dataset, the term is somewhat similarly used in psychology as `incorporation of new concepts into existing schemes` (source [wikipedia](https://en.wikipedia.org/wiki/Assimilation)). But is not well aligned with its usage in the data science community: ` updating a numerical model with observed data` (source [wikipedia](https://en.wikipedia.org/wiki/Assimilation))
 
-*Catalogue* or *metadata registry* is a central location in an organization where metadata definitions are stored and maintained (source [wikipedia](https://en.wikipedia.org/wiki/Metadata_registry))
-
 *ATOM* is a standardised interface to exchange news feeds over the internet. It has been adopted by INSPIRE as a basic alternative to download services via WFS or WCS.
+
+*Carbon sequestration* the process of storing carbon (source: [wikipedia](https://en.wikipedia.org/wiki/Carbon_sequestration))
+
+*Carbon stock* the (predicted) amount of carbon stored in a soil
+
+*Catalogue* or *metadata registry* is a central location in an organization where metadata definitions are stored and maintained (source [wikipedia](https://en.wikipedia.org/wiki/Metadata_registry))
 
 *Conceptual model* or *domain model* represents concepts (entities) and relationships between them (source [wikipedia](https://en.wikipedia.org/wiki/Conceptual_model_(computer_science)))
 
 *Content negotiation* refers to mechanisms that make it possible to serve different representations of a resource at the same URI (source [wikipedia](https://en.wikipedia.org/wiki/Content_negotiation))
 
+*Cordis* is the primary source of [results from EU-funded projects](https://cordis.europa.eu/) since 1990
+
+[*Dataverse*](https://dataverse.org/) is open source research data repository software
+
+[*Datacite*](https://datacite.org/) is a non-profit organisation that provides persistent identifiers (DOIs) for research data. It i
+
+[*Datacite metadata schema*](https://schema.datacite.org/) a datamodel for metadata for scientific resources
+
 *Digital exchange of soil-related data (ISO 28258:2013)* presents a conceptual model of a common understanding of what soil profile data are
+
+*Digital soil mapping* is the creation and the population of a geographically referenced soil databases generated at a given resolution by using field and laboratory observation methods coupled with environmental data through quantitative relationships (source: [Wikipedia](https://en.wikipedia.org/wiki/Digital_soil_mapping))
 
 *Discovery service* is a concept from [INSPRE](https://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/discovery) indicating a service type which enables discovery of resources (search and find). Typically implemented as CSW.
 
 *Download service* is a concept from [INSPRE](https://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/download) indicating a service type which enables download of a (subset of a) dataset. Typically implemented as WFS, WCS, SOS or Atom.
 
+[*DOI*](https://www.doi.org/) a digital identifier of an object, any object — physical, digital, or abstract
+
 *Encoding* is the format used to [serialise](https://en.wikipedia.org/wiki/Serialization) a resource to a file, common encodings are xml, json, turtle
+
+[*ESDAC*](https://esdac.jrc.ec.europa.eu/) thematic centre for soil related data in Europe
+
+[*EUSO*](https://joint-research-centre.ec.europa.eu/eu-soil-observatory-euso_en) European Soil Observatory
 
 *Geography Markup Language (GML)* is an xml based standardised encoding for spatial data.
 
@@ -41,6 +61,8 @@ This page includes terms that we use in our wiki, so that you have a reference f
 
 *Harmonization* is the process of transforming 2 datasets to a common model, a common projection, usage of common domain values and align their geometries
 
+*JRC* Joint Research Centre. The JRC provides independent, evidence-based science and knowledge, supporting EU policies to positively impact society. Relevant policy areas within JRC are [JRC Soil](https://joint-research-centre.ec.europa.eu/scientific-activities-z/soil_en) and [JRC INSPIRE](https://inspire.ec.europa.eu/whos-who-inspire/57734)
+
 Observations and Measurements (O&M)
 
 OGC API
@@ -48,6 +70,8 @@ OGC API
 Ontology
 
 Publication
+
+*REA* is the European Research Executive Agency, it's mandate is to manage several EU programmes and support services.
 
 Relational model
 
@@ -59,11 +83,13 @@ Registry
 
 Repository
 
-SensorthingsAPI
+SensorthingsAPI (STA)
 
 SOS
 
-UML model
+Soil classification deals with the systematic categorization of soils based on distinguishing characteristics as well as criteria that dictate choices in use (source: [wikipedia](https://en.wikipedia.org/wiki/Soil_classification))
+
+UML model 
 
 *View service* is a concept from [INSPRE](https://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view) indicating a service type which presents a (pre)view of a dataset. Typically implemented as WMS or WMTS.
 

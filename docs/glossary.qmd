@@ -39,9 +39,9 @@ This page includes terms that we use in our wiki, so that you have a reference f
 
 *Digital soil mapping* is the creation and the population of a geographically referenced soil databases generated at a given resolution by using field and laboratory observation methods coupled with environmental data through quantitative relationships (source: [Wikipedia](https://en.wikipedia.org/wiki/Digital_soil_mapping))
 
-*Discovery service* is a concept from [INSPRE](https://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/discovery) indicating a service type which enables discovery of resources (search and find). Typically implemented as CSW.
+*Discovery service* is a concept from [INSPIRE](https://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/discovery) indicating a service type which enables discovery of resources (search and find). Typically implemented as CSW.
 
-*Download service* is a concept from [INSPRE](https://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/download) indicating a service type which enables download of a (subset of a) dataset. Typically implemented as WFS, WCS, SOS or Atom.
+*Download service* is a concept from [INSPIRE](https://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/download) indicating a service type which enables download of a (subset of a) dataset. Typically implemented as WFS, WCS, SOS or Atom.
 
 [*DOI*](https://www.doi.org/) a digital identifier of an object, any object — physical, digital, or abstract
 
@@ -51,9 +51,13 @@ This page includes terms that we use in our wiki, so that you have a reference f
 
 [*EUSO*](https://joint-research-centre.ec.europa.eu/eu-soil-observatory-euso_en) European Soil Observatory
 
+[GDAL/OGR](https://gdal.org) software package widely used to interact with a variety of spatial data formats
+
 *Geography Markup Language (GML)* is an xml based standardised encoding for spatial data.
 
 [GeoPackage](https://www.ogc.org/standard/geopackage/) a set of conventions for storing spatial data a [SQLite](https://www.sqlite.org/) database
+
+[Geoserver](https://geoserver.org) java based software package providing access to remote data through OGC services
 
 *Global Soil Information System ([GLOSIS](https://www.fao.org/global-soil-partnership/areas-of-work/soil-information-and-data/en/))* is an activity of FAO Global Soil Partnership enabling a federation of soil information systems and interoperable data sets 
 
@@ -65,15 +69,23 @@ This page includes terms that we use in our wiki, so that you have a reference f
 
 [Glosolan](https://www.fao.org/global-soil-partnership/glosolan) network to strengthen the capacity of laboratories in soil analysis and to respond to the need for harmonizing soil analytical data
 
+[Humboldt Alignment Editor](https://github.com/halestudio/hale) (HALE) java based desktop software to compose and apply a data transformation to data
+
 *Harmonization* is the process of transforming 2 datasets to a common model, a common projection, usage of common domain values and align their geometries
 
+[ISRIC - World Soil Information](https://www.isric.org/about) independent foundation with a mission to serve the international community as a custodian of global soil information
+
 *JRC* Joint Research Centre. The JRC provides independent, evidence-based science and knowledge, supporting EU policies to positively impact society. Relevant policy areas within JRC are [JRC Soil](https://joint-research-centre.ec.europa.eu/scientific-activities-z/soil_en) and [JRC INSPIRE](https://inspire.ec.europa.eu/whos-who-inspire/57734)
+
+[Mapserver](https://mapserver.org) C based software package providing access to remote data through OGC services
 
 [Observations and Measurements](https://www.ogc.org/standard/om/) (O&M)
 
 [OGC API](https://ogcapi.ogc.org/) building blocks that can be used to assemble novel APIs for web access to geospatial content
 
 *Ontology* a way of showing the properties of a subject area and how they are related, by defining a set of concepts and categories that represent the subject. (source: [wikipedia](https://en.wikipedia.org/wiki/Ontology_(computer_science)))
+
+[QGIS](https://qgis.org) desktop software package to create spatial vizualisations of various types of data
 
 *REA* is the European Research Executive Agency, it's mandate is to manage several EU programmes and support services.
 
@@ -89,13 +101,19 @@ Representational state transfer (REST) a set of guidelines for creating stateles
 
 Soil classification deals with the systematic categorization of soils based on distinguishing characteristics as well as criteria that dictate choices in use (source: [wikipedia](https://en.wikipedia.org/wiki/Soil_classification))
 
+[Soilgrids](https://www.isric.org/explore/soilgrids) a system for global digital soil mapping that uses many profile data and machine learning methods to predict the spatial distribution of soil properties across the globe
+
 *Soil spectroscopy* (source: [soilspectroscopy.org](https://soilspectroscopy.org/) is the measurement of light absorption. The proportion of the incident radiation reflected by soil is sensed through reflectance spectroscopy.
 
 *Unified Modeling Language* (UML) a general-purpose modeling language that is intended to provide a standard way to visualize the design of a system (source: [wikipedia](https://en.wikipedia.org/wiki/Unified_Modeling_Language))
 
-*View service* is a concept from [INSPRE](https://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view) indicating a service type which presents a (pre)view of a dataset. Typically implemented as WMS or WMTS.
+*View service* is a concept from [INSPIRE](https://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view) indicating a service type which presents a (pre)view of a dataset. Typically implemented as WMS or WMTS.
+
+[Wageningen ENvironmental Research](https://www.wur.nl/en/research-results/research-institutes/environmental-research.htm) (WENR) qualified and independent research to the realisation of a high quality and sustainable green living environment
 
 *Webservice* a service offered by a device to another device, communicating with each other via the Internet (source: [wikipedia](https://en.wikipedia.org/wiki/Web_service))
+
+[WOSIS](https://www.isric.org/explore/wosis) aims to serve the user with a selection of standardised and ultimately harmonised soil profile data
 
 [WMS](https://www.ogc.org/standard/wms/) Web Map service
 

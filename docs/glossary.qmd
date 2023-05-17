@@ -27,6 +27,8 @@ This page includes terms that we use in our wiki, so that you have a reference f
 
 *Cordis* is the primary source of [results from EU-funded projects](https://cordis.europa.eu/) since 1990
 
+[CSW](https://www.ogc.org/standard/csw) Catalogue Service for the Web
+
 [*Dataverse*](https://dataverse.org/) is open source research data repository software
 
 [*Datacite*](https://datacite.org/) is a non-profit organisation that provides persistent identifiers (DOIs) for research data. It i
@@ -51,6 +53,8 @@ This page includes terms that we use in our wiki, so that you have a reference f
 
 *Geography Markup Language (GML)* is an xml based standardised encoding for spatial data.
 
+[GeoPackage](https://www.ogc.org/standard/geopackage/) a set of conventions for storing spatial data a [SQLite](https://www.sqlite.org/) database
+
 *Global Soil Information System ([GLOSIS](https://www.fao.org/global-soil-partnership/areas-of-work/soil-information-and-data/en/))* is an activity of FAO Global Soil Partnership enabling a federation of soil information systems and interoperable data sets 
 
 *GLOSIS domain model* is an abstract, architectural component that defines how data are organised; it embodies a common understanding of what soil profile data are.
@@ -63,13 +67,11 @@ This page includes terms that we use in our wiki, so that you have a reference f
 
 *JRC* Joint Research Centre. The JRC provides independent, evidence-based science and knowledge, supporting EU policies to positively impact society. Relevant policy areas within JRC are [JRC Soil](https://joint-research-centre.ec.europa.eu/scientific-activities-z/soil_en) and [JRC INSPIRE](https://inspire.ec.europa.eu/whos-who-inspire/57734)
 
-Observations and Measurements (O&M)
+[Observations and Measurements](https://www.ogc.org/standard/om/) (O&M)
 
-OGC API
+[OGC API](https://ogcapi.ogc.org/) building blocks that can be used to assemble novel APIs for web access to geospatial content
 
 Ontology
-
-Publication
 
 *REA* is the European Research Executive Agency, it's mandate is to manage several EU programmes and support services.
 
@@ -83,9 +85,9 @@ Registry
 
 Repository
 
-SensorthingsAPI (STA)
+[SensorthingsAPI](https://www.ogc.org/standard/sensorthings/) (STA)
 
-SOS
+[SOS](https://www.ogc.org/standard/sos/) Sensor Observation Service
 
 Soil classification deals with the systematic categorization of soils based on distinguishing characteristics as well as criteria that dictate choices in use (source: [wikipedia](https://en.wikipedia.org/wiki/Soil_classification))
 
@@ -95,13 +97,13 @@ UML model
 
 Webservice
 
-WMS
+[WMS](https://www.ogc.org/standard/wms/) Web Map service
 
-WFS
+[WFS](https://www.ogc.org/standard/wfs/) Web Feature Service
 
-WCS
+[WCS](https://www.ogc.org/standard/wcs/) Web Coverage Service
 
-WMTS
+[WMTS](https://www.ogc.org/standard/wmts) Web Map Tile Service
 
 XSD
 

@@ -9,6 +9,8 @@ date: 2023-01-20
 
 This page includes terms that we use in our wiki, so that you have a reference for how we’re using them.
 
+*Application profile* is a specification for data exchange for applications that fulfil a certain use case. In addition to a shared semantics, it also allows for the imposition of additional restrictions, such as the definition of cardinalities or the use of certain code lists (source: [purl.eu](https://purl.eu)).
+
 *Application programming interface (API)* is a way for two or more computer programs to communicate with each other (source [wikipedia](https://en.wikipedia.org/wiki/API))
 
 *Assimilation* is a catchy term indicating the processes involved to combine multiple datasets with different origin into a common dataset, the term is somewhat similarly used in psychology as `incorporation of new concepts into existing schemes` (source [wikipedia](https://en.wikipedia.org/wiki/Assimilation)). But is not well aligned with its usage in the data science community: ` updating a numerical model with observed data` (source [wikipedia](https://en.wikipedia.org/wiki/Assimilation))
@@ -21,9 +23,13 @@ This page includes terms that we use in our wiki, so that you have a reference f
 
 *Catalogue* or *metadata registry* is a central location in an organization where metadata definitions are stored and maintained (source [wikipedia](https://en.wikipedia.org/wiki/Metadata_registry))
 
+*Code list* an enumeration of terms in order to constrain input and avoid errors (source: [UN](https://tfig.unece.org/contents/code-lists.htm)).
+
 *Conceptual model* or *domain model* represents concepts (entities) and relationships between them (source [wikipedia](https://en.wikipedia.org/wiki/Conceptual_model_(computer_science)))
 
 *Content negotiation* refers to mechanisms that make it possible to serve different representations of a resource at the same URI (source [wikipedia](https://en.wikipedia.org/wiki/Content_negotiation))
+
+*Controlled vocabulary* provides a way to organize knowledge for subsequent retrieval. A carefully selected list of words and phrases, which are used to tag units of information so that they are more easily retrieved by a search (source: [Semwebtech](https://semwebtec.wordpress.com/2010/11/23/contolled-vocabulary-vs-ontology)). Vocabulary, unlike the dictionary and thesaurus, offers an in-depth analysis of a word and its usage in different contexts (Source: [learn grammar](https://www.learngrammar.net/a/vocabulary-dictionary-thesaurus))
 
 *Cordis* is the primary source of [results from EU-funded projects](https://cordis.europa.eu/) since 1990
 

@@ -11,7 +11,7 @@ The recipe introduces you to the participatory metadata workflow step by step.
 
 The inital step assumes a folder of data files on a network drive, sharepoint or git repository. Datasets stored on a database will not be considered for now, but can follow a similar workflow.
 
-For each data file in the folder we will create a `metadata control file` (MCF). [MCF](https://geopython.github.io/pygeometa/reference/mcf/) is a convention from the [pygeometa](https://geopython.github.io/pygeometa) community. It is a [YAML](https://en.wikipedia.org/wiki/YAML) encoded subset of iso19139:2007. YAML is easy to read by humans and an optimal for content versioning (in git). 
+For each data file in the folder we will create a `metadata control file` (MCF). [MCF](https://geopython.github.io/pygeometa/reference/mcf/) is a metadata format from the [pygeometa](https://geopython.github.io/pygeometa) community. It is a [YAML](https://en.wikipedia.org/wiki/YAML) encoded subset of thr iso19139:2007 model. YAML is easy to read by humans and an optimal for content versioning (in git). The pygeometa library is able to export the metadata control file into various common metadata formats.
 
 Consider to set up a virtual environment for the workshop:
 
@@ -77,29 +77,11 @@ distribution:
         name: soilgrids
 ```
 
-Use the above template to create a metadata file for a dataset. The file should have the same name as the dataset, but with an extension `.yml` or `.mcf`.
+Copy the content above into a new text file and save it with the same name as the dataset, but with an extension `.yml`. Use an advanced text editor such as [notepad++](https://notepad-plus-plus.org) or [Visual studio code](https://code.visualstudio.com) to benefit from yaml syntax highlighting and yaml validation. Notice that parsing in for example pygeometa fails if yaml is incorrectly formatted.
 
 ## MDME
 
-[Model Driven Metadata Editor](https://osgeo.github.io/mdme) (MDME) is an online visual editor for mcf files. You can create or load an existing mcf file, populate relevant fields and save or export it in various metadata formats. 
-
-The software presents a form configurable via json-schema. If you deploy the software locally you can adjust the form by updating the json schema.
-
-## Import existing metadata
-
-- If the data file already has a metadata document (for example with a shapefile, if it contains a file with extension .shp.xml), you can try to import it using pygeometa. pygeometa requires to indicate the metadata schema in advance.
-
-For iso19139:2007 use:
-
-```
-pygeometa metadata import path/to/file.xml --schema=iso19139
-```
-
-For fgdc (typically used with shapefiles) use: 
-
-```
-pygeometa metadata import path/to/file.xml --schema=fgdc
-```
+[Model Driven Metadata Editor](https://osgeo.github.io/mdme) (MDME) is an online visual editor for mcf files. You can create or load an existing mcf file, populate relevant fields and save it locally. 
 
 ## Generate iso19139:2007
 
@@ -124,6 +106,22 @@ Notice that you can also [create your own schema](https://geopython.github.io/py
 
 ```
 pygeometa metadata generate path/to/file.yml --schema_local=/path/to/my-schema --output=some_file.xml
+```
+
+## Import existing metadata
+
+If a data file already has a metadata document (for example with a shapefile, if it contains a file with extension .shp.xml), you can try to convert it to MCF using pygeometa. pygeometa requires to indicate the metadata schema in advance.
+
+For iso19139:2007 use:
+
+```
+pygeometa metadata import path/to/file.xml --schema=iso19139
+```
+
+For fgdc (typically used with shapefiles) use: 
+
+```
+pygeometa metadata import path/to/file.xml --schema=fgdc
 ```
 
 ## Import generated metadata to a searchable catalogue

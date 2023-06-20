@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Soil data guidance - A participatory metadata workflow</title>
+<title>Soil data guidance - A pythonic &amp; participatory metadata workflow</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -139,6 +139,7 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#initial" id="toc-initial" class="nav-link active" data-scroll-target="#initial">Initial</a></li>
   <li><a href="#create-an-mcf" id="toc-create-an-mcf" class="nav-link" data-scroll-target="#create-an-mcf">Create an MCF</a></li>
+  <li><a href="#mdme" id="toc-mdme" class="nav-link" data-scroll-target="#mdme">MDME</a></li>
   <li><a href="#import-existing-metadata" id="toc-import-existing-metadata" class="nav-link" data-scroll-target="#import-existing-metadata">Import existing metadata</a></li>
   <li><a href="#generate-iso191392007" id="toc-generate-iso191392007" class="nav-link" data-scroll-target="#generate-iso191392007">Generate iso19139:2007</a></li>
   <li><a href="#import-generated-metadata-to-a-searchable-catalogue" id="toc-import-generated-metadata-to-a-searchable-catalogue" class="nav-link" data-scroll-target="#import-generated-metadata-to-a-searchable-catalogue">Import generated metadata to a searchable catalogue</a></li>
@@ -154,7 +155,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">A participatory metadata workflow</h1>
+<h1 class="title">A pythonic &amp; participatory metadata workflow</h1>
 </div>
 
 
@@ -228,7 +229,12 @@ distribution:
         type: OGC:WMS
         rel: service
         name: soilgrids</code></pre>
-<p>Use the above template to create a metadata file for a dataset. The file should have the same name as the dataset, but with an extension <code>.yml</code> or <code>.mcf</code>. Alternatively, <a href="https://osgeo.github.io/mdme">MDME</a> is an online visual editor for mcf files.</p>
+<p>Use the above template to create a metadata file for a dataset. The file should have the same name as the dataset, but with an extension <code>.yml</code> or <code>.mcf</code>.</p>
+</section>
+<section id="mdme" class="level2">
+<h2 class="anchored" data-anchor-id="mdme">MDME</h2>
+<p><a href="https://osgeo.github.io/mdme">Model Driven Metadata Editor</a> (MDME) is an online visual editor for mcf files. You can create or load an existing mcf file, populate relevant fields and save or export it in various metadata formats.</p>
+<p>The software presents a form configurable via json-schema. If you deploy the software locally you can adjust the form by updating the json schema.</p>
 </section>
 <section id="import-existing-metadata" class="level2">
 <h2 class="anchored" data-anchor-id="import-existing-metadata">Import existing metadata</h2>

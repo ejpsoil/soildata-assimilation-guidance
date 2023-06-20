@@ -150,13 +150,17 @@ Check out the new content at http://localhost:8000/collections. Note that if you
 
 Try to mount also a customised [configuration file](https://github.com/geopython/pycsw/blob/master/docker/pycsw.cfg) into the container, so you can optimise the configuration of the catalogue. Also have a look at the [INSPIRE extension](https://docs.pycsw.org/en/latest/profiles.html#inspire-extension) for pycsw.
 
+## pyGeoDataCrawler
+
+[pyGeoDataCrawler](https://github.com/pvgenuchten/pyGeoDataCrawler) is a tool under active development which builds on top of the mechanism described above, internally using the libraries mentioned. It crawls a folder structure for metadata and data files, if no metadata file exists for a dataset, it will create one based on derived metadata from the dataset. Discovered metadata files are exported to iso19139 ready to be imported into a catalogue like pycsw or GeoNetwork. 
+
 ## Automated workflows
 
 The tasks above are carried out manually. However they can also be set up to run automated at file changes or at regular intervals using cron jobs. With such an approach you can automatically update the catalogue content when for example some metadata records are updated or added to the GIT repository (CI-CD). To facilitate the participatory approach, consider to include a link from the dataset page in the catalogue back to the git source, to invite users to suggest optimizations to the metadata records (as GIT issue or Pull Request).
 
 ## Evaluate Metadata and Discovery Service
 
-You can evaluate individual iso19139 records in the [INSPIRE reference validator](https://inspire.ec.europa.eu/validator/home/index.html). Also you can evaluate the discovery service. If a service is running on localhost, use the [tunnel approach](../utils/localtunnel.qmd) to evaluate it.
+You can evaluate individual iso19139 records in the [INSPIRE reference validator](https://inspire.ec.europa.eu/validator/home/index.html). The validator can also evaluate the discovery service itself. If a service is running on localhost, use the [tunnel approach](../utils/localtunnel.qmd) to evaluate it. [GeoHealthCheck](https://www.geohealthcheck.org) also includes a probe for testing availability of a [CSW service](https://demo.geohealthcheck.org/resources?lang=en&resource_type=OGC%3ACSW).
 
 ## Access the service from QGIS
 

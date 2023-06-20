@@ -1,5 +1,5 @@
 ---
-title: A participatory metadata workflow
+title: A pythonic & participatory metadata workflow
 status: ready
 ---
 
@@ -77,7 +77,13 @@ distribution:
         name: soilgrids
 ```
 
-Use the above template to create a metadata file for a dataset. The file should have the same name as the dataset, but with an extension `.yml` or `.mcf`. Alternatively, [MDME](https://osgeo.github.io/mdme) is an online visual editor for mcf files.
+Use the above template to create a metadata file for a dataset. The file should have the same name as the dataset, but with an extension `.yml` or `.mcf`.
+
+## MDME
+
+[Model Driven Metadata Editor](https://osgeo.github.io/mdme) (MDME) is an online visual editor for mcf files. You can create or load an existing mcf file, populate relevant fields and save or export it in various metadata formats. 
+
+The software presents a form configurable via json-schema. If you deploy the software locally you can adjust the form by updating the json schema.
 
 ## Import existing metadata
 

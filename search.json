@@ -767,28 +767,21 @@
     "href": "cookbook/pygeometa.html#initial",
     "title": "A pythonic & participatory metadata workflow",
     "section": "Initial",
-    "text": "Initial\nThe inital step assumes a folder of data files on a network drive, sharepoint or git repository. Datasets stored on a database will not be considered for now, but can follow a similar workflow.\nFor each data file in the folder we will create a metadata control file (MCF). MCF is a convention from the pygeometa community. It is a YAML encoded subset of iso19139:2007. YAML is easy to read by humans and an optimal for content versioning (in git).\nConsider to set up a virtual environment for the workshop:\nvirtualenv pygeometa && cd pygeometa && . bin/activate\nThen install the pygeometa library.\npip install pygeometa"
+    "text": "Initial\nThe inital step assumes a folder of data files on a network drive, sharepoint or git repository. Datasets stored on a database will not be considered for now, but can follow a similar workflow.\nFor each data file in the folder we will create a metadata control file (MCF). MCF is a metadata format from the pygeometa community. It is a YAML encoded subset of thr iso19139:2007 model. YAML is easy to read by humans and an optimal for content versioning (in git). The pygeometa library is able to export the metadata control file into various common metadata formats.\nConsider to set up a virtual environment for the workshop:\nvirtualenv pygeometa && cd pygeometa && . bin/activate\nThen install the pygeometa library.\npip install pygeometa"
   },
   {
     "objectID": "cookbook/pygeometa.html#create-an-mcf",
     "href": "cookbook/pygeometa.html#create-an-mcf",
     "title": "A pythonic & participatory metadata workflow",
     "section": "Create an MCF",
-    "text": "Create an MCF\nA minimal example of MCF is (see also a more extended version):\nmcf:\n    version: 1.0\n\nmetadata:\n    identifier: 3f342f64-9348-11df-ba6a-0014c2c00eab\n    language: en\n    hierarchylevel: dataset\n    datestamp: 2023-01-01\n\nspatial:\n    datatype: grid\n\nidentification:\n    language: eng\n    title: Soilgrids sample Dataset\n    abstract: This is a sample dataset for the EJP Soil Dataset Assimilation Masterclass\n    dates:\n        creation: 2023-01-01\n    keywords:\n        default:\n            keywords: [\"sample\"]\n    topiccategory:\n        - geoscientificInformation\n    extents:\n        spatial:\n            - bbox: [2,50,4,52]\n              crs: 4326\n    fees: None\n    accessconstraints: otherRestrictions\n    rights: CC-BY\n\ncontact:\n    pointOfContact: \n        organization: ISRIC - World Soil Information\n        url: https://www.isric.org\n        city: Wageningen\n        country: The Netherlands\n        email: info@isric.org\n\ndistribution:\n    wms:\n        url: https://maps.isric.org\n        type: OGC:WMS\n        rel: service\n        name: soilgrids\nUse the above template to create a metadata file for a dataset. The file should have the same name as the dataset, but with an extension .yml or .mcf."
+    "text": "Create an MCF\nA minimal example of MCF is (see also a more extended version):\nmcf:\n    version: 1.0\n\nmetadata:\n    identifier: 3f342f64-9348-11df-ba6a-0014c2c00eab\n    language: en\n    hierarchylevel: dataset\n    datestamp: 2023-01-01\n\nspatial:\n    datatype: grid\n\nidentification:\n    language: eng\n    title: Soilgrids sample Dataset\n    abstract: This is a sample dataset for the EJP Soil Dataset Assimilation Masterclass\n    dates:\n        creation: 2023-01-01\n    keywords:\n        default:\n            keywords: [\"sample\"]\n    topiccategory:\n        - geoscientificInformation\n    extents:\n        spatial:\n            - bbox: [2,50,4,52]\n              crs: 4326\n    fees: None\n    accessconstraints: otherRestrictions\n    rights: CC-BY\n\ncontact:\n    pointOfContact: \n        organization: ISRIC - World Soil Information\n        url: https://www.isric.org\n        city: Wageningen\n        country: The Netherlands\n        email: info@isric.org\n\ndistribution:\n    wms:\n        url: https://maps.isric.org\n        type: OGC:WMS\n        rel: service\n        name: soilgrids\nCopy the content above into a new text file and save it with the same name as the dataset, but with an extension .yml. Use an advanced text editor such as notepad++ or Visual studio code to benefit from yaml syntax highlighting and yaml validation. Notice that parsing in for example pygeometa fails if yaml is incorrectly formatted."
   },
   {
     "objectID": "cookbook/pygeometa.html#mdme",
     "href": "cookbook/pygeometa.html#mdme",
     "title": "A pythonic & participatory metadata workflow",
     "section": "MDME",
-    "text": "MDME\nModel Driven Metadata Editor (MDME) is an online visual editor for mcf files. You can create or load an existing mcf file, populate relevant fields and save or export it in various metadata formats.\nThe software presents a form configurable via json-schema. If you deploy the software locally you can adjust the form by updating the json schema."
-  },
-  {
-    "objectID": "cookbook/pygeometa.html#import-existing-metadata",
-    "href": "cookbook/pygeometa.html#import-existing-metadata",
-    "title": "A pythonic & participatory metadata workflow",
-    "section": "Import existing metadata",
-    "text": "Import existing metadata\n\nIf the data file already has a metadata document (for example with a shapefile, if it contains a file with extension .shp.xml), you can try to import it using pygeometa. pygeometa requires to indicate the metadata schema in advance.\n\nFor iso19139:2007 use:\npygeometa metadata import path/to/file.xml --schema=iso19139\nFor fgdc (typically used with shapefiles) use:\npygeometa metadata import path/to/file.xml --schema=fgdc"
+    "text": "MDME\nModel Driven Metadata Editor (MDME) is an online visual editor for mcf files. You can create or load an existing mcf file, populate relevant fields and save it locally."
   },
   {
     "objectID": "cookbook/pygeometa.html#generate-iso191392007",
@@ -796,6 +789,13 @@
     "title": "A pythonic & participatory metadata workflow",
     "section": "Generate iso19139:2007",
     "text": "Generate iso19139:2007\nAs soon as you have a folder of MCF’s, you can use pygeometa generate to convert them to iso19139:2007.\npygeometa metadata generate path/to/file.yml --schema=iso19139 --output=some_file.xml\nOr for a folder of files, save the content below to a .sh (mac/linux) or .bat (windows) file and run it:\nFILES=\"/path/to/*.yml\"\nfor f in $FILES\ndo\n  echo \"Processing $f file...\"\n  pygeometa metadata generate $f --schema=iso19139 --output=$f.xml\ndone\nNotice that you can also create your own schema for the iso19139 generation. By using a customised template you’re able to include additional properties for example to have better INSPIRE complience.\npygeometa metadata generate path/to/file.yml --schema_local=/path/to/my-schema --output=some_file.xml"
+  },
+  {
+    "objectID": "cookbook/pygeometa.html#import-existing-metadata",
+    "href": "cookbook/pygeometa.html#import-existing-metadata",
+    "title": "A pythonic & participatory metadata workflow",
+    "section": "Import existing metadata",
+    "text": "Import existing metadata\nIf a data file already has a metadata document (for example with a shapefile, if it contains a file with extension .shp.xml), you can try to convert it to MCF using pygeometa. pygeometa requires to indicate the metadata schema in advance.\nFor iso19139:2007 use:\npygeometa metadata import path/to/file.xml --schema=iso19139\nFor fgdc (typically used with shapefiles) use:\npygeometa metadata import path/to/file.xml --schema=fgdc"
   },
   {
     "objectID": "cookbook/pygeometa.html#import-generated-metadata-to-a-searchable-catalogue",

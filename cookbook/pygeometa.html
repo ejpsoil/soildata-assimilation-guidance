@@ -140,8 +140,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#initial" id="toc-initial" class="nav-link active" data-scroll-target="#initial">Initial</a></li>
   <li><a href="#create-an-mcf" id="toc-create-an-mcf" class="nav-link" data-scroll-target="#create-an-mcf">Create an MCF</a></li>
   <li><a href="#mdme" id="toc-mdme" class="nav-link" data-scroll-target="#mdme">MDME</a></li>
-  <li><a href="#import-existing-metadata" id="toc-import-existing-metadata" class="nav-link" data-scroll-target="#import-existing-metadata">Import existing metadata</a></li>
   <li><a href="#generate-iso191392007" id="toc-generate-iso191392007" class="nav-link" data-scroll-target="#generate-iso191392007">Generate iso19139:2007</a></li>
+  <li><a href="#import-existing-metadata" id="toc-import-existing-metadata" class="nav-link" data-scroll-target="#import-existing-metadata">Import existing metadata</a></li>
   <li><a href="#import-generated-metadata-to-a-searchable-catalogue" id="toc-import-generated-metadata-to-a-searchable-catalogue" class="nav-link" data-scroll-target="#import-generated-metadata-to-a-searchable-catalogue">Import generated metadata to a searchable catalogue</a></li>
   <li><a href="#automated-workflows" id="toc-automated-workflows" class="nav-link" data-scroll-target="#automated-workflows">Automated workflows</a></li>
   <li><a href="#evaluate-metadata-and-discovery-service" id="toc-evaluate-metadata-and-discovery-service" class="nav-link" data-scroll-target="#evaluate-metadata-and-discovery-service">Evaluate Metadata and Discovery Service</a></li>
@@ -175,7 +175,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="initial" class="level2">
 <h2 class="anchored" data-anchor-id="initial">Initial</h2>
 <p>The inital step assumes a folder of data files on a network drive, sharepoint or git repository. Datasets stored on a database will not be considered for now, but can follow a similar workflow.</p>
-<p>For each data file in the folder we will create a <code>metadata control file</code> (MCF). <a href="https://geopython.github.io/pygeometa/reference/mcf/">MCF</a> is a convention from the <a href="https://geopython.github.io/pygeometa">pygeometa</a> community. It is a <a href="https://en.wikipedia.org/wiki/YAML">YAML</a> encoded subset of iso19139:2007. YAML is easy to read by humans and an optimal for content versioning (in git).</p>
+<p>For each data file in the folder we will create a <code>metadata control file</code> (MCF). <a href="https://geopython.github.io/pygeometa/reference/mcf/">MCF</a> is a metadata format from the <a href="https://geopython.github.io/pygeometa">pygeometa</a> community. It is a <a href="https://en.wikipedia.org/wiki/YAML">YAML</a> encoded subset of thr iso19139:2007 model. YAML is easy to read by humans and an optimal for content versioning (in git). The pygeometa library is able to export the metadata control file into various common metadata formats.</p>
 <p>Consider to set up a virtual environment for the workshop:</p>
 <pre><code>virtualenv pygeometa &amp;&amp; cd pygeometa &amp;&amp; . bin/activate</code></pre>
 <p>Then install the pygeometa library.</p>
@@ -229,22 +229,11 @@ distribution:
         type: OGC:WMS
         rel: service
         name: soilgrids</code></pre>
-<p>Use the above template to create a metadata file for a dataset. The file should have the same name as the dataset, but with an extension <code>.yml</code> or <code>.mcf</code>.</p>
+<p>Copy the content above into a new text file and save it with the same name as the dataset, but with an extension <code>.yml</code>. Use an advanced text editor such as <a href="https://notepad-plus-plus.org">notepad++</a> or <a href="https://code.visualstudio.com">Visual studio code</a> to benefit from yaml syntax highlighting and yaml validation. Notice that parsing in for example pygeometa fails if yaml is incorrectly formatted.</p>
 </section>
 <section id="mdme" class="level2">
 <h2 class="anchored" data-anchor-id="mdme">MDME</h2>
-<p><a href="https://osgeo.github.io/mdme">Model Driven Metadata Editor</a> (MDME) is an online visual editor for mcf files. You can create or load an existing mcf file, populate relevant fields and save or export it in various metadata formats.</p>
-<p>The software presents a form configurable via json-schema. If you deploy the software locally you can adjust the form by updating the json schema.</p>
-</section>
-<section id="import-existing-metadata" class="level2">
-<h2 class="anchored" data-anchor-id="import-existing-metadata">Import existing metadata</h2>
-<ul>
-<li>If the data file already has a metadata document (for example with a shapefile, if it contains a file with extension .shp.xml), you can try to import it using pygeometa. pygeometa requires to indicate the metadata schema in advance.</li>
-</ul>
-<p>For iso19139:2007 use:</p>
-<pre><code>pygeometa metadata import path/to/file.xml --schema=iso19139</code></pre>
-<p>For fgdc (typically used with shapefiles) use:</p>
-<pre><code>pygeometa metadata import path/to/file.xml --schema=fgdc</code></pre>
+<p><a href="https://osgeo.github.io/mdme">Model Driven Metadata Editor</a> (MDME) is an online visual editor for mcf files. You can create or load an existing mcf file, populate relevant fields and save it locally.</p>
 </section>
 <section id="generate-iso191392007" class="level2">
 <h2 class="anchored" data-anchor-id="generate-iso191392007">Generate iso19139:2007</h2>
@@ -259,6 +248,14 @@ do
 done</code></pre>
 <p>Notice that you can also <a href="https://geopython.github.io/pygeometa/tutorial/#adding-a-metadata-schema-to-the-core">create your own schema</a> for the iso19139 generation. By using a customised template you’re able to include additional properties for example to have better INSPIRE complience.</p>
 <pre><code>pygeometa metadata generate path/to/file.yml --schema_local=/path/to/my-schema --output=some_file.xml</code></pre>
+</section>
+<section id="import-existing-metadata" class="level2">
+<h2 class="anchored" data-anchor-id="import-existing-metadata">Import existing metadata</h2>
+<p>If a data file already has a metadata document (for example with a shapefile, if it contains a file with extension .shp.xml), you can try to convert it to MCF using pygeometa. pygeometa requires to indicate the metadata schema in advance.</p>
+<p>For iso19139:2007 use:</p>
+<pre><code>pygeometa metadata import path/to/file.xml --schema=iso19139</code></pre>
+<p>For fgdc (typically used with shapefiles) use:</p>
+<pre><code>pygeometa metadata import path/to/file.xml --schema=fgdc</code></pre>
 </section>
 <section id="import-generated-metadata-to-a-searchable-catalogue" class="level2">
 <h2 class="anchored" data-anchor-id="import-generated-metadata-to-a-searchable-catalogue">Import generated metadata to a searchable catalogue</h2>

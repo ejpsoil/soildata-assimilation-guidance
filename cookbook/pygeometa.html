@@ -143,6 +143,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#generate-iso191392007" id="toc-generate-iso191392007" class="nav-link" data-scroll-target="#generate-iso191392007">Generate iso19139:2007</a></li>
   <li><a href="#import-existing-metadata" id="toc-import-existing-metadata" class="nav-link" data-scroll-target="#import-existing-metadata">Import existing metadata</a></li>
   <li><a href="#import-generated-metadata-to-a-searchable-catalogue" id="toc-import-generated-metadata-to-a-searchable-catalogue" class="nav-link" data-scroll-target="#import-generated-metadata-to-a-searchable-catalogue">Import generated metadata to a searchable catalogue</a></li>
+  <li><a href="#pygeodatacrawler" id="toc-pygeodatacrawler" class="nav-link" data-scroll-target="#pygeodatacrawler">pyGeoDataCrawler</a></li>
   <li><a href="#automated-workflows" id="toc-automated-workflows" class="nav-link" data-scroll-target="#automated-workflows">Automated workflows</a></li>
   <li><a href="#evaluate-metadata-and-discovery-service" id="toc-evaluate-metadata-and-discovery-service" class="nav-link" data-scroll-target="#evaluate-metadata-and-discovery-service">Evaluate Metadata and Discovery Service</a></li>
   <li><a href="#access-the-service-from-qgis" id="toc-access-the-service-from-qgis" class="nav-link" data-scroll-target="#access-the-service-from-qgis">Access the service from QGIS</a></li>
@@ -270,13 +271,17 @@ docker exec -ti pycsw pycsw-admin.py load-records -c /etc/pycsw/pycsw.cfg -p /me
 <p>Check out the new content at http://localhost:8000/collections. Note that if you restart the container, all records are removed, because the database is currently not persisted on a volume.</p>
 <p>Try to mount also a customised <a href="https://github.com/geopython/pycsw/blob/master/docker/pycsw.cfg">configuration file</a> into the container, so you can optimise the configuration of the catalogue. Also have a look at the <a href="https://docs.pycsw.org/en/latest/profiles.html#inspire-extension">INSPIRE extension</a> for pycsw.</p>
 </section>
+<section id="pygeodatacrawler" class="level2">
+<h2 class="anchored" data-anchor-id="pygeodatacrawler">pyGeoDataCrawler</h2>
+<p><a href="https://github.com/pvgenuchten/pyGeoDataCrawler">pyGeoDataCrawler</a> is a tool under active development which builds on top of the mechanism described above, internally using the libraries mentioned. It crawls a folder structure for metadata and data files, if no metadata file exists for a dataset, it will create one based on derived metadata from the dataset. Discovered metadata files are exported to iso19139 ready to be imported into a catalogue like pycsw or GeoNetwork.</p>
+</section>
 <section id="automated-workflows" class="level2">
 <h2 class="anchored" data-anchor-id="automated-workflows">Automated workflows</h2>
 <p>The tasks above are carried out manually. However they can also be set up to run automated at file changes or at regular intervals using cron jobs. With such an approach you can automatically update the catalogue content when for example some metadata records are updated or added to the GIT repository (CI-CD). To facilitate the participatory approach, consider to include a link from the dataset page in the catalogue back to the git source, to invite users to suggest optimizations to the metadata records (as GIT issue or Pull Request).</p>
 </section>
 <section id="evaluate-metadata-and-discovery-service" class="level2">
 <h2 class="anchored" data-anchor-id="evaluate-metadata-and-discovery-service">Evaluate Metadata and Discovery Service</h2>
-<p>You can evaluate individual iso19139 records in the <a href="https://inspire.ec.europa.eu/validator/home/index.html">INSPIRE reference validator</a>. Also you can evaluate the discovery service. If a service is running on localhost, use the <a href="../utils/localtunnel.html">tunnel approach</a> to evaluate it.</p>
+<p>You can evaluate individual iso19139 records in the <a href="https://inspire.ec.europa.eu/validator/home/index.html">INSPIRE reference validator</a>. The validator can also evaluate the discovery service itself. If a service is running on localhost, use the <a href="../utils/localtunnel.html">tunnel approach</a> to evaluate it. <a href="https://www.geohealthcheck.org">GeoHealthCheck</a> also includes a probe for testing availability of a <a href="https://demo.geohealthcheck.org/resources?lang=en&amp;resource_type=OGC%3ACSW">CSW service</a>.</p>
 </section>
 <section id="access-the-service-from-qgis" class="level2">
 <h2 class="anchored" data-anchor-id="access-the-service-from-qgis">Access the service from QGIS</h2>

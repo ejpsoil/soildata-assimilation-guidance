@@ -805,6 +805,13 @@
     "text": "Import generated metadata to a searchable catalogue\npycsw is a python based OGC reference implementation of Catalog Service for the Web and an early adaptor of OGC API Records and STAC Catalog. We’ll use pycsw via a docker image to publish the metadata records in a search service. We run it in detach mode so we can interact with the running container, type docker stop pycsw to stop the container.\ndocker run -d --rm --name pycsw -p 8000:8000 geopython/pycsw\nWe now have a running pycsw at http://localhost:8000/collections with some sample data. We will now remove the sample data and insert our metadata. For that reason we mount our current folder with xml files into the container\ndocker stop pycsw\ndocker run -d --rm --name pycsw -v ${PWD}:/metadata -p 8000:8000 geopython/pycsw\nNow we can trigger pycsw admin to remove the default records and import our metadata. As part of the calls we reference the config file, which contains the connection details to the database.\ndocker exec -ti pycsw pycsw-admin.py delete-records -c /etc/pycsw/pycsw.cfg\ndocker exec -ti pycsw pycsw-admin.py load-records -c /etc/pycsw/pycsw.cfg -p /metadata -r\nCheck out the new content at http://localhost:8000/collections. Note that if you restart the container, all records are removed, because the database is currently not persisted on a volume.\nTry to mount also a customised configuration file into the container, so you can optimise the configuration of the catalogue. Also have a look at the INSPIRE extension for pycsw."
   },
   {
+    "objectID": "cookbook/pygeometa.html#pygeodatacrawler",
+    "href": "cookbook/pygeometa.html#pygeodatacrawler",
+    "title": "A pythonic & participatory metadata workflow",
+    "section": "pyGeoDataCrawler",
+    "text": "pyGeoDataCrawler\npyGeoDataCrawler is a tool under active development which builds on top of the mechanism described above, internally using the libraries mentioned. It crawls a folder structure for metadata and data files, if no metadata file exists for a dataset, it will create one based on derived metadata from the dataset. Discovered metadata files are exported to iso19139 ready to be imported into a catalogue like pycsw or GeoNetwork."
+  },
+  {
     "objectID": "cookbook/pygeometa.html#automated-workflows",
     "href": "cookbook/pygeometa.html#automated-workflows",
     "title": "A pythonic & participatory metadata workflow",
@@ -816,7 +823,7 @@
     "href": "cookbook/pygeometa.html#evaluate-metadata-and-discovery-service",
     "title": "A pythonic & participatory metadata workflow",
     "section": "Evaluate Metadata and Discovery Service",
-    "text": "Evaluate Metadata and Discovery Service\nYou can evaluate individual iso19139 records in the INSPIRE reference validator. Also you can evaluate the discovery service. If a service is running on localhost, use the tunnel approach to evaluate it."
+    "text": "Evaluate Metadata and Discovery Service\nYou can evaluate individual iso19139 records in the INSPIRE reference validator. The validator can also evaluate the discovery service itself. If a service is running on localhost, use the tunnel approach to evaluate it. GeoHealthCheck also includes a probe for testing availability of a CSW service."
   },
   {
     "objectID": "cookbook/pygeometa.html#access-the-service-from-qgis",

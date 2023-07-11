@@ -1,55 +1,187 @@
----
-title: deegree
-Status: contribution required*
----
+# deegree
 
-[deegree](https://deegree.org) is an open source java server implementation of WMS, WMTS, CSW, WCS, WFS, WPS.
+An open source java server implementation of WMS, WMTS, CSW, WCS, WFS, WPS.
 
-Deegree has 2 options to publish rich GML data. 
+deegree has two options to publish rich GML data. 
 
 - Using a relational database and a mapping configuration to generate the GML
 - Using a `blob` storage to provide individual features without any processing
 
-The second is easy to setup and efficient when users often request full datasets. The second approach may get problematic if users use advanced filters to select subsets of the dataset.
+The second approach is easy to setup and efficient when users often request full datasets. Still, it may get problematic if users use advanced filters to select subsets of the chosen dataset.
+
+---
 
 ## Get started with deegree
 
-Start a deegree instance locally using the docker hub image as:
+Start a deegree instance locally using the docker hub image:
 
+### Step 1: Pull the desired docker image
+
+Latest (strongly recommended)
+```
+docker pull deegree/deegree3-docker:latest
+```
+Specific version (example)
+```
+docker pull deegree/deegree3-docker:v3.5-RC1
+```
+> **Info:** All available images of deegree version 3.5.x are built with Apache Tomcat 9.x and OpenJDK 11.
+
+### Step 2: Set up local docker container 
+
+Simple configuration (recommended for starters)
 ```
 docker run --name deegree -d -p 8080:8080 deegree/deegree3-docker
 ```
-
-Initial start will take some time, then proceed with your browser to [http://localhost:8080/deegree-webservices](http://localhost:8080/deegree-webservices).
-
-The deegree website contains a [detailed quick start](https://download.deegree.org/documentation/3.4.1/html/lightly.html) on how to import and operate a sample workspace
-
-Setting up a database and importing GML Data is managed via a command line client. The command line client can be accessed via:
+or with a specific version:
+```
+docker run --name deegree -d -p 8080:8080 deegree/deegree3-docker:v3.5-RC1
+```
+Advanced configuration
 
 ```
-docker exec -w /opt deegree java -jar deegree-tools-gml.jar -help
+docker run -d --name deegree -v /path/to/.deegree:/root/.deegree -p 8080:8080 deegree/deegree3-docker
 ```
+> **Tip:** Using the docker parameter `-v` (volume), all prior created deegree workspaces that are stored in `/.deegree` can be accessed.
 
-The client tools are described in the [online manual](https://download.deegree.org/documentation/3.4.32/html/#deegree-gml-tools). An example call to export a database creation script to reflect the Soil.xsd schema:
+After an intial startup time, the deegree web console can be accessed under [http://localhost:8080/deegree-webservices](http://localhost:8080/deegree-webservices).
+
+The deegree website contains a [detailed quick start](https://download.deegree.org/documentation/3.4.33/html/#anchor-lightly) on how to import and operate a sample workspace (for deegree version 3.4.x).
+
+---
+
+## The deegree GML tools CLI
+
+Generating SQL DDL scripts, deegree SQLFeatureStore configuration files from GML application schemas and importing GML data in a deegree SQLFeatureStore is managed via command line interface (CLI) tools. 
+
+The usage insructions of each CLI tool can be printed via:
 
 ```
-docker exec -w /opt/ deegree java -jar deegree-tools-gml.jar SqlFeatureStoreConfigCreator --format=ddl --dialect=postgis --cycledepth=1 -schemaUrl=https://inspire.ec.europa.eu/schemas/so/4.0/Soil.xsd
+docker exec -w /opt deegree java -jar deegree-tools-gml.jar SqlFeatureStoreConfigCreator -h 
 ```
+or
+```
+docker exec -w /opt deegree java -jar deegree-tools-gml.jar GmlLoader -h
+```
+> **Tip:** Instead of the parameter `-h`, `-help` or `-?` can be used as well.
+
+The GML tools CLIs are described in further detail in the deegree [online manual](https://download.deegree.org/documentation/3.4.32/html/#deegree-gml-tools). 
+
+# Example workflow
+
+The GML tools mentioned above have a clear order in which they are executed:
+1. SqlFeatureStoreConfigCreator
+2. GmlLoader
+
+The following example workflow is based on this INSPIRE soil dataset: 
+> https://fbinter.stadt-berlin.de/fb/atom/SO/SO_BoKw2015.zip
+
+* Description of the dataset (german-only):
+> https://fbinter.stadt-berlin.de/fb_daten/beschreibung/SO_BoKw2015.html
+
+### Step 1: Using the deegree SqlFeatureStoreConfigCreator
+
+In the following, the SqlFeatureStoreConfigCreator is used to create a SQL DDL statement that creates a database schema as well as a deegree SQLFeatureStore configuration of the INSPIRE soil schema.
+
+```
+docker exec -w /opt deegree java -jar deegree-tools-gml.jar SqlFeatureStoreConfigCreator -format=all -idtype=uuid -mapping=relational -dialect=postgis -schemaUrl=https://inspire.ec.europa.eu/schemas/so/4.0/Soil.xsd
+```
+If run successfully, the SqlFeatureStoreConfigCreator will generate the SQL DDL statement as `Soil.sql` and the SQLFeatureStore configuration as `Soil.xml`.
+
+> **Tip:** The results reside in the directory `/opt` of the docker container and should be copied into the local filesystem in order to be accessed easily using following docker command:
+`docker cp container:/path/to/file /destination`.
+
+### Step 2: Creating a database
+
+To use the previously generated `Soil.sql`, a database needs to be created. For this example a docker container with a PostgreSQL image (version 12) and the PostGIS extension (version 3.2) is created:
+
+```
+docker run -d --name postgis_inspire_soil -p 5432:5432 -e POSTGRES_PASSWORD=postgres -e POSTGRES_USER=postgres -v /path/to/Soil.sql:/path/in/container postgis/postgis:12-3.2
+```
+In the next step, the database is established and the SQL DDL 
+statement loaded into it using psql:
+```
+docker exec -it postgis_inspire_soil psql -U postgres -c 'CREATE DATABASE inspire_soil;' -c '\c inspire_soil' -c 'CREATE EXTENSION postgis;' -f /path/in/container/to/Soil.sql
+```
+### Step 3: Configuration of the deegree workspace
+
+For starters, the easiest way to configure deegree is via the web console under [http://localhost:8080/deegree-webservices](http://localhost:8080/deegree-webservices).
+
+1. Create a deegree workspace
+* In the web console, create a new workspace under
+  * `general > workspaces > Create a new workspace`
+* For this example the workspace is called `'inspire_soil'`. After creating, the workspace should appear under:
+  * `Available workspaces`. 
+* Then start the created workspace.
+2. Create a SQL database connection
+* Create a new SQL database connection under
+  * `connections > databases > Create new`. 
+* Choose an identifier, for example `'inspire_soil_db'` and select type `DataSource (preferred)` with XML config example `PostgreSQL (minimal)` and click `Create new`.
+* The opened XML template needs to be adjusted with the URL to the previously created PostgreSQL docker container as well as the database `'inspire_soil'`. The set URL should look like this `"jdbc:postgresql://your.ip:5432/inspire_soil"`. Addtionally, the previously chosen password and username need to be adjusted. Click the button `save` to save your changes to the XML template.
+> **Attention:** Use your IP-adress instead of localhost, so Docker can communicate with your local machine.
+3. Create a SQLFeatureStore
+* Create a new SQL database connection under
+  * `data stores > feature > Create new`.
+* Choose an identifier, for example `'inspire_soil_fs'` and select type `SQL` with XML config example `minimal` and click `Create new`.
+* In the XML editor, delete the existing content (CTRL+A+DEL).
+* Next, open the earlier created file `Soil.xml` and select all of its content (CTRL+A+C). 
+* The only change necessary is to use the individual identifier of the SQL database connection, which you set in step 2. For example `<JDBCConnId>inspire_soil_db</JDBCConnId>`. Click the button `save` to save your changes to the XML template.
+  * In some cases, similar to this example, the FIDMapping prefix of certain FeatureTypes needs to be adjusted manually.
+  * In this example, following FIDMapping prefix changes need to be made on the priorly generated `Soil.xml` to match the used data to the generated database schema (`Soil.sql`):
+    * "OMPR_PROCESS_" to "Process_"
+    * "SO_DERIVEDSOILPROFILE_" to "DerivedSoilProfile_"
+    * "SO_SOILBODY_" to "SoilBody_"
+    * "SO_SOILLAYER_" to "SoilLayer_"
+> **Tip:** You can also add the file `Soil.xml` directly into your workspace in `.deegree/yourworkspace/datasources/feature/`, whereas the name of the identifier equals the filename and the necessary changes still need to be done.
+4. Create a Web Feature Service (WFS)
+* Create a new WFS under
+  * `web services > services > Create new`.
+* Choose an identifier, for example `'inspire_soil_wfs'` and select service type `WFS` with XML config example `complex` and click `Create new`.
+* Next, change the `FeatureStoreId` to the in step 3 set indentifier. For example  `<FeatureStoreId>inspire_soil_fs</FeatureStoreId>`. Click the button `Save` to save your changes to the XML template.
+
+This concludes the basic configuration of the deegree workspace.
+
+### Step 4: Using the deegree GmlLoader
+
+After downloading and extracting the dataset mentioned in the beginning of this example workflow, navigate into the folder containing the file `Soil.gml`:
+
+```
+cd SO_BoKw2015/
+```
+Next, the file needs to be copied onto the previosly created deegree docker container using the following docker command:
+```
+docker cp Soil.gml deegree:/
+```
+Lastly, the GmlLoader can be started using following paramaters:
+```
+docker exec -w /opt deegree java -Xmx16g -jar deegree-tools-gml.jar GmlLoader -pathToFile=/Soil.gml -workspaceName=inspire_soil -sqlFeatureStoreId=inspire_soil_fs -disabledResources=https://inspire.ec.europa.eu/codelist/
+```
+> Info: Setting the Java parameter `-Xmx16g` (value depening on the provided resources) is highly advised, else the GmlLoader could encounter an Java `OutOfMemoryError`. Further information regarding the parameters of the GmlLoader can be found in the [deegree documentation](ttps://www.deegree.org/documentation/).
+
+After the GmlLoader is run successfully, open the capabilities of the in step 3 configured WFS under 
+* `web services > services > inspire_soil_wfs > capabilities`.
+
+The capabilties should be then be accesible under the following address:
+http://localhost:8080/deegree-webservices/services/inspire_soil_wfs?service=WFS&request=GetCapabilities
+
+Lastly, open for example QGIS or any other GIS and connect the WFS resource. Multiple layers should be visible. Import the layer with the name `SoilBody` to the layer panel. The visualsation should be similar to the follwoing screenshot:
+
+![Visualisation of the data through the deegree WFS in QGIS](./img/GmlLoaderOutputVisualisation.png) 
 
 ## Featured implementations
 
 Some implementations of INSPIRE Soil data services based on deegree
 
-- [Baden Württemberg, Germany](https://lgrbwissen.lgrb-bw.de/bodenkunde)
+- [Baden Württemberg, Germany](https://www.geoportal-bw.de/#/(sidenav:search-results/LGRB%20INSPIRE))
 - [Brandenburg, Germany](https://geoportal.brandenburg.de/de/cms/portal/geodaten/diensteanbieter/dienste/psv/landesamt-fuer-bergbau-geologie-und-rohstoffe-lbgr/bGFuZC1sYmdyLWJi)
 
 
 ## Read more
 
-deegree is maintained by a company called [LatLon](https://www.lat-lon.de/) and others
+deegree is maintained by the company [lat-lon](https://www.lat-lon.de/) and others
 
 - Website: http://www.deegree.org/
-- Documentation: https://download.deegree.org/documentation/3.4.32/html/
+- Documentation: https://download.deegree.org/documentation/3.4.33/html/
 - Download: https://www.deegree.org/download/
 - Docker: https://hub.docker.com/r/deegree/deegree3-docker/
 

@@ -1,4 +1,9 @@
-![](./img/deegree_logo.svg) 
+---
+title: deegree
+authors: 
+    - Julian Zilz
+date: 2023-09-01
+---
 
 deegree is an open source java server implementation of WMS, WMTS, CSW, WCS, WFS, WPS.
 
@@ -13,9 +18,11 @@ The second approach is easy to setup and efficient when users request full datas
 
 ---
 
+![](./img/deegree_logo.svg) 
+
 # Get started with deegree
 
-Start a deegree instance locally using the docker hub image:
+Start a deegree instance locally using the Docker Hub image:
 
 ### Step 1: Pull the desired docker image
 
@@ -27,7 +34,7 @@ docker pull deegree/deegree3-docker:3.5
 ```
 docker pull deegree/deegree3-docker:3.5.2
 ```
-> **Info:** All available images of deegree version 3.5.x are built with Apache Tomcat 9.x and OpenJDK 11. Check https://hub.docker.com/r/deegree/deegree3-docker for details and other deegree versions available.
+> **Info:** All available images of deegree version 3.5.x are built with Apache Tomcat 9.x and OpenJDK 11. Check the [deegree Docker Hub project](https://hub.docker.com/r/deegree/deegree3-docker) for details and other deegree versions available.
 
 ### Step 2: Set up the docker network:
 
@@ -102,7 +109,7 @@ docker exec -w /opt deegree_inspire_soil java -jar deegree-tools-gml.jar SqlFeat
 If run successfully, the SqlFeatureStoreConfigCreator will generate the SQL DDL statement as `Soil.sql` and the SQLFeatureStore configuration as `Soil.xml`.
 
 > **Tip:** The results reside in the directory `/opt` of the docker container and should be copied into the local filesystem in order to be accessed easily using following docker command:
-`docker cp deegree:/opt/Soil.xml /destination`.
+`docker cp deegree_inspire_soil:/opt/Soil.xml /destination`.
 
 ### Step 2: Creating a database
 
@@ -137,7 +144,7 @@ For beginners, the easiest way to configure deegree is via the web console at
 * Choose an identifier, for example `'inspire_soil_db'` and select type `DataSource (preferred)` with XML config example `PostgreSQL (minimal)` and click `Create new`.
 * The URL in the XML template needs to be adjusted according to the previously created PostgreSQL docker container as well as the database `'inspire_soil'`. The set URL should look like this `"jdbc:postgresql://postgis_inspire_soil:5432/inspire_soil"`. The previously chosen password and username also need to be adjusted. Click the button `save` to save your changes to the XML template.
 
-> **Info:** Since both, the deegree and postgreSQL docker container, are in the same network, you can use the name of the postgreSQL docker container as hostname.
+> **Info:** Since both, the deegree and PostgreSQL docker container, are in the same network, you can use the name of the PostgreSQL docker container as hostname.
 
 3. **Create a SQLFeatureStore**
 * Create a new SQLFeatureStore under
@@ -213,9 +220,10 @@ Some implementations of INSPIRE soil data services based on deegree:
 
 deegree is maintained by the company [lat-lon](https://www.lat-lon.de/), among others
 
-* Website: http://www.deegree.org/
-* Documentation: https://download.deegree.org/documentation/current/html/
-* Download: https://www.deegree.org/download/
-* Docker: https://hub.docker.com/r/deegree/deegree3-docker/
-* INSPIRE Data Specification on Soil: https://inspire.ec.europa.eu/Themes/127/2892
-* **Contributions to the deegree open source project are always welcome!**
+* Website: [http://www.deegree.org/](http://www.deegree.org/)
+* Documentation: [https://download.deegree.org/documentation/current/html/](https://download.deegree.org/documentation/current/html/)
+* Download: [https://www.deegree.org/download/](https://www.deegree.org/download/)
+* Docker: [https://hub.docker.com/r/deegree/deegree3-docker/](https://hub.docker.com/r/deegree/deegree3-docker/)
+* INSPIRE Data Specification on Soil: [https://inspire.ec.europa.eu/Themes/127/2892](https://inspire.ec.europa.eu/Themes/127/2892)
+
+**Contributions to the deegree open source project are always welcome!**

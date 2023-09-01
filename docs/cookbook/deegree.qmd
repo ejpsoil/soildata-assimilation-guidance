@@ -19,15 +19,15 @@ Start a deegree instance locally using the docker hub image:
 
 ### Step 1: Pull the desired docker image
 
-**Latest** (strongly recommended)
+**Latest minor version** 
 ```
-docker pull deegree/deegree3-docker:latest
+docker pull deegree/deegree3-docker:3.5
 ```
 **Specific version** (example)
 ```
 docker pull deegree/deegree3-docker:3.5.2
 ```
-> **Info:** All available images of deegree version 3.5.x are built with Apache Tomcat 9.x and OpenJDK 11.
+> **Info:** All available images of deegree version 3.5.x are built with Apache Tomcat 9.x and OpenJDK 11. Check https://hub.docker.com/r/deegree/deegree3-docker for details and other deegree versions available.
 
 ### Step 2: Set up the docker network:
 
@@ -140,23 +140,23 @@ For beginners, the easiest way to configure deegree is via the web console at
 > **Info:** Since both, the deegree and postgreSQL docker container, are in the same network, you can use the name of the postgreSQL docker container as hostname.
 
 3. **Create a SQLFeatureStore**
-* Create a new SQL database connection under
+* Create a new SQLFeatureStore under
   * `data stores > feature > Create new`.
 * Choose an identifier, for example `'inspire_soil_fs'` and select type `SQL` with XML config example `minimal` and click `Create new`.
 * In the XML editor, delete the existing content (CTRL+A, DEL).
-* Next, open the previosly created file `Soil.xml` and select all of its content (CTRL+A, CTRL+C). 
+* Next, open the in step 1 created file `Soil.xml` and select all of its content (CTRL+A, CTRL+C), then paste the content into the XML editor (CRTL+V).
 * The only change necessary is to use the individual identifier of the SQL database connection, which you set in step 2. For example `<JDBCConnId>inspire_soil_db</JDBCConnId>`. Click the button `save` to save your changes to the XML template.
 
 ---
 
-* In some cases, similar to this example, the FIDMapping prefix of certain FeatureTypes needs to be adjusted manually.
+* In some cases, as in this example, the FIDMapping prefix of certain FeatureTypes needs to be adjusted manually.
 * In this example, the following FIDMapping prefix changes need to be made to the `Soil.xml` file to match those in the database schema (`Soil.sql`):
   * "OMPR_PROCESS_" to "Process_"
   * "SO_DERIVEDSOILPROFILE_" to "DerivedSoilProfile_"
   * "SO_SOILBODY_" to "SoilBody_"
   * "SO_SOILLAYER_" to "SoilLayer_"
 
-> **Info:** You can also add the file `Soil.xml` directly into your workspace in `.deegree/yourworkspace/datasources/feature/` and modify it there.
+> **Info:** Alternatively, you can also copy the `Soil.xml` directly into the workspace with i.e.: `docker cp Soil.xml deegree_inspire_soil:/root/.deegree/inspire_soil/datasources/feature/`. Remember, that the above mentioned changes (identifier feature store and database connection) still need to be applied.
 
 4. **Create a Web Feature Service (WFS)**
 * Create a new WFS under
@@ -173,7 +173,7 @@ This concludes the basic configuration of the deegree workspace.
 
 ### Step 4: Using the deegree GmlLoader
 
-After downloading and extracting the dataset mentioned at the beginning of this example workflow, the file `Soil.gml`needs to be copied onto the previously created deegree docker container using the following docker command:
+After downloading and extracting the dataset mentioned at the beginning of this example workflow, the file `Soil.gml` needs to be copied onto the previously created deegree docker container using the following docker command:
 ```
 docker cp path/to/Soil.gml deegree_inspire_soil:/
 ```
@@ -183,7 +183,7 @@ docker exec -w /opt deegree_inspire_soil java -Xmx16g -jar deegree-tools-gml.jar
 ```
 > **Info:** Setting the Java parameter `-Xmx16g` (value dependant on the resources provided) is highly advisable, to avoid an Java `OutOfMemoryError`. Further information regarding the parameters of the GmlLoader can be found in the [deegree documentation](ttps://www.deegree.org/documentation/).
 
-> **Attention:** The deegree GmlLoader takes around 23-26 hours to run, since the dataset used in this example is quite large (854,2 MB).
+> **Attention:** The deegree GmlLoader takes around 21 hours to run, since the dataset used in this example is quite large (854,2 MB).
 
 After the GmlLoader has run successfully, open the capabilities of the WFS configured in step 3 configured WFS under 
 

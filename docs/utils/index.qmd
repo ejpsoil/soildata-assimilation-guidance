@@ -1,8 +1,8 @@
 ---
-title: Utils
+title: Utilities 
 ---
 
-This page lists a set of usefull utilities.
+This page lists a set of usefull utilities as well as an overview of the provided cookbooks.
 
 - [Docker](docker.qmd) - a virtualisation technology
 - [Gdal/OGR](gdal.qmd) - a format conversion utility for spatial files
@@ -12,3 +12,44 @@ This page lists a set of usefull utilities.
 - [Python](python.qmd) - A common programming language in data science
 - [R](r.qmd) - A language for statistics
 - [Visual Studio Code](vscode.qmd) - A text editor
+
+# Available cookbooks
+
+- [52north](../cookbook/52north.qmd)
+- [AWStats](../cookbook/awstats.qmd)
+- [Codelist extensions](../cookbook/code-listsExtension.qmd)
+- [Codelist publishing](../cookbook/codelist-iso19135.qmd)
+- [DCAT](../cookbook/dcat.qmd)
+- [deegree](../cookbook/deegree.qmd)
+- [ESRI Geoportal Server](../cookbook/geoportal-server.qmd)
+- [FME](../cookbook/fme.qmd)
+- [FROST server](../cookbook/frost-server.qmd)
+- [GeoCat Bridge, GeoNetwork and GeoServer](../cookbook/bridge-geoserver-geonetwork.qmd)
+- [GeoHealthCheck](../cookbook/geohealthcheck.qmd)
+- [GeoNetwork](../cookbook/geonetwork.qmd)
+- [GeoServer](../cookbook/geoserver.qmd)
+- [Hale Connect](../cookbook/hale-connect.qmd)
+- [Hale Studio consume GML](../cookbook/hale-studio-consume-gml.qmd)
+- [Hale Studio](../cookbook/hale-studio.qmd)
+- [INSPIRE Geoportal](../cookbook/inspire-geoportal.qmd)
+- [INSPIRE Link Checker](../cookbook/link-checker.qmd)
+- [INSPIRE Soil in a relational database](../cookbook/glosis-db.qmd)
+- [JMeter](../cookbook/jmeter.qmd)
+- [ldproxy](../cookbook/ldproxy.qmd)
+- [MapServer](../cookbook/mapserver.qmd)
+- [ODK](../cookbook/odk.qmd)
+- [Postgraphile and GraphQL](../cookbook/postgraphile.qmd)
+- [pycsw](../cookbook/pycsw.qmd)
+- [pygeoapi](../cookbook/pygeoapi.qmd)
+- [pygeometa](../cookbook/pygeometa.qmd)
+- [QGIS](../cookbook/qgis.qmd)
+- [rasdaman](../cookbook/rasdaman.qmd)
+- [Re3gistry](../cookbook/re3gistry.qmd)
+- [RML.io](../cookbook/rml.qmd)
+- [SQL and python](../cookbook/sql.qmd)
+- [tarql](../cookbook/tarql.qmd)
+- [URI policy](../cookbook/uri.qmd)
+- [Virtuoso and Skosmos](../cookbook/virtuoso.qmd)
+- [WebDav](../cookbook/webdav.qmd)
+- [XtraServer](../cookbook/xtraserver.qmd)
+- [Zenodo](../cookbook/zenodo.qmd)

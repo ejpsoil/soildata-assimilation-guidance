@@ -28,7 +28,7 @@ website:
         href: download.qmd
       - text: QOS 
         href: QOS.qmd
-      - text: Utils 
+      - text: Utilities & Cookbooks
         href: utils/index.qmd
       - text: Glossary 
         href: glossary.qmd

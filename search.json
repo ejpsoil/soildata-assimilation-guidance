@@ -1458,9 +1458,9 @@
   {
     "objectID": "utils/index.html",
     "href": "utils/index.html",
-    "title": "Utils",
+    "title": "Utilities",
     "section": "",
-    "text": "This page lists a set of usefull utilities.\n\nDocker - a virtualisation technology\nGdal/OGR - a format conversion utility for spatial files\nGit - a versioning system\nJupyter notebooks - Interactive notebooks\nLocal tunnel - Set up a local tunnel to the web\nPython - A common programming language in data science\nR - A language for statistics\nVisual Studio Code - A text editor"
+    "text": "This page lists a set of usefull utilities as well as an overview of the provided cookbooks.\n\nDocker - a virtualisation technology\nGdal/OGR - a format conversion utility for spatial files\nGit - a versioning system\nJupyter notebooks - Interactive notebooks\nLocal tunnel - Set up a local tunnel to the web\nPython - A common programming language in data science\nR - A language for statistics\nVisual Studio Code - A text editor\n\n\nAvailable cookbooks\n\n52north\nAWStats\nCodelist extensions\nCodelist publishing\nDCAT\ndeegree\nESRI Geoportal Server\nFME\nFROST server\nGeoCat Bridge, GeoNetwork and GeoServer\nGeoHealthCheck\nGeoNetwork\nGeoServer\nHale Connect\nHale Studio consume GML\nHale Studio\nINSPIRE Geoportal\nINSPIRE Link Checker\nINSPIRE Soil in a relational database\nJMeter\nldproxy\nMapServer\nODK\nPostgraphile and GraphQL\npycsw\npygeoapi\npygeometa\nQGIS\nrasdaman\nRe3gistry\nRML.io\nSQL and python\ntarql\nURI policy\nVirtuoso and Skosmos\nWebDav\nXtraServer\nZenodo"
   },
   {
     "objectID": "utils/docker.html",

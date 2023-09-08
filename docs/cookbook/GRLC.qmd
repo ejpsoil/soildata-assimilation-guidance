@@ -1,5 +1,5 @@
 ---
-title: GRLC.io, setup a conviniance API on a SPARQL endpoint
+title: GRLC.io, setup a conveniance API on a SPARQL endpoint
 author: Paul van Genuchten
 status: draft
 ---
@@ -7,9 +7,9 @@ status: draft
 A challenge with pure SKOS RDF codelists is that they are hard to consume by tools unaware of semantic web conventions.
 Various tools exist which enable to browse through a skos codelist, such as [skosmos](./virtuoso.qmd) and 
 [vocprez](https://github.com/RDFLib/VocPrez). This recipe introduces a more generic approach to setup a conveniance 
-API on top of a SPARQL endpoint, which can also be used to setup a conveniance API to browse through codelists. 
+API on top of a SPARQL endpoint, which can also be used for codelists. 
 
-[GRLC](https://grlc.io) creates an [OpenAPI](https://spec.openapis.org/) facade on any SPARQL endpoint. Users send an OpenAPI
+The [GRLC](https://grlc.io) software creates an [OpenAPI](https://spec.openapis.org/) facade on any SPARQL endpoint. Users send an OpenAPI
 request to GRLC, GRLC translates the request to a SPARQL query and forwards it to the SPARQL endpoint, the result of the SPARQL 
 query is returned to the user as json or html.
 
@@ -29,6 +29,7 @@ Create a new file named `urls.yml`, wich contains the configuration of our new s
 
 ```yaml
 title: My GRLC experiment
+description: a conveniance API to browse soil codelists
 contact:
   name: My name
   url: https://example.com
@@ -38,7 +39,7 @@ licence: https://github.com/{github-handle}/{github-project}/blob/main/LICENSE
 We're now ready to set up the endpoints of our service. Each endpoint is defined by a SPARQL query, stored as a `.rq` file. 
 Create a file `carbonOrganicProcedure.rq`.
 
-```sparql
+```
 PREFIX skos:<http://www.w3.org/2004/02/skos/core#>
 
 SELECT DISTINCT ?term ?concept ?definition WHERE  {
@@ -46,13 +47,13 @@ SELECT DISTINCT ?term ?concept ?definition WHERE  {
      ?concept skos:inScheme ?conceptScheme .
      FILTER(regex(str(?conceptScheme),'carbonOrganicProcedure'))
      ?concept skos:definition ?definition.
- }
- ORDER BY ?term
+}
+ORDER BY ?term
 ```
 
-This query will select all `skos:concepts` in scheme `carbonOrganicProcedure`.
+This query will select all `concepts` in scheme `carbonOrganicProcedure`.
 
-Now navigate your browser to https://grlc.io/api/{github-handle}/{github-project} (replace {gh} with your setup) and 
+Now navigate your browser to https://grlc.io/api/{github-handle}/{github-project} (replace `{gh}` with your setup) and 
 notice that GRLC has set up an OpenAPI service for your configuration. Click the method in blue, `Try it out` and `Execute` 
 to see the service in action.
 

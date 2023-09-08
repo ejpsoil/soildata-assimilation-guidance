@@ -8,7 +8,7 @@
 
 <meta name="author" content="Paul van Genuchten">
 
-<title>Soil data guidance - GRLC.io, setup a conviniance API on a SPARQL endpoint</title>
+<title>Soil data guidance - GRLC.io, setup a conveniance API on a SPARQL endpoint</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -181,7 +181,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">GRLC.io, setup a conviniance API on a SPARQL endpoint</h1>
+<h1 class="title">GRLC.io, setup a conveniance API on a SPARQL endpoint</h1>
 </div>
 
 
@@ -202,20 +202,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<p>A challenge with pure SKOS RDF codelists is that they are hard to consume by tools unaware of semantic web conventions. Various tools exist which enable to browse through a skos codelist, such as <a href="../cookbook/virtuoso.html">skosmos</a> and <a href="https://github.com/RDFLib/VocPrez">vocprez</a>. This recipe introduces a more generic approach to setup a conveniance API on top of a SPARQL endpoint, which can also be used to setup a conveniance API to browse through codelists.</p>
-<p><a href="https://grlc.io">GRLC</a> creates an <a href="https://spec.openapis.org/">OpenAPI</a> facade on any SPARQL endpoint. Users send an OpenAPI request to GRLC, GRLC translates the request to a SPARQL query and forwards it to the SPARQL endpoint, the result of the SPARQL query is returned to the user as json or html.</p>
+<p>A challenge with pure SKOS RDF codelists is that they are hard to consume by tools unaware of semantic web conventions. Various tools exist which enable to browse through a skos codelist, such as <a href="../cookbook/virtuoso.html">skosmos</a> and <a href="https://github.com/RDFLib/VocPrez">vocprez</a>. This recipe introduces a more generic approach to setup a conveniance API on top of a SPARQL endpoint, which can also be used for codelists.</p>
+<p>The <a href="https://grlc.io">GRLC</a> software creates an <a href="https://spec.openapis.org/">OpenAPI</a> facade on any SPARQL endpoint. Users send an OpenAPI request to GRLC, GRLC translates the request to a SPARQL query and forwards it to the SPARQL endpoint, the result of the SPARQL query is returned to the user as json or html.</p>
 <p>For this recipe you need to have an account on <a href="https://github.com">github</a>, login and create a new public repository. This repository will contain the configuration of our new service. At creation, select a MIT or CC-0 license (or add a <code>LICENSE</code> file manually).</p>
 <p>Either clone the repository and work locally or use the webbased Github text editor to create and modify files.</p>
 <p>Create a new file named <code>endpoint.txt</code>, which contains the SPARQL endpoint we’re going to use for this recipe.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">https://virtuoso.isric.org/sparql</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Create a new file named <code>urls.yml</code>, wich contains the configuration of our new service.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> My GRLC experiment</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">contact</span><span class="kw">:</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">name</span><span class="kw">:</span><span class="at"> My name</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">url</span><span class="kw">:</span><span class="at"> https://example.com</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">licence</span><span class="kw">:</span><span class="at"> https://github.com/{github-handle}/{github-project}/blob/main/LICENSE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">description</span><span class="kw">:</span><span class="at"> a conveniance API to browse soil codelists</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">contact</span><span class="kw">:</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">name</span><span class="kw">:</span><span class="at"> My name</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">url</span><span class="kw">:</span><span class="at"> https://example.com</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">licence</span><span class="kw">:</span><span class="at"> https://github.com/{github-handle}/{github-project}/blob/main/LICENSE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>We’re now ready to set up the endpoints of our service. Each endpoint is defined by a SPARQL query, stored as a <code>.rq</code> file. Create a file <code>carbonOrganicProcedure.rq</code>.</p>
-<pre class="sparql"><code>PREFIX skos:&lt;http://www.w3.org/2004/02/skos/core#&gt;
+<pre><code>PREFIX skos:&lt;http://www.w3.org/2004/02/skos/core#&gt;
 
 SELECT DISTINCT ?term ?concept ?definition WHERE  {
      ?concept skos:prefLabel ?term .

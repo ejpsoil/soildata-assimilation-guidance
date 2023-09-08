@@ -223,10 +223,10 @@ SELECT DISTINCT ?term ?concept ?definition WHERE  {
      ?concept skos:inScheme ?conceptScheme .
      FILTER(regex(str(?conceptScheme),'carbonOrganicProcedure'))
      ?concept skos:definition ?definition.
- }
- ORDER BY ?term</code></pre>
-<p>This query will select all <code>skos:concepts</code> in scheme <code>carbonOrganicProcedure</code>.</p>
-<p>Now navigate your browser to https://grlc.io/api/{github-handle}/{github-project} (replace {gh} with your setup) and notice that GRLC has set up an OpenAPI service for your configuration. Click the method in blue, <code>Try it out</code> and <code>Execute</code> to see the service in action.</p>
+}
+ORDER BY ?term</code></pre>
+<p>This query will select all <code>concepts</code> in scheme <code>carbonOrganicProcedure</code>.</p>
+<p>Now navigate your browser to https://grlc.io/api/{github-handle}/{github-project} (replace <code>{gh}</code> with your setup) and notice that GRLC has set up an OpenAPI service for your configuration. Click the method in blue, <code>Try it out</code> and <code>Execute</code> to see the service in action.</p>
 <p>Try to set up more endpoints by creating new <code>.rq</code> files with alternative SPARQL queries (try the query first at <a href="https://virtuoso.isric.org/sparql">https://virtuoso.isric.org/sparql</a>).</p>
 <p>Also have a look at <a href="https://github.com/CLARIAH/grlc#decorator-syntax">the GRLC documentation</a> to evaluate decorators you can add to your queries to facilitate pagination, tagging, defaults etc.</p>
 <p>GRLC.io is a service provided by the authors. You can set up your own instance of GRLC with the <a href="https://hub.docker.com/r/clariah/grlc">GRLC docker image</a>.</p>

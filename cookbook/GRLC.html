@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Paul van Genuchten">
 
-<title>Soil data guidance - Utilities</title>
+<title>Soil data guidance - GRLC.io, setup a conviniance API on a SPARQL endpoint</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -114,7 +149,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">QOS</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../utils/index.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="../utils/index.html" rel="" target="">
  <span class="menu-text">Utilities &amp; Cookbooks</span></a>
   </li>  
   <li class="nav-item">
@@ -137,22 +172,28 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#available-cookbooks" id="toc-available-cookbooks" class="nav-link active" data-scroll-target="#available-cookbooks">Available cookbooks</a></li>
+  <li><a href="#read-more" id="toc-read-more" class="nav-link active" data-scroll-target="#read-more">Read more</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/utils/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/GRLC.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Utilities</h1>
+<h1 class="title">GRLC.io, setup a conviniance API on a SPARQL endpoint</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Paul van Genuchten </p>
+          </div>
+  </div>
     
   
     
@@ -161,59 +202,41 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>This page lists a set of usefull utilities as well as an overview of the provided cookbooks.</p>
+<p>A challenge with pure SKOS RDF codelists is that they are hard to consume by tools unaware of semantic web conventions. Various tools exist which enable to browse through a skos codelist, such as <a href="../cookbook/virtuoso.html">skosmos</a> and <a href="https://github.com/RDFLib/VocPrez">vocprez</a>. This recipe introduces a more generic approach to setup a conveniance API on top of a SPARQL endpoint, which can also be used to setup a conveniance API to browse through codelists.</p>
+<p><a href="https://grlc.io">GRLC</a> creates an <a href="https://spec.openapis.org/">OpenAPI</a> facade on any SPARQL endpoint. Users send an OpenAPI request to GRLC, GRLC translates the request to a SPARQL query and forwards it to the SPARQL endpoint, the result of the SPARQL query is returned to the user as json or html.</p>
+<p>For this recipe you need to have an account on <a href="https://github.com">github</a>, login and create a new public repository. This repository will contain the configuration of our new service. At creation, select a MIT or CC-0 license (or add a <code>LICENSE</code> file manually).</p>
+<p>Either clone the repository and work locally or use the webbased Github text editor to create and modify files.</p>
+<p>Create a new file named <code>endpoint.txt</code>, which contains the SPARQL endpoint we’re going to use for this recipe.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">https://virtuoso.isric.org/sparql</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Create a new file named <code>urls.yml</code>, wich contains the configuration of our new service.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> My GRLC experiment</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">contact</span><span class="kw">:</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">name</span><span class="kw">:</span><span class="at"> My name</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">url</span><span class="kw">:</span><span class="at"> https://example.com</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">licence</span><span class="kw">:</span><span class="at"> https://github.com/{github-handle}/{github-project}/blob/main/LICENSE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We’re now ready to set up the endpoints of our service. Each endpoint is defined by a SPARQL query, stored as a <code>.rq</code> file. Create a file <code>carbonOrganicProcedure.rq</code>.</p>
+<pre class="sparql"><code>PREFIX skos:&lt;http://www.w3.org/2004/02/skos/core#&gt;
+
+SELECT DISTINCT ?term ?concept ?definition WHERE  {
+     ?concept skos:prefLabel ?term .
+     ?concept skos:inScheme ?conceptScheme .
+     FILTER(regex(str(?conceptScheme),'carbonOrganicProcedure'))
+     ?concept skos:definition ?definition.
+ }
+ ORDER BY ?term</code></pre>
+<p>This query will select all <code>skos:concepts</code> in scheme <code>carbonOrganicProcedure</code>.</p>
+<p>Now navigate your browser to https://grlc.io/api/{github-handle}/{github-project} (replace {gh} with your setup) and notice that GRLC has set up an OpenAPI service for your configuration. Click the method in blue, <code>Try it out</code> and <code>Execute</code> to see the service in action.</p>
+<p>Try to set up more endpoints by creating new <code>.rq</code> files with alternative SPARQL queries (try the query first at <a href="https://virtuoso.isric.org/sparql">https://virtuoso.isric.org/sparql</a>).</p>
+<p>Also have a look at <a href="https://github.com/CLARIAH/grlc#decorator-syntax">the GRLC documentation</a> to evaluate decorators you can add to your queries to facilitate pagination, tagging, defaults etc.</p>
+<p>GRLC.io is a service provided by the authors. You can set up your own instance of GRLC with the <a href="https://hub.docker.com/r/clariah/grlc">GRLC docker image</a>.</p>
+<section id="read-more" class="level2">
+<h2 class="anchored" data-anchor-id="read-more">Read more</h2>
+<p>GRLC</p>
 <ul>
-<li><a href="../utils/docker.html">Docker</a> - a virtualisation technology</li>
-<li><a href="../utils/gdal.html">Gdal/OGR</a> - a format conversion utility for spatial files</li>
-<li><a href="../utils/git.html">Git</a> - a versioning system</li>
-<li><a href="../utils/jupyter.html">Jupyter notebooks</a> - Interactive notebooks</li>
-<li><a href="../utils/localtunnel.html">Local tunnel</a> - Set up a local tunnel to the web</li>
-<li><a href="../utils/python.html">Python</a> - A common programming language in data science</li>
-<li><a href="../utils/r.html">R</a> - A language for statistics</li>
-<li><a href="../utils/vscode.html">Visual Studio Code</a> - A text editor</li>
-</ul>
-<section id="available-cookbooks" class="level1">
-<h1>Available cookbooks</h1>
-<ul>
-<li><a href="../cookbook/52north.html">52north</a></li>
-<li><a href="../cookbook/awstats.html">AWStats</a></li>
-<li><a href="../cookbook/code-listsExtension.html">Codelist extensions</a></li>
-<li><a href="../cookbook/codelist-iso19135.html">Codelist publishing</a></li>
-<li><a href="../cookbook/dcat.html">DCAT</a></li>
-<li><a href="../cookbook/deegree.html">deegree</a></li>
-<li><a href="../cookbook/geoportal-server.html">ESRI Geoportal Server</a></li>
-<li><a href="../cookbook/fme.html">FME</a></li>
-<li><a href="../cookbook/frost-server.html">FROST server</a></li>
-<li><a href="../cookbook/bridge-geoserver-geonetwork.html">GeoCat Bridge, GeoNetwork and GeoServer</a></li>
-<li><a href="../cookbook/geohealthcheck.html">GeoHealthCheck</a></li>
-<li><a href="../cookbook/geonetwork.html">GeoNetwork</a></li>
-<li><a href="../cookbook/geoserver.html">GeoServer</a></li>
-<li><a href="../cookbook/GRLC.html">GRLC.io</a></li>
-<li><a href="../cookbook/hale-connect.html">Hale Connect</a></li>
-<li><a href="../cookbook/hale-studio-consume-gml.html">Hale Studio consume GML</a></li>
-<li><a href="../cookbook/hale-studio.html">Hale Studio</a></li>
-<li><a href="../cookbook/inspire-geoportal.html">INSPIRE Geoportal</a></li>
-<li><a href="../cookbook/link-checker.html">INSPIRE Link Checker</a></li>
-<li><a href="../cookbook/glosis-db.html">INSPIRE Soil in a relational database</a></li>
-<li><a href="../cookbook/jmeter.html">JMeter</a></li>
-<li><a href="../cookbook/ldproxy.html">ldproxy</a></li>
-<li><a href="../cookbook/mapserver.html">MapServer</a></li>
-<li><a href="../cookbook/odk.html">ODK</a></li>
-<li><a href="../cookbook/postgraphile.html">Postgraphile and GraphQL</a></li>
-<li><a href="../cookbook/pycsw.html">pycsw</a></li>
-<li><a href="../cookbook/pygeoapi.html">pygeoapi</a></li>
-<li><a href="../cookbook/pygeometa.html">pygeometa</a></li>
-<li><a href="../cookbook/qgis.html">QGIS</a></li>
-<li><a href="../cookbook/rasdaman.html">rasdaman</a></li>
-<li><a href="../cookbook/re3gistry.html">Re3gistry</a></li>
-<li><a href="../cookbook/rml.html">RML.io</a></li>
-<li><a href="../cookbook/sql.html">SQL and python</a></li>
-<li><a href="../cookbook/tarql.html">tarql</a></li>
-<li><a href="../cookbook/uri.html">URI policy</a></li>
-<li><a href="../cookbook/virtuoso.html">Virtuoso and Skosmos</a></li>
-<li><a href="../cookbook/webdav.html">WebDav</a></li>
-<li><a href="../cookbook/xtraserver.html">XtraServer</a></li>
-<li><a href="../cookbook/zenodo.html">Zenodo</a></li>
+<li>Website: <a href="https://grlc.io">GRLC.io</a></li>
+<li>GitHub: <a href="https://github.com/CLARIAH/grlc">github</a></li>
+<li>Docker: <a href="https://hub.docker.com/r/clariah/grlc">docker</a></li>
+<li>Paper: <a href="https://www.albertmeronyo.org/wp-content/uploads/2016/04/SALAD2016_paper_4.pdf">SALAD2016</a></li>
 </ul>
 
 

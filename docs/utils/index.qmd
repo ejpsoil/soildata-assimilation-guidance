@@ -28,6 +28,7 @@ This page lists a set of usefull utilities as well as an overview of the provide
 - [GeoHealthCheck](../cookbook/geohealthcheck.qmd)
 - [GeoNetwork](../cookbook/geonetwork.qmd)
 - [GeoServer](../cookbook/geoserver.qmd)
+- [GRLC.io](../cookbook/GRLC.qmd) 
 - [Hale Connect](../cookbook/hale-connect.qmd)
 - [Hale Studio consume GML](../cookbook/hale-studio-consume-gml.qmd)
 - [Hale Studio](../cookbook/hale-studio.qmd)

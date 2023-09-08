@@ -57,3 +57,4 @@ A powerfull aspect of SKOS is that you can link from a concept to existing conce
 | --- | --- | --- |
 | [Extend a codelist](cookbook/code-listsExtension.qmd) |  | How to extend an INSPIRE codelist |
 | [Publish a SKOS codelist](cookbook/virtuoso.qmd) | [Virtuoso](https://virtuoso.openlinksw.com/) [Skosmos](https://skosmos.org) | Publish a code list in semantic web |
+| [GRLC.io](cookbook/GRLC.qmd) | [GRLC.io](https://grlc.io) | A conveniance API on top of your SPARQL endpoint |

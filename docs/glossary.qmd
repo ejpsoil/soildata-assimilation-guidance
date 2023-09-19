@@ -37,7 +37,7 @@ This page includes terms that we use in our wiki, so that you have a reference f
 
 [*Dataverse*](https://dataverse.org/) is open source research data repository software
 
-[*Datacite*](https://datacite.org/) is a non-profit organisation that provides persistent identifiers (DOIs) for research data. It i
+[*Datacite*](https://datacite.org/) is a non-profit organisation that provides persistent identifiers (DOIs) for research data.
 
 [*Datacite metadata schema*](https://schema.datacite.org/) a datamodel for metadata for scientific resources
 
@@ -52,6 +52,8 @@ This page includes terms that we use in our wiki, so that you have a reference f
 [*DOI*](https://www.doi.org/) a digital identifier of an object, any object — physical, digital, or abstract
 
 *Encoding* is the format used to [serialise](https://en.wikipedia.org/wiki/Serialization) a resource to a file, common encodings are xml, json, turtle
+
+*Epic* in agile software development is a big chunk of work which can be divided into smaller user stories (source: [Knowledgehut](https://www.knowledgehut.com/blog/agile/what-is-an-epic-agile))
 
 [*ESDAC*](https://esdac.jrc.ec.europa.eu/) thematic centre for soil related data in Europe
 
@@ -101,9 +103,9 @@ This page includes terms that we use in our wiki, so that you have a reference f
 
 Representational state transfer (REST) a set of guidelines for creating stateless, reliable web APIs (source: [wikipedia](https://en.wikipedia.org/wiki/Representational_state_transfer))
 
-[SensorthingsAPI](https://www.ogc.org/standard/sensorthings/) (STA)
+[SensorthingsAPI](https://www.ogc.org/standard/sensorthings/) (STA) is a formalised protocol to exchange sensor data and tasks between IoT devices, maintained at Open Geospatial Consortium.
 
-[SOS](https://www.ogc.org/standard/sos/) Sensor Observation Service
+[Sensor Observation Service](https://www.ogc.org/standard/sos/) (SOS) is a formalised protocol to exchange sensor data between entities, maintained at Open Geospatial Consortium.
 
 Soil classification deals with the systematic categorization of soils based on distinguishing characteristics as well as criteria that dictate choices in use (source: [wikipedia](https://en.wikipedia.org/wiki/Soil_classification))
 
@@ -113,21 +115,23 @@ Soil classification deals with the systematic categorization of soils based on d
 
 *Unified Modeling Language* (UML) a general-purpose modeling language that is intended to provide a standard way to visualize the design of a system (source: [wikipedia](https://en.wikipedia.org/wiki/Unified_Modeling_Language))
 
+*Use case* is a list of actions or event steps typically defining the interactions between a role (or actor) and a system to achieve a goal (source: [wikipedia](https://en.wikipedia.org/wiki/Use_case))
+
+*User story* in agile software development is an informal, natural language description of features of a software system, written from the perspective of a user of a system (source: [wikipedia](https://en.wikipedia.org/wiki/User_story))
+
 *View service* is a concept from [INSPIRE](https://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view) indicating a service type which presents a (pre)view of a dataset. Typically implemented as WMS or WMTS.
 
 [Wageningen ENvironmental Research](https://www.wur.nl/en/research-results/research-institutes/environmental-research.htm) (WENR) qualified and independent research to the realisation of a high quality and sustainable green living environment
 
 *Webservice* a service offered by a device to another device, communicating with each other via the Internet (source: [wikipedia](https://en.wikipedia.org/wiki/Web_service))
 
-[WOSIS](https://www.isric.org/explore/wosis) aims to serve the user with a selection of standardised and ultimately harmonised soil profile data
+[WOSIS](https://www.isric.org/explore/wosis) is a global dataset, maintained at ISRIC, aiming to serve the user with a selection of standardised and ultimately harmonised soil profile data
 
-[WMS](https://www.ogc.org/standard/wms/) Web Map service
+*Web Map service* ([WMS](https://www.ogc.org/standard/wms/)) is a formalised protocol to exchange geospatial data represented as images
 
-[WFS](https://www.ogc.org/standard/wfs/) Web Feature Service
+*Web Feature Service* ([WFS](https://www.ogc.org/standard/wfs/)) is a formalised protocol to exchange geospatial vector data
 
-[WCS](https://www.ogc.org/standard/wcs/) Web Coverage Service
-
-[WMTS](https://www.ogc.org/standard/wmts) Web Map Tile Service
+*Web Coverage Service* ([WCS](https://www.ogc.org/standard/wcs/))  is a formalised protocol to exchange geospatial grid data
 
 *XML Schema Definition* (XSD) recommendation how to formally describe the elements in an Extensible Markup Language (XML) document (source: [wikipedia](https://en.wikipedia.org/wiki/XML_Schema_(W3C))
 

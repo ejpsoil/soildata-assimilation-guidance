@@ -6,6 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Paul van Genuchten">
+<meta name="dcterms.date" content="2023-01-20">
 
 <title>Soil data guidance - Zenodo data repository</title>
 <style>
@@ -137,9 +139,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#datacite-inspire" id="toc-datacite-inspire" class="nav-link active" data-scroll-target="#datacite-inspire">DataCite &amp; INSPIRE</a></li>
-  <li><a href="#upload-your-data-to-zenodo" id="toc-upload-your-data-to-zenodo" class="nav-link" data-scroll-target="#upload-your-data-to-zenodo">Upload your data to Zenodo</a></li>
-  <li><a href="#an-atom-approach-to-access-the-data-on-zenodo" id="toc-an-atom-approach-to-access-the-data-on-zenodo" class="nav-link" data-scroll-target="#an-atom-approach-to-access-the-data-on-zenodo">An Atom approach to access the data on Zenodo</a></li>
+  <li><a href="#upload-your-data-to-zenodo" id="toc-upload-your-data-to-zenodo" class="nav-link active" data-scroll-target="#upload-your-data-to-zenodo">Upload your data to Zenodo</a></li>
+  <li><a href="#datacite-metadata-schema" id="toc-datacite-metadata-schema" class="nav-link" data-scroll-target="#datacite-metadata-schema">DataCite metadata schema</a></li>
+  <li><a href="#datacite-and-inspire" id="toc-datacite-and-inspire" class="nav-link" data-scroll-target="#datacite-and-inspire">DataCite and INSPIRE</a></li>
+  <li><a href="#inspire-atom-downloadservice" id="toc-inspire-atom-downloadservice" class="nav-link" data-scroll-target="#inspire-atom-downloadservice">INSPIRE Atom downloadservice</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/zenodo.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -155,7 +158,19 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Paul van Genuchten </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 20, 2023</p>
+    </div>
+  </div>
   
     
   </div>
@@ -163,16 +178,8 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>This recipe proposes an approach to use <a href="https://zenodo.org">Zenodo</a> to publish a dataset in such a way, that many of the INSPIRE practices are implemented. Zenodo is a generic repository for academic work part of the European OpenAIRE program and operated by CERN. Zenodo resources are clustered in communities. You can join an existing community or start one. Resources from a community can be accessed as a collection. Community moderators (dis)allow contributions to a community.</p>
-<section id="datacite-inspire" class="level2">
-<h2 class="anchored" data-anchor-id="datacite-inspire">DataCite &amp; INSPIRE</h2>
-<p>Zenodo adopted aspects of the <a href="https://schema.datacite.org/">DataCite metadata schema</a>. The procedure below is also relevant for other DataCite oriented repositories, such as <a href="https://dataverse.org">Dataverse</a>. Since Zenodo is DataCite oriented, it does not directly match the requirement of INSPIRE to provide iso19139 metadata. However by following the suggested procedure, the metadata is almost semantically identical. Two routes of resolving this challenge are possible:</p>
-<ul>
-<li>Engage with the INSPIRE community to enable the DataCite encoding as an additional format to provide INSPIRE metadata</li>
-<li>Introduce a technical component, such as <a href="../cookbook/pygeometa.html">pygeometa</a>, which could provide a transformation from DataCite to iso19139</li>
-</ul>
-<p>Clement Lattelais (INRAE) is preparing a <a href="https://creagov.sharepoint.com/:p:/r/sites/EJP-SOILWP6INSPIREWG/Documenti%20condivisi/General/task6.1/task6.1_metadata/EJP%20SOIL_JRC_metadata%20catalog%20meeting_nov%202022.pptx?d=w3ed829c3137b4e36a1e169b7f2ffd4a8&amp;csf=1&amp;web=1&amp;e=NfJAaV">comparison tool</a> on how the metadata schemes of various repositories (DataVerse, Zenodo, ..) relate to the INSPIRE Metadata Guidelines. This tool is relevant to evaluate if (and how) a certain repository can be used for INSPIRE. But also to assess any non listed repositories.</p>
-</section>
+<p>This recipe proposes an approach to use <a href="https://zenodo.org">Zenodo</a> to publish a dataset. Some suggestions are made to increase the value of the Zenodo publication. Zenodo is a generic repository to publish resources related to scientific work and is part of the European OpenAIRE program and operated by CERN. As part of the upload process some metadata is provided and a persistent identifier (DOI) is created. Zenodo resources are clustered in communities. You can join an existing community or start one. Community moderators (dis)allow contributions to a community.</p>
+<p>The procedure below is also relevant for other scientific repositories, such as <a href="https://dataverse.org">Dataverse</a>, <a href="https://osf.io">Open Science Foundation</a>, <a href="https://eosc-portal.eu/">European Open Science Cloud</a> or <a href="https://search.dataone.org/data">DataOne</a>.</p>
 <section id="upload-your-data-to-zenodo" class="level2">
 <h2 class="anchored" data-anchor-id="upload-your-data-to-zenodo">Upload your data to Zenodo</h2>
 <p>After (registering and) logging in you can select the upload resource option.</p>
@@ -190,12 +197,10 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <p>The list of contact roles is very detailed in Zenodo. Verify that you have at least 1 contact which has the role of <code>Contact point</code>, and provide at least a valid email address.</p>
-<p>INSPIRE metadata guidelines mandate a number of fields which are not available on the Zenodo metadata form. There are 2 options to still provide this metadata.</p>
-<ul>
-<li>Provide a iso19139 document as an additional attachement to the record.</li>
-<li>Use the subject field to provide additional metadata</li>
-</ul>
-<p>For option 2, the relevant element is the subject area at the bottom of the metadata form. Each subject is defined by a label and a URI. These URI’s can reference concepts which provide the required context to the data. The table below suggests a number of subjects to be added, related to specific metadata requirements</p>
+</section>
+<section id="datacite-metadata-schema" class="level2">
+<h2 class="anchored" data-anchor-id="datacite-metadata-schema">DataCite metadata schema</h2>
+<p>Zenodo, like many scientific repositories, adopts the <a href="https://schema.datacite.org/">DataCite metadata schema</a>. A common mechanism to capture additional properties, which are not provided by the schema, is to select keywords from selected vocabularies. In Zenodo, the option to add keywords from vocabularies is available in the subject area at the bottom of the metadata form. Each subject is defined by a label and a URI. The table below suggests a number of subjects to be added, these subjects are derived from common conventions, such as the INSPIRE regulation.</p>
 <table class="table">
 <thead>
 <tr class="header">
@@ -259,9 +264,14 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 </section>
-<section id="an-atom-approach-to-access-the-data-on-zenodo" class="level2">
-<h2 class="anchored" data-anchor-id="an-atom-approach-to-access-the-data-on-zenodo">An Atom approach to access the data on Zenodo</h2>
-<p>This approach is based on the <a href="../cookbook/webdav.html">recipe on WebDav and Atom services</a>. The suggestion is to upload 2 additional Atom.xml files which describe the resources in an Atom format. The first file describes the Atom Download Service. The second Atom describes the distributions of the dataset. The zenodo approach will not cover all the aspects of a INSPIRE ATOM Download service, the OpenSearch option is missing.</p>
+<section id="datacite-and-inspire" class="level2">
+<h2 class="anchored" data-anchor-id="datacite-and-inspire">DataCite and INSPIRE</h2>
+<p>The INSPIRE community currently does not provide a good practice to use the Datacite metadata schema. A technical component, such as <a href="../cookbook/pygeometa.html">pygeometa</a>, is required to transform DataCite metadata to the supported formats. Or a second metadata document needs to be provided which matches the practices of INSPIRE.</p>
+<p>Clement Lattelais has prepared a <a href="./md-schema-comparison.qmd">comparison tool</a> on how the metadata schemes of various repositories (DataVerse, Zenodo, Cordis, ..) relate to the INSPIRE Metadata Guidelines. This tool is relevant to evaluate if (and how) a certain repository can be used for INSPIRE. But also to assess any non listed repositories.</p>
+</section>
+<section id="inspire-atom-downloadservice" class="level2">
+<h2 class="anchored" data-anchor-id="inspire-atom-downloadservice">INSPIRE Atom downloadservice</h2>
+<p>INSPIRE suggests to facilitate data downloads via a download service. One of the options to provide such a service is to provide a number of Atom.xml files, 1 file to describe the service and 1 to for each of the datasets in that service which provide download details, such as available formats and size. Read more about this convention in the <a href="../cookbook/webdav.html">recipe on WebDav and Atom services</a>.</p>
 
 
 </section>

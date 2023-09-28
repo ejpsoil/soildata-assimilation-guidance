@@ -1,8 +1,18 @@
 ---
+title: Metadata recommendation/comparison
 author:	Clement LATTELAIS
 affiliation: INRAE
 date: 2022-11-08
 ---
+
+The aim of the table is to list usefull metadata properties in various metadata profiles.
+The list is presented in a table created as a mapping between several metadata standards and guidances,
+starting from the recherche.data.gouv.fr metadata list.
+
+The status of the metadata are precised for each source: mandatory or recommended.
+The column 'overall recommendation' is a synthesis of the compared sources, completed with personal recommendations.
+Those recommendations are not official, will probably evolve, and might just be seen as a basis for further reflections.							
+
 
 | Main topic                          | Sub topic                 | research.data.gouv | H2020     | INSPIRE   | DataCite    | overall recommendation |
 | ----------------------------------- | ------------------------- | ------------------ | --------- | --------- | ----------- | ---------------------- |

@@ -1,20 +1,18 @@
 ---
 title: Zenodo data repository
+author: Paul van Genuchten
+date: 2023-01-20
 ---
 
-This recipe proposes an approach to use [Zenodo](https://zenodo.org) to publish a dataset in such a way, that many of the INSPIRE practices are implemented. 
-Zenodo is a generic repository for academic work part of the European OpenAIRE program and operated by CERN. 
-Zenodo resources are clustered in communities. You can join an existing community or start one. Resources from a community can be accessed as a collection.
+This recipe proposes an approach to use [Zenodo](https://zenodo.org) to publish a dataset. 
+Some suggestions are made to increase the value of the Zenodo publication.
+Zenodo is a generic repository to publish resources related to scientific work and is part of the European OpenAIRE program and operated by CERN. 
+As part of the upload process some metadata is provided and a persistent identifier (DOI) is created.
+Zenodo resources are clustered in communities. You can join an existing community or start one. 
 Community moderators (dis)allow contributions to a community.
 
-## DataCite & INSPIRE
-
-Zenodo adopted aspects of the [DataCite metadata schema](https://schema.datacite.org/). The procedure below is also relevant for other DataCite oriented repositories, such as [Dataverse](https://dataverse.org). Since Zenodo is DataCite oriented, it does not directly match the requirement of INSPIRE to provide iso19139 metadata. However by following the suggested procedure, the metadata is almost semantically identical. Two routes of resolving this challenge are possible:
-
-- Engage with the INSPIRE community to enable the DataCite encoding as an additional format to provide INSPIRE metadata
-- Introduce a technical component, such as [pygeometa](./pygeometa.qmd), which could provide a transformation from DataCite to iso19139
-
-Clement Lattelais (INRAE) is preparing a [comparison tool](https://creagov.sharepoint.com/:p:/r/sites/EJP-SOILWP6INSPIREWG/Documenti%20condivisi/General/task6.1/task6.1_metadata/EJP%20SOIL_JRC_metadata%20catalog%20meeting_nov%202022.pptx?d=w3ed829c3137b4e36a1e169b7f2ffd4a8&csf=1&web=1&e=NfJAaV) on how the metadata schemes of various repositories (DataVerse, Zenodo, ..) relate to the INSPIRE Metadata Guidelines. This tool is relevant to evaluate if (and how) a certain repository can be used for INSPIRE. But also to assess any non listed repositories.
+The procedure below is also relevant for other scientific repositories, such as [Dataverse](https://dataverse.org), 
+[Open Science Foundation](https://osf.io), [European Open Science Cloud](https://eosc-portal.eu/) or [DataOne](https://search.dataone.org/data). 
 
 ## Upload your data to Zenodo
 
@@ -28,12 +26,9 @@ In the next step a metadata form opens starting with the obvious fields, title, 
 
 The list of contact roles is very detailed in Zenodo. Verify that you have at least 1 contact which has the role of `Contact point`, and provide at least a valid email address.
 
-INSPIRE metadata guidelines mandate a number of fields which are not available on the Zenodo metadata form. There are 2 options to still provide this metadata. 
+## DataCite metadata schema
 
-- Provide a iso19139 document as an additional attachement to the record.
-- Use the subject field to provide additional metadata
-
-For option 2, the relevant element is the subject area at the bottom of the metadata form. Each subject is defined by a label and a URI. These URI's can reference concepts which provide the required context to the data. The table below suggests a number of subjects to be added, related to specific metadata requirements
+Zenodo, like many scientific repositories, adopts the [DataCite metadata schema](https://schema.datacite.org/). A common mechanism to capture additional properties, which are not provided by the schema, is to select keywords from selected vocabularies. In Zenodo, the option to add keywords from vocabularies is available in the subject area at the bottom of the metadata form. Each subject is defined by a label and a URI. The table below suggests a number of subjects to be added, these subjects are derived from common conventions, such as the INSPIRE regulation.
 
 | Requirement | Thesaurus | Example |
 | --- | --- | --- |
@@ -49,7 +44,13 @@ For option 2, the relevant element is the subject area at the bottom of the meta
 
 ![subject](./img/zenodo-subject.png)
 
-## An Atom approach to access the data on Zenodo
+## DataCite and INSPIRE
 
-This approach is based on the [recipe on WebDav and Atom services](./webdav.qmd). The suggestion is to upload 2 additional Atom.xml files which describe the resources in an Atom format. The first file describes the Atom Download Service. The second Atom describes the distributions of the dataset. The zenodo approach will not cover all the aspects of a INSPIRE ATOM Download service, the OpenSearch option is missing. 
+The INSPIRE community currently does not provide a good practice to use the Datacite metadata schema. A technical component, such as [pygeometa](./pygeometa.qmd), is required to transform DataCite metadata to the supported formats. Or a second metadata document needs to be provided which matches the practices of INSPIRE.
+
+Clement Lattelais has prepared a [comparison tool](./md-schema-comparison.qmd) on how the metadata schemes of various repositories (DataVerse, Zenodo, Cordis, ..) relate to the INSPIRE Metadata Guidelines. This tool is relevant to evaluate if (and how) a certain repository can be used for INSPIRE. But also to assess any non listed repositories.
+
+## INSPIRE Atom downloadservice
+
+INSPIRE suggests to facilitate data downloads via a download service. One of the options to provide such a service is to provide a number of Atom.xml files, 1 file to describe the service and 1 to for each of the datasets in that service which provide download details, such as available formats and size. Read more about this convention in the [recipe on WebDav and Atom services](./webdav.qmd). 
 

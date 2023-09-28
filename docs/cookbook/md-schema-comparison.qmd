@@ -1,0 +1,131 @@
+---
+author:	Clement LATTELAIS
+affiliation: INRAE
+date: 2022-11-08
+---
+
+| Main topic                          | Sub topic                 | research.data.gouv | H2020     | INSPIRE   | DataCite    | overall recommendation |
+| ----------------------------------- | ------------------------- | ------------------ | --------- | --------- | ----------- | ---------------------- |
+| Title                               |                           | Mandatory          |           | Mandatory | Mandatory   | highly recommended     |
+| Subtitle                            |                           |                    |           |           |             |                        |
+| Alternative title                   |                           |                    |           |           |             |                        |
+| Link to data                        |                           |                    |           | Mandatory |             | highly recommended     |
+| Other ID                            | Agency                    |                    |           |           |             |                        |
+| Other ID                            | Identifier                |                    |           |           |             |                        |
+| Contact                             | Name                      |                    |           |           |             |                        |
+| Contact                             | Affiliation               |                    |           | Mandatory |             | highly recommended     |
+| Contact                             | e-mail                    | Mandatory          |           | Mandatory |             | highly recommended     |
+| Author                              | Name                      | Mandatory          |           |           |             | highly recommended     |
+| Author                              | Affiliation               |                    |           |           |             |                        |
+| Author                              | Identifier scheme         |                    |           |           |             |                        |
+| Author                              | Identifier                |                    |           |           |             |                        |
+| Contributor                         | Type                      |                    |           |           | Recommended | Recommended            |
+| Contributor                         | Name                      |                    |           |           | Recommended | Recommended            |
+| Contributor                         | Affiliation               |                    |           |           | Recommended | Recommended            |
+| Contributor                         | Identifier scheme         |                    |           |           | Recommended | Recommended            |
+| Contributor                         | Identifier                |                    |           |           | Recommended | Recommended            |
+| Producer                            | Name                      |                    |           |           |             |                        |
+| Producer                            | Affiliation               |                    |           |           |             |                        |
+| Producer                            | Abbreviation              |                    |           |           |             |                        |
+| Producer                            | URL                       |                    |           |           |             |                        |
+| Producer                            | Logo URL                  |                    |           |           |             |                        |
+| Production date                     |                           |                    |           | Mandatory |             | highly recommended     |
+| Production place                    |                           |                    |           |           |             |                        |
+| Distributor                         | Name                      |                    |           |           |             |                        |
+| Distributor                         | Affiliation               |                    |           |           |             |                        |
+| Distributor                         | Abbreviation              |                    |           |           |             |                        |
+| Distributor                         | URL                       |                    |           |           |             |                        |
+| Distributor                         | Logo URL                  |                    |           |           |             |                        |
+| Distribution date                   |                           |                    | Mandatory | Mandatory |             | highly recommended     |
+| Description                         | Text                      | Mandatory          |           | Mandatory | Recommended | highly recommended     |
+| Description                         | Language                  |                    |           | Mandatory |             | highly recommended     |
+| Description                         | Date                      |                    |           | Mandatory |             | highly recommended     |
+| Language                            |                           |                    |           | Mandatory |             | highly recommended     |
+| Subject                             |                           | Mandatory          |           | Mandatory |             | highly recommended     |
+| Keyword                             | Term                      |                    |           | Mandatory |             | highly recommended     |
+| Keyword                             | Term URI                  |                    |           |           |             | Recommended            |
+| Keyword                             | Vocabulary                |                    |           | Mandatory |             | highly recommended     |
+| Keyword                             | Vocabulary URL            |                    |           |           |             | Recommended            |
+| Topic classification                | Term                      |                    |           |           |             |                        |
+| Topic classification                | Vocabulary                |                    |           |           |             |                        |
+| Topic classification                | Vocabulary URL            |                    |           |           |             |                        |
+| Kind of data                        |                           | Mandatory          |           | Mandatory |             | highly recommended     |
+| Other kind of data                  |                           |                    |           |           |             |                        |
+| Data origin                         |                           |                    |           |           |             |                        |
+| Data sources                        |                           |                    |           |           |             |                        |
+| Origin of sources                   |                           |                    |           |           |             |                        |
+| Characteristics of sources noted    |                           |                    |           |           |             |                        |
+| Documentation and access to sources |                           |                    |           |           |             |                        |
+| Software                            | Name                      |                    |           |           |             |                        |
+| Software                            | Version                   |                    |           |           |             |                        |
+| Series                              | Name                      |                    |           |           |             |                        |
+| Series                              | Information               |                    |           |           |             |                        |
+| Life cycle step                     |                           |                    |           |           |             |                        |
+| Notes                               |                           |                    |           |           |             |                        |
+| Related publication                 | Citation                  |                    |           |           |             |                        |
+| Related publication                 | ID type                   |                    |           |           |             |                        |
+| Related publication                 | ID number                 |                    |           |           |             |                        |
+| Related publication                 | URL                       |                    |           |           |             |                        |
+| Related material                    |                           |                    |           | Mandatory |             | highly recommended     |
+| Related dataset                     | Related dataset citation  |                    |           |           |             |                        |
+| Related dataset                     | Related dataset ID type   |                    |           |           |             |                        |
+| Related dataset                     | Related dataset ID number |                    |           |           |             |                        |
+| Related dataset                     | Related dataset URL       |                    |           | Mandatory |             | highly recommended     |
+| Other references                    |                           |                    |           |           |             |                        |
+| Grant information                   | Grant agency              |                    |           |           |             |                        |
+| Grant information                   | Grant number              |                    | Mandatory |           |             | highly recommended     |
+| Project information                 | Project acronym           |                    | Mandatory |           |             | highly recommended     |
+| Project information                 | Project title             |                    | Mandatory |           |             | highly recommended     |
+| Project information                 | Project ID                |                    |           |           |             |                        |
+| Project information                 | Link to project website   |                    |           |           |             |                        |
+| Project information                 | Project work package      |                    |           |           |             |                        |
+| Project information                 | Project task              |                    |           |           |             |                        |
+| Time period covered                 | Start                     |                    |           | Mandatory |             | highly recommended     |
+| Time period covered                 | End                       |                    |           | Mandatory |             | highly recommended     |
+| Date of collection                  | Start                     |                    |           | Mandatory |             | highly recommended     |
+| Date of collection                  | End                       |                    |           | Mandatory |             | highly recommended     |
+| Depositor                           |                           |                    |           |           | Mandatory   | highly recommended     |
+| Deposit Date                        |                           |                    |           | Mandatory | Mandatory   | highly recommended     |
+| Geographic coverage                 | Country / Nation          |                    |           |           | Recommended |                        |
+| Geographic coverage                 | State / Province          |                    |           |           | Recommended |                        |
+| Geographic coverage                 | City                      |                    |           |           | Recommended |                        |
+| Geographic coverage                 | Other                     |                    |           |           | Recommended |                        |
+| Geographic unit                     |                           |                    |           |           |             |                        |
+| Geographic bounding box             | West longitude            |                    |           | Mandatory | Recommended | highly recommended     |
+| Geographic bounding box             | East longitude            |                    |           | Mandatory | Recommended | highly recommended     |
+| Geographic bounding box             | North latitude            |                    |           | Mandatory | Recommended | highly recommended     |
+| Geographic bounding box             | South latitude            |                    |           | Mandatory | Recommended | highly recommended     |
+| Quality and validity                | Lineage                   |                    |           | Mandatory |             | highly recommended     |
+| Quality and validity                | Spatial resolution        |                    |           | Mandatory |             | highly recommended     |
+| Quality and validity                | Degree                    |                    |           | Mandatory |             | highly recommended     |
+| Type of semantic resource           |                           |                    |           |           |             |                        |
+| Representation syntax               |                           |                    |           |           |             |                        |
+| Nature of the semantic resource     |                           |                    |           |           |             |                        |
+| Designed for                        |                           |                    |           |           |             |                        |
+| Information on the current version  | Version status            |                    |           |           |             |                        |
+| Information on the current version  | Version                   |                    |           |           |             |                        |
+| Information on the current version  | Modification date         |                    |           |           |             |                        |
+| Information on the current version  | Changes                   |                    |           |           |             |                        |
+| Imports                             |                           |                    |           |           |             |                        |
+| Bug tracker                         |                           |                    |           |           |             |                        |
+| SPARQL endpoint                     |                           |                    |           |           |             |                        |
+| Imports                             |                           |                    |           |           |             |                        |
+| Bug tracker                         |                           |                    |           |           |             |                        |
+| SPARQL endpoint                     |                           |                    |           |           |             |                        |
+| Waiver                              |                           |                    |           |           |             | highly recommended     |
+| Terms of use                        |                           |                    |           |           |             | highly recommended     |
+| Confidentiality declaration         |                           |                    |           |           |             |                        |
+| Special permission                  |                           |                    |           |           |             |                        |
+| Restrictions                        |                           |                    |           |           |             | highly recommended     |
+| Citation requirements               |                           |                    |           |           |             | highly recommended     |
+| Depositor requirements              |                           |                    |           |           |             |                        |
+| Conditions                          |                           |                    |           |           |             |                        |
+| Disclaimer                          |                           |                    |           |           |             |                        |
+| Terms of access                     |                           |                    |           |           |             |                        |
+| Request access                      |                           |                    |           |           |             | highly recommended     |
+| Data access place                   |                           |                    |           |           |             | highly recommended     |
+| Original archive                    |                           |                    |           |           |             |                        |
+| Availibility status                 |                           |                    |           |           |             |                        |
+| Contact for access                  |                           |                    |           |           |             | highly recommended     |
+| Size of collection                  |                           |                    |           |           |             |                        |
+| Study completion                    |                           |                    |           |           |             |                        |

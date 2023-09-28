@@ -595,235 +595,18 @@
     "text": "More\nNow that you obtained a RDF knowledge graph you can publish it to the internet. Follow the guide on Virtuoso to learn how.\nIn alternative to tarql, you may instead transform tabular data into RDF with RML.io, a transformation tool-set based on YAML configuration files."
   },
   {
-    "objectID": "cookbook/inspire-geoportal.html",
-    "href": "cookbook/inspire-geoportal.html",
-    "title": "INSPIRE Geoportal",
+    "objectID": "cookbook/data/bhr-p/readme.html",
+    "href": "cookbook/data/bhr-p/readme.html",
+    "title": "BHR-P",
     "section": "",
-    "text": "The INSPIRE Geoportal is the central European access point to the data provided by EU Member States and several EFTA countries under the INSPIRE Directive."
+    "text": "This is an extract of BRO - Bodemkundig booronderzoek (BHR-P), the Dutch National Database of Soil Profile analyses data (Licensed: CC-0).\nBulk density and organic matter are relevant indicators of Carbon Stock.\nDownloaded at 17-01-2023.\n\nBulk density has been extracted via:\n\nSELECT borehole_research_pk, bro_id, research_report_date, litter_layer_investigated, standardized_location, begin_depth, end_depth, analysis_report_date,  dry_bulk_density_determination.*\nfrom borehole_research, dry_bulk_density_determination, investigated_interval, borehole_sample_analysis\nwhere investigated_interval_fk=investigated_interval_pk\nand borehole_sample_analysis_pk=borehole_sample_analysis_fk\nand borehole_research_pk = borehole_research_fk \nand dry_bulk_density is not null;\n\nOrganic matter has been extracted via:\n\nSELECT borehole_research_pk, bro_id, research_report_date, litter_layer_investigated, standardized_location, begin_depth, end_depth, analysis_report_date,  organic_matter_content_determination.*\nfrom borehole_research, organic_matter_content_determination, investigated_interval, borehole_sample_analysis\nwhere investigated_interval_fk=investigated_interval_pk\nand borehole_sample_analysis_pk=borehole_sample_analysis_fk\nand borehole_research_pk = borehole_research_fk \nand organic_matter_content is not null;\n\n\n\n\n\n\n\n\n\nAttribute\nDescription\n\n\n\n\nborehole_research_pk\nidentifier of the research\n\n\nbro_id\nalternative identifier of the research\n\n\nresearch_report_date\nDate of the fieldwork\n\n\nlitter_layer_investigated\nIndication if the litter layer was considered\n\n\ngeometry\nlLocation of the research\n\n\nbegin_depth\nTop of the layer\n\n\nend_depth\nBottom of the layer\n\n\nanalysis_report_date\nDate of the lab analyses\n\n\ndry_bulk_density_determination_pk\nIdentifier of the analyses\n\n\ninvestigated_interval_fk\nIdentifier of the layer\n\n\ndetermination_procedure\nIdentifer of the procedure\n\n\ndetermination_method\nIdentifier of the method\n\n\nring_diameter\nParameter of the specimen\n\n\nring_height\nParameter of the specimen\n\n\ndrying_temperature\nParameter of the analyses method\n\n\nvolume_water_saturated\nProperty of the sample\n\n\ndry_bulk_density\nObserved value\n\n\nmaterial_irregularity\nProperty of the sample"
   },
   {
-    "objectID": "cookbook/inspire-geoportal.html#harvesting-metadata",
-    "href": "cookbook/inspire-geoportal.html#harvesting-metadata",
-    "title": "INSPIRE Geoportal",
-    "section": "Harvesting metadata",
-    "text": "Harvesting metadata\nHarvest is the process of copying metadata from a remote source (catalogue) to the european GeoPortal.\nFor each memberstate a contact point is assigned, which is responsible for registering the national endpoint(s) to be harvested by the geoportal. The national contact point also triggers the harvest and validates the result before publishing it. At the harvest status page. In case you’re interested to have a resource harvested into the INSPIRE GeoPortal you best contact the national contact point to understand the INSPIRE practices in your country. A list of national contact points is available at https://inspire.ec.europa.eu/contact-points/57734. A quick look into the contents of the portal and the harvest status page indicates that countries have quite varying practices on accepting datasets in the geoportal."
-  },
-  {
-    "objectID": "cookbook/inspire-geoportal.html#metadata-guidelines",
-    "href": "cookbook/inspire-geoportal.html#metadata-guidelines",
-    "title": "INSPIRE Geoportal",
-    "section": "Metadata Guidelines",
-    "text": "Metadata Guidelines\nThe TG Metadata indicates that INSPIRE datasets and services are described using ISO19139:2007. Discussion is ongoing if the allowed encodings should be extended to include for example DCAT (used by European data portal) or DataCite (used by Zenodo, dataverse, etc)."
-  },
-  {
-    "objectID": "cookbook/inspire-geoportal.html#describe-datasets-using-iso191392007",
-    "href": "cookbook/inspire-geoportal.html#describe-datasets-using-iso191392007",
-    "title": "INSPIRE Geoportal",
-    "section": "Describe datasets using iso19139:2007",
-    "text": "Describe datasets using iso19139:2007\nVarious tools exist to support describing datasets using iso19139:2007.\n\nGeoNetwork is a webbased application presenting forms and tools to assist in describing datasets.\nArcMap and QGIS include an embedded metadata editor, which is able to export to iso19139:2007\npygeometa is a python library which exports ISO19139:2007 (and other metadata encodings) from a YML encoded format called metadata control file (mcf)"
-  },
-  {
-    "objectID": "cookbook/inspire-geoportal.html#validate-records-in-the-inspire-validator",
-    "href": "cookbook/inspire-geoportal.html#validate-records-in-the-inspire-validator",
-    "title": "INSPIRE Geoportal",
-    "section": "Validate records in the INSPIRE validator",
-    "text": "Validate records in the INSPIRE validator"
-  },
-  {
-    "objectID": "cookbook/inspire-geoportal.html#validate-links-in-the-link-checker",
-    "href": "cookbook/inspire-geoportal.html#validate-links-in-the-link-checker",
-    "title": "INSPIRE Geoportal",
-    "section": "Validate links in the Link Checker",
-    "text": "Validate links in the Link Checker\nOperational links are an important aspect in metadata. It determines for example if a user is able to view or download a file after having discovered its metadata. The INSPIRE Geoportal applies some link checks while harvesting the metadata and adds the link check result as tags to the metadata. To optimize your links beforehand the GeoPortal offers the option to run the link checker on an arbitrary metadata record. The Link checker is available at https://inspire-geoportal.ec.europa.eu/linkagechecker.html."
-  },
-  {
-    "objectID": "cookbook/inspire-geoportal.html#multilingual-metadata",
-    "href": "cookbook/inspire-geoportal.html#multilingual-metadata",
-    "title": "INSPIRE Geoportal",
-    "section": "Multilingual metadata",
-    "text": "Multilingual metadata\nmetadata harvested from a national catalogue is usually available in a local language only. To offer users a better user experience, the INSPIRE geoportal translates some key elements of the metadata to english. An automated service is used, which in some cases gives a unexpected translation result. For this reason we encourage you to use the multilingual options of ISO19139:2007 to provide the metadata at least in a local language and english."
-  },
-  {
-    "objectID": "cookbook/frost-server.html",
-    "href": "cookbook/frost-server.html",
-    "title": "FROST server",
+    "objectID": "cookbook/data/bhr-p/readme.html#description-of-the-dataset",
+    "href": "cookbook/data/bhr-p/readme.html#description-of-the-dataset",
+    "title": "BHR-P",
     "section": "",
-    "text": "FROST is an open source server implementation of OGC Sensorthings, a modern data exchange standard for Sensor Data. Because the INSPIRE Soil model is based on Observations and Measurements, the Sensorthings API can be used to provide sensor download services, with the soil profile and horizons as FeatureOfInterest. Sensorthings API is generally easier to set up for administrators and easier to consume by clients then INSPIRE Soil data in GML. INSPIRE has recently adopted a good practice on Download services based on SensorThings API.\nKathi Schleidt has prepared a workshop on inspire data in sensorthings API. Also have a look at her sensor presentation in the 2022 edition of the training. After the 2022 training Kathy together with colleagues from Fraunhofer IOSB has put together a SoilThings variant of STA. The experiment has proven to be a most interesting use case, it has shown where flexibility has to be added in the STA model (these changes will be integrated in the upcoming 2.0 version of the standard). The cool thing about this API is that it allows you to do queries like the following: give me all plots that contain a profile that contains a horizon on which pH H2O is measured; while the query syntax can be a bit daunting, the other existing technologies for provision (WFS and the new OGC API) would require 5 separate requests to do this. Links:"
-  },
-  {
-    "objectID": "cookbook/frost-server.html#read-more",
-    "href": "cookbook/frost-server.html#read-more",
-    "title": "FROST server",
-    "section": "Read more",
-    "text": "Read more\nAt masterclass edition 2023 Kathi Schleidt and Hylke van der Schaaf presented Sensorthings API using Frost server.\n\n\n\nGood practice Sensorthings\nGitHub repository\nDocumentation\nWorkshop"
-  },
-  {
-    "objectID": "cookbook/re3gistry.html",
-    "href": "cookbook/re3gistry.html",
-    "title": "Re3gistry",
-    "section": "",
-    "text": "Re3gistry is a tool to manage and share reference codes. It provides a central access point that allows labels and descriptions for reference codes to be easily looked up by humans or retrieved by machines. It supports organisations in managing and updating reference codes consistently in a well governed manner so that all versions of a code remain traceable and adequately documented over time.\nThe Re3gistry development started under the ISA Are3na action. It continues under the ISA2 ELISE action. The main user of the software is the INSPIRE Registry. Although the software has been implemented in various regional instances.\nWhen you need to manage and share reference codes within and between organisations, the Re3gistry solution can support you. These reference codes uniquely define sets of permissible values for a data field or provide context for the exchanged data. Examples of reference codes are simple enumerations and flat lists to complex controlled vocabularies, taxonomies, thesauri."
-  },
-  {
-    "objectID": "cookbook/re3gistry.html#registry-in-relation-to-other-software",
-    "href": "cookbook/re3gistry.html#registry-in-relation-to-other-software",
-    "title": "Re3gistry",
-    "section": "Registry in relation to other software",
-    "text": "Registry in relation to other software\nTools such as GeoNetwork and Hale studio are able to import code lists from Re3gistry software. Which are then used within the software to populate pull down menus."
-  },
-  {
-    "objectID": "cookbook/re3gistry.html#registry-and-the-semantic-web",
-    "href": "cookbook/re3gistry.html#registry-and-the-semantic-web",
-    "title": "Re3gistry",
-    "section": "Registry and the semantic web",
-    "text": "Registry and the semantic web\nThe background of Re3gistry is in the geospatial domain (iso19135). Hoewever there are efforts to integrate with the semantic web. Each codelist can for example be exported as a SKOS RDF, for example in an rdf/xml format"
-  },
-  {
-    "objectID": "cookbook/re3gistry.html#read-more",
-    "href": "cookbook/re3gistry.html#read-more",
-    "title": "Re3gistry",
-    "section": "Read more",
-    "text": "Read more\n\nCommunity at GitHub\nINSPIRE registry\nSolution at ISA2\nUser manual"
-  },
-  {
-    "objectID": "cookbook/dcat.html",
-    "href": "cookbook/dcat.html",
-    "title": "Soil data guidance",
-    "section": "",
-    "text": "DCAT is an ontology from W3C to describe datasets in the semantic web. It is supported by software such as CKAN, GeoNetwork. The geodcat-ap group has developed a specialisation of DCAT v1 to describe spatial datasets. Many of the conventions of geodcat-ap have been introduced in follow-up editions of DCAT (v2, v3)."
-  },
-  {
-    "objectID": "cookbook/dcat.html#ontologies-used-in-dcat",
-    "href": "cookbook/dcat.html#ontologies-used-in-dcat",
-    "title": "Soil data guidance",
-    "section": "Ontologies used in DCAT",
-    "text": "Ontologies used in DCAT\nDCAT makes use of other ontologies, following the best practices of the Semantic Web. They are all relevant to produce consistent and usable meta-data for the web.\n\nvCard: For the description of People and Organisations according to the specification issued by the Internet Engineering Task Force (IETF) (RFC6350). Also considers addresses, communication means and inter-personal relations.\nDublin Core: A small ontology implementing the fifteen element ISO 15836-1:2017 standard for documentation meta-data. The ontology expands on the original Dublin Core with additional terms meant to facilitate meta-data creation and publication with RDF.\nPROV-O: An OWL translation of the Prov Data Model specified by the W3C. Provides a set of classes, properties, and restrictions that can be used to represent and interchange provenance information."
-  },
-  {
-    "objectID": "cookbook/dcat.html#query-a-dcat-resource",
-    "href": "cookbook/dcat.html#query-a-dcat-resource",
-    "title": "Soil data guidance",
-    "section": "Query a DCAT resource",
-    "text": "Query a DCAT resource\nThe query below provides an example of how to interact with a knowledge graph of metadata making use of the DCAT ontology. It returns a list of datasets tagged with keywords containing the string “soil”. The data property dcat:keyword was originally meant exclusively for instances of the dcat:Dataset class, but since version 2 of the ontology it can be used with any class.\n\nFollow the virtuoso/skosmos recipe up to step On the linked data tab, select Quad store upload. Instead of adding a remote url you unzip and upload a rdf snapshot of the dutch spatial catalogue.\nNavigate to http://localhost:8890/sparql/ and run the query below.\n\nPREFIX dcat: &lt;http://www.w3.org/ns/dcat#&gt;\nPREFIX dct: &lt;http://purl.org/dc/terms/&gt;\n\nSELECT ?dataset, ?title\nWHERE {\n    ?dataset a dcat:Dataset ;\n             dct:title ?title ;\n             dcat:keyword ?keyword .\n    FILTER CONTAINS(?keyword, \"EIGEN\") .\n}\nThe CONTAINS function in the query above is used to partially match the string. For an exact match the equals operator can be used instead (=). To match more than one keyword, successive FILTER clauses can be concatenated with the or operator (||).\nIf at some point your database is corrupt, you can remove all triples by running:\nDELETE FROM DB.DBA.RDF_QUAD ;\nColin Maundry provides some dcat sample sparql queries. Notice that you replace the graph url http://www.data.maudry.com/uk in the queries with yours."
-  },
-  {
-    "objectID": "QOS.html",
-    "href": "QOS.html",
-    "title": "Overview Quality of Service",
-    "section": "",
-    "text": "Via the quality of service conventions data providers report about the quality of their services. Aspects which are monitored are:\n\nAvailability (% of the time that the service has been available)\nPerformance and capacity (a period in which performance and capacity requirements are not met, is considered downtime)\nUsage (how much is the service used)\n\nIn each of the technical guidelines on view, download and discovery services a chapter is dedicated to Quality of Service. It includes the aspects of:\nReporting about usage of the service is documented in the monitoring guidelines paragraph 1.7. As a data provider you may be requested to provide this data to the national contact point. The national contact point reports these numbers to Europe. Aside the reporting obligations, usage reports are interesting feedback to guide future developments.\nMeasuring and reporting about Quality of Service is an aspect of step 7) Soil Information User Consideration in the soil information workflow. Consult your IT department or hosting company if they have tools available to assess these aspects. Confirm with them on how to extend and/or share with you these measurements for the requested parameters.\n\n\nTo assess the availability of a service, it requires to monitor the availability of the service at intervals. A basic availability-test every 5 minutes is sufficient. Many software exists for availability monitoring, such as Zabbix, Nagios, CheckMK, pingdom. A special mention for the Python based GeoHealthCheck package, which includes the capability on WMS/WFS services to drill down to the data level starting from the GetCapabilities operation.\n\n\n\nCookbook\nSoftware\nDescription\n\n\n\n\nGeoHealthCheck\nGeoHealthCheck\nA utility to report on availability of a service\n\n\n\n\n\n\nTo know the capacity and performance of a service you can perform some load tests prior to moving to production. An alternative approach to evaluate performance is to extract the access logs of the service into an aggregation tool like Kibana and evaluate the number of requests exceeding the limits.\n\n\n\nCookbook\nSoftware\nDescription\n\n\n\n\nCapacity tests with jmeter\njmeter\nUtility for performance and capacity testing\n\n\n\n!!!note\nA common challenge to service performance is the provision of a WMS service on a big vector dataset. When requesting that dataset on a national level, the server runs into problems drawing all the features at once. In such case consider to set up some cache/aggregation mechanism for larger areas. Setting proper min/max scale denominators may be a solution also.\n\n\n\nTo capture the usage of a service you can extract the usage logs and import them in a tool like Kibana, Splunk or AW stats. Defining rules to extract the requested layer name from a WMS request is useful. Mind that not all requests are GET requests, some WFS requests use POST, which may need some configuration on the webserver to enable POST parameter logging. Make sure the logging includes the ‘Referer’ and ‘User-agent’ parameters, which allows to differentiate types of uses. Finally consider there is a GDPR privacy aspect to collecting access logs. Consider to exclude the IP address of the user and define a maximal retention for access logs.\n\n\n\nCookbook\nSoftware\nDescription\n\n\n\n\nAWStats\nAWStat\nA utility to report on service usage"
-  },
-  {
-    "objectID": "QOS.html#availability-monitoring",
-    "href": "QOS.html#availability-monitoring",
-    "title": "Overview Quality of Service",
-    "section": "",
-    "text": "To assess the availability of a service, it requires to monitor the availability of the service at intervals. A basic availability-test every 5 minutes is sufficient. Many software exists for availability monitoring, such as Zabbix, Nagios, CheckMK, pingdom. A special mention for the Python based GeoHealthCheck package, which includes the capability on WMS/WFS services to drill down to the data level starting from the GetCapabilities operation.\n\n\n\nCookbook\nSoftware\nDescription\n\n\n\n\nGeoHealthCheck\nGeoHealthCheck\nA utility to report on availability of a service"
-  },
-  {
-    "objectID": "QOS.html#performance-capacity-testing",
-    "href": "QOS.html#performance-capacity-testing",
-    "title": "Overview Quality of Service",
-    "section": "",
-    "text": "To know the capacity and performance of a service you can perform some load tests prior to moving to production. An alternative approach to evaluate performance is to extract the access logs of the service into an aggregation tool like Kibana and evaluate the number of requests exceeding the limits.\n\n\n\nCookbook\nSoftware\nDescription\n\n\n\n\nCapacity tests with jmeter\njmeter\nUtility for performance and capacity testing\n\n\n\n!!!note\nA common challenge to service performance is the provision of a WMS service on a big vector dataset. When requesting that dataset on a national level, the server runs into problems drawing all the features at once. In such case consider to set up some cache/aggregation mechanism for larger areas. Setting proper min/max scale denominators may be a solution also."
-  },
-  {
-    "objectID": "QOS.html#usage-monitoring",
-    "href": "QOS.html#usage-monitoring",
-    "title": "Overview Quality of Service",
-    "section": "",
-    "text": "To capture the usage of a service you can extract the usage logs and import them in a tool like Kibana, Splunk or AW stats. Defining rules to extract the requested layer name from a WMS request is useful. Mind that not all requests are GET requests, some WFS requests use POST, which may need some configuration on the webserver to enable POST parameter logging. Make sure the logging includes the ‘Referer’ and ‘User-agent’ parameters, which allows to differentiate types of uses. Finally consider there is a GDPR privacy aspect to collecting access logs. Consider to exclude the IP address of the user and define a maximal retention for access logs.\n\n\n\nCookbook\nSoftware\nDescription\n\n\n\n\nAWStats\nAWStat\nA utility to report on service usage"
-  },
-  {
-    "objectID": "download.html",
-    "href": "download.html",
-    "title": "INSPIRE Download Services",
-    "section": "",
-    "text": "Download services facilitate the download of vector, grid or sensor data.\nIf you missed the initial EJP Training on Soil data good practices, you can still have a look at a presentation about download services as Coverage and SensorThings or a presentation on Atom/WMS/WFS.\nSetting up download services is an aspect of step 6) data and info sharing in the soil information workflow.\nThis page lists some implementation options for providing INSPIRE Download Services.\n\nMinimal\nThe INSPIRE Atom Service provides a minimal download service implementation on a series of downloadable files placed in a web accessible folder. For every file a ‘dataset feed’ document can be generated and linked to a service feed describing the ‘service’. A metadata record points to the service feed to complete the implementation.\nAlternatively, products like GeoNetwork and Hale Connect (Annex 1) can provide an Atom interface on top of a set of registered datasets. The TG download services also provides some PHP scripts which create an Atom OpenSearch interface for a series of files.\n\n\n\nCookbook\nSoftware\nDescription\n\n\n\n\nWebdav\nWsgidav\nSetting up atom service using webdav\n\n\nZenodo\nzenodo\nData publication on Zenodo\n\n\n\n\n\nTraditional\nWeb Feature Service (WFS) and Web Coverage Service (WCS) are commonly used to download Featurecollections (vector) and Coverages (grids). Consider that most of the INSPIRE themes (including soil) require publication of hierarchical (app-schema) features, this aspect is not supported by many WFS server implementations. Some tools with this capability are listed in the table below. For WCS a good practice is available to facilitate implementation.\n\n\n\nCookbook\nSoftware\nDescription\n\n\n\n\nGeoServer\nGeoServer\nThe app-schema plugin extends the WFS implementation with support for hierarchical features. On the fly transformation is managed from a configuration file. Marcus Sen (Onegeology) create a cookbook for this approach.\n\n\nGet started with Hale Connect\nHale Connect\nOptimized for performance, stores pregeneralised xml fragments in combination with an elastic search index for filtering\n\n\ndeegree\ndeegree\nA java based spatial application server\n\n\nCoverages with rasdaman\nRasdaman\nA Web Coverage Service implementation\n\n\nSensorThings API via FROST server\nFROST server\nSoil observation data as sensor stream\n\n\n\nConsider that a product advertising WFS support does not automatically qualify for INSPIRE, the product has to support hierarchical GML.\n\n\nExperimental\nA good practice document has been adopted on the use of OGC API Features as download service. With its 20 years of history WFS and GML are out of synch with current IT practices. OGC API is a new direction of standards within OGC adopting some of the latest IT conventions, such as Open API, Rest services, JSON encodings, content negotiation, etc. The use of OGC API will increase in coming years while OGC adopts more standards. Various products exist implementing the final and/or draft specifications.\nAs described in the harmonization paragraph, Sensor Observation Service and SensorThings API offer an alternative download option for themes including much observation data, such as Soil.\nGraphQL and SPARQL are powerfull query api’s to request data over the web. Both have not gone through the proces of Good practice adoption. But they are serious candidates to provide a modern INSPIRE download service.\n\n\n\nCookbook\nSoftware\nDescription\n\n\n\n\nOGC API Features via pygeoapi\npygeoapi\nA python based open source implementation of OGC APIs including OGC API Features. Configuration is managed from a configuration file.\n\n\nProxy a WFS as OGC API Features using LDProxy\nldproxy\nA java based open source implementation of OGC APIs. Originally developed by Interactive Instruments as an easy way to consume API (proxy) on top of existing WFS. These experiments were a main driver for OGC in the direction of OGC API. Configuration is managed from a web interface.\n\n\nSoil data via GraphQL\nPostgraphile\nSoil data from a postgres database via graphQL"
-  },
-  {
-    "objectID": "data-sharing.html",
-    "href": "data-sharing.html",
-    "title": "Data and information sharing",
-    "section": "",
-    "text": "This article describes the data and information sharing step in the Soil Information Workflow and references various cookbook recipes related to this step in the workflow.\nIn this step the data curator manages processes that maintain discovery, view and download services on the web. The main activity is probably the creation of new services, as part of that activity it should be assessed if the services comply with the relevant regulation. Another important activity is the monitoring on Quality of service."
-  },
-  {
-    "objectID": "data-sharing.html#related-recipes-in-this-cookbook",
-    "href": "data-sharing.html#related-recipes-in-this-cookbook",
-    "title": "Data and information sharing",
-    "section": "Related recipes in this cookbook:",
-    "text": "Related recipes in this cookbook:\n\nMetadata and Discovery\nView services\nDownload services\nQuality of service"
-  },
-  {
-    "objectID": "codelists.html",
-    "href": "codelists.html",
-    "title": "Overview Code Lists",
-    "section": "",
-    "text": "Adoption of common code lists is an important aspect of data harmonization. For INSPIRE the INSPIRE registry is the source of common code lists. Other common codelists relevant to the soil domain are available in FAO Agrovoc, GEMET, OGC definition server, ISO TC211, and GLosis. At a national level some countries have implemented a national repository for common national codelists which may be relevant (either as a source or as a target, to publish an extended list).\nAdoption of common code lists is an aspect of step 4) data organization in the soil information workflow, although it could also impact step 1) data collection.\nThe adoption of code lists has three aspects:\nAdoption of a dedicated codelist is relevant for example for Soil classification. Many of the national soil classification systems have much more detail than the World Reference Base, as suggested to be used by the TG Soil.\nThe soil theme has a large number of code lists, ranging from soil type to ranges of grain size. Many code lists originate from the FAO soil classification and are published in the INSPIRE registry.\nIf you missed the 2022 EJP Training on Soil data good practices, you can still have a look at a presentation about codelists.\nImplementation options for managing and publishing a code list:"
-  },
-  {
-    "objectID": "codelists.html#minimal",
-    "href": "codelists.html#minimal",
-    "title": "Overview Code Lists",
-    "section": "Minimal",
-    "text": "Minimal\nThe most basic form of publishing an alternative or extended code list is to place a code list file on a web location and reference values in it as https://example.org/codelist.xml#concept (see for example http://schemas.opengis.net/iso/19139/20070417/resources/Codelist/gmxCodelists.xml)\n\n\n\nCookbook\nSoftware\nDescription\n\n\n\n\nCode list as iso19135\n\nPublish an XML file on a web location\n\n\n\n\nTraditional\nExtended code lists can be published in a local or national instance of the Re3gistry software. This open source project is hosted by JRC to facilitate the INSPIRE registry.\n\n\n\nCookbook\nSoftware\nDescription\n\n\n\n\nCode list in Re3gistry\nRe3gistry\nPublish a codelist in Re3gistry\n\n\n\n\n\nExperimental\nA standard for the definition of code lists is Simple Knowledge Organization System (SKOS). Any SPARQL endpoint can be used to publish a code list based on SKOS. Software exists which facilitates the consumption of SKOS data from a SPARQL endpoint in a human friendly way. An example is Skosmos.\nA powerfull aspect of SKOS is that you can link from a concept to existing concepts in other codelists using link relations such as: sameAs, Broader, Narrower.\n\n\n\nCookbook\nSoftware\nDescription\n\n\n\n\nExtend a codelist\n\nHow to extend an INSPIRE codelist\n\n\nPublish a SKOS codelist\nVirtuoso Skosmos\nPublish a code list in semantic web\n\n\nGRLC.io\nGRLC.io\nA conveniance API on top of your SPARQL endpoint"
-  },
-  {
-    "objectID": "data-collection.html",
-    "href": "data-collection.html",
-    "title": "Data Collection",
-    "section": "",
-    "text": "This article describes the data collection step in the Soil Information Workflow and references various cookbook recipes related to this step in the workflow.\nData collection is done in the field and laboratory. During this process, data collection tools are used. Proper selection and preparation of data collection tooling impacts how data is passed to the next steps of the data workflow. Verify on the collection tooling:\n\nRelevant aspects to the observation are captured (staff, date, sample-id, depth, location, procedure, …)\nUse of common code lists (definition of texture classes, colours, units of measure)"
-  },
-  {
-    "objectID": "cookbook/bridge-geoserver-geonetwork.html",
-    "href": "cookbook/bridge-geoserver-geonetwork.html",
-    "title": "Metadata and View Service with GeoCat Bridge, GeoNetwork and GeoServer",
-    "section": "",
-    "text": "In this recipe we use GeoCat Bridge to publish a View Service on a soil dataset in GeoServer, combined with connected metadata in a GeoNetwork instance.\nGeoCat Bridge is a plugin for QGIS or ArcMap developed by GeoCat in Bennekom, the Netherlands. Its goal is to facilitate the complex process of data publication from a well known desktop environment. An introductionary video is available at https://www.youtube.com/watch?v=f-sZCVnR9dc\nGeoServer is a server application providing OGC services on various database backends. See the relevant recipe for a more detailed description.\nGeoNetwork is a server application providing a search interface and various api’s on a collection of metadata records. See the relevant recipe for a more detailed description."
-  },
-  {
-    "objectID": "cookbook/bridge-geoserver-geonetwork.html#contents-of-the-recipe",
-    "href": "cookbook/bridge-geoserver-geonetwork.html#contents-of-the-recipe",
-    "title": "Metadata and View Service with GeoCat Bridge, GeoNetwork and GeoServer",
-    "section": "Contents of the recipe:",
-    "text": "Contents of the recipe:\n\nDeploy GeoServer and GeoNetwork using Docker\nInstall and configure the Bridge plugin\nPublish the dataset"
-  },
-  {
-    "objectID": "cookbook/bridge-geoserver-geonetwork.html#deploy-geoserver-and-geonetwork-using-docker",
-    "href": "cookbook/bridge-geoserver-geonetwork.html#deploy-geoserver-and-geonetwork-using-docker",
-    "title": "Metadata and View Service with GeoCat Bridge, GeoNetwork and GeoServer",
-    "section": "Deploy GeoServer and GeoNetwork using Docker",
-    "text": "Deploy GeoServer and GeoNetwork using Docker\nThis recipe is based on Docker, but you can also install each of the components directly on your system. New to Docker? Read the Docker recipe.\nWe use the QGIS edition of Bridge, but an edition for ArcMAP is also available.\nDownload the file https://github.com/ejpsoil/ejpsoil-data-publication-guidance/docker/bridge-geoserver-geonetwork/docker-compose.yml into an empty folder. Navigate to the folder using a shell client (windows powershell or Linux/Apple shell) and run:\ndocker compose up\nThe above statement will download and deploy docker containers for GeoServer, GeoNetwork, PostGreSQL and Elastic Search. When finished (it may take a long time), you can access GeoServer at https://localhost:8000/geoserver and GeoNetwork at https://localhost:8001/geonetwork.\nGeoNetwork starts with an error, because the database is empty. Navigate to http://localhost:8001/geonetwork/srv/eng/admin.console#/metadata, login as user: admin, password: admin. Select the iso19139:2007 profile and click Load templates and Load samples."
-  },
-  {
-    "objectID": "cookbook/bridge-geoserver-geonetwork.html#install-and-configure-the-bridge-plugin",
-    "href": "cookbook/bridge-geoserver-geonetwork.html#install-and-configure-the-bridge-plugin",
-    "title": "Metadata and View Service with GeoCat Bridge, GeoNetwork and GeoServer",
-    "section": "Install and configure the Bridge plugin",
-    "text": "Install and configure the Bridge plugin\nWith QGIS, open the QGIS plugins repository and search for the GeoCat Bridge plugin. Install it.\nAfter succesfull installation, we will configure our GeoServer and GeoNetwork instances.\nFind the Bridge module on the toolbar or in the Web &gt; GeoCat Bridge &gt; Publish menu. From the publish window, open the Servers tab.\nIn the bottom left click the New server option and select GeoServer. Populate the fields.\nClick New server again and select GeoNetwork. Populate the fields.\nYou are now ready to publish your first dataset from QGIS."
-  },
-  {
-    "objectID": "cookbook/bridge-geoserver-geonetwork.html#publish-the-dataset",
-    "href": "cookbook/bridge-geoserver-geonetwork.html#publish-the-dataset",
-    "title": "Metadata and View Service with GeoCat Bridge, GeoNetwork and GeoServer",
-    "section": "Publish the dataset",
-    "text": "Publish the dataset\nOpen the dataset to be published. Configure the layer with relevant styling and labels.\nOpen the publish window from the menu (or toolbar).\nSelect the layer to be published. A metadata editor will open in which you can configure some metadata. You can also import embedded metadata (use the button with a downward arrow, top right).\nSelect the target servers for the publisation and click the publish button.\nWhen returning to the publish panel, you will notice an icon behind each layer indicating the publication status. You can now right click on the layer to preview the wms layer or the metadata.\nNote that the styling options in QGIS and GeoServer are not a full match. Some styling transformations are applied which may impact the final result on GeoServer. A common caveat is the availability of certain fonts, used for labeling or icons, on the client and the server. Make sure all used fonts are available on the server as well. |"
-  },
-  {
-    "objectID": "cookbook/bridge-geoserver-geonetwork.html#validate-the-view-service",
-    "href": "cookbook/bridge-geoserver-geonetwork.html#validate-the-view-service",
-    "title": "Metadata and View Service with GeoCat Bridge, GeoNetwork and GeoServer",
-    "section": "Validate the view service",
-    "text": "Validate the view service\nThe INSPIRE Validator provides a validation of view services. It will mainly test if metadata elements are available and the service is reachable.\nThe docker containers run locally, so the services can not be tested by the INSPIRE Validator. In Local Tunnel an approach is suggested to temporarily host a local service online, so you can run the validation.\nWe have not yet installed the INSPIRE plugin on GeoServer and optimized the configuration of GeoNetwork, so expect some tests to fail"
-  },
-  {
-    "objectID": "cookbook/xtraserver.html",
-    "href": "cookbook/xtraserver.html",
-    "title": "Xtra server",
-    "section": "",
-    "text": "A proprietary java implementation of WFS, WMS. The package is also distributed as ArcGIS for INSPIRE Classic server extension. The team at interactive-instruments is and has been heavily involved in the definition of GML and the INSPIRE download specifications. They developed ShapeChange which is commonly used to export UML diagrams to XSD. Another product is LDProxy, an open source java implementation of the OGC API suite of standards.\n\nWebsite: https://www.interactive-instruments.de/en/xtraserver/"
+    "text": "Attribute\nDescription\n\n\n\n\nborehole_research_pk\nidentifier of the research\n\n\nbro_id\nalternative identifier of the research\n\n\nresearch_report_date\nDate of the fieldwork\n\n\nlitter_layer_investigated\nIndication if the litter layer was considered\n\n\ngeometry\nlLocation of the research\n\n\nbegin_depth\nTop of the layer\n\n\nend_depth\nBottom of the layer\n\n\nanalysis_report_date\nDate of the lab analyses\n\n\ndry_bulk_density_determination_pk\nIdentifier of the analyses\n\n\ninvestigated_interval_fk\nIdentifier of the layer\n\n\ndetermination_procedure\nIdentifer of the procedure\n\n\ndetermination_method\nIdentifier of the method\n\n\nring_diameter\nParameter of the specimen\n\n\nring_height\nParameter of the specimen\n\n\ndrying_temperature\nParameter of the analyses method\n\n\nvolume_water_saturated\nProperty of the sample\n\n\ndry_bulk_density\nObserved value\n\n\nmaterial_irregularity\nProperty of the sample"
   },
   {
     "objectID": "cookbook/hale-studio.html",
@@ -903,18 +686,242 @@
     "text": "Validate GML\nYou can test the generated GML in the INSPIRE Validator. Select Dataset, and from Annex III, the Soil theme. Solve the numeric riddle, upload the GML file, add a label and start the test."
   },
   {
-    "objectID": "cookbook/data/bhr-p/readme.html",
-    "href": "cookbook/data/bhr-p/readme.html",
-    "title": "BHR-P",
+    "objectID": "cookbook/xtraserver.html",
+    "href": "cookbook/xtraserver.html",
+    "title": "Xtra server",
     "section": "",
-    "text": "This is an extract of BRO - Bodemkundig booronderzoek (BHR-P), the Dutch National Database of Soil Profile analyses data (Licensed: CC-0).\nBulk density and organic matter are relevant indicators of Carbon Stock.\nDownloaded at 17-01-2023.\n\nBulk density has been extracted via:\n\nSELECT borehole_research_pk, bro_id, research_report_date, litter_layer_investigated, standardized_location, begin_depth, end_depth, analysis_report_date,  dry_bulk_density_determination.*\nfrom borehole_research, dry_bulk_density_determination, investigated_interval, borehole_sample_analysis\nwhere investigated_interval_fk=investigated_interval_pk\nand borehole_sample_analysis_pk=borehole_sample_analysis_fk\nand borehole_research_pk = borehole_research_fk \nand dry_bulk_density is not null;\n\nOrganic matter has been extracted via:\n\nSELECT borehole_research_pk, bro_id, research_report_date, litter_layer_investigated, standardized_location, begin_depth, end_depth, analysis_report_date,  organic_matter_content_determination.*\nfrom borehole_research, organic_matter_content_determination, investigated_interval, borehole_sample_analysis\nwhere investigated_interval_fk=investigated_interval_pk\nand borehole_sample_analysis_pk=borehole_sample_analysis_fk\nand borehole_research_pk = borehole_research_fk \nand organic_matter_content is not null;\n\n\n\n\n\n\n\n\n\nAttribute\nDescription\n\n\n\n\nborehole_research_pk\nidentifier of the research\n\n\nbro_id\nalternative identifier of the research\n\n\nresearch_report_date\nDate of the fieldwork\n\n\nlitter_layer_investigated\nIndication if the litter layer was considered\n\n\ngeometry\nlLocation of the research\n\n\nbegin_depth\nTop of the layer\n\n\nend_depth\nBottom of the layer\n\n\nanalysis_report_date\nDate of the lab analyses\n\n\ndry_bulk_density_determination_pk\nIdentifier of the analyses\n\n\ninvestigated_interval_fk\nIdentifier of the layer\n\n\ndetermination_procedure\nIdentifer of the procedure\n\n\ndetermination_method\nIdentifier of the method\n\n\nring_diameter\nParameter of the specimen\n\n\nring_height\nParameter of the specimen\n\n\ndrying_temperature\nParameter of the analyses method\n\n\nvolume_water_saturated\nProperty of the sample\n\n\ndry_bulk_density\nObserved value\n\n\nmaterial_irregularity\nProperty of the sample"
+    "text": "A proprietary java implementation of WFS, WMS. The package is also distributed as ArcGIS for INSPIRE Classic server extension. The team at interactive-instruments is and has been heavily involved in the definition of GML and the INSPIRE download specifications. They developed ShapeChange which is commonly used to export UML diagrams to XSD. Another product is LDProxy, an open source java implementation of the OGC API suite of standards.\n\nWebsite: https://www.interactive-instruments.de/en/xtraserver/"
   },
   {
-    "objectID": "cookbook/data/bhr-p/readme.html#description-of-the-dataset",
-    "href": "cookbook/data/bhr-p/readme.html#description-of-the-dataset",
-    "title": "BHR-P",
+    "objectID": "cookbook/bridge-geoserver-geonetwork.html",
+    "href": "cookbook/bridge-geoserver-geonetwork.html",
+    "title": "Metadata and View Service with GeoCat Bridge, GeoNetwork and GeoServer",
     "section": "",
-    "text": "Attribute\nDescription\n\n\n\n\nborehole_research_pk\nidentifier of the research\n\n\nbro_id\nalternative identifier of the research\n\n\nresearch_report_date\nDate of the fieldwork\n\n\nlitter_layer_investigated\nIndication if the litter layer was considered\n\n\ngeometry\nlLocation of the research\n\n\nbegin_depth\nTop of the layer\n\n\nend_depth\nBottom of the layer\n\n\nanalysis_report_date\nDate of the lab analyses\n\n\ndry_bulk_density_determination_pk\nIdentifier of the analyses\n\n\ninvestigated_interval_fk\nIdentifier of the layer\n\n\ndetermination_procedure\nIdentifer of the procedure\n\n\ndetermination_method\nIdentifier of the method\n\n\nring_diameter\nParameter of the specimen\n\n\nring_height\nParameter of the specimen\n\n\ndrying_temperature\nParameter of the analyses method\n\n\nvolume_water_saturated\nProperty of the sample\n\n\ndry_bulk_density\nObserved value\n\n\nmaterial_irregularity\nProperty of the sample"
+    "text": "In this recipe we use GeoCat Bridge to publish a View Service on a soil dataset in GeoServer, combined with connected metadata in a GeoNetwork instance.\nGeoCat Bridge is a plugin for QGIS or ArcMap developed by GeoCat in Bennekom, the Netherlands. Its goal is to facilitate the complex process of data publication from a well known desktop environment. An introductionary video is available at https://www.youtube.com/watch?v=f-sZCVnR9dc\nGeoServer is a server application providing OGC services on various database backends. See the relevant recipe for a more detailed description.\nGeoNetwork is a server application providing a search interface and various api’s on a collection of metadata records. See the relevant recipe for a more detailed description."
+  },
+  {
+    "objectID": "cookbook/bridge-geoserver-geonetwork.html#contents-of-the-recipe",
+    "href": "cookbook/bridge-geoserver-geonetwork.html#contents-of-the-recipe",
+    "title": "Metadata and View Service with GeoCat Bridge, GeoNetwork and GeoServer",
+    "section": "Contents of the recipe:",
+    "text": "Contents of the recipe:\n\nDeploy GeoServer and GeoNetwork using Docker\nInstall and configure the Bridge plugin\nPublish the dataset"
+  },
+  {
+    "objectID": "cookbook/bridge-geoserver-geonetwork.html#deploy-geoserver-and-geonetwork-using-docker",
+    "href": "cookbook/bridge-geoserver-geonetwork.html#deploy-geoserver-and-geonetwork-using-docker",
+    "title": "Metadata and View Service with GeoCat Bridge, GeoNetwork and GeoServer",
+    "section": "Deploy GeoServer and GeoNetwork using Docker",
+    "text": "Deploy GeoServer and GeoNetwork using Docker\nThis recipe is based on Docker, but you can also install each of the components directly on your system. New to Docker? Read the Docker recipe.\nWe use the QGIS edition of Bridge, but an edition for ArcMAP is also available.\nDownload the file https://github.com/ejpsoil/ejpsoil-data-publication-guidance/docker/bridge-geoserver-geonetwork/docker-compose.yml into an empty folder. Navigate to the folder using a shell client (windows powershell or Linux/Apple shell) and run:\ndocker compose up\nThe above statement will download and deploy docker containers for GeoServer, GeoNetwork, PostGreSQL and Elastic Search. When finished (it may take a long time), you can access GeoServer at https://localhost:8000/geoserver and GeoNetwork at https://localhost:8001/geonetwork.\nGeoNetwork starts with an error, because the database is empty. Navigate to http://localhost:8001/geonetwork/srv/eng/admin.console#/metadata, login as user: admin, password: admin. Select the iso19139:2007 profile and click Load templates and Load samples."
+  },
+  {
+    "objectID": "cookbook/bridge-geoserver-geonetwork.html#install-and-configure-the-bridge-plugin",
+    "href": "cookbook/bridge-geoserver-geonetwork.html#install-and-configure-the-bridge-plugin",
+    "title": "Metadata and View Service with GeoCat Bridge, GeoNetwork and GeoServer",
+    "section": "Install and configure the Bridge plugin",
+    "text": "Install and configure the Bridge plugin\nWith QGIS, open the QGIS plugins repository and search for the GeoCat Bridge plugin. Install it.\nAfter succesfull installation, we will configure our GeoServer and GeoNetwork instances.\nFind the Bridge module on the toolbar or in the Web &gt; GeoCat Bridge &gt; Publish menu. From the publish window, open the Servers tab.\nIn the bottom left click the New server option and select GeoServer. Populate the fields.\nClick New server again and select GeoNetwork. Populate the fields.\nYou are now ready to publish your first dataset from QGIS."
+  },
+  {
+    "objectID": "cookbook/bridge-geoserver-geonetwork.html#publish-the-dataset",
+    "href": "cookbook/bridge-geoserver-geonetwork.html#publish-the-dataset",
+    "title": "Metadata and View Service with GeoCat Bridge, GeoNetwork and GeoServer",
+    "section": "Publish the dataset",
+    "text": "Publish the dataset\nOpen the dataset to be published. Configure the layer with relevant styling and labels.\nOpen the publish window from the menu (or toolbar).\nSelect the layer to be published. A metadata editor will open in which you can configure some metadata. You can also import embedded metadata (use the button with a downward arrow, top right).\nSelect the target servers for the publisation and click the publish button.\nWhen returning to the publish panel, you will notice an icon behind each layer indicating the publication status. You can now right click on the layer to preview the wms layer or the metadata.\nNote that the styling options in QGIS and GeoServer are not a full match. Some styling transformations are applied which may impact the final result on GeoServer. A common caveat is the availability of certain fonts, used for labeling or icons, on the client and the server. Make sure all used fonts are available on the server as well. |"
+  },
+  {
+    "objectID": "cookbook/bridge-geoserver-geonetwork.html#validate-the-view-service",
+    "href": "cookbook/bridge-geoserver-geonetwork.html#validate-the-view-service",
+    "title": "Metadata and View Service with GeoCat Bridge, GeoNetwork and GeoServer",
+    "section": "Validate the view service",
+    "text": "Validate the view service\nThe INSPIRE Validator provides a validation of view services. It will mainly test if metadata elements are available and the service is reachable.\nThe docker containers run locally, so the services can not be tested by the INSPIRE Validator. In Local Tunnel an approach is suggested to temporarily host a local service online, so you can run the validation.\nWe have not yet installed the INSPIRE plugin on GeoServer and optimized the configuration of GeoNetwork, so expect some tests to fail"
+  },
+  {
+    "objectID": "data-collection.html",
+    "href": "data-collection.html",
+    "title": "Data Collection",
+    "section": "",
+    "text": "This article describes the data collection step in the Soil Information Workflow and references various cookbook recipes related to this step in the workflow.\nData collection is done in the field and laboratory. During this process, data collection tools are used. Proper selection and preparation of data collection tooling impacts how data is passed to the next steps of the data workflow. Verify on the collection tooling:\n\nRelevant aspects to the observation are captured (staff, date, sample-id, depth, location, procedure, …)\nUse of common code lists (definition of texture classes, colours, units of measure)"
+  },
+  {
+    "objectID": "codelists.html",
+    "href": "codelists.html",
+    "title": "Overview Code Lists",
+    "section": "",
+    "text": "Adoption of common code lists is an important aspect of data harmonization. For INSPIRE the INSPIRE registry is the source of common code lists. Other common codelists relevant to the soil domain are available in FAO Agrovoc, GEMET, OGC definition server, ISO TC211, and GLosis. At a national level some countries have implemented a national repository for common national codelists which may be relevant (either as a source or as a target, to publish an extended list).\nAdoption of common code lists is an aspect of step 4) data organization in the soil information workflow, although it could also impact step 1) data collection.\nThe adoption of code lists has three aspects:\nAdoption of a dedicated codelist is relevant for example for Soil classification. Many of the national soil classification systems have much more detail than the World Reference Base, as suggested to be used by the TG Soil.\nThe soil theme has a large number of code lists, ranging from soil type to ranges of grain size. Many code lists originate from the FAO soil classification and are published in the INSPIRE registry.\nIf you missed the 2022 EJP Training on Soil data good practices, you can still have a look at a presentation about codelists.\nImplementation options for managing and publishing a code list:"
+  },
+  {
+    "objectID": "codelists.html#minimal",
+    "href": "codelists.html#minimal",
+    "title": "Overview Code Lists",
+    "section": "Minimal",
+    "text": "Minimal\nThe most basic form of publishing an alternative or extended code list is to place a code list file on a web location and reference values in it as https://example.org/codelist.xml#concept (see for example http://schemas.opengis.net/iso/19139/20070417/resources/Codelist/gmxCodelists.xml)\n\n\n\nCookbook\nSoftware\nDescription\n\n\n\n\nCode list as iso19135\n\nPublish an XML file on a web location\n\n\n\n\nTraditional\nExtended code lists can be published in a local or national instance of the Re3gistry software. This open source project is hosted by JRC to facilitate the INSPIRE registry.\n\n\n\nCookbook\nSoftware\nDescription\n\n\n\n\nCode list in Re3gistry\nRe3gistry\nPublish a codelist in Re3gistry\n\n\n\n\n\nExperimental\nA standard for the definition of code lists is Simple Knowledge Organization System (SKOS). Any SPARQL endpoint can be used to publish a code list based on SKOS. Software exists which facilitates the consumption of SKOS data from a SPARQL endpoint in a human friendly way. An example is Skosmos.\nA powerfull aspect of SKOS is that you can link from a concept to existing concepts in other codelists using link relations such as: sameAs, Broader, Narrower.\n\n\n\nCookbook\nSoftware\nDescription\n\n\n\n\nExtend a codelist\n\nHow to extend an INSPIRE codelist\n\n\nPublish a SKOS codelist\nVirtuoso Skosmos\nPublish a code list in semantic web\n\n\nGRLC.io\nGRLC.io\nA conveniance API on top of your SPARQL endpoint"
+  },
+  {
+    "objectID": "data-sharing.html",
+    "href": "data-sharing.html",
+    "title": "Data and information sharing",
+    "section": "",
+    "text": "This article describes the data and information sharing step in the Soil Information Workflow and references various cookbook recipes related to this step in the workflow.\nIn this step the data curator manages processes that maintain discovery, view and download services on the web. The main activity is probably the creation of new services, as part of that activity it should be assessed if the services comply with the relevant regulation. Another important activity is the monitoring on Quality of service."
+  },
+  {
+    "objectID": "data-sharing.html#related-recipes-in-this-cookbook",
+    "href": "data-sharing.html#related-recipes-in-this-cookbook",
+    "title": "Data and information sharing",
+    "section": "Related recipes in this cookbook:",
+    "text": "Related recipes in this cookbook:\n\nMetadata and Discovery\nView services\nDownload services\nQuality of service"
+  },
+  {
+    "objectID": "download.html",
+    "href": "download.html",
+    "title": "INSPIRE Download Services",
+    "section": "",
+    "text": "Download services facilitate the download of vector, grid or sensor data.\nIf you missed the initial EJP Training on Soil data good practices, you can still have a look at a presentation about download services as Coverage and SensorThings or a presentation on Atom/WMS/WFS.\nSetting up download services is an aspect of step 6) data and info sharing in the soil information workflow.\nThis page lists some implementation options for providing INSPIRE Download Services.\n\nMinimal\nThe INSPIRE Atom Service provides a minimal download service implementation on a series of downloadable files placed in a web accessible folder. For every file a ‘dataset feed’ document can be generated and linked to a service feed describing the ‘service’. A metadata record points to the service feed to complete the implementation.\nAlternatively, products like GeoNetwork and Hale Connect (Annex 1) can provide an Atom interface on top of a set of registered datasets. The TG download services also provides some PHP scripts which create an Atom OpenSearch interface for a series of files.\n\n\n\nCookbook\nSoftware\nDescription\n\n\n\n\nWebdav\nWsgidav\nSetting up atom service using webdav\n\n\nZenodo\nzenodo\nData publication on Zenodo\n\n\n\n\n\nTraditional\nWeb Feature Service (WFS) and Web Coverage Service (WCS) are commonly used to download Featurecollections (vector) and Coverages (grids). Consider that most of the INSPIRE themes (including soil) require publication of hierarchical (app-schema) features, this aspect is not supported by many WFS server implementations. Some tools with this capability are listed in the table below. For WCS a good practice is available to facilitate implementation.\n\n\n\nCookbook\nSoftware\nDescription\n\n\n\n\nGeoServer\nGeoServer\nThe app-schema plugin extends the WFS implementation with support for hierarchical features. On the fly transformation is managed from a configuration file. Marcus Sen (Onegeology) create a cookbook for this approach.\n\n\nGet started with Hale Connect\nHale Connect\nOptimized for performance, stores pregeneralised xml fragments in combination with an elastic search index for filtering\n\n\ndeegree\ndeegree\nA java based spatial application server\n\n\nCoverages with rasdaman\nRasdaman\nA Web Coverage Service implementation\n\n\nSensorThings API via FROST server\nFROST server\nSoil observation data as sensor stream\n\n\n\nConsider that a product advertising WFS support does not automatically qualify for INSPIRE, the product has to support hierarchical GML.\n\n\nExperimental\nA good practice document has been adopted on the use of OGC API Features as download service. With its 20 years of history WFS and GML are out of synch with current IT practices. OGC API is a new direction of standards within OGC adopting some of the latest IT conventions, such as Open API, Rest services, JSON encodings, content negotiation, etc. The use of OGC API will increase in coming years while OGC adopts more standards. Various products exist implementing the final and/or draft specifications.\nAs described in the harmonization paragraph, Sensor Observation Service and SensorThings API offer an alternative download option for themes including much observation data, such as Soil.\nGraphQL and SPARQL are powerfull query api’s to request data over the web. Both have not gone through the proces of Good practice adoption. But they are serious candidates to provide a modern INSPIRE download service.\n\n\n\nCookbook\nSoftware\nDescription\n\n\n\n\nOGC API Features via pygeoapi\npygeoapi\nA python based open source implementation of OGC APIs including OGC API Features. Configuration is managed from a configuration file.\n\n\nProxy a WFS as OGC API Features using LDProxy\nldproxy\nA java based open source implementation of OGC APIs. Originally developed by Interactive Instruments as an easy way to consume API (proxy) on top of existing WFS. These experiments were a main driver for OGC in the direction of OGC API. Configuration is managed from a web interface.\n\n\nSoil data via GraphQL\nPostgraphile\nSoil data from a postgres database via graphQL"
+  },
+  {
+    "objectID": "QOS.html",
+    "href": "QOS.html",
+    "title": "Overview Quality of Service",
+    "section": "",
+    "text": "Via the quality of service conventions data providers report about the quality of their services. Aspects which are monitored are:\n\nAvailability (% of the time that the service has been available)\nPerformance and capacity (a period in which performance and capacity requirements are not met, is considered downtime)\nUsage (how much is the service used)\n\nIn each of the technical guidelines on view, download and discovery services a chapter is dedicated to Quality of Service. It includes the aspects of:\nReporting about usage of the service is documented in the monitoring guidelines paragraph 1.7. As a data provider you may be requested to provide this data to the national contact point. The national contact point reports these numbers to Europe. Aside the reporting obligations, usage reports are interesting feedback to guide future developments.\nMeasuring and reporting about Quality of Service is an aspect of step 7) Soil Information User Consideration in the soil information workflow. Consult your IT department or hosting company if they have tools available to assess these aspects. Confirm with them on how to extend and/or share with you these measurements for the requested parameters.\n\n\nTo assess the availability of a service, it requires to monitor the availability of the service at intervals. A basic availability-test every 5 minutes is sufficient. Many software exists for availability monitoring, such as Zabbix, Nagios, CheckMK, pingdom. A special mention for the Python based GeoHealthCheck package, which includes the capability on WMS/WFS services to drill down to the data level starting from the GetCapabilities operation.\n\n\n\nCookbook\nSoftware\nDescription\n\n\n\n\nGeoHealthCheck\nGeoHealthCheck\nA utility to report on availability of a service\n\n\n\n\n\n\nTo know the capacity and performance of a service you can perform some load tests prior to moving to production. An alternative approach to evaluate performance is to extract the access logs of the service into an aggregation tool like Kibana and evaluate the number of requests exceeding the limits.\n\n\n\nCookbook\nSoftware\nDescription\n\n\n\n\nCapacity tests with jmeter\njmeter\nUtility for performance and capacity testing\n\n\n\n!!!note\nA common challenge to service performance is the provision of a WMS service on a big vector dataset. When requesting that dataset on a national level, the server runs into problems drawing all the features at once. In such case consider to set up some cache/aggregation mechanism for larger areas. Setting proper min/max scale denominators may be a solution also.\n\n\n\nTo capture the usage of a service you can extract the usage logs and import them in a tool like Kibana, Splunk or AW stats. Defining rules to extract the requested layer name from a WMS request is useful. Mind that not all requests are GET requests, some WFS requests use POST, which may need some configuration on the webserver to enable POST parameter logging. Make sure the logging includes the ‘Referer’ and ‘User-agent’ parameters, which allows to differentiate types of uses. Finally consider there is a GDPR privacy aspect to collecting access logs. Consider to exclude the IP address of the user and define a maximal retention for access logs.\n\n\n\nCookbook\nSoftware\nDescription\n\n\n\n\nAWStats\nAWStat\nA utility to report on service usage"
+  },
+  {
+    "objectID": "QOS.html#availability-monitoring",
+    "href": "QOS.html#availability-monitoring",
+    "title": "Overview Quality of Service",
+    "section": "",
+    "text": "To assess the availability of a service, it requires to monitor the availability of the service at intervals. A basic availability-test every 5 minutes is sufficient. Many software exists for availability monitoring, such as Zabbix, Nagios, CheckMK, pingdom. A special mention for the Python based GeoHealthCheck package, which includes the capability on WMS/WFS services to drill down to the data level starting from the GetCapabilities operation.\n\n\n\nCookbook\nSoftware\nDescription\n\n\n\n\nGeoHealthCheck\nGeoHealthCheck\nA utility to report on availability of a service"
+  },
+  {
+    "objectID": "QOS.html#performance-capacity-testing",
+    "href": "QOS.html#performance-capacity-testing",
+    "title": "Overview Quality of Service",
+    "section": "",
+    "text": "To know the capacity and performance of a service you can perform some load tests prior to moving to production. An alternative approach to evaluate performance is to extract the access logs of the service into an aggregation tool like Kibana and evaluate the number of requests exceeding the limits.\n\n\n\nCookbook\nSoftware\nDescription\n\n\n\n\nCapacity tests with jmeter\njmeter\nUtility for performance and capacity testing\n\n\n\n!!!note\nA common challenge to service performance is the provision of a WMS service on a big vector dataset. When requesting that dataset on a national level, the server runs into problems drawing all the features at once. In such case consider to set up some cache/aggregation mechanism for larger areas. Setting proper min/max scale denominators may be a solution also."
+  },
+  {
+    "objectID": "QOS.html#usage-monitoring",
+    "href": "QOS.html#usage-monitoring",
+    "title": "Overview Quality of Service",
+    "section": "",
+    "text": "To capture the usage of a service you can extract the usage logs and import them in a tool like Kibana, Splunk or AW stats. Defining rules to extract the requested layer name from a WMS request is useful. Mind that not all requests are GET requests, some WFS requests use POST, which may need some configuration on the webserver to enable POST parameter logging. Make sure the logging includes the ‘Referer’ and ‘User-agent’ parameters, which allows to differentiate types of uses. Finally consider there is a GDPR privacy aspect to collecting access logs. Consider to exclude the IP address of the user and define a maximal retention for access logs.\n\n\n\nCookbook\nSoftware\nDescription\n\n\n\n\nAWStats\nAWStat\nA utility to report on service usage"
+  },
+  {
+    "objectID": "cookbook/dcat.html",
+    "href": "cookbook/dcat.html",
+    "title": "Soil data guidance",
+    "section": "",
+    "text": "DCAT is an ontology from W3C to describe datasets in the semantic web. It is supported by software such as CKAN, GeoNetwork. The geodcat-ap group has developed a specialisation of DCAT v1 to describe spatial datasets. Many of the conventions of geodcat-ap have been introduced in follow-up editions of DCAT (v2, v3)."
+  },
+  {
+    "objectID": "cookbook/dcat.html#ontologies-used-in-dcat",
+    "href": "cookbook/dcat.html#ontologies-used-in-dcat",
+    "title": "Soil data guidance",
+    "section": "Ontologies used in DCAT",
+    "text": "Ontologies used in DCAT\nDCAT makes use of other ontologies, following the best practices of the Semantic Web. They are all relevant to produce consistent and usable meta-data for the web.\n\nvCard: For the description of People and Organisations according to the specification issued by the Internet Engineering Task Force (IETF) (RFC6350). Also considers addresses, communication means and inter-personal relations.\nDublin Core: A small ontology implementing the fifteen element ISO 15836-1:2017 standard for documentation meta-data. The ontology expands on the original Dublin Core with additional terms meant to facilitate meta-data creation and publication with RDF.\nPROV-O: An OWL translation of the Prov Data Model specified by the W3C. Provides a set of classes, properties, and restrictions that can be used to represent and interchange provenance information."
+  },
+  {
+    "objectID": "cookbook/dcat.html#query-a-dcat-resource",
+    "href": "cookbook/dcat.html#query-a-dcat-resource",
+    "title": "Soil data guidance",
+    "section": "Query a DCAT resource",
+    "text": "Query a DCAT resource\nThe query below provides an example of how to interact with a knowledge graph of metadata making use of the DCAT ontology. It returns a list of datasets tagged with keywords containing the string “soil”. The data property dcat:keyword was originally meant exclusively for instances of the dcat:Dataset class, but since version 2 of the ontology it can be used with any class.\n\nFollow the virtuoso/skosmos recipe up to step On the linked data tab, select Quad store upload. Instead of adding a remote url you unzip and upload a rdf snapshot of the dutch spatial catalogue.\nNavigate to http://localhost:8890/sparql/ and run the query below.\n\nPREFIX dcat: &lt;http://www.w3.org/ns/dcat#&gt;\nPREFIX dct: &lt;http://purl.org/dc/terms/&gt;\n\nSELECT ?dataset, ?title\nWHERE {\n    ?dataset a dcat:Dataset ;\n             dct:title ?title ;\n             dcat:keyword ?keyword .\n    FILTER CONTAINS(?keyword, \"EIGEN\") .\n}\nThe CONTAINS function in the query above is used to partially match the string. For an exact match the equals operator can be used instead (=). To match more than one keyword, successive FILTER clauses can be concatenated with the or operator (||).\nIf at some point your database is corrupt, you can remove all triples by running:\nDELETE FROM DB.DBA.RDF_QUAD ;\nColin Maundry provides some dcat sample sparql queries. Notice that you replace the graph url http://www.data.maudry.com/uk in the queries with yours."
+  },
+  {
+    "objectID": "cookbook/re3gistry.html",
+    "href": "cookbook/re3gistry.html",
+    "title": "Re3gistry",
+    "section": "",
+    "text": "Re3gistry is a tool to manage and share reference codes. It provides a central access point that allows labels and descriptions for reference codes to be easily looked up by humans or retrieved by machines. It supports organisations in managing and updating reference codes consistently in a well governed manner so that all versions of a code remain traceable and adequately documented over time.\nThe Re3gistry development started under the ISA Are3na action. It continues under the ISA2 ELISE action. The main user of the software is the INSPIRE Registry. Although the software has been implemented in various regional instances.\nWhen you need to manage and share reference codes within and between organisations, the Re3gistry solution can support you. These reference codes uniquely define sets of permissible values for a data field or provide context for the exchanged data. Examples of reference codes are simple enumerations and flat lists to complex controlled vocabularies, taxonomies, thesauri."
+  },
+  {
+    "objectID": "cookbook/re3gistry.html#registry-in-relation-to-other-software",
+    "href": "cookbook/re3gistry.html#registry-in-relation-to-other-software",
+    "title": "Re3gistry",
+    "section": "Registry in relation to other software",
+    "text": "Registry in relation to other software\nTools such as GeoNetwork and Hale studio are able to import code lists from Re3gistry software. Which are then used within the software to populate pull down menus."
+  },
+  {
+    "objectID": "cookbook/re3gistry.html#registry-and-the-semantic-web",
+    "href": "cookbook/re3gistry.html#registry-and-the-semantic-web",
+    "title": "Re3gistry",
+    "section": "Registry and the semantic web",
+    "text": "Registry and the semantic web\nThe background of Re3gistry is in the geospatial domain (iso19135). Hoewever there are efforts to integrate with the semantic web. Each codelist can for example be exported as a SKOS RDF, for example in an rdf/xml format"
+  },
+  {
+    "objectID": "cookbook/re3gistry.html#read-more",
+    "href": "cookbook/re3gistry.html#read-more",
+    "title": "Re3gistry",
+    "section": "Read more",
+    "text": "Read more\n\nCommunity at GitHub\nINSPIRE registry\nSolution at ISA2\nUser manual"
+  },
+  {
+    "objectID": "cookbook/frost-server.html",
+    "href": "cookbook/frost-server.html",
+    "title": "FROST server",
+    "section": "",
+    "text": "FROST is an open source server implementation of OGC Sensorthings, a modern data exchange standard for Sensor Data. Because the INSPIRE Soil model is based on Observations and Measurements, the Sensorthings API can be used to provide sensor download services, with the soil profile and horizons as FeatureOfInterest. Sensorthings API is generally easier to set up for administrators and easier to consume by clients then INSPIRE Soil data in GML. INSPIRE has recently adopted a good practice on Download services based on SensorThings API.\nKathi Schleidt has prepared a workshop on inspire data in sensorthings API. Also have a look at her sensor presentation in the 2022 edition of the training. After the 2022 training Kathy together with colleagues from Fraunhofer IOSB has put together a SoilThings variant of STA. The experiment has proven to be a most interesting use case, it has shown where flexibility has to be added in the STA model (these changes will be integrated in the upcoming 2.0 version of the standard). The cool thing about this API is that it allows you to do queries like the following: give me all plots that contain a profile that contains a horizon on which pH H2O is measured; while the query syntax can be a bit daunting, the other existing technologies for provision (WFS and the new OGC API) would require 5 separate requests to do this. Links:"
+  },
+  {
+    "objectID": "cookbook/frost-server.html#read-more",
+    "href": "cookbook/frost-server.html#read-more",
+    "title": "FROST server",
+    "section": "Read more",
+    "text": "Read more\nAt masterclass edition 2023 Kathi Schleidt and Hylke van der Schaaf presented Sensorthings API using Frost server.\n\n\n\nGood practice Sensorthings\nGitHub repository\nDocumentation\nWorkshop"
+  },
+  {
+    "objectID": "cookbook/inspire-geoportal.html",
+    "href": "cookbook/inspire-geoportal.html",
+    "title": "INSPIRE Geoportal",
+    "section": "",
+    "text": "The INSPIRE Geoportal is the central European access point to the data provided by EU Member States and several EFTA countries under the INSPIRE Directive."
+  },
+  {
+    "objectID": "cookbook/inspire-geoportal.html#harvesting-metadata",
+    "href": "cookbook/inspire-geoportal.html#harvesting-metadata",
+    "title": "INSPIRE Geoportal",
+    "section": "Harvesting metadata",
+    "text": "Harvesting metadata\nHarvest is the process of copying metadata from a remote source (catalogue) to the european GeoPortal.\nFor each memberstate a contact point is assigned, which is responsible for registering the national endpoint(s) to be harvested by the geoportal. The national contact point also triggers the harvest and validates the result before publishing it. At the harvest status page. In case you’re interested to have a resource harvested into the INSPIRE GeoPortal you best contact the national contact point to understand the INSPIRE practices in your country. A list of national contact points is available at https://inspire.ec.europa.eu/contact-points/57734. A quick look into the contents of the portal and the harvest status page indicates that countries have quite varying practices on accepting datasets in the geoportal."
+  },
+  {
+    "objectID": "cookbook/inspire-geoportal.html#metadata-guidelines",
+    "href": "cookbook/inspire-geoportal.html#metadata-guidelines",
+    "title": "INSPIRE Geoportal",
+    "section": "Metadata Guidelines",
+    "text": "Metadata Guidelines\nThe TG Metadata indicates that INSPIRE datasets and services are described using ISO19139:2007. Discussion is ongoing if the allowed encodings should be extended to include for example DCAT (used by European data portal) or DataCite (used by Zenodo, dataverse, etc)."
+  },
+  {
+    "objectID": "cookbook/inspire-geoportal.html#describe-datasets-using-iso191392007",
+    "href": "cookbook/inspire-geoportal.html#describe-datasets-using-iso191392007",
+    "title": "INSPIRE Geoportal",
+    "section": "Describe datasets using iso19139:2007",
+    "text": "Describe datasets using iso19139:2007\nVarious tools exist to support describing datasets using iso19139:2007.\n\nGeoNetwork is a webbased application presenting forms and tools to assist in describing datasets.\nArcMap and QGIS include an embedded metadata editor, which is able to export to iso19139:2007\npygeometa is a python library which exports ISO19139:2007 (and other metadata encodings) from a YML encoded format called metadata control file (mcf)"
+  },
+  {
+    "objectID": "cookbook/inspire-geoportal.html#validate-records-in-the-inspire-validator",
+    "href": "cookbook/inspire-geoportal.html#validate-records-in-the-inspire-validator",
+    "title": "INSPIRE Geoportal",
+    "section": "Validate records in the INSPIRE validator",
+    "text": "Validate records in the INSPIRE validator"
+  },
+  {
+    "objectID": "cookbook/inspire-geoportal.html#validate-links-in-the-link-checker",
+    "href": "cookbook/inspire-geoportal.html#validate-links-in-the-link-checker",
+    "title": "INSPIRE Geoportal",
+    "section": "Validate links in the Link Checker",
+    "text": "Validate links in the Link Checker\nOperational links are an important aspect in metadata. It determines for example if a user is able to view or download a file after having discovered its metadata. The INSPIRE Geoportal applies some link checks while harvesting the metadata and adds the link check result as tags to the metadata. To optimize your links beforehand the GeoPortal offers the option to run the link checker on an arbitrary metadata record. The Link checker is available at https://inspire-geoportal.ec.europa.eu/linkagechecker.html."
+  },
+  {
+    "objectID": "cookbook/inspire-geoportal.html#multilingual-metadata",
+    "href": "cookbook/inspire-geoportal.html#multilingual-metadata",
+    "title": "INSPIRE Geoportal",
+    "section": "Multilingual metadata",
+    "text": "Multilingual metadata\nmetadata harvested from a national catalogue is usually available in a local language only. To offer users a better user experience, the INSPIRE geoportal translates some key elements of the metadata to english. An automated service is used, which in some cases gives a unexpected translation result. For this reason we encourage you to use the multilingual options of ISO19139:2007 to provide the metadata at least in a local language and english."
+  },
+  {
+    "objectID": "cookbook/md-schema-comparison.html",
+    "href": "cookbook/md-schema-comparison.html",
+    "title": "Soil data guidance",
+    "section": "",
+    "text": "Main topic\nSub topic\nresearch.data.gouv\nH2020\nINSPIRE\nDataCite\noverall recommendation\n\n\n\n\nTitle\n\nMandatory\n\nMandatory\nMandatory\nhighly recommended\n\n\nSubtitle\n\n\n\n\n\n\n\n\nAlternative title\n\n\n\n\n\n\n\n\nLink to data\n\n\n\nMandatory\n\nhighly recommended\n\n\nOther ID\nAgency\n\n\n\n\n\n\n\nOther ID\nIdentifier\n\n\n\n\n\n\n\nContact\nName\n\n\n\n\n\n\n\nContact\nAffiliation\n\n\nMandatory\n\nhighly recommended\n\n\nContact\ne-mail\nMandatory\n\nMandatory\n\nhighly recommended\n\n\nAuthor\nName\nMandatory\n\n\n\nhighly recommended\n\n\nAuthor\nAffiliation\n\n\n\n\n\n\n\nAuthor\nIdentifier scheme\n\n\n\n\n\n\n\nAuthor\nIdentifier\n\n\n\n\n\n\n\nContributor\nType\n\n\n\nRecommended\nRecommended\n\n\nContributor\nName\n\n\n\nRecommended\nRecommended\n\n\nContributor\nAffiliation\n\n\n\nRecommended\nRecommended\n\n\nContributor\nIdentifier scheme\n\n\n\nRecommended\nRecommended\n\n\nContributor\nIdentifier\n\n\n\nRecommended\nRecommended\n\n\nProducer\nName\n\n\n\n\n\n\n\nProducer\nAffiliation\n\n\n\n\n\n\n\nProducer\nAbbreviation\n\n\n\n\n\n\n\nProducer\nURL\n\n\n\n\n\n\n\nProducer\nLogo URL\n\n\n\n\n\n\n\nProduction date\n\n\n\nMandatory\n\nhighly recommended\n\n\nProduction place\n\n\n\n\n\n\n\n\nDistributor\nName\n\n\n\n\n\n\n\nDistributor\nAffiliation\n\n\n\n\n\n\n\nDistributor\nAbbreviation\n\n\n\n\n\n\n\nDistributor\nURL\n\n\n\n\n\n\n\nDistributor\nLogo URL\n\n\n\n\n\n\n\nDistribution date\n\n\nMandatory\nMandatory\n\nhighly recommended\n\n\nDescription\nText\nMandatory\n\nMandatory\nRecommended\nhighly recommended\n\n\nDescription\nLanguage\n\n\nMandatory\n\nhighly recommended\n\n\nDescription\nDate\n\n\nMandatory\n\nhighly recommended\n\n\nLanguage\n\n\n\nMandatory\n\nhighly recommended\n\n\nSubject\n\nMandatory\n\nMandatory\n\nhighly recommended\n\n\nKeyword\nTerm\n\n\nMandatory\n\nhighly recommended\n\n\nKeyword\nTerm URI\n\n\n\n\nRecommended\n\n\nKeyword\nVocabulary\n\n\nMandatory\n\nhighly recommended\n\n\nKeyword\nVocabulary URL\n\n\n\n\nRecommended\n\n\nTopic classification\nTerm\n\n\n\n\n\n\n\nTopic classification\nVocabulary\n\n\n\n\n\n\n\nTopic classification\nVocabulary URL\n\n\n\n\n\n\n\nKind of data\n\nMandatory\n\nMandatory\n\nhighly recommended\n\n\nOther kind of data\n\n\n\n\n\n\n\n\nData origin\n\n\n\n\n\n\n\n\nData sources\n\n\n\n\n\n\n\n\nOrigin of sources\n\n\n\n\n\n\n\n\nCharacteristics of sources noted\n\n\n\n\n\n\n\n\nDocumentation and access to sources\n\n\n\n\n\n\n\n\nSoftware\nName\n\n\n\n\n\n\n\nSoftware\nVersion\n\n\n\n\n\n\n\nSeries\nName\n\n\n\n\n\n\n\nSeries\nInformation\n\n\n\n\n\n\n\nLife cycle step\n\n\n\n\n\n\n\n\nNotes\n\n\n\n\n\n\n\n\nRelated publication\nCitation\n\n\n\n\n\n\n\nRelated publication\nID type\n\n\n\n\n\n\n\nRelated publication\nID number\n\n\n\n\n\n\n\nRelated publication\nURL\n\n\n\n\n\n\n\nRelated material\n\n\n\nMandatory\n\nhighly recommended\n\n\nRelated dataset\nRelated dataset citation\n\n\n\n\n\n\n\nRelated dataset\nRelated dataset ID type\n\n\n\n\n\n\n\nRelated dataset\nRelated dataset ID number\n\n\n\n\n\n\n\nRelated dataset\nRelated dataset URL\n\n\nMandatory\n\nhighly recommended\n\n\nOther references\n\n\n\n\n\n\n\n\nGrant information\nGrant agency\n\n\n\n\n\n\n\nGrant information\nGrant number\n\nMandatory\n\n\nhighly recommended\n\n\nProject information\nProject acronym\n\nMandatory\n\n\nhighly recommended\n\n\nProject information\nProject title\n\nMandatory\n\n\nhighly recommended\n\n\nProject information\nProject ID\n\n\n\n\n\n\n\nProject information\nLink to project website\n\n\n\n\n\n\n\nProject information\nProject work package\n\n\n\n\n\n\n\nProject information\nProject task\n\n\n\n\n\n\n\nTime period covered\nStart\n\n\nMandatory\n\nhighly recommended\n\n\nTime period covered\nEnd\n\n\nMandatory\n\nhighly recommended\n\n\nDate of collection\nStart\n\n\nMandatory\n\nhighly recommended\n\n\nDate of collection\nEnd\n\n\nMandatory\n\nhighly recommended\n\n\nDepositor\n\n\n\n\nMandatory\nhighly recommended\n\n\nDeposit Date\n\n\n\nMandatory\nMandatory\nhighly recommended\n\n\nGeographic coverage\nCountry / Nation\n\n\n\nRecommended\n\n\n\nGeographic coverage\nState / Province\n\n\n\nRecommended\n\n\n\nGeographic coverage\nCity\n\n\n\nRecommended\n\n\n\nGeographic coverage\nOther\n\n\n\nRecommended\n\n\n\nGeographic unit\n\n\n\n\n\n\n\n\nGeographic bounding box\nWest longitude\n\n\nMandatory\nRecommended\nhighly recommended\n\n\nGeographic bounding box\nEast longitude\n\n\nMandatory\nRecommended\nhighly recommended\n\n\nGeographic bounding box\nNorth latitude\n\n\nMandatory\nRecommended\nhighly recommended\n\n\nGeographic bounding box\nSouth latitude\n\n\nMandatory\nRecommended\nhighly recommended\n\n\nQuality and validity\nLineage\n\n\nMandatory\n\nhighly recommended\n\n\nQuality and validity\nSpatial resolution\n\n\nMandatory\n\nhighly recommended\n\n\nQuality and validity\nDegree\n\n\nMandatory\n\nhighly recommended\n\n\nType of semantic resource\n\n\n\n\n\n\n\n\nRepresentation syntax\n\n\n\n\n\n\n\n\nNature of the semantic resource\n\n\n\n\n\n\n\n\nDesigned for\n\n\n\n\n\n\n\n\nInformation on the current version\nVersion status\n\n\n\n\n\n\n\nInformation on the current version\nVersion\n\n\n\n\n\n\n\nInformation on the current version\nModification date\n\n\n\n\n\n\n\nInformation on the current version\nChanges\n\n\n\n\n\n\n\nImports\n\n\n\n\n\n\n\n\nBug tracker\n\n\n\n\n\n\n\n\nSPARQL endpoint\n\n\n\n\n\n\n\n\nImports\n\n\n\n\n\n\n\n\nBug tracker\n\n\n\n\n\n\n\n\nSPARQL endpoint\n\n\n\n\n\n\n\n\nWaiver\n\n\n\n\n\nhighly recommended\n\n\nTerms of use\n\n\n\n\n\nhighly recommended\n\n\nConfidentiality declaration\n\n\n\n\n\n\n\n\nSpecial permission\n\n\n\n\n\n\n\n\nRestrictions\n\n\n\n\n\nhighly recommended\n\n\nCitation requirements\n\n\n\n\n\nhighly recommended\n\n\nDepositor requirements\n\n\n\n\n\n\n\n\nConditions\n\n\n\n\n\n\n\n\nDisclaimer\n\n\n\n\n\n\n\n\nTerms of access\n\n\n\n\n\n\n\n\nRequest access\n\n\n\n\n\nhighly recommended\n\n\nData access place\n\n\n\n\n\nhighly recommended\n\n\nOriginal archive\n\n\n\n\n\n\n\n\nAvailibility status\n\n\n\n\n\n\n\n\nContact for access\n\n\n\n\n\nhighly recommended\n\n\nSize of collection\n\n\n\n\n\n\n\n\nStudy completion"
   },
   {
     "objectID": "cookbook/glosis-db.html",

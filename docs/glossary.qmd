@@ -13,6 +13,8 @@ This page includes terms that we use in our wiki, so that you have a reference f
 
 *Application programming interface (API)* is a way for two or more computer programs to communicate with each other (source [wikipedia](https://en.wikipedia.org/wiki/API))
 
+*Artificial Intelligence* (AI) is a field of study that develops and studies intelligent machines. It includes the fields rule based reasoning, machine learning and natural language processing (NLP). Source: [wikipedia](https://en.wikipedia.org/wiki/Artificial_intelligence)
+
 *Assimilation* is a catchy term indicating the processes involved to combine multiple datasets with different origin into a common dataset, the term is somewhat similarly used in psychology as `incorporation of new concepts into existing schemes` (source [wikipedia](https://en.wikipedia.org/wiki/Assimilation)). But is not well aligned with its usage in the data science community: ` updating a numerical model with observed data` (source [wikipedia](https://en.wikipedia.org/wiki/Assimilation))
 
 *ATOM* is a standardised interface to exchange news feeds over the internet. It has been adopted by INSPIRE as a basic alternative to download services via WFS or WCS.

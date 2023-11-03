@@ -798,6 +798,13 @@
     "text": "Experimental\nA good practice exists related to Geo-DCAT-ap. It explains how to publish metadata using the Geo-DCAT-ap vocabulary as an additional metadata format. At present the use of ISO19139 is required by all guidelines. However, it is expected that it will soon be possible to offer metadata in a DCAT only. DCAT facilitates records to be discovered via google dataset search (and other search engines and semantic web platforms).\nCurrently no ‘good practice’ exists to offer discovery services in alternative protocols then CSW. A good practice to adopt OGC API Records is being prepared. OpenSearch, OData and SPARQL could be alternative discovery service protocols.\n\n\n\nCookbook\nSoftware\nDescription\n\n\n\n\ndcat\n-\nA dcat approach to dataset discovery"
   },
   {
+    "objectID": "metadata.html#metadata-in-ejp-soil",
+    "href": "metadata.html#metadata-in-ejp-soil",
+    "title": "Overview Metadata & discovery",
+    "section": "Metadata in EJP Soil",
+    "text": "Metadata in EJP Soil\nThe EJP Soil programm aims to collect metadata of datasets uused in all EJP Soil projects and provide a search interface on these datasets. The metadata is currently maintained at https://github.com/ejpsoil/ejpsoildatahub and the search interface is available at https://catalogue.ejpsoil.eu. Data scientists in any of the EJP Soil projects are encouraged to share their published datasets via https://github.com/ejpsoil/ejpsoildatahub. This decision tree can be followed:\n\nIf datasets are published on a repository providing a DOI or CSW, share a list of these DOI’s or CSW uuid’s on the relevant hub folder.\nIf datasets are not published (yet), you can use this spreadsheet to list a minimal set of metadata properties for each dataset.\n\nSend the list as a Pull Request, Issue or email to the maintainers."
+  },
+  {
     "objectID": "consumer.html",
     "href": "consumer.html",
     "title": "Consumer of Soil Data",

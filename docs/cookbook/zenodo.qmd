@@ -4,7 +4,7 @@ author: Paul van Genuchten
 date: 2023-01-20
 ---
 
-This recipe proposes an approach to use [Zenodo](https://zenodo.org) to publish a dataset. 
+This recipe proposes an approach to use [Zenodo](https://zenodo.org) to publish a dataset (or other resouces, such as research software, documents, video, etc). 
 Some suggestions are made to increase the value of the Zenodo publication.
 Zenodo is a generic repository to publish resources related to scientific work and is part of the European OpenAIRE program and operated by CERN. 
 As part of the upload process some metadata is provided and a persistent identifier (DOI) is created.

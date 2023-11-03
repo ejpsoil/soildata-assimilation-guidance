@@ -1453,7 +1453,7 @@
     "href": "cookbook/zenodo.html",
     "title": "Zenodo data repository",
     "section": "",
-    "text": "This recipe proposes an approach to use Zenodo to publish a dataset. Some suggestions are made to increase the value of the Zenodo publication. Zenodo is a generic repository to publish resources related to scientific work and is part of the European OpenAIRE program and operated by CERN. As part of the upload process some metadata is provided and a persistent identifier (DOI) is created. Zenodo resources are clustered in communities. You can join an existing community or start one. Community moderators (dis)allow contributions to a community.\nThe procedure below is also relevant for other scientific repositories, such as Dataverse, Open Science Foundation, European Open Science Cloud or DataOne."
+    "text": "This recipe proposes an approach to use Zenodo to publish a dataset (or other resouces, such as research software, documents, video, etc). Some suggestions are made to increase the value of the Zenodo publication. Zenodo is a generic repository to publish resources related to scientific work and is part of the European OpenAIRE program and operated by CERN. As part of the upload process some metadata is provided and a persistent identifier (DOI) is created. Zenodo resources are clustered in communities. You can join an existing community or start one. Community moderators (dis)allow contributions to a community.\nThe procedure below is also relevant for other scientific repositories, such as Dataverse, Open Science Foundation, European Open Science Cloud or DataOne."
   },
   {
     "objectID": "cookbook/zenodo.html#upload-your-data-to-zenodo",

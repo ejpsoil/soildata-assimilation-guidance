@@ -52,7 +52,7 @@ Currently no 'good practice' exists to offer discovery services in alternative p
 
 ## Metadata in EJP Soil
 
-The EJP Soil programm aims to collect metadata of datasets uused in all EJP Soil projects and provide a search interface on these datasets. The metadata is currently maintained at https://github.com/ejpsoil/ejpsoildatahub and the search interface is available at https://catalogue.ejpsoil.eu. Data scientists in any of the EJP Soil projects are encouraged to share their published datasets via https://github.com/ejpsoil/ejpsoildatahub. This decision tree can be followed:
+The EJP Soil programme aims to collect metadata of datasets used in all EJP Soil projects and provide a search interface on these datasets. The metadata is currently maintained at https://github.com/ejpsoil/ejpsoildatahub and the search interface is available at https://catalogue.ejpsoil.eu. Data scientists in any of the EJP Soil projects are encouraged to share their (published) datasets via https://github.com/ejpsoil/ejpsoildatahub. These options are available:
 
 - If datasets are published on a repository providing a DOI or CSW, share a list of these DOI's or CSW uuid's on the relevant [hub folder](https://github.com/ejpsoil/ejpsoildatahub/tree/main/datasets/research/EJP%20Research).
 - If datasets are not published (yet), you can use this [spreadsheet](./EUSO Data WG metadata template_20231103.xlsx) to list a minimal set of metadata properties for each dataset. 

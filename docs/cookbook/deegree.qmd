@@ -32,7 +32,7 @@ docker pull deegree/deegree3-docker:3.5
 ```
 **Specific version** (example)
 ```
-docker pull deegree/deegree3-docker:3.5.2
+docker pull deegree/deegree3-docker:3.5.3
 ```
 > **Info:** All available images of deegree version 3.5.x are built with Apache Tomcat 9.x and OpenJDK 11. Check the [deegree Docker Hub project](https://hub.docker.com/r/deegree/deegree3-docker) for details and other deegree versions available.
 
@@ -48,16 +48,16 @@ docker network create -d bridge inspiresoilnetwork
 
 **Simple configuration** (recommended for beginners)
 ```
-docker run --name deegree_inspire_soil --network="inspiresoil" -d -p 8080:8080 deegree/deegree3-docker
+docker run --name deegree_inspire_soil --network="inspiresoilnetwork" -d -p 8080:8080 deegree/deegree3-docker
 ```
 or with a **specific version**:
 ```
-docker run --name deegree_inspire_soil --network="inspiresoil" -d -p 8080:8080 deegree/deegree3-docker:3.5.2
+docker run --name deegree_inspire_soil --network="inspiresoilnetwork" -d -p 8080:8080 deegree/deegree3-docker:3.5.3
 ```
 **Advanced configuration**
 
 ```
-docker run --name deegree_inspire_soil --network="inspiresoilnetwork" -v /path/to/.deegree:/root/.deegree -d -p 8080:8080 deegree/deegree3-docker:3.5.2
+docker run --name deegree_inspire_soil --network="inspiresoilnetwork" -v /path/to/.deegree:/root/.deegree -d -p 8080:8080 deegree/deegree3-docker:3.5.3
 ```
 > **Tip:** Using the docker parameter `-v` (volume), all prior created deegree workspaces that are stored in `/path/to/.deegree` can be accessed.
 

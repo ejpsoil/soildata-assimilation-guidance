@@ -207,7 +207,7 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Latest minor version</strong></p>
 <pre><code>docker pull deegree/deegree3-docker:3.5</code></pre>
 <p><strong>Specific version</strong> (example)</p>
-<pre><code>docker pull deegree/deegree3-docker:3.5.2</code></pre>
+<pre><code>docker pull deegree/deegree3-docker:3.5.3</code></pre>
 <blockquote class="blockquote">
 <p><strong>Info:</strong> All available images of deegree version 3.5.x are built with Apache Tomcat 9.x and OpenJDK 11. Check the <a href="https://hub.docker.com/r/deegree/deegree3-docker">deegree Docker Hub project</a> for details and other deegree versions available.</p>
 </blockquote>
@@ -223,11 +223,11 @@ ul.task-list li input[type="checkbox"] {
 <section id="step-3-set-up-the-local-deegree-docker-container" class="level3">
 <h3 class="anchored" data-anchor-id="step-3-set-up-the-local-deegree-docker-container">Step 3: Set up the local deegree docker container</h3>
 <p><strong>Simple configuration</strong> (recommended for beginners)</p>
-<pre><code>docker run --name deegree_inspire_soil --network="inspiresoil" -d -p 8080:8080 deegree/deegree3-docker</code></pre>
+<pre><code>docker run --name deegree_inspire_soil --network="inspiresoilnetwork" -d -p 8080:8080 deegree/deegree3-docker</code></pre>
 <p>or with a <strong>specific version</strong>:</p>
-<pre><code>docker run --name deegree_inspire_soil --network="inspiresoil" -d -p 8080:8080 deegree/deegree3-docker:3.5.2</code></pre>
+<pre><code>docker run --name deegree_inspire_soil --network="inspiresoilnetwork" -d -p 8080:8080 deegree/deegree3-docker:3.5.3</code></pre>
 <p><strong>Advanced configuration</strong></p>
-<pre><code>docker run --name deegree_inspire_soil --network="inspiresoilnetwork" -v /path/to/.deegree:/root/.deegree -d -p 8080:8080 deegree/deegree3-docker:3.5.2</code></pre>
+<pre><code>docker run --name deegree_inspire_soil --network="inspiresoilnetwork" -v /path/to/.deegree:/root/.deegree -d -p 8080:8080 deegree/deegree3-docker:3.5.3</code></pre>
 <blockquote class="blockquote">
 <p><strong>Tip:</strong> Using the docker parameter <code>-v</code> (volume), all prior created deegree workspaces that are stored in <code>/path/to/.deegree</code> can be accessed.</p>
 </blockquote>

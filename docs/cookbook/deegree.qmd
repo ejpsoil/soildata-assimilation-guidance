@@ -113,10 +113,10 @@ If run successfully, the SqlFeatureStoreConfigCreator will generate the SQL DDL 
 
 ### Step 2: Creating a database
 
-To use the previously generated `Soil.sql`, a database needs to be created. For this example a docker container with a PostgreSQL image (version 12) and the PostGIS extension (version 3.2) is created:
+To use the previously generated `Soil.sql`, a database needs to be created. For this example a docker container with a PostgreSQL image (version 14) and the PostGIS extension (version 3.4) is created:
 
 ```
-docker run --name postgis_inspire_soil --network="inspiresoilnetwork" -d -p 5432:5432 -e POSTGRES_PASSWORD=postgres -e POSTGRES_USER=postgres -v /destination/Soil.sql:/ postgis/postgis:12-3.2
+docker run --name postgis_inspire_soil --network="inspiresoilnetwork" -d -p 5432:5432 -e POSTGRES_PASSWORD=postgres -e POSTGRES_USER=postgres -v /destination/Soil.sql:/ postgis/postgis:14-3.4
 ```
 > **Info:** The SQL DDL file `Soil.sql` is mounted onto the container by using the previously mentioned docker run parameter `-v`. This way, the file does not have to be copied onto the container after its creation.
 

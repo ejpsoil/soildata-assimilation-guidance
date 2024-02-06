@@ -1,1 +1,1 @@
-Sitemap: https://github.com/ejpsoil/soildata-assimilation-guidance/sitemap.xml
+Sitemap: https://ejpsoil.github.io/soildata-assimilation-guidance/sitemap.xml

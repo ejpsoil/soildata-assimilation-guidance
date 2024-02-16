@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Paul van Genuchten">
+<meta name="dcterms.date" content="2024-02-16">
 
-<title>Soil data guidance - View services with QGIS server</title>
+<title>Soil data guidance - Interact with Spatial data services using QGIS Desktop</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -144,26 +146,38 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#prepare-a-view-service-in-qgis-desktop" id="toc-prepare-a-view-service-in-qgis-desktop" class="nav-link active" data-scroll-target="#prepare-a-view-service-in-qgis-desktop">Prepare a view service in QGIS Desktop</a></li>
-  <li><a href="#publish-a-view-service" id="toc-publish-a-view-service" class="nav-link" data-scroll-target="#publish-a-view-service">Publish a view service</a></li>
-  <li><a href="#validate-the-view-service" id="toc-validate-the-view-service" class="nav-link" data-scroll-target="#validate-the-view-service">Validate the view service</a></li>
-  <li><a href="#qgis-desktop-as-a-client-for-inspire-data" id="toc-qgis-desktop-as-a-client-for-inspire-data" class="nav-link" data-scroll-target="#qgis-desktop-as-a-client-for-inspire-data">QGIS Desktop as a client for INSPIRE data</a></li>
+  <li><a href="#visualize-data-using-ogcwms" id="toc-visualize-data-using-ogcwms" class="nav-link active" data-scroll-target="#visualize-data-using-ogcwms">Visualize data using OGC:WMS</a></li>
+  <li><a href="#visualize-and-download-vector-data-using-ogcwfs-or-ogcapifeatures" id="toc-visualize-and-download-vector-data-using-ogcwfs-or-ogcapifeatures" class="nav-link" data-scroll-target="#visualize-and-download-vector-data-using-ogcwfs-or-ogcapifeatures">Visualize and download vector data using OGC:WFS or OGCAPI:Features</a></li>
+  <li><a href="#visualize-and-download-grid-data-using-ogcwcs" id="toc-visualize-and-download-grid-data-using-ogcwcs" class="nav-link" data-scroll-target="#visualize-and-download-grid-data-using-ogcwcs">Visualize and download grid data using OGC:WCS</a></li>
+  <li><a href="#visualize-and-download-observation-data-using-sensorthings-api" id="toc-visualize-and-download-observation-data-using-sensorthings-api" class="nav-link" data-scroll-target="#visualize-and-download-observation-data-using-sensorthings-api">Visualize and download observation data using Sensorthings API</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/qgis.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/ows-in-qgis.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">View services with QGIS server</h1>
+<h1 class="title">Interact with Spatial data services using QGIS Desktop</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Paul van Genuchten </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 16, 2024</p>
+    </div>
+  </div>
   
     
   </div>
@@ -173,30 +187,75 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><a href="https://qgis.org">QGIS</a> is mostly known as a GIS desktop application. In recent years the community prepared a server edition of QGIS. The server provides datasets via WMS, WFS and OGC API Features interfaces.</p>
-<p>The advantage of using QGIS both as a desktop and server component is that the maps generated on the server will display exactly the same as those prepared on the desktop client.</p>
-<section id="prepare-a-view-service-in-qgis-desktop" class="level2">
-<h2 class="anchored" data-anchor-id="prepare-a-view-service-in-qgis-desktop">Prepare a view service in QGIS Desktop</h2>
-<p>Use an existing QGIS project, or create a new project with some <a href="https://data.isric.org">sample data</a>. If you include any data, place it in a folder within the current folder, so docker can access it as a docker mounted volume.</p>
-<p>Name your project <code>project.qgs</code>.</p>
-<p>On project settings, open the WMS properties to add relevant metadata.</p>
+<p><a href="https://qgis.org">QGIS</a> is an open source desktop GIS application available for Windows, MacOX, Linux and Android. It supports a wide variety of spatial formats, spatial data services, digitisation tools and spatial processing tools. If you are not familiar with QGIS, follow the <a href="https://qgis.org/en/site/forusers/">getting started tutorial</a> first.</p>
+<section id="visualize-data-using-ogcwms" class="level2">
+<h2 class="anchored" data-anchor-id="visualize-data-using-ogcwms">Visualize data using OGC:WMS</h2>
+<p><a href="https://www.ogc.org/standard/wms/">OGC:WMS</a> visualizes data in a mapviewer. To display a WMS in QGIS, Select from the menu <code>Layer &gt; Add Layer &gt; Add WMS/WMTS Layer</code>. This opens the Add layer panel.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./img/qgis/add-layer.png" class="w-50 border shadow img-fluid figure-img"></p>
+<figcaption>Add WMS Layer</figcaption>
+</figure>
+</div>
+<p>First we are adding a new service. Select the <code>New</code> button.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./img/qgis/add-service.png" class="w-50 border shadow img-fluid figure-img"></p>
+<figcaption>Add WMS service</figcaption>
+</figure>
+</div>
+<p>With the service selected, click the connect button and the layers available in the service are displayed</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./img/qgis/add-layer2.png" class="w-50 border shadow img-fluid figure-img"></p>
+<figcaption>Select a layer</figcaption>
+</figure>
+</div>
+<p>Select the relevant layer and click <code>Add</code> at the bottom of the panel. The Layer is now displayed on the map. If you don’t see it yet, right click the layer on the table of content and select <code>Zoom to layer</code>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./img/qgis/zoom-to-layer.png" class="w-50 border shadow img-fluid figure-img"></p>
+<figcaption>Zoom to layer</figcaption>
+</figure>
+</div>
+<p>Understand that you can not select features, because the interaction with the service is based on images. You can however use the <code>i</code> tool to retrieve attribute information from pixels. A dedicated method on the service, called ‘getFeatureInfo’ is used.</p>
 </section>
-<section id="publish-a-view-service" class="level2">
-<h2 class="anchored" data-anchor-id="publish-a-view-service">Publish a view service</h2>
-<p>Navigate with a console application to the folder which contains <code>project.qgs</code>.</p>
-<p>We’re running QGIS server as a docker container based on https://hub.docker.com/r/camptocamp/qgis-server. Run the QGIS container:</p>
-<pre><code>docker run -p 8080:80 --volume=$PWD:/etc/qgisserver camptocamp/qgis-server</code></pre>
-<p>Try the service via:</p>
-<pre><code>http://localhost:8080/?SERVICE=WMS&amp;REQUEST=GetCapabilities</code></pre>
+<section id="visualize-and-download-vector-data-using-ogcwfs-or-ogcapifeatures" class="level2">
+<h2 class="anchored" data-anchor-id="visualize-and-download-vector-data-using-ogcwfs-or-ogcapifeatures">Visualize and download vector data using OGC:WFS or OGCAPI:Features</h2>
+<p><a href="https://www.ogc.org/standard/wfs">OGC:WFS</a> retrieves vector features from a dataset. <a href="https://ogcapi.ogc.org/features/">OGCAPI:Features</a> is a modern alternative to WFS, supported by some servers. Adding a WFS or Features layer to QGIS uses a similar procedure as adding a WMS layer. Select <code>Layer &gt; Add layer &gt; Add WFS layer</code> from the menu. Notice that only vector layers are shown, grid layers use the WCS protocol (see next paragraph).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./img/qgis/add-wfs-layer.png" class="w-50 border shadow img-fluid figure-img"></p>
+<figcaption>Add WFS Layer</figcaption>
+</figure>
+</div>
+<p>Notice the <code>build query</code> button in the footer of the panel. This allows you to filter features on attribute value, for example <code>pH &lt; 5</code>. Substantially less data will be retrieved, improving the performance.</p>
+<p>With the layer added to the view, notice that the data has no styling, it acts as any other vector dataset. You can select features and even open the attribute table.</p>
+<p>To extract a subset of the data, zoom to the area of interest, then right click the layer in the table of contents and select <code>Export &gt; Save Features As</code>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./img/qgis/export-features.png" class="w-50 border shadow img-fluid figure-img"></p>
+<figcaption>Export WFS data</figcaption>
+</figure>
+</div>
+<p>On the export panel, set the format, a file location and set the extent (current). Then select <code>OK</code>.</p>
 </section>
-<section id="validate-the-view-service" class="level2">
-<h2 class="anchored" data-anchor-id="validate-the-view-service">Validate the view service</h2>
-<p>In order for the <a href="https://inspire.ec.europa.eu/validator/home/index.html">INSPIRE validator</a> to access your local service, you need to set up a <a href="../utils/localtunnel.html">tunnel</a>.</p>
+<section id="visualize-and-download-grid-data-using-ogcwcs" class="level2">
+<h2 class="anchored" data-anchor-id="visualize-and-download-grid-data-using-ogcwcs">Visualize and download grid data using OGC:WCS</h2>
+<p><a href="https://www.ogc.org/standard/wcs">OGC:WCS</a> retrieves subsets from a grid dataset. Adding a WCS layer to QGIS uses a similar procedure as adding a WFS layer. Select <code>Layer &gt; Add layer &gt; Add WCS layer</code> from the menu.</p>
+<p>The WCS layer acts like any grid layer, you can retrieve the pixel value and run grid processes on the layer.</p>
+<p>Exporting a grid for a region of interest works similar as WFS.</p>
 </section>
-<section id="qgis-desktop-as-a-client-for-inspire-data" class="level2">
-<h2 class="anchored" data-anchor-id="qgis-desktop-as-a-client-for-inspire-data">QGIS Desktop as a client for INSPIRE data</h2>
-<p>QGIS can act as a client for WMS, WFS, WCS, CSW, Sensorthings API and OGC API Features. A dedicated recipe about <a href="../cookbook/ows-in-qgis.html">adding data from data services to qgis</a> is available.</p>
-<p>The QGIS data model is based on data layers and has minimalistic support for joins. QGIS is therefore less optimal for rich GML data as used in INSPIRE. There have been initiatives to bring hierarchical data to QGIS, such as <a href="https://plugins.qgis.org/plugins/gml_application_schema_toolbox/">GMLAS</a> but adoption has been limited. The Application Schema functionality has been introduced in <a href="../utils/gdal.html">GDAL/OGR</a>, the QGIS plugin builds on top of it. OGR converts the contents of the GML to a relational database. Individual tables from that database are loaded in the QGIS interface.</p>
+<section id="visualize-and-download-observation-data-using-sensorthings-api" class="level2">
+<h2 class="anchored" data-anchor-id="visualize-and-download-observation-data-using-sensorthings-api">Visualize and download observation data using Sensorthings API</h2>
+<p>Soil observation data is best made available through <a href="https://www.ogc.org/standard/sensorthings/">Sensorthings API</a>. Sensorthings API is not a default supported format of QGIS. You need to install the <a href="https://github.com/AirBreak-UIA/SensorThingsAPI_QGIS-plugin">Sensorthings Plugin</a>.</p>
+<p>With the plugin installed, you can add a layer of type Sensortings via <code>Layer &gt; Add layer &gt; Upload layer from remote server</code>. Use for example the <a href="https://iot.comune.fe.it/FROST-Server/v1.1/Locations">service of Comune di Ferrara, Italy</a>. As soon as the sensor locations show on the map, you can select ‘Show location information’ tool from the plugin menu and select a sensor. And view or download the observations at that location.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./img/qgis/sensor-observations.png" class="w-50 border shadow img-fluid figure-img"></p>
+<figcaption>Sensor observations</figcaption>
+</figure>
+</div>
 
 
 </section>
@@ -597,7 +656,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/qgis.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/ows-in-qgis.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -285,8 +285,8 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="step-2-creating-a-database" class="level3">
 <h3 class="anchored" data-anchor-id="step-2-creating-a-database">Step 2: Creating a database</h3>
-<p>To use the previously generated <code>Soil.sql</code>, a database needs to be created. For this example a docker container with a PostgreSQL image (version 12) and the PostGIS extension (version 3.2) is created:</p>
-<pre><code>docker run --name postgis_inspire_soil --network="inspiresoilnetwork" -d -p 5432:5432 -e POSTGRES_PASSWORD=postgres -e POSTGRES_USER=postgres -v /destination/Soil.sql:/ postgis/postgis:12-3.2</code></pre>
+<p>To use the previously generated <code>Soil.sql</code>, a database needs to be created. For this example a docker container with a PostgreSQL image (version 14) and the PostGIS extension (version 3.4) is created:</p>
+<pre><code>docker run --name postgis_inspire_soil --network="inspiresoilnetwork" -d -p 5432:5432 -e POSTGRES_PASSWORD=postgres -e POSTGRES_USER=postgres -v /destination/Soil.sql:/ postgis/postgis:14-3.4</code></pre>
 <blockquote class="blockquote">
 <p><strong>Info:</strong> The SQL DDL file <code>Soil.sql</code> is mounted onto the container by using the previously mentioned docker run parameter <code>-v</code>. This way, the file does not have to be copied onto the container after its creation.</p>
 </blockquote>

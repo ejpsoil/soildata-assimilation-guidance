@@ -38,7 +38,7 @@ In order for the [INSPIRE validator](https://inspire.ec.europa.eu/validator/home
 
 ## QGIS Desktop as a client for INSPIRE data
 
-QGIS can act as a client for WMS, WMTS, WCS, CSW, Sensorthings API, OGC API Records and OGC API Features.
+QGIS can act as a client for WMS, WFS, WCS, CSW, Sensorthings API and OGC API Features. A dedicated recipe about [adding data from data services to qgis](./ows-in-qgis.qmd) is available.
 
 The QGIS data model is based on data layers and has minimalistic support for joins. QGIS is therefore less optimal for rich GML data as used in INSPIRE. There have been initiatives to bring hierarchical data to QGIS, such as [GMLAS](https://plugins.qgis.org/plugins/gml_application_schema_toolbox/) but adoption has been limited. The Application Schema functionality has been introduced in [GDAL/OGR](../utils/gdal.qmd), the QGIS plugin builds on top of it. OGR converts the contents of the GML to a relational database. Individual tables from that database are loaded in the QGIS interface.
 

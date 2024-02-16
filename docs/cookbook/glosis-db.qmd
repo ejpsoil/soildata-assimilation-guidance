@@ -7,7 +7,9 @@ This recipe describes an approach where data is harmonised to a common relationa
 The INSPIRE community has recently started an interesting activity to set up [guidelines on how to share INSPIRE data as a relational database](https://github.com/INSPIRE-MIF/gp-geopackage-encodings). More specifically a database in the [GeoPackage format](http://www.geopackage.org/), which is a specialisation of the [SQLite format](https://www.sqlite.org/). This will result in a series of new good practices on alternative approaches for data harmonization for various INSPIRE themes and use cases. 
 
 Idea behind the activity is that communities around a certain topic come together to develop a common relational model which substantially represents the INSPIRE UML model. This aspect can be validated by providing a mapping document which maps the relational model to the INSPIRE UML or GML model.
-This activity is supported by [a template](https://github.com/INSPIRE-MIF/2017.2/blob/master/template/template.qmd) that communities can use to share their work with the wider INSPIRE community. 
+This activity is supported by [a template](https://github.com/INSPIRE-MIF/2017.2/blob/master/template/template.md) that communities can use to share their work with the wider INSPIRE community. 
+
+In february 2024 the EJPSoil project has published a [gpkg template](https://github.com/ejpsoil/inspire_soil_gpkg_template) based on the INSPIRE Soil data model. This template has been added to the [list of gpkg implementations](https://github.com/INSPIRE-MIF/gp-geopackage-encodings/blob/main/examples/overview.md) of INSPIRE helpdesk.
 
 After an initial effort of defining and describing the alternative model, a typical workflow to publish harmonised data is as follows:
 

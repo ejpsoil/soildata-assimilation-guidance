@@ -32,7 +32,7 @@ docker pull deegree/deegree3-docker:3.5
 ```
 **Specific version** (example)
 ```
-docker pull deegree/deegree3-docker:3.5.3
+docker pull deegree/deegree3-docker:3.5.8
 ```
 > **Info:** All available images of deegree version 3.5.x are built with Apache Tomcat 9.x and OpenJDK 11. Check the [deegree Docker Hub project](https://hub.docker.com/r/deegree/deegree3-docker) for details and other deegree versions available.
 
@@ -52,12 +52,12 @@ docker run --name deegree_inspire_soil --network="inspiresoilnetwork" -d -p 8080
 ```
 or with a **specific version**:
 ```
-docker run --name deegree_inspire_soil --network="inspiresoilnetwork" -d -p 8080:8080 deegree/deegree3-docker:3.5.3
+docker run --name deegree_inspire_soil --network="inspiresoilnetwork" -d -p 8080:8080 deegree/deegree3-docker:3.5.8
 ```
 **Advanced configuration**
 
 ```
-docker run --name deegree_inspire_soil --network="inspiresoilnetwork" -v /path/to/.deegree:/root/.deegree -d -p 8080:8080 deegree/deegree3-docker:3.5.3
+docker run --name deegree_inspire_soil --network="inspiresoilnetwork" -v /path/to/.deegree:/root/.deegree -d -p 8080:8080 deegree/deegree3-docker:3.5.8
 ```
 > **Tip:** Using the docker parameter `-v` (volume), all prior created deegree workspaces that are stored in `/path/to/.deegree` can be accessed.
 
@@ -113,10 +113,10 @@ If run successfully, the SqlFeatureStoreConfigCreator will generate the SQL DDL 
 
 ### Step 2: Creating a database
 
-To use the previously generated `Soil.sql`, a database needs to be created. For this example a docker container with a PostgreSQL image (version 14) and the PostGIS extension (version 3.4) is created:
+To use the previously generated `Soil.sql`, a database needs to be created. For this example a docker container with a PostgreSQL image (version 16) and the PostGIS extension (version 3.4) is created:
 
 ```
-docker run --name postgis_inspire_soil --network="inspiresoilnetwork" -d -p 5432:5432 -e POSTGRES_PASSWORD=postgres -e POSTGRES_USER=postgres -v /destination/Soil.sql:/ postgis/postgis:14-3.4
+docker run --name postgis_inspire_soil --network="inspiresoilnetwork" -d -p 5432:5432 -e POSTGRES_PASSWORD=postgres -e POSTGRES_USER=postgres -v /destination/Soil.sql:/ postgis/postgis:16-3.4
 ```
 > **Info:** The SQL DDL file `Soil.sql` is mounted onto the container by using the previously mentioned docker run parameter `-v`. This way, the file does not have to be copied onto the container after its creation.
 

@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.550">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2022-11-10">
 
-<title>Soil data guidance - Overview Metadata &amp; discovery</title>
+<title>Overview Metadata &amp; discovery – Soil data guidance</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -84,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -131,7 +131,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -195,7 +195,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="minimal">Minimal</h2>
 <p>In a minimal implementation you can describe your dataset as well as your services in a single metadata document. This ‘good practice’ is described in <a href="https://github.com/INSPIRE-MIF/gp-data-service-linking-simplification">https://github.com/INSPIRE-MIF/gp-data-service-linking-simplification</a>. Basic metadata editors exist, of which the most basic is Notepad++. In the Python domain exists the pygeometa and OWSLib projects, which offer capabilities to generate ISO19139 metadata from other formats.</p>
 <p>These metadata documents can be placed in a <a href="https://ioos.github.io/catalog/pages/registry/waf_creation/">Web Accessible Folder</a>. Products exist which are able to ingest documents from such a folder and expose it as a CSW discovery service. Such an ingest point could be installed at a national level, to facilitate the European INSPIRE GeoPortal (which currently only supports ingests via CSW).</p>
-<table class="table">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th>Cookbook</th>
@@ -221,7 +221,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="traditional">Traditional</h2>
 <p>The <a href="https://inspire.ec.europa.eu/id/document/tg/metadata-iso19139">TG metadata</a> (Technical Guidelines metadata) defines 2 types of metadata; documents which describe a dataset which are linked to documents which describe the service via which the datasets are published.</p>
 <p>The <a href="https://inspire.ec.europa.eu/documents/technical-guidance-implementation-inspire-discovery-services-0">TG discovery</a> describes how the metadata documents need to be published as a CSW discovery service. The table below lists some products which can be used to set up such a service. Mind that the TG extends the OGC CSW specification with some specific INSPIRE elements, for identification and multilingualism.</p>
-<table class="table">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th>Cookbook</th>
@@ -257,7 +257,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="experimental">Experimental</h2>
 <p>A good practice exists related to <a href="https://inspire.ec.europa.eu/good-practice/geodcat-ap">Geo-DCAT-ap</a>. It explains how to publish metadata using the Geo-DCAT-ap vocabulary as an additional metadata format. At present the use of ISO19139 is required by all guidelines. However, it is expected that it will soon be possible to offer metadata in a DCAT only. DCAT facilitates records to be discovered via google dataset search (and other search engines and semantic web platforms).</p>
 <p>Currently no ‘good practice’ exists to offer discovery services in alternative protocols then CSW. A good practice to adopt <a href="https://ogcapi.ogc.org/records/">OGC API Records</a> is being prepared. OpenSearch, OData and SPARQL could be alternative discovery service protocols.</p>
-<table class="table">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th>Cookbook</th>
@@ -322,18 +322,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -365,7 +354,47 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/ejpsoil\.github\.io\/soildata-assimilation-guidance\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -400,7 +429,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');

@@ -305,7 +305,7 @@
     "href": "cookbook/ows-in-qgis.html#visualize-and-download-observation-data-using-sensorthings-api",
     "title": "Interact with Spatial data services using QGIS Desktop",
     "section": "Visualize and download observation data using Sensorthings API",
-    "text": "Visualize and download observation data using Sensorthings API\nSoil observation data is best made available through Sensorthings API. Sensorthings API is not a default supported format of QGIS. You need to install the Sensorthings Plugin.\nWith the plugin installed, you can add a layer of type Sensortings via Layer &gt; Add layer &gt; Upload layer from remote server. Use for example the service of Comune di Ferrara, Italy. As soon as the sensor locations show on the map, you can select ‘Show location information’ tool from the plugin menu and select a sensor. And view or download the observations at that location.\n\n\n\nSensor observations"
+    "text": "Visualize and download observation data using Sensorthings API\nSoil observation data is best made available through Sensorthings API. From version 3.26 Sensorthings API is now a default supported format in QGIS. At the moment the documentation is still a bit behind, but expect updates related to sensorthings api soon at QGIS OGC Docs. The sensorthings api data manager configuration panel has a dedicated section, which facilitates to enrich a set of locations or features of interest with observations at those locations. Which you then can use to filter or colorize on the map view."
   },
   {
     "objectID": "cookbook/frost-server.html",

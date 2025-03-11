@@ -67,35 +67,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../style/styles.css">
 </head>
@@ -173,7 +144,8 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#read-more" id="toc-read-more" class="nav-link active" data-scroll-target="#read-more">Read more</a></li>
+  <li><a href="#presentation-at-2023-masterclass" id="toc-presentation-at-2023-masterclass" class="nav-link active" data-scroll-target="#presentation-at-2023-masterclass">Presentation at 2023 masterclass</a></li>
+  <li><a href="#read-more" id="toc-read-more" class="nav-link" data-scroll-target="#read-more">Read more</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/frost-server.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -199,18 +171,24 @@ window.Quarto = {
 </header>
 
 
-<p><a href="https://fraunhoferiosb.github.io/FROST-Server/">FROST</a> is an open source server implementation of <a href="https://www.ogc.org/standards/sensorthings">OGC Sensorthings</a>, a modern data exchange standard for Sensor Data. Because the INSPIRE Soil model is based on <a href="https://www.ogc.org/standards/om">Observations and Measurements</a>, the Sensorthings API can be used to provide sensor download services, with the soil profile and horizons as <code>FeatureOfInterest</code>. Sensorthings API is generally easier to set up for administrators and easier to consume by clients then INSPIRE Soil data in GML. INSPIRE has recently adopted a <a href="https://inspire.ec.europa.eu/good-practice/ogc-sensorthings-api-inspire-download-service">good practice on Download services based on SensorThings API</a>.</p>
-<p>Kathi Schleidt has prepared a <a href="https://datacoveeu.github.io/API4INSPIRE/dissemination/Workshop-2020-11-19.html">workshop on inspire data in sensorthings API</a>. Also have a look at her sensor presentation in the <a href="https://wur.yuja.com/V/Video?v=184380&amp;node=785951&amp;a=1565884354&amp;autoplay=1">2022 edition of the training</a>. After the 2022 training Kathy together with colleagues from Fraunhofer IOSB has put together a <code>SoilThings</code> variant of STA. The experiment has proven to be a most interesting use case, it has shown where flexibility has to be added in the STA model (these changes will be integrated in the upcoming 2.0 version of the standard). The cool thing about this API is that it allows you to do queries like the following: <code>give me all plots that contain a profile that contains a horizon on which pH H2O is measured</code>; while the query syntax can be a bit daunting, the other existing technologies for provision (WFS and the new OGC API) would require 5 separate requests to do this. Links:</p>
+<p><a href="https://fraunhoferiosb.github.io/FROST-Server/">FROST</a> is an open source server implementation of <a href="https://www.ogc.org/standards/sensorthings">OGC Sensorthings API</a> (STA), a modern data exchange standard for Sensor Data. Because the INSPIRE Soil model is based on <a href="https://www.ogc.org/standards/om">Observations and Measurements</a>, the Sensorthings API can be used to provide sensor download services, with the soil profile and horizons as <code>FeatureOfInterest</code>. Sensorthings API is generally easier to set up for administrators and easier to consume by clients then INSPIRE Soil data in GML. INSPIRE has adopted a <a href="https://github.com/INSPIRE-MIF/gp-ogc-sensorthings-api">good practice on Download services based on SensorThings API</a>.</p>
+<p>Kathi Schleidt has prepared a <a href="https://datacoveeu.github.io/API4INSPIRE/dissemination/Workshop-2020-11-19.html">workshop on inspire data in sensorthings API</a>. Also have a look at her sensor presentation in the <a href="https://wur.yuja.com/V/Video?v=184380&amp;node=785951&amp;a=1565884354&amp;autoplay=1">2022 edition of the training</a>. After the 2022 training Kathy, together with colleagues from Fraunhofer IOSB, have put together a <code>SoilThings</code> implementaiton in STA. The experiment has proven to be an interesting use case, it has shown where flexibility has to be added in the STA model (these changes have been integrated in the recent 2.0 version of the O&amp;M standard). The cool thing about this API is that it allows you to do queries like the following: <code>give me all plots that contain a profile that contains a horizon on which pH H2O is measured</code>; while the query syntax can be a bit daunting, the other existing technologies for provision (WFS and the new OGC API) would require 5 separate requests to do this. Links:</p>
 <ul>
-<li><p>Base SoilThings API: https://ogc-demo.k8s.ilt-dmz.iosb.fraunhofer.de/FROST-SoilThings/v1.1/</p></li>
-<li><p>Query on all plots that contain a profile that contains a horizon on which pH H2O is measured, including the measurements:</p>
-<p>https://ogc-demo.k8s.ilt-dmz.iosb.fraunhofer.de/FROST-SoilThings/v1.1/SoilPlots?<span class="math inline">\(count=true&amp;\)</span>select=name&amp;<span class="math inline">\(filter=ObservedProfile/IsDescribedByHorizon/Datastreams/ObservedProperty/name%20eq%20%27pH%20H2O%27&amp;\)</span>expand=ObservedProfile(<span class="math inline">\(select=name;\)</span>expand=IsDescribedByHorizon(<span class="math inline">\(select=name;\)</span>expand=Datastreams(<span class="math inline">\(select=name;\)</span>filter=ObservedProperty/name%20eq%20%27pH%20H2O%27;<span class="math inline">\(expand=ObservedProperty(\)</span>select=name),%20Observations)))</p></li>
+<li><a href="https://ogc-demo.k8s.ilt-dmz.iosb.fraunhofer.de/FROST-SoilThings/v1.1/">Base SoilThings API</a></li>
+<li>Query on all plots that contain a profile that contains a horizon on which pH H2O is measured, including the measurements:</li>
 </ul>
-<section id="read-more" class="level2">
-<h2 class="anchored" data-anchor-id="read-more">Read more</h2>
+<pre><code>https://ogc-demo.k8s.ilt-dmz.iosb.fraunhofer.de/FROST-SoilThings/v1.1/SoilPlots?
+    $count=true&amp;$select=name&amp;$filter=ObservedProfile/IsDescribedByHorizon/Datastreams/ObservedProperty/name%20eq%20%27pH%20H2O%27&amp;
+    $expand=ObservedProfile($select=name;$expand=IsDescribedByHorizon($select=name;$expand=Datastreams(
+    $select=name;$filter=ObservedProperty/name%20eq%20%27pH%20H2O%27;$expand=ObservedProperty($select=name),%20Observations))) </code></pre>
+<section id="presentation-at-2023-masterclass" class="level2">
+<h2 class="anchored" data-anchor-id="presentation-at-2023-masterclass">Presentation at 2023 masterclass</h2>
 <p>At masterclass edition 2023 Kathi Schleidt and Hylke van der Schaaf presented Sensorthings API using Frost server.</p>
 <iframe title="Sensorthings API using Frost server" width="560" height="315" src="https://wur.yuja.com/v/ejp-sda-sta?preload=false" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" loading="lazy">
 </iframe>
+</section>
+<section id="read-more" class="level2">
+<h2 class="anchored" data-anchor-id="read-more">Read more</h2>
 <ul>
 <li><a href="https://github.com/INSPIRE-MIF/gp-ogc-sensorthings-api">Good practice Sensorthings</a></li>
 <li><a href="https://github.com/FraunhoferIOSB/FROST-Server">GitHub repository</a></li>

@@ -248,13 +248,13 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="visualize-and-download-observation-data-using-sensorthings-api" class="level2">
 <h2 class="anchored" data-anchor-id="visualize-and-download-observation-data-using-sensorthings-api">Visualize and download observation data using Sensorthings API</h2>
-<p>Soil observation data is best made available through <a href="https://www.ogc.org/standard/sensorthings/">Sensorthings API</a>. From version 3.26 Sensorthings API is now a default supported format in <a href="https://qgis.org">QGIS</a>. At the moment the documentation is still a bit behind, but expect updates related to sensorthings api soon at <a href="https://docs.qgis.org/testing/en/docs/user_manual/working_with_ogc/ogc_client_support.html">QGIS OGC Docs</a>.</p>
+<p>Soil observation data is best made available through <a href="https://www.ogc.org/standard/sensorthings/">Sensorthings API</a>. From version 3.36 Sensorthings API is now a default supported format in <a href="https://qgis.org">QGIS</a>. At the moment the documentation is still limited, but expect updates related to SensorThings API soon at <a href="https://docs.qgis.org/testing/en/docs/user_manual/working_with_ogc/ogc_client_support.html">QGIS OGC Docs</a>.</p>
 <p><strong>This experiment has been set up in QGIS 3.42, due to ongoing development, the interfaces will likely change in upcoming versions.</strong></p>
-<p>Let’s visualize some observation from the experimental <a href="https://ogc-demo.k8s.ilt-dmz.iosb.fraunhofer.de/FROST-SoilThings/v1.1/">SoilThings API</a>, by Kathi Schleidt and Hylke van der Schaaf</p>
+<p>Let’s visualize some observations from the experimental <a href="https://ogc-demo.k8s.ilt-dmz.iosb.fraunhofer.de/FROST-SoilThings/v1.1/">SoilThings API</a>, by Kathi Schleidt and Hylke van der Schaaf</p>
 <p>In the sources sidepanel, notice the option to add a Sensorthings API endpoint.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="./img/qgis/qgis-sta-sidebar.png" class="w-50 border shadow img-fluid figure-img"></p>
+<p><img src="./img/qgis/qgis-sta-sidebar.png" class="w-25 border shadow img-fluid figure-img"></p>
 <figcaption>STA in QGIS sidebar</figcaption>
 </figure>
 </div>
@@ -268,22 +268,23 @@ ul.task-list li input[type="checkbox"] {
 <p>Collapse the new service and notice a number of attribute and geometry tables which can be added to the Map View.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="./img/qgis/qgis-sta-foi.png" class="w-50 border shadow img-fluid figure-img"></p>
+<p><img src="./img/qgis/qgis-sta-foi.png" class="w-25 border shadow img-fluid figure-img"></p>
 <figcaption>STA structure</figcaption>
 </figure>
 </div>
-<p>Add the <code>features of interest</code> to the map view. Open the attribute table (or select info from a single feature) and notice the information is quite limited. QGIS STA allows to expand the results of a single table with results from other tables. Double click the layername in the Table of Contents and select the data source manager (source). Notice the ‘Expansions’ section and populate it with ‘Observations’, ‘Datastreams’, and ‘Observed properties’.</p>
+<p>Add the <code>features of interest</code> to the map view. Open the attribute table (or select info from a single feature) and notice the information is quite limited. QGIS STA allows to expand the results of a single table with results from other tables.</p>
+<p>Double click the layername in the Table of Contents and select the data source manager (source). Notice the ‘Expansions’ section and populate it with ‘Observations’, ‘Datastreams’, and ‘Observed properties’.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="./img/qgis/expand-foi.png" class="w-75 border shadow img-fluid figure-img"></p>
 <figcaption>Expand feature of Interest</figcaption>
 </figure>
 </div>
-<p>To prevent low performance, keep the pagination numbers low. Also consider to add a filter on the Observed properties to limit results to a single soil property.</p>
+<p>To prevent low performance, keep the pagination numbers (Limit) low. Also consider to add a filter on the Observed property to limit results to a single soil property.</p>
 <pre><code>definition eq 'https://www.milieuinfo.be/confluence/x/S5vMC'</code></pre>
-<p>Finally we want to colorise the map view based on the observation result. Double click the layername in TOC and select the symbology tab. Select a Graduated pattern based on an expression:</p>
+<p>Finally we want to colorise the map view based on the observation results. Double click the layername in TOC and select the symbology tab. Select a Graduated pattern based on an expression:</p>
 <pre><code>try(to_real("Observation_result"),Null)</code></pre>
-<p>The Observation_result field is a string field. For that reason we add to_real to force it to a number (and try() if conversion fails).</p>
+<p>The Observation_result field is a string field. For that reason we add to_real() to force it to a number (and try() if conversion fails).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="./img/qgis/qgis-sta-styling.png" class="w-75 border shadow img-fluid figure-img"></p>

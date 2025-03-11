@@ -52,10 +52,9 @@ Exporting a grid for a region of interest works similar as WFS.
 
 ## Visualize and download observation data using Sensorthings API
 
-Soil observation data is best made available through [Sensorthings API](https://www.ogc.org/standard/sensorthings/). Sensorthings API is not a default supported format of QGIS. You need to install the [Sensorthings Plugin](https://github.com/AirBreak-UIA/SensorThingsAPI_QGIS-plugin).
+Soil observation data is best made available through [Sensorthings API](https://www.ogc.org/standard/sensorthings/). From version 3.26 Sensorthings API is now a default supported format in [QGIS](https://qgis.org).
+At the moment the documentation is still a bit behind, but expect updates related to sensorthings api soon at [QGIS OGC Docs](https://docs.qgis.org/testing/en/docs/user_manual/working_with_ogc/ogc_client_support.html). 
+The sensorthings api data manager configuration panel has a dedicated section, which facilitates to enrich a set of locations or features of interest with observations at those locations. Which you then can use to filter
+or colorize on the map view.
 
-With the plugin installed, you can add a layer of type Sensortings via `Layer > Add layer > Upload layer from remote server`. Use for example the [service of 
-Comune di Ferrara, Italy](https://iot.comune.fe.it/FROST-Server/v1.1/Locations). As soon as the sensor locations show on the map, you can select 'Show location information' tool from the plugin menu and select a sensor. And view or download the observations at that location.
-
-![Sensor observations](./img/qgis/sensor-observations.png){.w-50 .border .shadow}
 

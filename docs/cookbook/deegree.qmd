@@ -18,7 +18,7 @@ The second approach is easy to setup and efficient when users request full datas
 
 ---
 
-![](./img/deegree_logo.svg) 
+![](./img/deegree.png) 
 
 # Get started with deegree
 

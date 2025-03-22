@@ -207,7 +207,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>The second approach is easy to setup and efficient when users request full datasets. However, it may still be problematic if users use advanced filters to select subsets of the chosen dataset.</p>
 <hr>
-<p><img src="./img/deegree_logo.svg" class="img-fluid"></p>
+<p><img src="./img/deegree.png" class="img-fluid"></p>
 <section id="get-started-with-deegree" class="level1">
 <h1>Get started with deegree</h1>
 <p>Start a deegree instance locally using the Docker Hub image:</p>
@@ -216,7 +216,7 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Latest minor version</strong></p>
 <pre><code>docker pull deegree/deegree3-docker:3.5</code></pre>
 <p><strong>Specific version</strong> (example)</p>
-<pre><code>docker pull deegree/deegree3-docker:3.5.8</code></pre>
+<pre><code>docker pull deegree/deegree3-docker:3.5.10</code></pre>
 <blockquote class="blockquote">
 <p><strong>Info:</strong> All available images of deegree version 3.5.x are built with Apache Tomcat 9.x and OpenJDK 11. Check the <a href="https://hub.docker.com/r/deegree/deegree3-docker">deegree Docker Hub project</a> for details and other deegree versions available.</p>
 </blockquote>
@@ -234,9 +234,9 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Simple configuration</strong> (recommended for beginners)</p>
 <pre><code>docker run --name deegree_inspire_soil --network="inspiresoilnetwork" -d -p 8080:8080 deegree/deegree3-docker</code></pre>
 <p>or with a <strong>specific version</strong>:</p>
-<pre><code>docker run --name deegree_inspire_soil --network="inspiresoilnetwork" -d -p 8080:8080 deegree/deegree3-docker:3.5.8</code></pre>
+<pre><code>docker run --name deegree_inspire_soil --network="inspiresoilnetwork" -d -p 8080:8080 deegree/deegree3-docker:3.5.10</code></pre>
 <p><strong>Advanced configuration</strong></p>
-<pre><code>docker run --name deegree_inspire_soil --network="inspiresoilnetwork" -v /path/to/.deegree:/root/.deegree -d -p 8080:8080 deegree/deegree3-docker:3.5.8</code></pre>
+<pre><code>docker run --name deegree_inspire_soil --network="inspiresoilnetwork" -v /path/to/.deegree:/root/.deegree -d -p 8080:8080 deegree/deegree3-docker:3.5.10</code></pre>
 <blockquote class="blockquote">
 <p><strong>Tip:</strong> Using the docker parameter <code>-v</code> (volume), all prior created deegree workspaces that are stored in <code>/path/to/.deegree</code> can be accessed.</p>
 </blockquote>
@@ -399,7 +399,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Lastly, QGIS or any other GIS can be connected the WFS resource. Multiple layers should be visible. Import the layer with the name <code>SoilBody</code> to the layer panel. The visualisation should be similar to the following screenshot:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="./img/GmlLoaderOutputVisualisation.png" class="img-fluid figure-img"></p>
+<p><img src="./img/GmlLoaderOutputVisualisation_shadow.png" class="img-fluid figure-img"></p>
 <figcaption>Visualisation of the deegree WFS data in QGIS</figcaption>
 </figure>
 </div>
@@ -423,6 +423,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>Website: <a href="http://www.deegree.org/">http://www.deegree.org/</a></li>
 <li>Documentation: <a href="https://download.deegree.org/documentation/current/html/">https://download.deegree.org/documentation/current/html/</a></li>
+<li>Quickstart (deegree INSPIRE Workshop): <a href="https://github.com/lat-lon/deegree-workshop">https://github.com/lat-lon/deegree-workshop</a></li>
 <li>Download: <a href="https://www.deegree.org/download/">https://www.deegree.org/download/</a></li>
 <li>Docker: <a href="https://hub.docker.com/r/deegree/deegree3-docker/">https://hub.docker.com/r/deegree/deegree3-docker/</a></li>
 <li>INSPIRE Data Specification on Soil: <a href="https://inspire.ec.europa.eu/Themes/127/2892">https://inspire.ec.europa.eu/Themes/127/2892</a></li>

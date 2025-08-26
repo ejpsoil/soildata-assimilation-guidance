@@ -7,7 +7,7 @@ website:
   repo-actions: [edit, issue]
   repo-subdir: docs
   navbar:
-    logo: https://ejpsoil.eu/fileadmin/projects/ejpsoil/EJP_Soil_logo_cmyk-h100.png
+    logo: https://avatars.githubusercontent.com/u/121284180?s=200&v=4
     logo-href: https://ejpsoil.eu
     logo-alt: EJPSoil website
     title: false

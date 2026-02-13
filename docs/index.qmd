@@ -30,7 +30,7 @@ The process of assimilation also aims to capture additional aspects, such as fin
 
 We've labeled each of the articles as to which step in the workflow they apply.
 
-![Soil information workflow](https://www.isric.org/sites/default/files/Soil%20information%20workflow_circular_notext.jpg)
+![Soil information workflow](https://isric.euwest01.umbraco.io//media/llqfsdlo/soil-information-workflow-1-copy.jpg?quality=75&rxy=0.502%2C0.5339638484995801)
 
 This wiki lists a series of options for publishing data according to the Technical Guidelines and/or the Good Practices dedicated to use cases from the Soil domain. For each option recipes on various technologies are provided. The practices are categorized at 3 levels:
 

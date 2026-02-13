@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -68,14 +68,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="../">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-badfea7620e6254af941214fdd9b8bfc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-abe27cf03e924cf59ef884a22787a831.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -116,7 +117,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="https://ejpsoil.eu" class="navbar-brand navbar-brand-logo">
-    <img src="https://avatars.githubusercontent.com/u/121284180?s=200&amp;v=4" alt="EJPSoil website" class="navbar-logo">
+    <img src="https://avatars.githubusercontent.com/u/121284180?s=200&amp;v=4" alt="EJPSoil website" class="navbar-logo light-content">
+    <img src="https://avatars.githubusercontent.com/u/121284180?s=200&amp;v=4" alt="EJPSoil website" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -236,28 +238,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="the-yarrrml-syntax">The YARRRML syntax</h2>
 <p>The RML tools apply data transformations according to a set of rules recorded in a YAML file. This file must respect a specific syntax, named <a href="https://rml.io/yarrrml/spec/">YARRRML</a>. This specification defines a number of sections (or environments) in the YAML file that lay out the structure of the resulting triples.</p>
 <p>The first of these sections is named <code>prefixes</code> and provides the space for the definition of URI abbreviations, in all similar to the Turtle syntax. Each abbreviation is encoded as a list item and can be used in the reminder of the YARRRML as it would be in a Turtle knowledge graph.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">prefixes</span><span class="kw">:</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">prefixes</span><span class="kw">:</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="at"> </span><span class="fu">rdf</span><span class="kw">:</span><span class="at"> http://www.w3.org/1999/02/22-rdf-syntax-ns</span><span class="co">#</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="at"> </span><span class="fu">xsd</span><span class="kw">:</span><span class="at"> http://www.w3.org/2001/XMLSchema</span><span class="co">#</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="at"> </span><span class="fu">geo</span><span class="kw">:</span><span class="at"> http://www.opengis.net/ont/geosparql</span><span class="co">#</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="at"> </span><span class="fu">geo</span><span class="kw">:</span><span class="at"> http://www.opengis.net/ont/geosparql</span><span class="co">#</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Next comes the <code>mappings</code> section, where the actual transformations are encoded. This section is to be populated with sub-sections, one for each individual subject class (or type) necessary in the output RDF. For instance, if the transformation must produce triples for profiles and layers, then a sub-suction for each is necessary. The name of these subject sub-sections is arbitrarily chosen by the user.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mappings</span><span class="kw">:</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mappings</span><span class="kw">:</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">profile</span><span class="kw">:</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">layer</span><span class="kw">:</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">layer</span><span class="kw">:</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>For each subject class sub-section at least one data source needs to be specified in the <code>sources</code> section. The source can be declared within square brackets (i.e.&nbsp;a YAML collection), providing a path to a file followed by a tilde and then a type. The sources section can be more intricate, as YARRRML supports <a href="https://rml.io/yarrrml/spec/#data-sources">a wide range of different data sources</a>, including flat tables, databases and Web APIs.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mappings</span><span class="kw">:</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mappings</span><span class="kw">:</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">profile</span><span class="kw">:</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">sources</span><span class="kw">:</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="kw">[</span><span class="st">'SoilData.csv~csv'</span><span class="kw">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="kw">[</span><span class="st">'SoilData.csv~csv'</span><span class="kw">]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>The following sub-section of the class declares the subject and has the simple name of <code>s</code>. Its purpose is to define the URI structure for the instances of the class. In principle this is also the first element that makes reference to the contents of the source file. In the case of CSV, as in this example, the column names are used. They are invoked using the dollar character (<code>$</code>), with the column name within parenthesis. The practical result is the generation of an individual element (subject in this case) for each distinct value found in the source column.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">profile</span><span class="kw">:</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">profile</span><span class="kw">:</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">sources</span><span class="kw">:</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="kw">[</span><span class="st">'SoilData.csv~csv'</span><span class="kw">]</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">s</span><span class="kw">:</span><span class="at"> http://my.soil.org</span><span class="co">#$(profile_id)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">s</span><span class="kw">:</span><span class="at"> http://my.soil.org</span><span class="co">#$(profile_id)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>With the subject defined, triples can be completed with predicates and objects in sub-section <code>po</code>. This section is itself composed by a list, whose items comprise a pair: predicate (item <code>p</code>) and object (item <code>o</code>). The predicate is encoded as a URI in a similar way to the subject, using abbreviations if necessary. As for the object it can be decomposed further into a <code>value</code> and a <code>datatype</code> to accommodate literals.</p>
 <p>The example below creates triples for the layer class subject, using the <code>layer_id</code> column in the source to generate subject URIs. The source column <code>layer_order</code> is used to complete triples declaring the order of a layer within a profile.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">prefixes</span><span class="kw">:</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">prefixes</span><span class="kw">:</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="at"> </span><span class="fu">xsd</span><span class="kw">:</span><span class="at"> http://www.w3.org/2001/XMLSchema</span><span class="co">#</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="at"> </span><span class="fu">iso28258</span><span class="kw">:</span><span class="at"> http://w3id.org/glosis/model/iso28258/2013</span><span class="co">#</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -270,10 +272,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">p</span><span class="kw">:</span><span class="at"> iso28258:ProfileElement.order</span></span>
 <span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">o</span><span class="kw">:</span></span>
 <span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="at">           </span><span class="fu">value</span><span class="kw">:</span><span class="at"> </span><span class="st">"$(layer_order)"</span></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="at">           </span><span class="fu">datatype</span><span class="kw">:</span><span class="at"> xsd:integer</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="at">           </span><span class="fu">datatype</span><span class="kw">:</span><span class="at"> xsd:integer</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>The encoding of the predicates and objects list can be shortened with collections. Instead of discriminating value and datatype, they can be expressed as elements of a collection. This formulation is useful when the object is itself a URI. Note how in the example below (for the layer class) the tilde is used again, to indicate the object type.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">po</span><span class="kw">:</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="kw">[</span><span class="at">iso28258:Profile.elementOfProfile</span><span class="kw">,</span><span class="at"> http://my.soil.org</span><span class="co">#$(layer_id)~iri]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">po</span><span class="kw">:</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="kw">[</span><span class="at">iso28258:Profile.elementOfProfile</span><span class="kw">,</span><span class="at"> http://my.soil.org</span><span class="co">#$(layer_id)~iri]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This was just a brief introduction to the YARRRML syntax. It goes far deeper, even allowing for some functional programming. While the guidelines in this document make enough of a start to automated RDF generation, the <a href="https://w3id.org/yarrrml">documentation</a> is indispensable to take full advantage of the RML tool set.</p>
 </section>
 <section id="matey" class="level2">
@@ -316,7 +318,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="profiles">Profiles</h3>
 <p>The simplest place to start is with the profiles. There are three essential elements to generate for each profile: - A new URI for the profile; - The declaration of the new profile as an instance of the class <code>GL_Profile</code>; - The association with the respective site.</p>
 <p>Below are the contents of the file <a href="rml/profile.yarrrml">profile.yarrrml</a> that encodes this transformation. Note how the URIs of both the profile and the site are created using the prefixes.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">prefixes</span><span class="kw">:</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">prefixes</span><span class="kw">:</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="at"> </span><span class="fu">wosis_prf</span><span class="kw">:</span><span class="at"> http://wosis.isric.org/profile</span><span class="co">#  </span></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="at"> </span><span class="fu">wosis_sit</span><span class="kw">:</span><span class="at"> http://wosis.isric.org/site</span><span class="co">#</span></span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="at"> </span><span class="fu">glosis_pr</span><span class="kw">:</span><span class="at"> http://w3id.org/glosis/model/profile</span><span class="co"># </span></span>
@@ -329,7 +331,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">s</span><span class="kw">:</span><span class="at"> wosis_prf:$(profile_id)</span></span>
 <span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">po</span><span class="kw">:</span></span>
 <span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="kw">[</span><span class="at">a</span><span class="kw">,</span><span class="at"> glosis_pr:GL_Profile</span><span class="kw">]</span></span>
-<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="kw">[</span><span class="at">iso28258:Profile.profileSite</span><span class="kw">,</span><span class="at"> wosis_sit:$(site_id)~iri</span><span class="kw">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="kw">[</span><span class="at">iso28258:Profile.profileSite</span><span class="kw">,</span><span class="at"> wosis_sit:$(site_id)~iri</span><span class="kw">]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>To perform the actual transformation you must first apply <code>yarrrml-parser</code> to create the RML transformation file and then use <code>rmlmapper</code> to obtain the actual knowledge graph. By default <code>rmlmapper</code> creates a Turtle file that is printed to the standard output (STDOUT). You can use the parameters <code>-o</code> to redirect output to a text file and <code>-s</code> to select an alternative serialisation syntax.</p>
 <pre><code>yarrrml-parser -i profile.yarrrml -o profile.rml.ttl
 rmlmapper -s turtle -m profile.rml.ttl</code></pre>
@@ -338,7 +340,7 @@ rmlmapper -s turtle -m profile.rml.ttl</code></pre>
 <h3 class="anchored" data-anchor-id="sites">Sites</h3>
 <p>Sites are the spatial features in the knowledge graph, therefore they require the creation of appropriate GeoSPARQL instances. Three new elements must be addressed in this transformation: - Declaration of the site as an instance of the class <code>geo:Feature</code>; - Creation of a <code>geo:Geometry</code> instance to host the actual geo-spatial information; - A literal of the type <code>geo:wktLiteral</code> or <code>geo:gmlLiteral</code> to encode the geometry.</p>
 <p>The file <a href="rml/site.yarrrml">site.yarrrml</a> achieves this transformation. Its contents are reproduced below:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">prefixes</span><span class="kw">:</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">prefixes</span><span class="kw">:</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="at"> </span><span class="fu">geo</span><span class="kw">:</span><span class="at"> http://www.opengis.net/ont/geosparql</span><span class="co">#</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="at"> </span><span class="fu">glosis_sp</span><span class="kw">:</span><span class="at"> http://w3id.org/glosis/model/siteplot</span><span class="co"># </span></span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="at"> </span><span class="fu">wosis_sit</span><span class="kw">:</span><span class="at"> http://wosis.isric.org/site</span><span class="co">#</span></span>
@@ -363,7 +365,7 @@ rmlmapper -s turtle -m profile.rml.ttl</code></pre>
 <span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">p</span><span class="kw">:</span><span class="at"> geo:asWKT</span></span>
 <span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">o</span><span class="kw">:</span></span>
 <span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a><span class="at">           </span><span class="fu">value</span><span class="kw">:</span><span class="at"> </span><span class="st">"POINT($(lon) $(lat))"</span></span>
-<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a><span class="at">           </span><span class="fu">datatype</span><span class="kw">:</span><span class="at"> geo:wktLiteral</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a><span class="at">           </span><span class="fu">datatype</span><span class="kw">:</span><span class="at"> geo:wktLiteral</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This example also shows the inclusion of two different classes in the same transformation. Note how the Feature is associated with the geometry using the <code>geo:hasGeometry</code> object property. Also important is the creation of the WKT literal, as it requires a verbose declaration of the object to make the type explicit.</p>
 </section>
 <section id="layers" class="level3">
@@ -446,13 +448,14 @@ rmlmapper -s turtle -m profile.rml.ttl</code></pre>
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,14 +34,15 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-badfea7620e6254af941214fdd9b8bfc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-abe27cf03e924cf59ef884a22787a831.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -82,7 +83,8 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="https://ejpsoil.eu" class="navbar-brand navbar-brand-logo">
-    <img src="https://avatars.githubusercontent.com/u/121284180?s=200&amp;v=4" alt="EJPSoil website" class="navbar-logo">
+    <img src="https://avatars.githubusercontent.com/u/121284180?s=200&amp;v=4" alt="EJPSoil website" class="navbar-logo light-content">
+    <img src="https://avatars.githubusercontent.com/u/121284180?s=200&amp;v=4" alt="EJPSoil website" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -150,8 +152,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#upload-your-data-to-zenodo" id="toc-upload-your-data-to-zenodo" class="nav-link active" data-scroll-target="#upload-your-data-to-zenodo">Upload your data to Zenodo</a></li>
   <li><a href="#contact-information" id="toc-contact-information" class="nav-link" data-scroll-target="#contact-information">Contact information</a></li>
   <li><a href="#datacite-metadata-schema" id="toc-datacite-metadata-schema" class="nav-link" data-scroll-target="#datacite-metadata-schema">DataCite metadata schema</a></li>
-  <li><a href="#datacite-and-inspire" id="toc-datacite-and-inspire" class="nav-link" data-scroll-target="#datacite-and-inspire">DataCite and INSPIRE</a></li>
-  <li><a href="#inspire-atom-downloadservice" id="toc-inspire-atom-downloadservice" class="nav-link" data-scroll-target="#inspire-atom-downloadservice">INSPIRE Atom downloadservice</a></li>
+  <li><a href="#link-record-to-a-project" id="toc-link-record-to-a-project" class="nav-link" data-scroll-target="#link-record-to-a-project">Link record to a project</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/edit/main/docs/cookbook/zenodo.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ejpsoil/soildata-assimilation-guidance/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -189,8 +190,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This recipe proposes an approach to use <a href="https://zenodo.org">Zenodo</a> to publish a dataset (or other resources, such as research software, documents, video, etc). Some suggestions are made to increase the value of the Zenodo publication (by suggesting some conventions from the <a href="https://github.com/INSPIRE-MIF/technical-guidelines/blob/main/metadata/metadata-iso19139/metadata-iso19139.adoc">INSPIRE Technical Guidelines</a>). Zenodo is a generic repository to publish resources related to scientific work and is part of the European OpenAIRE program and operated by CERN. As part of the upload process some metadata is provided and a persistent identifier (DOI) is created. Zenodo resources are clustered in communities. You can join an existing community or start one. Community moderators (dis)allow contributions to a community.</p>
-<p>The procedure below is also relevant for other scientific repositories, such as <a href="https://dataverse.org">Dataverse</a>, <a href="https://osf.io">Open Science Foundation</a>, <a href="https://eosc-portal.eu/">European Open Science Cloud</a> or <a href="https://search.dataone.org/data">DataOne</a>.</p>
+<p>This recipe proposes an approach to use <a href="https://zenodo.org">Zenodo</a> to publish a dataset (or other resources, such as research software, documents, video, etc). Some suggestions are made to increase the value of the Zenodo publication (by suggesting some conventions from the <a href="https://github.com/INSPIRE-MIF/technical-guidelines/blob/main/metadata/metadata-iso19139/metadata-iso19139.adoc">INSPIRE Technical Guidelines</a>). Zenodo is a generic repository to publish resources related to scientific work and is part of the European OpenAIRE program and operated by CERN. As part of the upload process some metadata is provided and a persistent identifier (DOI) is created. Zenodo resources are clustered in communities. You can join an existing community or start one. Community moderators review and (dis)allow contributions to a community.</p>
+<p>The procedure below is also relevant for other scientific repositories, such as <a href="https://dataverse.org">Dataverse</a>, <a href="https://osf.io">Open Science Foundation</a>, <a href="https://Pangaea.de">Pangaea.de</a> or national academic repositories (<a href="https://entrepot.recherche.data.gouv.fr/">France</a>, <a href="https://dataverse.nl">Netherlands</a>).</p>
 <section id="upload-your-data-to-zenodo" class="level2">
 <h2 class="anchored" data-anchor-id="upload-your-data-to-zenodo">Upload your data to Zenodo</h2>
 <p>After (registering and) logging in you can select the upload resource option.</p>
@@ -214,78 +215,11 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="datacite-metadata-schema" class="level2">
 <h2 class="anchored" data-anchor-id="datacite-metadata-schema">DataCite metadata schema</h2>
-<p>Zenodo, like many scientific repositories, adopts the <a href="https://schema.datacite.org/">DataCite metadata schema</a>. A common mechanism to capture additional properties, which are not provided by the schema, is to select keywords from selected vocabularies. In Zenodo, the option to add keywords from vocabularies is available in the subject area at the bottom of the metadata form. Each subject is defined by a label and a URI. The table below suggests a number of subjects to be added, these subjects are derived from common conventions, such as the <a href="https://github.com/INSPIRE-MIF/technical-guidelines/blob/main/metadata/metadata-iso19139/metadata-iso19139.adoc#keywords-for-spatial-data-themes">INSPIRE technical guidelines</a>.</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Requirement</th>
-<th>Thesaurus</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Topic category</td>
-<td><a href="https://inspire.ec.europa.eu/metadata-codelist/TopicCategory">TopicCategory</a></td>
-<td><a href="https://inspire.ec.europa.eu/metadata-codelist/TopicCategory/geoscientificInformation">geoscientific Information</a></td>
-</tr>
-<tr class="even">
-<td>Conditions applying to access and use</td>
-<td><a href="https://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse">ConditionsApplyingToAccessAndUse</a></td>
-<td><a href="https://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse/noConditionsApply">no Conditions Apply</a></td>
-</tr>
-<tr class="odd">
-<td>Geographic bounding box</td>
-<td><a href="http://geonames.org">GeoNames</a></td>
-<td><a href="https://www.geonames.org/3175395/italian-republic.html">Italy</a></td>
-</tr>
-<tr class="even">
-<td>INSPIRE Theme</td>
-<td><a href="https://inspire.ec.europa.eu/theme">Theme register</a></td>
-<td><a href="https://inspire.ec.europa.eu/theme/so">Soil</a></td>
-</tr>
-<tr class="odd">
-<td>Priority dataset</td>
-<td><a href="https://inspire.ec.europa.eu/metadata-codelist/PriorityDataset">Priority dataset</a></td>
-<td><a href="http://inspire.ec.europa.eu/metadata-codelist/PriorityDataset/dir-2008-56">Directive 2008/56/EC</a></td>
-</tr>
-<tr class="even">
-<td>Degree of conformity</td>
-<td><a href="https://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity">Degree of conformity</a></td>
-<td><a href="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notEvaluated">Not evaluated</a></td>
-</tr>
-<tr class="odd">
-<td>IACS Data</td>
-<td><a href="https://inspire.ec.europa.eu/metadata-codelist/IACSData">IACS Data</a></td>
-<td><a href="https://inspire.ec.europa.eu/metadata-codelist/IACSData/lpis">lpis</a></td>
-</tr>
-<tr class="even">
-<td>Spatial Data Service Type</td>
-<td><a href="https://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType">Spatial Data Service Type</a></td>
-<td><a href="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view">View service</a></td>
-</tr>
-<tr class="odd">
-<td>Spatial Scope</td>
-<td><a href="https://inspire.ec.europa.eu/metadata-codelist/SpatialScope">Spatial Scope</a></td>
-<td><a href="http://inspire.ec.europa.eu/metadata-codelist/SpatialScope/regional">Regional</a></td>
-</tr>
-</tbody>
-</table>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./img/zenodo-subject.png" class="img-fluid figure-img"></p>
-<figcaption>subject</figcaption>
-</figure>
-</div>
+<p>Zenodo, like many scientific repositories, adopts the <a href="https://schema.datacite.org/">DataCite metadata schema</a>. A common mechanism to capture additional properties, which are not provided by the schema, is to select keywords from selected vocabularies. In Zenodo, the option to add keywords from vocabularies is available in the subject area at the bottom of the metadata form.</p>
 </section>
-<section id="datacite-and-inspire" class="level2">
-<h2 class="anchored" data-anchor-id="datacite-and-inspire">DataCite and INSPIRE</h2>
-<p>The INSPIRE community currently does not provide a good practice to use the Datacite metadata schema. A technical component, such as <a href="../cookbook/pygeometa.html">pygeometa</a>, is required to transform DataCite metadata to the supported formats. Or a second metadata document needs to be provided which matches the technical guidelines of INSPIRE.</p>
-<p>Clement Lattelais has prepared a <a href="../cookbook/md-schema-comparison.html">comparison tool</a> on how the metadata schemes of various repositories (DataVerse, Zenodo, Cordis, ..) relate to the INSPIRE Metadata Guidelines. This tool is relevant to evaluate if (and how) a certain repository can be used for INSPIRE. But also to assess any non listed repositories.</p>
-</section>
-<section id="inspire-atom-downloadservice" class="level2">
-<h2 class="anchored" data-anchor-id="inspire-atom-downloadservice">INSPIRE Atom downloadservice</h2>
-<p>INSPIRE suggests to facilitate data downloads via a download service. One of the options to provide such a service is to provide a number of Atom.xml files, 1 file to describe the service and 1 to for each of the datasets in that service which provide download details, such as available formats and size. Read more about this convention in the <a href="../cookbook/webdav.html">recipe on WebDav and Atom services</a>.</p>
+<section id="link-record-to-a-project" class="level2">
+<h2 class="anchored" data-anchor-id="link-record-to-a-project">Link record to a project</h2>
+<p>Many resources are created in the scope of a (funded) project. Linking your record to the relevant project, will support the findability of the record. For The horizon europe community for example, the projects are typically identified by their grantnumber. The <a href="http://cordis.europa.eu/">cordis platform</a> uses this grantnr linkage to select relevant publications from <a href="https://explore.openaire.eu/">OpenAire</a> (an aggregator of academic works, including from Zenodo). You can find more on this topic in the <a href="https://soilwise-he.eu">Soilwise project</a>. For example a presentation on the <a href="https://zenodo.org/records/17693227">FAIR strategy on data publication</a>.</p>
 
 
 </section>
@@ -342,13 +276,14 @@ ul.task-list li input[type="checkbox"] {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -67,14 +67,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="../">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-badfea7620e6254af941214fdd9b8bfc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-abe27cf03e924cf59ef884a22787a831.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -115,7 +116,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="https://ejpsoil.eu" class="navbar-brand navbar-brand-logo">
-    <img src="https://avatars.githubusercontent.com/u/121284180?s=200&amp;v=4" alt="EJPSoil website" class="navbar-logo">
+    <img src="https://avatars.githubusercontent.com/u/121284180?s=200&amp;v=4" alt="EJPSoil website" class="navbar-logo light-content">
+    <img src="https://avatars.githubusercontent.com/u/121284180?s=200&amp;v=4" alt="EJPSoil website" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -362,7 +364,7 @@ Select HONU,PRID,'TOTN' as PARAM,TOTN as RESULT from RepresentativeHorizonValues
 <section id="link-or-embed-and-identification" class="level3">
 <h3 class="anchored" data-anchor-id="link-or-embed-and-identification">Link or embed and identification?</h3>
 <p>XML allows to embed a property or to reference the value of the property elsewhere. An example; both snippets below have the same meaning, the first is easier to read, the second is easier to handle by software (prevent duplication).</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">person</span><span class="ot"> role=</span><span class="st">"student"</span><span class="ot"> name=</span><span class="st">"Peter"</span>&gt;</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">person</span><span class="ot"> role=</span><span class="st">"student"</span><span class="ot"> name=</span><span class="st">"Peter"</span>&gt;</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">memberOf</span>&gt;</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        &lt;<span class="kw">class</span><span class="ot"> name=</span><span class="st">"2B"</span>&gt;</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>            &lt;<span class="kw">hasMember</span>&gt;</span>
@@ -370,20 +372,20 @@ Select HONU,PRID,'TOTN' as PARAM,TOTN as RESULT from RepresentativeHorizonValues
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>            &lt;/<span class="kw">hasMember</span>&gt;</span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        &lt;/<span class="kw">class</span>&gt;</span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">memberOf</span>&gt;</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">person</span>&gt;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">person</span>&gt;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>And</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">person</span><span class="ot"> role=</span><span class="st">"student"</span><span class="ot"> name=</span><span class="st">"Peter"</span><span class="ot"> gml:id=</span><span class="st">"#student-peter"</span>&gt;</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">person</span><span class="ot"> role=</span><span class="st">"student"</span><span class="ot"> name=</span><span class="st">"Peter"</span><span class="ot"> gml:id=</span><span class="st">"#student-peter"</span>&gt;</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">memberOf</span><span class="ot"> xlink:href=</span><span class="st">"#class-2b"</span>&gt;</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">person</span>&gt;</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">person</span><span class="ot"> role=</span><span class="st">"teacher"</span><span class="ot"> name=</span><span class="st">"Cynthia"</span><span class="ot"> gml:id=</span><span class="st">"#teacher-cynthia"</span>&gt;</span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">memberOf</span><span class="ot"> xlink:href=</span><span class="st">"#class-2b"</span>&gt;</span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">person</span>&gt;</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">class</span><span class="ot"> name=</span><span class="st">"2B"</span><span class="ot"> gml:id=</span><span class="st">"#class-2b"</span>/&gt;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">class</span><span class="ot"> name=</span><span class="st">"2B"</span><span class="ot"> gml:id=</span><span class="st">"#class-2b"</span>/&gt;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>A good practice is to add reverse links to the second snippet:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">class</span><span class="ot"> name=</span><span class="st">"2B"</span><span class="ot"> gml:id=</span><span class="st">"#class-2b"</span>&gt;</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">class</span><span class="ot"> name=</span><span class="st">"2B"</span><span class="ot"> gml:id=</span><span class="st">"#class-2b"</span>&gt;</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">hasMember</span><span class="ot"> xlink:href=</span><span class="st">"#teacher-cynthia"</span><span class="er">/</span> &gt;</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">hasMember</span><span class="ot"> xlink:href=</span><span class="st">"#student-peter"</span> /&gt;</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">class</span>&gt;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">class</span>&gt;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Both approaches are supported and can be combined in Hale Studio, but you have to consider upfront which approach to use when. The first approach becomes quite complex if the levels of nesting increase.</p>
 <p>A suggestion from our side; define Plot, Profile, OM_Observation and Laboratory as root types and embed other types.</p>
 </section>
@@ -403,10 +405,10 @@ Select HONU,PRID,'TOTN' as PARAM,TOTN as RESULT from RepresentativeHorizonValues
 </figure>
 </div>
 <p>Hale studio supports the INSPIRE registry xml format as well as codelists based on the SKOS ontology. However SKOS codelists should be encoded as RDF/XML. In order to load the <a href="https://github.com/rapw3k/glosis/blob/master/glosis_cl.ttl">GLOSIS codelists</a>, which are encoded as turtle, you can use a python snippet below to convert it to RDF/XML first.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rdflib <span class="im">import</span> Graph</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rdflib <span class="im">import</span> Graph</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> Graph()</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>g.parse(<span class="st">"https://raw.githubusercontent.com/rapw3k/glosis/master/glosis_procedure.ttl"</span>,<span class="bu">format</span><span class="op">=</span><span class="st">'ttl'</span>)</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>g.serialize(destination<span class="op">=</span><span class="st">'output.xml'</span>, <span class="bu">format</span><span class="op">=</span><span class="st">'xml'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>g.serialize(destination<span class="op">=</span><span class="st">'output.xml'</span>, <span class="bu">format</span><span class="op">=</span><span class="st">'xml'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Or use an online conversion tool such as <a href="https://issemantic.net/rdf-converter">https://issemantic.net/rdf-converter</a>.</p>
 <p>Now assign a mapping from local values to this codelist.</p>
 <ul>
@@ -540,13 +542,14 @@ Select HONU,PRID,'TOTN' as PARAM,TOTN as RESULT from RepresentativeHorizonValues
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

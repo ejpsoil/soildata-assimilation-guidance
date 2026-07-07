@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>eSOTER to INSPIRE Soil model with HALE Studio – Soil data guidance</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -67,15 +70,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="../">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-abe27cf03e924cf59ef884a22787a831.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-eb4d22d83e4ba62626cc52b5df34894d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -364,27 +366,27 @@ Select HONU,PRID,'TOTN' as PARAM,TOTN as RESULT from RepresentativeHorizonValues
 <section id="link-or-embed-and-identification" class="level3">
 <h3 class="anchored" data-anchor-id="link-or-embed-and-identification">Link or embed and identification?</h3>
 <p>XML allows to embed a property or to reference the value of the property elsewhere. An example; both snippets below have the same meaning, the first is easier to read, the second is easier to handle by software (prevent duplication).</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">person</span><span class="ot"> role=</span><span class="st">"student"</span><span class="ot"> name=</span><span class="st">"Peter"</span>&gt;</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">person</span> <span class="ot">role=</span><span class="st">"student"</span> <span class="ot">name=</span><span class="st">"Peter"</span>&gt;</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">memberOf</span>&gt;</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        &lt;<span class="kw">class</span><span class="ot"> name=</span><span class="st">"2B"</span>&gt;</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        &lt;<span class="kw">class</span> <span class="ot">name=</span><span class="st">"2B"</span>&gt;</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>            &lt;<span class="kw">hasMember</span>&gt;</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>                &lt;<span class="kw">person</span><span class="ot"> role=</span><span class="st">"teacher"</span><span class="ot"> name=</span><span class="st">"Cynthia"</span>&gt;</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>                &lt;<span class="kw">person</span> <span class="ot">role=</span><span class="st">"teacher"</span> <span class="ot">name=</span><span class="st">"Cynthia"</span>&gt;</span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>            &lt;/<span class="kw">hasMember</span>&gt;</span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        &lt;/<span class="kw">class</span>&gt;</span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">memberOf</span>&gt;</span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">person</span>&gt;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>And</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">person</span><span class="ot"> role=</span><span class="st">"student"</span><span class="ot"> name=</span><span class="st">"Peter"</span><span class="ot"> gml:id=</span><span class="st">"#student-peter"</span>&gt;</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">memberOf</span><span class="ot"> xlink:href=</span><span class="st">"#class-2b"</span>&gt;</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">person</span> <span class="ot">role=</span><span class="st">"student"</span> <span class="ot">name=</span><span class="st">"Peter"</span> <span class="ot">gml:id=</span><span class="st">"#student-peter"</span>&gt;</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">memberOf</span> <span class="ot">xlink:href=</span><span class="st">"#class-2b"</span>&gt;</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">person</span>&gt;</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">person</span><span class="ot"> role=</span><span class="st">"teacher"</span><span class="ot"> name=</span><span class="st">"Cynthia"</span><span class="ot"> gml:id=</span><span class="st">"#teacher-cynthia"</span>&gt;</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">memberOf</span><span class="ot"> xlink:href=</span><span class="st">"#class-2b"</span>&gt;</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">person</span> <span class="ot">role=</span><span class="st">"teacher"</span> <span class="ot">name=</span><span class="st">"Cynthia"</span> <span class="ot">gml:id=</span><span class="st">"#teacher-cynthia"</span>&gt;</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">memberOf</span> <span class="ot">xlink:href=</span><span class="st">"#class-2b"</span>&gt;</span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">person</span>&gt;</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">class</span><span class="ot"> name=</span><span class="st">"2B"</span><span class="ot"> gml:id=</span><span class="st">"#class-2b"</span>/&gt;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">class</span> <span class="ot">name=</span><span class="st">"2B"</span> <span class="ot">gml:id=</span><span class="st">"#class-2b"</span>/&gt;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>A good practice is to add reverse links to the second snippet:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">class</span><span class="ot"> name=</span><span class="st">"2B"</span><span class="ot"> gml:id=</span><span class="st">"#class-2b"</span>&gt;</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">hasMember</span><span class="ot"> xlink:href=</span><span class="st">"#teacher-cynthia"</span><span class="er">/</span> &gt;</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">hasMember</span><span class="ot"> xlink:href=</span><span class="st">"#student-peter"</span> /&gt;</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">class</span> <span class="ot">name=</span><span class="st">"2B"</span> <span class="ot">gml:id=</span><span class="st">"#class-2b"</span>&gt;</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">hasMember</span> <span class="ot">xlink:href=</span><span class="st">"#teacher-cynthia"</span><span class="er">/</span> &gt;</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">hasMember</span> <span class="ot">xlink:href=</span><span class="st">"#student-peter"</span> /&gt;</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">class</span>&gt;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Both approaches are supported and can be combined in Hale Studio, but you have to consider upfront which approach to use when. The first approach becomes quite complex if the levels of nesting increase.</p>
 <p>A suggestion from our side; define Plot, Profile, OM_Observation and Laboratory as root types and embed other types.</p>

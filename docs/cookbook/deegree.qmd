@@ -32,7 +32,7 @@ docker pull deegree/deegree3-docker:3.6
 ```
 **Specific version** (example)
 ```
-docker pull deegree/deegree3-docker:3.6.7
+docker pull deegree/deegree3-docker:3.6.10
 ```
 > **Info:** All available images of deegree version 3.6.x are built with Apache Tomcat 10.1 and OpenJDK 17. Check the [deegree Docker Hub project](https://hub.docker.com/r/deegree/deegree3-docker) for details and other deegree versions available.
 
@@ -52,12 +52,12 @@ docker run --name deegree_inspire_soil --network="inspiresoilnetwork" -d -p 8080
 ```
 or with a **specific version**:
 ```
-docker run --name deegree_inspire_soil --network="inspiresoilnetwork" -d -p 8080:8080 deegree/deegree3-docker:3.6.7
+docker run --name deegree_inspire_soil --network="inspiresoilnetwork" -d -p 8080:8080 deegree/deegree3-docker:3.6.10
 ```
 **Advanced configuration**
 
 ```
-docker run --name deegree_inspire_soil --network="inspiresoilnetwork" -v /path/to/.deegree:/root/.deegree -d -p 8080:8080 deegree/deegree3-docker:3.6.7
+docker run --name deegree_inspire_soil --network="inspiresoilnetwork" -v /path/to/.deegree:/root/.deegree -d -p 8080:8080 deegree/deegree3-docker:3.6.10
 ```
 > **Tip:** Using the docker parameter `-v` (volume), all prior created deegree workspaces that are stored in `/path/to/.deegree` can be accessed.
 
